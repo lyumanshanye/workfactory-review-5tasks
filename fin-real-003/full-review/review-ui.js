@@ -113,6 +113,9 @@
   app.querySelectorAll('a[href]').forEach(previewLink);
   app.querySelectorAll('a[data-original-archive]').forEach(link=>link.remove());
   app.querySelectorAll('iframe').forEach(frame=>frame.loading='lazy');
+  const inlineObserver='IntersectionObserver' in window?new IntersectionObserver(entries=>{
+    for(const entry of entries)if(entry.isIntersecting){entry.target._loadPreview?.();inlineObserver.unobserve(entry.target);}
+  },{rootMargin:'500px'}):null;
   const filePanel=make('div','review-file-groups'); panelMap['task-files'].append(filePanel);
   for(const domain of domains) {
     const b=button(domain+' · '+labels[domain],()=>{
@@ -135,11 +138,15 @@
       const open=a(file.href,'新页预览 ↗','review-file-open');row.append(open);
       const inline=make('details','review-inline-preview');
       inline.append(make('summary','','展开预览'));
-      inline.addEventListener('toggle',()=>{
-        if(!inline.open||inline.querySelector('iframe'))return;
-        const frame=make('iframe');frame.title=file.name+' · 预览';frame.loading='lazy';frame.src=open.href;
+      inline._loadPreview=()=>{
+        if(!inline.isConnected||inline.querySelector('iframe'))return;
+        const frame=make('iframe');frame.title=file.name+' · 预览';frame.loading='eager';frame.src=open.href;
         inline.append(frame);
-      });
+      };
+      inline.addEventListener('toggle',()=>{if(inline.open)inline._loadPreview();});
+      inline.querySelector('summary').addEventListener('pointerenter',inline._loadPreview);
+      inline.querySelector('summary').addEventListener('focus',inline._loadPreview);
+      inlineObserver?.observe(inline);
       row.append(inline);
     }
     return row;
