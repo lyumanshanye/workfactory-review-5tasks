@@ -4,8 +4,9 @@
   const legacy = document.querySelector('main');
   if (!legacy) return;
   const domains = ['GO','FIN','LAW','DA','GA'];
-  const labels = {GO:'行政与采购',FIN:'金融分析',LAW:'法律与合规',DA:'数据分析',GA:'游戏分析'};
-  const state = {domain:'GO', view:'colleague', source:'current'};
+  const labels = {GO:'通用办公',FIN:'金融',LAW:'法律',DA:'数据分析',GA:'游戏'};
+  const requestedDomain=new URLSearchParams(location.search).get('domain');
+  const state = {domain:domains.includes(requestedDomain)?requestedDomain:'GO', view:'colleague', source:'current'};
   let inputs = {}, bundle = {};
   const make = (tag, cls, text) => {
     const el = document.createElement(tag);
@@ -21,7 +22,8 @@
     if(!raw||raw.startsWith('#')||/^(?:https?:|mailto:|javascript:|data:)/i.test(raw)||raw.includes('file-preview.html'))return;
     if(raw.endsWith('.zip')) {link.dataset.originalArchive='true';return;}
     link.dataset.originalHref=raw;
-    link.href='file-preview.html?file='+encodeURIComponent(raw)+'&v=colleague-20261022';
+    const owner=raw.match(/(?:task_files\/|task_statements\/|colleague\/)(GO|FIN|LAW|DA|GA)(?:-|\/)/)?.[1]||'FIN';
+    link.href='file-preview.html?file='+encodeURIComponent(raw)+'&domain='+owner+'&v=domain-20261022';
     link.target='_blank';link.rel='noopener';link.removeAttribute('download');
   }
   const button = (text, fn, cls) => {
@@ -53,7 +55,7 @@
   legacy.before(app);
   const panels = app.querySelector('.review-panels');
   const panelMap = {};
-  const panelDefs = [['colleague','题目对比','同事原题与当前题，按领域并排阅读。'],['all-tasks','完整题面','当前任务书保持原文，可直接下载。'],['task-files','本题全部文件','题面、输入、参考、rubric、产出和证据，逐题对应。'],['fin-review','金融完整证据','原页面的金融专项材料与评分记录，保留完整内容。'],['pipeline','验证概况','原页面记录的四题验证快照。']];
+  const panelDefs = [['colleague','题目对比','同事原题与当前题，按领域并排阅读。'],['all-tasks','完整题面','当前任务书保持原文，可直接下载。'],['task-files','本题全部文件','题面、输入、参考、rubric、产出和证据，逐题对应。'],['fin-review','本题审阅证据','所选任务对应的参考、评分配置和执行记录。'],['pipeline','验证概况','原页面记录的四题验证快照。']];
   for (const [id,title,desc] of panelDefs) {
     const panel=make('section','review-panel'); panel.id='view-'+id;
     panel.append(make('h2','review-panel-title',title),make('p','review-muted',desc));
@@ -69,7 +71,17 @@
     const section=legacy.querySelector('#compare-'+domain);
     if (!section) continue;
     section.classList.add('review-compare'); section.dataset.domain=domain;
-    const comparison=section.querySelector('.comparison');
+    let comparison=section.querySelector('.comparison');
+    if(domain==='GA'&&!comparison){
+      section.querySelector(':scope > h3').textContent='GA · 游戏';
+      comparison=make('div','comparison');
+      const left=make('div'),right=make('div');
+      left.append(make('h4','','同学原题 · 尚未匹配'));
+      const notice=section.querySelector(':scope > p');if(notice)left.append(notice);
+      const current=section.querySelector(':scope > h4');
+      if(current){let node=current;while(node){const next=node.nextSibling;right.append(node);node=next;}}
+      comparison.append(left,right);section.append(comparison);
+    }
     if (comparison) {
       comparison.classList.add('review-comparison');
       for (const card of [...comparison.children]) {
@@ -91,8 +103,11 @@
       d.append(make('summary','', '历史对照：FIN-REAL-002'),task); panelMap['all-tasks'].append(d);
     } else panelMap['all-tasks'].append(task);
   }
+  const financeEvidence=make('div','review-fin-evidence');
+  const domainEvidence=make('div','review-domain-evidence');
+  panelMap['fin-review'].append(financeEvidence,domainEvidence);
   const status=legacy.querySelector('.status');
-  if(status) {status.classList.add('review-status');panelMap['fin-review'].append(status);}
+  if(status) {status.classList.add('review-status');financeEvidence.append(status);}
   for (const id of ['instruction','inputs','reference','rubric','outputs','scores','pipeline']) {
     const heading=legacy.querySelector(':scope > h2#'+id);
     if (!heading) continue;
@@ -102,13 +117,13 @@
       if(node!==heading && node.tagName==='H2' && node.id) break;
       const next=node.nextSibling; wrapper.append(node); node=next;
     }
-    (id==='pipeline' ? panelMap.pipeline : panelMap['fin-review']).append(wrapper);
+    (id==='pipeline' ? panelMap.pipeline : financeEvidence).append(wrapper);
   }
   // Keep all remaining source content available without a duplicate page header.
   const remainder=make('details','review-source-remainder');
   remainder.append(make('summary','', '原页面导航与附加说明'));
   for(const node of [...legacy.childNodes]) remainder.append(node);
-  panelMap['fin-review'].append(remainder);
+  financeEvidence.append(remainder);
   legacy.remove();
   app.querySelectorAll('a[href]').forEach(previewLink);
   app.querySelectorAll('a[data-original-archive]').forEach(link=>link.remove());
@@ -117,7 +132,7 @@
   for(const domain of domains) {
     const b=button(domain+' · '+labels[domain],()=>{
       state.domain=domain;state.source='current';render();
-      history.replaceState(null,'','#'+(state.view==='colleague'?'compare-'+domain:state.view));
+      history.replaceState(null,'','?domain='+domain+'#'+(state.view==='colleague'?'compare-'+domain:state.view));
     });
     b.role='tab';b.dataset.domain=domain;app.querySelector('.review-domain-tabs').append(b);
   }
@@ -203,14 +218,29 @@
       else body.insertBefore(section,body.querySelector(':scope > details'));
     }
   }
+  function renderEvidence(){
+    financeEvidence.hidden=state.domain!=='FIN';
+    domainEvidence.hidden=state.domain==='FIN';
+    domainEvidence.replaceChildren();
+    const item=bundle[state.domain];if(!item||state.domain==='FIN')return;
+    domainEvidence.append(make('h3','review-task-label',labels[state.domain]+' · '+item.task));
+    for(const [key,title] of [['reference','本题参考答案'],['rubric','本题 Rubric'],['evidence','本题执行与来源记录']]){
+      const section=make('section','review-file-group');section.append(make('h3','',title),fileList(item.groups[key]||[]));domainEvidence.append(section);
+    }
+  }
   function render() {
+    const task=inputs[state.domain]?.task||state.domain;
+    const taskTitle=app.querySelector('#task-'+task+' h1')?.textContent;
+    document.title=labels[state.domain]+' · '+task+' · 工作任务审阅台';
+    app.querySelector('.review-title').textContent=labels[state.domain]+' · '+task;
+    app.querySelector('.review-subtitle').textContent=taskTitle||'按领域查看完整题面、输入附件、参考答案、Rubric 与模型产出。';
     app.querySelectorAll('.review-domain-tabs button').forEach(b=>{b.setAttribute('aria-selected',String(b.dataset.domain===state.domain));b.tabIndex=b.dataset.domain===state.domain?0:-1;});
     app.querySelectorAll('.review-compare,.review-task,.review-history').forEach(el=>el.hidden=el.dataset.domain!==state.domain);
     for(const [key,panel] of Object.entries(panelMap)) panel.hidden=key!==state.view;
     app.querySelectorAll('.review-sidebar nav a').forEach(link=>{
       if(link.dataset.view===state.view) link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');
     });
-    renderInputs();renderFiles();
+    renderInputs();renderFiles();renderEvidence();
   }
   function route(scroll=false) {
     const hash=decodeURIComponent(location.hash.slice(1));

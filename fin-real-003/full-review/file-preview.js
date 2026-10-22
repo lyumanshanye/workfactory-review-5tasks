@@ -14,7 +14,10 @@
     if(url.origin!==base.origin||!url.pathname.startsWith(base.pathname)||/^(data|javascript):/.test(url.protocol))throw Error('此预览仅支持本审阅站内的文件。');
     path=decodeURIComponent(url.pathname.slice(base.pathname.length));
     const name=path.split('/').pop(),ext=name.includes('.')?name.split('.').pop().toLowerCase():'';
-    document.title=name+' · 在线预览';document.getElementById('preview-title').textContent=name;document.getElementById('preview-path').textContent=path;
+    const domain=new URLSearchParams(location.search).get('domain');
+    const labels={GO:'通用办公',FIN:'金融',LAW:'法律',DA:'数据分析',GA:'游戏'};
+    document.title=(labels[domain]?labels[domain]+' · ':'')+name+' · 在线预览';document.getElementById('preview-title').textContent=name;document.getElementById('preview-path').textContent=(labels[domain]?labels[domain]+' · '+domain+' / ':'')+path;
+    if(labels[domain])document.querySelector('.preview-brand').href='./?domain='+domain+'#task-files';
     const download=document.getElementById('preview-download');download.href=url.href;download.download=name;
     async function json(href){const target=new URL(href,base);target.searchParams.set('v','colleague-20261022');const r=await fetch(target);if(!r.ok)throw Error('文件加载失败（HTTP '+r.status+'）');return r.json();}
     function table(rows,header=false,total){
