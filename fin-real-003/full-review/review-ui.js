@@ -14,8 +14,16 @@
     return el;
   };
   const a = (href, text, cls) => {
-    const el = make('a', cls, text); el.href = href; return el;
+    const el = make('a', cls, text); el.href = href; previewLink(el); return el;
   };
+  function previewLink(link) {
+    const raw=link.getAttribute('href');
+    if(!raw||raw.startsWith('#')||/^(?:https?:|mailto:|javascript:|data:)/i.test(raw)||raw.includes('file-preview.html'))return;
+    if(raw.endsWith('.zip')) {link.dataset.originalArchive='true';return;}
+    link.dataset.originalHref=raw;
+    link.href='file-preview.html?file='+encodeURIComponent(raw);
+    link.target='_blank';link.rel='noopener';link.removeAttribute('download');
+  }
   const button = (text, fn, cls) => {
     const el = make('button', cls, text); el.type='button'; el.addEventListener('click',fn); return el;
   };
@@ -39,7 +47,7 @@
         <div class="review-input-card"><div class="review-input-head"><div><span class="review-eyebrow" id="input-task-id"></span><h3 id="input-files-title">实际输入文件</h3></div><div class="review-actions" id="input-actions"></div></div><div class="review-source-tabs" role="group" aria-label="选择题目来源"></div><div id="input-manifest"></div></div>
         <details class="review-spec"><summary>查看规范依据与路径说明</summary><p>依据《外发版-评测题包交付规范（rewardkit）20260913版本-1009修改》§1.2、§1.3。模型工作目录为 <code>/app</code>；唯一交付目录为 <code>/app/output/</code>。<code>solution/</code> 仅用于 Oracle，<code>tests/</code> 仅在评分阶段上传；模型仅能看到 <code>[environment].env</code> 的环境变量值，不能读取配置文件本身。</p><p>“同事原题”保留原文件命名，<code>TASK_INSTRUCTIONS.txt</code> 作为题面单列，业务附件另列；<code>state.json</code>、<code>RUBRICS.json</code>、<code>difficulty.json</code> 属于审阅证据。</p></details>
       </section>
-      <div class="review-workspace"><aside class="review-sidebar"><p class="review-eyebrow">02 / 审阅内容</p><nav aria-label="审阅模块"></nav><p class="review-muted">顶部选择领域，下方内容同步切换。</p><a class="review-archive" href="../FIN-REAL-003-full-review.zip">原金融审阅包 ZIP ↗</a></aside><div class="review-panels"></div></div>
+      <div class="review-workspace"><aside class="review-sidebar"><p class="review-eyebrow">02 / 审阅内容</p><nav aria-label="审阅模块"></nav><p class="review-muted">顶部选择领域，下方内容同步切换。</p></aside><div class="review-panels"></div></div>
       <footer class="review-footer">WORKFACTORY · 独立审阅预览 · 原始材料与验收状态以各题证据为准</footer>
     </main>`;
   legacy.before(app);
@@ -102,6 +110,8 @@
   for(const node of [...legacy.childNodes]) remainder.append(node);
   panelMap['fin-review'].append(remainder);
   legacy.remove();
+  app.querySelectorAll('a[href]').forEach(previewLink);
+  app.querySelectorAll('a[data-original-archive]').forEach(link=>link.remove());
   app.querySelectorAll('iframe').forEach(frame=>frame.loading='lazy');
   const filePanel=make('div','review-file-groups'); panelMap['task-files'].append(filePanel);
   for(const domain of domains) {
@@ -121,7 +131,7 @@
       const meta=make('span','review-file-meta','SHA256 '+file.sha256.slice(0,12)+'…');meta.title=file.sha256;center.append(meta);
     }
     row.append(center,make('span','review-file-meta',size(file.bytes)));
-    if(file.href) {const open=a(file.href,'打开 ↗','review-file-open');open.target='_blank';open.rel='noopener';row.append(open);}
+    if(file.href) {const open=a(file.href,'预览 ↗','review-file-open');row.append(open);}
     return row;
   }
   function fileList(files) {
@@ -147,7 +157,7 @@
     app.querySelector('#input-task-id').textContent=item?.task||source.task;
     app.querySelector('#input-files-title').textContent='解题模型输入 · '+(item?.files.length||0)+' 个附件';
     const actions=app.querySelector('#input-actions');actions.replaceChildren();
-    if(item?.instruction) actions.append(a(item.instruction,'下载题面 ↗','review-button'));
+    if(item?.instruction) actions.append(a(item.instruction,'预览题面 ↗','review-button'));
     const root=app.querySelector('#input-manifest');root.replaceChildren();
     if(!item) {root.append(make('p','review-muted','该领域暂未找到可对照的同事原题。'));return;}
     const prompt=make('p','review-input-prompt');
