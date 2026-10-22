@@ -131,7 +131,17 @@
       const meta=make('span','review-file-meta','SHA256 '+file.sha256.slice(0,12)+'…');meta.title=file.sha256;center.append(meta);
     }
     row.append(center,make('span','review-file-meta',size(file.bytes)));
-    if(file.href) {const open=a(file.href,'预览 ↗','review-file-open');row.append(open);}
+    if(file.href) {
+      const open=a(file.href,'新页预览 ↗','review-file-open');row.append(open);
+      const inline=make('details','review-inline-preview');
+      inline.append(make('summary','','展开预览'));
+      inline.addEventListener('toggle',()=>{
+        if(!inline.open||inline.querySelector('iframe'))return;
+        const frame=make('iframe');frame.title=file.name+' · 预览';frame.loading='lazy';frame.src=open.href;
+        inline.append(frame);
+      });
+      row.append(inline);
+    }
     return row;
   }
   function fileList(files) {
