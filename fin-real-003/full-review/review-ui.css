@@ -13,13 +13,6 @@
 .review-colleague-attachments .review-file-list {grid-template-columns:minmax(0,1fr);}
 .review-colleague-attachments h3 {margin:0 0 7px;}
 .review-colleague-attachments .review-muted {font-size:12px;}
-.review-file-row:has(.review-inline-preview) {flex-wrap:wrap;}
-.review-inline-preview {margin:0!important;border:0!important;padding:0!important;flex:0 0 auto;max-width:100%;}
-.review-inline-preview>summary {padding:4px 8px!important;border:1px solid #dce5f3;border-radius:6px;font-size:12px;font-weight:500;color:#284e93;white-space:nowrap;}
-.review-inline-preview[open] {flex:1 0 100%;}
-.review-inline-preview[open]>summary {display:inline-block;margin-bottom:8px;}
-.review-inline-preview iframe {display:block;width:100%;height:680px;border:1px solid #dce5f3;border-radius:8px;background:white;}
-@media(max-width:600px){.review-inline-preview iframe {height:580px;}.review-file-row>.review-file-label {flex-basis:calc(100% - 90px);}}
 
 /* Integration with the preserved source page. */
 .review-app main.review-shell { margin: 0 auto; padding: 38px 0 28px; }
