@@ -1,0 +1,381 @@
+Environmental Health Surveillance
+Manual
+
+Pima County Health Department, Environmental Health Division
+Environmental Health Surveillance Manual                                                              12 Training
+
+
+
+
+ Contents
+
+ 1 Purpose and Scope                                                                                         3
+
+
+ 2 Definitions                                                                                               4
+
+
+ 3 Roles and Responsibilities                                                                                5
+
+
+ 4 Routine Environmental Health Surveillance Data Sources                                                    6
+
+
+ 5 Program Planning Assumptions                                                                              7
+
+
+ 6 Operational Record Review                                                                                 8
+
+
+ 7 School Outdoor Activity Surveillance Procedures                                                           9
+
+
+ 8 Data Quality and Completeness                                                                           10
+
+
+ 9 Analysis and Reporting Standards                                                                        11
+
+
+ 10 Privacy and Confidentiality                                                                            12
+
+
+ 11 Records Retention                                                                                      13
+
+
+ 12 Training                                                                                               14
+
+
+     Document control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+
+
+     Revision history . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+
+
+
+
+PCHD-EH-SOP-014                                       p. 2
+Environmental Health Surveillance Manual                                                   1 Purpose and Scope
+
+
+
+
+ 1 Purpose and Scope
+ This manual states how the Environmental Health Division of the Pima County Health Department
+ conducts environmental public health surveillance and administers the school outdoor activity
+ surveillance program. It compiles the former Environmental Health Surveillance Standard Operating
+ Procedure and the School Outdoor Activity Surveillance Codebook into one controlled document, so
+ that division staff and school reporting contacts work from a single set of definitions and procedures.
+ The manual applies to all division personnel who collect, review, analyse or report environmental health
+ data, and to the school site staff who submit outdoor activity reports to the division. It covers the
+ county's routine surveillance data sources, the annual program planning cycle, the review of
+ operational records, and the standards that published analyses follow. It does not govern clinical care,
+ individual patient management or enforcement actions, which are handled under separate division
+ policies.
+ Compliance with this manual is a condition of the division's data-sharing agreements with participating
+ school districts and reporting facilities.
+
+
+
+
+PCHD-EH-SOP-014                                     p. 3
+Environmental Health Surveillance Manual                                                    1 Purpose and Scope
+
+
+
+
+ 2 Definitions
+ The following definitions apply throughout this manual and in every report the division publishes.
+  • Air Quality Index (AQI). The index the U.S. Environmental Protection Agency uses to
+    communicate daily air quality, divided into six colour-coded categories that correspond to levels of
+    health concern.
+
+  • Daily AQI value. The AQI value reported for a county for a calendar day, together with the
+    category, the defining parameter and the monitoring site that defined it.
+
+  • Defining parameter. The pollutant whose sub-index set the day's AQI value, as recorded in the
+    daily county data the division obtains from EPA AirData.
+
+  • Syndromic surveillance. The ongoing collection of emergency-department visit records classified
+    by presenting complaint, used to monitor community health conditions without waiting for definitive
+    laboratory results.
+
+  • Asthma-specific emergency-department visit. An emergency-department visit record classified
+    by the syndromic surveillance registry under the asthma case definition in the registry's classifier
+    version noted on each extract.
+
+  • Outdoor activity. Any scheduled activity of a school site that takes place outdoors, including
+    recess, physical education classes, athletic practices, scheduled athletic events and field trips.
+
+  • School site. A reporting location within a school district that submits outdoor activity reports to the
+    division under section 7.
+
+  • County cancellation day. For county-level analyses, a cancellation day is a calendar date on
+    which at least one school in the county cancelled outdoor activities; multiple school-site records for
+    the same date are one county cancellation day.
+
+
+
+
+PCHD-EH-SOP-014                                      p. 4
+Environmental Health Surveillance Manual                                                         2 Definitions
+
+
+
+
+ 3 Roles and Responsibilities
+ Division Director, Environmental Health. Approves the annual surveillance plan, signs off revisions
+ of this manual and receives the operational record reviews prepared under section 6.
+ Lead Biostatistician. Designs the division's analyses, prepares the analytic datasets used in published
+ reports, documents the methods and assumptions behind each estimate, and answers for the statistical
+ content of deliverables sent outside the division.
+ Surveillance Analyst. Maintains the routine data extracts described in section 4, keeps the extract log
+ current and prepares the data quality checks described in section 8.
+ School Liaison. Maintains the roster of school site reporters, trains new reporting contacts and is the
+ first point of contact for questions about the outdoor activity log.
+ School site reporters. Submit outdoor activity reports as described in section 7, and tell the School
+ Liaison when a reporting contact changes.
+
+
+
+
+PCHD-EH-SOP-014                                    p. 5
+Environmental Health Surveillance Manual                                                 3 Roles and Responsibilities
+
+
+
+
+ 4 Routine Environmental Health Surveillance Data Sources
+ The division maintains six routine data sources for environmental health surveillance. Each source's
+ refresh cadence and owning role are recorded in the extract log kept by the Surveillance Analyst.
+  • EPA AirData daily AQI by county. Daily county-level AQI records obtained from the U.S.
+    Environmental Protection Agency's AirData system. The division's working copy of this file is
+    prepared by the analytics team and carries the fields the EPA publishes: state and county names,
+    state and county codes, date, AQI value, category, defining parameter, defining site and the number
+    of sites reporting.
+
+  • EPA AirData annual AQI by county. The annual county summary published by the EPA, with the
+    days in each AQI category, the maximum, median and ninetieth percentile AQI values and the
+    count of days by defining parameter.
+
+  • Census county reference files. The county FIPS reference and the county population estimates
+    published by the U.S. Census Bureau, used to identify counties and to describe the resident
+    population the division serves.
+
+  • AirNow AQI technical assistance document. The EPA's technical assistance document for the
+    reporting of daily air quality, which defines the AQI categories, their index value ranges and the
+    colour and health message that goes with each category.
+
+  • The department's syndromic surveillance registry. Emergency-department visit records from
+    reporting facilities, aggregated by the registry into daily counts by county, with the reporting facility
+    completeness figures described in section 8.
+
+  • The school outdoor activity log. The reports school sites submit under section 7, one record per
+    school site and date.
+
+ When a source publishes a correction or a revised edition, the Surveillance Analyst replaces the
+ division's copy, records the change in the extract log and tells the Lead Biostatistician which pending
+ analyses are affected.
+
+
+
+
+PCHD-EH-SOP-014                                       p. 6
+Environmental Health Surveillance Manual                       4 Routine Environmental Health Surveillance Data Sources
+
+
+
+
+ 5 Program Planning Assumptions
+ The division's planning documents set the operating parameters the program is budgeted and staffed
+ around: the surveillance seasons, the reporting schedule, the outreach calendar and the exposure
+ classifications used in program planning. A planning assumption is a statement of how the program
+ expects to operate, written before the year's records exist, and it is kept in the planning document that
+ adopted it.
+ Planning assumptions are working positions, not findings. Planning assumptions used for exposure
+ classification are checked against observed operational records; when they disagree, the analysis
+ reports both the planned threshold and the threshold estimated from observed operations.
+ The biannual program plan records each assumption still in force, the document that adopted it and the
+ year it was written, so that a reader can tell an assumed parameter from a measured one.
+
+
+
+
+PCHD-EH-SOP-014                                     p. 7
+Environmental Health Surveillance Manual                                        5 Program Planning Assumptions
+
+
+
+
+ 6 Operational Record Review
+ The Lead Biostatistician conducts operational record reviews on a twice-yearly schedule. Reviews
+ cover the most recent complete calendar year.
+ A review states, for each assumption examined: the source and date of the planning assumption, the
+ records examined, what those records show, and whether the assumption held. Reviews are filed with
+ the division's planning materials and summarised for the Division Director.
+ Where an operational record and a planning assumption disagree, the disagreement is reported to the
+ Division Director in writing before the planning meeting at which the assumption may be revised, so that
+ the meeting decides with both positions in front of it.
+
+
+
+
+PCHD-EH-SOP-014                                    p. 8
+Environmental Health Surveillance Manual                                               6 Operational Record Review
+
+
+
+
+ 7 School Outdoor Activity Surveillance Procedures
+ Participating school sites report to the division on the days the division requests a report. A report
+ names the school site, the date, whether outdoor activity was cancelled, the reported reason and the
+ activities affected, and the person or role who filed it. Sites file one record for their site and date; a
+ district with several participating sites receives one request per site.
+ The log covers reported outdoor activities year-round, including summer sessions and Saturday
+ athletics, so a report can be requested for any day on which a site has outdoor activities scheduled.
+ Days on which a site has nothing scheduled outdoors generate no record.
+ The School Liaison sends the season's reporting schedule to site reporters before each school term
+ and again before summer sessions. Reporters file by the end of the reporting day; late reports are
+ added to the log with the date they cover, not the date they arrived.
+ The division treats the log as the operational record of the school outdoor activity program. Published
+ summaries of the log follow section 9.
+
+
+
+
+PCHD-EH-SOP-014                                      p. 9
+Environmental Health Surveillance Manual                             7 School Outdoor Activity Surveillance Procedures
+
+
+
+
+ 8 Data Quality and Completeness
+ The registry records, for every county and day, the number of reporting facilities that submitted records
+ and the number expected to report. The completeness share is the reports received divided by the
+ reports expected.
+ The Surveillance Analyst reviews facility completeness each month. Facilities that miss a reporting
+ cycle are contacted by the School Liaison's counterpart in syndromic surveillance; facilities that miss
+ two consecutive cycles are escalated to the division's data-sharing coordinator.
+ An extract's version identifier names the registry classifier version it was produced under. The analyst
+ records any change of classifier version in the extract log, because a change in the case definition can
+ move a count from one syndrome class to another.
+
+
+
+
+PCHD-EH-SOP-014                                     p. 10
+Environmental Health Surveillance Manual                                           8 Data Quality and Completeness
+
+
+
+
+ 9 Analysis and Reporting Standards
+ Every analysis the division publishes states the data sources it used, the calendar period it covers and
+ the definitions of every measure it reports. An analysis that merges sources keeps the merged dataset,
+ so a reviewer can retrace the work.
+ A published rate names its numerator, its denominator and the period it covers, and states whether the
+ denominator is a population, a count of days or a count of records. A published count states the records
+ it was taken over.
+ Annual Air Quality Index summary values for a county evaluation are drawn from the single EPA
+ Annual Summary row for the county named in the evaluation and for the calendar year the evaluation
+ examines.
+ Model-based estimates are reported with their uncertainty. An analysis that fits a statistical model
+ states the model form, the outcome and exposure definitions, the estimation sample and the
+ diagnostics the analyst ran, in enough detail for a qualified reader to judge the fit.
+ Reports carry the division's document control block: title, author, date, document identifier and revision,
+ so that later readers can tell which edition of an analysis they hold.
+
+
+
+
+PCHD-EH-SOP-014                                     p. 11
+Environmental Health Surveillance Manual                                      9 Analysis and Reporting Standards
+
+
+
+
+ 10 Privacy and Confidentiality
+ The surveillance registry holds health information protected by federal and state law. Analyses are
+ conducted on aggregates only; a published table or figure does not identify a person, a household or an
+ individual facility's patients.
+ Small cell counts are suppressed in any output released outside the division. Requests for surveillance
+ data from outside the department are referred to the division's privacy officer and answered under the
+ department's public records procedure.
+ Staff with registry access complete privacy training under section 12 before access is granted, and
+ access is reviewed annually.
+
+
+
+
+PCHD-EH-SOP-014                                    p. 12
+Environmental Health Surveillance Manual                                             10 Privacy and Confidentiality
+
+
+
+
+ 11 Records Retention
+ Routine surveillance extracts, the extract log and the school outdoor activity log are retained for seven
+ years from the end of the calendar year they cover, then destroyed under the department's records
+ schedule.
+ Published reports, operational record reviews and the planning materials of the biannual program plan
+ are retained permanently. Analytic datasets behind a published report are retained with the report they
+ support.
+ Destruction of records is logged by the destroying staff member and countersigned by the division's
+ records coordinator.
+
+
+
+
+PCHD-EH-SOP-014                                     p. 13
+Environmental Health Surveillance Manual                                                   11 Records Retention
+
+
+
+
+ 12 Training
+ New division staff read this manual and complete the department's data governance training before
+ working with surveillance data. School site reporters receive the reporting guide and a short briefing
+ from the School Liaison before their first reporting season.
+ The division runs an annual refresher covering changes to this manual, the current reporting schedule
+ and the data quality procedures of section 8. Attendance is recorded in the department's training
+ system.
+ A school site that repeatedly files incomplete reports receives a follow-up visit from the School Liaison
+ before the next reporting season.
+
+
+
+
+PCHD-EH-SOP-014                                     p. 14
+Environmental Health Surveillance Manual                                                            12 Training
+
+
+
+
+ Document control
+   Field                                            Value
+   Document identifier                              PCHD-EH-SOP-014
+   Title                                            Environmental Health Surveillance Manual
+   Owner                                            Environmental Health Division, Pima County Health
+                                                    Department
+   Revision                                         Rev 2026-07
+   Effective date                                   2026-07-15
+   Review due                                       2027-07-15
+
+
+ Revision history
+   Revision                        Date             Summary of change           Prepared by
+   Rev 2024-02                     2024-03-11       Initial Environmental       Nikhil Sharma
+                                                    Health Surveillance SOP
+   Rev 2025-01                     2025-01-20       Added data quality and      Sophia Rogers
+                                                    completeness section
+   Rev 2026-03                     2026-03-02       School Outdoor Activity     Andrea Long
+                                                    Surveillance Codebook
+                                                    first issued
+   Rev 2026-07                     2026-07-15       SOP and Codebook            Nikhil Sharma
+                                                    compiled into one manual;
+                                                    definitions aligned
+
+
+
+
+PCHD-EH-SOP-014                                 p. 15
+

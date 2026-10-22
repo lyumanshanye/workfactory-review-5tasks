@@ -21,7 +21,7 @@
     if(!raw||raw.startsWith('#')||/^(?:https?:|mailto:|javascript:|data:)/i.test(raw)||raw.includes('file-preview.html'))return;
     if(raw.endsWith('.zip')) {link.dataset.originalArchive='true';return;}
     link.dataset.originalHref=raw;
-    link.href='file-preview.html?file='+encodeURIComponent(raw);
+    link.href='file-preview.html?file='+encodeURIComponent(raw)+'&v=colleague-20261022';
     link.target='_blank';link.rel='noopener';link.removeAttribute('download');
   }
   const button = (text, fn, cls) => {
@@ -185,6 +185,16 @@
       section.append(a(colleague.instruction,'TASK_INSTRUCTIONS.txt'),fileList(colleague.files));filePanel.append(section);
     }
   }
+  function addColleagueAttachments() {
+    for(const domain of domains) {
+      const item=inputs[domain]?.colleague;
+      const body=app.querySelector('#compare-'+domain+' .review-comparison-body');
+      if(!item||!body||body.querySelector('.review-colleague-attachments'))continue;
+      const section=make('section','review-colleague-attachments');
+      section.append(make('h3','','同学原题附件 · '+item.files.length+' 个'),make('p','review-muted','点击文件名或“预览”，在新标签页查看原始材料；预览页可下载原件。'),fileList(item.files));
+      body.prepend(section);
+    }
+  }
   function render() {
     app.querySelectorAll('.review-domain-tabs button').forEach(b=>{b.setAttribute('aria-selected',String(b.dataset.domain===state.domain));b.tabIndex=b.dataset.domain===state.domain?0:-1;});
     app.querySelectorAll('.review-compare,.review-task,.review-history').forEach(el=>el.hidden=el.dataset.domain!==state.domain);
@@ -220,7 +230,7 @@
   const embedded=document.getElementById('review-metadata');
   const data=embedded?Promise.resolve(JSON.parse(embedded.textContent)):Promise.all([fetch('review-inputs.json').then(r=>{if(!r.ok)throw Error('输入索引加载失败');return r.json();}),fetch('review-bundle.json').then(r=>{if(!r.ok)throw Error('文件索引加载失败');return r.json();})]);
   data
-    .then(([i,b])=>{inputs=i;bundle=b;route(false);app.dataset.ready='true';})
+    .then(([i,b])=>{inputs=i;bundle=b;addColleagueAttachments();route(false);app.dataset.ready='true';})
     .catch(error=>{
       app.querySelector('#input-manifest').append(make('p','review-load-error',error.message+'。请通过 HTTP 预览此文件夹，原始证据仍可在“金融完整证据”中阅读。'));
       console.error(error);

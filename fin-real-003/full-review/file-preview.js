@@ -16,7 +16,7 @@
     const name=path.split('/').pop(),ext=name.includes('.')?name.split('.').pop().toLowerCase():'';
     document.title=name+' · 在线预览';document.getElementById('preview-title').textContent=name;document.getElementById('preview-path').textContent=path;
     const download=document.getElementById('preview-download');download.href=url.href;download.download=name;
-    async function json(href){const r=await fetch(new URL(href,base));if(!r.ok)throw Error('文件加载失败（HTTP '+r.status+'）');return r.json();}
+    async function json(href){const target=new URL(href,base);target.searchParams.set('v','colleague-20261022');const r=await fetch(target);if(!r.ok)throw Error('文件加载失败（HTTP '+r.status+'）');return r.json();}
     function table(rows,header=false,total){
       const controls=el('div','preview-controls'),search=el('input','preview-search');search.type='search';search.placeholder='筛选当前预览中的内容';search.setAttribute('aria-label','筛选表格');controls.append(search);
       const wrap=el('div','preview-table-wrap'),pagination=el('div','preview-pagination');let page=0,filtered=rows;
@@ -81,7 +81,23 @@
       }
       status.textContent='文档内容预览 · 原文件可下载';ready();
     }else if(ext==='pdf'){
-      const wrap=el('div','preview-pdf'),frame=el('iframe');frame.title=name;frame.src=url.href;wrap.append(frame);root.append(wrap);note('若浏览器未显示 PDF，可使用右上角“下载原文件”查看。');status.textContent='PDF 在线预览';ready();
+      const response=await fetch(new URL('pdf-preview-index.json?v=colleague-20261022',base));
+      const index=response.ok?await response.json():{};
+      const document=index[path];
+      if(document?.pages?.length){
+        const pager=el('div','preview-pagination'),wrap=el('div','preview-pdf-pages'),image=el('img');
+        image.style.cssText='display:block;width:100%;height:auto;background:white;box-shadow:0 2px 12px #17263d15';
+        wrap.append(image);root.append(pager,wrap);let page=0;
+        const select=el('select');select.setAttribute('aria-label','选择 PDF 页码');
+        document.pages.forEach((p,i)=>{const option=el('option','','第 '+(i+1)+' 页');option.value=i;select.append(option);});
+        function show(){image.src=new URL(document.pages[page].href,base).href;image.alt=name+' · 第 '+(page+1)+' 页';select.value=String(page);const prev=btn('← 上一页',()=>{page--;show();}),next=btn('下一页 →',()=>{page++;show();});prev.disabled=page===0;next.disabled=page===document.pages.length-1;pager.replaceChildren(prev,select,el('span','','共 '+document.pages.length+' 页'),next);}
+        select.onchange=()=>{page=Number(select.value);show();};show();
+        note('原 PDF 全部 '+document.pages.length+' 页均可预览；翻页或选择页码查看，原文件保持完整。');
+        status.textContent='PDF 逐页在线预览';
+      }else{
+        const wrap=el('div','preview-pdf'),frame=el('iframe');frame.title=name;frame.src=url.href;wrap.append(frame);root.append(wrap);note('若浏览器未显示 PDF，可使用右上角“下载原文件”查看。');status.textContent='PDF 在线预览';
+      }
+      ready();
     }else if(['png','jpg','jpeg','gif','webp','svg'].includes(ext)){
       const img=el('img');img.src=url.href;img.alt=name;img.style.maxWidth='100%';root.append(img);status.textContent='图片预览';ready();
     }else if(ext==='zip'){

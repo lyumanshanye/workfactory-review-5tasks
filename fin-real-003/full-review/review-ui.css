@@ -9,6 +9,10 @@
   --review-blue-light: #edf3ff;
   --review-radius: 16px;
 }
+.review-colleague-attachments {padding:16px;margin-bottom:22px;border:1px solid #d8e3f6;border-radius:10px;background:#f6f9ff;}
+.review-colleague-attachments .review-file-list {grid-template-columns:minmax(0,1fr);}
+.review-colleague-attachments h3 {margin:0 0 7px;}
+.review-colleague-attachments .review-muted {font-size:12px;}
 
 /* Integration with the preserved source page. */
 .review-app main.review-shell { margin: 0 auto; padding: 38px 0 28px; }

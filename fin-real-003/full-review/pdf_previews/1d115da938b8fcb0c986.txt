@@ -1,0 +1,516 @@
+        Tannahill Mechanical Contractors, Inc.                                                                Doc. FIN-MAN-001
+        Finance and Accounting Manual                                                                               2025-1 | p. 1
+
+
+
+
+                                Finance and Accounting Manual
+ Field                                                                Value
+ Document                                                             Finance and Accounting Manual
+ Document ID                                                          FIN-MAN-001
+ Revision                                                             2025-1
+ Effective date                                                       2025-01-15
+
+
+Revision history
+ Rev                               Date                               Description                  Approved
+ 2022                              2022-03-26                         Editorial corrections        Compliance Officer
+ 2023                              2023-06-15                         Section numbering aligned    Compliance Officer
+ 2024                              2024-04-08                         Updated roles and contacts   Board
+ 2025                              2025-03-26                         Forms appendix replaced      Compliance Officer
+
+
+
+
+                                          Controlled document. Printed copies are uncontrolled.
+      Tannahill Mechanical Contractors, Inc.                                                                         Doc. FIN-MAN-001
+      Finance and Accounting Manual                                                                                        2025-1 | p. 2
+
+
+
+
+0.1 1 Purpose and Scope
+This manual states the finance and accounting policies of Tannahill Mechanical Contractors, Inc. and the
+procedures the finance department follows to carry them out. It applies to every employee who prepares,
+reviews, approves, or files financial and tax information for the company, and to every branch, shop, and
+field location the company operates.
+The company is a commercial HVAC and plumbing contractor working out of two branches, with an
+in-house fleet of service trucks and vans and a parts warehouse. Revenue comes from service contracts,
+construction projects, and emergency call-out work. The finance department keeps the general ledger,
+prepares the monthly close, manages vendor and subcontractor payments, administers payroll, and
+prepares the federal and state tax returns before they go to the outside CPA firm for review and e-filing.
+
+0.1.1 1.1 Objectives
+The policies in this manual exist to keep the company's books and filings reliable, to make the work of
+one accountant checkable by another, and to give the outside auditors and the CPA firm a consistent
+basis for their work. Where a policy and a written direction from the Controller conflict, the Controller's
+direction governs for that matter and is documented in the file. Where this manual is silent, staff follow
+the professional practice of a careful accountant in the construction contracting industry.
+
+0.1.2 1.2 Responsibilities
+Table 1
+
+ Function                                                          Responsibility
+ Corporate Controller                                              Owns this manual; approves policy changes; signs the
+                                                                   monthly close and the annual federal return package.
+ Senior Financial Analyst                                          Prepares schedules supporting the close and the tax
+                                                                   returns; performs the independent reviews this manual
+                                                                   requires.
+ Fixed Asset Accountant                                            Maintains the fixed asset register, the depreciation and
+                                                                   amortization workpapers, and the capital project files.
+ Fleet Office Coordinator                                          Maintains the vehicle register, titles and registrations, and
+                                                                   the contemporaneous vehicle usage records.
+ Branch Managers                                                   Approve purchases within their delegated limits and
+                                                                   confirm the service status of equipment and vehicles at
+                                                                   their branch.
+
+
+0.1.3 1.3 Related policies and documents
+This manual is one of a set. It is read with the delegation of authority schedule the Controller maintains,
+the purchasing policy the operations group maintains, and the fleet safety policy the risk manager
+maintains. Where two documents speak to the same matter, the one the Controller owns governs for
+accounting matters.
+Table 2
+
+ Document                                 Owner                                                Matters
+ Delegation of authority schedule         Corporate Controller                                 Approval limits, signing authority
+ Purchasing policy                        Operations                                           Vendor selection, purchase orders
+ Fleet safety policy                      Risk Manager                                         Driver eligibility, incident reporting
+ Payroll procedure                        Controller / Human Resources                         Pay cycles, timekeeping
+ Contract billing procedure               Controller                                           Progress billing, retainage
+
+
+
+                                       Controlled document. Printed copies are uncontrolled.
+      Tannahill Mechanical Contractors, Inc.                                                   Doc. FIN-MAN-001
+      Finance and Accounting Manual                                                                  2025-1 | p. 3
+
+
+
+
+0.1.4 1.4 Accounting basis
+The company keeps its books on the accrual basis in accordance with accounting principles generally
+accepted in the United States. The statements are prepared on a calendar-year basis. Tax computations
+follow the Internal Revenue Code and the regulations and forms prescribed for the year of the return;
+where a book treatment and a tax treatment differ, the workpapers carry both and the difference is
+scheduled.
+
+0.1.5 1.5 Changes to this manual
+The Controller approves every change to this manual before it takes effect. Each approved change is
+recorded in the revision history with its effective date and a short statement of what changed.
+Superseded revisions are kept in the policy file for seven years so that a position taken in an earlier year
+can be read against the policy that was in effect at the time.
+
+0.2 2 Documentation Standards
+Every schedule, workpaper, and supporting file the finance department produces follows the standards
+in this section. The standards exist so that a reviewer who did not prepare the work can follow it without
+a walk-through.
+
+0.2.1 2.1 File naming and organization
+Workpapers are organized by tax year and by schedule type. File names state the period and the
+schedule: for example, the fixed asset detail for the 2025 return is kept in the 2025 depreciation and
+amortization workpapers. Source documents — invoices, titles, agreements, closing statements — are
+filed by vendor and date in the document management system, and the workpapers cite them by
+document number.
+
+0.2.2 2.2 Supporting documentation
+Every number on a schedule carries support. A cost in the fixed asset register is supported by the vendor
+invoice and the approval that authorized the purchase. An intangible in the amortization schedule is
+supported by the agreement that created it and the closing statement that priced it. A vehicle in the fleet
+register is supported by the title, the registration, and the purchase file. Support is filed when the entry is
+made, not later.
+
+0.2.3 2.3 Review evidence
+Work that a second person reviews carries that person's initials and the date of review. A review is
+evidenced on the schedule itself or on a checklist that lists the steps performed. Initialing a schedule
+means the reviewer has performed the steps the checklist names for that schedule and found the work as
+presented, not that the reviewer has glanced at it.
+
+0.2.4 2.4 Corrections
+An error found in a filed or signed schedule is corrected in the period it is found, with a note stating what
+was corrected and why. Correcting entries are supported like any other entry. A correction that changes
+a figure already given to a lender, surety, or tax authority is reported to the Controller the day it is found.
+
+0.3 3 Fixed Asset and Depreciation Policy
+The fixed asset function exists to answer three questions with support a reviewer can follow: what the
+company owns, what it cost, and how much of the cost has been recovered. Every procedure in this
+section serves one of those questions.
+
+
+
+                                       Controlled document. Printed copies are uncontrolled.
+      Tannahill Mechanical Contractors, Inc.                                                                      Doc. FIN-MAN-001
+      Finance and Accounting Manual                                                                                     2025-1 | p. 4
+
+
+
+
+0.3.1 3.1 Capitalization and Classification
+The company capitalizes an item of property or equipment when it has a useful life of more than one
+year and a cost of $2,500 or more. Items below the threshold are expensed when purchased. Cost
+includes freight, sales tax, installation, and the other costs of putting the asset into service.
+Capitalized items are classified in the fixed asset register by type and by the recovery period the
+company uses for tax purposes:
+Table 3
+
+ Asset class                              Examples                                             Recovery period (years)
+ Light vehicles                           Service trucks, vans, sedans                         5
+ Shop equipment                           Lifts, lathes, diagnostic scanners                   7
+ Qualified improvement property           Leasehold build-outs, interior                       15
+                                          renovations
+ Building improvements                    Roofing, HVAC replacement,                           39
+                                          structural work
+ Section 197 intangibles                  Customer relationships, noncompete                   15
+                                          agreements, trade names
+
+
+Classification follows what the asset is and how the company uses it, not how the vendor invoices it. A
+component that is a distinct asset with its own life — an HVAC unit installed in a building the company
+owns — is capitalized in its own class; a repair that restores an existing asset is expensed.
+A component of a larger asset is capitalized on its own when it has a distinct life or a distinct pattern of
+use. A rooftop unit on a building the company owns is a building improvement in its own right; the
+shelving installed in a cargo van is part of the van. When a project includes items of different classes, the
+cost is allocated to the classes on the invoice schedule or, where the invoice does not separate them, on
+the contractor's application for payment.
+Repairs and maintenance that keep an asset in its ordinary condition are expensed in the period
+performed. An expenditure that extends the life of an asset, increases its capacity, or adapts it to a new
+use is capitalized and depreciated over its own life. Ordinary turnarounds of service equipment — brake
+work, fluid services, tire replacement — are repairs, not improvements, regardless of their cost.
+
+0.3.2 3.2 Listed Property Substantiation
+Property the company operates that can serve personal as well as business purposes carries a
+substantiation burden the company takes seriously. Tax positions for listed property must be based on
+contemporaneous records of actual use, not on planning estimates or unadjusted carry-forward files.
+The fleet office maintains the usage records for every vehicle: GPS telematics where the vehicle carries
+a unit, and a manual mileage log where it does not. Drivers of vehicles without GPS units record
+odometer readings at the start and end of each trip, and the branch office reconciles the logs to fuel card
+purchases monthly. The fleet office summarizes each vehicle's business and personal miles for the year
+after the year ends and files the summary with the vehicle's record.
+Mileage records are retained for the period this manual requires in section
+ 1. A vehicle whose records for a year are incomplete is reported to the
+
+Controller, who decides how the company will substantiate its use for that year before any return
+position is taken.
+
+
+
+
+                                       Controlled document. Printed copies are uncontrolled.
+      Tannahill Mechanical Contractors, Inc.                                                               Doc. FIN-MAN-001
+      Finance and Accounting Manual                                                                              2025-1 | p. 5
+
+
+
+
+0.3.3 3.3 Depreciation, Section 179, and Special Allowance Approval
+Book depreciation is computed by the fixed asset module and posted to the general ledger monthly.
+Book lives are set by class at acquisition and reviewed for reasonableness when an asset's use changes:
+Table 4
+
+ Class                                                             Book life (years)
+ Light vehicles                                                    5
+ Shop and field equipment                                          7
+ Leasehold improvements                                            Shorter of the lease term or 15
+ Building improvements                                             20 to 39
+ Section 197 intangibles                                           15
+
+
+The company claims cost recovery on its federal return under the methods the Internal Revenue Service
+prescribes for each class of property. Elections — the section 179 expense election, the election to claim
+or forgo a special depreciation allowance, and any change in accounting method — are made
+deliberately, in writing, before the return is filed.
+Table 5
+
+ Matter                                                            Approval
+ Regular MACRS depreciation on an item within its class            Fixed Asset Accountant
+ Section 179 expense election on any item                          Corporate Controller
+ Election to forgo a special depreciation allowance                Corporate Controller
+ Accounting method change (Form 3115)                              Corporate Controller, with the outside CPA firm
+
+
+The depreciation and amortization workpapers are prepared by the Fixed Asset Accountant from the
+fixed asset register and reviewed before the return goes out. The workpapers carry, for every asset,
+vehicle, and amortization item: the description, the class, the cost, the date the item was placed in
+service, the method and recovery period, the amount claimed for the current year, and the accumulated
+recovery to the end of the year.
+
+0.3.4 3.4 Disposals and Retirements
+An asset is removed from the register when it is sold, traded, scrapped, or retired from service. The
+retirement entry carries the date of disposal, the proceeds if any, and the accumulated recovery at
+disposal; the gain or loss is computed in the module and posted to the general ledger. A vehicle
+retirement is confirmed by the fleet office before the entry is made, and the vehicle's title, plate, and
+telematics unit are cleared in the fleet register the same week.
+A fully recovered asset that is still in service stays in the register with its cost and full accumulated
+recovery until it is disposed of; it is not removed merely because its recovery period has ended.
+
+0.3.5 3.5 Capital Projects
+Construction projects, build-outs, and equipment installation projects over $50,000 are tracked in capital
+project files while they run. Each project file carries the approval, the contracts, the applications for
+payment, the change orders, and the closeout certificate. Costs sit in construction in progress until the
+project is complete and the asset is placed in service, at which point the costs are classified to the fixed
+asset register by class and recovery begins.
+
+
+
+
+                                       Controlled document. Printed copies are uncontrolled.
+      Tannahill Mechanical Contractors, Inc.                                                   Doc. FIN-MAN-001
+      Finance and Accounting Manual                                                                  2025-1 | p. 6
+
+
+
+
+Interest capitalized on a project is computed monthly on the average accumulated expenditures of the
+project while it runs, at the rate of the specific borrowing or the weighted average rate of the company's
+other borrowings, and stops when the project is substantially complete.
+
+0.4 4 Fleet Asset Management Procedure
+The fleet is the company's working plant. Crews, tools, and parts move on it, and the records in this
+section are what let the company bill jobs accurately, insure the fleet correctly, and answer for its use
+when a customer, an auditor, or the tax return asks.
+The company operates a fleet of service trucks, vans, and sedans assigned to crews, service calls, and
+staff. The fleet office, under the Fleet Office Coordinator, keeps the fleet records this section requires.
+
+0.4.1 4.1 Vehicle Records and Registrations
+The fleet office keeps a register of every unit in the fleet: the unit number, the plate number, the vehicle
+identification number, the permanent fixed-asset tag, the body type, the dates of purchase and of release
+to service, and the usage records section 4.4 describes. The register is reconciled to the titles and
+registrations the company holds, and each vehicle's registration renewal is calendared sixty days ahead.
+Titles are held by the Controller's office. Insurance certificates are kept with the vehicle file. A vehicle
+acquired for the fleet is added to the register when it is purchased; its fixed asset tag is assigned at the
+same time and does not change for the life of the vehicle.
+A unit receives its fixed asset tag when it is added to the fleet register, from the same number series the
+fixed asset module assigns. The tag is lettered on the vehicle's B-pillar and recorded on the title file, the
+insurance schedule, and the telematics account. A vehicle that is replaced does not pass its tag to the
+replacement; the replacement takes the next tag in the series, and the retired unit keeps its tag in the
+retired records.
+Vehicle records are matched to fixed assets by permanent unit asset identification number, not by plate
+or registration number; plate numbers may be reassigned when a vehicle is replaced.
+When a vehicle is replaced, the fleet office may transfer the plate of the retired unit to the replacement
+for the convenience of yard parking, fuel cards, and gate access. The register carries the transfer in the
+notes of both records: the retired unit's record states the plate was transferred and to which unit, and the
+replacement's record states the plate was received and from which unit.
+The fleet office reconciles the vehicle register to the fixed asset register twice a year. The reconciliation
+lists every unit and every fixed asset vehicle record and shows which records match and which do not,
+with the status of each vehicle as the two registers carry it.
+
+0.4.2 4.3 Readiness and Service Dates
+A vehicle is not in service the day it is invoiced. The fleet office records two dates for every unit: the
+date of purchase or invoice, and the date the vehicle was registered, outfitted, and released to service.
+Outfitting includes the installation of shelving, racks, crane bodies, livery, and telematics units the
+vehicle needs for the work it is assigned.
+The readiness date is recorded by the Fleet Office Coordinator when the vehicle is released to a branch,
+and the release is confirmed by the branch manager who receives it. The fleet register carries both dates
+for every unit; the purchase file carries the invoice and the outfitting work orders.
+Outfitting work is authorized on a work order that names the unit, the upfitting vendor, and the scope.
+When the work is done, the vendor invoice and the work order go to the fleet file, and the fleet office
+records the release date in the register. A unit that arrives equipped from the dealer is released the week
+its registration clears, on the same two-date rule.
+
+
+
+                                       Controlled document. Printed copies are uncontrolled.
+        Tannahill Mechanical Contractors, Inc.                                                                          Doc. FIN-MAN-001
+        Finance and Accounting Manual                                                                                         2025-1 | p. 7
+
+
+
+
+Fuel is drawn on the company fuel cards assigned to each unit. The fleet office reviews the fuel card
+statement against the mileage recorded for the month, and a variance beyond ten percent is queried with
+the operator's branch before the statement is approved for payment.
+
+0.4.3 4.4 Business Use and Mileage Logs
+The fleet office collects usage for every unit for every month it is in service. Vehicles with GPS
+telematics report business and personal miles by trip; vehicles without a unit run on the manual mileage
+log the driver keeps in the vehicle. The fleet office summarizes each unit's business miles, personal
+miles, and total miles for the calendar year and files the summary with the unit's record.
+Company policy prohibits personal use of company vehicles except for de minimis commute use by the
+assigned operator, and prohibits any personal use of the outfitted cargo vans. An operator whose
+personal miles exceed the policy allowance is reported to the branch manager and the Controller.
+Table 6
+
+ Record                                     Kept by                                              Frequency
+ GPS telematics trip log                    Fleet office                                         Continuous
+ Manual mileage log                         Driver, collected monthly                            Monthly
+ Fuel card reconciliation                   Fleet office                                         Monthly
+ Annual business-use summary                Fleet office                                         Annually, after year end
+
+
+The telematics system records each trip's start, end, and distance and classifies the trip as business or
+personal from the rules the fleet office maintains. A driver who disputes a classification reports it to the
+fleet office within the month, and the correction is made in the system with a note. The manual mileage
+log carries, for each trip, the date, the odometer start and end, the destination, and the business purpose,
+and is signed by the driver and countersigned by the branch manager monthly.
+
+0.5 5 Tax Filing and Review
+0.5.1 5.1 Workpaper Review
+The tax workpapers are reviewed before the return package goes to the outside CPA firm. The review is
+performed by a person who did not prepare the workpapers. The reviewer works from the schedules and
+the source documents, applies the requirements the return is filed under, and records what was checked
+on the review checklist for the year.
+A review that finds a position the workpapers do not support states the finding, the correction required,
+and the dollar effect of the correction. The reviewer's findings go to the preparer for correction and, once
+corrected, to the Controller with the return package. The return package is not released until every
+finding is resolved or the Controller has accepted it in writing.
+
+0.5.2 5.1.1 The filing calendar
+The return calendar for each year is set at the January close and runs backwards from the filing deadline.
+The internal review is calendared to leave the outside CPA firm two working weeks with the package. A
+calendar that slips is reported to the Controller the day it slips, with the reason and the recovery date.
+Table 7
+
+ Step                                       Owner                                                Calendar
+ Fixed asset rollforward closed at          Fixed Asset Accountant                               January close
+ year end
+ Fleet usage summaries filed                Fleet Office                                         By the January close
+
+
+
+                                         Controlled document. Printed copies are uncontrolled.
+        Tannahill Mechanical Contractors, Inc.                                                                        Doc. FIN-MAN-001
+        Finance and Accounting Manual                                                                                       2025-1 | p. 8
+
+
+
+
+ Step                                       Owner                                                Calendar
+ Tax workpapers drafted                     Fixed Asset Accountant                               Two weeks after the close
+ Internal review performed                  Senior Financial Analyst                             Four weeks after the close
+ Controller sign-off                        Corporate Controller                                 Five weeks after the close
+ Outside CPA firm review                    CPA firm                                             Two weeks before the deadline
+ E-file authorization                       Corporate Controller                                 At the deadline
+
+
+0.5.3 5.2 Sign-off Authority
+The Corporate Controller signs the federal return package on behalf of the company and authorizes the
+outside CPA firm to e-file. The Controller may delegate the preparation and assembly of the package but
+not the signing authority. The outside CPA firm is engaged by letter and reviews the return package
+before e-filing; the firm's review does not replace the company's own review under section 5.1.
+Sign-offs are recorded with the signer's initials and the date. A signature on a schedule or a checklist line
+means the signer performed the steps that line names. Delegations of signing authority are in writing,
+name the matters delegated, and expire at the end of the fiscal year unless renewed.
+
+0.6 6 Records Retention
+The company keeps its accounting and tax records for the periods the table below states, measured from
+the end of the year the record belongs to. Records that support a filed return are kept at least as long as
+the limitations period that applies to that return, and longer where a contract, a lender, or a surety
+requires it.
+Table 8
+
+ Record                                                              Retention (years)
+ General ledger and monthly close files                              7
+ Fixed asset register and depreciation workpapers                    7
+ Vehicle register, titles, and usage records                         7
+ Section 197 intangible agreements and amortization                  Life of the asset plus 7
+ schedules
+ Federal and state returns and the review checklists with            7
+ them
+ Vendor invoices and payment support                                 7
+ Payroll records                                                     7
+
+
+Records are stored in the document management system or, where paper, in the finance file room.
+Electronic records are backed up nightly with the company's systems; the backup is tested twice a year
+by restoring a sample. A record that exists in both paper and electronic form is kept electronically, and
+the paper copy may be destroyed once the electronic copy is verified against it.
+A record past its retention period is destroyed by the vendor under a certificate of destruction, except a
+record on legal hold. The Controller's office approves each destruction batch before it goes to the
+vendor, and the certificates are filed with the retention schedule they were destroyed under.
+Records that support a tax return position are kept together with the return: the return as filed, the
+workpapers, the review checklist, and the support the workpapers cite. Anyone who needs an earlier
+year's file asks the Controller's office, which keeps the index of what is held where.
+
+
+
+
+                                         Controlled document. Printed copies are uncontrolled.
+      Tannahill Mechanical Contractors, Inc.                                                                  Doc. FIN-MAN-001
+      Finance and Accounting Manual                                                                                 2025-1 | p. 9
+
+
+
+
+0.6.1 Appendix A: Definitions
+Fixed asset register. The accounting record of the property and equipment the company capitalizes,
+carrying each item's description, class, cost, placed-in-service date, method, and accumulated recovery.
+Fleet register. The fleet office's record of every vehicle the company operates, keyed by unit number
+and carrying the plate, the vehicle identification number, the fixed-asset tag, and the usage records.
+Workpapers. The schedules the finance department prepares to support the figures on the return.
+
+0.6.2 Appendix B: Schedule Content Requirements
+Every schedule named below carries its header fields (company, period, preparer, reviewer, date) and
+the content the table states. A schedule that cannot be completed as specified is returned to the preparer
+with the missing items noted, not completed by the reviewer.
+Fixed asset detail. One row per asset, vehicle, or amortization item in the register.
+Table 9
+
+ Field                                                             Source
+ Asset number, description, class                                  Fixed asset register
+ Placed-in-service date                                            Purchase file or fleet register
+ Cost basis                                                        Vendor invoice, including freight, tax, and installation
+ Prior section 179 claimed                                         Prior-year return schedule
+ Accumulated recovery at year start                                Prior-year rollforward
+ Current-year recovery by method                                   Computation schedule
+ Preparer note                                                     Preparer
+ Reviewer initials and date                                        Reviewer
+
+
+Section 179 parameter block. The dollar limitation, the investment phase-out threshold, and the source
+the workpaper formulas use, stated once for the tax year on their own sheet.
+Depreciation computation schedule. One row per recovering asset: the method, the convention, the
+recovery period, the rate or table row applied, the computed amount, any applicable limitation, and the
+amount as drafted.
+Amortization schedule. One row per intangible per month of the year: the monthly amount, the
+cumulative amortization to date, and the agreement the intangible arises from.
+Vehicle classification schedule. One row per fleet unit: the unit, the plate, the fixed asset tag, the
+treatment the workpapers give the unit, and the business-use percentages carried by the workpapers and
+by the usage records.
+Accumulated depreciation rollforward. One row per register item: cost, accumulated recovery at the
+start of the year, the year's recovery, accumulated recovery at year end, and net book value, agreeing to
+the general ledger.
+Review checklist. One row per review step, each with the step's procedure, the recorded answer, the
+reviewer's initials, and the date.
+Fleet usage summary. One row per unit per year: business miles, personal miles, total miles, the
+business-use percentage, and the source of the measurement, filed with the vehicle's record.
+Reconciliation of the registers. One row per unit and per fixed asset vehicle record, showing the match
+or the reason the two registers carry the vehicle differently, prepared by the fleet office each half year.
+
+
+
+                                       Controlled document. Printed copies are uncontrolled.
+        Tannahill Mechanical Contractors, Inc.                                                                Doc. FIN-MAN-001
+        Finance and Accounting Manual                                                                              2025-1 | p. 10
+
+
+
+
+0.6.3 Appendix C: Definitions of Records
+Cost segregation study. An engineering study that allocates a building or build-out cost among the
+classes of property it contains, used to classify costs for recovery purposes.
+Capitalized cost. The invoice price plus the costs to acquire and ready an asset for its use, net of
+discounts and trade-in allowances.
+Construction in progress. The account that carries project costs while a project runs, before they are
+classified to the fixed asset register.
+Retired record. The fleet register entry of a unit that has been disposed of, kept for the retention period
+with its plate and mileage history.
+
+0.6.4 Appendix D: Revision History
+Table 10
+
+ Rev.                              Date                               Approved by                 Change
+ 2025-1                            2025-01-15                         K. Richardson               Annual review; fleet
+                                                                                                  procedure updated for the
+                                                                                                  telematics rollout.
+ 2024-2                            2024-07-08                         K. Richardson               Records retention table
+                                                                                                  updated for the document
+                                                                                                  management system.
+ 2024-1                            2024-01-16                         K. Richardson               Annual review.
+ 2023-1                            2023-01-17                         K. Richardson               Initial issue of the
+                                                                                                  combined manual.
+
+
+
+
+                                          Controlled document. Printed copies are uncontrolled.
+
