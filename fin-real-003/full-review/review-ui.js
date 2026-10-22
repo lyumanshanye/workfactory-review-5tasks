@@ -190,9 +190,17 @@
       const item=inputs[domain]?.colleague;
       const body=app.querySelector('#compare-'+domain+' .review-comparison-body');
       if(!item||!body||body.querySelector('.review-colleague-attachments'))continue;
+      const heading=[...body.querySelectorAll(':scope > p')].find(p=>/^(?:Local Reference Files|本地参考文件)\s*[:：]?\s*$/i.test(p.textContent.trim()));
+      const list=heading?.nextElementSibling?.tagName==='UL'?heading.nextElementSibling:null;
+      const order=list?[...list.children].map(li=>li.textContent.trim()):[];
+      const files=[...item.files].sort((a,b)=>{
+        const ai=order.indexOf(a.name),bi=order.indexOf(b.name);
+        return (ai<0?Infinity:ai)-(bi<0?Infinity:bi);
+      });
       const section=make('section','review-colleague-attachments');
-      section.append(make('h3','','同学原题附件 · '+item.files.length+' 个'),make('p','review-muted','点击文件名或“预览”，在新标签页查看原始材料；预览页可下载原件。'),fileList(item.files));
-      body.prepend(section);
+      section.append(make('h3','','同学原题附件 · '+item.files.length+' 个'),make('p','review-muted','点击文件名或“预览”，在新标签页查看原始材料；预览页可下载原件。'),fileList(files));
+      if(heading){heading.replaceWith(section);list?.remove();}
+      else body.insertBefore(section,body.querySelector(':scope > details'));
     }
   }
   function render() {
