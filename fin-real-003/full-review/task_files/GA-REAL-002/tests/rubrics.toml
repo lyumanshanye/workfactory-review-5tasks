@@ -1,0 +1,228 @@
+[judge]
+judge = "claude-code"
+prompt_template = "prompt.md"
+model = "qwen3.7-plus"
+timeout = 7200
+mode = "individual"
+weight = 1.0
+
+[[criterion]]
+id = "GA001"
+name = "GA001"
+weight = 10.0
+type = "binary"
+description = "招募与leader集合直接来自Loyalists官方阵营，二者不混同。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA002"
+name = "GA002"
+weight = 7.0
+type = "binary"
+description = "从所有recruit递归追踪advances_to，不遗漏骑士、法师或人鱼目录。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA003"
+name = "GA003"
+weight = 7.0
+type = "binary"
+description = "可达单位集合、边数和终端正确，未解析ID/循环如实列示。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA004"
+name = "GA004"
+weight = 7.0
+type = "binary"
+description = "单位字段限定unit_type直接属性，不误取variation/动画内容。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA005"
+name = "GA005"
+weight = 7.0
+type = "binary"
+description = "基础等级、种族、cost、HP、movement有真实属性来源。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA006"
+name = "GA006"
+weight = 7.0
+type = "binary"
+description = "movement_type、alignment、experience有真实属性来源，宏不当数值。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA007"
+name = "GA007"
+weight = 10.0
+type = "binary"
+description = "直接武器范围限定真正attack，不把filter_attack或动画当武器。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA008"
+name = "GA008"
+weight = 7.0
+type = "binary"
+description = "武器名称、距离、伤害类型、damage和number完整且源行正确。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA009"
+name = "GA009"
+weight = 7.0
+type = "binary"
+description = "地形信息通过movement_type关联公共配置，不把所有单位当同一移动类型。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA010"
+name = "GA010"
+weight = 7.0
+type = "binary"
+description = "正确应用单位自身defense/movement_costs/resistance覆盖并标注来源。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA011"
+name = "GA011"
+weight = 7.0
+type = "binary"
+description = "五类地形的原始移动成本与防御配置完整，未显式给值则不伪造0。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA012"
+name = "GA012"
+weight = 7.0
+type = "binary"
+description = "六类伤害抗性配置保留原值、正确解释承受伤害比例。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA013"
+name = "GA013"
+weight = 7.0
+type = "binary"
+description = "解释防御值方向与负值上限，引用附带实现而非猜测。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA014"
+name = "GA014"
+weight = 7.0
+type = "binary"
+description = "每条升级边HP、movement、cost变化正确。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA015"
+name = "GA015"
+weight = 7.0
+type = "binary"
+description = "武器按名称+距离+类型对齐，新/删武器不误作同武器差额。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA016"
+name = "GA016"
+weight = 7.0
+type = "binary"
+description = "武器damage/number升级变化与原始配置相符。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA017"
+name = "GA017"
+weight = 10.0
+type = "binary"
+description = "列出全部HP上升但movement下降的真实升级边。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA018"
+name = "GA018"
+weight = 7.0
+type = "binary"
+description = "列出全部alignment改变的真实升级边。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA019"
+name = "GA019"
+weight = 7.0
+type = "binary"
+description = "从每个招募到每个可达目标枚举不同简单路径，不遗漏分支。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA020"
+name = "GA020"
+weight = 7.0
+type = "binary"
+description = "路径XP只加非终点的基础experience，终点不多加一次。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA021"
+name = "GA021"
+weight = 7.0
+type = "binary"
+description = "每个起点-目标最小XP和并列路径及路径数准确。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA022"
+name = "GA022"
+weight = 7.0
+type = "binary"
+description = "明确基础XP不等于实际训练耗时、不含traits/经验倍率/AMLA。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA023"
+name = "GA023"
+weight = 7.0
+type = "binary"
+description = "能力/武器特性关联到原始宏定义和引用行，不只列名称。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA024"
+name = "GA024"
+weight = 7.0
+type = "binary"
+description = "至少三条真实依赖说明面板damage×number/cost排序的局限。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA025"
+name = "GA025"
+weight = 7.0
+type = "binary"
+description = "不把charge、firststrike、magical等当作无条件通用增伤。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA026"
+name = "GA026"
+weight = 7.0
+type = "binary"
+description = "所有招募、升级目标、移动类型和业务相关能力宏有来源或明确未解析原因。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA027"
+name = "GA027"
+weight = 3.0
+type = "binary"
+description = "提出三个绑定真实分支/数值/条件的游戏内验证问题，不伪称已经实测。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA028"
+name = "GA028"
+weight = 7.0
+type = "binary"
+description = "工作簿包含目录、升级边、XP、地形抗性、能力与覆盖，JSON与之对应。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA029"
+name = "GA029"
+weight = 10.0
+type = "binary"
+description = "脚本使用结构解析从原件离线重建结果，不硬编码答案或修改来源。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA030"
+name = "GA030"
+weight = 3.0
+type = "binary"
+description = "四份产物可打开，保留路径/标签/行号，中文备忘录结论在前。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "GA031"
+name = "GA031"
+weight = 10.0
+type = "binary"
+description = "捏造原始数据、案例事实、外部文献或条款原文，并声称已核实，触发此扣分项。普通计算错误、遗漏或定位不精确不自动等同于伪造。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+negate = true
+
+[scoring]
+aggregation = "weighted_mean"

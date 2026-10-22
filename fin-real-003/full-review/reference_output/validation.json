@@ -1,0 +1,25 @@
+{
+  "author_candidate": true,
+  "gold_approved": false,
+  "expert_review": false,
+  "workbook_sheets": 10,
+  "panel_rows": 746,
+  "decomposition_residuals": [
+    "-2.1E-28",
+    "3E-28",
+    "2E-29",
+    "6.2E-27"
+  ],
+  "files": {
+    "results.json": "e7df4e136183fe6b124399acc81a30e92c069a1660d3dcebe092e36d80146cfe",
+    "validation.json": "b74a59b68bb999ef4278b65c70ac7260a3a5c4fe564d633b7485055314a485fb",
+    "priority_follow_up_brief.docx": "16c7bf63324a83d37301323cd58b64f3aac58c16318289a8573caaae12afceab",
+    "regional_bank_risk_model.xlsx": "2946f588e065c0ffaa87b80838738227c53d5a4c6a9aab6149bbc550e327fb49",
+    "operating_performance_diagnosis.docx": "d57c1700835c19cd59f240e16be813ba22d132654fa7baac3d9229367842d70d"
+  },
+  "remaining": [
+    "独立数值与业务审核",
+    "Office实际渲染检查",
+    "rubric逐项证据与合理替代解审查"
+  ]
+}

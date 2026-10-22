@@ -1,0 +1,228 @@
+[judge]
+judge = "claude-code"
+prompt_template = "prompt.md"
+model = "qwen3.7-plus"
+timeout = 7200
+mode = "individual"
+weight = 1.0
+
+[[criterion]]
+id = "LAW001"
+name = "LAW001"
+weight = 10.0
+type = "binary"
+description = "正确识别登记、保证金、保险三表粒度，核对执照号候选键与重复。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW002"
+name = "LAW002"
+weight = 7.0
+type = "binary"
+description = "列示真实孤立记录和UBI/名称差异，不凭名称猜同一执照。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW003"
+name = "LAW003"
+weight = 7.0
+type = "binary"
+description = "多个执照共用UBI仍分别审查，不挪用其他执照的保障。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW004"
+name = "LAW004"
+weight = 7.0
+type = "binary"
+description = "先审查登记类型及RCW18.27适用范围，不对电气/管道等类别机械套门槛。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW005"
+name = "LAW005"
+weight = 7.0
+type = "binary"
+description = "一般/专业承包商类别认定与法条及原始登记属性一致。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW006"
+name = "LAW006"
+weight = 7.0
+type = "binary"
+description = "保证金额最低要求与附带法典相符，未知适用性单列。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW007"
+name = "LAW007"
+weight = 10.0
+type = "binary"
+description = "保险与替代财务责任条文、证据要求表述准确。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW008"
+name = "LAW008"
+weight = 7.0
+type = "binary"
+description = "法律矩阵列明取消/减损对登记的影响及本包证据边界。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW009"
+name = "LAW009"
+weight = 7.0
+type = "binary"
+description = "正确解释30天登记届满例外需满足其他条件，不能单列EXPIRED就放行或拒绝。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW010"
+name = "LAW010"
+weight = 7.0
+type = "binary"
+description = "法律矩阵包含登记核验/例外的具体条款与适用条件，不捏造已收到通知。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW011"
+name = "LAW011"
+weight = 7.0
+type = "binary"
+description = "逐执照关联保留全部历史保证金与保险行，不仅取第一行或最新一行。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW012"
+name = "LAW012"
+weight = 7.0
+type = "binary"
+description = "生效当日计入，取消/到期/减损当日起不计入，标为筛查边界而非法定小时裁定。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW013"
+name = "LAW013"
+weight = 7.0
+type = "binary"
+description = "识别Until Canceled，仍考虑实际取消和减损；无法解析/缺失日期留不确定。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW014"
+name = "LAW014"
+weight = 7.0
+type = "binary"
+description = "未来生效记录不提前计入，历史金额不求和凑最低额。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW015"
+name = "LAW015"
+weight = 7.0
+type = "binary"
+description = "2026-10-12与2026-11-11的记录状态均可由日期和来源行复核。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW016"
+name = "LAW016"
+weight = 7.0
+type = "binary"
+description = "登记表状态与保障记录是否支持有效分开列示。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW017"
+name = "LAW017"
+weight = 10.0
+type = "binary"
+description = "保证金日期支持与金额支持分开，未知金额不填0。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW018"
+name = "LAW018"
+weight = 7.0
+type = "binary"
+description = "insuranceamt不被当作已经证明法定保险形式/分项或无除外责任。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW019"
+name = "LAW019"
+weight = 7.0
+type = "binary"
+description = "缺失保障记录仅作为证据不足，不指称真实企业未投保或违法。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW020"
+name = "LAW020"
+weight = 7.0
+type = "binary"
+description = "ACTIVE且两类保障均无可确认记录的名单完整、按执照号排序。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW021"
+name = "LAW021"
+weight = 7.0
+type = "binary"
+description = "30天续期名单检查窗口中间断档与已记录后继覆盖，不仅比较端点。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW022"
+name = "LAW022"
+weight = 7.0
+type = "binary"
+description = "名单逐项包含日期、金额、条文、源行、适用范围及补证动作。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW023"
+name = "LAW023"
+weight = 7.0
+type = "binary"
+description = "真实案例展示历史、未来和状态冲突；不存在类别如实报告未发现。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW024"
+name = "LAW024"
+weight = 7.0
+type = "binary"
+description = "两份核验函针对实际两个不同证据缺口，不捏造合同、争议或通知。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW025"
+name = "LAW025"
+weight = 7.0
+type = "binary"
+description = "主备忘录不复制电话、家庭地址或个人姓名，保留企业与执照核对键。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW026"
+name = "LAW026"
+weight = 7.0
+type = "binary"
+description = "法条引用有PDF页码/条款，法律意见保留事实不全的限制。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW027"
+name = "LAW027"
+weight = 3.0
+type = "binary"
+description = "工作簿含法律矩阵、逐执照、逐记录、核验/续期和数据例外。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW028"
+name = "LAW028"
+weight = 7.0
+type = "binary"
+description = "JSON、工作簿、备忘录名单/数量/日期一致，原始行号可定位。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW029"
+name = "LAW029"
+weight = 10.0
+type = "binary"
+description = "脚本离线从原件重建交付，不补造事实、不修改输入。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW030"
+name = "LAW030"
+weight = 3.0
+type = "binary"
+description = "四份交付均可打开，备忘录结论在前且不把筛查包装成终局意见。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+
+[[criterion]]
+id = "LAW031"
+name = "LAW031"
+weight = 10.0
+type = "binary"
+description = "捏造原始数据、案例事实、外部文献或条款原文，并声称已核实，触发此扣分项。普通计算错误、遗漏或定位不精确不自动等同于伪造。\nInspect output/audit.xlsx, output/memo.docx, output/results.json, output/analysis.py."
+negate = true
+
+[scoring]
+aggregation = "weighted_mean"

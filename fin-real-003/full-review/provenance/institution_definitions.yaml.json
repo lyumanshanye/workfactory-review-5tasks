@@ -1,0 +1,12 @@
+{
+  "name": "institution_definitions.yaml",
+  "origin": "direct_public_download",
+  "url": "https://api.fdic.gov/banks/docs/institution_properties.yaml",
+  "final_url": "https://api.fdic.gov/banks/docs/institution_properties.yaml",
+  "publisher": "FDIC",
+  "fetched_at": "2026-10-22T04:42:29.889592+00:00",
+  "bytes": 94832,
+  "sha256": "6ed1763c66a9e240904a45712b23d825c0f31beaadb6cd0213fc1bf00b2af1b9",
+  "content_type": "text/yaml; charset=UTF-8",
+  "transformed": false
+}

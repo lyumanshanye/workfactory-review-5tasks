@@ -1,0 +1,367 @@
+{
+ "p1": {
+  "status": "ok",
+  "tries": 1,
+  "at": "2026-10-14T18:49:31",
+  "problems": [],
+  "quota_total": 0
+ },
+ "request": {
+  "status": "ok",
+  "tries": 1,
+  "round": 1,
+  "at": "2026-10-14T18:57:21",
+  "problems": [],
+  "history": [
+   {
+    "try": 1,
+    "tag": "t1",
+    "problems": [],
+    "notes": [],
+    "at": "2026-10-14T18:57:21"
+   }
+  ]
+ },
+ "challenges": {
+  "status": "ok",
+  "tries": 2,
+  "round": 1,
+  "at": "2026-10-14T19:53:38",
+  "problems": [],
+  "history": [
+   {
+    "try": 1,
+    "tag": "t1",
+    "problems": [
+     "(calibration) CH1: an independent practitioner, reading only the brief and the material, rates this handling comparable: \"Treat the workpaper/log conflict as an unresolved exception and obtain confirmation from Janet or Jun before finalizing the adjustment, presenting the recapture amount as conditional.\" (A careful reviewer may not finalize a recapture while two internal sources conflict.) -- declare it among the alternatives with an honest likelihood (comparable needs a definition sentence), or change the material so it is clearly less likely",
+     "(calibration) CH2: an independent practitioner, reading only the brief and the material, rates this handling comparable: \"Report a failure but seek confirmation whether the vehicles were actually ready and available for use before year-end, showing the adjustment as provisional until confirmed.\" (Purchase and invoice dates near year-end may create a factual dispute about readiness and availability.) -- declare it among the alternatives with an honest likelihood (comparable needs a definition sentence), or change the material so it is clearly less likely",
+     "(calibration) CH5: an independent practitioner, reading only the brief and the material, rates this handling comparable: \"Reclassify the vehicles to Part V for presentation but report no dollar adjustment where the log shows 100% business use and the depreciation life/method are unchanged.\" (A reviewer may treat this as a classification/disclosure failure only if there is no numeric effect.) -- declare it among the alternatives with an honest likelihood (comparable needs a definition sentence), or change the material so it is clearly less likely",
+     "(calibration) CH6: an independent practitioner, reading only the brief and the material, rates this handling comparable: \"Use the fixed-asset schedule as the system of record for depreciation and the vehicle log only for business use; report only differences for vehicles that clearly match.\" (A practitioner may avoid re-litigating source data if no deduction difference is apparent.) -- declare it among the alternatives with an honest likelihood (comparable needs a definition sentence), or change the material so it is clearly less likely"
+    ],
+    "notes": [
+     "(audit) naive handling tolerated as weak: ['CH1', 'CH6']",
+     "(audit) CH1: The policy clause already tells solvers to take business-use percentages from the log, so the workpaper 100% treatment is not a live mistake; the remaining unstated check is the recapture if the log percentage is 50% or less.",
+     "(audit) CH6: The fleet procedure already forbids plate-based matching, so the wrong join is not tempting; the remaining unstated check is detecting the reused plate and single-source vehicles in this dataset."
+    ],
+    "at": "2026-10-14T19:39:15"
+   },
+   {
+    "try": 2,
+    "tag": "t2",
+    "problems": [],
+    "notes": [
+     "(audit) naive handling tolerated as weak: ['CH6']",
+     "(audit) CH1: The standing policy states the general rule but does not identify the workpaper's 100% as an unadjusted carry-forward or tell the solver that the log conflict is the case to correct.",
+     "(audit) CH2: The brief only says seven vehicles were placed in service in 2025; it does not warn that some invoice-date vehicles were not ready until after year-end.",
+     "(audit) CH3: The brief's reference to current Form 4562 instructions is too general to point at the passenger automobile limit-row issue.",
+     "(audit) CH5: The brief mentions the vehicle usage log but does not warn that vehicles may be misclassified outside Part V.",
+     "(audit) CH6: The procedure clause expressly rejects plate-based matching and warns that plates may be reassigned, so the naive join is not tempting.",
+     "(audit) CH7: The brief asks for one clear recommendation but does not state that known exceptions must override the signed checklist sign-off."
+    ],
+    "at": "2026-10-14T19:53:38"
+   }
+  ]
+ },
+ "materials": {
+  "status": "ok",
+  "tries": 2,
+  "round": 1,
+  "at": "2026-10-14T20:18:40",
+  "problems": [],
+  "history": [
+   {
+    "try": 1,
+    "tag": "t1",
+    "problems": [
+     "2025_form4562_review_checklist.csv: columns ['explanation'] explain other columns -- data files carry records only",
+     "parameter 'vehicles carried as 2025 placed-in-service in the workpapers' says source brief, but the brief draft does not state '7' -- the brief is fixed; put a new parameter in a document"
+    ],
+    "notes": [],
+    "at": "2026-10-14T20:04:49"
+   },
+   {
+    "try": 2,
+    "tag": "t2",
+    "problems": [],
+    "notes": [],
+    "at": "2026-10-14T20:18:40"
+   }
+  ]
+ },
+ "intents": {
+  "status": "ok",
+  "tries": 1,
+  "round": 1,
+  "at": "2026-10-14T21:54:47",
+  "problems": [],
+  "history": [
+   {
+    "try": 1,
+    "tag": "t1",
+    "problems": [
+     "R3.C2: numbers ['100%'] in the criterion text -- no values in P2; use a placeholder",
+     "R4.C2: covered_by.asked_by 'Resolve entity identity between the two registers (vehicles logged under names o' is not a phrase of the brief draft",
+     "R6.C4: covered_by.asked_by \"whether the company's 2025 Form 4562 can be e-filed as drafted or whether Jun Zh\" is not a phrase of the brief draft",
+     "R7.C1: covered_by.asked_by 'walks through the review findings by category (Section 179 expensing, special de' is not a phrase of the brief draft",
+     "R7.C2: covered_by.asked_by 'walks through the review findings by category (Section 179 expensing, special de' is not a phrase of the brief draft",
+     "R7.C3: covered_by.asked_by 'walks through the review findings by category (Section 179 expensing, special de' is not a phrase of the brief draft",
+     "R7.C4: covered_by.asked_by 'walks through the review findings by category (Section 179 expensing, special de' is not a phrase of the brief draft",
+     "R8.C1: covered_by.asked_by 'walks through the review findings by category (Section 179 expensing, special de' is not a phrase of the brief draft",
+     "R8.C2: covered_by.asked_by 'walks through the review findings by category (Section 179 expensing, special de' is not a phrase of the brief draft",
+     "R8.C3: covered_by.asked_by 'walks through the review findings by category (Section 179 expensing, special de' is not a phrase of the brief draft",
+     "R9.C1: covered_by.asked_by 'walks through the review findings by category (Section 179 expensing, special de' is not a phrase of the brief draft",
+     "R5.C1: a `complete` criterion grades a set, list or table value (a verify check, or a fact listing three or more `points`) and says every member must be there"
+    ],
+    "notes": [],
+    "at": "2026-10-14T20:29:58"
+   },
+   {
+    "try": 2,
+    "tag": "t2",
+    "problems": [],
+    "notes": [],
+    "at": "2026-10-14T20:49:45"
+   },
+   {
+    "try": 1,
+    "tag": "rw1.t1",
+    "problems": [],
+    "notes": [
+     "uncovered for both judges, within the share (3%), left to P3.6: ['R5.C3']"
+    ],
+    "at": "2026-10-14T21:54:47"
+   }
+  ],
+  "reworks": 1
+ },
+ "readings": {
+  "status": "ok",
+  "tries": 2,
+  "round": 1,
+  "at": "2026-10-14T22:15:56",
+  "problems": [],
+  "history": [
+   {
+    "try": 1,
+    "tag": "t1",
+    "audited": 25,
+    "problems": [
+     "R5.C1: the readings audit fails it -- settled_by_invalid:  (Professional default D21 concerns date-limit language and does not prescribe complete item-by-item coverage or unique asset and vehicle counts.) -- change what the criterion grades so one reading clearly wins (keep each rubric item at 3-5 criteria), or add a definition in `new_definitions` mapped in `settled` while the design holds fewer than 3 sentences that serve or settle something",
+     "R5.C3: the readings audit fails it -- settled_by_invalid:  (Professional default D21 concerns date-limit language and does not prescribe sign convention, total reduction amount, or largest adjustment component.) -- change what the criterion grades so one reading clearly wins (keep each rubric item at 3-5 criteria), or add a definition in `new_definitions` mapped in `settled` while the design holds fewer than 3 sentences that serve or settle something",
+     "R6.C1: the readings audit fails it -- settled_by_invalid:  (Professional default D21 concerns date-limit language and does not prescribe exception log completeness or required log entry contents.) -- change what the criterion grades so one reading clearly wins (keep each rubric item at 3-5 criteria), or add a definition in `new_definitions` mapped in `settled` while the design holds fewer than 3 sentences that serve or settle something"
+    ],
+    "failures": 3,
+    "at": "2026-10-14T21:37:53"
+   },
+   {
+    "try": 2,
+    "tag": "t2",
+    "audited": 3,
+    "problems": [],
+    "failures": 0,
+    "at": "2026-10-14T22:15:56"
+   }
+  ]
+ },
+ "ready_for_p3": {
+  "status": "ok",
+  "at": "2026-10-14T22:15:56",
+  "artifacts": [
+   "blueprint.json",
+   "request.json",
+   "challenges.json",
+   "materials.json",
+   "intents.json",
+   "readings.json"
+  ]
+ },
+ "p3_scope": {
+  "status": "ok",
+  "tries": 1,
+  "at": "2026-10-15T19:20:52",
+  "problems": [],
+  "dropped_share": 0.0,
+  "brief_add": 0
+ },
+ "p3_spec": {
+  "status": "ok",
+  "tries": 4,
+  "at": "2026-10-17T22:17:45",
+  "sessions": 2,
+  "audit_rounds": 2,
+  "audited": "6f8ab9b07d87be39",
+  "history": [],
+  "problems": []
+ },
+ "p3_build": {
+  "status": "ok",
+  "tries": 7,
+  "at": "2026-10-18T00:40:47",
+  "sessions": 4,
+  "history": [
+   {
+    "session": "build4",
+    "rc": 0
+   }
+  ],
+  "pool": "glm",
+  "problems": []
+ },
+ "p3_rubric": {
+  "status": "ok",
+  "tries": 6,
+  "at": "2026-10-18T00:41:02",
+  "criteria": 42,
+  "drop": [],
+  "dropped_problems": [],
+  "problems": []
+ },
+ "p3_brief": {
+  "status": "ok",
+  "tries": 6,
+  "at": "2026-10-18T00:41:04",
+  "problems": []
+ },
+ "p3_build_audit": {
+  "status": "ok",
+  "tries": 4,
+  "at": "2026-10-18T01:26:21",
+  "built_at": "2026-10-18T00:40:47",
+  "rounds": 1,
+  "counted": [
+   "T6"
+  ],
+  "cap": 2,
+  "problems": []
+ },
+ "p3_blind": {
+  "status": "ok",
+  "tries": 2,
+  "at": "2026-10-17T10:48:55",
+  "rounds": 1,
+  "drop": [],
+  "history": {
+   "corrected_total_2025_deduction": {
+    "reworked": 1
+   },
+   "exception_log_entries": {
+    "reworked": 1
+   },
+   "exception_log_total_adjustment": {
+    "reworked": 1
+   },
+   "largest_adjustment_component": {
+    "reworked": 1
+   },
+   "sec179_item_adjustments": {
+    "reworked": 1
+   },
+   "listed_property_adjustment_items": {
+    "reworked": 1
+   },
+   "reclassified_deduction_adjustment": {
+    "reworked": 1
+   }
+  },
+  "agree": [
+   12,
+   17
+  ],
+  "found": [
+   22,
+   28
+  ],
+  "slots": 39,
+  "diagnosis": [
+   {
+    "solver": 1,
+    "kind": "ok",
+    "stated": 22,
+    "missed": 17,
+    "extraction": 1,
+    "extraction_keys": [
+     "sec179_phaseout_reduction"
+    ],
+    "solver_missed": 16
+   },
+   {
+    "solver": 2,
+    "kind": "ok",
+    "stated": 28,
+    "missed": 11,
+    "extraction": 0,
+    "extraction_keys": [],
+    "solver_missed": 11
+   }
+  ],
+  "intent_issues": [],
+  "problems": [],
+  "built_at": "2026-10-17T08:02:04"
+ },
+ "p3_difficulty": {
+  "status": "ok",
+  "tries": 1,
+  "at": "2026-10-17T11:01:09",
+  "problems": [],
+  "built_at": "2026-10-17T08:02:04",
+  "verdict": "ok",
+  "reworks": 0,
+  "hard_reworks": 0,
+  "gate_scoring": "llm",
+  "lost": 0.914,
+  "crit_fail": 0.6215,
+  "lost_llm": 0.8118,
+  "full_share": 0.0,
+  "threshold": 0.2531,
+  "shape": {
+   "rubrics": 10,
+   "criteria": 42,
+   "criteria_per_rubric": 4.2,
+   "compound_share": 0.952
+  },
+  "seen_through": []
+ },
+ "p3_gates": {
+  "status": "ok",
+  "tries": 3,
+  "at": "2026-10-18T01:26:32",
+  "verdict": "PASS",
+  "recorded": [
+   "discrim: discrim: asset_no: 9 rows carry 3 letter typo(s) of an id written correctly elsewhere (FA-201, FA-202, FA-203; task_folder/2025_depreciation_amortization_workpapers.xlsx#Fixed Asset Detail (3 rows), task_folder/2025_depreciation_amortization_workpapers.xlsx#Depreciation Schedule (3 rows), task_folder/2025_de"
+  ],
+  "problems": []
+ },
+ "p3_review": {
+  "status": "ok",
+  "tries": 3,
+  "at": "2026-10-18T02:08:56",
+  "round": 3,
+  "built_at": "2026-10-18T00:40:47",
+  "errors": 0,
+  "build_fixes": 3,
+  "easy": 0,
+  "criterion_edits": {
+   "drop": 0,
+   "rewrite": 7,
+   "add": 0
+  },
+  "discarded": 0,
+  "problems": [],
+  "verdict": "usable",
+  "conventions": [],
+  "edits_digest": "43f99065ca43cab4"
+ },
+ "p3_publish": {
+  "status": "ok",
+  "tries": 1,
+  "at": "2026-10-18T02:16:06",
+  "problems": []
+ },
+ "accepted": {
+  "status": "ok",
+  "tries": 1,
+  "at": "2026-10-18T02:16:09",
+  "problems": [],
+  "quota_cell": "T2|long_writing"
+ }
+}

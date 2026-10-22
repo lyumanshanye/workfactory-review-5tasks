@@ -1,0 +1,106 @@
+{
+ "rubrics": [
+  {
+   "rubric": "Does the 2025_form4562_compliance_review.xlsx get this right: section 179 limitation, current-year parameters, and per-item Section 179 verdicts?",
+   "weight": 10,
+   "criterion": [
+    "Assigns a Section 179 verdict to every 2025 fixed asset and vehicle position. VAN-108's $52,000.00 election is removed because it was not ready for service until after the 2025 tax year. TRK-105 and TRK-106 are reclassified to listed property and their Section 179 deduction is limited to the supported business-use portion of cost or to a stated, supportable listed-property limit, with the governing instruction; the resulting Section 179 business-income carryover is reported consistently with the elected amounts. Every other item stands.",
+    "Recalculates the Form 4562 Part I limitation with the 2025 published parameters: maximum deduction $2,500,000.00, phase-out threshold $4,000,000.00, cost of Section 179 property placed in service in 2025 $1,434,000.00, and dollar phase-out reduction $0.00.",
+    "Computes the Section 179 deduction after the business-income limitation and carryover: allowed 2025 Section 179 deduction $986,500.00, identifies the business income figure used $986,500.00, and reports an unused carryover to 2026 that follows from the stated limitation basis for the reclassified Part V vehicles.",
+    "The analysis calls out that the workpaper Section 179 parameter sheet and the signed checklist line used the prior-year dollar limit and threshold, and states that the 2025 return must follow the 2025 instructions rather than the stale internal planning figures."
+   ]
+  },
+  {
+   "rubric": "Does the 2025_form4562_compliance_review.xlsx get this right: special depreciation placed-in-service scope and per-item verdicts?",
+   "weight": 10,
+   "criterion": [
+    "Assigns the correct special depreciation verdict for each candidate asset; the items requiring adjustment because they were not placed in service in 2025 are exactly VAN-108 (ready for service 2026-01-05); VAN-109 (ready for service 2026-01-05), each with the placed-in-service provision and the readiness date that pulls the item out of 2025.",
+    "Removes $100,000.00 of basis from 2025 property, reduces the combined Part II and Part V special depreciation allowance by $48,000.00, and recalculates that combined allowance to $189,170.00.",
+    "The analysis states that the invoice date alone does not place a vehicle in service; a 2025 vehicle must have been ready and available for its intended use before year-end."
+   ]
+  },
+  {
+   "rubric": "Does the 2025_form4562_compliance_review.xlsx get this right: listed property classification, business-use substantiation, and limits?",
+   "weight": 10,
+   "criterion": [
+    "Assigns a listed-property verdict for every vehicle and any other listed asset. CAR-103 requires a $2,688.00 correction and VAN-107 requires a $7,020.00 current-year reduction plus $5,840.00 of prior Section 179 recapture. TRK-105 and TRK-106 require reclassification to Part V; the analysis states either the business-use-only limitation or a stated, supportable GVWR-based listed-property limit. Each exception states the classification, business-use percentage, limit row or limitation basis, and governing instruction.",
+    "Recomputes the listed-property limit for the vehicle whose actual business use is below the workpaper-carried business-use percentage; the corrected business-use percentage is 40.0%, the allowable limit is $4,680.00, the disallowed current-year amount is $7,020.00, and the prior Section 179 recapture income is $5,840.00.",
+    "Recomputes the passenger automobile limit for the older vehicle using the later-years row; the corrected tax year of service is 8, the row limit for the vehicle's services is $5,760.00, the business-use-adjusted limit is $4,032.00, and the disallowed excess is $2,688.00.",
+    "Reclassifies the general-asset vehicles with logged personal use—TRK-105 and TRK-106—to Part V listed property. The analysis reports the aggregate limit and the resulting deduction adjustment it uses for those vehicles from the stated limitation basis; it does not rely on an unstated passenger-automobile weight assumption.",
+    "The listed-property analysis relies on the contemporaneous usage log, not the unadjusted workpaper planning percentages, and states that any vehicle with personal use and no qualifying nonpersonal-use exception is listed property under Part V."
+   ]
+  },
+  {
+   "rubric": "Does the 2025_form4562_compliance_review.xlsx get this right: fleet-matched vehicle register and completeness checks?",
+   "weight": 8,
+   "criterion": [
+    "Lists every vehicle or fixed-asset record that is unmatched or only-in-one-source, exactly UT-104 (plate KH-449, permanent asset identifier V-104): present in the fleet log only - the retired unit is past recovery and carries no 2025 fixed asset row, so a plate-based join would attach the replacement's record to it, each with its plate number, permanent asset identifier, and the reason the naive plate-based join would misassign it.",
+    "The replacement vehicle under the reused plate is matched to its own current-year record, not to the old unit; the correct match set is UT-110 - V-110, with the replacement vehicle's 2025 placed-in-service date and basis used for its listed-property and special-depreciation verdicts.",
+    "The current-year special depreciation and listed-property allowances for the replacement vehicle are computed from the replacement vehicle's own basis $46,000.00 and placed-in-service date 2025-06-30, not from the old unit's recovery status.",
+    "The matching note explains that fleet records are joined to fixed assets by permanent unit asset identification number or VIN, because plate numbers may be reassigned."
+   ]
+  },
+  {
+   "rubric": "Does the 2025_form4562_compliance_review.xlsx get this right: analysis sheet completeness and corrected deduction totals?",
+   "weight": 10,
+   "criterion": [
+    "The analysis sheet includes all assets and amortization items and all fleet vehicles exactly once; the covered-asset count is 23 and the covered-vehicle count is 14.",
+    "The corrected total 2025 depreciation and amortization deduction across all items is $1,293,564.50, and the original workpaper total is $1,576,514.32.",
+    "The total required adjustment to the 2025 depreciation and amortization deduction is $282,949.82; the analysis identifies the largest single component consistently with the stated Section 179 limitation treatment for vehicles.",
+    "The analysis flags signed checklist items that do not hold in light of the corrected positions, including the overall sign-off, without treating the sign-off as a substitute for item-by-item verification."
+   ]
+  },
+  {
+   "rubric": "Does the 2025_form4562_compliance_review.xlsx get this right: exception log completeness, reasoning, and corrected lines?",
+   "weight": 10,
+   "criterion": [
+    "Lists every failing position in the exception log: CAR-103, TRK-105, TRK-106, TRK-113, VAN-107, VAN-108, VAN-109, and the Section 179 business-income carryover; each row shows the asset or vehicle identifier, the reason it fails, the dollar adjustment consistent with the limitation basis stated in the analysis, separately stated recapture, and the corrected Form 4562 line or part.",
+    "Each exception cites the governing IRS 2025 Form 4562 instruction or the organisation policy (contemporaneous substantiation, permanent unit matching) rather than only an internal conclusion.",
+    "The exception log shows the required current-year deduction adjustment per affected item totalling $282,949.82 plus separately disclosed recapture income $5,840.00.",
+    "The exception log is framed as a list of required corrections before e-filing, not as optional potential adjustments, and it does not defer quantities for later confirmation where the record repository and rules are sufficient to quantify them."
+   ]
+  },
+  {
+   "rubric": "Does the form_4562_review_memo.pdf get this right: memo: Section 179, special depreciation, and amortization findings?",
+   "weight": 8,
+   "criterion": [
+    "The memo covers Section 179 by stating the 2025 maximum deduction and phase-out threshold used, the effect of the stale internal parameters, and the corrected Section 179 deduction.",
+    "The memo identifies the late-year vehicles that were not ready for service and states that their 2025 special depreciation and Section 179 positions must be removed.",
+    "The memo covers special depreciation by stating the corrected allowance and the amount of current-year property removed from the special depreciation base.",
+    "The memo covers MACRS classes and amortization by confirming which items hold as filed and identifying any changes to classifications or amortization start dates.",
+    "The memo states that the current-year IRS 2025 instructions govern over the prior-year internal checklist and workpaper formulas, so the reviewer's obligation is to correct the return to the 2025 amounts."
+   ]
+  },
+  {
+   "rubric": "Does the form_4562_review_memo.pdf get this right: memo: Listed property findings?",
+   "weight": 9,
+   "criterion": [
+    "The memo reports the vehicle where business use fell below the threshold, the disallowed current-year amount, and the prior Section 179 recapture recognized as other income in 2025.",
+    "The memo reports the older passenger vehicle whose limit row had not been advanced, the corrected tax year of service, and the resulting deduction reduction.",
+    "The memo reports the vehicles moved from general MACRS to Part V listed property, the business-use and limit effects, and the aggregate deduction adjustment.",
+    "The listed-property findings in the memo state that contemporaneous mileage and usage logs control over planning percentages and that the mere descriptions 'truck' or 'van' do not create a nonpersonal-use exception."
+   ]
+  },
+  {
+   "rubric": "Does the form_4562_review_memo.pdf get this right: memo: Matching and completeness findings?",
+   "weight": 8,
+   "criterion": [
+    "The memo reports the vehicle plate reassignment and the resulting mismatch risk; it names the old and replacement vehicle unit identifiers and explains that the replacement's current-year deductions must not be assigned to the old unit.",
+    "The memo reports any vehicles present in only one source and flags them as unverified rather than dropping them.",
+    "The matching discussion states that the permanent unit asset identifier or VIN, not the plate, governs the match, and that plate numbers are reassignable.",
+    "The memo states the completeness limitation of the review: it covers the 23 assets and 14 vehicles shown in the provided exports and does not opine on assets outside those registers."
+   ]
+  },
+  {
+   "rubric": "Does the form_4562_review_memo.pdf get this right: memo: Bottom-line recommendation and total change?",
+   "weight": 10,
+   "criterion": [
+    "The memo states the total change to the 2025 depreciation and amortization deduction if all exceptions are corrected as $282,949.82, and separately states any 2025 other income from prior Section 179 recapture as $5,840.00.",
+    "The memo makes exactly one clear recommendation: revise the workpapers before e-filing, and does not defer the choice or recommend filing as drafted.",
+    "The recommendation is tied to the known amount-changing exceptions in the exception log and states that no known amount-changing error should be filed uncorrected.",
+    "The memo explains that the signed checklist overall sign-off is overridden by the item-by-item findings, not used as evidence that the return can be filed.",
+    "The memo is written so that a managing partner without opening the workbook can follow the category findings, the total change, and the recommendation."
+   ]
+  }
+ ]
+}

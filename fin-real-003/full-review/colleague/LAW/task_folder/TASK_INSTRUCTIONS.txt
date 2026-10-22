@@ -1,0 +1,12 @@
+I am asking you to prepare the decision package for our next Bronx housing maintenance campaign. We have several candidate buildings from the intake team, and we can commit only one tenant action campaign in the coming quarter. The litigation committee meets after your work is complete to make the final decision. Abena Okonkwo, the managing attorney, and I will present the package; Helen Harris, the tenant association organizer, will begin organizing at the selected building; Keisha Merriweather has gathered the intake files.
+
+Please produce three files for that meeting. comparison_model.csv must be a scored comparison of the candidate buildings. It must contain one row per building and show the factors used to compare them, the overall rank, and the source behind each scored factor, so the committee can reproduce the ranking. recommendation_memo.md must be a recommendation memo that commits to one building and explains why it is the strongest candidate; include the legal and repair conditions, the owner liability picture, and how the campaign fits our current attorney capacity. demand_letters.txt must be a set of pre-suit demand letters to the owner and managing agent for the building you recommend, identifying the most serious housing maintenance violations and demanding correction.
+
+Use the attached intake case files and the public HPD housing maintenance code violation records for the Bronx. The period under review is the period covered by those records. Give the greatest weight to life-safety and emergency conditions, and give the next weight to open civil penalty exposure. The committee will not consider a campaign that cannot be supported by current attorney capacity. Do not include more than one candidate in the demand letters.
+
+Local Reference Files:
+- case_files.xlsx
+- HPD_Violations_Bronx_2024plus_candidate_extract.csv
+- case_intake_and_correspondence.pdf
+- penalty_deadline_charts.xlsx
+- HPD_multiple_dwelling_registration_extract_2026-05.csv

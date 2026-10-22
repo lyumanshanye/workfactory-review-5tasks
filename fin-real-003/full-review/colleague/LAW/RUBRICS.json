@@ -1,0 +1,85 @@
+{
+ "rubrics": [
+  {
+   "rubric": "Does the comparison_model.csv get this right: comparison model scored factor basis and rank?",
+   "weight": 8,
+   "criterion": [
+    "The comparison model gives a source basis for each scored factor: HPD violation extract for severity/counts, the current published HPD civil penalty schedule for penalty exposure, and the current public HMC/HPD violation classification and deadline provisions applied by NOV issue date for deadlines. It does not cite the intake candidate summary or the internal staff penalty charts as the governing source for a scored factor: severity and open counts from HPD violation extract, matched by BBL and address range; the intake summary counts were replaced after the street-name-only merge errors; open penalty exposure from current published HPD civil penalty schedule (HMC § 27-2115); classification and correction deadlines from current public HMC/HPD class and correction-deadline provisions, applied by NOV issue date; the internal staff charts are non-governing summaries.",
+    "The overall rank in the model follows the weighting required by the request: life-safety and emergency conditions carry the greatest weight, open civil penalty exposure the next weight, and a candidate unsupported by current attorney capacity is excluded from the ranking.",
+    "The comparison model makes the life-safety severity factor visible separately from raw total open violations, so a candidate with fewer open violations but more open Class C or rent-impairing rows can rank above a high-volume procedural-row candidate on that factor.",
+    "The comparison model contains one scored row per true candidate building after address and BBL reconciliation; no street-name-only merge causes two different BBLs to appear as one candidate, and no duplicate of the same BBL appears as a separate candidate."
+   ]
+  },
+  {
+   "rubric": "Does the comparison_model.csv get this right: corrected HPD counts and severity factor?",
+   "weight": 10,
+   "criterion": [
+    "The comparison model reports each candidate's corrected counts in BO-2165 / BBL 2043170046: 1 open Class C, 14 open total; BR-750 / BBL 2027630329: 1 open Class C, 11 open total; GC-2871 / BBL 2033190113: 5 open Class C, 9 open total; WA-2323 / BBL 2031870047: 1 open Class C, 30 open total. Each entry includes the candidate id, the BBL, the current open Class C count, and the current total open count after matching HPD rows by BBL and address range; it does not use the intake candidate summary counts. Every candidate is listed, and a count that was inflated by merging another BBL on the same street name is corrected; leaving a candidate out or using the summary count fails.",
+    "The comparison model reports each candidate's life-safety severity factor in BO-2165 / BBL 2043170046: 2; BR-750 / BBL 2027630329: 2; GC-2871 / BBL 2033190113: 5; WA-2323 / BBL 2031870047: 1. Each entry includes the candidate id, BBL, and the count of current open HPD violations that are either Class C or rent-impairing. Closed rows, Class A rows, and non-rent-impairing Class B or procedural rows are excluded; every candidate is listed.",
+    "In the comparison model, raw total open violations from Class A or ordinary enforcement rows do not control the severity ranking; the model separates the life-safety factor and allows a candidate with fewer open rows but more open Class C/rent-impairing rows to rank above a high-volume procedural candidate.",
+    "The model's source notes for counts and severity state that the HPD violation extract was matched by BBL and address range after finding street-name-only merge errors in the intake summary; the precomputed summary counts are not used for scored counts."
+   ]
+  },
+  {
+   "rubric": "Does the comparison_model.csv get this right: penalty exposure and governing deadline source?",
+   "weight": 9,
+   "criterion": [
+    "The comparison model reports open civil penalty exposure for each candidate in BO-2165 / BBL 2043170046: $1,150.00; BR-750 / BBL 2027630329: $975.00; GC-2871 / BBL 2033190113: $1,250.00; WA-2323 / BBL 2031870047: $1,850.00. Each entry includes the candidate id, BBL, and total current open penalty exposure computed from the current published HPD civil penalty schedule's fixed per-class and rent-impairing amounts; every current open HPD violation receives the amount for its class and rent-impairing status. A stale internal chart amount or a flat amount per row is not acceptable.",
+    "The comparison model identifies the source of the penalty-exposure factor as the current published HPD civil penalty schedule, and it does not present a penalty amount copied from the internal staff penalty charts.",
+    "The comparison model's classification and deadline source is stated as the current public NYC Housing Maintenance Code and HPD class and correction-deadline rules as they applied on each violation's NOV issue date; the internal staff charts are not used as the governing edition when they conflict with the public source.",
+    "The model's penalty and deadline source notes do not rely on either staff chart from the case file as authoritative; where the two internal charts conflict, the model follows the public HMC/HPD provisions applicable to the violation issue date."
+   ]
+  },
+  {
+   "rubric": "Does the comparison_model.csv get this right: attorney capacity feasibility?",
+   "weight": 8,
+   "criterion": [
+    "The remaining employed attorney capacity used in the model is 16 hours, after subtracting existing attorney commitments from current employed attorney hours and before adding any non-attorney hours.",
+    "Each candidate's feasibility status in the comparison model appears in BO-2165: 9 attorney hours of 16 remaining, feasible; BR-750: 22 attorney hours of 16 remaining, infeasible; GC-2871: 14 attorney hours of 16 remaining, feasible; WA-2323: 26 attorney hours of 16 remaining, infeasible. An entry is feasible only if the candidate package's estimated attorney hours do not exceed the remaining employed attorney hours; feasible entries must not rely on non-attorney hours to fit. Every candidate is listed.",
+    "No candidate recommended in the memo is marked infeasible in the comparison model, and a candidate whose estimated attorney hours exceed remaining employed attorney capacity is excluded from the final recommendation.",
+    "The capacity computation in the model excludes intern, volunteer, and paralegal hours from current attorney capacity and subtracts existing case commitments before testing each candidate's attorney-hour estimate."
+   ]
+  },
+  {
+   "rubric": "Does the recommendation_memo.md get this right: recommendation decision and primary rationale?",
+   "weight": 10,
+   "criterion": [
+    "The memo recommends exactly one candidate building for the campaign and commits to it. The recommended building is the candidate that ranks first in the comparison model after the severity factor, penalty exposure, and attorney capacity screen; it is not an infeasible candidate, and the demand letters are for that building only: GC-2871 (2871 Grand Concourse, BBL 2033190113).",
+    "The memo's core severity rationale names the HPD Class C and rent-impairing open rows as the life-safety/emergency basis, and explains why a candidate with fewer total open violations can be the stronger enforcement target when its open rows include more of those conditions.",
+    "The memo states that open civil penalty exposure is computed from the current published HPD civil penalty schedule, not from the office's internal staff charts, and that correction deadlines follow the public HMC/HPD provisions in effect on each NOV issue date.",
+    "The memo's owner-liability rationale identifies the recommended building's current owner and managing agent as shown in the HPD multiple dwelling registration extract, and states that lease or intake-sheet names are prior or conflicting when they differ.",
+    "The memo explains capacity fit under the current-attorney-capacity test: it computes remaining employed attorney hours after existing commitments, excludes intern and volunteer hours, and shows that the recommended package fits within that remaining capacity."
+   ]
+  },
+  {
+   "rubric": "Does the recommendation_memo.md get this right: legal, repair, and source-conflict analysis?",
+   "weight": 8,
+   "criterion": [
+    "The memo states that the managing agent's opening assurance that all open violations at the property have been corrected is limited by the letter's final exclusion for uncertified rent-impairing Class C violations, and that HPD record-level open status for those excluded rows controls.",
+    "The memo states that the comparison uses the current public HMC/HPD class, correction-deadline, and penalty provisions; internal staff-prepared charts are superseded where they disagree with the public source for the issue date.",
+    "The memo's repair-history discussion states that HPD records, not the managing agent's narrative letter, determine whether a violation is open or corrected; it identifies the uncertified rent-impairing Class C rows as still open and notes they remain in scoring.",
+    "The memo identifies the current HPD multiple dwelling registration extract as the source for the owner and managing agent to whom demand will be sent, not the lease or intake sheet, because notice must go to the current registered parties."
+   ]
+  },
+  {
+   "rubric": "Does the demand_letters.txt get this right: demand letters addressed to current responsible parties?",
+   "weight": 8,
+   "criterion": [
+    "The demand letters include two addressee blocks for the recommended building: the current owner and current managing agent shown in the HPD multiple dwelling registration extract, exactly as in owner: Highbridge Fulton Holdings LLC, 3714 White Plains Road, Bronx, NY 10467; managing agent: Norwood Residential Management Inc., 915 East Tremont Avenue, Suite 210, Bronx, NY 10460. Each entry has the role, current name, and mailing address; both are present and no lease or intake-sheet party that differs from the HPD registration is used as the addressee.",
+    "The demand letters do not include more than one candidate building; only the recommended building's address, violations, and party blocks appear.",
+    "The letters identify the addressees as the current HPD-registered owner and agent, not the parties listed in the lease or intake sheet unless they are the same; a former owner or agent from the client's documents is not used as the party to whom the demand is addressed.",
+    "Each letter names the addressee by role, references the recommended building's BBL or registered address, and uses the mailing address from the HPD registration extract rather than a conflicting lease or intake-sheet address."
+   ]
+  },
+  {
+   "rubric": "Does the demand_letters.txt get this right: most serious violations listed and correction demanded?",
+   "weight": 8,
+   "criterion": [
+    "The demand letters list every current open rent-impairing Class C HPD violation for the recommended building that the managing agent's letter excluded from its correction confirmation, as recorded in 17636994 (2871 Grand Concourse, Bronx, NY 10458, class C, rent-impairing Y, Open); 18538810 (2871 Grand Concourse, Bronx, NY 10458, class C, rent-impairing Y, Open); 18569299 (2871 Grand Concourse, Bronx, NY 10458, class C, rent-impairing Y, Open). Each entry includes the violation id, address or unit, class, rent-impairing flag, and open status; leaving any of those rows out fails.",
+    "The demand letters list all current open Class C and all current open rent-impairing violations for the recommended building in 17636994 (class C, rent-impairing Y, Open); 18364836 (class C, rent-impairing N, Open); 18520255 (class C, rent-impairing N, Open); 18538810 (class C, rent-impairing Y, Open); 18569299 (class C, rent-impairing Y, Open). Each entry has the HPD violation id, class, rent-impairing flag, and open status; a letter that only gives a total or substitutes a longer list of Class A or ordinary procedural rows instead of Class C/rent-impairing rows fails.",
+    "The demand letters identify the severe violations as the reason for the demand: current open immediately hazardous or rent-impairing conditions, not a raw count of all open violations.",
+    "Each demand letter states that the listed violations remain open and uncertified in HPD records, references the HPD violation numbers and classes, and demands correction without conceding that the managing agent's opening letter has corrected them."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,249 @@
+[
+  {
+    "id": "GO001",
+    "weight": 10,
+    "type": "binary",
+    "description": "正确区分逐日、年度汇总和其他日期记录；不给年度行捏造日期。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO002",
+    "weight": 7,
+    "type": "binary",
+    "description": "识别合同版本粒度与候选键，不把修订数量当作合同数量。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO003",
+    "weight": 7,
+    "type": "binary",
+    "description": "负数付款保留符号并与原始行对应，不丢弃冲销。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO004",
+    "weight": 7,
+    "type": "binary",
+    "description": "DV与空合同号单列，不按相似供应商名强制匹配。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO005",
+    "weight": 7,
+    "type": "binary",
+    "description": "找出全部跨付款粒度交集合同，并提供各自来源行。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO006",
+    "weight": 7,
+    "type": "binary",
+    "description": "不把混合粒度直接相加声称真实不重叠总支出。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO007",
+    "weight": 10,
+    "type": "binary",
+    "description": "年末视图严格排除批准日期晚于2024-12-31的版本。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO008",
+    "weight": 7,
+    "type": "binary",
+    "description": "选版先比较批准时间，再以数值而非字典序比较修订号。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO009",
+    "weight": 7,
+    "type": "binary",
+    "description": "同顺序重复内容去重，内容冲突保留多个候选，不任意选首行。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO010",
+    "weight": 7,
+    "type": "binary",
+    "description": "给出全快照最新版本对照及与年末视图的变化合同数。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO011",
+    "weight": 7,
+    "type": "binary",
+    "description": "变化付款敞口按两种粒度分别计算，保留来源行。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO012",
+    "weight": 7,
+    "type": "binary",
+    "description": "版本对照提供10个真实变化案例（实际不足10个则全部列出），每条可由原始记录复核。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO013",
+    "weight": 7,
+    "type": "binary",
+    "description": "关联不做一对多展开导致付款金额或行数膨胀。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO014",
+    "weight": 7,
+    "type": "binary",
+    "description": "分别报告逐日与年度付款的唯一匹配行数/合同数/金额。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO015",
+    "weight": 7,
+    "type": "binary",
+    "description": "分别报告两种粒度未匹配及版本冲突的行数/合同数/金额。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO016",
+    "weight": 7,
+    "type": "binary",
+    "description": "两种付款粒度的关联前后金额守恒，差异有明确处置。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO017",
+    "weight": 10,
+    "type": "binary",
+    "description": "未匹配前20仅含年度合同付款中未唯一匹配者，按绝对净额排序。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO018",
+    "weight": 7,
+    "type": "binary",
+    "description": "未匹配前20并列按合同号排序，保留所有付款来源行。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO019",
+    "weight": 7,
+    "type": "binary",
+    "description": "高比率前20只使用年度、唯一匹配且正授予额的合同。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO020",
+    "weight": 7,
+    "type": "binary",
+    "description": "付款/授予额计算、排序和并列处理与题面一致。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO021",
+    "weight": 7,
+    "type": "binary",
+    "description": "零、负和缺失授予额单列，不产生无穷比率。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO022",
+    "weight": 7,
+    "type": "binary",
+    "description": "追查表列明选中版本行号、批准日期、修订号、金额及缺口。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO023",
+    "weight": 7,
+    "type": "binary",
+    "description": "追查清单含可执行的补档/核验步骤，不把比率直接作为违规裁定。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO024",
+    "weight": 7,
+    "type": "binary",
+    "description": "备忘录结论在前，区分已核实事实、异常和不能下的结论。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO025",
+    "weight": 7,
+    "type": "binary",
+    "description": "至少3个不同真实合同案例包含跨两表的完整可核查证据链。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO026",
+    "weight": 7,
+    "type": "binary",
+    "description": "备忘录解释真实发生的未来版本偏差、查询范围与混合粒度限制。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO027",
+    "weight": 3,
+    "type": "binary",
+    "description": "audit.xlsx包含题面指定五表且可筛选，数值可读、单位明确。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO028",
+    "weight": 7,
+    "type": "binary",
+    "description": "JSON与工作簿及备忘录关键金额/数量一致，来源行号可复查。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO029",
+    "weight": 10,
+    "type": "binary",
+    "description": "analysis.py从原件离线重建三份交付，不硬编码答案或修改输入。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO030",
+    "weight": 3,
+    "type": "binary",
+    "description": "四份文件均可打开且仅按题面路径交付；业务备忘录不以JSON替代。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "GO031",
+    "weight": 10,
+    "type": "binary",
+    "negate": true,
+    "description": "捏造原始数据、案例事实、外部文献或条款原文，并声称已核实，触发此扣分项。普通计算错误、遗漏或定位不精确不自动等同于伪造。"
+  }
+]

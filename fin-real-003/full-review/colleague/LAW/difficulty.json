@@ -1,0 +1,1007 @@
+{
+ "case": "v3-00524",
+ "built_at": "2026-10-16T21:11:30",
+ "blind_round": 1,
+ "summary": {
+  "solvers": [
+   {
+    "solver": 1,
+    "crit_fail": 0.3768,
+    "lost": 0.8841,
+    "full": false,
+    "rubrics": 8,
+    "criteria": 33,
+    "left_out": 0,
+    "criteria_results": [
+     {
+      "id": "R1.C1",
+      "rubric": 1,
+      "mode": "values",
+      "passed": false,
+      "why": "v_R1_C1: False differs (reference_right)"
+     },
+     {
+      "id": "R1.C2",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The model applies the required weighting and capacity exclusion. Overall scores use 0.6*life_safety_score + 0.4*penalty_score, so life-safety/emergency carries the greatest weight and civil penalty exposure carries the next weight. Numeric ranks are assigned only to capacity-supported candidates; unsupported candidates are marked Not eligible."
+     },
+     {
+      "id": "R1.C3",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The model keeps life-safety severity visible separately from raw open-violation volume by including class-specific counts, rent-impairing counts, documented emergency conditions, and a life_safety_score. This enables a candidate with fewer total open violations but more severe Class C or rent-impairing conditions to score higher on life safety."
+     },
+     {
+      "id": "R1.C4",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The comparison model has exactly one scored row per true candidate building, with distinct BBLs and addresses. It explicitly excludes the neighboring 2185 Bolton Street parcel rather than merging it with 2165 Bolton Street, and there are no duplicate BBL rows."
+     },
+     {
+      "id": "R2.C1",
+      "rubric": 2,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R2.C2",
+      "rubric": 2,
+      "mode": "values",
+      "passed": false,
+      "why": "building_lifesafety_counts: [{'candidate_id': 'GC-2871', 'bbl': '2033190113', 'lifesafety_count': 5}, {'candidate_id': 'WA-2323', 'bbl': '2031870047', 'lifesafety_count': 1}, {'candidate_id': 'BO-2165', 'bbl': '2043170046', 'lifesafety_count': 1}, {'candidate_id': 'BR-750', 'bbl': '2027630329', 'lifesafety_count': 1}] differs (reference_right)"
+     },
+     {
+      "id": "R2.C4",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "The model's life-safety scoring formula explicitly separates severity from raw open violation volume: Class A is weighted 0, Class C weighted 12, Class B weighted 4, rent-impairing weighted 6, and documented emergency conditions weighted 10. Grand Concourse has only 9 total open rows but 5 Class C and 3 rent-impairing rows and ranks first, while Walton Avenue has 30 total open rows, including 19 Class A rows, but only 1 Class C and 0 rent-impairing rows and does not outrank it."
+     },
+     {
+      "id": "R2.C5",
+      "rubric": 2,
+      "mode": "words",
+      "passed": false,
+      "why": "The comparison_model.csv source notes for counts and severity do not state that the HPD violation extract was matched by BBL and address range after finding street-name-only merge errors in the intake summary. They also do not explicitly state that precomputed summary counts were not used for scored counts. The violations_source note only identifies the extract, filters to Open status, and excludes a neighboring non-candidate parcel."
+     },
+     {
+      "id": "R3.C1",
+      "rubric": 3,
+      "mode": "values",
+      "passed": false,
+      "why": "building_open_penalty_exposures: [{'candidate_id': 'GC-2871', 'bbl': '2033190113', 'exposure_usd': 1600}, {'candidate_id': 'WA-2323', 'bbl': '2031870047', 'exposure_usd': 2200}, {'candidate_id': 'BO-2165', 'bbl': '2043170046', 'exposure_usd': 1450}, {'candidate_id': 'BR-750', 'bbl': '2027630329', 'exposure_usd': 1250}] differs (reference_right)"
+     },
+     {
+      "id": "R3.C2",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The comparison model cites 'penalty_deadline_charts.xlsx chart_2025_12' as the source of the per-class penalty amounts and uses those amounts ($50/$100/$250). That is a staff chart from the case file, not the current published HPD civil penalty schedule."
+     },
+     {
+      "id": "R3.C3",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The comparison model does not state a governing classification or deadline source tied to the NYC Housing Maintenance Code and HPD rules as applied to each violation's NOV issue date. Its violation source is only the HPD extract for open status, class, and rent-impairment fields, and no deadline-source field is provided in the CSV."
+     },
+     {
+      "id": "R3.C4",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The model explicitly relies on an internal staff chart as authoritative for penalty exposure and discusses the other internal staff chart only as superseded. It does not follow the public HMC/HPD provisions applicable to the violation issue date where the internal charts conflict."
+     },
+     {
+      "id": "R4.C1",
+      "rubric": 4,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R4.C2",
+      "rubric": 4,
+      "mode": "values",
+      "passed": false,
+      "why": "candidate_capacity_fit: [{'candidate_id': 'GC-2871', 'estimated_attorney_hours': 14, 'remaining_attorney_hours': 16, 'feasible': 'Yes'}, {'candidate_id': 'WA-2323', 'estimated_attorney_hours': 26, 'remaining_attorney_hours': 16, 'feasible': 'No'}, {'candidate_id': 'BO-2165', 'estimated_attorney_hours': 9, 'remaining_attorney_hours': 16, 'feasible': 'Yes'}, {'candidate_id': 'BR-750', 'estimated_attorney_hours': 22, 'remaining_attorney_hours': 16, 'feasible': 'No'}] differs (reference_right)"
+     },
+     {
+      "id": "R4.C3",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo recommends GC-2871, and the comparison model marks GC-2871 as capacity_supported = Yes. The two candidates with estimated attorney hours above the 16-hour remaining capacity, WA-2323 at 26 hours and BR-750 at 22 hours, are marked Not eligible and are not ranked or recommended."
+     },
+     {
+      "id": "R4.C4",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The model computes available attorney capacity as 60 attorney total hours minus 44 existing commitments, yielding 16 available hours, then tests each candidate's estimated attorney hours against that 16-hour figure. It does not add intern, volunteer, or paralegal hours into the capacity calculation."
+     },
+     {
+      "id": "R5.C1",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo recommends and commits to one building, GC-2871, which is rank 1 in the comparison model among capacity-supported candidates. Demand letters are addressed only to GC-2871's owner and agent."
+     },
+     {
+      "id": "R5.C2",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo names the open Class C and rent-impairing rows as the core life-safety/emergency basis and explains that GC-2871's strength is concentration in those high-severity rows, not total violation count."
+     },
+     {
+      "id": "R5.C3",
+      "rubric": 5,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo uses a current penalty chart and generally mentions deadlines, but it does not explicitly state that the open penalty exposure comes from the current published HPD civil penalty schedule rather than the office's internal staff charts, nor does it state that correction deadlines follow public HMC/HPD provisions in effect on each NOV issue date."
+     },
+     {
+      "id": "R5.C4",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo identifies the current owner and managing agent from the HPD multiple dwelling registration extract and states that lease/intake-sheet names are prior or conflicting."
+     },
+     {
+      "id": "R5.C5",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo computes remaining attorney capacity as 16 hours after existing attorney commitments, treats intern/volunteer hours as separate non-attorney capacity, and shows the GC-2871 package fits within the remaining attorney hours."
+     },
+     {
+      "id": "R6.C1",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo describes the managing agent's April 10 letter as claiming all open violations are corrected while then disclaiming the uncertified rent-impairing Class C violations, and states that HPD's record-level open status for those excluded rows controls."
+     },
+     {
+      "id": "R6.C2",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not state that the comparison uses the current public HMC/HPD class, correction-deadline, and penalty provisions, nor that internal staff-prepared charts are superseded where they disagree with the public source for the issue date. It mentions a current penalty chart but omits the broader source-conflict statement."
+     },
+     {
+      "id": "R6.C3",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo's repair-history discussion treats HPD records, not the managing agent's narrative letter, as controlling for open/corrected status. It identifies the three uncertified rent-impairing Class C rows as still open and includes them in the open violation scoring and penalty exposure."
+     },
+     {
+      "id": "R6.C4",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo identifies the current HPD multiple dwelling registration extract as the source for the proper owner and managing agent recipients, and explains that lease/intake sheet names are superseded because notice must go to the current registered parties."
+     },
+     {
+      "id": "R7.C1",
+      "rubric": 7,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R7.C2",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The demand_letters.txt contains only the recommended building, 2871 Grand Concourse/BBL 2033190113, with two letters addressed to its owner and managing agent. No other candidate building's address, violations, or party blocks appear."
+     },
+     {
+      "id": "R7.C3",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The letters are addressed to the current HPD-registered owner and agent, Highbridge Fulton Holdings LLC and Norwood Residential Management Inc., and identify them by current role. They do not address the former owner or agent named in client documents."
+     },
+     {
+      "id": "R7.C4",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "Each letter names the addressee by role, references the recommended building's registered address and BBL, and uses the mailing addresses consistent with the HPD registration extract described in the recommendation memo, not a conflicting lease or intake-sheet address."
+     },
+     {
+      "id": "R8.C1",
+      "rubric": 8,
+      "mode": "values",
+      "passed": false,
+      "why": "demand_letter_rent_impairing_class_c_violations: [{'violationid': '17636994', 'address': 'building entrance door, 1st story', 'class': 'C', 'rentimpairing': 'Yes', 'violationstatus': 'Open'}, {'violationid': '18538810', 'address': 'building street entrance door, 1st story', 'class': 'C', 'rentimpairing': 'Yes', 'violationstatus': 'Open'}, {'violationid': '18569299', 'address': 'building entrance door at public hall, 1st story', 'class': 'C', 'rentimpairing': 'Yes', 'violationstatus': 'Open'}] differs (reference_right)"
+     },
+     {
+      "id": "R8.C2",
+      "rubric": 8,
+      "mode": "values",
+      "passed": false,
+      "why": "demand_letter_serious_open_violations: [{'violationid': '17636994', 'class': 'C', 'rentimpairing': 'Yes', 'violationstatus': 'Open'}, {'violationid': '18538810', 'class': 'C', 'rentimpairing': 'Yes', 'violationstatus': 'Open'}, {'violationid': '18569299', 'class': 'C', 'rentimpairing': 'Yes', 'violationstatus': 'Open'}, {'violationid': '18364836', 'class': 'C', 'rentimpairing': 'No', 'violationstatus': 'Open'}, {'violationid': '18520255', 'class': 'C', 'rentimpairing': 'No', 'violationstatus': 'Open'}] differs (reference_right)"
+     },
+     {
+      "id": "R8.C3",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The letters frame the demand around serious egress/life-safety conditions rather than a bare count of open violations. The owner letter specifically says it demands correction of open violations, 'several of which are immediately hazardous, rent-impairing, and repeated,' and the agent letter highlights 'rent-impairing Class C violations' and specific safety conditions."
+     },
+     {
+      "id": "R8.C4",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "Both letters state the listed violations remain open/open and uncorrected in HPD records, provide HPD NOV numbers and classes, and demand correction. The owner letter does not concede correction; the managing-agent letter directly rejects the April 10 claim that all open violations were corrected."
+     }
+    ]
+   },
+   {
+    "solver": 2,
+    "crit_fail": 0.4058,
+    "lost": 1.0,
+    "full": false,
+    "rubrics": 8,
+    "criteria": 33,
+    "left_out": 0,
+    "criteria_results": [
+     {
+      "id": "R1.C1",
+      "rubric": 1,
+      "mode": "values",
+      "passed": false,
+      "why": "v_R1_C1: False differs (reference_right)"
+     },
+     {
+      "id": "R1.C2",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The model applies the required capacity gate and weighting. GC-2871 and BO-2165 are capacity-eligible within the 16 attorney hours available, while WA-2323 and BR-750 are marked capacity_eligible=No and rank_note='Disqualified - exceeds attorney capacity'. Among eligible candidates, the overall rank uses the required weighting: 50% life-safety/emergency, 30% open civil penalty exposure, 10% organizing, and 10% capacity margin."
+     },
+     {
+      "id": "R1.C3",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The life-safety severity factor is visible separately from total raw open violations. GC-2871 has fewer total open violations than BO-2165 but scores much higher on life_safety_emergency_score because it has more open Class C and rent-impairing rows, and it ranks above BO-2165."
+     },
+     {
+      "id": "R1.C4",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The CSV contains one row per true candidate building with distinct BBLs and reconciled addresses. No duplicate BBL appears as a separate candidate, and no street-name-only merge combines different BBLs into one candidate."
+     },
+     {
+      "id": "R2.C1",
+      "rubric": 2,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R2.C2",
+      "rubric": 2,
+      "mode": "values",
+      "passed": false,
+      "why": "building_lifesafety_counts: not stated"
+     },
+     {
+      "id": "R2.C4",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "The eligible ranking puts GC-2871 first despite having only 9 total open violations, while BO-2165 has 14 total open violations. This demonstrates that raw total open rows do not control severity ranking. GC-2871 has materially more serious Class C and rent-impairing violations, and the model records a separate life-safety/emergency score."
+     },
+     {
+      "id": "R2.C5",
+      "rubric": 2,
+      "mode": "words",
+      "passed": false,
+      "why": "The source notes in comparison_model.csv do not state that the HPD violation extract was matched by BBL and address range after finding street-name-only merge errors in the intake summary. They only state that open rows were keyed to candidate BBL from the extract. The address-range/merge-error language is also absent from the memo's reproducibility note."
+     },
+     {
+      "id": "R3.C1",
+      "rubric": 3,
+      "mode": "values",
+      "passed": false,
+      "why": "building_open_penalty_exposures: [{'candidate_id': 'GC-2871', 'bbl': '2033190113', 'open_civil_penalty_exposure_usd': '2400.0'}, {'candidate_id': 'BO-2165', 'bbl': '2043170046', 'open_civil_penalty_exposure_usd': '1450.0'}, {'candidate_id': 'WA-2323', 'bbl': '2031870047', 'open_civil_penalty_exposure_usd': '4900.0'}, {'candidate_id': 'BR-750', 'bbl': '2027630329', 'open_civil_penalty_exposure_usd': '2250.0'}] differs (reference_right)"
+     },
+     {
+      "id": "R3.C2",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The comparison model does not identify the penalty-exposure source as the current published HPD civil penalty schedule. Instead, it points to an internal-looking staff penalty chart file and derives penalty amounts from it."
+     },
+     {
+      "id": "R3.C3",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The comparison model does not state that classifications and correction deadlines come from the current public NYC Housing Maintenance Code and HPD rules as applied by NOV issue date. It relies on penalty_deadline_charts.xlsx and does not identify the public HMC/HPD source as governing."
+     },
+     {
+      "id": "R3.C4",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The model's penalty and deadline source note relies on a staff chart file as authoritative and does not address any conflict between internal staff charts or follow public HMC/HPD provisions as controlling."
+     },
+     {
+      "id": "R4.C1",
+      "rubric": 4,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R4.C2",
+      "rubric": 4,
+      "mode": "values",
+      "passed": false,
+      "why": "candidate_capacity_fit: [{'candidate_id': 'GC-2871', 'attorney_hours_required': '14', 'attorney_hours_available_q3': '16', 'capacity_eligible': 'Yes'}, {'candidate_id': 'BO-2165', 'attorney_hours_required': '9', 'attorney_hours_available_q3': '16', 'capacity_eligible': 'Yes'}, {'candidate_id': 'WA-2323', 'attorney_hours_required': '26', 'attorney_hours_available_q3': '16', 'capacity_eligible': 'No'}, {'candidate_id': 'BR-750', 'attorney_hours_required': '22', 'attorney_hours_available_q3': '16', 'capacity_eligible': 'No'}] differs (reference_right)"
+     },
+     {
+      "id": "R4.C3",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo recommends only GC-2871, which is marked capacity_eligible 'Yes' in comparison_model.csv. Candidates whose estimated attorney hours exceed the 16 available attorney hours are marked infeasible and excluded from the final recommendation."
+     },
+     {
+      "id": "R4.C4",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The model's capacity computation uses attorney-only capacity and subtracts existing attorney case commitments before comparing each candidate's attorney-hour estimate. It does not include intern, volunteer, or paralegal hours in the attorney capacity figure."
+     },
+     {
+      "id": "R5.C1",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo recommends exactly one building, GC-2871 (2871 Grand Concourse, BBL 2033190113), commits to it, and the comparison model ranks it first and capacity-eligible. The demand letters are also for that building only."
+     },
+     {
+      "id": "R5.C2",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo identifies open Class C and rent-impairing violations as the core life-safety/emergency basis and explains that GC-2871 is stronger than BO-2165 despite fewer total open violations because BO-2165's docket is dominated by Class B/nuisance conditions while GC-2871 has more Class C and rent-impairing rows."
+     },
+     {
+      "id": "R5.C3",
+      "rubric": 5,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not state that the open civil penalty exposure is computed from the current published HPD civil penalty schedule rather than the office's internal staff charts, and it does not state that correction deadlines follow the public HMC/HPD provisions in effect on each NOV issue date."
+     },
+     {
+      "id": "R5.C4",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo identifies the current owner and managing agent from the HPD multiple dwelling registration extract and treats prior lease/registration names as prior parties when they differ."
+     },
+     {
+      "id": "R5.C5",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo computes remaining employed-attorney capacity as 60 total hours minus 44 committed hours equals 16 available, uses attorney hours only for the capacity gate, and shows GC-2871's 14 attorney hours fit within that remaining capacity while intern/volunteer hours are treated separately as non-attorney capacity."
+     },
+     {
+      "id": "R6.C1",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo quotes the managing agent's assertion that all open violations were corrected, then immediately states the letter itself carves out uncertified rent-impairing Class C violations, and then says the HPD extract continues to list the nine violations as open. This treats the HPD open status as controlling despite the agent's opening assurance."
+     },
+     {
+      "id": "R6.C2",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not state that the comparison uses current public HMC/HPD class, correction-deadline, and penalty provisions, nor does it state that internal staff-prepared charts are superseded where they disagree with the public source for the issue date. It references HPD extracts and penalty charts but lacks the required source-precedence statement."
+     },
+     {
+      "id": "R6.C3",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The repair-history discussion treats the HPD extract, not the agent's letter, as the source showing violations are still open, and it identifies the uncertified rent-impairing Class C entrance-door violations as open. The open rent-impairing count also remains part of the scoring table and factors."
+     },
+     {
+      "id": "R6.C4",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo identifies the current HPD multiple dwelling registration extract as the source for the current owner and managing agent to whom demand will be sent. It also distinguishes prior lease/registration parties as cc'd to preserve claims, so notice is tied to the current registered parties rather than the lease or intake sheet."
+     },
+     {
+      "id": "R7.C1",
+      "rubric": 7,
+      "mode": "values",
+      "passed": false,
+      "why": "demand_letter_addressees: not stated"
+     },
+     {
+      "id": "R7.C2",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The demand letters only address 2871 Grand Concourse, the recommended building. No other candidate building's address, violations, or party blocks appear."
+     },
+     {
+      "id": "R7.C3",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The addressees are the current HPD-registered owner and managing agent. Former owner/agent names appear only as cc copies, not as the parties to whom the demand is addressed."
+     },
+     {
+      "id": "R7.C4",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "Both letters name the addressee by role, reference the recommended building's BBL and registered address, and use the current HPD registration mailing addresses rather than lease or intake-sheet addresses."
+     },
+     {
+      "id": "R8.C1",
+      "rubric": 8,
+      "mode": "values",
+      "passed": false,
+      "why": "demand_letter_rent_impairing_class_c_violations: [{'violationid': '17636994', 'address': '2871 Grand Concourse, Bronx, NY 10458', 'class': 'Class C', 'rentimpairing': 'rent-impairing', 'violationstatus': 'Open'}, {'violationid': '18538810', 'address': '2871 Grand Concourse, Bronx, NY 10458', 'class': 'Class C', 'rentimpairing': 'rent-impairing', 'violationstatus': 'Open'}, {'violationid': '18569299', 'address': '2871 Grand Concourse, Bronx, NY 10458', 'class': 'Class C', 'rentimpairing': 'rent-impairing', 'violationstatus': 'Open'}] differs (reference_right)"
+     },
+     {
+      "id": "R8.C2",
+      "rubric": 8,
+      "mode": "values",
+      "passed": false,
+      "why": "demand_letter_serious_open_violations: [{'violationid': '17636994', 'class': 'Class C', 'rentimpairing': 'rent-impairing', 'violationstatus': 'Open'}, {'violationid': '18538810', 'class': 'Class C', 'rentimpairing': 'rent-impairing', 'violationstatus': 'Open'}, {'violationid': '18569299', 'class': 'Class C', 'rentimpairing': 'rent-impairing', 'violationstatus': 'Open'}, {'violationid': '18364836', 'class': 'Class C', 'rentimpairing': 'No', 'violationstatus': 'Open'}, {'violationid': '18520255', 'class': 'Class C', 'rentimpairing': 'No', 'violationstatus': 'Open'}] differs (reference_right)"
+     },
+     {
+      "id": "R8.C3",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The demand letters do not rely on a raw count of all open violations; they identify and emphasize the most serious immediately hazardous and rent-impairing conditions. The owner letter describes the illegal electromagnetic locking device as the most serious condition and lists it first among Class C rent-impairing violations. The managing-agent letter similarly calls that device the controlling condition and emphasizes Class C and rent-impairing violations."
+     },
+     {
+      "id": "R8.C4",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "Each demand letter states that the listed violations remain open and uncertified/uncorrected in HPD records, cites specific HPD violation numbers and classes, demands correction, and expressly rejects the managing agent's claim of correction. The owner letter says the HPD record still shows them open and uncertified, and the managing-agent letter says they remain open despite the April 10, 2026 letter and requires HPD certification rather than a further status letter."
+     }
+    ]
+   }
+  ],
+  "crit_fail": 0.3913,
+  "lost": 0.9421,
+  "full_share": 0.0
+ },
+ "all_llm": {
+  "solvers": [
+   {
+    "solver": 1,
+    "crit_fail": 0.3188,
+    "lost": 0.7681,
+    "full": false,
+    "rubrics": 8,
+    "criteria": 33,
+    "left_out": 0,
+    "criteria_results": [
+     {
+      "id": "R1.C1",
+      "rubric": 1,
+      "mode": "words",
+      "passed": false,
+      "why": "The model sources severity/counts to the HPD violation extract, but it does not source penalty exposure to the current published HPD civil penalty schedule or HMC § 27-2115. Instead, it cites 'penalty_deadline_charts.xlsx chart_2025_12', which is the kind of internal staff penalty chart the rubric says is non-governing. The comparison model also has no scored deadline factor or source applying current public HMC/HPD classification and deadline provisions by NOV issue date."
+     },
+     {
+      "id": "R1.C2",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The overall rank follows the required weighting and capacity gate: overall_score = 0.6*life_safety_score + 0.4*penalty_score, giving life-safety/emergency the greatest weight and civil penalty exposure the next weight. Candidates whose estimated attorney hours exceed the 16 available hours are marked 'Not eligible' and are not ranked, regardless of raw score."
+     },
+     {
+      "id": "R1.C3",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The life-safety severity factor is a separate column from total_open_violations and is driven by Class C, rent-impairing, Class B, and documented emergency conditions. This allows a candidate with fewer total violations but more severe Class C/rent-impairing rows to rank higher on life-safety than a high-volume procedural candidate."
+     },
+     {
+      "id": "R1.C4",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The comparison model contains exactly four scored rows with unique BBLs and candidate IDs. It explicitly excludes the neighboring 2185 Bolton Street parcel, showing address/BBL reconciliation rather than a street-name-only merge. There are no duplicate rows for the same BBL."
+     },
+     {
+      "id": "R2.C1",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "All four candidates are listed with the correct candidate ID, BBL, open Class C count, and corrected total open count. The counts match the rubric-required values and are sourced from the HPD extract by BBL, not from the intake summary counts."
+     },
+     {
+      "id": "R2.C2",
+      "rubric": 2,
+      "mode": "words",
+      "passed": false,
+      "why": "The comparison model does not report the required life-safety severity factor values of 2, 2, 5, and 1. It reports open_class_C_count and open_rent_impairing_count as separate fields, and the life_safety_score values are 62, 78, 100, and 72, not the required severity factors. There is no explicit distinct count of current open HPD violations that are either Class C or rent-impairing."
+     },
+     {
+      "id": "R2.C3",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "The model separates severity from raw total open violation volume. GC-2871 ranks above WA-2323 despite WA-2323 having far more total open violations and Class A rows, because GC-2871 has more Class C/rent-impairing severity."
+     },
+     {
+      "id": "R2.C4",
+      "rubric": 2,
+      "mode": "words",
+      "passed": false,
+      "why": "The source notes do not explicitly state that HPD rows were matched by BBL and address range after finding street-name-only merge errors in the intake summary, and they do not explicitly state that precomputed summary counts were not used for scored counts."
+     },
+     {
+      "id": "R3.C1",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The comparison model does not report the required open civil penalty exposure amounts. It reports GC-2871 at $1,600.00, WA-2323 at $2,200.00, BO-2165 at $1,450.00, and BR-750 at $1,250.00, instead of the required $1,250.00, $1,850.00, $1,150.00, and $975.00 respectively. It also uses flat per-class amounts without applying the required rent-impairing amounts."
+     },
+     {
+      "id": "R3.C2",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The comparison model identifies its penalty-exposure source as an internal staff chart from the case file, not the current published HPD civil penalty schedule."
+     },
+     {
+      "id": "R3.C3",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The model does not state that classification and deadline rules come from the current public NYC Housing Maintenance Code and HPD class/correction-deadline rules applicable on each NOV issue date. Instead, the governing penalty/deadline source cited is an internal staff chart."
+     },
+     {
+      "id": "R3.C4",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The model's penalty and deadline source notes rely on internal staff charts as authoritative. The model chooses between two internal chart versions rather than following the public HMC/HPD provisions applicable to the violation issue dates."
+     },
+     {
+      "id": "R4.C1",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The model consistently uses 16 available attorney hours, calculated as 60 total attorney hours minus 44 existing attorney commitments, and does not add non-attorney hours into that capacity figure."
+     },
+     {
+      "id": "R4.C2",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "All four candidates are listed with the required attorney-hour estimates and correct feasibility statuses based on the 16-hour limit."
+     },
+     {
+      "id": "R4.C3",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo recommends only GC-2871, which is marked capacity_supported Yes in the comparison model, and it explicitly excludes WA-2323 and BR-750 because their hours exceed attorney capacity."
+     },
+     {
+      "id": "R4.C4",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The model derives attorney capacity only from attorney total hours and existing commitments; intern, volunteer, and paralegal hours are not included in that capacity calculation, and the candidate attorney-hour estimates are compared against the resulting 16 hours."
+     },
+     {
+      "id": "R5.C1",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "Memo explicitly commits to a single building, GC-2871 with BBL 2033190113. The comparison model ranks it first and capacity-supported, and demand letters are only for that building."
+     },
+     {
+      "id": "R5.C2",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "Memo names the open Class C and rent-impairing violations as the life-safety/emergency basis and explains through the scoring weights why GC-2871 is stronger despite having fewer total open rows than BO-2165 because its violations are concentrated in the prioritized categories."
+     },
+     {
+      "id": "R5.C3",
+      "rubric": 5,
+      "mode": "words",
+      "passed": false,
+      "why": "Memo identifies the current penalty chart and amounts but does not state that exposure is from the current published HPD civil penalty schedule rather than internal staff charts, and does not state that correction deadlines follow public HMC/HPD provisions in effect on each NOV issue date."
+     },
+     {
+      "id": "R5.C4",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "Memo identifies the current owner and managing agent from the HPD multiple dwelling registration extract and states that lease/intake-sheet names are prior or conflicting."
+     },
+     {
+      "id": "R5.C5",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "Memo computes remaining attorney capacity from employed attorney hours only, separates intern and volunteer capacity as non-attorney, and shows the recommended package fits within remaining capacity."
+     },
+     {
+      "id": "R6.C1",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo characterizes the managing agent's April 10, 2026 assertion that all open violations were corrected as contradicted by the letter's own later disclaimer of uncertified rent-impairing Class C violations, and it treats the HPD record-level open status for those violations as controlling."
+     },
+     {
+      "id": "R6.C2",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not state that the comparison uses the current public HMC/HPD class, correction-deadline, and penalty provisions, and it does not state that internal staff-prepared charts are superseded where they disagree with the public source for the issue date. It mentions the current penalty chart but omits the correction-deadline and issue-date source-conflict points required by this criterion."
+     },
+     {
+      "id": "R6.C3",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo's repair/legal discussion uses HPD records rather than the managing agent's narrative letter to determine open or corrected status, expressly identifies the uncertified rent-impairing Class C violations as still open, and counts them in the scoring."
+     },
+     {
+      "id": "R6.C4",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo identifies the current HPD multiple dwelling registration extract as the source for the owner and managing agent, distinguishes it from the prior lease/intake-sheet names, and states the current registered parties are the proper recipients/defendants."
+     },
+     {
+      "id": "R7.C1",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The demand letters contain the two required addressee blocks for the recommended building. The owner block is addressed to Highbridge Fulton Holdings LLC at 3714 White Plains Road, Bronx, NY 10467, and the managing agent block is addressed to Norwood Residential Management Inc. at 915 East Tremont Avenue, Suite 210, Bronx, NY 10460. Both are present, include current name and mailing address, and no lease/intake-sheet party differing from the HPD registration is used as the addressee."
+     },
+     {
+      "id": "R7.C2",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The letters address only one candidate building: 2871 Grand Concourse. No other candidate building address, violation set, or party block appears in demand_letters.txt."
+     },
+     {
+      "id": "R7.C3",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The letters identify the addressees as the current HPD-registered owner and managing agent, not the lease/intake-sheet or former parties. There is no use of prior owner Morrissania Heights Realty LLC or prior agent Lenox Property Management Corp. as addressees."
+     },
+     {
+      "id": "R7.C4",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "Each letter names the addressee by role through its heading and body, references the recommended building's BBL and registered address, and uses the HPD registration mailing addresses rather than any conflicting lease or intake-sheet address."
+     },
+     {
+      "id": "R8.C1",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The three required rent-impairing Class C violations all appear in both demand letters with violation number, location, class, rent-impairing label, issue date, and Open status."
+     },
+     {
+      "id": "R8.C2",
+      "rubric": 8,
+      "mode": "words",
+      "passed": false,
+      "why": "The letters list the five required open Class C/rent-impairing violations, but the two non-rent-impairing open Class C entries do not include a rent-impairing flag or a 'non-rent-impairing' designation, even though the rubric requires each entry to have that field."
+     },
+     {
+      "id": "R8.C3",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The letters identify the severe conditions themselves, especially immediately hazardous and rent-impairing Class C violations, as the reason for the demand rather than relying on a raw count of open violations."
+     },
+     {
+      "id": "R8.C4",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "Both letters reference HPD violation numbers and classes, assert the violations remain open in HPD records, and demand correction. The managing-agent letter expressly rejects the April 10, 2026 correction claim, while the owner letter does not concede that the violations were corrected."
+     }
+    ]
+   },
+   {
+    "solver": 2,
+    "crit_fail": 0.3188,
+    "lost": 0.6522,
+    "full": false,
+    "rubrics": 8,
+    "criteria": 33,
+    "left_out": 0,
+    "criteria_results": [
+     {
+      "id": "R1.C1",
+      "rubric": 1,
+      "mode": "words",
+      "passed": false,
+      "why": "The counts and severity source is adequate, but the penalty exposure and deadline/classification sourcing is not. The comparison model cites penalty_deadline_charts.xlsx rather than the current published HPD civil penalty schedule (HMC § 27-2115), and it does not cite current public HMC/HPD classification and correction-deadline provisions as the governing source for deadlines."
+     },
+     {
+      "id": "R1.C2",
+      "rubric": 1,
+      "mode": "words",
+      "passed": false,
+      "why": "The stated weighting formula gives life-safety 50%, penalty exposure 30%, organizing 10%, and capacity margin 10%, which is consistent with the greatest/next weighting requirement. However, candidates unsupported by current attorney capacity are not fully excluded from the ranking because they are still assigned overall_rank values."
+     },
+     {
+      "id": "R1.C3",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "Life-safety severity is visible as a separate scored factor from raw total open violations. It is based on open Class C, rent-impairing, and Class A rows, allowing a candidate with fewer total violations but higher severity to rank above a high-volume lower-severity candidate on that factor."
+     },
+     {
+      "id": "R1.C4",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The comparison model contains one row per true candidate building with distinct BBLs and addresses. There is no duplicate BBL row and no visible street-name-only merge producing a combined candidate."
+     },
+     {
+      "id": "R2.C1",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "All four candidates are listed with candidate_id, BBL, open_class_c_count, and total_open_violation_count matching the required corrected values. The source note indicates HPD extract rows keyed to candidate BBL, not intake summary counts."
+     },
+     {
+      "id": "R2.C2",
+      "rubric": 2,
+      "mode": "words",
+      "passed": false,
+      "why": "The expected life-safety severity factor values 2/2/5/1 are not reported. Instead, life_safety_emergency_score uses a weighted formula that includes Class A rows and does not report a simple count of current open Class C or rent-impairing violations."
+     },
+     {
+      "id": "R2.C3",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "The model does not rank by raw total open violations. GC-2871 ranks above BO-2165 despite having fewer total open violations because it has more Class C/rent-impairing severity. High-volume WA-2323 is disqualified on capacity, not ranked by volume."
+     },
+     {
+      "id": "R2.C4",
+      "rubric": 2,
+      "mode": "words",
+      "passed": false,
+      "why": "The source notes do not state that the HPD extract was matched by BBL and address range after finding street-name-only merge errors in the intake summary. The CSV source notes only say open rows were keyed to candidate BBL and do not explicitly reject precomputed summary counts."
+     },
+     {
+      "id": "R3.C1",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The comparison model does not report the required open civil penalty exposure amounts. The rubric requires GC-2871 $1,250.00, BO-2165 $1,150.00, BR-750 $975.00, and WA-2323 $1,850.00, but the CSV reports GC-2871 $2,400.00, BO-2165 $1,450.00, BR-750 $2,250.00, and WA-2323 $4,900.00. It also attributes the amounts to internal penalty_deadline_charts.xlsx rather than the current published HPD civil penalty schedule."
+     },
+     {
+      "id": "R3.C2",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The model does not identify the current published HPD civil penalty schedule as the source. Instead, it expressly identifies penalty_deadline_charts.xlsx, an internal staff chart, as the basis for the penalty amounts. The penalty amounts therefore appear copied from or derived from internal staff charts, which is prohibited by this criterion."
+     },
+     {
+      "id": "R3.C3",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The classification and deadline source is not stated as the current public NYC Housing Maintenance Code and HPD class and correction-deadline rules by NOV issue date. The CSV's governing source reference is to internal penalty_deadline_charts.xlsx editions, not to the public HMC/HPD provisions. Thus the internal staff charts are used as the governing edition."
+     },
+     {
+      "id": "R3.C4",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The model's penalty and deadline source notes rely on the staff penalty_deadline_charts.xlsx as authoritative. There is no indication that the model followed public HMC/HPD provisions where internal charts conflict; instead, the source note explicitly uses the internal chart editions by effective date."
+     },
+     {
+      "id": "R4.C1",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The model uses 16 remaining attorney hours, computed as 60 total attorney hours minus 44 committed hours, and this is before any non-attorney hours are added."
+     },
+     {
+      "id": "R4.C2",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "All four candidates appear with the required attorney-hour requirements and availability, and feasibility aligns with the 16-hour limit. Feasible rows use only attorney-hour estimates, not non-attorney hours, to fit."
+     },
+     {
+      "id": "R4.C3",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo's recommended candidate GC-2871 is marked capacity_eligible Yes in the model, and the two over-capacity candidates are excluded from the recommendation."
+     },
+     {
+      "id": "R4.C4",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The capacity computation references only attorney hours from staff_capacity, subtracts 44 committed attorney hours, and tests candidate attorney-hour estimates without including intern, volunteer, or paralegal hours in the attorney capacity."
+     },
+     {
+      "id": "R5.C1",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo recommends exactly one candidate, GC-2871/2871 Grand Concourse, commits to it, and that candidate ranks first among eligible candidates in the comparison model. The demand letters are addressed only to the owner and agent for that building."
+     },
+     {
+      "id": "R5.C2",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo names HPD Class C and rent-impairing open violations as the life-safety/emergency basis and contrasts GC-2871 with BO-2165, which has more total open violations but fewer serious Class C/rent-impairing conditions."
+     },
+     {
+      "id": "R5.C3",
+      "rubric": 5,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not state that open civil penalty exposure is computed from the current published HPD civil penalty schedule as opposed to the office's internal staff charts, and it does not state that correction deadlines follow public HMC/HPD provisions in effect on each NOV issue date. It discusses penalty charts and issue-date application, but the required public-schedule/internal-staff distinction and correction-deadline source statement are missing from the memo itself."
+     },
+     {
+      "id": "R5.C4",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo identifies the current owner and managing agent as shown in the HPD multiple dwelling registration extract and treats the lease/earlier registration names as prior or conflicting parties."
+     },
+     {
+      "id": "R5.C5",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo explains the capacity fit using employed-attorney hours after existing commitments, treats intern and volunteer hours as non-attorney availability only, and shows GC-2871's package fits within remaining attorney capacity."
+     },
+     {
+      "id": "R6.C1",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo identifies the managing agent's assurance that all open violations were corrected and explains that the letter itself excludes uncertified rent-impairing Class C violations. It then points to HPD record-level open status as the operative fact."
+     },
+     {
+      "id": "R6.C2",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not state that the comparison uses current public HMC/HPD class, correction-deadline, and penalty provisions, nor does it state that internal staff-prepared charts are superseded where they conflict with the public source for the issue date."
+     },
+     {
+      "id": "R6.C3",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The repair-history discussion treats the HPD extract as the source for open versus corrected status, identifies the uncertified rent-impairing Class C violations as still open, and ties the scoring to violations still open in the HPD extract."
+     },
+     {
+      "id": "R6.C4",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo identifies the current HPD multiple dwelling registration extract as the source for the current owner and managing agent to whom the demand should be sent, rather than relying on the lease or intake sheet."
+     },
+     {
+      "id": "R7.C1",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The demand letters contain two separate addressee blocks for the current HPD-registered owner and managing agent with matching names and mailing addresses. Prior parties appear only as cc recipients, not as addressees."
+     },
+     {
+      "id": "R7.C2",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The demand letters address only the recommended building, 2871 Grand Concourse, and its BBL. No other candidate building is identified or used for violations or party addresses."
+     },
+     {
+      "id": "R7.C3",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The addressees are current HPD-registered owner and managing agent. Former owner/agent entities are copied but not addressed as the party to whom the demand is made."
+     },
+     {
+      "id": "R7.C4",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "Each letter names the addressee by role, references the recommended building's BBL and registered address, and uses the HPD registration mailing address for the named addressee rather than a conflicting lease or intake-sheet address."
+     },
+     {
+      "id": "R8.C1",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The owner letter lists all three required rent-impairing Class C violations by number, class, and rent-impairing flag, with building address/location and open status supplied by the heading and opening statement that the listed violations remain open."
+     },
+     {
+      "id": "R8.C2",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The letters include all five required open Class C/open rent-impairing violations: 17636994, 18364836, 18520255, 18538810, and 18569299. Each is identified by violation number and class; open status is provided by the open-violations framing and 'remain open' statements, and rent-impairing status is stated for the Y violations."
+     },
+     {
+      "id": "R8.C3",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The demand letters identify the severe immediately hazardous/rent-impairing electromagnetic-lock condition as the controlling reason for the demand, rather than relying on a raw count of all open violations."
+     },
+     {
+      "id": "R8.C4",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "Both letters state the violations remain open and uncertified in HPD records, cite HPD violation numbers and classes, and demand correction while expressly rejecting the managing agent's claim that all open violations were corrected."
+     }
+    ]
+   }
+  ],
+  "crit_fail": 0.3188,
+  "lost": 0.7102,
+  "full_share": 0.0
+ },
+ "gate_scoring": "llm",
+ "shape": {
+  "rubrics": 8,
+  "criteria": 33,
+  "criteria_per_rubric": 4.12,
+  "compound_share": 0.939
+ },
+ "gate": {
+  "threshold": 0.2531,
+  "hard_line": 0.7,
+  "baseline_lost": 0.6328,
+  "baseline_source": "data/p1/difficulty_baseline.json",
+  "lost": 0.7102,
+  "status": "ok",
+  "why": "blind solvers lost 71% of the weight, above the 70% line (originals 63%); back to the build to be made more tractable",
+  "recorded": "rework_hard"
+ },
+ "review": [],
+ "seen_through": [],
+ "at": "2026-10-16T21:58:14"
+}

@@ -1,0 +1,413 @@
+{
+ "p1": {
+  "status": "ok",
+  "tries": 1,
+  "at": "2026-10-14T18:50:37",
+  "problems": [],
+  "quota_total": 0
+ },
+ "request": {
+  "status": "ok",
+  "tries": 1,
+  "round": 1,
+  "at": "2026-10-14T21:51:47",
+  "problems": [],
+  "history": [
+   {
+    "try": 1,
+    "tag": "t1",
+    "problems": [],
+    "notes": [],
+    "at": "2026-10-14T21:51:47"
+   }
+  ]
+ },
+ "challenges": {
+  "status": "ok",
+  "tries": 2,
+  "round": 1,
+  "at": "2026-10-14T22:36:22",
+  "problems": [],
+  "history": [
+   {
+    "try": 1,
+    "tag": "t1",
+    "problems": [
+     "(calibration) CH1: an independent practitioner, reading only the brief and the material, rates this handling comparable: \"Apply the planning assumption strictly by defining cancellation days as days with daily AQI at or above 150; treat logged cancellations with AQI below 150 as not cancellations in the analysis and document this reconcilia\" (The brief explicitly says to use the 150 threshold in the exposure classification, so some practitioners would make the cancellation indicator a threshold-based) -- declare it among the alternatives with an honest likelihood (comparable needs a definition sentence), or change the material so it is clearly less likely"
+    ],
+    "notes": [
+     "(audit) naive handling tolerated as weak: ['CH2', 'CH6']",
+     "(audit) CH1: The SOP clause is a general standing procedure and does not itself point at the supplied cancellation-log conflict.",
+     "(audit) CH2: The codebook sentence directly prescribes collapsing multiple school-site rows into one county cancellation day.",
+     "(audit) CH6: The brief's explicit 'per 10,000 residents' makes substituting monitoring days or visit totals for the population denominator implausible for a competent solver."
+    ],
+    "at": "2026-10-14T22:16:31"
+   },
+   {
+    "try": 2,
+    "tag": "t2",
+    "problems": [],
+    "notes": [
+     "(audit) unchanged since a clean review, verdict kept: ['CH3']",
+     "(audit) naive handling tolerated as weak: ['CH6']",
+     "(audit) CH6: A competent analyst would not use monitoring days or ED visits as a resident denominator; the per-10,000-residents request makes the listed naive denominators implausible."
+    ],
+    "at": "2026-10-14T22:36:22"
+   }
+  ]
+ },
+ "materials": {
+  "status": "ok",
+  "tries": 3,
+  "round": 1,
+  "at": "2026-10-14T23:18:12",
+  "problems": [],
+  "history": [
+   {
+    "try": 1,
+    "tag": "t1",
+    "problems": [
+     "the seed's real data daily_aqi_by_county_2024.csv is not in the plan -- keep it (public_copy, `source` lib:epa_aqi_county/daily_aqi_by_county_2024.csv), an extract of it at most; the challenges rest on its real properties"
+    ],
+    "notes": [],
+    "at": "2026-10-14T22:49:15"
+   },
+   {
+    "try": 2,
+    "tag": "t2",
+    "problems": [
+     "5 shipped files (internal + public_copy); the blueprint asks for 2-4"
+    ],
+    "notes": [],
+    "at": "2026-10-14T23:03:54"
+   },
+   {
+    "try": 3,
+    "tag": "t3",
+    "problems": [],
+    "notes": [
+     "(giveaway estimate) stated ['CH1', 'CH2'], hinted []"
+    ],
+    "at": "2026-10-14T23:18:12"
+   }
+  ]
+ },
+ "intents": {
+  "status": "ok",
+  "tries": 3,
+  "round": 1,
+  "at": "2026-10-15T01:27:50",
+  "problems": [],
+  "history": [
+   {
+    "try": 1,
+    "tag": "t1",
+    "problems": [
+     "R4.C2: numbers ['1'] in the criterion text -- no values in P2; use a placeholder",
+     "R5.C1: numbers ['1', '1'] in the criterion text -- no values in P2; use a placeholder",
+     "R6.C2: numbers ['1'] in the criterion text -- no values in P2; use a placeholder",
+     "R6.C3: numbers ['1'] in the criterion text -- no values in P2; use a placeholder",
+     "R8.C1: the brief has no general ask for assumptions and limitations",
+     "R8.C2: the brief has no general ask for assumptions and limitations",
+     "R8.C3: the brief has no general ask for assumptions and limitations",
+     "R8.C4: the brief has no general ask for assumptions and limitations",
+     "22% of the criteria are qualitative (at least 30%; the real task: 43%) -- grade the reasoning, the method and the conclusions in words (kind judgement, fact or recommendation, no value), each with its `points`",
+     "72% of the criteria are compound (at most 58%; the real task: 33%) -- the real rubric also grades single figures and judgements in words; do not turn every check into a list",
+     "R5.C1: a `complete` criterion grades a set, list or table value (a verify check, or a fact listing three or more `points`) and says every member must be there"
+    ],
+    "notes": [],
+    "at": "2026-10-14T23:33:45"
+   },
+   {
+    "try": 2,
+    "tag": "t2",
+    "problems": [
+     "28% of the criteria are qualitative (at least 30%; the real task: 43%) -- grade the reasoning, the method and the conclusions in words (kind judgement, fact or recommendation, no value), each with its `points`",
+     "66% of the criteria are compound (at most 58%; the real task: 33%) -- the real rubric also grades single figures and judgements in words; do not turn every check into a list"
+    ],
+    "notes": [],
+    "at": "2026-10-14T23:42:34"
+   },
+   {
+    "try": 3,
+    "tag": "t3",
+    "problems": [
+     "R3.C1: a coverage judge finds that the brief does not ask for what it grades (threshold consistency summary and observed operational threshold are not asked for) -- grade what the brief asks for instead (keep each rubric item at 3-5 criteria: replace the criterion, or drop the whole item if it grades nothing the brief asks for); the brief is fixed",
+     "R3.C2: a coverage judge finds that the brief does not ask for what it grades (threshold consistency summary observed-threshold counts are not asked for) -- grade what the brief asks for instead (keep each rubric item at 3-5 criteria: replace the criterion, or drop the whole item if it grades nothing the brief asks for); the brief is fixed",
+     "R3.C3: a coverage judge finds that the brief does not ask for what it grades (threshold consistency summary findings are not asked for) -- grade what the brief asks for instead (keep each rubric item at 3-5 criteria: replace the criterion, or drop the whole item if it grades nothing the brief asks for); the brief is fixed",
+     "R3.C4: a coverage judge finds that the brief does not ask for what it grades (classification of cancellation days by EPA AQI category breakpoints is not asked for) -- grade what the brief asks for instead (keep each rubric item at 3-5 criteria: replace the criterion, or drop the whole item if it grades nothing the brief asks for); the brief is fixed",
+     "R6.C1: a coverage judge finds that the brief does not ask for what it grades (sensitivity model and observed operational threshold scenario are not asked for) -- grade what the brief asks for instead (keep each rubric item at 3-5 criteria: replace the criterion, or drop the whole item if it grades nothing the brief asks for); the brief is fixed",
+     "R6.C2: a coverage judge finds that the brief does not ask for what it grades (sensitivity model coefficient and confidence interval are not asked for) -- grade what the brief asks for instead (keep each rubric item at 3-5 criteria: replace the criterion, or drop the whole item if it grades nothing the brief asks for); the brief is fixed",
+     "R6.C3: a coverage judge finds that the brief does not ask for what it grades (sensitivity model lag AQI table is not asked for) -- grade what the brief asks for instead (keep each rubric item at 3-5 criteria: replace the criterion, or drop the whole item if it grades nothing the brief asks for); the brief is fixed",
+     "R6.C4: a coverage judge finds that the brief does not ask for what it grades (sensitivity model presented alongside primary model is not asked for) -- grade what the brief asks for instead (keep each rubric item at 3-5 criteria: replace the criterion, or drop the whole item if it grades nothing the brief asks for); the brief is fixed"
+    ],
+    "notes": [],
+    "at": "2026-10-15T00:05:03"
+   },
+   {
+    "try": 1,
+    "tag": "rw1.t1",
+    "problems": [
+     "R2.C3: a coverage judge finds that the brief does not ask for what it grades (workbook statement defining cancellation day and collapsing of multiple school-site records) -- grade what the brief asks for instead (keep each rubric item at 3-5 criteria: replace the criterion, or drop the whole item if it grades nothing the brief asks for); the brief is fixed",
+     "R3.C1: a coverage judge finds that the brief does not ask for what it grades (threshold consistency summary is never requested) -- grade what the brief asks for instead (keep each rubric item at 3-5 criteria: replace the criterion, or drop the whole item if it grades nothing the brief asks for); the brief is fixed",
+     "R3.C2: a coverage judge finds that the brief does not ask for what it grades (threshold consistency summary is never requested) -- grade what the brief asks for instead (keep each rubric item at 3-5 criteria: replace the criterion, or drop the whole item if it grades nothing the brief asks for); the brief is fixed",
+     "R3.C3: a coverage judge finds that the brief does not ask for what it grades (threshold consistency summary statement is never requested) -- grade what the brief asks for instead (keep each rubric item at 3-5 criteria: replace the criterion, or drop the whole item if it grades nothing the brief asks for); the brief is fixed",
+     "R3.C4: a coverage judge finds that the brief does not ask for what it grades (cancellation-day AQI category classification is never requested) -- grade what the brief asks for instead (keep each rubric item at 3-5 criteria: replace the criterion, or drop the whole item if it grades nothing the brief asks for); the brief is fixed",
+     "R6.C1: a coverage judge finds that the brief does not ask for what it grades (sensitivity model using observed operational threshold is never requested) -- grade what the brief asks for instead (keep each rubric item at 3-5 criteria: replace the criterion, or drop the whole item if it grades nothing the brief asks for); the brief is fixed",
+     "R6.C2: a coverage judge finds that the brief does not ask for what it grades (sensitivity model coefficient estimates are never requested) -- grade what the brief asks for instead (keep each rubric item at 3-5 criteria: replace the criterion, or drop the whole item if it grades nothing the brief asks for); the brief is fixed",
+     "R6.C3: a coverage judge finds that the brief does not ask for what it grades (sensitivity model lag AQI rate ratios are never requested) -- grade what the brief asks for instead (keep each rubric item at 3-5 criteria: replace the criterion, or drop the whole item if it grades nothing the brief asks for); the brief is fixed",
+     "R6.C4: a coverage judge finds that the brief does not ask for what it grades (sensitivity model presented alongside primary model is never requested) -- grade what the brief asks for instead (keep each rubric item at 3-5 criteria: replace the criterion, or drop the whole item if it grades nothing the brief asks for); the brief is fixed"
+    ],
+    "notes": [],
+    "at": "2026-10-15T00:59:17"
+   },
+   {
+    "try": 2,
+    "tag": "rw1.t2",
+    "problems": [
+     "R1.C2: `from` entry 'daily_aqi_county_2024_extract.csv' is neither a challenge id nor a file of the plan",
+     "R1.C5: numbers ['90'] in the criterion text -- no values in P2; use a placeholder"
+    ],
+    "notes": [],
+    "at": "2026-10-15T01:08:42"
+   },
+   {
+    "try": 3,
+    "tag": "rw1.t3",
+    "problems": [],
+    "notes": [],
+    "at": "2026-10-15T01:27:50"
+   }
+  ],
+  "reworks": 1
+ },
+ "readings": {
+  "status": "ok",
+  "tries": 2,
+  "round": 1,
+  "at": "2026-10-15T01:55:11",
+  "problems": [],
+  "history": [
+   {
+    "try": 1,
+    "tag": "t1",
+    "audited": 24,
+    "problems": [
+     "R1.C3: the readings audit fails it -- settled_by_invalid:  (default:D21 concerns date-limit endpoint rules and does not prescribe selecting the Pima County 2024 annual AQI summary row or rejecting a different year/county.) -- change what the criterion grades so one reading clearly wins (keep each rubric item at 3-5 criteria), or add a definition in `new_definitions` mapped in `settled` while the design holds fewer than 3 sentences that serve or settle something"
+    ],
+    "failures": 1,
+    "at": "2026-10-15T00:43:52"
+   },
+   {
+    "try": 2,
+    "tag": "t2",
+    "audited": 10,
+    "problems": [],
+    "failures": 0,
+    "at": "2026-10-15T01:55:11"
+   }
+  ]
+ },
+ "ready_for_p3": {
+  "status": "ok",
+  "at": "2026-10-15T01:55:11",
+  "artifacts": [
+   "blueprint.json",
+   "request.json",
+   "challenges.json",
+   "materials.json",
+   "intents.json",
+   "readings.json"
+  ]
+ },
+ "p3_scope": {
+  "status": "ok",
+  "tries": 1,
+  "at": "2026-10-15T19:20:47",
+  "problems": [],
+  "dropped_share": 0.0,
+  "brief_add": 0
+ },
+ "p3_spec": {
+  "status": "ok",
+  "tries": 3,
+  "at": "2026-10-16T07:03:48",
+  "sessions": 3,
+  "audit_rounds": 2,
+  "audited": "30842395270b504d",
+  "history": [
+   {
+    "session": "spec3",
+    "rc": 0
+   }
+  ],
+  "problems": []
+ },
+ "p3_requeue": {
+  "n": 1,
+  "at": "2026-10-16T06:02:32",
+  "cleared": [
+   "p3_build"
+  ]
+ },
+ "p3_build": {
+  "status": "ok",
+  "tries": 7,
+  "at": "2026-10-18T09:16:58",
+  "sessions": 3,
+  "history": [
+   {
+    "session": "build3",
+    "rc": 0
+   }
+  ],
+  "pool": "glm",
+  "problems": []
+ },
+ "p3_rubric": {
+  "status": "ok",
+  "tries": 4,
+  "at": "2026-10-18T09:17:08",
+  "criteria": 30,
+  "drop": [],
+  "dropped_problems": [],
+  "problems": []
+ },
+ "p3_brief": {
+  "status": "ok",
+  "tries": 4,
+  "at": "2026-10-18T09:17:12",
+  "problems": []
+ },
+ "p3_build_audit": {
+  "status": "ok",
+  "tries": 4,
+  "at": "2026-10-18T09:45:44",
+  "built_at": "2026-10-18T09:16:58",
+  "rounds": 1,
+  "counted": [
+   "T2"
+  ],
+  "cap": 2,
+  "problems": []
+ },
+ "p3_blind": {
+  "status": "ok",
+  "tries": 2,
+  "at": "2026-10-18T02:17:22",
+  "rounds": 1,
+  "drop": [],
+  "history": {
+   "primary_aqi0_ci_upper": {
+    "defined": 1
+   },
+   "primary_aqi0_rr": {
+    "defined": 1
+   },
+   "primary_lagged_terms": {
+    "defined": 1
+   }
+  },
+  "agree": [
+   27,
+   23
+  ],
+  "found": [
+   34,
+   32
+  ],
+  "slots": 36,
+  "diagnosis": [
+   {
+    "solver": 1,
+    "kind": "ok",
+    "stated": 34,
+    "missed": 2,
+    "extraction": 0,
+    "extraction_keys": [],
+    "solver_missed": 2
+   },
+   {
+    "solver": 2,
+    "kind": "ok",
+    "stated": 32,
+    "missed": 4,
+    "extraction": 1,
+    "extraction_keys": [
+     "avg_daily_asthma_rate_per_10k"
+    ],
+    "solver_missed": 3
+   }
+  ],
+  "intent_issues": [],
+  "problems": [],
+  "built_at": "2026-10-18T00:34:51"
+ },
+ "p3_difficulty": {
+  "status": "ok",
+  "tries": 1,
+  "at": "2026-10-18T02:32:53",
+  "problems": [],
+  "built_at": "2026-10-18T00:34:51",
+  "verdict": "ok",
+  "reworks": 0,
+  "hard_reworks": 0,
+  "gate_scoring": "llm",
+  "lost": 0.85,
+  "crit_fail": 0.3573,
+  "lost_llm": 0.4667,
+  "full_share": 0.0,
+  "threshold": 0.2531,
+  "shape": {
+   "rubrics": 8,
+   "criteria": 31,
+   "criteria_per_rubric": 3.88,
+   "compound_share": 0.903
+  },
+  "seen_through": []
+ },
+ "p3_gates": {
+  "status": "ok",
+  "tries": 3,
+  "at": "2026-10-18T09:45:47",
+  "verdict": "PASS",
+  "recorded": [
+   "documents: -: task_folder/pima_county_environmental_health_sop_2026.pdf: heading(s) with nothing under them: ['1 Purpose and Scope 3', '2 Definitions 4', '3 Roles and Responsibilities 5', '4 Routine Environmental Health Surveillance Data Sources 6', '5 Program Planning Assumptions 7']",
+   "rubric: cheap_cap: 63% of the points are format checks or values copied from the inputs, zero or trivial (limit 50%)"
+  ],
+  "problems": []
+ },
+ "p3_review": {
+  "status": "ok",
+  "tries": 3,
+  "at": "2026-10-18T10:02:57",
+  "round": 3,
+  "built_at": "2026-10-18T09:16:58",
+  "errors": 0,
+  "build_fixes": 1,
+  "easy": 0,
+  "criterion_edits": {
+   "drop": 1,
+   "rewrite": 2,
+   "add": 0
+  },
+  "discarded": 0,
+  "problems": [],
+  "verdict": "usable",
+  "conventions": [],
+  "edits_digest": "ce90c5d06b537b7b"
+ },
+ "p3_publish": {
+  "status": "ok",
+  "tries": 1,
+  "at": "2026-10-18T10:04:50",
+  "problems": []
+ },
+ "accepted": {
+  "status": "ok",
+  "tries": 1,
+  "at": "2026-10-18T10:04:50",
+  "problems": [],
+  "quota_cell": "T7|stat_modeling"
+ }
+}

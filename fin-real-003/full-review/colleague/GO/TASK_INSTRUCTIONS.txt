@@ -1,0 +1,23 @@
+I'd like you to run the travel piece of our budget application for this year's Professional Development Conference — you've planned the travel side of these programs before, so I'll keep this short. Staff come in from the regional offices, and before anything goes to Finance, every nomination has to clear the travel and expense policy. The planning brief, the nomination exports and the other material you need are attached.
+
+The application goes to Peter Carlson's budget committee, and I have to file it by Friday, February 6. Travel and lodging for the event may not come in above $75,000, so whatever we ask for has to land inside that.
+
+Three deliverables, please:
+
+conference_travel_budget_FY2026.xlsx — the model behind the request: every proposed traveler's estimated travel and lodging cost with the determination for each, the other program items, and the total we'd be asking for against the cap.
+
+travel_determination_register.csv — one row per proposed traveler, cleared or not, with the estimated cost, so my coordinator can load it straight into the clearance tracker.
+
+conference_budget_memo.docx — a short memo recommending the figure we submit, written for the committee: who is cleared, who isn't and why, at the level they read; how the non-travel program items are costed and treated (Peter's analysts always probe the companion and guest arrangements); and anything the committee itself has to decide.
+
+Last year's application cleared because every line stood on the published per diem rates our policy is built on, and Finance spot-checks those figures — keep this estimate on the same footing. Where the register turns someone away, give me the one-paragraph version I can forward to their manager.
+
+I'm travelling most of Thursday and Friday, but email reaches me.
+
+Brenda
+
+Local Reference Files:
+- FY2026_per_diem_CO_extract.xlsx
+- pd2026_nominations_travel_requests.csv
+- northbridge_roster_travel_history.xlsx
+- pd_conference_2026_planning_brief.pdf

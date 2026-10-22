@@ -1,0 +1,15 @@
+{
+  "task": "GO-REAL-002",
+  "source_policy": "all_original_public_files",
+  "instruction_sha256": "36a36af8c5cb0440f33fabe9e389032849e4b6cc83b63f6efda6f751e68d950e",
+  "rubrics_sha256": "1d7a41541f402e6eced325870b25ee3a963b881204641f9fa15351e69dff5f03",
+  "rubric_positive_count": 30,
+  "rubric_penalty_count": 1,
+  "reference_computation": "completed",
+  "reference_business_narrative": "draft_needs_domain_review",
+  "independent_gold_score": null,
+  "model_scores": null,
+  "formal_acceptance": false,
+  "prior_task_with_simulated_inputs_not_reused": true,
+  "note": "This candidate is not an accepted A2 task. Existing task-image build, fixed verifier and expert gates remain required."
+}

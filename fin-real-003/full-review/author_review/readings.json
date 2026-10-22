@@ -1,0 +1,32 @@
+{
+  "status": "revise",
+  "blocking_issues": [],
+  "giveaway_findings": [
+    {
+      "stage": "challenges_and_rubrics",
+      "id": "CH6_and_R3.C2",
+      "reason": "设计在挑战CH6及评分标准R3.C2中直接点名了MAINE COMMUNITY BANK (CERT 17741) 与 GORHAM SAVINGS BANK (CERT 17748) 的承继关系及资产跃升细节。这违反了‘Do not disclose computed answers in the public brief’的严格指令，向Solver剧透了核心的结构性事件发现，削弱了诊断任务的探索性。",
+      "source_evidence": "fdic_institutions_VT_NH_ME.csv: CERT 17748 NEWCERT=17741, EFFDATE=01/01/2025; fdic_financials_VT_NH_ME_2022_2025.csv: CERT 17741 资产在20250331跃升",
+      "repair": "从公共简报、挑战描述和评分标准中移除具体银行名称和证书号，改为抽象描述（如‘分析期内存在显著的证书承继事件导致权重突变’），让Solver自行从数据中挖掘并验证。"
+    }
+  ],
+  "rubric_scope_findings": [
+    {
+      "stage": "rubrics",
+      "id": "R1.C1",
+      "reason": "R1.C1要求输出精确的财务记录数、季度数等统计占位符。这属于数据清洗的机械验证，虽有助于核对完整性，但不属于FIN T6风险诊断的核心业务判断。",
+      "source_evidence": "fdic_financials_VT_NH_ME_2022_2025.csv: row_count=746",
+      "repair": "保留作为数据完整性检查，但建议将其明确定位为数据准备阶段的验收标准，避免与核心风险诊断权重混淆。"
+    }
+  ],
+  "unsupported_claims": [],
+  "reasonable_alternatives": [
+    {
+      "id": "CH4_attribution",
+      "context": "组合变化归因方法（CH4/R3.C1）。",
+      "alternative": "设计提及Shapley或Kitagawa分解。对于仅有季度末数据的银行面板，基于资产权重的标准两期分解（持续机构表现、权重变化、进入退出效应）在实务中更常见、更易解释且完全可加，无需强求复杂的Shapley值计算。",
+      "justification": "源数据仅提供期末快照，缺乏高频交易流，标准权重分解已能满足‘定量归因’要求，且更符合银行组合管理的实际操作习惯。"
+    }
+  ],
+  "unverified_requirements": []
+}

@@ -1,0 +1,1800 @@
+{
+  "metadata": {
+    "title": "Washington L&I BR contractor public-record evidence review",
+    "as_of": "2026-10-12",
+    "horizon": "2026-11-11",
+    "statute_snapshot_certified": "2026-07-15",
+    "disclaimer": "Screening and evidence-gap analysis only; not a final legal opinion or agency determination.",
+    "date_boundary": "Effective date included; expiration/cancellation/impairment date excluded from that date; day-level screening convention.",
+    "join_rule": "Exact contractor license number only; never reassign protection by UBI or similar name."
+  },
+  "counts": {
+    "general_rows": 1553,
+    "general_licenses": 1553,
+    "bond_rows": 1724,
+    "bond_licenses": 821,
+    "insurance_rows": 737,
+    "insurance_licenses": 688,
+    "active_registrations": 750,
+    "shared_ubi_groups": 89,
+    "bond_orphan_licenses": 0,
+    "insurance_orphan_licenses": 0,
+    "general_duplicate_license_groups": 0,
+    "bond_candidate_key_duplicate_groups": 2,
+    "insurance_candidate_key_duplicate_groups": 1,
+    "bond_exact_duplicate_groups": 1,
+    "insurance_exact_duplicate_groups": 0
+  },
+  "legal_matrix": [
+    {
+      "topic": "适用对象与分类",
+      "citation": "RCW 18.27.010(1),(5),(12)",
+      "pages": "PDF第2–4页",
+      "condition": "从事定义内承包活动；一般承包商使用多于一个工种，专业承包商不属于一般承包商。",
+      "rule": "第18.27章要求先确认行为和一般/专业分类。",
+      "package_can": "CC记录可结合specialty字段作筛查分类。",
+      "package_cannot": "不能证明实际业务行为、项目事实或豁免；EC、PC、LC的专门许可要求不在本PDF内。"
+    },
+    {
+      "topic": "登记义务与禁止行为",
+      "citation": "RCW 18.27.020(1)–(3)",
+      "pages": "PDF第4–5页",
+      "condition": "属于本章承包商且无适用例外。",
+      "rule": "承包商应登记；未登记、暂停或撤销期间的特定行为受禁止；(3)另设书面通知相关限制。",
+      "package_can": "证明登记表快照状态。",
+      "package_cannot": "不能证明曾承揽、投标、广告、分包，或任何人收到书面通知。"
+    },
+    {
+      "topic": "申请资料与UBI",
+      "citation": "RCW 18.27.030(1)(b),(f), (3)",
+      "pages": "PDF第5–7页",
+      "condition": "申请或维持第18.27章登记。",
+      "rule": "申请含UBI与一般/专业类型；若干事项可导致拒绝或暂停。",
+      "package_can": "比较CSV中的执照号、UBI和类型字段。",
+      "package_cannot": "不能证明DOR状态、判决、申请真实性或机关实际决定。"
+    },
+    {
+      "topic": "保证金/替代担保与金额",
+      "citation": "RCW 18.27.040(1),(2),(4),(7),(8),(11)",
+      "pages": "PDF第7–10页",
+      "condition": "第18.27章申请人；一般承包商通常30,000美元，专业承包商通常15,000美元；可用指定储蓄账户替代；特定续期可提高。",
+      "rule": "取消、撤销、担保退出或减损可影响登记；续保不累加责任。",
+      "package_can": "逐行判断CSV保证金记录日期与单笔金额是否达到通常门槛。",
+      "package_cannot": "不能证明替代账户、机关批准、未决/已付索赔、法院判决、提高金额命令或完整历史；不得叠加历史金额。"
+    },
+    {
+      "topic": "保险/替代财务责任",
+      "citation": "RCW 18.27.050(1)–(3)",
+      "pages": "PDF第10–11页",
+      "condition": "第18.27章登记或再登记；财产损害50,000美元、单人伤亡100,000美元、多人伤亡200,000美元，或合格指定账户。",
+      "rule": "到期、取消、撤销或保险人退出可自动暂停，直至新保单/恢复通知提交并获批。",
+      "package_can": "判断保险来源行的日期支持和总额字段。",
+      "package_cannot": "单一insuranceamt不能证明法定分项、除外责任、保单类型、指定账户、提交或批准。"
+    },
+    {
+      "topic": "取消/减损与登记后果",
+      "citation": "RCW 18.27.040(1),(7); 18.27.050(2); 18.27.060(3)",
+      "pages": "PDF第7、9、10–11页",
+      "condition": "保证金取消、撤销、退出或被未清偿判决减损，或保险取消/到期等法定事件。",
+      "rule": "条文规定自动暂停及恢复所需的新保障或恢复通知；18.27.060(3)以减损/取消生效日为暂停日。",
+      "package_can": "标出CSV中的取消、到期、减损日期及登记状态不一致。",
+      "package_cannot": "本筛查日期边界不是小时级法定裁定；不能证明通知、提交、批准或机关系统的完整状态。"
+    },
+    {
+      "topic": "登记期限与续期",
+      "citation": "RCW 18.27.060(1),(4)",
+      "pages": "PDF第11页",
+      "condition": "第18.27章登记证及续期。",
+      "rule": "证书通常两年；按期续期；特定可追踪投递下，机关收到费用和保证金、责任保险证明之日生效。",
+      "package_can": "显示登记表到期日及快照状态。",
+      "package_cannot": "不能证明续期材料送达、费用、投递凭证或机关批准。"
+    },
+    {
+      "topic": "30天届满定义例外",
+      "citation": "RCW 18.27.010(15)",
+      "pages": "PDF第3–4页",
+      "condition": "登记届满不超过30日，且始终维持有效保证金以及18.27.050所需保险或指定账户。",
+      "rule": "满足全部条件者不纳入该款“未登记承包商”定义。",
+      "package_can": "筛出登记到期日在30日附近的记录，并检查包内是否有日期可支持的保障行。",
+      "package_cannot": "EXPIRED一列既不能单独排除也不能单独放行；CSV缺行不等于无保障，且不能证明“始终”、替代账户或实际活动。"
+    },
+    {
+      "topic": "登记核验",
+      "citation": "RCW 18.27.010(17); 18.27.110(1)",
+      "pages": "PDF第4、17页",
+      "condition": "地方机关对依法需登记承包商的建筑许可核验。",
+      "rule": "核验可查登记卡、部门数据库或联系部门；发证前应核验当前登记。",
+      "package_can": "作为下载快照触发进一步官方核验。",
+      "package_cannot": "离线快照不等于2026-10-12或之后的实时机关核验。"
+    },
+    {
+      "topic": "登记例外",
+      "citation": "RCW 18.27.065; 18.27.090(1)–(17)",
+      "pages": "PDF第12–14页",
+      "condition": "合伙/合资特定情形或列举豁免事实成立。",
+      "rule": "条文列出登记推定和多类豁免，部分附活动范围及反规避限制。",
+      "package_can": "显示登记表business type与专业字段，仅供提示。",
+      "package_cannot": "不能据字段推定合伙人名称条件、项目金额、产权、雇佣、广告或其他豁免事实。"
+    },
+    {
+      "topic": "诉讼中的持续保障",
+      "citation": "RCW 18.27.080",
+      "pages": "PDF第12–13页",
+      "condition": "承包商在州法院追索需登记工作的报酬/违约。",
+      "rule": "条文对诉权及实质合规设定持续资料、保证金和保险条件。",
+      "package_can": "提示历史保障连续性可能重要。",
+      "package_cannot": "不能证明合同、工程、诉讼、相关期间或法院结论。"
+    }
+  ],
+  "active_both_missing": [
+    {
+      "general_line": 230,
+      "business_name": "BRAND SAFWAY SERVICES LLC",
+      "license": "BRANDSS747BN",
+      "ubi": "601577044",
+      "type_code": "LC",
+      "scope": "本包未确认适用；转相应专门许可制度核验",
+      "bond_sources": "无来源行",
+      "insurance_sources": "无来源行"
+    },
+    {
+      "general_line": 557,
+      "business_name": "BRIANS ELECTRIC INC",
+      "license": "BRIANEI984B5",
+      "ubi": "602168205",
+      "type_code": "EC",
+      "scope": "本包未确认适用；转相应专门许可制度核验",
+      "bond_sources": "无来源行",
+      "insurance_sources": "无来源行"
+    },
+    {
+      "general_line": 759,
+      "business_name": "Brightway Electric LLC",
+      "license": "BRIGHEL761QG",
+      "ubi": "605511918",
+      "type_code": "EC",
+      "scope": "本包未确认适用；转相应专门许可制度核验",
+      "bond_sources": "无来源行",
+      "insurance_sources": "无来源行"
+    },
+    {
+      "general_line": 858,
+      "business_name": "BRISBINE ELECTRIC CO INC",
+      "license": "BRISBEC522JK",
+      "ubi": "600259867",
+      "type_code": "EC",
+      "scope": "本包未确认适用；转相应专门许可制度核验",
+      "bond_sources": "无来源行",
+      "insurance_sources": "无来源行"
+    },
+    {
+      "general_line": 1434,
+      "business_name": "BRUMMOND ELEC SRV & TECH LLC",
+      "license": "BRUMMES749DU",
+      "ubi": "606125072",
+      "type_code": "EC",
+      "scope": "本包未确认适用；转相应专门许可制度核验",
+      "bond_sources": "无来源行",
+      "insurance_sources": "无来源行"
+    },
+    {
+      "general_line": 1537,
+      "business_name": "BRYCE ELECTRIC LLC",
+      "license": "BRYCEEL952JK",
+      "ubi": "602490126",
+      "type_code": "EC",
+      "scope": "本包未确认适用；转相应专门许可制度核验",
+      "bond_sources": "无来源行",
+      "insurance_sources": "无来源行"
+    }
+  ],
+  "active_cc_one_side_gap": [
+    {
+      "general_line": 312,
+      "business_name": "BRAVO ENVIRONMENTAL NW INC",
+      "license": "BRAVOEN911P9",
+      "ubi": "602946216",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "无来源行",
+      "insurance_sources": "行140: 生效2026-01-27T00:00:00.000; 到期2027-01-27T00:00:00.000; 取消空; 金额1000000.0000",
+      "conclusion": "登记为ACTIVE，但保证金无可确认有效记录；仅表示证据不足",
+      "statute": "RCW 18.27.040或18.27.050；登记后果见18.27.060(3)（PDF第7–11页）",
+      "needed_evidence": "保证金或替代形式、连续日期、提交和批准资料、实时登记状态",
+      "next_step": "向L&I按完整执照号核验；不以状态列替代保障证明"
+    },
+    {
+      "general_line": 463,
+      "business_name": "BRENT & ADENA IN CHRIST",
+      "license": "BRENTAC938BB",
+      "ubi": "601322304",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行503: 生效2025-03-31T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行504: 生效2024-07-01T00:00:00.000; 到期空; 取消2025-02-13T00:00:00.000; 减损空; 金额15000.0000 | 行505: 生效2015-01-01T00:00:00.000; 到期10/30/2024; 取消空; 减损空; 金额6000.0000",
+      "insurance_sources": "行210: 生效2018-04-26T00:00:00.000; 到期空; 取消空; 金额1000000.0000",
+      "conclusion": "登记为ACTIVE，但保险无可确认有效记录；仅表示证据不足",
+      "statute": "RCW 18.27.040或18.27.050；登记后果见18.27.060(3)（PDF第7–11页）",
+      "needed_evidence": "保险或替代形式、连续日期、提交和批准资料、实时登记状态",
+      "next_step": "向L&I按完整执照号核验；不以状态列替代保障证明"
+    },
+    {
+      "general_line": 767,
+      "business_name": "BRIGHTEN HOMES INC",
+      "license": "BRIGHHI063D3",
+      "ubi": "601529129",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行827: 生效2025-03-18T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行828: 生效2002-03-18T00:00:00.000; 到期05/05/2026; 取消空; 减损空; 金额12000.0000",
+      "insurance_sources": "行358: 生效2025-10-12T00:00:00.000; 到期2026-10-12T00:00:00.000; 取消空; 金额1000000.0000",
+      "conclusion": "登记为ACTIVE，但保险无可确认有效记录；仅表示证据不足",
+      "statute": "RCW 18.27.040或18.27.050；登记后果见18.27.060(3)（PDF第7–11页）",
+      "needed_evidence": "保险或替代形式、连续日期、提交和批准资料、实时登记状态",
+      "next_step": "向L&I按完整执照号核验；不以状态列替代保障证明"
+    },
+    {
+      "general_line": 876,
+      "business_name": "BRISTOL ENVIRONMENTAL LLC",
+      "license": "BRISTEL757JZ",
+      "ubi": "602449576",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行956: 生效2025-01-01T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000",
+      "insurance_sources": "无来源行",
+      "conclusion": "登记为ACTIVE，但保险无可确认有效记录；仅表示证据不足",
+      "statute": "RCW 18.27.040或18.27.050；登记后果见18.27.060(3)（PDF第7–11页）",
+      "needed_evidence": "保险或替代形式、连续日期、提交和批准资料、实时登记状态",
+      "next_step": "向L&I按完整执照号核验；不以状态列替代保障证明"
+    },
+    {
+      "general_line": 1058,
+      "business_name": "BROOKSTONE DEVELOPMENT INC",
+      "license": "BROOKDI973PO",
+      "ubi": "602257973",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "无来源行",
+      "insurance_sources": "行490: 生效2026-10-06T00:00:00.000; 到期2027-10-06T00:00:00.000; 取消空; 金额2000000.0000 | 行491: 生效2025-10-06T00:00:00.000; 到期2027-10-06T00:00:00.000; 取消空; 金额2000000.0000",
+      "conclusion": "登记为ACTIVE，但保证金无可确认有效记录；仅表示证据不足",
+      "statute": "RCW 18.27.040或18.27.050；登记后果见18.27.060(3)（PDF第7–11页）",
+      "needed_evidence": "保证金或替代形式、连续日期、提交和批准资料、实时登记状态",
+      "next_step": "向L&I按完整执照号核验；不以状态列替代保障证明"
+    },
+    {
+      "general_line": 1363,
+      "business_name": "B & R SALES INC",
+      "license": "BRSAL**334PF",
+      "ubi": "342010637",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "无来源行",
+      "insurance_sources": "行653: 生效2022-08-15T00:00:00.000; 到期2027-08-15T00:00:00.000; 取消空; 金额1000000.0000",
+      "conclusion": "登记为ACTIVE，但保证金无可确认有效记录；仅表示证据不足",
+      "statute": "RCW 18.27.040或18.27.050；登记后果见18.27.060(3)（PDF第7–11页）",
+      "needed_evidence": "保证金或替代形式、连续日期、提交和批准资料、实时登记状态",
+      "next_step": "向L&I按完整执照号核验；不以状态列替代保障证明"
+    }
+  ],
+  "renewal_risk": [
+    {
+      "general_line": 4,
+      "business_name": "BRAADA GENERAL CONST LLC",
+      "license": "BRAADGC778LK",
+      "ubi": "605239652",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行2: 生效2025-06-12T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行3: 生效2023-06-07T00:00:00.000; 到期06/13/2025; 取消空; 减损空; 金额12000.0000",
+      "insurance_sources": "行2: 生效2025-10-27T00:00:00.000; 到期2026-10-27T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-10-27",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "2"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 6,
+      "business_name": "Braaten Carpentry",
+      "license": "BRAATC*889QF",
+      "ubi": "603251225",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行4: 生效2025-11-05T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行5: 生效2013-11-05T00:00:00.000; 到期11/05/2025; 取消空; 减损空; 金额12000.0000",
+      "insurance_sources": "行3: 生效2025-11-02T00:00:00.000; 到期2026-11-02T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-11-02",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "3"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 7,
+      "business_name": "BRAATEN CONSTRUCTION LLC",
+      "license": "BRAATCL786QN",
+      "ubi": "604981726",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行6: 生效2024-11-15T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行7: 生效2022-11-07T00:00:00.000; 到期01/30/2025; 取消空; 减损空; 金额12000.0000",
+      "insurance_sources": "行4: 生效2025-11-04T00:00:00.000; 到期2026-11-04T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-11-04",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "4"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 12,
+      "business_name": "BRACE POINT CARPENTRY LLC",
+      "license": "BRACEPC974QM",
+      "ubi": "602320615",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行11: 生效2024-07-01T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行12: 生效2024-04-01T00:00:00.000; 到期11/08/2024; 取消空; 减损空; 金额12000.0000 | 行13: 生效2004-11-01T00:00:00.000; 到期03/01/2024; 取消空; 减损空; 金额12000.0000",
+      "insurance_sources": "行6: 生效2024-11-04T00:00:00.000; 到期2026-11-04T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-11-04",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "6"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 188,
+      "business_name": "BRANDARIS CONSTRUCTION LLC",
+      "license": "BRANDCL801P1",
+      "ubi": "604543787",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行183: 生效2024-10-18T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行184: 生效2022-12-30T00:00:00.000; 到期空; 取消2024-03-09T00:00:00.000; 减损空; 金额12000.0000 | 行185: 生效2020-10-15T00:00:00.000; 到期空; 取消2022-12-09T00:00:00.000; 减损空; 金额12000.0000",
+      "insurance_sources": "行77: 生效2025-11-01T00:00:00.000; 到期2026-11-01T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-11-01",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "77"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 206,
+      "business_name": "BRANDENBURG INDUSTRIAL SRVC CO",
+      "license": "BRANDIS924B9",
+      "ubi": "602795761",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行202: 生效2024-09-13T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行203: 生效2019-09-13T00:00:00.000; 到期12/06/2024; 取消空; 减损空; 金额12000.0000",
+      "insurance_sources": "行83: 生效2025-11-01T00:00:00.000; 到期2026-11-01T00:00:00.000; 取消空; 金额5000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-11-01",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "83"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 242,
+      "business_name": "BRANN EXCAVATING LLC",
+      "license": "BRANNEL770QF",
+      "ubi": "605307465",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行253: 生效2024-11-12T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行254: 生效2023-11-03T00:00:00.000; 到期11/12/2024; 取消空; 减损空; 金额12000.0000",
+      "insurance_sources": "行102: 生效2025-11-03T00:00:00.000; 到期2026-11-03T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-11-03",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "102"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 273,
+      "business_name": "BRATONIA MECHANICAL LLC",
+      "license": "BRATOML795OC",
+      "ubi": "603147543",
+      "type_code": "PC",
+      "scope": "本包未确认适用；转相应专门许可制度核验",
+      "bond_sources": "行301: 生效2021-08-03T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额6000.0000",
+      "insurance_sources": "行125: 生效2022-10-25T00:00:00.000; 到期2026-10-25T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-10-25",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "125"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 274,
+      "business_name": "BRATONIA MECHANICAL LLC",
+      "license": "BRATOML890QA",
+      "ubi": "603147543",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行302: 生效2025-10-25T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行303: 生效2011-10-25T00:00:00.000; 到期10/27/2025; 取消空; 减损空; 金额12000.0000",
+      "insurance_sources": "行126: 生效2022-10-25T00:00:00.000; 到期2026-10-25T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-10-25",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "126"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 291,
+      "business_name": "BRAVE ELEMENT LLC",
+      "license": "BRAVEEL813MW",
+      "ubi": "604480730",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行315: 生效2026-01-21T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行316: 生效2023-07-11T00:00:00.000; 到期空; 取消2025-10-16T00:00:00.000; 减损空; 金额12000.0000 | 行317: 生效2021-07-11T00:00:00.000; 到期空; 取消2023-07-13T00:00:00.000; 减损空; 金额12000.0000 | 行318: 生效2020-07-11T00:00:00.000; 到期空; 取消2021-07-14T00:00:00.000; 减损空; 金额12000.0000",
+      "insurance_sources": "行133: 生效2025-11-10T00:00:00.000; 到期2026-11-10T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-11-10",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "133"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 389,
+      "business_name": "BRECKENRIDGE HOMES LLC",
+      "license": "BRECKHL776PR",
+      "ubi": "604942282",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行435: 生效2025-10-19T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行436: 生效2024-10-21T00:00:00.000; 到期空; 取消2025-11-29T00:00:00.000; 减损空; 金额30000.0000 | 行437: 生效2023-10-19T00:00:00.000; 到期空; 取消2024-11-22T00:00:00.000; 减损空; 金额12000.0000",
+      "insurance_sources": "行180: 生效2025-10-19T00:00:00.000; 到期2026-10-19T00:00:00.000; 取消空; 金额1000000.0000 | 行181: 生效2024-10-19T00:00:00.000; 到期2026-10-19T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-10-19",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "180,181"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 460,
+      "business_name": "B RENOVATIONS",
+      "license": "BRENOR*777BE",
+      "ubi": "604967599",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行501: 生效2024-07-01T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行502: 生效2022-12-13T00:00:00.000; 到期01/08/2025; 取消空; 减损空; 金额12000.0000",
+      "insurance_sources": "行209: 生效2025-11-02T00:00:00.000; 到期2026-11-02T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-11-02",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "209"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 533,
+      "business_name": "BR HAMMER SERVICES LLC",
+      "license": "BRHAMHS775P4",
+      "ubi": "605312973",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行575: 生效2025-10-23T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行576: 生效2023-10-23T00:00:00.000; 到期10/23/2025; 取消空; 减损空; 金额12000.0000",
+      "insurance_sources": "行241: 生效2025-10-23T00:00:00.000; 到期2026-10-23T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-10-23",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "241"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 548,
+      "business_name": "BRIAN C JOKI CONSTRUCTION",
+      "license": "BRIANCJ072P9",
+      "ubi": "601501907",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行591: 生效2024-10-24T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行592: 生效2025-12-11T00:00:00.000; 到期空; 取消2025-12-05T00:00:00.000; 减损空; 金额30000.0000 | 行593: 生效2006-10-28T00:00:00.000; 到期12/11/2025; 取消空; 减损空; 金额12000.0000",
+      "insurance_sources": "行249: 生效2022-10-28T00:00:00.000; 到期2026-10-28T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-10-28",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "249"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 597,
+      "business_name": "BRIAN SCHMIDT BUILDER LLC",
+      "license": "BRIANSB841NU",
+      "ubi": "604029773",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行658: 生效2024-08-31T00:00:00.000; 到期空; 取消2026-10-31T00:00:00.000; 减损空; 金额30000.0000 | 行659: 生效2016-08-31T00:00:00.000; 到期空; 取消2024-08-31T00:00:00.000; 减损空; 金额12000.0000",
+      "insurance_sources": "行274: 生效2026-04-11T00:00:00.000; 到期2027-04-11T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "bond",
+          "kind_cn": "保证金",
+          "gap_start": "2026-10-31",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "658"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 606,
+      "business_name": "BRIAN T HAWKINS-BUILDER LLC",
+      "license": "BRIANTH916J4",
+      "ubi": "602905005",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行667: 生效2024-10-29T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行668: 生效2019-07-15T00:00:00.000; 到期10/29/2024; 取消空; 减损空; 金额12000.0000",
+      "insurance_sources": "行278: 生效2024-10-21T00:00:00.000; 到期2026-10-21T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-10-21",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "278"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 608,
+      "business_name": "BRIAN VAIL CONSTRUCTION",
+      "license": "BRIANVC755LF",
+      "ubi": "604214333",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行671: 生效2025-05-08T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000",
+      "insurance_sources": "行280: 生效2024-10-27T00:00:00.000; 到期2026-10-27T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-10-27",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "280"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 667,
+      "business_name": "BRIDGE CITY CONTRACTING LLC",
+      "license": "BRIDGCC832NT",
+      "ubi": "604034243",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行728: 生效2025-08-30T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行729: 生效2017-08-29T00:00:00.000; 到期空; 取消2022-05-25T00:00:00.000; 减损空; 金额12000.0000 | 行730: 生效2019-05-12T00:00:00.000; 到期09/02/2025; 取消空; 减损空; 金额12000.0000",
+      "insurance_sources": "行308: 生效2025-11-02T00:00:00.000; 到期2026-11-02T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-11-02",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "308"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 747,
+      "business_name": "BRIGHT CONSTRUCTION LLC",
+      "license": "BRIGHCL761RQ",
+      "ubi": "605343083",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行807: 生效2024-11-04T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000",
+      "insurance_sources": "行347: 生效2025-10-25T00:00:00.000; 到期2026-10-25T00:00:00.000; 取消空; 金额300000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-10-25",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "347"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 892,
+      "business_name": "BRITESCAPE LLC",
+      "license": "BRITEL*852D4",
+      "ubi": "601762150",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行970: 生效2026-03-25T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额15000.0000 | 行971: 生效2025-03-25T00:00:00.000; 到期空; 取消2026-03-25T00:00:00.000; 减损空; 金额15000.0000 | 行972: 生效2015-03-24T00:00:00.000; 到期空; 取消2025-05-31T00:00:00.000; 减损空; 金额6000.0000",
+      "insurance_sources": "行420: 生效2025-11-04T00:00:00.000; 到期2026-11-04T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-11-04",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "420"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 914,
+      "business_name": "BRIXTON & WINDSOR ROOFING LLC",
+      "license": "BRIXTWR790QN",
+      "ubi": "604624078",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行991: 生效2025-02-24T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行992: 生效2021-11-09T00:00:00.000; 到期空; 取消2025-01-03T00:00:00.000; 减损空; 金额12000.0000",
+      "insurance_sources": "行429: 生效2025-11-08T00:00:00.000; 到期2026-11-08T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-11-08",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "429"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 995,
+      "business_name": "BRODY'S CARPENTRY LLC",
+      "license": "BRODYCL785NW",
+      "ubi": "604928078",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行1077: 生效2025-08-15T00:00:00.000; 到期空; 取消2026-10-21T00:00:00.000; 减损空; 金额30000.0000 | 行1078: 生效2024-08-15T00:00:00.000; 到期空; 取消2025-08-15T00:00:00.000; 减损空; 金额30000.0000 | 行1079: 生效2022-08-15T00:00:00.000; 到期08/15/2024; 取消空; 减损空; 金额12000.0000",
+      "insurance_sources": "行464: 生效2025-08-15T00:00:00.000; 到期2027-08-15T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "bond",
+          "kind_cn": "保证金",
+          "gap_start": "2026-10-21",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "1077"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 1012,
+      "business_name": "BROKEN HOME CONSTRUCTION",
+      "license": "BROKEHC783PF",
+      "ubi": "604975409",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行1086: 生效2024-10-06T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行1087: 生效2022-10-05T00:00:00.000; 到期空; 取消2023-11-11T00:00:00.000; 减损空; 金额12000.0000 | 行1088: 生效2023-10-26T00:00:00.000; 到期10/07/2024; 取消空; 减损空; 金额12000.0000",
+      "insurance_sources": "行469: 生效2024-10-31T00:00:00.000; 到期2026-10-31T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-10-31",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "469"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 1027,
+      "business_name": "BRONGIL BUILDING COMPANY LLC",
+      "license": "BRONGBC886N9",
+      "ubi": "603231226",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行1104: 生效2026-03-02T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行1105: 生效2025-03-02T00:00:00.000; 到期空; 取消2026-03-02T00:00:00.000; 减损空; 金额30000.0000 | 行1106: 生效2022-03-02T00:00:00.000; 到期03/02/2025; 取消空; 减损空; 金额12000.0000",
+      "insurance_sources": "行474: 生效2025-11-08T00:00:00.000; 到期2026-11-08T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-11-08",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "474"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 1263,
+      "business_name": "BROWN BEAR CONSTRUCTION LLC",
+      "license": "BROWNBC825LN",
+      "ubi": "604283537",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行1422: 生效2025-05-02T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行1423: 生效2019-05-02T00:00:00.000; 到期空; 取消2022-05-25T00:00:00.000; 减损空; 金额12000.0000 | 行1424: 生效2022-05-02T00:00:00.000; 到期05/02/2025; 取消空; 减损空; 金额12000.0000",
+      "insurance_sources": "行607: 生效2025-10-25T00:00:00.000; 到期2026-10-25T00:00:00.000; 取消空; 金额2000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-10-25",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "607"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 1333,
+      "business_name": "BROWN & ROOT INDSTRL SRVCS LLC",
+      "license": "BROWNRI850PK",
+      "ubi": "603531558",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行1494: 生效2024-07-01T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行1495: 生效2016-08-26T00:00:00.000; 到期07/01/2024; 取消空; 减损空; 金额12000.0000",
+      "insurance_sources": "行638: 生效2025-11-01T00:00:00.000; 到期2026-11-01T00:00:00.000; 取消空; 金额5000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-11-01",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "638"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 1481,
+      "business_name": "BRUSH PRAIRIE LANDSCAPING LLC",
+      "license": "BRUSHPL741BE",
+      "ubi": "605977373",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行1652: 生效2026-01-05T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000",
+      "insurance_sources": "行711: 生效2025-11-01T00:00:00.000; 到期2026-11-01T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-11-01",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "711"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 1523,
+      "business_name": "BRYAN'S HANDYMAN SERVICE LLC",
+      "license": "BRYANHS763PW",
+      "ubi": "605615842",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行1687: 生效2025-10-14T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行1688: 生效2024-10-14T00:00:00.000; 到期空; 取消2025-11-21T00:00:00.000; 减损空; 金额30000.0000",
+      "insurance_sources": "行727: 生效2024-10-14T00:00:00.000; 到期2026-10-14T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-10-14",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "727"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 1533,
+      "business_name": "BRYAN T LASSO CONSTRUCTION",
+      "license": "BRYANTL931L5",
+      "ubi": "602738402",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行1692: 生效2024-10-28T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行1693: 生效2022-04-19T00:00:00.000; 到期空; 取消2025-04-19T00:00:00.000; 减损空; 金额12000.0000 | 行1694: 生效2020-04-19T00:00:00.000; 到期空; 取消2022-04-21T00:00:00.000; 减损空; 金额12000.0000",
+      "insurance_sources": "行729: 生效2025-10-18T00:00:00.000; 到期2026-10-18T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-10-18",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "729"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    },
+    {
+      "general_line": 1551,
+      "business_name": "BRYSON REMODEL REPAIR",
+      "license": "BRYSORR742B2",
+      "ubi": "605968989",
+      "type_code": "CC",
+      "scope": "RCW 18.27直接筛查（仍须核验活动与豁免）",
+      "bond_sources": "行1714: 生效2025-10-13T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000",
+      "insurance_sources": "行735: 生效2025-10-19T00:00:00.000; 到期2026-10-19T00:00:00.000; 取消空; 金额1000000.0000",
+      "gaps": [
+        {
+          "kind": "insurance",
+          "kind_cn": "保险",
+          "gap_start": "2026-10-19",
+          "gap_end": "2026-11-11",
+          "trigger_lines": "735"
+        }
+      ],
+      "statute": "CC：RCW 18.27.040/050及18.27.060(3)；非CC：本包未确认适用",
+      "needed_evidence": "后继/恢复保障、替代账户、提交与批准凭证、实时登记状态",
+      "next_step": "在最早缺口日前核验整个窗口是否无缝覆盖；不得只比较两个端点"
+    }
+  ],
+  "lapse_review": [
+    {
+      "general_line": 153,
+      "business_name": "BRAMBILA & SON'S LLC",
+      "license": "BRAMBSL863BH",
+      "ubi": "603304261",
+      "status": "EXPIRED",
+      "expiration": "2026-09-23",
+      "days_since_expiration": 19,
+      "bond_sources": "无来源行",
+      "insurance_sources": "无来源行",
+      "conclusion": "仅凭EXPIRED和到期日不能排除或放行；包内保障缺失/不足不能证明例外条件成立或不成立",
+      "next_step": "RCW 18.27.010(15)，PDF第3–4页：核验届满不超过30日及整个期间持续保证金、保险/指定账户；不推定实际承揽"
+    },
+    {
+      "general_line": 222,
+      "business_name": "BRANDHAGEN PAPER HANGING",
+      "license": "BRANDPH941J1",
+      "ubi": "601419282",
+      "status": "EXPIRED",
+      "expiration": "2026-09-25",
+      "days_since_expiration": 17,
+      "bond_sources": "无来源行",
+      "insurance_sources": "无来源行",
+      "conclusion": "仅凭EXPIRED和到期日不能排除或放行；包内保障缺失/不足不能证明例外条件成立或不成立",
+      "next_step": "RCW 18.27.010(15)，PDF第3–4页：核验届满不超过30日及整个期间持续保证金、保险/指定账户；不推定实际承揽"
+    },
+    {
+      "general_line": 233,
+      "business_name": "BRAND X DESIGN & CONSTRUCTION",
+      "license": "BRANDXD077KS",
+      "ubi": "600341065",
+      "status": "EXPIRED",
+      "expiration": "2026-10-09",
+      "days_since_expiration": 3,
+      "bond_sources": "无来源行",
+      "insurance_sources": "无来源行",
+      "conclusion": "仅凭EXPIRED和到期日不能排除或放行；包内保障缺失/不足不能证明例外条件成立或不成立",
+      "next_step": "RCW 18.27.010(15)，PDF第3–4页：核验届满不超过30日及整个期间持续保证金、保险/指定账户；不推定实际承揽"
+    },
+    {
+      "general_line": 322,
+      "business_name": "BRAVO & STONE CONSTRUCTION LLC",
+      "license": "BRAVOSC765PG",
+      "ubi": "605595809",
+      "status": "EXPIRED",
+      "expiration": "2026-10-07",
+      "days_since_expiration": 5,
+      "bond_sources": "无来源行",
+      "insurance_sources": "无来源行",
+      "conclusion": "仅凭EXPIRED和到期日不能排除或放行；包内保障缺失/不足不能证明例外条件成立或不成立",
+      "next_step": "RCW 18.27.010(15)，PDF第3–4页：核验届满不超过30日及整个期间持续保证金、保险/指定账户；不推定实际承揽"
+    },
+    {
+      "general_line": 470,
+      "business_name": "BRENTTATECONST LLC",
+      "license": "BRENTL*850P7",
+      "ubi": "603551694",
+      "status": "EXPIRED",
+      "expiration": "2026-09-26",
+      "days_since_expiration": 16,
+      "bond_sources": "无来源行",
+      "insurance_sources": "无来源行",
+      "conclusion": "仅凭EXPIRED和到期日不能排除或放行；包内保障缺失/不足不能证明例外条件成立或不成立",
+      "next_step": "RCW 18.27.010(15)，PDF第3–4页：核验届满不超过30日及整个期间持续保证金、保险/指定账户；不推定实际承揽"
+    },
+    {
+      "general_line": 471,
+      "business_name": "BRENT LINDER DESIGN HARDWOODS",
+      "license": "BRENTLD901P8",
+      "ubi": "601226574",
+      "status": "EXPIRED",
+      "expiration": "2026-09-25",
+      "days_since_expiration": 17,
+      "bond_sources": "无来源行",
+      "insurance_sources": "无来源行",
+      "conclusion": "仅凭EXPIRED和到期日不能排除或放行；包内保障缺失/不足不能证明例外条件成立或不成立",
+      "next_step": "RCW 18.27.010(15)，PDF第3–4页：核验届满不超过30日及整个期间持续保证金、保险/指定账户；不推定实际承揽"
+    },
+    {
+      "general_line": 612,
+      "business_name": "BRIAN WIEDMANN PAINTING",
+      "license": "BRIANWP787ON",
+      "ubi": "601370753",
+      "status": "EXPIRED",
+      "expiration": "2026-09-15",
+      "days_since_expiration": 27,
+      "bond_sources": "无来源行",
+      "insurance_sources": "无来源行",
+      "conclusion": "仅凭EXPIRED和到期日不能排除或放行；包内保障缺失/不足不能证明例外条件成立或不成立",
+      "next_step": "RCW 18.27.010(15)，PDF第3–4页：核验届满不超过30日及整个期间持续保证金、保险/指定账户；不推定实际承揽"
+    },
+    {
+      "general_line": 704,
+      "business_name": "BRIDGETOWN REMODEL & RPR LLC",
+      "license": "BRIDGRR822DT",
+      "ubi": "604214760",
+      "status": "EXPIRED",
+      "expiration": "2026-09-25",
+      "days_since_expiration": 17,
+      "bond_sources": "无来源行",
+      "insurance_sources": "无来源行",
+      "conclusion": "仅凭EXPIRED和到期日不能排除或放行；包内保障缺失/不足不能证明例外条件成立或不成立",
+      "next_step": "RCW 18.27.010(15)，PDF第3–4页：核验届满不超过30日及整个期间持续保证金、保险/指定账户；不推定实际承揽"
+    },
+    {
+      "general_line": 1202,
+      "business_name": "BROTHERS LANDSCAPE INC",
+      "license": "BROTHLI807DZ",
+      "ubi": "604463895",
+      "status": "EXPIRED",
+      "expiration": "2026-10-03",
+      "days_since_expiration": 9,
+      "bond_sources": "无来源行",
+      "insurance_sources": "无来源行",
+      "conclusion": "仅凭EXPIRED和到期日不能排除或放行；包内保障缺失/不足不能证明例外条件成立或不成立",
+      "next_step": "RCW 18.27.010(15)，PDF第3–4页：核验届满不超过30日及整个期间持续保证金、保险/指定账户；不推定实际承揽"
+    },
+    {
+      "general_line": 1316,
+      "business_name": "BROWN'S OVERHEAD DOOR",
+      "license": "BROWNOD781JL",
+      "ubi": "604813669",
+      "status": "EXPIRED",
+      "expiration": "2026-09-17",
+      "days_since_expiration": 25,
+      "bond_sources": "无来源行",
+      "insurance_sources": "无来源行",
+      "conclusion": "仅凭EXPIRED和到期日不能排除或放行；包内保障缺失/不足不能证明例外条件成立或不成立",
+      "next_step": "RCW 18.27.010(15)，PDF第3–4页：核验届满不超过30日及整个期间持续保证金、保险/指定账户；不推定实际承揽"
+    },
+    {
+      "general_line": 1391,
+      "business_name": "BRUCE JESPERSON CONSTRUCTION",
+      "license": "BRUCEJC760OW",
+      "ubi": "601496306",
+      "status": "EXPIRED",
+      "expiration": "2026-09-16",
+      "days_since_expiration": 26,
+      "bond_sources": "无来源行",
+      "insurance_sources": "无来源行",
+      "conclusion": "仅凭EXPIRED和到期日不能排除或放行；包内保障缺失/不足不能证明例外条件成立或不成立",
+      "next_step": "RCW 18.27.010(15)，PDF第3–4页：核验届满不超过30日及整个期间持续保证金、保险/指定账户；不推定实际承揽"
+    }
+  ],
+  "examples": {
+    "historical": [
+      "BRIGHHI063D3（BRIGHTEN HOMES INC，登记行767，UBI 601529129）：行827: 生效2025-03-18T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行828: 生效2002-03-18T00:00:00.000; 到期05/05/2026; 取消空; 减损空; 金额12000.0000；行358: 生效2025-10-12T00:00:00.000; 到期2026-10-12T00:00:00.000; 取消空; 金额1000000.0000。历史/缺失行不能替代2026-10-12有效证明；适用范围为RCW 18.27直接筛查（仍须核验活动与豁免）。",
+      "BRIANEI984B5（BRIANS ELECTRIC INC，登记行557，UBI 602168205）：无来源行；无来源行。历史/缺失行不能替代2026-10-12有效证明；适用范围为本包未确认适用；转相应专门许可制度核验。",
+      "BRISTEL757JZ（BRISTOL ENVIRONMENTAL LLC，登记行876，UBI 602449576）：行956: 生效2025-01-01T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000；无来源行。历史/缺失行不能替代2026-10-12有效证明；适用范围为RCW 18.27直接筛查（仍须核验活动与豁免）。"
+    ],
+    "future": [
+      "BRUCELG123BK（BRUCE LEONE GENERAL CONTRACTOR，UBI 600336600）保证金行1550生效日2026-10-15T00:00:00.000，在2026-10-12尚未生效，不能提前计入；该执照另有当前来源行时须分别判断，不能因未来行倒推当前有效。"
+    ],
+    "status_mismatch": [
+      "BRAVOEN911P9（BRAVO ENVIRONMENTAL NW INC，登记行312，UBI 602946216）登记为ACTIVE，但保障证据为：登记为ACTIVE，但保证金无可确认有效记录；仅表示证据不足。来源：保证金无来源行；保险行140: 生效2026-01-27T00:00:00.000; 到期2027-01-27T00:00:00.000; 取消空; 金额1000000.0000。应补实时状态、替代形式及提交/批准资料，不据此认定违法。",
+      "BRENTAC938BB（BRENT & ADENA IN CHRIST，登记行463，UBI 601322304）登记为ACTIVE，但保障证据为：登记为ACTIVE，但保险无可确认有效记录；仅表示证据不足。来源：保证金行503: 生效2025-03-31T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行504: 生效2024-07-01T00:00:00.000; 到期空; 取消2025-02-13T00:00:00.000; 减损空; 金额15000.0000 | 行505: 生效2015-01-01T00:00:00.000; 到期10/30/2024; 取消空; 减损空; 金额6000.0000；保险行210: 生效2018-04-26T00:00:00.000; 到期空; 取消空; 金额1000000.0000。应补实时状态、替代形式及提交/批准资料，不据此认定违法。",
+      "BRIGHHI063D3（BRIGHTEN HOMES INC，登记行767，UBI 601529129）登记为ACTIVE，但保障证据为：登记为ACTIVE，但保险无可确认有效记录；仅表示证据不足。来源：保证金行827: 生效2025-03-18T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000 | 行828: 生效2002-03-18T00:00:00.000; 到期05/05/2026; 取消空; 减损空; 金额12000.0000；保险行358: 生效2025-10-12T00:00:00.000; 到期2026-10-12T00:00:00.000; 取消空; 金额1000000.0000。应补实时状态、替代形式及提交/批准资料，不据此认定违法。",
+      "BRISTEL757JZ（BRISTOL ENVIRONMENTAL LLC，登记行876，UBI 602449576）登记为ACTIVE，但保障证据为：登记为ACTIVE，但保险无可确认有效记录；仅表示证据不足。来源：保证金行956: 生效2025-01-01T00:00:00.000; 到期Until Canceled; 取消空; 减损空; 金额30000.0000；保险无来源行。应补实时状态、替代形式及提交/批准资料，不据此认定违法。",
+      "BROOKDI973PO（BROOKSTONE DEVELOPMENT INC，登记行1058，UBI 602257973）登记为ACTIVE，但保障证据为：登记为ACTIVE，但保证金无可确认有效记录；仅表示证据不足。来源：保证金无来源行；保险行490: 生效2026-10-06T00:00:00.000; 到期2027-10-06T00:00:00.000; 取消空; 金额2000000.0000 | 行491: 生效2025-10-06T00:00:00.000; 到期2027-10-06T00:00:00.000; 取消空; 金额2000000.0000。应补实时状态、替代形式及提交/批准资料，不据此认定违法。"
+    ]
+  },
+  "exceptions": [
+    {
+      "category": "多个执照共用UBI",
+      "key": "278040547",
+      "details": "登记行1068: BROOKH*121RK, BROOKDALE HOMES | 登记行1076: BROOKL*372NT, BROOKDALE LUMBER INC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "600165438",
+      "details": "登记行47: BRADFP*258P3, BRADFORD PLUMBING INC | 登记行48: BRADFPI792O8, BRADFORD PLUMBING INC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "600366723",
+      "details": "登记行485: BRESIC*208MQ, BRESINA CONSTRUCTION | 登记行486: BRESIE*080QP, BRESINA ELECTRIC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "600563916",
+      "details": "登记行1313: BROWNMI151CJ, BROWN & MURRAY IND CONTRS INC | 登记行1314: BROWNMI776LW, BROWN & MURRAY IND CONTRS INC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "600573575",
+      "details": "登记行34: BRADEP*797NQ, BRADEN PLUMBING | 登记行35: BRADEP*968NS, BRADEN PLUMBING",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "600594604",
+      "details": "登记行220: BRANDP*159QQ, BRANDT'S PLUMBING | 登记行221: BRANDP*791O7, BRANDT'S PLUMBING",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "600639124",
+      "details": "登记行1320: BROWNPP743BM, BROWN'S PLUMBING & PUMPS INC | 登记行1321: BROWNPP764K9, BROWN'S PLUMBING & PUMPS INC | 登记行1322: BROWNPP770LE, BROWN'S PLUMBING & PUMPS INC | 登记行1323: BROWNPP7711S, BROWN'S PLUMBING & PUMPS INC | 登记行1324: BROWNPP771JS, BROWN'S PLUMBING & PUMPS INC | 登记行1325: BROWNPP939KA, BROWN'S PLUMBING & PUMPS INC | 登记行1326: BROWNPP943RK, BROWN'S PLUMBING & PUMPS INC",
+      "count": 7,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "601071600",
+      "details": "登记行1223: BROTHPI790P9, BROTHER'S PLUMBING INC | 登记行1226: BROTHPI9149G, BROTHER'S PLUMBING INC | 登记行1227: BROTHPI914RG, BROTHER'S PLUMBING INC",
+      "count": 3,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "601278647",
+      "details": "登记行1348: BRPLUI*099DF, B & R PLUMBING INC | 登记行1351: BRPLURP763O5, B & R PLUMBING INC | 登记行1352: BRPLURP793MF, B & R PLUMBING INC",
+      "count": 3,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "601336272",
+      "details": "登记行507: BRETTVA099PZ, BRETT V ADAMS CONSTRUCTION | 登记行508: BRETTVA757K3, BRETT V ADAMS CONSTRUCTION",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "601389696",
+      "details": "登记行489: BRET*AR970KA, BRET ALAN REYNAUD CONCRETE CON | 登记行525: BREXCEC782CH, BR EXCAVATION & CONCRETE SVCS",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "601577044",
+      "details": "登记行228: BRANDSL820M6, BRANDSAFWAY SERVICES LLC | 登记行230: BRANDSS747BN, BRAND SAFWAY SERVICES LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "601594596",
+      "details": "登记行843: BRINKHS820K5, Brinks Home Security | 登记行844: BRINKHS823LL, Brinks Home Security",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "601720168",
+      "details": "登记行114: BRADWCI033DF, BRAD WILSON CONSTRUCTION INC | 登记行115: BRADWWC777LT, BRAD WILSON CONSTRUCTION INC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "601761355",
+      "details": "登记行877: BRISTES815LE, BRISTOL ENG SERVICES CO LLC | 登记行878: BRISTES882LJ, BRISTOL ENG SERVICES CORP",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "601762150",
+      "details": "登记行891: BRITEL*852C3, BRITESCAPE LLC | 登记行892: BRITEL*852D4, BRITESCAPE LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "601763483",
+      "details": "登记行195: BRANDES925CF, BRAND ENERGY SOLUTIONS LLC | 登记行208: BRANDL*823MP, BrandSafway LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "602085006",
+      "details": "登记行1085: BROOKPC793NR, BROOKS PLUMBING CO | 登记行1086: BROOKPC995CB, BROOKS PLUMBING CO",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "602158563",
+      "details": "登记行308: BRAVOEI773C7, BRAVO ENTERPRISES INC | 登记行309: BRAVOEI773DB, BRAVO ENTERPRISES INC | 登记行310: BRAVOEI936B3, BRAVO ENTERPRISES INC | 登记行311: BRAVOEI942R9, BRAVO ENTERPRISES INC",
+      "count": 4,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "602311890",
+      "details": "登记行1018: BROKESL962NL, BROKEN STUFF LLC | 登记行1019: BROKESL971NE, BROKEN STUFF LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "602345797",
+      "details": "登记行722: BRIGGC*754LK, BRIGGS CONTRACTING | 登记行723: BRIGGC*842KE, BRIGGS CONTRACTING",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "602346866",
+      "details": "登记行455: BRENNHA962DU, BRENNAN HEATING & A/C LLC | 登记行456: BRENNHA971R9, BRENNAN HEATING & A/C LLC | 登记行457: BRENNHC795OO, BRENNAN HEATING & A/C LLC",
+      "count": 3,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "602449576",
+      "details": "登记行875: BRISTEI954BS, BRISTOL ENVIRONMENTAL INC | 登记行876: BRISTEL757JZ, BRISTOL ENVIRONMENTAL LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "602489281",
+      "details": "登记行1399: BRUCEMI787KD, BRUCE MECHANICAL INC | 登记行1400: BRUCEMI865RB, BRUCE MECHANICAL INC | 登记行1401: BRUCEMI951LB, BRUCE MECHANICAL INC",
+      "count": 3,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "602727096",
+      "details": "登记行1083: BROOKNC741LB, BROOKS NORTHWEST CONST LLC | 登记行1091: BROOKRC937K2, BROOKS ROOFING & CONST LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "602819540",
+      "details": "登记行1426: BRUKSSI740KA, BRUKS SIWERTELL INC | 登记行1427: BRUKSSI800P1, BRUKS SIWERTELL INC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "602871769",
+      "details": "登记行1350: BRPLUPS827BE, B & R PLUMBING SERVICE | 登记行1353: BRPLURP794MG, B & R PLUMBING SERVICE",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "602918660",
+      "details": "登记行826: BRIMSFS902BL, Brimstone Fire Safety Mng LLC | 登记行827: BRIMSFS918KO, BRIMSTONE FIRE SAFETY MNG LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "602942391",
+      "details": "登记行1001: BROERPL793O8, BROERSMA PLUMBING LLC | 登记行1002: BROERPL918NO, BROERSMA PLUMBING LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "602999529",
+      "details": "登记行428: BREMEBS792P8, BREMERTON BACKFLOW SERVICES | 登记行429: BREMEBS880C4, Bremerton Backflow Services",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "603040763",
+      "details": "登记行267: BRASUP*775JG, BRASUELL PLUMBING | 登记行268: BRASUP*896DQ, BRASUELL PLUMBING",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "603046671",
+      "details": "登记行824: BRIMMSL824KJ, BRIMMA SOLAR LLC | 登记行825: BRIMMSL899CQ, BRIMMA SOLAR LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "603050857",
+      "details": "登记行1349: BRPLUP*784Q9, B R PLUMBING | 登记行1354: BRPLURP906RT, B R PLUMBING",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "603062594",
+      "details": "登记行235: BRANEC*741JB, BRANELLE CONSTRUCTION | 登记行236: BRANEC*892CZ, BRANELLE CONSTRUCTION",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "603113414",
+      "details": "登记行636: BRICKHS744BO, BRICKMAN HOME SERVICES | 登记行642: BRICKML755JQ, BRICKMAN MEDICAL LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "603143313",
+      "details": "登记行83: BRADLPI773DO, BRADLEY PLUMBING INC | 登记行84: BRADLPI855RS, BRADLEY PLUMBING INC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "603147543",
+      "details": "登记行273: BRATOML795OC, BRATONIA MECHANICAL LLC | 登记行274: BRATOML890QA, BRATONIA MECHANICAL LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "603203171",
+      "details": "登记行139: BRAINPI760DL, BRAIN POWER INC | 登记行140: BRAINPI801BP, BRAIN POWER INC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "603262773",
+      "details": "登记行699: BRIDGPL764KW, BRIDGETOWN PAINTING LLC | 登记行700: BRIDGPL873O3, BRIDGETOWN PAINTING LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "603282691",
+      "details": "登记行902: BRITTPM794PK, BRITTON PLMB & MECHANICAL LLC | 登记行903: BRITTPM871JB, BRITTON PLMB & MECHANICAL LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "603287576",
+      "details": "登记行1056: BROOKCZ851MP, Brooks' Comfort Zone | 登记行1057: BROOKCZ872K4, Brooks' Comfort Zone",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "603301047",
+      "details": "登记行1121: BROSVI*87129, BROSVIK INC | 登记行1122: BROSVI*871K9, BROSVIK INC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "603325651",
+      "details": "登记行1442: BRUNEPI781O7, Brunette Plumbing INC | 登记行1443: BRUNEPI860DG, Brunette Plumbing INC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "603397978",
+      "details": "登记行278: BRAUNAC752JD, Braun Arboricultural Cnslt LLC | 登记行279: BRAUNAC908DQ, Braun Arboricultural Cnslt LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "603473174",
+      "details": "登记行1094: BROOKWI788RB, BROOKS WOODWORKS INC | 登记行1095: BROOKWI853KM, BROOKS WOODWORKS INC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "603509197",
+      "details": "登记行1199: BROTHL*823J3, BROTHERS LANDSCAPING | 登记行1247: BROTHTS788LG, BROTHERS TREE SERV & LNDSCPG",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "603535403",
+      "details": "登记行14: BRACKDF844JF, BRACKEN DECK & FENCE | 登记行16: BRACKW*764MU, BRACKEN WOODWORKS",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "603589165",
+      "details": "登记行655: BRICOGC743KG, BRICO GENERAL CONTRACTING LLC | 登记行656: BRICOGC840C6, BRICO GENERAL CONTRACTING LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604094655",
+      "details": "登记行997: BROEKPL771RF, BROEKER'S PLUMBING LLC | 登记行998: BROEKPL830QA, BROEKER'S PLUMBING LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604103773",
+      "details": "登记行737: BRIGHBP788DC, THE BRIGHT PLUMBING CO LLC | 登记行738: BRIGHBP837K6, THE BRIGHT PLUMBING CO LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604111820",
+      "details": "登记行1032: BRONSPL775L6, Bronson Plumbing LLC | 登记行1033: BRONSPL833JJ, Bronson Plumbing LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604119934",
+      "details": "登记行45: BRADFIL749CP, BRADFORD INSTALLS LLC | 登记行46: BRADFIL832KE, Bradford Installs LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604143074",
+      "details": "登记行1089: BROOKPP791R1, BROOKSIDE PLBG & PIPEWORKS LTD | 登记行1090: BROOKPP973L7, BROOKSIDE PLBG & PIPEWORKS LTD",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604175972",
+      "details": "登记行57: BRADLAC828L6, BRADLEY AIR COMPANY | 登记行58: BRADLAC833QN, BRADLEY AIR COMPANY | 登记行59: BRADLAL831PW, BRADLEY AIR LLC",
+      "count": 3,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604214333",
+      "details": "登记行608: BRIANVC755LF, BRIAN VAIL CONSTRUCTION | 登记行609: BRIANVC824J7, BRIAN VAIL CONSTRUCTION",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604254275",
+      "details": "登记行216: BRANDMC760BJ, BRANDEN MAESTAS CONTRACTNG LLC | 登记行217: BRANDMC824K2, BRANDEN MAESTAS CONTRACTNG LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604276519",
+      "details": "登记行1367: BRSFIFO820N3, BRS FIELD OPS LLC | 登记行1368: BRSFIFO828M4, BRS FIELD OPS LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604314986",
+      "details": "登记行385: BRECHI*806DK, BRECHTECH INC | 登记行386: BRECHI*824OM, BRECHTECH INC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604316737",
+      "details": "登记行18: BRADBBH82196, BRAD & BURKE HEATING & A/C | 登记行19: BRADBBH821R6, BRAD & BURKE HEATING & A/C",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604323539",
+      "details": "登记行1511: BRYANCL783QN, BRYAN CONCRETE LLC | 登记行1513: BRYANCL827PA, BRYAN CONCRETE LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604352291",
+      "details": "登记行538: BRHOMHR741J3, BR HOME RENOVATIONS | 登记行539: BRHOMHR828QO, BR HOME RENOVATIONS",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604363873",
+      "details": "登记行937: BROADDG766MW, Broadband Development GroupLTD | 登记行938: BROADDG815JH, Broadband Development GroupLTD",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604365495",
+      "details": "登记行1381: BRUCECC761CF, BRUCE CONSTR CMPNY BLC LLC | 登记行1383: BRUCECC813CH, BRUCE CONSTR CMPNY BLC LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604391532",
+      "details": "登记行972: BROCKCS774ON, BROCK CONST SERVICES LLC | 登记行973: BROCKCS819CM, BROCK CONST SERVICES, LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604448851",
+      "details": "登记行1036: BRONZHA804RG, BRONZE HEATING AND AIR LLC | 登记行1037: BRONZHA819N7, BRONZE HEATING AND AIR LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604449518",
+      "details": "登记行1327: BROWNPS778PF, BROWN'S PLUMBING SERVICE LLC | 登记行1328: BROWNPS814MU, BROWN'S PLUMBING SERVICE LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604525586",
+      "details": "登记行645: BRICKPL790C4, BRICKYARD PARK LLC | 登记行711: BRIDKPL807RU, BRIDKYARD PARK LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604536455",
+      "details": "登记行316: BRAVOPM773QC, BRAVO PROPERTY MAINTENANCE LLC | 登记行324: BRAVOUS763QL, BRAVO UNDERGROUND SERVICES",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604556931",
+      "details": "登记行719: BRIGGBI789PF, BRIGGS BUILDERS INC | 登记行720: BRIGGBL803MW, BRIGGS BUILDERS LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604638789",
+      "details": "登记行1341: BROWNTC797K9, BROWN TOWN CONSTRUCTION LLC | 登记行1342: BROWNTC809PH, BROWN TOWN CONSTRUCTION LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604727800",
+      "details": "登记行406: BREEZHA754DG, BREEZE HEATING AIR & ELEC LLC | 登记行407: BREEZHA754UG, BREEZE HEATING AIR & ELECT LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604732532",
+      "details": "登记行768: BRIGHHS792K5, BRIGHTSIDE HOME SLTNS/WA LLC | 登记行804: BRIGHWL752OW, BRIGHTSIDE WINDOWS LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604737618",
+      "details": "登记行1510: BRYANCL769MZ, BRYANT CONSTRUCTION LLC | 登记行1512: BRYANCL792JW, BRYANT CONSTRUCTION LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604748816",
+      "details": "登记行193: BRANDEL793KF, Brandon Enterprises LLC | 登记行194: BRANDEL827OD, Brandon Enterprises LLP",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604750327",
+      "details": "登记行647: BRICKS*791MM, BRICKED SOLUTIONS | 登记行648: BRICKS*792MA, BRICKED SOLUTIONS",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604753450",
+      "details": "登记行909: BRIXPPL791L2, BRIX PLUMBING LLC | 登记行910: BRIXPPL791N4, BRIX PLUMBING LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604766214",
+      "details": "登记行1466: BRUSHHC7953Q, BRUSH HEATING & COOLING LLC | 登记行1467: BRUSHHC795LQ, BRUSH HEATING & COOLING LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "604896070",
+      "details": "登记行287: BRAVEBL780KF, BRAVE BUILDERS LLC | 登记行288: BRAVEBR762NL, BRAVE BUILDERS ROOFING LLC | 登记行294: BRAVER*778JQ, BRAVE ROOFING",
+      "count": 3,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "605090038",
+      "details": "登记行934: BROADCS764MQ, BROADLEAF CONSTRUCTION SERVS | 登记行935: BROADCS770D3, BROADLEAF CONSTRUCTION SERVS",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "605224961",
+      "details": "登记行1107: BROSGGL753DL, BROS GODINEZ LANDSCAPING LLC | 登记行1108: BROSGGL760D5, BROS GODINEZ LANDSCAPING LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "605442513",
+      "details": "登记行785: BRIGHML752OH, BRIGHT MOUNTAIN LLC | 登记行786: BRIGHML764DG, BRIGHT MOUNTAIN LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "605572578",
+      "details": "登记行251: BRANTEL7658D, BRANTING ELECTRIC LLC | 登记行252: BRANTEL765QD, BRANTING ELECTRIC LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "605577139",
+      "details": "登记行805: BRIGLL*743JW, BRIG LLC | 登记行806: BRIGLL*764MW, BRIG LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "605578703",
+      "details": "登记行283: BRAVACD742CC, BRAVA CONTRACT AND DESIGN | 登记行284: BRAVACD753DS, BRAVA CONTRACT AND DESIGN",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "605663213",
+      "details": "登记行681: BRIDGCT753BB, BRIDGE CITY TECH | 登记行682: BRIDGCT753RT, BRIDGE CITY TECH",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "605847626",
+      "details": "登记行105: BRADSML7511J, BRADSTER MECHANICAL LLC | 登记行106: BRADSML751JJ, BRADSTER MECHANICAL LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "606170277",
+      "details": "登记行663: BRIDGBP744NS, BRIDGE & BAY PLUMBING LLC | 登记行664: BRIDGBP749KM, BRIDGE & BAY PLUMBING LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "606197570",
+      "details": "登记行437: BRENBBT743KF, BREN BAU TILE&CONSTRUCTION LLC | 登记行1373: BRTCOCL745NU, BRT CONSTRUCTION LLC",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "多个执照共用UBI",
+      "key": "606243176",
+      "details": "登记行864: BRISKPW741N8, BRISK PRESSURE WASHING | 登记行866: BRISKRG744NU, BRISK ROOF & GUTTER CLEANING",
+      "count": 2,
+      "treatment": "UBI仅供身份核对；每个执照独立连接保障，禁止跨执照挪用。"
+    },
+    {
+      "category": "保证金候选键重复",
+      "key": "BRIANHL803K6 / NAV00022849 / 2020-04-24T00:00:00.000 / 12000.0000",
+      "details": "行620: 企业=BRIANS HANDYMAN & LAWN CR SR; 提供方=Navigators Ins Co; 到期=None; 取消=2022-04-24T00:00:00.000 | 行621: 企业=BRIANS HANDYMAN & LAWN CR SR; 提供方=NATIONAL AMERICAN INSURANCE COMPANY; 到期=None; 取消=2022-04-24T00:00:00.000",
+      "count": 2,
+      "treatment": "全部来源行保留；候选键不是可靠唯一主键，冲突须向数据提供方核验。"
+    },
+    {
+      "category": "保证金候选键重复",
+      "key": "BRIDGRR762M2 / 101895365 / 2026-07-19T00:00:00.000 / 30000.0000",
+      "details": "行762: 企业=BRIDGE REMODELING & RSTRTN LLC; 提供方=MERCHANTS NATIONAL BONDING INC; 到期=Until Canceled; 取消=None | 行763: 企业=BRIDGE REMODELING & RSTRTN LLC; 提供方=MERCHANTS NATIONAL BONDING INC; 到期=Until Canceled; 取消=None",
+      "count": 2,
+      "treatment": "全部来源行保留；候选键不是可靠唯一主键，冲突须向数据提供方核验。"
+    },
+    {
+      "category": "保险候选键重复",
+      "key": "BRAVIHL777L3 / CKA0547872 / 2025-10-31T00:00:00.000 / 1000000.0000",
+      "details": "行135: 企业=BRAVIA HOMES LLC; 提供方=Contractors Bonding & Insuranc; 到期=2026-10-31T00:00:00.000; 取消= | 行136: 企业=BRAVIA HOMES LLC; 提供方=RLI Ins Co; 到期=2027-10-31T00:00:00.000; 取消=",
+      "count": 2,
+      "treatment": "全部来源行保留；候选键不是可靠唯一主键，冲突须向数据提供方核验。"
+    },
+    {
+      "category": "保证金完全重复行",
+      "key": "BRIDGRR762M2",
+      "details": "来源行762,763",
+      "count": 2,
+      "treatment": "不删除、不重复计额；保留行级可追溯性。"
+    },
+    {
+      "category": "登记执照号重复汇总",
+      "key": "General",
+      "details": "未发现",
+      "count": 0,
+      "treatment": "General中执照号可作本包登记主键候选。"
+    },
+    {
+      "category": "保证金孤立执照汇总",
+      "key": "Bond→General",
+      "details": "未发现",
+      "count": 0,
+      "treatment": "如发现应单独交接；本包未发现。"
+    },
+    {
+      "category": "保险孤立执照汇总",
+      "key": "Insurance→General",
+      "details": "未发现",
+      "count": 0,
+      "treatment": "如发现应单独交接；本包未发现。"
+    },
+    {
+      "category": "同执照不同名称/UBI汇总",
+      "key": "三表内部及对General",
+      "details": "未发现",
+      "count": 0,
+      "treatment": "按完整执照号比对名称和UBI；本包未见冲突。"
+    },
+    {
+      "category": "主键字段缺失汇总",
+      "key": "执照号/UBI/企业名",
+      "details": "三表均未发现缺失",
+      "count": 0,
+      "treatment": "保留检查结果。"
+    }
+  ],
+  "orphan_handoff": {
+    "bond_licenses": [],
+    "insurance_licenses": []
+  },
+  "limitations": [
+    "Missing record means insufficient evidence, not absence of bond or insurance.",
+    "insuranceamt alone cannot establish statutory limits by category, exclusions, policy form, or assigned-account alternative.",
+    "Until Canceled is not unconditional permanent validity.",
+    "Non-CC legal requirements are outside the supplied RCW 18.27 PDF and remain unconfirmed.",
+    "The supplied PDF is not evidence of every historical version of the statute."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "task": "LAW-REAL-002",
+  "source_policy": "all_original_public_files",
+  "instruction_sha256": "58548bc07ac2d6b422e9de86c06606cd9d93ae1c4da0e09246ac5b22410208a7",
+  "rubrics_sha256": "a32da55523d08755a07389edadc5c4168379e82cd3b69febd9fc8f357be6b9b2",
+  "rubric_positive_count": 30,
+  "rubric_penalty_count": 1,
+  "reference_computation": "completed",
+  "reference_business_narrative": "draft_needs_domain_review",
+  "independent_gold_score": null,
+  "model_scores": null,
+  "formal_acceptance": false,
+  "prior_task_with_simulated_inputs_not_reused": true,
+  "note": "This candidate is not an accepted A2 task. Existing task-image build, fixed verifier and expert gates remain required."
+}

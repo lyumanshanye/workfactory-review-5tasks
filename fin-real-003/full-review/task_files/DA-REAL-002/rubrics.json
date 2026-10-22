@@ -1,0 +1,249 @@
+[
+  {
+    "id": "DA001",
+    "weight": 10,
+    "type": "binary",
+    "description": "核实四表粒度、年份、候选键和重复，保留脚注与非数值标记审计。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA002",
+    "weight": 7,
+    "type": "binary",
+    "description": "依据实际LineCode选取CAINC1总收入/人口/人均值。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA003",
+    "weight": 7,
+    "type": "binary",
+    "description": "依据实际LineCode选取CAINC4总收入和三项收入分量。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA004",
+    "weight": 7,
+    "type": "binary",
+    "description": "GeoFIPS正规化保留前导零，不用模糊地名补关联。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA005",
+    "weight": 7,
+    "type": "binary",
+    "description": "Census按SUMLEV=050取县，州和全国行不混入县统计。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA006",
+    "weight": 7,
+    "type": "binary",
+    "description": "不因五位代码就把BEA都会区/合并区视作Census县。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA007",
+    "weight": 10,
+    "type": "binary",
+    "description": "双向报告BEA两表与Census的地域覆盖和集合差异。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA008",
+    "weight": 7,
+    "type": "binary",
+    "description": "比较2020县代码表与人口表实际代码差异，不以旧表静默删新县。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA009",
+    "weight": 7,
+    "type": "binary",
+    "description": "无官方对照时不拆分合并地域或合成分配人口。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA010",
+    "weight": 7,
+    "type": "binary",
+    "description": "2020—2024逐县核验BEA两表总收入口径及数值。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA011",
+    "weight": 7,
+    "type": "binary",
+    "description": "2020—2024核验净劳动/财产/转移收入与总收入加总关系。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA012",
+    "weight": 7,
+    "type": "binary",
+    "description": "对可直接关联县保留2020/2024两套人口与绝对差。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA013",
+    "weight": 7,
+    "type": "binary",
+    "description": "人口相对差分母使用Census人口，方向与绝对排名明确。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA014",
+    "weight": 7,
+    "type": "binary",
+    "description": "两套重算人均收入正确处理千美元到美元换算。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA015",
+    "weight": 7,
+    "type": "binary",
+    "description": "核验BEA发布人均值并区分四舍五入与人口口径差异。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA016",
+    "weight": 7,
+    "type": "binary",
+    "description": "人口差异前20按2024绝对相对差排序，FIPS并列升序。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA017",
+    "weight": 10,
+    "type": "binary",
+    "description": "差异案例定位真实源行，不自动宣称官方数据错误。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA018",
+    "weight": 7,
+    "type": "binary",
+    "description": "增长候选集满足题面两端收入/分项/人口正值及跨表一致条件。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA019",
+    "weight": 7,
+    "type": "binary",
+    "description": "逐条保留排除原因，不将(D)/(NA)/(NM)和其他非数值标记填0。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA020",
+    "weight": 7,
+    "type": "binary",
+    "description": "总收入与两套人口增长率计算正确。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA021",
+    "weight": 7,
+    "type": "binary",
+    "description": "两套人均收入增长率基于2020到2024的未四舍五入端点。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA022",
+    "weight": 7,
+    "type": "binary",
+    "description": "两套前20排名各自排序/并列处理正确，不直接复用同一排名。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA023",
+    "weight": 7,
+    "type": "binary",
+    "description": "正确比较前20集合与排名变化，不编造不同结果。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA024",
+    "weight": 7,
+    "type": "binary",
+    "description": "三分项贡献用各分项收入增量/基期总收入，单位百分点并允许负贡献。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA025",
+    "weight": 7,
+    "type": "binary",
+    "description": "对数分解正确，零/负值不取对数，人口方向为减。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA026",
+    "weight": 7,
+    "type": "binary",
+    "description": "明确名义增长不等于通胀调整后生活水平改善。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA027",
+    "weight": 3,
+    "type": "binary",
+    "description": "工作簿含题面五张分析表，数值可读、表头/单位/筛选完整。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA028",
+    "weight": 7,
+    "type": "binary",
+    "description": "JSON与表格、备忘录关键数据一致，保留源文件/FIPS/LineCode/年份/行号。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA029",
+    "weight": 10,
+    "type": "binary",
+    "description": "脚本从原始字节离线计算，正确处理编码，不修改输入、不硬编码答案。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA030",
+    "weight": 3,
+    "type": "binary",
+    "description": "四份文件可打开，业务备忘录结论在前并明确可比集合范围。",
+    "expected_reference": "reference_output/results.json",
+    "negate": false
+  },
+  {
+    "id": "DA031",
+    "weight": 10,
+    "type": "binary",
+    "negate": true,
+    "description": "捏造原始数据、案例事实、外部文献或条款原文，并声称已核实，触发此扣分项。普通计算错误、遗漏或定位不精确不自动等同于伪造。"
+  }
+]

@@ -1,0 +1,117 @@
+{
+  "model": "gpt-5.6-sol",
+  "task": "GO-REAL-002",
+  "smoke": false,
+  "harness": "Claude Code",
+  "claude_version": "2.1.114",
+  "image": "workfactory/go-t2-001:rk017-v1",
+  "max_output_tokens": 32000,
+  "protocol": "openai",
+  "started_at_epoch": 1792665744.978874,
+  "input_manifest": {
+    "Chicago_Contracts_2019plus.csv": "75316a4e66b653e85784ebb4867ed27afcbfb1c795a7854d761ed7d61e6680b8",
+    "Chicago_Payments_2024.csv": "c1614e0503dcb85f9c9086cdad8b2d3ebb51273691480389cea5190e52606f55"
+  },
+  "status": "completed",
+  "prior_trajectory": null,
+  "independent_fresh_attempt": true,
+  "workspace_policy": "Writable ephemeral /app; originals read-only bind mounted; outputs persisted separately.",
+  "limitations": "Host networking for loopback protocol bridge; not full Harbor run or expert review. Base image dependency versions not yet task-pinned. No upstream API credential passed to solver.",
+  "pid": 1752987,
+  "exit_code": 0,
+  "tool_calls": [
+    "Bash",
+    "Read",
+    "Read",
+    "Bash",
+    "Read",
+    "Read",
+    "Bash",
+    "Bash",
+    "Bash",
+    "Read",
+    "Bash",
+    "Write",
+    "Bash",
+    "Bash",
+    "Bash",
+    "Bash",
+    "Edit",
+    "Edit",
+    "Edit",
+    "Bash",
+    "Edit",
+    "Edit",
+    "Edit",
+    "Bash",
+    "Edit",
+    "Edit",
+    "Edit",
+    "Edit",
+    "Edit",
+    "Grep",
+    "Edit",
+    "Edit",
+    "Edit",
+    "Bash",
+    "Bash",
+    "Bash"
+  ],
+  "output_manifest": {
+    "analysis.py": "99a1cfeee0e34d1d95c7734b95bd81b72cd86fdb070e7efe736a3c33efc2f775",
+    "audit.xlsx": "1615dacda4316ae3c03edc8f2701587c5681bf92f54364d1c1004e1b2099d4cc",
+    "memo.docx": "57880208d1066b58b88b8579b26fa6900ca46549f2bba7125789f043be225109",
+    "results.json": "352c44da5ba63af973da1f62cc191c36a7ff7b150dbefaf67e2e1689c6fa8d42"
+  },
+  "input_unchanged": true,
+  "result": [
+    {
+      "type": "result",
+      "subtype": "success",
+      "is_error": false,
+      "api_error_status": null,
+      "duration_ms": 1397704,
+      "duration_api_ms": 1183770,
+      "num_turns": 37,
+      "result": "已完成并验证，交付物仅位于 `/app/output/`：\n\n- `audit.xlsx`\n- `memo.docx`\n- `results.json`\n- `analysis.py`\n\n脚本支持：\n\n```bash\npython /app/output/analysis.py --input /app/input_files --output /app/output\n```\n\n最终检查通过：45,381 条付款记录完整保留，两个付款粒度关联前后金额差额均为零；工作簿、JSON 和备忘录数据一致，包含稳定原始行号、前20追查清单、版本偏差及全部例外。",
+      "stop_reason": "end_turn",
+      "session_id": "5797c02a-de4e-4159-b230-387ff1d06ace",
+      "total_cost_usd": 0,
+      "usage": {
+        "input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "",
+        "iterations": [],
+        "speed": "standard"
+      },
+      "modelUsage": {
+        "gpt-5.6-sol": {
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0,
+          "contextWindow": 200000,
+          "maxOutputTokens": 32000
+        }
+      },
+      "permission_denials": [],
+      "terminal_reason": "completed",
+      "fast_mode_state": "off",
+      "uuid": "b0648499-dadf-4236-a320-71b5f75a8ea8"
+    }
+  ],
+  "finished_at_epoch": 1792667146.5627537
+}

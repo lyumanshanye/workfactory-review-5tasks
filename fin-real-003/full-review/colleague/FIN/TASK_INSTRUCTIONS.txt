@@ -1,0 +1,14 @@
+You're the senior financial analyst in my office here at Tannahill Mechanical Contractors. Our 2025 federal return goes to Lisa Wallace's firm for e-filing in February, and before it goes out I need an independent compliance review of the depreciation and amortization positions in our 2025 workpapers. Jun Zhu built the fixed asset schedules and Janet Carlson keeps the vehicle usage log; I want a fresh pair of eyes on whether each position holds up before I sign off.
+
+Please review the attached exports — the 2025 depreciation and amortization workpapers, the vehicle and listed property usage log, and Jun's Form 4562 review checklist — against the current IRS Form 4562 and its instructions. For every asset, every vehicle and every amortization item, I need a clear verdict: the position stands as filed, or it needs an adjustment, with the dollar impact of each adjustment. The review covers the 23 assets and amortization items carried in the 2025 workpapers and the 14 vehicles in the log, seven of which were placed in service during 2025.
+
+Deliver two files. The first is 2025_form4562_compliance_review.xlsx, a workbook that shows the item-by-item review with each position's verdict and required adjustment, and an exception log listing every position that fails, the reason it fails, and the amount of the correction. The second is form_4562_review_memo.pdf, a memo to me that walks through what holds up and what doesn't by category, states the total change to our 2025 depreciation and amortization deduction if all corrections are made, and gives me one clear recommendation: file the return as drafted, or send the workpapers back to Jun for revision before Lisa's firm files.
+
+I meet with Lisa Wallace's team on February 13, 2026, so I need both files before then. Keep the memo readable enough that Robert Marshall can follow it without opening the workbook.
+
+Local Reference Files:
+- 2025_depreciation_amortization_workpapers.xlsx
+- vehicle_listed_property_usage_log.csv
+- 2025_form4562_review_checklist.csv
+- Tannahill_Finance_Accounting_Manual_2025.pdf
+- IRS_2025_Form4562_Instructions.pdf

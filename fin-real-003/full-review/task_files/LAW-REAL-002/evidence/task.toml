@@ -1,0 +1,46 @@
+schema_version = "1.4"
+artifacts = ["/app/output/analysis.py", "/app/output/results.json", "/app/output/audit.xlsx", "/app/output/memo.docx"]
+
+[task]
+name = "work/law-real-002"
+version = "0.2.0"
+description = "审查真实承包商登记资料：哪些状态有证据，哪些还不能下结论？"
+
+[metadata]
+task_id = "LAW-REAL-002"
+domain = "LAW"
+author_organization = "yelv"
+difficulty = "A2"
+difficulty_status = "design_target_only_not_calibrated"
+source_policy = "real_public_source_files_only_no_simulated_records"
+acceptance_status = "candidate_pending_independent_gold_review_and_model_calibration"
+weakness_tag = ["W4-多要求下的覆盖核算", "W11-无据自造数据与口径", "W12-跨源交叉核对缺失"]
+
+[agent]
+timeout_sec = 72000.0        # 缺省 72000；
+
+[verifier]
+timeout_sec = 18000.0
+user = "root"
+
+[verifier.env]
+# Judge 相关变量统一 JUDGE_ 前缀，只写在 [verifier.env]、严禁写入 [environment.env]。
+# 必选项（运行环境注入，AP 必给）；可选项一律用 ${VAR:-默认值} 语法给默认值。
+JUDGE_API_KEY = "${JUDGE_API_KEY:-}"            # 必选：judge 网关 key
+JUDGE_BASE_URL = "${JUDGE_BASE_URL:-}"          # 必选：judge 网关地址（可带 /v1，test.sh 负责剥）
+JUDGE_MODEL = "${JUDGE_MODEL:-qwen3.7-plus}"         # 可选：裁判模型（经 REWARDKIT_MODEL 运行时生效）
+JUDGE_PROVIDER = "${JUDGE_PROVIDER:-anthropic}" # 可选：信息性声明
+JUDGE_API_PROTOCOL = "${JUDGE_API_PROTOCOL:-anthropic}"  # 可选：openai 时降级为 LLM judge（见 test.sh）
+# 兼容旧环境的兜底注入
+EVAL_API_KEY = "${EVAL_API_KEY:-}"
+EVAL_API_BASE = "${EVAL_API_BASE:-}"
+LITELLM_DROP_PARAMS = "true"
+
+[environment]
+os = "linux"
+build_timeout_sec = 18000.0
+network_mode = "public"      # claude-code 框架下不要写 no-network（见 3.2 警示）
+cpus = 2
+memory_mb = 8192
+storage_mb = 30720                            # 照抄
+

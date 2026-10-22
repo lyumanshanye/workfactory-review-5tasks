@@ -1,0 +1,3553 @@
+{
+  "GO": {
+    "task": "GO-REAL-002",
+    "instruction": {
+      "name": "instruction.md",
+      "href": "task_files/GO-REAL-002/instruction.md",
+      "bytes": 3548,
+      "sha256": "36a36af8c5cb0440f33fabe9e389032849e4b6cc83b63f6efda6f751e68d950e"
+    },
+    "solver_model": "gpt-5.6-sol",
+    "groups": {
+      "inputs": [
+        {
+          "name": "Chicago_Contracts_2019plus.csv",
+          "href": "task_files/GO-REAL-002/input_files/Chicago_Contracts_2019plus.csv",
+          "bytes": 17806526,
+          "sha256": "75316a4e66b653e85784ebb4867ed27afcbfb1c795a7854d761ed7d61e6680b8"
+        },
+        {
+          "name": "Chicago_Payments_2024.csv",
+          "href": "task_files/GO-REAL-002/input_files/Chicago_Payments_2024.csv",
+          "bytes": 3046394,
+          "sha256": "c1614e0503dcb85f9c9086cdad8b2d3ebb51273691480389cea5190e52606f55"
+        }
+      ],
+      "reference": [
+        {
+          "name": "analysis.py",
+          "href": "task_files/GO-REAL-002/reference_output/analysis.py",
+          "bytes": 49604,
+          "sha256": "a2bde6172fe773cc49cd5e7d3f708f24f09ba5b01f35bd6dd35f3ea0b11745ad"
+        },
+        {
+          "name": "audit.xlsx",
+          "href": "task_files/GO-REAL-002/reference_output/audit.xlsx",
+          "bytes": 339285,
+          "sha256": "8a60c857060550f816dcd85de326baee327ef22e1e799602405f708647498621"
+        },
+        {
+          "name": "memo.docx",
+          "href": "task_files/GO-REAL-002/reference_output/memo.docx",
+          "bytes": 37635,
+          "sha256": "635f5438a31270d11785432adcc54f036db710b7de256d1b35fe07efadf14c62"
+        },
+        {
+          "name": "results.json",
+          "href": "task_files/GO-REAL-002/reference_output/results.json",
+          "bytes": 5079964,
+          "sha256": "58abf6b74f9f54eff3243ed9c3a7dc1f88f2c4614b7254ff631359de96a15709"
+        }
+      ],
+      "rubric": [
+        {
+          "name": "rubrics.json",
+          "href": "task_files/GO-REAL-002/rubrics.json",
+          "bytes": 7651,
+          "sha256": "1d7a41541f402e6eced325870b25ee3a963b881204641f9fa15351e69dff5f03"
+        },
+        {
+          "name": "tests/rubrics.toml",
+          "href": "task_files/GO-REAL-002/tests/rubrics.toml",
+          "bytes": 8112,
+          "sha256": "ba7108c016b999637795a4fc2d17a503d57f70f5a1d1c57ffea596831e06829f"
+        },
+        {
+          "name": "tests/prompt.md",
+          "href": "task_files/GO-REAL-002/tests/prompt.md",
+          "bytes": 2393,
+          "sha256": "0126df7f65afc1a0b5ccddd1a1890edb84a922f5550b23481334159c52716565"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "analysis.py",
+          "href": "task_files/GO-REAL-002/model_output/analysis.py",
+          "bytes": 43600,
+          "sha256": "99a1cfeee0e34d1d95c7734b95bd81b72cd86fdb070e7efe736a3c33efc2f775"
+        },
+        {
+          "name": "audit.xlsx",
+          "href": "task_files/GO-REAL-002/model_output/audit.xlsx",
+          "bytes": 3861340,
+          "sha256": "1615dacda4316ae3c03edc8f2701587c5681bf92f54364d1c1004e1b2099d4cc"
+        },
+        {
+          "name": "memo.docx",
+          "href": "task_files/GO-REAL-002/model_output/memo.docx",
+          "bytes": 39627,
+          "sha256": "57880208d1066b58b88b8579b26fa6900ca46549f2bba7125789f043be225109"
+        },
+        {
+          "name": "results.json",
+          "href": "task_files/GO-REAL-002/model_output/results.json",
+          "bytes": 18057417,
+          "sha256": "352c44da5ba63af973da1f62cc191c36a7ff7b150dbefaf67e2e1689c6fa8d42"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "execution.json",
+          "href": "task_files/GO-REAL-002/evidence/execution.json",
+          "bytes": 3680,
+          "sha256": "19e772d20bb96bf31fa58e13ac44c7eaf7df3f398ef6b380557833fc3a4baf1d"
+        },
+        {
+          "name": "api_usage.jsonl",
+          "href": "task_files/GO-REAL-002/evidence/api_usage.jsonl",
+          "bytes": 8622,
+          "sha256": "846151f9055ff92f5d1ea54d257419480eec76e868e8984ee5168abc77faae1c"
+        },
+        {
+          "name": "trajectory.jsonl",
+          "href": "task_files/GO-REAL-002/evidence/trajectory.jsonl",
+          "bytes": 884080,
+          "sha256": "4b92292f516405f078a698e92c6c35f05af1f4d8274626ea0f0f230302e5f3da"
+        },
+        {
+          "name": "task.toml",
+          "href": "task_files/GO-REAL-002/evidence/task.toml",
+          "bytes": 1893,
+          "sha256": "82f3ea43e0e18a48908e00bcf44a807c25a75554e2f853d1fcf05f366ffb8543"
+        },
+        {
+          "name": "author_review.json",
+          "href": "task_files/GO-REAL-002/evidence/author_review.json",
+          "bytes": 693,
+          "sha256": "08da5d24011569ca47d54766283d0ce8c56cba7cf13147a15645baaecb19617f"
+        },
+        {
+          "name": "provenance/Chicago_Contracts_2019plus.csv.json",
+          "href": "task_files/GO-REAL-002/evidence/provenance/Chicago_Contracts_2019plus.csv.json",
+          "bytes": 1520,
+          "sha256": "ddb0c8100f802ebf6e1cbc86a0a19e924bd6a043b5a458b54311994d4b7920a3"
+        },
+        {
+          "name": "provenance/Chicago_Payments_2024.csv.json",
+          "href": "task_files/GO-REAL-002/evidence/provenance/Chicago_Payments_2024.csv.json",
+          "bytes": 1505,
+          "sha256": "cb76b8ebdcef88a04ec3e527ad57bd643763a80c0dbb79bb1216aade0401ca8c"
+        },
+        {
+          "name": "instruction.md",
+          "href": "task_files/GO-REAL-002/instruction.md",
+          "bytes": 3548,
+          "sha256": "36a36af8c5cb0440f33fabe9e389032849e4b6cc83b63f6efda6f751e68d950e"
+        }
+      ]
+    },
+    "input_integrity": "matches_frozen_solver_inputs",
+    "review_note": "reference/rubric/evidence are reviewer-only; inputs are original files passed to the solver."
+  },
+  "FIN": {
+    "task": "FIN-REAL-003",
+    "instruction": {
+      "name": "instruction.md",
+      "href": "instruction.md",
+      "bytes": 2600,
+      "sha256": "f647b33bfffabcccdf23e4d2365e6c39efbfd2bd4d19dc8daff39e09a051f1e4"
+    },
+    "solver_model": "gpt-5.6-sol / qwen3.8-max0902 (existing published runs)",
+    "groups": {
+      "inputs": [
+        {
+          "name": "FDIC_RMS_Manual_3.2_Loans.pdf",
+          "href": "input_files/FDIC_RMS_Manual_3.2_Loans.pdf",
+          "bytes": 2085732,
+          "sha256": "b4a73592356ca77963ce25022b1bf12690040928cfb653301ca91ae99645c87b"
+        },
+        {
+          "name": "OCC_Rating_Credit_Risk.pdf",
+          "href": "input_files/OCC_Rating_Credit_Risk.pdf",
+          "bytes": 1467311,
+          "sha256": "a0c2b4653965d6d2f6b8ab80c5cd0e2fdb016239c93e3582357134d3a4270dd6"
+        },
+        {
+          "name": "fdic_api_documentation.html",
+          "href": "input_files/fdic_api_documentation.html",
+          "bytes": 32871,
+          "sha256": "6094a3a9a88abf00c49b363d08248a12af69b8c9df8585665bfdfd4b7908a39d"
+        },
+        {
+          "name": "fdic_financials_VT_NH_ME_2022_2025.csv",
+          "href": "input_files/fdic_financials_VT_NH_ME_2022_2025.csv",
+          "bytes": 186542,
+          "sha256": "47a3f8edee55758bfe23bb7e989371f7074a5057fac173a8b17d8a5b956068da"
+        },
+        {
+          "name": "fdic_institutions_VT_NH_ME.csv",
+          "href": "input_files/fdic_institutions_VT_NH_ME.csv",
+          "bytes": 292401,
+          "sha256": "cdf42c40e7797fd6afd8a0d74f27d375e4bc1d675345be8b2324afc337f2b9a5"
+        },
+        {
+          "name": "financial_definitions.yaml",
+          "href": "input_files/financial_definitions.yaml",
+          "bytes": 616633,
+          "sha256": "b257457e4e821d6a0d9f88ffc4e6e0da80e4ccf67fa394cadb21587b50b23d59"
+        },
+        {
+          "name": "institution_definitions.yaml",
+          "href": "input_files/institution_definitions.yaml",
+          "bytes": 94832,
+          "sha256": "6ed1763c66a9e240904a45712b23d825c0f31beaadb6cd0213fc1bf00b2af1b9"
+        }
+      ],
+      "reference": [
+        {
+          "name": "reference_output/independent_numeric_audit.json",
+          "href": "reference_output/independent_numeric_audit.json",
+          "bytes": 325990,
+          "sha256": "a80696c0454d322ce087542736812387111afa064496efb7c7b5367d9f8b5513"
+        },
+        {
+          "name": "reference_output/operating_performance_diagnosis.docx",
+          "href": "reference_output/operating_performance_diagnosis.docx",
+          "bytes": 40597,
+          "sha256": "d57c1700835c19cd59f240e16be813ba22d132654fa7baac3d9229367842d70d"
+        },
+        {
+          "name": "reference_output/priority_follow_up_brief.docx",
+          "href": "reference_output/priority_follow_up_brief.docx",
+          "bytes": 39331,
+          "sha256": "16c7bf63324a83d37301323cd58b64f3aac58c16318289a8573caaae12afceab"
+        },
+        {
+          "name": "reference_output/regional_bank_risk_model.xlsx",
+          "href": "reference_output/regional_bank_risk_model.xlsx",
+          "bytes": 241460,
+          "sha256": "2946f588e065c0ffaa87b80838738227c53d5a4c6a9aab6149bbc550e327fb49"
+        },
+        {
+          "name": "reference_output/rendered/operating_performance_diagnosis.pdf",
+          "href": "reference_output/rendered/operating_performance_diagnosis.pdf",
+          "bytes": 116984,
+          "sha256": "793cb34258a2e719d9d2b22752f82b53493ac2d30a70da23cb9b9f77b0e51bd2"
+        },
+        {
+          "name": "reference_output/rendered/priority_follow_up_brief.pdf",
+          "href": "reference_output/rendered/priority_follow_up_brief.pdf",
+          "bytes": 102188,
+          "sha256": "899da3e8437486647d96dc00995f68513333651ff782f405b931c0c978e099ac"
+        },
+        {
+          "name": "reference_output/results.json",
+          "href": "reference_output/results.json",
+          "bytes": 1062334,
+          "sha256": "e7df4e136183fe6b124399acc81a30e92c069a1660d3dcebe092e36d80146cfe"
+        },
+        {
+          "name": "reference_output/validation.json",
+          "href": "reference_output/validation.json",
+          "bytes": 876,
+          "sha256": "b028984f3c33e12e5af03cd835a31803ca98a6e066d2ff8f860b0f74586f817b"
+        },
+        {
+          "name": "reference_code/audit_fin003_reference.py",
+          "href": "reference_code/audit_fin003_reference.py",
+          "bytes": 3465,
+          "sha256": "eb7070afe9e6ea7782f71a857e1498ad5e66a490bb61ae443ea1660289f4def0"
+        },
+        {
+          "name": "reference_code/build_fin003_reference.py",
+          "href": "reference_code/build_fin003_reference.py",
+          "bytes": 20074,
+          "sha256": "958ae84bd67989dbf2cb221f269492fe3a12d9052124b6bc61ab076669c63122"
+        },
+        {
+          "name": "reference_code/check_fin003_metric_mapping.py",
+          "href": "reference_code/check_fin003_metric_mapping.py",
+          "bytes": 2309,
+          "sha256": "0b84e2fc49e8e2289ff5f58dfe18decd92f30dcb1ba4ffb737c2ef4fa10ac446"
+        }
+      ],
+      "rubric": [
+        {
+          "name": "rubrics.json",
+          "href": "rubrics.json",
+          "bytes": 32626,
+          "sha256": "769df52358b3907b3935d4ff8e6c0bd91deb44c03052699f5f9b777c5f83cc65"
+        },
+        {
+          "name": "rubrics.review-v2.json",
+          "href": "rubrics.review-v2.json",
+          "bytes": 35265,
+          "sha256": "63b83a8623793191d4d55e663611c3ab5303dd780c1e75337ca268ecb5d9b717"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model_outputs/fin003-gpt-01/operating_performance_diagnosis.docx",
+          "href": "model_outputs/fin003-gpt-01/operating_performance_diagnosis.docx",
+          "bytes": 279568,
+          "sha256": "73c03218a97c36bb5d9500a616b5b263bde885e40683c381e1258cd0593aef7a"
+        },
+        {
+          "name": "model_outputs/fin003-gpt-01/priority_follow_up_brief.docx",
+          "href": "model_outputs/fin003-gpt-01/priority_follow_up_brief.docx",
+          "bytes": 114478,
+          "sha256": "11fb91ee711b466ebbe6c4734735f5116f37b73169835196c278614d8c464f0e"
+        },
+        {
+          "name": "model_outputs/fin003-gpt-01/regional_bank_risk_model.xlsx",
+          "href": "model_outputs/fin003-gpt-01/regional_bank_risk_model.xlsx",
+          "bytes": 268504,
+          "sha256": "3f3bb2f7fbbdfc8f18671e831aad01abcaa8e4226938a2b5b29af8544ea23d1b"
+        },
+        {
+          "name": "model_outputs/fin003-qwen-02/operating_performance_diagnosis.docx",
+          "href": "model_outputs/fin003-qwen-02/operating_performance_diagnosis.docx",
+          "bytes": 52571,
+          "sha256": "264b5451b83d75aa2d242081591281d92c91a83305c8fc8cd1fd62f38c15432c"
+        },
+        {
+          "name": "model_outputs/fin003-qwen-02/priority_follow_up_brief.docx",
+          "href": "model_outputs/fin003-qwen-02/priority_follow_up_brief.docx",
+          "bytes": 50777,
+          "sha256": "fcb6fd6023e9ea61d6fe84c50586fb93a1e91b6006eb7cec6ae8dc3da2e59e1b"
+        },
+        {
+          "name": "model_outputs/fin003-qwen-02/regional_bank_risk_model.xlsx",
+          "href": "model_outputs/fin003-qwen-02/regional_bank_risk_model.xlsx",
+          "bytes": 396074,
+          "sha256": "1a73500db635adbbd8c9519e2f6c867928fbc644395693f359eb3e63f00a6313"
+        },
+        {
+          "name": "model_outputs/fin003-qwen-02/rendered/operating_performance_diagnosis.pdf",
+          "href": "model_outputs/fin003-qwen-02/rendered/operating_performance_diagnosis.pdf",
+          "bytes": 207850,
+          "sha256": "a0992bbb5c67db177177ce53f244d8cdfb6dcda7decc24ee0f37b86d91372c5a"
+        },
+        {
+          "name": "model_outputs/fin003-qwen-02/rendered/priority_follow_up_brief.pdf",
+          "href": "model_outputs/fin003-qwen-02/rendered/priority_follow_up_brief.pdf",
+          "bytes": 218957,
+          "sha256": "e154caa1f400dedb33f2cad3ea4914b924b5c4645d8f97649f5081919755d315"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "runs/fin003-gpt-01/api_usage.jsonl",
+          "href": "runs/fin003-gpt-01/api_usage.jsonl",
+          "bytes": 6731,
+          "sha256": "8f797676496742250db618fe59f8c1bc96bdcb09a4db7fa8d4373a4733312d4c"
+        },
+        {
+          "name": "runs/fin003-gpt-01/execution.json",
+          "href": "runs/fin003-gpt-01/execution.json",
+          "bytes": 4158,
+          "sha256": "da5d99d20ddb735239d268bba25bad8290d30e8233f928b776e7d7406bfe4c27"
+        },
+        {
+          "name": "runs/fin003-gpt-01/trajectory.jsonl",
+          "href": "runs/fin003-gpt-01/trajectory.jsonl",
+          "bytes": 638416,
+          "sha256": "3ab6b679beb44c7b56b0d6fcee81465056bac1a4a73f3e0cd5b0dd089e9ec9f7"
+        },
+        {
+          "name": "runs/fin003-qwen-02/api_usage.jsonl",
+          "href": "runs/fin003-qwen-02/api_usage.jsonl",
+          "bytes": 57425,
+          "sha256": "f0a4e3fc06cc09d07174e204ed7b8906b3f347fc737f3a3197624111ff287247"
+        },
+        {
+          "name": "runs/fin003-qwen-02/execution.json",
+          "href": "runs/fin003-qwen-02/execution.json",
+          "bytes": 4395,
+          "sha256": "4fc35ee2af4472e7ff50abdcb196b4cb8ab246d3bf4abecd9b5f5ab770977a85"
+        },
+        {
+          "name": "runs/fin003-qwen-02/trajectory.jsonl",
+          "href": "runs/fin003-qwen-02/trajectory.jsonl",
+          "bytes": 1006824,
+          "sha256": "a95651f49286b20f9634f2560d0962f02151725413385fb4b48e89936feed5ca"
+        },
+        {
+          "name": "evaluations/fin003-gpt-01/approval_gate.json",
+          "href": "evaluations/fin003-gpt-01/approval_gate.json",
+          "bytes": 639,
+          "sha256": "456e71285c63ec00559aaaa507dffe30b0dd5ed63ab240b0c89a88a59d52dcff"
+        },
+        {
+          "name": "evaluations/fin003-gpt-01/file_integrity.json",
+          "href": "evaluations/fin003-gpt-01/file_integrity.json",
+          "bytes": 546,
+          "sha256": "fd440608d67f562a4810bb49b78b2663efbaeeab99f32ddfd9ddda6c807ffb2b"
+        },
+        {
+          "name": "evaluations/fin003-gpt-01/score.json",
+          "href": "evaluations/fin003-gpt-01/score.json",
+          "bytes": 18293,
+          "sha256": "ce6035185d1c90a2e00173cfc9e9e8016ddbc137819713f7d980838df24bbe51"
+        },
+        {
+          "name": "evaluations/fin003-qwen-02/approval_gate.json",
+          "href": "evaluations/fin003-qwen-02/approval_gate.json",
+          "bytes": 626,
+          "sha256": "cbccafb1e0c40f841dedc4424eceb4534d8e37c44ba063e6c5a1a8bc0ce47802"
+        },
+        {
+          "name": "evaluations/fin003-qwen-02/file_integrity.json",
+          "href": "evaluations/fin003-qwen-02/file_integrity.json",
+          "bytes": 546,
+          "sha256": "29c2ed711177556f4931fa207ae35af2f8266ed9c8f2dd2489422850e263dbfe"
+        },
+        {
+          "name": "evaluations/fin003-qwen-02/score.json",
+          "href": "evaluations/fin003-qwen-02/score.json",
+          "bytes": 15935,
+          "sha256": "942ee7be7ca2cdec1067b193c50edc3e6f30dddcb3e9db5b64b53b4e65d92cf7"
+        },
+        {
+          "name": "evaluations/fin003-reference-01/file_integrity.json",
+          "href": "evaluations/fin003-reference-01/file_integrity.json",
+          "bytes": 546,
+          "sha256": "0cb7cb2cb84dc368fdcbee14600d017b98c856fb68b9b53ace4f4395a9981a20"
+        },
+        {
+          "name": "evaluations/fin003-reference-01/score.json",
+          "href": "evaluations/fin003-reference-01/score.json",
+          "bytes": 20820,
+          "sha256": "180b7b3dcad6fdfdea4524799250e39a415c2c323ab320a2dc1c0cbc6cdb27f6"
+        },
+        {
+          "name": "judges/fin003-gpt-01/api_usage.jsonl",
+          "href": "judges/fin003-gpt-01/api_usage.jsonl",
+          "bytes": 50590,
+          "sha256": "e6b37a4069beb04b8a803bf29e005881773e84667f1f586eb9d057a260d7be8c"
+        },
+        {
+          "name": "judges/fin003-gpt-01/instruction.md",
+          "href": "judges/fin003-gpt-01/instruction.md",
+          "bytes": 2393,
+          "sha256": "675330b532ebc7ac7e20ea65dd63a7a59a208709bf8db0d79d1c745cad505886"
+        },
+        {
+          "name": "judges/fin003-gpt-01/trajectory.jsonl",
+          "href": "judges/fin003-gpt-01/trajectory.jsonl",
+          "bytes": 639859,
+          "sha256": "f73e3c6cfefd260f5b66c4288c81d0c71699cd075291d0f6ae877341262d3c4b"
+        },
+        {
+          "name": "judges/fin003-qwen-02/api_usage.jsonl",
+          "href": "judges/fin003-qwen-02/api_usage.jsonl",
+          "bytes": 22861,
+          "sha256": "2bc0112646d6018e21a11b4c23258b67c1f083025d519109a70ec377a225e174"
+        },
+        {
+          "name": "judges/fin003-qwen-02/instruction.md",
+          "href": "judges/fin003-qwen-02/instruction.md",
+          "bytes": 2547,
+          "sha256": "628907d8dddaaffee377faf2f689830487d2398db4e2ab8d722b24f3d624c60f"
+        },
+        {
+          "name": "judges/fin003-qwen-02/trajectory.jsonl",
+          "href": "judges/fin003-qwen-02/trajectory.jsonl",
+          "bytes": 424419,
+          "sha256": "4f4be750fa1df6a5db6f5e67c6a6fc51b940cec2968df47ddc420311cda59113"
+        },
+        {
+          "name": "judges/fin003-reference-01/api_usage.jsonl",
+          "href": "judges/fin003-reference-01/api_usage.jsonl",
+          "bytes": 28607,
+          "sha256": "809ebe895c26562609dbfaafc75f88fb0203fbd5e9bed95243472d1dd756ea0b"
+        },
+        {
+          "name": "judges/fin003-reference-01/instruction.md",
+          "href": "judges/fin003-reference-01/instruction.md",
+          "bytes": 2393,
+          "sha256": "675330b532ebc7ac7e20ea65dd63a7a59a208709bf8db0d79d1c745cad505886"
+        },
+        {
+          "name": "judges/fin003-reference-01/trajectory.jsonl",
+          "href": "judges/fin003-reference-01/trajectory.jsonl",
+          "bytes": 498837,
+          "sha256": "684fe747cd41a4ace283d08954e097edbf5f24fa583a0eb3d2797e457fd6d741"
+        },
+        {
+          "name": "author_review/DELIVERY_GAPS.md",
+          "href": "author_review/DELIVERY_GAPS.md",
+          "bytes": 2445,
+          "sha256": "5c9973eee7b44a13879bca74fae05d5f7ee4e5e559947b2e76c1307ecae8ffb5"
+        },
+        {
+          "name": "author_review/challenges.json",
+          "href": "author_review/challenges.json",
+          "bytes": 19752,
+          "sha256": "d4d6a63a9f691558d896e32ffce2d59ab4c7bd176ec4462469ee35c6b3524f12"
+        },
+        {
+          "name": "author_review/gpt_review_audit.json",
+          "href": "author_review/gpt_review_audit.json",
+          "bytes": 1440,
+          "sha256": "2f2a6e4345d11ef623a218399ff5499ab441932d313e9b8d6dd1b14cb2c045ed"
+        },
+        {
+          "name": "author_review/manual_review.md",
+          "href": "author_review/manual_review.md",
+          "bytes": 2595,
+          "sha256": "40bc62c8c769e8faa0ae357c510127aa3e63f7083df3307e91836c76666df4c5"
+        },
+        {
+          "name": "author_review/quality_gate.json",
+          "href": "author_review/quality_gate.json",
+          "bytes": 4136,
+          "sha256": "41ee9e259eb8887fdfe57dd55c57d38288f71d3e1e790c623dfa621a2f4a415f"
+        },
+        {
+          "name": "author_review/readings.json",
+          "href": "author_review/readings.json",
+          "bytes": 2207,
+          "sha256": "e374c4d752b5044b83c4a96fc82d7b413ba18853751d1760fe3f37df0cea4206"
+        },
+        {
+          "name": "author_review/reference_review_audit.json",
+          "href": "author_review/reference_review_audit.json",
+          "bytes": 1805,
+          "sha256": "17a283e7051a05f87ca81e89b62c193a0ac733c2ac616f001c12bddc1fbf75fe"
+        },
+        {
+          "name": "author_review/request.json",
+          "href": "author_review/request.json",
+          "bytes": 10276,
+          "sha256": "eb39f14f0ed3ccb5ca39cee6c99d169ab4801f40ba30e96df98bed3e504f0880"
+        },
+        {
+          "name": "author_review/reuse_receipt.json",
+          "href": "author_review/reuse_receipt.json",
+          "bytes": 1019,
+          "sha256": "7027c2081b0a43b96521f8fcee9f69ae2c9f120459035dea841b1b33a7696b46"
+        },
+        {
+          "name": "author_review/source_checks.json",
+          "href": "author_review/source_checks.json",
+          "bytes": 6939,
+          "sha256": "b2a63a185c20ebd9da6a67a5af9ef3b0018077a64515cc4e2a352d84c85c8c96"
+        },
+        {
+          "name": "provenance/FDIC_RMS_Manual_3.2_Loans.pdf.json",
+          "href": "provenance/FDIC_RMS_Manual_3.2_Loans.pdf.json",
+          "bytes": 1450,
+          "sha256": "5736b17635dbc128c494dc5cd46d864750db4335eb9d04653a8d5268e7d2c87c"
+        },
+        {
+          "name": "provenance/OCC_Rating_Credit_Risk.pdf.json",
+          "href": "provenance/OCC_Rating_Credit_Risk.pdf.json",
+          "bytes": 1544,
+          "sha256": "0847bded81e657d1da7f0b739c905d2f39ba67a1080d8c1083a566c2ea76314d"
+        },
+        {
+          "name": "provenance/fdic_api_documentation.html.json",
+          "href": "provenance/fdic_api_documentation.html.json",
+          "bytes": 420,
+          "sha256": "196388326ce608d46e50dede825262b42e6560088da54ce5635dff673950534c"
+        },
+        {
+          "name": "provenance/fdic_financials_VT_NH_ME_2022_2025.csv.json",
+          "href": "provenance/fdic_financials_VT_NH_ME_2022_2025.csv.json",
+          "bytes": 1947,
+          "sha256": "75fe4a1d311747e68d8ade68a1630262f8f60f78b7d6d7fb2178bcc8d7294862"
+        },
+        {
+          "name": "provenance/fdic_institutions_VT_NH_ME.csv.json",
+          "href": "provenance/fdic_institutions_VT_NH_ME.csv.json",
+          "bytes": 1388,
+          "sha256": "ecd10240fab101f9a0b4e976bb22625aeb35692eb6058bab25acd238a85935f0"
+        },
+        {
+          "name": "provenance/financial_definitions.yaml.json",
+          "href": "provenance/financial_definitions.yaml.json",
+          "bytes": 466,
+          "sha256": "55c9ca6a34bb7bafec6d027acafd042fec32ea6f43a23eb5045225f529f33f0c"
+        },
+        {
+          "name": "provenance/institution_definitions.yaml.json",
+          "href": "provenance/institution_definitions.yaml.json",
+          "bytes": 475,
+          "sha256": "87b5b9d05737374de683ef79660aa78b61cf22f8f1eb2977efe61061eb5afd21"
+        },
+        {
+          "name": "instruction.md",
+          "href": "instruction.md",
+          "bytes": 2600,
+          "sha256": "f647b33bfffabcccdf23e4d2365e6c39efbfd2bd4d19dc8daff39e09a051f1e4"
+        }
+      ]
+    },
+    "review_note": "Existing FIN evaluation files include historical, unapproved scores; they are review evidence, not formal acceptance."
+  },
+  "LAW": {
+    "task": "LAW-REAL-002",
+    "instruction": {
+      "name": "instruction.md",
+      "href": "task_files/LAW-REAL-002/instruction.md",
+      "bytes": 4165,
+      "sha256": "58548bc07ac2d6b422e9de86c06606cd9d93ae1c4da0e09246ac5b22410208a7"
+    },
+    "solver_model": "gpt-5.6-sol",
+    "groups": {
+      "inputs": [
+        {
+          "name": "LNI_Contractor_License_Bond_BR.csv",
+          "href": "task_files/LAW-REAL-002/input_files/LNI_Contractor_License_Bond_BR.csv",
+          "bytes": 380939,
+          "sha256": "c70f988598b334cd640f484e3ad8f2b79827d392d35a2da222c7246a5a9ddb1a"
+        },
+        {
+          "name": "LNI_Contractor_License_General_BR.csv",
+          "href": "task_files/LAW-REAL-002/input_files/LNI_Contractor_License_General_BR.csv",
+          "bytes": 445127,
+          "sha256": "d8ec5f6de612db7dfe523685f418ae9597dba9fb4f9d231f75b134fd544113d5"
+        },
+        {
+          "name": "LNI_Contractor_License_Insurance_BR.csv",
+          "href": "task_files/LAW-REAL-002/input_files/LNI_Contractor_License_Insurance_BR.csv",
+          "bytes": 220576,
+          "sha256": "6b0f979d59b70ecd72f60c3f118c34572a9a45c435fd10de6c3c45d8f9ed37bf"
+        },
+        {
+          "name": "RCW_18.27.pdf",
+          "href": "task_files/LAW-REAL-002/input_files/RCW_18.27.pdf",
+          "bytes": 309604,
+          "sha256": "d655d89ec99d597301af888a385249f5128ac1852c865f947fb7db18ad314c8f"
+        }
+      ],
+      "reference": [
+        {
+          "name": "analysis.py",
+          "href": "task_files/LAW-REAL-002/reference_output/analysis.py",
+          "bytes": 49604,
+          "sha256": "a2bde6172fe773cc49cd5e7d3f708f24f09ba5b01f35bd6dd35f3ea0b11745ad"
+        },
+        {
+          "name": "audit.xlsx",
+          "href": "task_files/LAW-REAL-002/reference_output/audit.xlsx",
+          "bytes": 480464,
+          "sha256": "0cda611bca86331bb9da7341588463e1c481f26b10c0bbae7bc5dfa974d18592"
+        },
+        {
+          "name": "memo.docx",
+          "href": "task_files/LAW-REAL-002/reference_output/memo.docx",
+          "bytes": 38731,
+          "sha256": "78952849a51407f3a6d21ab4ff8e52a3b64517456a6a388feafd5e3b4f028ae9"
+        },
+        {
+          "name": "results.json",
+          "href": "task_files/LAW-REAL-002/reference_output/results.json",
+          "bytes": 4632381,
+          "sha256": "906f77700cbb3af89b211789a4dd4565753e6d4337382a4fe1be9e724bf3acae"
+        }
+      ],
+      "rubric": [
+        {
+          "name": "rubrics.json",
+          "href": "task_files/LAW-REAL-002/rubrics.json",
+          "bytes": 7868,
+          "sha256": "a32da55523d08755a07389edadc5c4168379e82cd3b69febd9fc8f357be6b9b2"
+        },
+        {
+          "name": "tests/rubrics.toml",
+          "href": "task_files/LAW-REAL-002/tests/rubrics.toml",
+          "bytes": 8360,
+          "sha256": "2a8dca5e9fa28f7e1b37ea0c005b5a0d4da36a533ab210f2bc7430b221f818d2"
+        },
+        {
+          "name": "tests/prompt.md",
+          "href": "task_files/LAW-REAL-002/tests/prompt.md",
+          "bytes": 2393,
+          "sha256": "0126df7f65afc1a0b5ccddd1a1890edb84a922f5550b23481334159c52716565"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "analysis.py",
+          "href": "task_files/LAW-REAL-002/model_output/analysis.py",
+          "bytes": 51965,
+          "sha256": "a0a375454c1ae5ebdbacf428d5725b1b2b8cbb21e29ee454b1fd84b828201c3b"
+        },
+        {
+          "name": "audit.xlsx",
+          "href": "task_files/LAW-REAL-002/model_output/audit.xlsx",
+          "bytes": 571292,
+          "sha256": "f6380f6f0f38dd3571d2113396adf1cd08a74a568e4ae17f8a3832cdad4d8ea9"
+        },
+        {
+          "name": "memo.docx",
+          "href": "task_files/LAW-REAL-002/model_output/memo.docx",
+          "bytes": 44565,
+          "sha256": "ed72fa420402585c1e26f8800144c66d767bb1d6b458636b7404344702604895"
+        },
+        {
+          "name": "results.json",
+          "href": "task_files/LAW-REAL-002/model_output/results.json",
+          "bytes": 93948,
+          "sha256": "fc6ce58ef8aa659863d44f277f44b98ecad5a7cdf7be2074e584629f688f78c0"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "execution.json",
+          "href": "task_files/LAW-REAL-002/evidence/execution.json",
+          "bytes": 3867,
+          "sha256": "0be7e7ea36078b8cb47942e98a7faa965bd5e0385ca99f4a921409405d0f2e61"
+        },
+        {
+          "name": "api_usage.jsonl",
+          "href": "task_files/LAW-REAL-002/evidence/api_usage.jsonl",
+          "bytes": 5987,
+          "sha256": "18a1a519c2f050fad6c6ad05653a4b7cfd0af9da986a0e245e0463ea1dde8593"
+        },
+        {
+          "name": "trajectory.jsonl",
+          "href": "task_files/LAW-REAL-002/evidence/trajectory.jsonl",
+          "bytes": 782891,
+          "sha256": "2254750e6ab44245e18e8ca0424d2faea1263373703ce37979511605ad585a92"
+        },
+        {
+          "name": "task.toml",
+          "href": "task_files/LAW-REAL-002/evidence/task.toml",
+          "bytes": 1922,
+          "sha256": "b244bbb4f67e4d10e5509907225b30a927196d598d1425f13d5154acb1cc1260"
+        },
+        {
+          "name": "author_review.json",
+          "href": "task_files/LAW-REAL-002/evidence/author_review.json",
+          "bytes": 694,
+          "sha256": "168a8c8ceac2df2be9e4d51c7a5c7465614a8b8be755d3198c30ffcd700aedfd"
+        },
+        {
+          "name": "provenance/LNI_Contractor_License_Bond_BR.csv.json",
+          "href": "task_files/LAW-REAL-002/evidence/provenance/LNI_Contractor_License_Bond_BR.csv.json",
+          "bytes": 1540,
+          "sha256": "9ce5514aecba828b0e7eafc613f8471e2ece7b1273ade54e191b0c58e6c941bb"
+        },
+        {
+          "name": "provenance/LNI_Contractor_License_General_BR.csv.json",
+          "href": "task_files/LAW-REAL-002/evidence/provenance/LNI_Contractor_License_General_BR.csv.json",
+          "bytes": 1647,
+          "sha256": "edfe4daadf918b1aecb52dfcc2c4377abfb8cc7a394a6bbd9001c61e597f1c48"
+        },
+        {
+          "name": "provenance/LNI_Contractor_License_Insurance_BR.csv.json",
+          "href": "task_files/LAW-REAL-002/evidence/provenance/LNI_Contractor_License_Insurance_BR.csv.json",
+          "bytes": 1559,
+          "sha256": "3ae95df8004dcb0673af7b3d0d80bd9f230fb6646b5a6f27971c0fb0b40374bf"
+        },
+        {
+          "name": "provenance/RCW_18.27.pdf.json",
+          "href": "task_files/LAW-REAL-002/evidence/provenance/RCW_18.27.pdf.json",
+          "bytes": 1346,
+          "sha256": "bc534835a609a91ab56c437e30fa2d7e69f8af0f28584e275f4f8322efeb0382"
+        },
+        {
+          "name": "instruction.md",
+          "href": "task_files/LAW-REAL-002/instruction.md",
+          "bytes": 4165,
+          "sha256": "58548bc07ac2d6b422e9de86c06606cd9d93ae1c4da0e09246ac5b22410208a7"
+        }
+      ]
+    },
+    "input_integrity": "matches_frozen_solver_inputs",
+    "review_note": "reference/rubric/evidence are reviewer-only; inputs are original files passed to the solver."
+  },
+  "DA": {
+    "task": "DA-REAL-002",
+    "instruction": {
+      "name": "instruction.md",
+      "href": "task_files/DA-REAL-002/instruction.md",
+      "bytes": 3606,
+      "sha256": "bfd0be09cf1b9c78b679c907ca88fd6cb8c380353984736f03f2ac631cd92f4c"
+    },
+    "solver_model": "gpt-5.6-sol",
+    "groups": {
+      "inputs": [
+        {
+          "name": "CAINC1__ALL_AREAS.csv",
+          "href": "task_files/DA-REAL-002/input_files/CAINC1__ALL_AREAS.csv",
+          "bytes": 4314454,
+          "sha256": "98c5ef2a2d3f72e482eac5bca0544ce3114375f8908226872b4f429d0e0f2028"
+        },
+        {
+          "name": "CAINC4__ALL_AREAS.csv",
+          "href": "task_files/DA-REAL-002/input_files/CAINC4__ALL_AREAS.csv",
+          "bytes": 29012947,
+          "sha256": "61858e273cbd7dcfb2a9d374952cc65ef0f3cb4ce45eac5a7c851f291b6d0ceb"
+        },
+        {
+          "name": "co-est2024-alldata.csv",
+          "href": "task_files/DA-REAL-002/input_files/co-est2024-alldata.csv",
+          "bytes": 1769182,
+          "sha256": "abcc8720d669e793bbfdcd440eeec37a78db3b452adbe4ccd1eadf7c72b522b9"
+        },
+        {
+          "name": "national_county2020.txt",
+          "href": "task_files/DA-REAL-002/input_files/national_county2020.txt",
+          "bytes": 126639,
+          "sha256": "9f6e5f6eb6ac2f5e9a36d5fd01dec77991bddc75118f748a069441a4782970d6"
+        }
+      ],
+      "reference": [
+        {
+          "name": "analysis.py",
+          "href": "task_files/DA-REAL-002/reference_output/analysis.py",
+          "bytes": 49604,
+          "sha256": "a2bde6172fe773cc49cd5e7d3f708f24f09ba5b01f35bd6dd35f3ea0b11745ad"
+        },
+        {
+          "name": "audit.xlsx",
+          "href": "task_files/DA-REAL-002/reference_output/audit.xlsx",
+          "bytes": 2162225,
+          "sha256": "cd6c5be6920b649457a5ca599944b114b22004ac1a1f1212b47129c3ff9266b1"
+        },
+        {
+          "name": "memo.docx",
+          "href": "task_files/DA-REAL-002/reference_output/memo.docx",
+          "bytes": 37707,
+          "sha256": "71b613b2000ca2aeb61930668c0effe22df2f0c42bbd31154783732199c31e8f"
+        },
+        {
+          "name": "results.json",
+          "href": "task_files/DA-REAL-002/reference_output/results.json",
+          "bytes": 11542616,
+          "sha256": "240575d03cba166323ce9e32990bf59bf1ce3b1c5f27e18c4d92db8aca9a775a"
+        }
+      ],
+      "rubric": [
+        {
+          "name": "rubrics.json",
+          "href": "task_files/DA-REAL-002/rubrics.json",
+          "bytes": 7518,
+          "sha256": "6baa7c7d50e785eff20f5bd6fbdde83383308874a113152288518cbc13fc73f6"
+        },
+        {
+          "name": "tests/rubrics.toml",
+          "href": "task_files/DA-REAL-002/tests/rubrics.toml",
+          "bytes": 7979,
+          "sha256": "56700e1c63658ed682360e1f880eaa5573fa8ddccd65bad709cff0dbb277c161"
+        },
+        {
+          "name": "tests/prompt.md",
+          "href": "task_files/DA-REAL-002/tests/prompt.md",
+          "bytes": 2393,
+          "sha256": "0126df7f65afc1a0b5ccddd1a1890edb84a922f5550b23481334159c52716565"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "analysis.py",
+          "href": "task_files/DA-REAL-002/model_output/analysis.py",
+          "bytes": 58062,
+          "sha256": "43f110d3f2ba86678c23504025df6ec16007a7f68f3d6cd2ee8b2de59f9f62fc"
+        },
+        {
+          "name": "audit.xlsx",
+          "href": "task_files/DA-REAL-002/model_output/audit.xlsx",
+          "bytes": 6166890,
+          "sha256": "3f0b511c4b9cd657fab709a058db5ac129f6da5fef67b9f5b01c6c4428b02de0"
+        },
+        {
+          "name": "memo.docx",
+          "href": "task_files/DA-REAL-002/model_output/memo.docx",
+          "bytes": 42897,
+          "sha256": "6c86640ae3908b3a5221770cf539ace0ca033a28fcdf35bb3d576e9c12a3e598"
+        },
+        {
+          "name": "results.json",
+          "href": "task_files/DA-REAL-002/model_output/results.json",
+          "bytes": 45692881,
+          "sha256": "9509b3c0cc334d0825349086029c6f604b4d8322363f3c61c9dc8aa448d78c56"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "execution.json",
+          "href": "task_files/DA-REAL-002/evidence/execution.json",
+          "bytes": 3903,
+          "sha256": "873bbcec638f9386d9dc42b643a2d6e834dc8e572b3fea62cb75883abfacd103"
+        },
+        {
+          "name": "api_usage.jsonl",
+          "href": "task_files/DA-REAL-002/evidence/api_usage.jsonl",
+          "bytes": 7331,
+          "sha256": "a82237ff028bf3e10c066ac9dde663a6c2a0177d3265772766e227d60aebc7f4"
+        },
+        {
+          "name": "trajectory.jsonl",
+          "href": "task_files/DA-REAL-002/evidence/trajectory.jsonl",
+          "bytes": 812140,
+          "sha256": "ec49b20651d216e8fb053b1ce584e405efcc1f5be9fcf489a8826938474262bc"
+        },
+        {
+          "name": "task.toml",
+          "href": "task_files/DA-REAL-002/evidence/task.toml",
+          "bytes": 1889,
+          "sha256": "d05a1f8806edcc42730d686edf4d385eadaad56abc9e5ab3cf2757dd14412577"
+        },
+        {
+          "name": "author_review.json",
+          "href": "task_files/DA-REAL-002/evidence/author_review.json",
+          "bytes": 693,
+          "sha256": "aae5df633be7283318df9223dc0a0e7a08e14e8aa6fab4afbc30d502990909d8"
+        },
+        {
+          "name": "provenance/CAINC1__ALL_AREAS.csv.json",
+          "href": "task_files/DA-REAL-002/evidence/provenance/CAINC1__ALL_AREAS.csv.json",
+          "bytes": 1230,
+          "sha256": "ed53dd9cbd25ba15e9be09a6dee42898eb9dec8f2f78ebca540a9f3efa65c61d"
+        },
+        {
+          "name": "provenance/CAINC4__ALL_AREAS.csv.json",
+          "href": "task_files/DA-REAL-002/evidence/provenance/CAINC4__ALL_AREAS.csv.json",
+          "bytes": 1261,
+          "sha256": "95b631a04cf20e525705e56283a356a00d09501f623af8dc6eec13618c7347d2"
+        },
+        {
+          "name": "provenance/co-est2024-alldata.csv.json",
+          "href": "task_files/DA-REAL-002/evidence/provenance/co-est2024-alldata.csv.json",
+          "bytes": 1407,
+          "sha256": "03ac937816a33cb3ca0e9c924230ac68077edb219842b409032f439d1a3c1f48"
+        },
+        {
+          "name": "provenance/national_county2020.txt.json",
+          "href": "task_files/DA-REAL-002/evidence/provenance/national_county2020.txt.json",
+          "bytes": 1302,
+          "sha256": "3112e17f327ff2a99c01190db463866754e70de76b0217bd16041872e42d17a3"
+        },
+        {
+          "name": "instruction.md",
+          "href": "task_files/DA-REAL-002/instruction.md",
+          "bytes": 3606,
+          "sha256": "bfd0be09cf1b9c78b679c907ca88fd6cb8c380353984736f03f2ac631cd92f4c"
+        }
+      ]
+    },
+    "input_integrity": "matches_frozen_solver_inputs",
+    "review_note": "reference/rubric/evidence are reviewer-only; inputs are original files passed to the solver."
+  },
+  "GA": {
+    "task": "GA-REAL-002",
+    "instruction": {
+      "name": "instruction.md",
+      "href": "task_files/GA-REAL-002/instruction.md",
+      "bytes": 3791,
+      "sha256": "c5c23ffb86d72d7f52166e45b579e04e50f529015e8a7ac6b0949956114463e7"
+    },
+    "solver_model": "gpt-5.6-sol",
+    "groups": {
+      "inputs": [
+        {
+          "name": "COPYING",
+          "href": "task_files/GA-REAL-002/input_files/COPYING",
+          "bytes": 18011,
+          "sha256": "e6d6a009505e345fe949e1310334fcb0747f28dae2856759de102ab66b722cb4"
+        },
+        {
+          "name": "data/core/macros/abilities.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/abilities.cfg",
+          "bytes": 14054,
+          "sha256": "adf7fedf20ef8df34b68ff236b3d6be30e3e0465da3f56b4ace2b219af965b44"
+        },
+        {
+          "name": "data/core/macros/ai.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/ai.cfg",
+          "bytes": 16319,
+          "sha256": "dd8955349f795cd07837098f374ea377ef7c4476c13388e105bb26a7c5cee310"
+        },
+        {
+          "name": "data/core/macros/ai_candidate_actions.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/ai_candidate_actions.cfg",
+          "bytes": 8068,
+          "sha256": "1eb38e49c3f053637ddf2dc3ee2f42f7dcd4d9eed2ca38566de935c03336843e"
+        },
+        {
+          "name": "data/core/macros/ai_controller.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/ai_controller.cfg",
+          "bytes": 47634,
+          "sha256": "f36d431973485e5d964eece11d4196ed39252c957aba7ebe39eb4fc21518d3c9"
+        },
+        {
+          "name": "data/core/macros/amla.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/amla.cfg",
+          "bytes": 763,
+          "sha256": "351105a6208193670a4c046db5420fdef2e7337e1bd4eb442cfb54e6e04fd2a9"
+        },
+        {
+          "name": "data/core/macros/animation-utils.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/animation-utils.cfg",
+          "bytes": 36966,
+          "sha256": "414e89eb51fa949f0d16354001a5c543bc4765b390a942cb9fca2991145b6deb"
+        },
+        {
+          "name": "data/core/macros/animation-utils2.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/animation-utils2.cfg",
+          "bytes": 6348,
+          "sha256": "e06936243fa52584dc40ef4299dbffe4e3985276ec1a8bb546fd8856e9e40132"
+        },
+        {
+          "name": "data/core/macros/carryover-utils.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/carryover-utils.cfg",
+          "bytes": 329,
+          "sha256": "20398c827443ffa505fa31bcdd8363b8b0e2e4d712a31c620fbaade16801b4a8"
+        },
+        {
+          "name": "data/core/macros/conditional-utils.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/conditional-utils.cfg",
+          "bytes": 2838,
+          "sha256": "0c56eff7d5a8a551f4e60b872739bf145b0117619f91280b060b216a8232f5fd"
+        },
+        {
+          "name": "data/core/macros/debug-utils.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/debug-utils.cfg",
+          "bytes": 2738,
+          "sha256": "055d5c53e81153cb7b4984c5bb0dbcfbb5749776eb8315ad8d1fee4f7726f9dc"
+        },
+        {
+          "name": "data/core/macros/deprecated-utils.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/deprecated-utils.cfg",
+          "bytes": 12424,
+          "sha256": "cb3fb241a2974c5d39b41e5b1b4ba92a2c4bc436875df728a672547d434a995f"
+        },
+        {
+          "name": "data/core/macros/event-utils.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/event-utils.cfg",
+          "bytes": 1305,
+          "sha256": "d6707f0987099878effba560d2ae49f68d6477dd4a1decbe1f02cf636eb250d0"
+        },
+        {
+          "name": "data/core/macros/image-utils.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/image-utils.cfg",
+          "bytes": 8289,
+          "sha256": "ae02d10fd19df2e72c74bdf711a789bc4918c7790be5a38dbc5b249026cce003"
+        },
+        {
+          "name": "data/core/macros/interface-utils.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/interface-utils.cfg",
+          "bytes": 9258,
+          "sha256": "f9f0750e3de8419a9421524472262c3a8d8b1171ff2ec46f1fded7844e7cbeef"
+        },
+        {
+          "name": "data/core/macros/items.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/items.cfg",
+          "bytes": 16850,
+          "sha256": "b7cdf4f40c7cf8aa819de0613da9d49e69d2eaf6819e35fd210e756b3df2816e"
+        },
+        {
+          "name": "data/core/macros/movetypes.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/movetypes.cfg",
+          "bytes": 2768,
+          "sha256": "cc5e0cd919c0d258800b114a18e2f4f71791890c12f8f2a8f0d165fe1331e12b"
+        },
+        {
+          "name": "data/core/macros/multiplayer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/multiplayer.cfg",
+          "bytes": 1783,
+          "sha256": "697dda4d99d7da1a95b120a6ffedc4fcd7c49c85299ae0735647fe1cb3dc4a4f"
+        },
+        {
+          "name": "data/core/macros/names.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/names.cfg",
+          "bytes": 46371,
+          "sha256": "da0be8086595629d37ff790ad617d4e6556e45f2d338a862bb54034103423a1a"
+        },
+        {
+          "name": "data/core/macros/objective-utils.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/objective-utils.cfg",
+          "bytes": 2067,
+          "sha256": "7ead29b16fff14f6876bd4870f235476b18ba6953cb7e274adcdce2f1f4d9560"
+        },
+        {
+          "name": "data/core/macros/optional_unit_advancements.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/optional_unit_advancements.cfg",
+          "bytes": 3509,
+          "sha256": "58cd03191e8d55c49917a1c373e9059b5eb30cf71ed7dd9d3a2dcfff38bf8254"
+        },
+        {
+          "name": "data/core/macros/scenario-utils.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/scenario-utils.cfg",
+          "bytes": 2512,
+          "sha256": "698d64ecf2e2c2e340ae169216f6cbaa6e2d018d22ea7978973c559a76c4b7af"
+        },
+        {
+          "name": "data/core/macros/schedules.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/schedules.cfg",
+          "bytes": 15719,
+          "sha256": "2906c44e754ed49e7a0922a9361bc470d3005dca7ff9545f3dcf19a141079e8d"
+        },
+        {
+          "name": "data/core/macros/side-utils.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/side-utils.cfg",
+          "bytes": 7339,
+          "sha256": "8254450f07c321853429357bad2efe440ac248f17df9367d930c238832f9cb54"
+        },
+        {
+          "name": "data/core/macros/sound-utils.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/sound-utils.cfg",
+          "bytes": 14113,
+          "sha256": "0fbf543e76ab07f1a42a0880d5dba7415e78c25c5a9cf5287e0067f1294e8848"
+        },
+        {
+          "name": "data/core/macros/special-notes.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/special-notes.cfg",
+          "bytes": 10070,
+          "sha256": "1fb81f93e225dc6476e8d0af30ddd4af308b0b3cbf1d7c99d671dda0b3f7f80f"
+        },
+        {
+          "name": "data/core/macros/teleport-utils.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/teleport-utils.cfg",
+          "bytes": 6382,
+          "sha256": "5269542d5a1500a5a1413016b6bbc19403d681839f3f92c9840bc7e9c1ebc6b5"
+        },
+        {
+          "name": "data/core/macros/terrain-utils.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/terrain-utils.cfg",
+          "bytes": 2291,
+          "sha256": "9907413003c04ed6641776eca745e3ff577f11d7e104938bf3b403f7e450f747"
+        },
+        {
+          "name": "data/core/macros/traits.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/traits.cfg",
+          "bytes": 13914,
+          "sha256": "de0b0c61f7fde9ac994f0de8f85d2d85e5563046d6bd434cd8b73db0ebbabab1"
+        },
+        {
+          "name": "data/core/macros/unit-utils.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/unit-utils.cfg",
+          "bytes": 7056,
+          "sha256": "fc9306a664bba982de083c3332848a5bcc736d22c768435e5d5300dfd0bbf770"
+        },
+        {
+          "name": "data/core/macros/utils.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/utils.cfg",
+          "bytes": 19408,
+          "sha256": "0e7728516bfa35100a30838980c75334581edb09b03b4afd88c9061a5fa6d550"
+        },
+        {
+          "name": "data/core/macros/weapon_specials.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/macros/weapon_specials.cfg",
+          "bytes": 8290,
+          "sha256": "a6f7562298d9eb881dec8a7745b8cfcfadd339cd0c9c41735706d02efbbdb07d"
+        },
+        {
+          "name": "data/core/terrain.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/terrain.cfg",
+          "bytes": 88163,
+          "sha256": "35f58bd55887b2de655ff69e8fb75b51d18daf3348e554653f370bc04d710729"
+        },
+        {
+          "name": "data/core/units.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units.cfg",
+          "bytes": 73869,
+          "sha256": "86e68090d3776b4346c42ea3db3c7cbdc02c324f2ac6e0a3df0e8605d153ee9e"
+        },
+        {
+          "name": "data/core/units/bats/Bat_Blood.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/bats/Bat_Blood.cfg",
+          "bytes": 4506,
+          "sha256": "86b7eb85e8611f026fb5fd02d03bb9a5e0c60cdab4f1a81725a18fd19e02d00c"
+        },
+        {
+          "name": "data/core/units/bats/Bat_Dread.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/bats/Bat_Dread.cfg",
+          "bytes": 4399,
+          "sha256": "508145bad7dab155f1108441fa62beea3c5f5a5898870d502ebbdeb59c90aee6"
+        },
+        {
+          "name": "data/core/units/bats/Bat_Vampire.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/bats/Bat_Vampire.cfg",
+          "bytes": 4371,
+          "sha256": "079092cf695e70314618388fb868315013292f3c02b0e578081ad35f1a5adf05"
+        },
+        {
+          "name": "data/core/units/boats/Boat.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/boats/Boat.cfg",
+          "bytes": 458,
+          "sha256": "d1d9b27ef2e2983d45f6072e77dace8925dcabf1e955e79ae7ebd526c9f02929"
+        },
+        {
+          "name": "data/core/units/boats/Galleon.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/boats/Galleon.cfg",
+          "bytes": 506,
+          "sha256": "b583733ac659177e02f3d77efa013ad50f6228ee04e23a35dd4e949a93ea9127"
+        },
+        {
+          "name": "data/core/units/boats/Pirate_Galleon.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/boats/Pirate_Galleon.cfg",
+          "bytes": 1029,
+          "sha256": "89ced4ab7bd70485ebc63cbf2a0a2ae6df50c295054364bfd14fcbbb08dc6868"
+        },
+        {
+          "name": "data/core/units/boats/Transport_Galleon.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/boats/Transport_Galleon.cfg",
+          "bytes": 997,
+          "sha256": "4505508f59b87d8e209cd8b394367ef867f03f754ea6a853bd88208212be70bb"
+        },
+        {
+          "name": "data/core/units/drakes/Arbiter.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/drakes/Arbiter.cfg",
+          "bytes": 5076,
+          "sha256": "a2a4744cc0e25c16d0d48012518436c68c66710af7b288ca1d416523ed4b5b69"
+        },
+        {
+          "name": "data/core/units/drakes/Armageddon.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/drakes/Armageddon.cfg",
+          "bytes": 2115,
+          "sha256": "c5a85e7315586cf2fb772a500babe697f5806cfe5577ffa77ffd0f057190d64e"
+        },
+        {
+          "name": "data/core/units/drakes/Blademaster.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/drakes/Blademaster.cfg",
+          "bytes": 2191,
+          "sha256": "c9369af5db9571df8338d59a8fcb925ed72714719f0d2c1a3feb165f98c8c924"
+        },
+        {
+          "name": "data/core/units/drakes/Burner.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/drakes/Burner.cfg",
+          "bytes": 2083,
+          "sha256": "702d3541d96f8f989d8d3410378a88831437974287e2dd45f6f880fb5bc31357"
+        },
+        {
+          "name": "data/core/units/drakes/Clasher.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/drakes/Clasher.cfg",
+          "bytes": 3990,
+          "sha256": "23b609c77a0b4a7b50e42f71401fe7e6fb8f169d6d00bc8435eb39ff6a00c4cf"
+        },
+        {
+          "name": "data/core/units/drakes/Enforcer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/drakes/Enforcer.cfg",
+          "bytes": 3999,
+          "sha256": "b44fcd1859d0b15120a01fde529f1f090a782aa9c3bc103ee1c3f49698171bb7"
+        },
+        {
+          "name": "data/core/units/drakes/Fighter.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/drakes/Fighter.cfg",
+          "bytes": 2059,
+          "sha256": "91f170c0dd8556200baa30887186a827221aa190a9fe22425caeae97c4e71cb9"
+        },
+        {
+          "name": "data/core/units/drakes/Fire.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/drakes/Fire.cfg",
+          "bytes": 2002,
+          "sha256": "9a4055a5291ab7917c88730e4276225014c504a8b636ad564ff078bc040fe1cd"
+        },
+        {
+          "name": "data/core/units/drakes/Flameheart.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/drakes/Flameheart.cfg",
+          "bytes": 2397,
+          "sha256": "853f8cf6d74c191edb514cc5df50bb0068e89828453fbf3e42a3619a28d9e027"
+        },
+        {
+          "name": "data/core/units/drakes/Flare.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/drakes/Flare.cfg",
+          "bytes": 2169,
+          "sha256": "0605556e6e57e17cf8350c62d10bde1467833b7be8f8d54c4876cb47a81f868c"
+        },
+        {
+          "name": "data/core/units/drakes/Glider.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/drakes/Glider.cfg",
+          "bytes": 2460,
+          "sha256": "1dacc10f3a290fb7407ced9e5bb942d36dd158e77b178455c01ef24cc3605f72"
+        },
+        {
+          "name": "data/core/units/drakes/Hurricane.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/drakes/Hurricane.cfg",
+          "bytes": 3506,
+          "sha256": "15181a005fe00242b893905ca04966569d0f8c3b49ee2c1866949f48844cc64e"
+        },
+        {
+          "name": "data/core/units/drakes/Inferno.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/drakes/Inferno.cfg",
+          "bytes": 2144,
+          "sha256": "fec47027b60f984e993db66497cac906a1aaea246dfd1e240fd5c017aed9fa25"
+        },
+        {
+          "name": "data/core/units/drakes/Sky.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/drakes/Sky.cfg",
+          "bytes": 3144,
+          "sha256": "873a07439305429ca1e35612e0278183e97e6400f7bd904983a08966155beb48"
+        },
+        {
+          "name": "data/core/units/drakes/Thrasher.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/drakes/Thrasher.cfg",
+          "bytes": 3958,
+          "sha256": "0024b848af022dc9cca4ee1cc5502eba5b40fa5804f0ee26db8137ad62463238"
+        },
+        {
+          "name": "data/core/units/drakes/Warden.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/drakes/Warden.cfg",
+          "bytes": 5110,
+          "sha256": "0fd795af61b6b0e37977af878786e246a4de4bd216ceff8f854fb9dac1a53b62"
+        },
+        {
+          "name": "data/core/units/drakes/Warrior.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/drakes/Warrior.cfg",
+          "bytes": 2055,
+          "sha256": "240df2d9e9392e029b48de850357821bffd116fa28e0b47d79ab5ed76d8b9c01"
+        },
+        {
+          "name": "data/core/units/dunefolk/Alchemist.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Alchemist.cfg",
+          "bytes": 2605,
+          "sha256": "0dc8ae6ece4c4c42bc6b672e6d524fa3dae7d663900947ef35acb6f8364ee6a5"
+        },
+        {
+          "name": "data/core/units/dunefolk/Apothecary.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Apothecary.cfg",
+          "bytes": 1988,
+          "sha256": "3b7a4d588e28e52180925b53b342621f7f4cf809feaaf0da3daf76714963c22b"
+        },
+        {
+          "name": "data/core/units/dunefolk/Blademaster.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Blademaster.cfg",
+          "bytes": 2476,
+          "sha256": "0e6d8305603da34e36d3f4a20efbafca722dfa90cd18aeb84b5e93af244791d1"
+        },
+        {
+          "name": "data/core/units/dunefolk/Burner.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Burner.cfg",
+          "bytes": 4982,
+          "sha256": "6b37ba04407d1e5dd0b859e1db6c3c0f0059236faf22b869953f962011a748fc"
+        },
+        {
+          "name": "data/core/units/dunefolk/Captain.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Captain.cfg",
+          "bytes": 1750,
+          "sha256": "30fd5bfb2a78a9d0108a587ff283f5f57e658c7e9d8b032bc4028a1a208ae111"
+        },
+        {
+          "name": "data/core/units/dunefolk/Cataphract.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Cataphract.cfg",
+          "bytes": 3928,
+          "sha256": "1928a5cfa51e9060953d304fd96860890d0b094d7e440a2904ff36e336009192"
+        },
+        {
+          "name": "data/core/units/dunefolk/Explorer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Explorer.cfg",
+          "bytes": 2381,
+          "sha256": "4a5b372b986bc81f90a59ca215a758ffc861ab961ee994d384e06eb9eb622596"
+        },
+        {
+          "name": "data/core/units/dunefolk/Falconer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Falconer.cfg",
+          "bytes": 8870,
+          "sha256": "fef51b30a3220842e13b58800dbddc5f876c38c635512a435ac21ae168156d48"
+        },
+        {
+          "name": "data/core/units/dunefolk/Firetrooper.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Firetrooper.cfg",
+          "bytes": 6347,
+          "sha256": "8ddd6a96130b152ad1b1579e743854d43d31e7fc8e8ab5298e5d082f956286f2"
+        },
+        {
+          "name": "data/core/units/dunefolk/Harrier.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Harrier.cfg",
+          "bytes": 3134,
+          "sha256": "daf72a3344fd1b77f59f82759704d8385bc977826c135a1aa09b86bbcf02fa93"
+        },
+        {
+          "name": "data/core/units/dunefolk/Herbalist.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Herbalist.cfg",
+          "bytes": 1993,
+          "sha256": "81da374be706dc74952ad0e8b0976caada61533518f9f754d28809aab196dcb5"
+        },
+        {
+          "name": "data/core/units/dunefolk/Horse_Archer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Horse_Archer.cfg",
+          "bytes": 2338,
+          "sha256": "cb17b0f2649c3fe30681b49d4245339bbbbbedfc67eec345068a0ca8f8210e4d"
+        },
+        {
+          "name": "data/core/units/dunefolk/Luminary.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Luminary.cfg",
+          "bytes": 2022,
+          "sha256": "cbd5f7dbbfdef15ce38b7ec872301875728820e9365f561d07dc5146c87c450b"
+        },
+        {
+          "name": "data/core/units/dunefolk/Marauder.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Marauder.cfg",
+          "bytes": 3542,
+          "sha256": "a76f20f26f6514809b160c10c1b1734b672cd6463747a800a7627eddf32e8578"
+        },
+        {
+          "name": "data/core/units/dunefolk/Paragon.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Paragon.cfg",
+          "bytes": 2993,
+          "sha256": "33beff212ab3f10f508230a32129cce527a5c3eeb1031c526068c6c6134236c9"
+        },
+        {
+          "name": "data/core/units/dunefolk/Raider.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Raider.cfg",
+          "bytes": 3257,
+          "sha256": "3205e885a4cabeca17212b03201ce994cbe829c94a20bd6daafc32eccfd787d5"
+        },
+        {
+          "name": "data/core/units/dunefolk/Rider.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Rider.cfg",
+          "bytes": 2462,
+          "sha256": "3caceaa9c7454cc5788e87611c6dd2e3e48762325e28fa1237ad47e14f5fd56b"
+        },
+        {
+          "name": "data/core/units/dunefolk/Rover.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Rover.cfg",
+          "bytes": 2394,
+          "sha256": "7bf1251c54440ddcf154ca6e319921e9402682ac13685bbb96fa73efb54e71a9"
+        },
+        {
+          "name": "data/core/units/dunefolk/Scorcher.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Scorcher.cfg",
+          "bytes": 4793,
+          "sha256": "bfaa47a478a0d77a79beeaa2ecc988335af3fee0a1622dfda79c4964845df280"
+        },
+        {
+          "name": "data/core/units/dunefolk/Skirmisher.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Skirmisher.cfg",
+          "bytes": 3611,
+          "sha256": "db8d968dbeccbf57600bce2f36decd5917f43322c4951421ba29406405b0e7f0"
+        },
+        {
+          "name": "data/core/units/dunefolk/Sky_Hunter.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Sky_Hunter.cfg",
+          "bytes": 8872,
+          "sha256": "929400f8fd229a715e5044b4576bc67f6e6ee82f47b4511e88d9895c49de92bf"
+        },
+        {
+          "name": "data/core/units/dunefolk/Soldier.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Soldier.cfg",
+          "bytes": 1641,
+          "sha256": "846653a313eadfddce06c6cb01274f51913f308c73e159f9e76ba639ae11a2ea"
+        },
+        {
+          "name": "data/core/units/dunefolk/Spearguard.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Spearguard.cfg",
+          "bytes": 2364,
+          "sha256": "2f4edcae929de012de482b31f14f37b49efb84fd855f87cbfea7f293ebe2d8c3"
+        },
+        {
+          "name": "data/core/units/dunefolk/Spearmaster.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Spearmaster.cfg",
+          "bytes": 2893,
+          "sha256": "7a4d0d6e82420284322ef8e1823e7b11ec2b509bad4306ec0fc6bed0abf61a41"
+        },
+        {
+          "name": "data/core/units/dunefolk/Strider.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Strider.cfg",
+          "bytes": 3148,
+          "sha256": "bf994ba66468a917fb0f63ace4a7a71517ec4853ac7f211fc81f196db75dde49"
+        },
+        {
+          "name": "data/core/units/dunefolk/Sunderer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Sunderer.cfg",
+          "bytes": 2552,
+          "sha256": "ba78c9a36afce515cd2a92c8c1d532deff0e8ee3f3abeab430def95552956f74"
+        },
+        {
+          "name": "data/core/units/dunefolk/Swordsman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Swordsman.cfg",
+          "bytes": 2436,
+          "sha256": "dcc8cdacdbab181aecda96018b1060f4fd9600ad896ef15b2e3b160208c97604"
+        },
+        {
+          "name": "data/core/units/dunefolk/Warmaster.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Warmaster.cfg",
+          "bytes": 1876,
+          "sha256": "27606255d58fc02d88b0f927a633416e0ee5140f0ea6e5260c16bbdd5572e8c4"
+        },
+        {
+          "name": "data/core/units/dunefolk/Wayfarer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Wayfarer.cfg",
+          "bytes": 3606,
+          "sha256": "da8714de2d65d50bd00170e300118267deb8571005932d1692fa6a65f7ec6408"
+        },
+        {
+          "name": "data/core/units/dunefolk/Windbolt.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Windbolt.cfg",
+          "bytes": 2658,
+          "sha256": "4540a7908db3c778db3a4629ea5a7d6394f427feffc1b8ce2d4928009b9669b9"
+        },
+        {
+          "name": "data/core/units/dunefolk/Wyvern_Rider.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dunefolk/Wyvern_Rider.cfg",
+          "bytes": 1472,
+          "sha256": "a01189e4f61a9eb35080138204b2835f260c879632a1c3f1e5a77522ad1edb53"
+        },
+        {
+          "name": "data/core/units/dwarves/Arcanister.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dwarves/Arcanister.cfg",
+          "bytes": 1698,
+          "sha256": "fbf855c3851fa8868da9ebebe215d4031a927890182f7245ec39acadb16b1463"
+        },
+        {
+          "name": "data/core/units/dwarves/Berserker.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dwarves/Berserker.cfg",
+          "bytes": 3663,
+          "sha256": "863d5bb2cf12eb0a7b2e0387a84a25a0591d8b094ccbe62b4bb66ca6ad8e55f7"
+        },
+        {
+          "name": "data/core/units/dwarves/Dragonguard.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dwarves/Dragonguard.cfg",
+          "bytes": 7953,
+          "sha256": "98132764f89e3f4fd758a4e6811c01e50cea0a96a7cff2085d0eaa56060ac440"
+        },
+        {
+          "name": "data/core/units/dwarves/Explorer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dwarves/Explorer.cfg",
+          "bytes": 2100,
+          "sha256": "3b089a44d6b251eeb0daa9f189d87c0d028fd6fa67e4d918cc94af5a242086ba"
+        },
+        {
+          "name": "data/core/units/dwarves/Fighter.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dwarves/Fighter.cfg",
+          "bytes": 4514,
+          "sha256": "272b7a19b03e9209ff62aff51d99ce8a7bea38698c8f5d7198dde41d2bc94301"
+        },
+        {
+          "name": "data/core/units/dwarves/Guardsman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dwarves/Guardsman.cfg",
+          "bytes": 3303,
+          "sha256": "5b37cd8575c978b219425cf1670fc88d35286c1671a90a88685ff7f74abf148e"
+        },
+        {
+          "name": "data/core/units/dwarves/Lord.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dwarves/Lord.cfg",
+          "bytes": 4798,
+          "sha256": "3532b51072dd842b8c878bba9649692f519b2c4e26758b9ec479efecd1f31128"
+        },
+        {
+          "name": "data/core/units/dwarves/Miner.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dwarves/Miner.cfg",
+          "bytes": 1684,
+          "sha256": "3fe97f544285be7b09c5c33ad0abfd1595d020b1e5e55e44671bf3f1c635ab8d"
+        },
+        {
+          "name": "data/core/units/dwarves/Pathfinder.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dwarves/Pathfinder.cfg",
+          "bytes": 2586,
+          "sha256": "9fa98d67d8718d7d6395e472e0c0e3250652a7f2c61cd05c0324d5b1c991ce42"
+        },
+        {
+          "name": "data/core/units/dwarves/Runemaster.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dwarves/Runemaster.cfg",
+          "bytes": 1792,
+          "sha256": "8a8942886016c5dc3767faf1057b537f337ab3ffc121f5ffe5f7031c4b35fb00"
+        },
+        {
+          "name": "data/core/units/dwarves/Runesmith.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dwarves/Runesmith.cfg",
+          "bytes": 1981,
+          "sha256": "1ead96e76c052981619f04905780f6187db9ed29c756fd16fbb0c999b3b412be"
+        },
+        {
+          "name": "data/core/units/dwarves/Scout.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dwarves/Scout.cfg",
+          "bytes": 2404,
+          "sha256": "1cbe4355402a787ec27b26c1eeb323556936f473d5e4748a73e34511244c5a24"
+        },
+        {
+          "name": "data/core/units/dwarves/Sentinel.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dwarves/Sentinel.cfg",
+          "bytes": 3642,
+          "sha256": "8bfa3749eeeaaed5dc4e3a58623e6b3007c1977b7bc5a075e3ebbc5083dbd5a5"
+        },
+        {
+          "name": "data/core/units/dwarves/Stalwart.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dwarves/Stalwart.cfg",
+          "bytes": 3455,
+          "sha256": "4ab5a894f88be9442af69167c48bbe9754279512f0f3173271d130f6775acb3f"
+        },
+        {
+          "name": "data/core/units/dwarves/Steelclad.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dwarves/Steelclad.cfg",
+          "bytes": 4404,
+          "sha256": "ec700650994d4fb6a99846f74fbd9aeac42465f053e66511ee28054f855381cc"
+        },
+        {
+          "name": "data/core/units/dwarves/Thunderer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dwarves/Thunderer.cfg",
+          "bytes": 7214,
+          "sha256": "35ccd0e11a50854c127ca23e491f598ef736364ab36635f50551f52e7d2aae6f"
+        },
+        {
+          "name": "data/core/units/dwarves/Thunderguard.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dwarves/Thunderguard.cfg",
+          "bytes": 6716,
+          "sha256": "540046ae86713508feacad141bb009abca1cbd59a36334d036c24ba704f2143e"
+        },
+        {
+          "name": "data/core/units/dwarves/Ulfserker.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/dwarves/Ulfserker.cfg",
+          "bytes": 3498,
+          "sha256": "ab3fab6c1bade65e2ebce97cd5935fdfd86a2e7579f31357b64df92c4539a4a8"
+        },
+        {
+          "name": "data/core/units/elves/Archer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Archer.cfg",
+          "bytes": 4700,
+          "sha256": "a0cb46bd093339660bf469306d5fb61f20c27f906455de72e5b108f322b7d837"
+        },
+        {
+          "name": "data/core/units/elves/Avenger.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Avenger.cfg",
+          "bytes": 4815,
+          "sha256": "98e88ae4cfe5777da54aaf74505137e8c215a728e11585c3ccd8a3688971af70"
+        },
+        {
+          "name": "data/core/units/elves/Captain.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Captain.cfg",
+          "bytes": 3082,
+          "sha256": "02755ff77ece7cfd41bf23c93a4ca43cae9a14e578cb510634d1ab5149a3eb70"
+        },
+        {
+          "name": "data/core/units/elves/Champion.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Champion.cfg",
+          "bytes": 2921,
+          "sha256": "c02fc5204c6af4bc1dfe68c4aa64ae6f0675fbd166015cc372fe531bd1b53180"
+        },
+        {
+          "name": "data/core/units/elves/Druid.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Druid.cfg",
+          "bytes": 4135,
+          "sha256": "4b0389e482b580b8df0751a994fd787e54b1685c449a20c4487a44038074e08b"
+        },
+        {
+          "name": "data/core/units/elves/Enchantress.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Enchantress.cfg",
+          "bytes": 3795,
+          "sha256": "15267846ea65bf85ac1ee937b5d6524dac85aebd171a4f1572e9c9eac7d518dc"
+        },
+        {
+          "name": "data/core/units/elves/Fighter.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Fighter.cfg",
+          "bytes": 4387,
+          "sha256": "d2cd6f23286db39580501c219c441c84918885879f9e2494d66158bf3ec30a68"
+        },
+        {
+          "name": "data/core/units/elves/Hero.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Hero.cfg",
+          "bytes": 3295,
+          "sha256": "543e52bcf671b0da7541f2a5de1150004e611e3bc47389255675a87ccffaf1d4"
+        },
+        {
+          "name": "data/core/units/elves/High_Lord.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/High_Lord.cfg",
+          "bytes": 3687,
+          "sha256": "2d8d1f546ef85ab2a920abfdc0d7a89ffeab3fd912969ef243eba7b4704dca0a"
+        },
+        {
+          "name": "data/core/units/elves/Lady.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Lady.cfg",
+          "bytes": 2621,
+          "sha256": "109c992dbbb649914c7ea29b49adcd9fe690347a16bd3575eaff234bec4f7ea9"
+        },
+        {
+          "name": "data/core/units/elves/Lord.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Lord.cfg",
+          "bytes": 3194,
+          "sha256": "fb864de0b6b14bfcbf90d23fb92ec4d42dc66dbdd2c8abc908179ba1f7e0b95c"
+        },
+        {
+          "name": "data/core/units/elves/Marksman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Marksman.cfg",
+          "bytes": 5086,
+          "sha256": "e716a2ed77c1a364efb568d3c032a3f4bfcb9527ecc99b2146525bca4f67427d"
+        },
+        {
+          "name": "data/core/units/elves/Marshal.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Marshal.cfg",
+          "bytes": 3441,
+          "sha256": "4e9c2c576e54728d00ced499e5c0a7541f40be56df0ae477da04acb6142d793f"
+        },
+        {
+          "name": "data/core/units/elves/Outrider.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Outrider.cfg",
+          "bytes": 4046,
+          "sha256": "4930c4e7a30a72e976260245a37ebeea9f91b957b607d93d4a9a2582ac1834b3"
+        },
+        {
+          "name": "data/core/units/elves/Ranger.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Ranger.cfg",
+          "bytes": 5236,
+          "sha256": "592e65b38820014c9f3870ea137f81a5f90a57e05b45df21f9f4b14e732107ef"
+        },
+        {
+          "name": "data/core/units/elves/Rider.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Rider.cfg",
+          "bytes": 4045,
+          "sha256": "a383c225def98bc545427a69021ec65370bbe387e444a740cd7c4a923655c6b6"
+        },
+        {
+          "name": "data/core/units/elves/Scout.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Scout.cfg",
+          "bytes": 3526,
+          "sha256": "aa8a3b77e35213646f7baa2caa2bc105b09583c30c72adaf6beb4903c988eccc"
+        },
+        {
+          "name": "data/core/units/elves/Shaman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Shaman.cfg",
+          "bytes": 3607,
+          "sha256": "0ba6181e846e408bedc92f9eb59ffdc9b55c2079d572c480cb68d73b0bb61a9b"
+        },
+        {
+          "name": "data/core/units/elves/Sharpshooter.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Sharpshooter.cfg",
+          "bytes": 4595,
+          "sha256": "4215f07ac4aa1e891696d7987f398a06b0e9c4670fdac08cb5c2febf219140b1"
+        },
+        {
+          "name": "data/core/units/elves/Shyde.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Shyde.cfg",
+          "bytes": 4006,
+          "sha256": "1352a7ac83932cf1c6034425cabf97c7064b479fc5da5dfa946083a231977cdd"
+        },
+        {
+          "name": "data/core/units/elves/Sorceress.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Sorceress.cfg",
+          "bytes": 3943,
+          "sha256": "ae5498d66fb27cee5c4836293e7d3d11dc16760dcee3e2a2eac36e98c548dc28"
+        },
+        {
+          "name": "data/core/units/elves/Sylph.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/elves/Sylph.cfg",
+          "bytes": 4067,
+          "sha256": "0f6d925eb2b84c38005264fb92dd87e560b79285ce71bc017352c28b43de7bb0"
+        },
+        {
+          "name": "data/core/units/fake/Fog_Clearer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/fake/Fog_Clearer.cfg",
+          "bytes": 1152,
+          "sha256": "145e9d14a78b219738fda6dda03cfdebafb9bb3ab1443f1fbcadeb56aa07f536"
+        },
+        {
+          "name": "data/core/units/goblins/Direwolf_Rider.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/goblins/Direwolf_Rider.cfg",
+          "bytes": 3592,
+          "sha256": "97c9422b5120d7ca6b13dd54b09d027a77acc106f442d50daa517a850d7e0aa4"
+        },
+        {
+          "name": "data/core/units/goblins/Impaler.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/goblins/Impaler.cfg",
+          "bytes": 4382,
+          "sha256": "2cb58fdef670d774feb9ebfa078c62cbf2202d9bd3d09c1fa6fba5c11a1c8e92"
+        },
+        {
+          "name": "data/core/units/goblins/Knight.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/goblins/Knight.cfg",
+          "bytes": 2261,
+          "sha256": "910cf18b0203cefffc4b0ccf52ae403ed3f13333f237e83d69a46b98ece9dd59"
+        },
+        {
+          "name": "data/core/units/goblins/Pillager.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/goblins/Pillager.cfg",
+          "bytes": 3415,
+          "sha256": "d74a47d43df3ba0ba736a1d888335976671485004b95ded92fd32b3bb08323d2"
+        },
+        {
+          "name": "data/core/units/goblins/Rouser.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/goblins/Rouser.cfg",
+          "bytes": 3177,
+          "sha256": "538b5cb30099a5ebdcec9306fa8c3e016ad4ee810e1b665adbbf8366c0668980"
+        },
+        {
+          "name": "data/core/units/goblins/Spearman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/goblins/Spearman.cfg",
+          "bytes": 5915,
+          "sha256": "b5812bc5af8a121c2ae54b553f580d0871ad62605f48c79ea42a42a29395163f"
+        },
+        {
+          "name": "data/core/units/goblins/Wolf_Rider.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/goblins/Wolf_Rider.cfg",
+          "bytes": 2969,
+          "sha256": "e25a93a25c452f04ee7c38b4b0ca61c2549c887d40ebf69ada247f023f4d2b12"
+        },
+        {
+          "name": "data/core/units/gryphons/Gryphon.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/gryphons/Gryphon.cfg",
+          "bytes": 1663,
+          "sha256": "7a9d02b09c592f00ca6abe913d9ab4a26a75d1cf7061af05de41f78493a70bac"
+        },
+        {
+          "name": "data/core/units/gryphons/Gryphon_Master.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/gryphons/Gryphon_Master.cfg",
+          "bytes": 1763,
+          "sha256": "be31754633b3f888b11b2c21eb29a9a3774ce4c631dc55496e67a9200a9372f4"
+        },
+        {
+          "name": "data/core/units/gryphons/Gryphon_Rider.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/gryphons/Gryphon_Rider.cfg",
+          "bytes": 1682,
+          "sha256": "1d256d4aae04eb0f40c4b6eedea86e14a027396f50bf0019fba4ad904abf4078"
+        },
+        {
+          "name": "data/core/units/humans/Horse_Grand_Knight.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Horse_Grand_Knight.cfg",
+          "bytes": 3948,
+          "sha256": "3f7ca9150349a68088385efca8f995d32acd18bc488d93255be126a109aad10e"
+        },
+        {
+          "name": "data/core/units/humans/Horse_Knight.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Horse_Knight.cfg",
+          "bytes": 5116,
+          "sha256": "ca37915300e23e6ed492795f421c4b4b009f82e7ed3b3f85cf7741b0ed7e3b1d"
+        },
+        {
+          "name": "data/core/units/humans/Horse_Lancer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Horse_Lancer.cfg",
+          "bytes": 2406,
+          "sha256": "f7bebbc9b013121c2f57ab50a28885c212da41116afc90aa07669cd28d81dd96"
+        },
+        {
+          "name": "data/core/units/humans/Horse_Paladin.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Horse_Paladin.cfg",
+          "bytes": 4006,
+          "sha256": "aaf891b783116c428f26fdb3ef174025a537bfe599a29d3c20924421529ccef7"
+        },
+        {
+          "name": "data/core/units/humans/Horseman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Horseman.cfg",
+          "bytes": 3648,
+          "sha256": "7895d616c1d9299784504d1b289a6b164b7369c312376f1c67df6464a7656749"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Bowman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Bowman.cfg",
+          "bytes": 3364,
+          "sha256": "c8c5821f58a0888f8b2a79b0ddaf8aec8963d0ecff05156e3cd81b859ec326b2"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Cavalier.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Cavalier.cfg",
+          "bytes": 3023,
+          "sha256": "c1b8d8a090e61db4161d5d63a7361683a3562067e601a617693da0201ef926d7"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Cavalryman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Cavalryman.cfg",
+          "bytes": 2828,
+          "sha256": "c806e6596242e3e7bac62a7fdb311210e8ed9186e4f2dcefb5d3090513759126"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Dragoon.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Dragoon.cfg",
+          "bytes": 3078,
+          "sha256": "901ec4acff8b7cafedc8569f3d619134f86b3a36372f750df018aed5e8ed61c9"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Duelist.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Duelist.cfg",
+          "bytes": 2878,
+          "sha256": "84a2b9f7974929b2319aa82af1a63f3557829fa511afb055f67ebc5f389c80be"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Fencer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Fencer.cfg",
+          "bytes": 2860,
+          "sha256": "8bd146af27d5db3749f3ccd8e7d285106a1c1347584bfda31d25013b315be6c2"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_General.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_General.cfg",
+          "bytes": 3698,
+          "sha256": "42c00e1d29495b526a66cf0ec8c7e3f16f76de939d2064be267dc61e9834efa1"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Grand_Marshal.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Grand_Marshal.cfg",
+          "bytes": 3237,
+          "sha256": "257ea523ac654764dacfa7583679af0bd4c5ee21ca024fa33e07290562a05a17"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Halberdier.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Halberdier.cfg",
+          "bytes": 4834,
+          "sha256": "5186b76fb839582f50f8714c63e1db1adc65f69804df5f429f7741e4bde65918"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Heavy_Infantryman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Heavy_Infantryman.cfg",
+          "bytes": 1617,
+          "sha256": "a20081de9330e26df0ea7765ce294485d4224ff7bef58f32702826d51f7d9133"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Iron_Mauler.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Iron_Mauler.cfg",
+          "bytes": 1782,
+          "sha256": "38db6604bfa15d47d393446c75e2ce94b74dcb0e38aec8f336b9160d3ff1fb17"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Javelineer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Javelineer.cfg",
+          "bytes": 3212,
+          "sha256": "eed766efde225980a6c88a6e30bca7104916374dec99738e6fb4338292d05987"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Lieutenant.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Lieutenant.cfg",
+          "bytes": 3110,
+          "sha256": "f7e1bcd6fd1f1a02d979fef24d02185507c7fe72c502f92039c0ff9b75487341"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Longbowman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Longbowman.cfg",
+          "bytes": 2887,
+          "sha256": "3434d639be10099184bd8dd4e2643d7688c368c14ffdc807ec409a8ed2a4f876"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Master_Bowman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Master_Bowman.cfg",
+          "bytes": 3077,
+          "sha256": "41107bbc5d1fd4061bcc2950c7ea778c7fe8599547979e818d9096d197f91284"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Master_at_Arms.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Master_at_Arms.cfg",
+          "bytes": 5384,
+          "sha256": "a476b2a4272d1da0b07159b8c340a7e2ee5ffcec68852fb6ae87b22ef8baeec4"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Pikeman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Pikeman.cfg",
+          "bytes": 3953,
+          "sha256": "ab37642f84f5a17f78484b8eaf431b5ea7076cc64c4cb2e976e27c08b1f49777"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Royal_Guard.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Royal_Guard.cfg",
+          "bytes": 2161,
+          "sha256": "86a590c5af6b3bea2b7f4a68b2bdecc73925e4def2b9399e94f4da07d985c303"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Sergeant.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Sergeant.cfg",
+          "bytes": 2866,
+          "sha256": "9b9d45e0d32ffa318eaf79d36f3ada00ba849b037367aacb0255c131e7147d1a"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Shock_Trooper.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Shock_Trooper.cfg",
+          "bytes": 1650,
+          "sha256": "87a85f43cbcb72c114d3cb88b4735cf61701d4b1ed9dabb1a62aad8e09c8ae74"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Spearman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Spearman.cfg",
+          "bytes": 6682,
+          "sha256": "c7b430ddb6a208e0e9e74202a9fd1e7bff9cc4ee0302dae4015f6db05c47a61a"
+        },
+        {
+          "name": "data/core/units/humans/Loyalist_Swordsman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Loyalist_Swordsman.cfg",
+          "bytes": 2553,
+          "sha256": "74c8fab5705bb311eccc022f6537c23b3b27b4a7cce0d764ac2000e7dd6994ca"
+        },
+        {
+          "name": "data/core/units/humans/Mage.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Mage.cfg",
+          "bytes": 8951,
+          "sha256": "b9b2c276aa3ee68b2df3e8b77b6c3d1a5dc86f2a4cd317c29152ddcaa92a78be"
+        },
+        {
+          "name": "data/core/units/humans/Mage_Arch.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Mage_Arch.cfg",
+          "bytes": 6154,
+          "sha256": "21a5083e1175b3e9e0815c267b558b8322db3901415ae68fca9387f6e06069e7"
+        },
+        {
+          "name": "data/core/units/humans/Mage_Elder.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Mage_Elder.cfg",
+          "bytes": 2365,
+          "sha256": "eaf2db7e345bee6e6da7f8308c6c358ae19e4b8171c30947365fd57ad05c6bf2"
+        },
+        {
+          "name": "data/core/units/humans/Mage_Great.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Mage_Great.cfg",
+          "bytes": 4697,
+          "sha256": "84e3760d6a95b10251c7683633e3556a882be15219abd55512060d70b31793b8"
+        },
+        {
+          "name": "data/core/units/humans/Mage_Red.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Mage_Red.cfg",
+          "bytes": 5254,
+          "sha256": "036d46442921849855cf08f9f1e11a301248bcdf88ea8edc9e924f494d174c20"
+        },
+        {
+          "name": "data/core/units/humans/Mage_Silver.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Mage_Silver.cfg",
+          "bytes": 7229,
+          "sha256": "b6642c7f0c0f70c46eaafb6e630da0efb8e785d1b5bd645bc4e9781d04fecc42"
+        },
+        {
+          "name": "data/core/units/humans/Mage_White.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Mage_White.cfg",
+          "bytes": 5415,
+          "sha256": "301756ff554bf4464283f3c802232608b43ad54289437c206548359b67a05b65"
+        },
+        {
+          "name": "data/core/units/humans/Mage_of_Light.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Mage_of_Light.cfg",
+          "bytes": 4841,
+          "sha256": "dac51236f7460dababc0107ae7b60d8cbe884e3fb695e3438db3d361918c9bcd"
+        },
+        {
+          "name": "data/core/units/humans/Outlaw.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Outlaw.cfg",
+          "bytes": 3869,
+          "sha256": "882d45815f0a1e00aea4ce90b8ceb3d82c9b0b6b884abe6a55ca0f2a22f5dbb3"
+        },
+        {
+          "name": "data/core/units/humans/Outlaw_Assassin.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Outlaw_Assassin.cfg",
+          "bytes": 4918,
+          "sha256": "fe8d9ef7a2ffad7398cf58fc70db4090cc3b6e30d2042bd8bcf9ce00dccd9457"
+        },
+        {
+          "name": "data/core/units/humans/Outlaw_Bandit.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Outlaw_Bandit.cfg",
+          "bytes": 1609,
+          "sha256": "8af22830f319bf88e7e44cbb7a689ecff3eaaf154a9a849bd8f9ab30ab922485"
+        },
+        {
+          "name": "data/core/units/humans/Outlaw_Footpad.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Outlaw_Footpad.cfg",
+          "bytes": 4524,
+          "sha256": "66c55fdae420c192d0e550d0680cd2347c02ba2fced06d0c5db686f14319a315"
+        },
+        {
+          "name": "data/core/units/humans/Outlaw_Fugitive.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Outlaw_Fugitive.cfg",
+          "bytes": 3577,
+          "sha256": "6c05bc17d27fb279c6e88ce62b1da1d279fa5ca031f33c496e154d713934fffd"
+        },
+        {
+          "name": "data/core/units/humans/Outlaw_Highwayman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Outlaw_Highwayman.cfg",
+          "bytes": 1439,
+          "sha256": "7b7eb80f2e6e44f34d6783703144c9a4df5287ed758774b4215ec7838780285a"
+        },
+        {
+          "name": "data/core/units/humans/Outlaw_Rogue.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Outlaw_Rogue.cfg",
+          "bytes": 3560,
+          "sha256": "3472f5d568f002a96dd0c6bea7d363913c0d6954980997257496ff808842c02c"
+        },
+        {
+          "name": "data/core/units/humans/Outlaw_Ruffian.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Outlaw_Ruffian.cfg",
+          "bytes": 1584,
+          "sha256": "c6e486b9aacb3fc4f12adbdc0bcbaae594cc3616b08afea9ff2e6395fb4f2bca"
+        },
+        {
+          "name": "data/core/units/humans/Outlaw_Thief.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Outlaw_Thief.cfg",
+          "bytes": 7822,
+          "sha256": "2b261c1ce3c384fa383f33406c7d8c5cb4ee17c489a0fc712a7642c1a209d66b"
+        },
+        {
+          "name": "data/core/units/humans/Outlaw_Thug.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Outlaw_Thug.cfg",
+          "bytes": 1550,
+          "sha256": "71f5376896eee65eaeb4598191162b37668a3ac7e78995d540b63cf66429a8a1"
+        },
+        {
+          "name": "data/core/units/humans/Peasant.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Peasant.cfg",
+          "bytes": 3768,
+          "sha256": "5e4c7f306fd472e4d33000b3f712de00c061b73ab141c12d18a72e6efd49aaeb"
+        },
+        {
+          "name": "data/core/units/humans/Royal_Warrior.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Royal_Warrior.cfg",
+          "bytes": 1979,
+          "sha256": "d638fe67532436149718af2d90b3754887c57b3ce1937fdfbee5903170180477"
+        },
+        {
+          "name": "data/core/units/humans/Woodsman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Woodsman.cfg",
+          "bytes": 2897,
+          "sha256": "f673df756b6e77578633dfb3e9e9484a0c346fde36635673a47f93c9d93fa8cd"
+        },
+        {
+          "name": "data/core/units/humans/Woodsman_Huntsman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Woodsman_Huntsman.cfg",
+          "bytes": 3411,
+          "sha256": "d9746168f5b238ced2bf9f4736d9e290a960919fe2938b0fb2c084664380848d"
+        },
+        {
+          "name": "data/core/units/humans/Woodsman_Poacher.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Woodsman_Poacher.cfg",
+          "bytes": 2745,
+          "sha256": "6a13259774d66c293efd4ec2ff619a7087c0d9911411fdd36d48430df20f4b4f"
+        },
+        {
+          "name": "data/core/units/humans/Woodsman_Ranger.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Woodsman_Ranger.cfg",
+          "bytes": 3341,
+          "sha256": "9e6f7e95c74be3c3d81c400d7daf69b5ec94821bcd9223cd5cd8544fd5330ddd"
+        },
+        {
+          "name": "data/core/units/humans/Woodsman_Trapper.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/humans/Woodsman_Trapper.cfg",
+          "bytes": 3280,
+          "sha256": "079de794a4fbd4191bdc6cdcbf651493bde72d8e9f588811c111ca986ee5cd18"
+        },
+        {
+          "name": "data/core/units/merfolk/Brawler.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/merfolk/Brawler.cfg",
+          "bytes": 1883,
+          "sha256": "35d95fb1d891a65f7d67c81b685ca6adf78760a4b31d0802ed05bea22c4de92b"
+        },
+        {
+          "name": "data/core/units/merfolk/Citizen.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/merfolk/Citizen.cfg",
+          "bytes": 1228,
+          "sha256": "6f42ef940da04db2c2713031412072cc7b15e4beaee953f8a6fffafd0cb43337"
+        },
+        {
+          "name": "data/core/units/merfolk/Diviner.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/merfolk/Diviner.cfg",
+          "bytes": 2784,
+          "sha256": "154360a213d9c45c6f419f7fd8f549d06869ccc16b539d63b3dbeb117d369f1a"
+        },
+        {
+          "name": "data/core/units/merfolk/Enchantress.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/merfolk/Enchantress.cfg",
+          "bytes": 2818,
+          "sha256": "b5de1f8feb0c4de5059347bc51ddbcd79519e90fb10ea7876684b41877b61e69"
+        },
+        {
+          "name": "data/core/units/merfolk/Entangler.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/merfolk/Entangler.cfg",
+          "bytes": 2536,
+          "sha256": "37da82b8b9318995395e847d4182e326d0e39a5becc7b5dec50c38cae00eb9a3"
+        },
+        {
+          "name": "data/core/units/merfolk/Fighter.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/merfolk/Fighter.cfg",
+          "bytes": 1851,
+          "sha256": "1bd89904c6b0177de4301fca7d80c7a9368adc96dc04d25d8e0b351fddf56363"
+        },
+        {
+          "name": "data/core/units/merfolk/Hoplite.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/merfolk/Hoplite.cfg",
+          "bytes": 1821,
+          "sha256": "dc7f28097121647a2c1ed1211dcdeedc73a868e08cbacf9cf40ca617d2ec6de6"
+        },
+        {
+          "name": "data/core/units/merfolk/Hunter.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/merfolk/Hunter.cfg",
+          "bytes": 3233,
+          "sha256": "c6be44d9160bb08ff811f3f586806af4efe7bf947fd6619051cba3b7fa90df56"
+        },
+        {
+          "name": "data/core/units/merfolk/Initiate.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/merfolk/Initiate.cfg",
+          "bytes": 2687,
+          "sha256": "d49bd03a7b0804b380717b98a7a2e19b8aeee019382dde00773cf40878aeb977"
+        },
+        {
+          "name": "data/core/units/merfolk/Javelineer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/merfolk/Javelineer.cfg",
+          "bytes": 2154,
+          "sha256": "d8b28ceccb24f4f96ee48d37d701def53a553f95a080d8fefd8f83ab2d8f3aed"
+        },
+        {
+          "name": "data/core/units/merfolk/Netcaster.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/merfolk/Netcaster.cfg",
+          "bytes": 3051,
+          "sha256": "a74c14ef9b29d64d1b69be5cf748f056d32b7f48e8f1a644a8168ad283ff79a2"
+        },
+        {
+          "name": "data/core/units/merfolk/Priestess.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/merfolk/Priestess.cfg",
+          "bytes": 2735,
+          "sha256": "e210870b2c2a294c8bcafcf8952c9b1f82f459d8739d351496337f114cfb4f3a"
+        },
+        {
+          "name": "data/core/units/merfolk/Siren.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/merfolk/Siren.cfg",
+          "bytes": 3032,
+          "sha256": "82d69b1329ddc6612f9d026afc582aff9ec317ec012212991b6ffb3eb392e198"
+        },
+        {
+          "name": "data/core/units/merfolk/Spearman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/merfolk/Spearman.cfg",
+          "bytes": 2344,
+          "sha256": "b9c0716ed45971c5db29e8628106b9a472591d3b60d8858fdc3a0c28e53ea83e"
+        },
+        {
+          "name": "data/core/units/merfolk/Triton.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/merfolk/Triton.cfg",
+          "bytes": 2223,
+          "sha256": "9b4f702213ff800cc47e3366b2d5ea52bd82a95be9f41de585d550d14f3b7ccd"
+        },
+        {
+          "name": "data/core/units/merfolk/Warrior.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/merfolk/Warrior.cfg",
+          "bytes": 1788,
+          "sha256": "833305156ea29bfea6a7a40c6d76bfe5886b5cbd7bb691d78d0c7497137cd001"
+        },
+        {
+          "name": "data/core/units/monsters/Ant.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Ant.cfg",
+          "bytes": 1339,
+          "sha256": "aa274246da4480fd7ea5a3a6a81a754f38ee9f8f4e9233fd44c078244db08034"
+        },
+        {
+          "name": "data/core/units/monsters/Ant_Egg.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Ant_Egg.cfg",
+          "bytes": 6820,
+          "sha256": "cdd943e4d647d0b8b0a9f3451c4a2ee863daa158365d22f37acd79cf314c89e9"
+        },
+        {
+          "name": "data/core/units/monsters/Ant_Fire.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Ant_Fire.cfg",
+          "bytes": 3084,
+          "sha256": "5279b42228a6a8cfc4d8d4ecdbf6fe8babeda91b5398e0ccba7790abd2e399f2"
+        },
+        {
+          "name": "data/core/units/monsters/Ant_Fire_Queen.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Ant_Fire_Queen.cfg",
+          "bytes": 3185,
+          "sha256": "90f7d2f625c86ea175fe32f36b018127e3354b045cfd05a839f8f4ffc23803fd"
+        },
+        {
+          "name": "data/core/units/monsters/Ant_Firebane.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Ant_Firebane.cfg",
+          "bytes": 3043,
+          "sha256": "a0c6009280e451f48a0a609d5cf7f0427a7a74c21c8a3e149896885ab6b48868"
+        },
+        {
+          "name": "data/core/units/monsters/Ant_Firebomb.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Ant_Firebomb.cfg",
+          "bytes": 3213,
+          "sha256": "a9e2db1d2b9bd295ee4b05b06aedfd151c0fdac0c9a6d732e080335c7e60bc18"
+        },
+        {
+          "name": "data/core/units/monsters/Ant_Queen.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Ant_Queen.cfg",
+          "bytes": 2186,
+          "sha256": "5c9f876629001f8661e59ad4532e3225a622d8ddfe54b49936c8ba0a5b021815"
+        },
+        {
+          "name": "data/core/units/monsters/Ant_Soldier.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Ant_Soldier.cfg",
+          "bytes": 1529,
+          "sha256": "22f9ee350369d413c9b771b8660ff1442c8bbc1f88df63375c51e4eb5aa0b130"
+        },
+        {
+          "name": "data/core/units/monsters/Bear.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Bear.cfg",
+          "bytes": 2735,
+          "sha256": "d89d80be64d55c715516a20df150f8496677255e7ae5956156b1a70edb39bc2b"
+        },
+        {
+          "name": "data/core/units/monsters/Boar.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Boar.cfg",
+          "bytes": 3020,
+          "sha256": "e7ca6871ca20574666386fdb51797f37c3f2a4802705f98e9f75d2f350fc5a7c"
+        },
+        {
+          "name": "data/core/units/monsters/Boar_Piglet.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Boar_Piglet.cfg",
+          "bytes": 2268,
+          "sha256": "0b163329fb42bd54d5c00df07932dba817ab7641769c7da1a9db5ac501cc8698"
+        },
+        {
+          "name": "data/core/units/monsters/Caribe.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Caribe.cfg",
+          "bytes": 4674,
+          "sha256": "476c1dd7b39f14d2c0b98f6d97c0cebf27b141c2db8d9d2272b7a4d85b07d5ae"
+        },
+        {
+          "name": "data/core/units/monsters/Caribe_Hunter.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Caribe_Hunter.cfg",
+          "bytes": 5258,
+          "sha256": "5798a27fb8124b978053c76da38472906aa7c9054cf24b11eb06baecd6b030b7"
+        },
+        {
+          "name": "data/core/units/monsters/Caribe_Nibbler.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Caribe_Nibbler.cfg",
+          "bytes": 4594,
+          "sha256": "2a0caca8e137bab88886c66d035d23d3a3aee287609783f531d779526204f89b"
+        },
+        {
+          "name": "data/core/units/monsters/Crocodile.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Crocodile.cfg",
+          "bytes": 6848,
+          "sha256": "ce8c68aa3d149fa8dc300763361e922388530edf1890fdcbfd03708e1be48073"
+        },
+        {
+          "name": "data/core/units/monsters/Cuttle_Fish.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Cuttle_Fish.cfg",
+          "bytes": 2565,
+          "sha256": "757375972f54cf4ed1bf2069e9006ee602f91134fe8908a6f70fbe24e291ece8"
+        },
+        {
+          "name": "data/core/units/monsters/Dragonfly.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Dragonfly.cfg",
+          "bytes": 4265,
+          "sha256": "3321c1ed28a46bd1add35ee20194308acffd2b68e8ce4460a0607a17e0f42355"
+        },
+        {
+          "name": "data/core/units/monsters/Dragonfly_Grand.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Dragonfly_Grand.cfg",
+          "bytes": 5873,
+          "sha256": "a28a2aa6c6e7948b3f82f89dc03a4e648d7077dd088e9f6688044e113bee2e81"
+        },
+        {
+          "name": "data/core/units/monsters/Dragonfly_Naiad.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Dragonfly_Naiad.cfg",
+          "bytes": 2144,
+          "sha256": "6385361882dd6fea3e5dcf594aea22661cd56015a4eb970b1949e44f3e6ddc5e"
+        },
+        {
+          "name": "data/core/units/monsters/Elder_Falcon.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Elder_Falcon.cfg",
+          "bytes": 4353,
+          "sha256": "06c7dacbdd8bec537fb6c033df6a049eddbd4e81334c0786fd26534d2d06f1a5"
+        },
+        {
+          "name": "data/core/units/monsters/Falcon.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Falcon.cfg",
+          "bytes": 4125,
+          "sha256": "cfaaeaecaf9dab92eeadb6675d62eae65111587a1ecb339f3fc48e422489d6c1"
+        },
+        {
+          "name": "data/core/units/monsters/Fire_Dragon.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Fire_Dragon.cfg",
+          "bytes": 3894,
+          "sha256": "80cb7a1cc64226e31738d4ba2a7ef5c45ac36fe57ddcdc74a6f43cacab4911a0"
+        },
+        {
+          "name": "data/core/units/monsters/Fire_Guardian.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Fire_Guardian.cfg",
+          "bytes": 2645,
+          "sha256": "1692f697bcd4a4923419419e144bc4c839a0dc4e770a7ca5e60363a8b0d51f14"
+        },
+        {
+          "name": "data/core/units/monsters/Fire_Wraith.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Fire_Wraith.cfg",
+          "bytes": 3270,
+          "sha256": "a84e03558bb172a1cb7b4c61f017e70b2206f224f59aba016898df21ee53033e"
+        },
+        {
+          "name": "data/core/units/monsters/Frost_Stoat.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Frost_Stoat.cfg",
+          "bytes": 5679,
+          "sha256": "283e7f567adf382ccb1a65b3fab4a095e3ac9caeba2645f26281e492d0dcd1f4"
+        },
+        {
+          "name": "data/core/units/monsters/Giant_Mudcrawler.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Giant_Mudcrawler.cfg",
+          "bytes": 2597,
+          "sha256": "f6ce2501847a1f66c56a123c46d84567bb34b9435f05cd3517d86c6ff0497620"
+        },
+        {
+          "name": "data/core/units/monsters/Giant_Rat.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Giant_Rat.cfg",
+          "bytes": 1444,
+          "sha256": "867c3a3cadef081cfcce0cdda3243ef4930203c94a41b7bfdb4022ef5ae70187"
+        },
+        {
+          "name": "data/core/units/monsters/Giant_Scorpion.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Giant_Scorpion.cfg",
+          "bytes": 6965,
+          "sha256": "ca1d0f025ddf5aa811bc2fb78edc5c86aa38a86ee949430a43bebb5b086b4746"
+        },
+        {
+          "name": "data/core/units/monsters/Giant_Scorpling.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Giant_Scorpling.cfg",
+          "bytes": 2925,
+          "sha256": "a2bf61083d6e26f4f765179b93cecb4f27aa83f97695fdf630f783455bc111be"
+        },
+        {
+          "name": "data/core/units/monsters/Giant_Spider.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Giant_Spider.cfg",
+          "bytes": 2164,
+          "sha256": "9184b2a05547aeef07204b3a55dcecbda78a8da37c15853ac784227cd18543c4"
+        },
+        {
+          "name": "data/core/units/monsters/Horse.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Horse.cfg",
+          "bytes": 1628,
+          "sha256": "62b9b6151acbae577e4214b91598174baf5cd0b201d0f2ce2e12e508d74f4e71"
+        },
+        {
+          "name": "data/core/units/monsters/Horse_Black.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Horse_Black.cfg",
+          "bytes": 3164,
+          "sha256": "d19dace8b3f76b9f3ff35035ddbc0fc95e2f61ec27051926dd799fd92b7be5db"
+        },
+        {
+          "name": "data/core/units/monsters/Horse_Dark.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Horse_Dark.cfg",
+          "bytes": 2745,
+          "sha256": "4774abd89d468bd778317571273962f771662b31905620fe2f82437dba3f0335"
+        },
+        {
+          "name": "data/core/units/monsters/Horse_Great.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Horse_Great.cfg",
+          "bytes": 1692,
+          "sha256": "54cfbed0887991f0db96113b87bd2cad1a98743d0ccd2eef23e4b2bccd01c30e"
+        },
+        {
+          "name": "data/core/units/monsters/Horse_White.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Horse_White.cfg",
+          "bytes": 1947,
+          "sha256": "e2bcfe244a9142897e7e0a871f14e049beaa6b86e886a549e107274a75fa1325"
+        },
+        {
+          "name": "data/core/units/monsters/Icemonax.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Icemonax.cfg",
+          "bytes": 3454,
+          "sha256": "d35a5a21c3374a55bbd3e0508579a3e0df179755e7af0fd307c5116f567be356"
+        },
+        {
+          "name": "data/core/units/monsters/Icemonax_Greater.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Icemonax_Greater.cfg",
+          "bytes": 4095,
+          "sha256": "78683ea7e50aa540c8ffe1e5ecb41079ad643feb85997fec99d1e27788aadf23"
+        },
+        {
+          "name": "data/core/units/monsters/Jinn.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Jinn.cfg",
+          "bytes": 5662,
+          "sha256": "220e9422e45c93ccc5a4bf9caf02eea07a19331e1d3d91729a5a6c6a9387171f"
+        },
+        {
+          "name": "data/core/units/monsters/Kraken.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Kraken.cfg",
+          "bytes": 3642,
+          "sha256": "1b46ed2259b9eb62a16f232be4aca44cbc1f0802b27e5da253220d31f2c989df"
+        },
+        {
+          "name": "data/core/units/monsters/Mudcrawler.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Mudcrawler.cfg",
+          "bytes": 2238,
+          "sha256": "6376da380fc2469c3e78f84296fa3f47c59fbb6538bc901ce097bbcd70943c18"
+        },
+        {
+          "name": "data/core/units/monsters/Raven.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Raven.cfg",
+          "bytes": 3202,
+          "sha256": "9f952e9af460e742c40d6931797e4e40d75f61357cd1ba738f37e2d1d524a45d"
+        },
+        {
+          "name": "data/core/units/monsters/Raven_Harbinger.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Raven_Harbinger.cfg",
+          "bytes": 4618,
+          "sha256": "03042af8004e5545d6cd1da9660454fa74067bf2df62a08c01920238a1f480f6"
+        },
+        {
+          "name": "data/core/units/monsters/Raven_Omen.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Raven_Omen.cfg",
+          "bytes": 3724,
+          "sha256": "5f8e2e4fbb16de972a0da8bde177a0b67f5ce14c9ad2ddc779bd8224ac57132a"
+        },
+        {
+          "name": "data/core/units/monsters/Roc.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Roc.cfg",
+          "bytes": 4301,
+          "sha256": "f50c3f61176e9b629105cb5a44275939f728e39d5f0d68263dd763656a9a0e50"
+        },
+        {
+          "name": "data/core/units/monsters/Rock_Scorpion.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Rock_Scorpion.cfg",
+          "bytes": 4146,
+          "sha256": "d33b68c017ce920ec0c28c8798ec2c91319f7fceaf6809a056c3c03d2f8ca376"
+        },
+        {
+          "name": "data/core/units/monsters/Sand_Scamperer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Sand_Scamperer.cfg",
+          "bytes": 2266,
+          "sha256": "049db45bb7aba01fcf65a3faed88902d0022ab3bdfb33b49a9172f9cdeb607e7"
+        },
+        {
+          "name": "data/core/units/monsters/Sand_Scuttler.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Sand_Scuttler.cfg",
+          "bytes": 2871,
+          "sha256": "4b7542ac35cff1119b2547c61acb4a38ec14e9f091364da9260110ff0dd32402"
+        },
+        {
+          "name": "data/core/units/monsters/Scarab.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Scarab.cfg",
+          "bytes": 2436,
+          "sha256": "5dab6bd206fa97f9aa3a7dc4450828e524a321dfd7eba72d2513e6298200447f"
+        },
+        {
+          "name": "data/core/units/monsters/Sea_Serpent.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Sea_Serpent.cfg",
+          "bytes": 1571,
+          "sha256": "85f681874aeca57a8b1921519c90a034860d8b3bf397d30b9a6ef1ce33260232"
+        },
+        {
+          "name": "data/core/units/monsters/Seahorse.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Seahorse.cfg",
+          "bytes": 4352,
+          "sha256": "a94627fa79ae4dbdadd388b2f14873c22864234b31cf7f6b01de9da056b016a8"
+        },
+        {
+          "name": "data/core/units/monsters/Shadow_Jumping_Spider.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Shadow_Jumping_Spider.cfg",
+          "bytes": 4319,
+          "sha256": "88de679a6883c3e58e7ecf722352092a01158063656106781f219a608f8fb64e"
+        },
+        {
+          "name": "data/core/units/monsters/Skeletal_Dragon.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Skeletal_Dragon.cfg",
+          "bytes": 2354,
+          "sha256": "14d4e1f6f0e7d30cdd82b6871a49285689dcdb32cfef4fed8f3404e4a58a60f9"
+        },
+        {
+          "name": "data/core/units/monsters/Tentacle.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Tentacle.cfg",
+          "bytes": 5343,
+          "sha256": "82b911da23563d38361aae2de896a3f763c0ee18e739cd9e28dc5efb1b38b525"
+        },
+        {
+          "name": "data/core/units/monsters/Water_Serpent.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Water_Serpent.cfg",
+          "bytes": 3297,
+          "sha256": "37d0801a99626b1beea67732125006a9866128b35ef6b9911cda2a211ffeab3a"
+        },
+        {
+          "name": "data/core/units/monsters/Wild_Wyvern.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Wild_Wyvern.cfg",
+          "bytes": 5035,
+          "sha256": "f2c2968d717d7a43e2d75768a3bc29a581cad0e177f37a63ccfadbb95311e9cf"
+        },
+        {
+          "name": "data/core/units/monsters/Wolf.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Wolf.cfg",
+          "bytes": 2134,
+          "sha256": "66e8f0104ec5e77f3dec69c957e400715f7031295140a5ee985d596dfa69393f"
+        },
+        {
+          "name": "data/core/units/monsters/Wolf_Dire.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Wolf_Dire.cfg",
+          "bytes": 2091,
+          "sha256": "543861f3f83b798ba11355f98d43701212171ea1c78d0e4dc38195bb83a2d666"
+        },
+        {
+          "name": "data/core/units/monsters/Wolf_Great.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Wolf_Great.cfg",
+          "bytes": 3166,
+          "sha256": "0208b73caf41d4a21482b9d68384ba2d7ff6f4f535464dacb6e9bab47916359d"
+        },
+        {
+          "name": "data/core/units/monsters/Yeti.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/monsters/Yeti.cfg",
+          "bytes": 1826,
+          "sha256": "a018964e1da293ed924d9bc2475507397ea4e53c46eb354466ff84a309164b8f"
+        },
+        {
+          "name": "data/core/units/nagas/Dirkfang.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/nagas/Dirkfang.cfg",
+          "bytes": 3285,
+          "sha256": "6f342a21af0f4ff6b338addcbcfa0a78c6580f29079e1f3acc98bac9c8242a1c"
+        },
+        {
+          "name": "data/core/units/nagas/Fighter.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/nagas/Fighter.cfg",
+          "bytes": 1832,
+          "sha256": "ef4c461bcb2227b9563b192ca70acf5cd6dc9c0242dbc42ca80c599364b3b16d"
+        },
+        {
+          "name": "data/core/units/nagas/Guard.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/nagas/Guard.cfg",
+          "bytes": 1605,
+          "sha256": "3d50075db58ea3e6b6ad7eae53cdf4d994a3b4ef9033414cc47cf7913c1369ae"
+        },
+        {
+          "name": "data/core/units/nagas/Guard_High.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/nagas/Guard_High.cfg",
+          "bytes": 2285,
+          "sha256": "10507a89ae393660e25bee11307772b652448357cea58c18ebff528954041c77"
+        },
+        {
+          "name": "data/core/units/nagas/Guard_Shield.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/nagas/Guard_Shield.cfg",
+          "bytes": 2945,
+          "sha256": "b02dae5a9dd5ed4f9891e288e69bfd452c7b64800e50695b7e5370d2dbfc05ff"
+        },
+        {
+          "name": "data/core/units/nagas/Myrmidon.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/nagas/Myrmidon.cfg",
+          "bytes": 2033,
+          "sha256": "660a38ae4194ab1368ac420ae289f98c4950b0af62817e4bd62f0a578ce55845"
+        },
+        {
+          "name": "data/core/units/nagas/Ophidian.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/nagas/Ophidian.cfg",
+          "bytes": 3429,
+          "sha256": "2c7ed0524eec152367fe1828bf2ae39186fcf94184ce97e7f985c5786b60bb9c"
+        },
+        {
+          "name": "data/core/units/nagas/Ringcaster.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/nagas/Ringcaster.cfg",
+          "bytes": 3152,
+          "sha256": "ac7b93888e552554c58cb1c19c2fdb0b2a47eb7c2852fa8468761f985589f8ad"
+        },
+        {
+          "name": "data/core/units/nagas/Sicarius.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/nagas/Sicarius.cfg",
+          "bytes": 3616,
+          "sha256": "e92b7aab48fecb413ea9d66e56dae8d65f94678eb9e65f2f49455b68d24a054e"
+        },
+        {
+          "name": "data/core/units/nagas/Warrior.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/nagas/Warrior.cfg",
+          "bytes": 2115,
+          "sha256": "f9b74fbff901374db5255f549fcccae833ca3fc94f929843340e58e05cb1ac7c"
+        },
+        {
+          "name": "data/core/units/nagas/Zephyr.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/nagas/Zephyr.cfg",
+          "bytes": 4419,
+          "sha256": "039b76af9cd4ab00bb8df55bd28c23e2faaec66c787e724c0b190b35d683a949"
+        },
+        {
+          "name": "data/core/units/ogres/Ogre.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/ogres/Ogre.cfg",
+          "bytes": 1476,
+          "sha256": "4250d6dedf33e6a939bdb975587ba18b125a8f77564272319f7a3e36b000e7f1"
+        },
+        {
+          "name": "data/core/units/ogres/Young_Ogre.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/ogres/Young_Ogre.cfg",
+          "bytes": 1510,
+          "sha256": "b20d4a046ee012f7dae870828c1d822ee0fb2c153cc18d572aa87c146af865d0"
+        },
+        {
+          "name": "data/core/units/orcs/Archer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/orcs/Archer.cfg",
+          "bytes": 5843,
+          "sha256": "dc9c31c970af51e2a5f144ae08508f2c392b8d6da5ce94e9e25898c5fe18ef62"
+        },
+        {
+          "name": "data/core/units/orcs/Assassin.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/orcs/Assassin.cfg",
+          "bytes": 4886,
+          "sha256": "70e9ddf9210d8d4bdc9b8191ab24a9d2eff4f5f9285c2972e028750cdea86177"
+        },
+        {
+          "name": "data/core/units/orcs/Crossbowman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/orcs/Crossbowman.cfg",
+          "bytes": 4233,
+          "sha256": "61a9856c75ae42c01ba31ed38957a46f3b4dec440c9827b7d1e41ff928e1f5bb"
+        },
+        {
+          "name": "data/core/units/orcs/Grunt.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/orcs/Grunt.cfg",
+          "bytes": 3930,
+          "sha256": "dfa318a112f85f5ddebbc383dc65c6f073b4d90001dfd75673b1b615ac0a4e51"
+        },
+        {
+          "name": "data/core/units/orcs/Leader.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/orcs/Leader.cfg",
+          "bytes": 2706,
+          "sha256": "e5e10a747e7f3c424380cb02e1e693fa66166219aea42b6d30d4f3faa030e471"
+        },
+        {
+          "name": "data/core/units/orcs/Nightblade.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/orcs/Nightblade.cfg",
+          "bytes": 3593,
+          "sha256": "810701f664867b9a411c1bef37e5c60765ab016e26e008aedd97d68048dcf8ef"
+        },
+        {
+          "name": "data/core/units/orcs/Ruler.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/orcs/Ruler.cfg",
+          "bytes": 2746,
+          "sha256": "ce2808a516d19634a1ba981eb836547447e458a489ff1edf3fbcab748efeff73"
+        },
+        {
+          "name": "data/core/units/orcs/Slayer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/orcs/Slayer.cfg",
+          "bytes": 2868,
+          "sha256": "e9927339a1aed3290cd8926f909cad319ff7619a7adea0cdaf7fd5af1d6d1188"
+        },
+        {
+          "name": "data/core/units/orcs/Slurbow.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/orcs/Slurbow.cfg",
+          "bytes": 4413,
+          "sha256": "49a0e5b1d0fa7517ea39531e6925d3a37e67606ee51506b42c44f7c144d8b5ca"
+        },
+        {
+          "name": "data/core/units/orcs/Sovereign.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/orcs/Sovereign.cfg",
+          "bytes": 3272,
+          "sha256": "a3044951d3bcec510682310a845170aecd50407428cdb761ff652c2efc602414"
+        },
+        {
+          "name": "data/core/units/orcs/Warlord.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/orcs/Warlord.cfg",
+          "bytes": 3058,
+          "sha256": "d3f4a9f9735cbec6215f2bda2a1b5f3e65cc1698abf3adb11621c2abe0ab815f"
+        },
+        {
+          "name": "data/core/units/orcs/Warrior.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/orcs/Warrior.cfg",
+          "bytes": 2288,
+          "sha256": "c74f1844bf847971e7ce691499dd8aaf70e4b78bcffcb5f95953a5b1620bfdbf"
+        },
+        {
+          "name": "data/core/units/saurians/Ambusher.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/saurians/Ambusher.cfg",
+          "bytes": 3208,
+          "sha256": "baf4f4934b8b9a3220b2d1059082f782b73580c98bbd1e01c33150b073cbc720"
+        },
+        {
+          "name": "data/core/units/saurians/Augur.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/saurians/Augur.cfg",
+          "bytes": 2938,
+          "sha256": "893740b9b5b6a770339334ca3dcfba68f8ff391c29cc8f4683ede8d55dfbe882"
+        },
+        {
+          "name": "data/core/units/saurians/Flanker.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/saurians/Flanker.cfg",
+          "bytes": 3042,
+          "sha256": "432813a82a056d393a5673b7e6f70fca800c6802c3eab849d22d17f525f556e3"
+        },
+        {
+          "name": "data/core/units/saurians/Javelineer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/saurians/Javelineer.cfg",
+          "bytes": 2968,
+          "sha256": "9e4bcdb0844f2481aabfa4d38d3bbcc2f0d5ec8e28d97dfbe49575501077344f"
+        },
+        {
+          "name": "data/core/units/saurians/Oracle.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/saurians/Oracle.cfg",
+          "bytes": 3030,
+          "sha256": "197656468c59ab43fbc9010a66d9c9de1d9116fbd8426edd38e3fe97462e3045"
+        },
+        {
+          "name": "data/core/units/saurians/Prophet.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/saurians/Prophet.cfg",
+          "bytes": 3042,
+          "sha256": "057aae25728ad5697fd107289d5077f7179dae97ceba959edcde050eafe00ac9"
+        },
+        {
+          "name": "data/core/units/saurians/Seer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/saurians/Seer.cfg",
+          "bytes": 2935,
+          "sha256": "53c1fd77383aad556546d0fa946e5e596835f10b1b786f1d472bae8459457031"
+        },
+        {
+          "name": "data/core/units/saurians/Skirmisher.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/saurians/Skirmisher.cfg",
+          "bytes": 3487,
+          "sha256": "2d730db8fe27666e09e1ea615ef785928f06f60927c8e34fad0552880b7291be"
+        },
+        {
+          "name": "data/core/units/saurians/Soothsayer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/saurians/Soothsayer.cfg",
+          "bytes": 3103,
+          "sha256": "0d671bb5767b421a89c49cecae6eb0cdc6cab70b5f8fc88c93646d25cbbf65e2"
+        },
+        {
+          "name": "data/core/units/saurians/Spearthrower.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/saurians/Spearthrower.cfg",
+          "bytes": 2991,
+          "sha256": "6dbeecbc9be4db39b57cd3b565691adc50186dc1db12edaceeb64f7ac7c7e8b3"
+        },
+        {
+          "name": "data/core/units/trolls/Great.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/trolls/Great.cfg",
+          "bytes": 1576,
+          "sha256": "9dcf7cc664adf096e880645e80e4250795c1d24e3ba241c882aef6ba789ad20e"
+        },
+        {
+          "name": "data/core/units/trolls/Hero.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/trolls/Hero.cfg",
+          "bytes": 2189,
+          "sha256": "9a9dd0238144c3ce5aa6dda8e70d8d568fccef2d7b64e5bbcb52817c47c13865"
+        },
+        {
+          "name": "data/core/units/trolls/Rocklobber.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/trolls/Rocklobber.cfg",
+          "bytes": 3184,
+          "sha256": "e7eb509e64d2016a85e36382b15df1ac1780062db579759a449da22b0cafff14"
+        },
+        {
+          "name": "data/core/units/trolls/Troll.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/trolls/Troll.cfg",
+          "bytes": 1612,
+          "sha256": "d941f6233596b5edd7fbbf88136f83944c395c4580382ae75e9284f30ef8df00"
+        },
+        {
+          "name": "data/core/units/trolls/Troll_Shaman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/trolls/Troll_Shaman.cfg",
+          "bytes": 3425,
+          "sha256": "78f2c6fbee4eb3aeae7ee42f7f531d48df1507aa524f0c510c20cc82e6fef87e"
+        },
+        {
+          "name": "data/core/units/trolls/Warrior.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/trolls/Warrior.cfg",
+          "bytes": 2217,
+          "sha256": "d9e1b43ddf71ae84914378e45a00e04b4a7aa7b727cda55daee24cd39f187132"
+        },
+        {
+          "name": "data/core/units/trolls/Whelp.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/trolls/Whelp.cfg",
+          "bytes": 3284,
+          "sha256": "282b73d38ad969d8d47952a1aacfac641554b018e044fd188164a0e69da89ed3"
+        },
+        {
+          "name": "data/core/units/undead/Corpse_Ghast.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Corpse_Ghast.cfg",
+          "bytes": 1571,
+          "sha256": "26353198979a1c3e456fbf7b6d003ce1a6de0b6bde8c92e7a0a157fa5d435616"
+        },
+        {
+          "name": "data/core/units/undead/Corpse_Ghoul.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Corpse_Ghoul.cfg",
+          "bytes": 1899,
+          "sha256": "9739e5457e30465f5572190b59a0725216f15ab52cebac2b8ec074d98deceaaa"
+        },
+        {
+          "name": "data/core/units/undead/Corpse_Necrophage.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Corpse_Necrophage.cfg",
+          "bytes": 1876,
+          "sha256": "e2d4e051dc7eeddfed8ec2f7c14514fec66fcffadaeb4c8c0d962ec38f97f0b5"
+        },
+        {
+          "name": "data/core/units/undead/Corpse_Soulless.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Corpse_Soulless.cfg",
+          "bytes": 19070,
+          "sha256": "c9b5a77decb6d3ef08cb5d94f3f0dd8bfa172b83a0b12c39335c7e33ca6a5a02"
+        },
+        {
+          "name": "data/core/units/undead/Corpse_Walking.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Corpse_Walking.cfg",
+          "bytes": 19374,
+          "sha256": "611f8c0f225d748fa625f43470998839389fc41527fdb2987cd50af898f1ab6b"
+        },
+        {
+          "name": "data/core/units/undead/Necro_Ancient_Lich.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Necro_Ancient_Lich.cfg",
+          "bytes": 5334,
+          "sha256": "924d11d2ed96c96baf4c1b325cadc67c58cb5f666a33e0f44ba15726d3a86720"
+        },
+        {
+          "name": "data/core/units/undead/Necro_Dark_Adept.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Necro_Dark_Adept.cfg",
+          "bytes": 8132,
+          "sha256": "e50882bdcecec86b77f926970cbc20a62b7fedb131be92b877d7c386ef712b73"
+        },
+        {
+          "name": "data/core/units/undead/Necro_Dark_Sorcerer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Necro_Dark_Sorcerer.cfg",
+          "bytes": 9091,
+          "sha256": "b2e48247d6fec3a5079fd00b48b554a25c50d404562d4b172128ecfa3e4aa696"
+        },
+        {
+          "name": "data/core/units/undead/Necro_Lich.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Necro_Lich.cfg",
+          "bytes": 5258,
+          "sha256": "4e6826b3b186acafe8849c9553dd3cdb8f63d8a63d366c2e5718f33a65c87c43"
+        },
+        {
+          "name": "data/core/units/undead/Necromancer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Necromancer.cfg",
+          "bytes": 7687,
+          "sha256": "684db65b9980d9ba205505a2b70deea7dfe83e7ff5a5d8ef61070724119a2add"
+        },
+        {
+          "name": "data/core/units/undead/Skele_Banebow.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Skele_Banebow.cfg",
+          "bytes": 2872,
+          "sha256": "fc6d35806e337d2ebb7c8aa9f297b02aba82904b6f35891ac8312ad455fa2054"
+        },
+        {
+          "name": "data/core/units/undead/Skele_Bone_Knight.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Skele_Bone_Knight.cfg",
+          "bytes": 3484,
+          "sha256": "5fc385ac0cf4f6c16688e6046951fda411427b8d1086617751a4e862dd8987e0"
+        },
+        {
+          "name": "data/core/units/undead/Skele_Bone_Shooter.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Skele_Bone_Shooter.cfg",
+          "bytes": 3112,
+          "sha256": "ecd084ba941366d61a7f60ccf37ea08448ee9fd91b9bd11805d361d9d392ff56"
+        },
+        {
+          "name": "data/core/units/undead/Skele_Chocobone.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Skele_Chocobone.cfg",
+          "bytes": 1895,
+          "sha256": "5466cc5b6f5bc833f2d0df0880a87b109dc08a76079c01363d68fc36bea02cc8"
+        },
+        {
+          "name": "data/core/units/undead/Skele_Death_Knight.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Skele_Death_Knight.cfg",
+          "bytes": 3075,
+          "sha256": "9d2da06a5c9ecab83d9f3c05bd7bf09d9af1554bd5d932d95ec397ca5ffe72e8"
+        },
+        {
+          "name": "data/core/units/undead/Skele_Death_Squire.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Skele_Death_Squire.cfg",
+          "bytes": 2568,
+          "sha256": "b116be9da2c45274a318921d23296e8aec2dfbacf79dcdfb4cf7bab6f6463d03"
+        },
+        {
+          "name": "data/core/units/undead/Skele_Deathblade.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Skele_Deathblade.cfg",
+          "bytes": 2296,
+          "sha256": "eeec967f22e242ccc3a4e4383d48d8010832cd541e1bd36bb9f5aac1a4c9a81d"
+        },
+        {
+          "name": "data/core/units/undead/Skele_Draug.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Skele_Draug.cfg",
+          "bytes": 1861,
+          "sha256": "77994cdbbf8279b5d3fe110318e4f57e908765b776b31a67168acf8258343cc3"
+        },
+        {
+          "name": "data/core/units/undead/Skele_Revenant.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Skele_Revenant.cfg",
+          "bytes": 2280,
+          "sha256": "2554fb20e1bfd0ecc2e401743e51acd2d375155b9a51964c3907f091a74703f5"
+        },
+        {
+          "name": "data/core/units/undead/Skeleton.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Skeleton.cfg",
+          "bytes": 2393,
+          "sha256": "05d407e440b23b380610a3b73737851ba90ec657dddf9504bf4933fa082a0d9c"
+        },
+        {
+          "name": "data/core/units/undead/Skeleton_Archer.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Skeleton_Archer.cfg",
+          "bytes": 3800,
+          "sha256": "d31f36255ac47e6e002f914a6142e19ba9d070e5da18c751a1004e835ef3c083"
+        },
+        {
+          "name": "data/core/units/undead/Skeleton_Rider.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Skeleton_Rider.cfg",
+          "bytes": 3469,
+          "sha256": "bc055451bf858a3303b862a890d871a8a6e1470dc39c95025102f7f8dd3f32a0"
+        },
+        {
+          "name": "data/core/units/undead/Spirit_Ghost.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Spirit_Ghost.cfg",
+          "bytes": 5864,
+          "sha256": "c4f43c26b15c4d89c7efc670c6c1e97c45347722e7177213eac35619fcb18cf7"
+        },
+        {
+          "name": "data/core/units/undead/Spirit_Nightgaunt.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Spirit_Nightgaunt.cfg",
+          "bytes": 3849,
+          "sha256": "a252912f106dd8df776a6002157f93f1db12d6faf43aa12c1c77b1c40dea7dab"
+        },
+        {
+          "name": "data/core/units/undead/Spirit_Shadow.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Spirit_Shadow.cfg",
+          "bytes": 5185,
+          "sha256": "d87ce958033df3549235ea4eeb837dd5b0fe608f8c2ac9b4dcc687dafb2d6930"
+        },
+        {
+          "name": "data/core/units/undead/Spirit_Spectre.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Spirit_Spectre.cfg",
+          "bytes": 2387,
+          "sha256": "f1ac1c8966293a01b1c2d81689d7be16ff2f6ba6b43de025974699edd35e79f2"
+        },
+        {
+          "name": "data/core/units/undead/Spirit_Wraith.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/undead/Spirit_Wraith.cfg",
+          "bytes": 3049,
+          "sha256": "bdea4eaf084aa83033378383deb95d55ef6cb57dd7023893b55d617405434980"
+        },
+        {
+          "name": "data/core/units/wose/Ancient.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/wose/Ancient.cfg",
+          "bytes": 1731,
+          "sha256": "7df9267f3113f527feda1379cb33c3ea8a5d986a15d71f1638c498b0852498f5"
+        },
+        {
+          "name": "data/core/units/wose/Elder.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/wose/Elder.cfg",
+          "bytes": 2317,
+          "sha256": "f91da16c0e367f6589ed9a789abe8c4e50f63cdfde69cc6e2d94a087be37856a"
+        },
+        {
+          "name": "data/core/units/wose/Wose.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/wose/Wose.cfg",
+          "bytes": 2552,
+          "sha256": "29159f4308185d5cf68ee4f13980e5287278ccd6ed65248796cc71b32bc80794"
+        },
+        {
+          "name": "data/core/units/wose/Wose_Sapling.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/wose/Wose_Sapling.cfg",
+          "bytes": 2107,
+          "sha256": "3f4822a28b130d2c0e0ae6ecea7fb3112d19f8c3f3707f7d9ab098146970a74c"
+        },
+        {
+          "name": "data/core/units/wose/Wose_Shaman.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/core/units/wose/Wose_Shaman.cfg",
+          "bytes": 2250,
+          "sha256": "172358d1de15f26bf315f5ec1f6434ec542f194920d431a2763c4062fb165809"
+        },
+        {
+          "name": "data/multiplayer/factions/drakes-aoh.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/multiplayer/factions/drakes-aoh.cfg",
+          "bytes": 1320,
+          "sha256": "70a85e3320d250620bc9b079bc8753ee58f268a647bb065ac8d696b5b18743fc"
+        },
+        {
+          "name": "data/multiplayer/factions/drakes-default.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/multiplayer/factions/drakes-default.cfg",
+          "bytes": 1165,
+          "sha256": "a860148be98d37f2e2e5b6b65cccd22d703546cca40e981a569627a2d1d529e8"
+        },
+        {
+          "name": "data/multiplayer/factions/dunefolk-aoh.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/multiplayer/factions/dunefolk-aoh.cfg",
+          "bytes": 1464,
+          "sha256": "114e8c74c33e7a3d837f142633ee03e853c461398065f1c77f6f24f6c91890a5"
+        },
+        {
+          "name": "data/multiplayer/factions/dunefolk-default.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/multiplayer/factions/dunefolk-default.cfg",
+          "bytes": 1222,
+          "sha256": "20047ea3ab0dd845bd21c2594e092557901b7996089c463358a0b6273ffe5f92"
+        },
+        {
+          "name": "data/multiplayer/factions/knalgans-aoh.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/multiplayer/factions/knalgans-aoh.cfg",
+          "bytes": 1344,
+          "sha256": "e1218bcd6de3bdae0fccb87687085fcaf1255bfff9f9803ee55db36225b62ebc"
+        },
+        {
+          "name": "data/multiplayer/factions/knalgans-default.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/multiplayer/factions/knalgans-default.cfg",
+          "bytes": 1229,
+          "sha256": "fc8732d2b30b2db0312951c78743a79d36b02cac02ef134f57763cf8c2c76b26"
+        },
+        {
+          "name": "data/multiplayer/factions/loyalists-aoh.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/multiplayer/factions/loyalists-aoh.cfg",
+          "bytes": 1201,
+          "sha256": "3e8a52e500bd83e3d6e3cb0788a3476aa618331ea50dccbc78b48d05f30569c4"
+        },
+        {
+          "name": "data/multiplayer/factions/loyalists-default.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/multiplayer/factions/loyalists-default.cfg",
+          "bytes": 1064,
+          "sha256": "f686dca799da8be462ace990901e104c8cf2677cedf034c95b345b0c0da0c405"
+        },
+        {
+          "name": "data/multiplayer/factions/northerners-aoh.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/multiplayer/factions/northerners-aoh.cfg",
+          "bytes": 1467,
+          "sha256": "81b7739ad04951a6fcf067d7519b6a23fc56b65c940a12ad72fce5c0640898b4"
+        },
+        {
+          "name": "data/multiplayer/factions/northerners-default.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/multiplayer/factions/northerners-default.cfg",
+          "bytes": 1271,
+          "sha256": "aaa65ce02b5e7540188b1bdb8d5580801e37501e25778e930c59035946e4fa2a"
+        },
+        {
+          "name": "data/multiplayer/factions/rebels-aoh.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/multiplayer/factions/rebels-aoh.cfg",
+          "bytes": 1726,
+          "sha256": "ddc3b1d68cf20cb15110e538e3d28f7384591571cd668315b40c472e6cab194b"
+        },
+        {
+          "name": "data/multiplayer/factions/rebels-default.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/multiplayer/factions/rebels-default.cfg",
+          "bytes": 1530,
+          "sha256": "c7a43544c6115309af9519898829cc4c93a6d6ff6d089df08a4088db2de5810b"
+        },
+        {
+          "name": "data/multiplayer/factions/undead-aoh.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/multiplayer/factions/undead-aoh.cfg",
+          "bytes": 1321,
+          "sha256": "b76c19a15806aea12db4acc29aa8914cccb21f6af5e9722d23d59a2115056ec4"
+        },
+        {
+          "name": "data/multiplayer/factions/undead-default.cfg",
+          "href": "task_files/GA-REAL-002/input_files/data/multiplayer/factions/undead-default.cfg",
+          "bytes": 1258,
+          "sha256": "6d116041145cbd6f6a8869c2bb63f6e205d64c8de486c51c292338b7ee823dba"
+        },
+        {
+          "name": "data/tools/wesnoth/README.md",
+          "href": "task_files/GA-REAL-002/input_files/data/tools/wesnoth/README.md",
+          "bytes": 2071,
+          "sha256": "c110f9fdd3a6db0c0102df4c204b01a88ffb83cd579e703cc135e6e69bd7bdbc"
+        },
+        {
+          "name": "data/tools/wesnoth/__init__.py",
+          "href": "task_files/GA-REAL-002/input_files/data/tools/wesnoth/__init__.py",
+          "bytes": 201,
+          "sha256": "5f2f62d5d678247627c9f4f7b8960188eedc05d9bcfb465f544638c75c600edb"
+        },
+        {
+          "name": "data/tools/wesnoth/base64url.py",
+          "href": "task_files/GA-REAL-002/input_files/data/tools/wesnoth/base64url.py",
+          "bytes": 738,
+          "sha256": "e95ee745a1f8d66f66935bd16a3b387121359f3fdd2882f36ca504fd14a4e4e4"
+        },
+        {
+          "name": "data/tools/wesnoth/campaignserver_client.py",
+          "href": "task_files/GA-REAL-002/input_files/data/tools/wesnoth/campaignserver_client.py",
+          "bytes": 18589,
+          "sha256": "353cd01fbca5443576cd280fe9e86c1adb91efb4170d2ed05bfa89bfb9e749df"
+        },
+        {
+          "name": "data/tools/wesnoth/libgithub.py",
+          "href": "task_files/GA-REAL-002/input_files/data/tools/wesnoth/libgithub.py",
+          "bytes": 24123,
+          "sha256": "a0c929491bb94d6fea911a1be51ae428aeb16ae9bea9994163a7ae1c9b92061b"
+        },
+        {
+          "name": "data/tools/wesnoth/trackplacer3/__init__.py",
+          "href": "task_files/GA-REAL-002/input_files/data/tools/wesnoth/trackplacer3/__init__.py",
+          "bytes": 538,
+          "sha256": "3db07f7bce9df5a4fd5f05ac4e5b10b3a85b63bc57ad90908590457c4b003cec"
+        },
+        {
+          "name": "data/tools/wesnoth/trackplacer3/cfgfileformat.py",
+          "href": "task_files/GA-REAL-002/input_files/data/tools/wesnoth/trackplacer3/cfgfileformat.py",
+          "bytes": 8635,
+          "sha256": "b3596f6b4398cd6636609b9091dea0aaf5e0a5b653cea9db5d48f273d6b62a9e"
+        },
+        {
+          "name": "data/tools/wesnoth/trackplacer3/datatypes.py",
+          "href": "task_files/GA-REAL-002/input_files/data/tools/wesnoth/trackplacer3/datatypes.py",
+          "bytes": 4918,
+          "sha256": "63c478e7d309961d91d43a371191904d58dfd7b6696ea7dcffbbc2909c0faab3"
+        },
+        {
+          "name": "data/tools/wesnoth/trackplacer3/tmxfileformat.py",
+          "href": "task_files/GA-REAL-002/input_files/data/tools/wesnoth/trackplacer3/tmxfileformat.py",
+          "bytes": 10077,
+          "sha256": "caf25e651507b865adbee75eb1b16053db2e55763d844a02651e26f63ef00675"
+        },
+        {
+          "name": "data/tools/wesnoth/version.py",
+          "href": "task_files/GA-REAL-002/input_files/data/tools/wesnoth/version.py",
+          "bytes": 414,
+          "sha256": "4ba60d85b9fdd702a57fa839b43be91150a3c44e7adf807d776cc4d61c47a72e"
+        },
+        {
+          "name": "data/tools/wesnoth/wescamp.py",
+          "href": "task_files/GA-REAL-002/input_files/data/tools/wesnoth/wescamp.py",
+          "bytes": 23734,
+          "sha256": "c504b28b478eebcd7876b5f146e2bc8bcd58354c667f8ef65f4987a86a08214c"
+        },
+        {
+          "name": "data/tools/wesnoth/wmldata.py",
+          "href": "task_files/GA-REAL-002/input_files/data/tools/wesnoth/wmldata.py",
+          "bytes": 20029,
+          "sha256": "be0c5ba0b4f697409132e5182e326aacdf8df442ec5ca5a53dad2226777be66c"
+        },
+        {
+          "name": "data/tools/wesnoth/wmliterator3.py",
+          "href": "task_files/GA-REAL-002/input_files/data/tools/wesnoth/wmliterator3.py",
+          "bytes": 20472,
+          "sha256": "35fa38331a6a0bd0a66fc1e0c9c0d95b73ee8b388c4ebb5f799ccbf11fa3834b"
+        },
+        {
+          "name": "data/tools/wesnoth/wmlparser.py",
+          "href": "task_files/GA-REAL-002/input_files/data/tools/wesnoth/wmlparser.py",
+          "bytes": 34750,
+          "sha256": "574fd8b6dd4471f434d1e0848fb3fab5c897de1948c2243849b0185ac79b59ae"
+        },
+        {
+          "name": "data/tools/wesnoth/wmlparser3.py",
+          "href": "task_files/GA-REAL-002/input_files/data/tools/wesnoth/wmlparser3.py",
+          "bytes": 27855,
+          "sha256": "0ce7c01b0c2cb73a13c1b3e250855854e3020abb0bd4ddc61015869536282791"
+        },
+        {
+          "name": "data/tools/wesnoth/wmltools3.py",
+          "href": "task_files/GA-REAL-002/input_files/data/tools/wesnoth/wmltools3.py",
+          "bytes": 58515,
+          "sha256": "2097bcf864d7706e7a894272cc1c7cc6b449fb7c11728abba53bad9f66c7d29d"
+        },
+        {
+          "name": "src/actions/attack.cpp",
+          "href": "task_files/GA-REAL-002/input_files/src/actions/attack.cpp",
+          "bytes": 50085,
+          "sha256": "948a388df8d9c34ef47b345227b98e940ccc602627ceb12ea22be515a0b3217e"
+        },
+        {
+          "name": "src/movetype.cpp",
+          "href": "task_files/GA-REAL-002/input_files/src/movetype.cpp",
+          "bytes": 28410,
+          "sha256": "8649fde614a41031a77db6b4044ec9dda9e40e3e30e78118378fa16ba6942397"
+        },
+        {
+          "name": "src/movetype.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/movetype.hpp",
+          "bytes": 15003,
+          "sha256": "218e517ee2aae61f9daf2cbca0c46075d46d81ad2becb418eb5b29bc2f8de71f"
+        },
+        {
+          "name": "src/units/abilities.cpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/abilities.cpp",
+          "bytes": 73163,
+          "sha256": "ab41fe01901b300fa3892f94a354b4bed23a169d6e952549ad2d7d031dec59d4"
+        },
+        {
+          "name": "src/units/abilities.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/abilities.hpp",
+          "bytes": 1661,
+          "sha256": "f83cebfc67bd5676614587777f9992c58f5b8e5e44438aa11b580fa70422abaa"
+        },
+        {
+          "name": "src/units/animation.cpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/animation.cpp",
+          "bytes": 47134,
+          "sha256": "61078bd280472883f2fbe8785c3d38c80ddfc782c92f2b210b2cda9069fec2bd"
+        },
+        {
+          "name": "src/units/animation.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/animation.hpp",
+          "bytes": 9158,
+          "sha256": "6dbdd1ae4c7fc8a88cef173365b5be836d7831057cfbe1f9ecd07eff6f7dbe49"
+        },
+        {
+          "name": "src/units/animation_component.cpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/animation_component.cpp",
+          "bytes": 6774,
+          "sha256": "bbbc807a793a7eb0cb326a45ef21cdc5dfd47114365904afec454560b5be4383"
+        },
+        {
+          "name": "src/units/animation_component.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/animation_component.hpp",
+          "bytes": 4730,
+          "sha256": "cb2c0662bf5c075f8d8906a397b7fe85f4c6b23d897164a457c597be7a1b5ff2"
+        },
+        {
+          "name": "src/units/attack_type.cpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/attack_type.cpp",
+          "bytes": 19616,
+          "sha256": "df71b5624d7281c0ed1b329651a0db34f5ce46c406dbda33f079b15713f610ad"
+        },
+        {
+          "name": "src/units/attack_type.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/attack_type.hpp",
+          "bytes": 15330,
+          "sha256": "db7f52c47fc5eb88d893e81a52e5ceb58159f8e1260017662938cb9cb3dc3a74"
+        },
+        {
+          "name": "src/units/conditional_type.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/conditional_type.hpp",
+          "bytes": 881,
+          "sha256": "ee46ab1a2e434cf3afe515a97e3161005444a29d181e767ea0eb129c490aeb16"
+        },
+        {
+          "name": "src/units/drawer.cpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/drawer.cpp",
+          "bytes": 17163,
+          "sha256": "c0ecc6e19a2e8b1d4f4b15970418a2125614d89b89d21388ed623e852a5dc59e"
+        },
+        {
+          "name": "src/units/drawer.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/drawer.hpp",
+          "bytes": 1742,
+          "sha256": "e60e854742bc66e52c47613c4423ef0b2ee6c8c9fcb3f6a6c8d4d1f75aaefc91"
+        },
+        {
+          "name": "src/units/filter.cpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/filter.cpp",
+          "bytes": 26661,
+          "sha256": "e3486af5477c697e22b90cf5843b7921768c23172eeeab526a6d5258de5102c3"
+        },
+        {
+          "name": "src/units/filter.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/filter.hpp",
+          "bytes": 5101,
+          "sha256": "06bccc62df5a9f4d60013fac26523ece8879de2a3075ec7e38318d933541618e"
+        },
+        {
+          "name": "src/units/formula_manager.cpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/formula_manager.cpp",
+          "bytes": 2595,
+          "sha256": "277279a9ef1f9c92fdee6bc568cdbe4b0f0cb5e08c22a59c21860b86f16ec2fe"
+        },
+        {
+          "name": "src/units/formula_manager.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/formula_manager.hpp",
+          "bytes": 1772,
+          "sha256": "b64ee96e7fa1536f6deb120a75c559b8caa30ab2bcd9cbb9c9ca274e776ce016"
+        },
+        {
+          "name": "src/units/frame.cpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/frame.cpp",
+          "bytes": 31715,
+          "sha256": "50665a38fb40e4d5a65eca1b3f59ad9869e1ab6de45de84edb3c132f821ec23f"
+        },
+        {
+          "name": "src/units/frame.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/frame.hpp",
+          "bytes": 6457,
+          "sha256": "4b3fc9028ab7bdb20df0c0142b9f0610aee4e2a4833047d0f2bd5311d1281010"
+        },
+        {
+          "name": "src/units/frame_private.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/frame_private.hpp",
+          "bytes": 5888,
+          "sha256": "fffebe95a70dba98fbbfc296dd4eb0824491dd93f1de4089f0840ac201207ef5"
+        },
+        {
+          "name": "src/units/helper.cpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/helper.cpp",
+          "bytes": 2831,
+          "sha256": "8ca9e08d8b47f95d88c896e978ee8d47d937cba1ee7d2ed5bae5a760d41e2b42"
+        },
+        {
+          "name": "src/units/helper.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/helper.hpp",
+          "bytes": 1543,
+          "sha256": "645586535a52c7b29a3af902c5f285bb4df78c8d0fe19490aa57bdbc0afa0427"
+        },
+        {
+          "name": "src/units/id.cpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/id.cpp",
+          "bytes": 1348,
+          "sha256": "6a45a12aa845c9a0aa1b8d7bc17c5e7726fe9149af7c6529bd11ae87cf8a51f4"
+        },
+        {
+          "name": "src/units/id.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/id.hpp",
+          "bytes": 1978,
+          "sha256": "ed6ecc5a346fbbb22cc4759cbe4c54dc8328c0c4e91088bb765ad962c811b5cc"
+        },
+        {
+          "name": "src/units/make.cpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/make.cpp",
+          "bytes": 906,
+          "sha256": "9e43a6320f7a865bb0104bb9dd55854e4280c19b82d7a0eba464b0aacc4d9d3b"
+        },
+        {
+          "name": "src/units/make.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/make.hpp",
+          "bytes": 931,
+          "sha256": "60226605c8f6d9e10f3ee16a36a8fcbca7d8f7306ff490c69a61a9c11b1a15c3"
+        },
+        {
+          "name": "src/units/map.cpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/map.cpp",
+          "bytes": 10190,
+          "sha256": "e2a615ad04f8113f0c47cfdefcae6241d43bc91485062650727dca658725c19c"
+        },
+        {
+          "name": "src/units/map.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/map.hpp",
+          "bytes": 15984,
+          "sha256": "b5fc6e5edd2c4b1f46f85be21cb670c7c0a74baf9291d613820059e6f9a653bf"
+        },
+        {
+          "name": "src/units/orb_status.cpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/orb_status.cpp",
+          "bytes": 1735,
+          "sha256": "a47021e284c36df85d721962c69905c9c5a9cebbabb6d81734c81545febba677"
+        },
+        {
+          "name": "src/units/orb_status.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/orb_status.hpp",
+          "bytes": 1691,
+          "sha256": "6a107af922ab105800b4745994a1c9a78018b2df616a3f3727c5d26a6b9358c4"
+        },
+        {
+          "name": "src/units/ptr.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/ptr.hpp",
+          "bytes": 969,
+          "sha256": "3608b15cc18311b0af9ed6c30d0cb6ee5617b8d6fc00c64d4f4f33158fa132f2"
+        },
+        {
+          "name": "src/units/race.cpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/race.cpp",
+          "bytes": 4881,
+          "sha256": "2015f54d410308fa223742f6b90ba16e6ba4a191f93678c698c4a094a96e05ce"
+        },
+        {
+          "name": "src/units/race.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/race.hpp",
+          "bytes": 3312,
+          "sha256": "fe5178e02915711e1fbd74445e94619016bc3ff72d5fc45e28138460bcd5f6fc"
+        },
+        {
+          "name": "src/units/strike_result.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/strike_result.hpp",
+          "bytes": 872,
+          "sha256": "42d5158c26ff554c5ab696719d461c9c7452835f95a4540e2184dbd066c43699"
+        },
+        {
+          "name": "src/units/type_error.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/type_error.hpp",
+          "bytes": 671,
+          "sha256": "7c3d1c92b0f97f545a8df9cadb342c14a55baf5bbdba20cff27b40aa91d4fb97"
+        },
+        {
+          "name": "src/units/types.cpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/types.cpp",
+          "bytes": 40722,
+          "sha256": "800e01b91fbdf74d9ac62fc4c27fd9f8aba1919368ec2e269c5fe99e9f7284cd"
+        },
+        {
+          "name": "src/units/types.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/types.hpp",
+          "bytes": 15365,
+          "sha256": "06299076a0af5dff92c24f338b84a1b1912fa1ba2097253ea47ea9f8622e0eec"
+        },
+        {
+          "name": "src/units/udisplay.cpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/udisplay.cpp",
+          "bytes": 30519,
+          "sha256": "a1976281fa5bfd39aa78e192fb9e35cf2a50d348a164b6f9a69fde6e58a7dbc0"
+        },
+        {
+          "name": "src/units/udisplay.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/udisplay.hpp",
+          "bytes": 4489,
+          "sha256": "1fdc2ee3f89d0f79f091a2ccb2dcef83f9b4a4322ef0350bfa732502a83342a0"
+        },
+        {
+          "name": "src/units/unit.cpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/unit.cpp",
+          "bytes": 82998,
+          "sha256": "8768d4c71261b59a903f2df89fa3ca577a19b3a3e047b4436cb2f34e084256df"
+        },
+        {
+          "name": "src/units/unit.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/unit.hpp",
+          "bytes": 57389,
+          "sha256": "c22dc3591be2d41111756f79c77b4af802a8f565a3400178972bb96f6e2af2be"
+        },
+        {
+          "name": "src/units/unit_alignments.hpp",
+          "href": "task_files/GA-REAL-002/input_files/src/units/unit_alignments.hpp",
+          "bytes": 905,
+          "sha256": "2bb5ac81e87f4543cfba6fe8064ee38896cb969e888f943060a2d7fe19ddac62"
+        }
+      ],
+      "reference": [
+        {
+          "name": "analysis.py",
+          "href": "task_files/GA-REAL-002/reference_output/analysis.py",
+          "bytes": 49604,
+          "sha256": "a2bde6172fe773cc49cd5e7d3f708f24f09ba5b01f35bd6dd35f3ea0b11745ad"
+        },
+        {
+          "name": "audit.xlsx",
+          "href": "task_files/GA-REAL-002/reference_output/audit.xlsx",
+          "bytes": 46199,
+          "sha256": "113d5578eccdcecda27650eb7f4080e4eb6c46e69b1d350f5350815cb5953067"
+        },
+        {
+          "name": "memo.docx",
+          "href": "task_files/GA-REAL-002/reference_output/memo.docx",
+          "bytes": 37852,
+          "sha256": "552ee64475651ddbbeda107dd05045f53421dcbd84457613c5ea1573c5130c59"
+        },
+        {
+          "name": "results.json",
+          "href": "task_files/GA-REAL-002/reference_output/results.json",
+          "bytes": 282391,
+          "sha256": "304a5a96c2a4984cd3a11c2e54afffcff9774f793a2499a61308e4960c7d7240"
+        }
+      ],
+      "rubric": [
+        {
+          "name": "rubrics.json",
+          "href": "task_files/GA-REAL-002/rubrics.json",
+          "bytes": 7651,
+          "sha256": "c567c1d64cad881fc044a5c931a7bb6d43a450ad45d69bf8db3166d68ff027d0"
+        },
+        {
+          "name": "tests/rubrics.toml",
+          "href": "task_files/GA-REAL-002/tests/rubrics.toml",
+          "bytes": 8112,
+          "sha256": "f7fbd8b231c0b84df01092e97ca256f32db35b95ae444f3e7dee07c513503f4e"
+        },
+        {
+          "name": "tests/prompt.md",
+          "href": "task_files/GA-REAL-002/tests/prompt.md",
+          "bytes": 2393,
+          "sha256": "0126df7f65afc1a0b5ccddd1a1890edb84a922f5550b23481334159c52716565"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "analysis.py",
+          "href": "task_files/GA-REAL-002/model_output/analysis.py",
+          "bytes": 44980,
+          "sha256": "1cfd3d58bfe60e3636c51b68a682868d13222fd39c54ac22829bbebf717d102b"
+        },
+        {
+          "name": "audit.xlsx",
+          "href": "task_files/GA-REAL-002/model_output/audit.xlsx",
+          "bytes": 71167,
+          "sha256": "c7ed9146b8c10630aac2aeef532a89dfd068e17fcab74178f49a6d337577336d"
+        },
+        {
+          "name": "memo.docx",
+          "href": "task_files/GA-REAL-002/model_output/memo.docx",
+          "bytes": 40594,
+          "sha256": "a42da8fdf216202c281b5fbefc707a7b08555d6fe304a3dc4e71181273bbd402"
+        },
+        {
+          "name": "results.json",
+          "href": "task_files/GA-REAL-002/model_output/results.json",
+          "bytes": 757784,
+          "sha256": "04493dcf1f478bf5c8a9db5f63e1677176e3178fb4e43c601da0115f8ce7698e"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "execution.json",
+          "href": "task_files/GA-REAL-002/evidence/execution.json",
+          "bytes": 50214,
+          "sha256": "4770e1e25eb7a38804de3e118ddac481bcd4e19fe4a1ae51e88b5af4aacb452d"
+        },
+        {
+          "name": "api_usage.jsonl",
+          "href": "task_files/GA-REAL-002/evidence/api_usage.jsonl",
+          "bytes": 13825,
+          "sha256": "d52e3b349aad126eea4c153cd442baa17dd348765953d3788a2b2696eba5c406"
+        },
+        {
+          "name": "trajectory.jsonl",
+          "href": "task_files/GA-REAL-002/evidence/trajectory.jsonl",
+          "bytes": 1603477,
+          "sha256": "55f095caaf783ae2411f0e186da9ddb255428353611451576747110c9aef7e90"
+        },
+        {
+          "name": "task.toml",
+          "href": "task_files/GA-REAL-002/evidence/task.toml",
+          "bytes": 1911,
+          "sha256": "abac781b7a1a836684c5f78a59721b555163c53ddbf9e04fc784dd5459a76fb9"
+        },
+        {
+          "name": "author_review.json",
+          "href": "task_files/GA-REAL-002/evidence/author_review.json",
+          "bytes": 693,
+          "sha256": "82f0a9145341bdd175792645e76a21394dbf11af5afddc5a73c371b7d1775173"
+        },
+        {
+          "name": "provenance/git_sources.json",
+          "href": "task_files/GA-REAL-002/evidence/provenance/git_sources.json",
+          "bytes": 216619,
+          "sha256": "7eaefaf5389237bffb405fb5afa599790f583cf867577fb439f77dcfca8136db"
+        },
+        {
+          "name": "instruction.md",
+          "href": "task_files/GA-REAL-002/instruction.md",
+          "bytes": 3791,
+          "sha256": "c5c23ffb86d72d7f52166e45b579e04e50f529015e8a7ac6b0949956114463e7"
+        }
+      ]
+    },
+    "input_integrity": "matches_frozen_solver_inputs",
+    "review_note": "reference/rubric/evidence are reviewer-only; inputs are original files passed to the solver."
+  }
+}

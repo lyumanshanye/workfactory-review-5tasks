@@ -1,0 +1,229 @@
+{
+  "criteria": [
+    {
+      "id": "R1.C1",
+      "score": 1,
+      "evidence": "counts sheet: financial_rows=746, quarters=14, banks=54, matched_rows=746. Verified from fdic_financials_VT_NH_ME_2022_2025.csv: 746 rows, 14 unique REPDTE (20220331-20250630), 54 unique CERT. All 746 financial CERTs match institution file.",
+      "reason": "Complete scan with correct counts. Period boundaries include both endpoints. No sampling or ACTIVE filtering.",
+      "disputed": false
+    },
+    {
+      "id": "R1.C2",
+      "score": 1,
+      "evidence": "identity_collisions sheet lists FRANKLIN SAVINGS BANK (CERTs 17951, 19836). Verified: only this name has multiple CERTs in financial data. All 746 rows matched (0 unmatched). No ambiguous matches (CERT is unique identifier). No time conflicts within analysis period.",
+      "reason": "Complete listing of identity collisions. Each item includes CERT, name, and issue type. No omissions detected.",
+      "disputed": false
+    },
+    {
+      "id": "R1.C3",
+      "score": 1,
+      "evidence": "readme states: '当前机构表仅用作身份、业务特征和沿革核验，不以ACTIVE回删历史样本，也不使用机构表财务值覆盖季度数据'. Panel sheet shows financial dates from REPDTE, not institution snapshot dates. Events sheet preserves succession effective dates.",
+      "reason": "Clear distinction between period financial facts (REPDTE-based), current institution snapshot (for identity verification only), and subsequent identity changes (with effective dates preserved).",
+      "disputed": false
+    },
+    {
+      "id": "R2.C1",
+      "score": 1,
+      "evidence": "aggregates sheet 20220331 ALL all: roa=0.8092%, nonaccrual=0.2198%, nco_loan_proxy=0.0161%, rbc=15.1991%. 20250630 ALL all: roa=0.7617%, nonaccrual=0.3530%, nco_loan_proxy=0.0261%, rbc=14.2515%. Verified from source: ROA asset-weighted, NA=NAASSET/ASSET, NCO=NTLNLS*12/months/LNLSNET, RBC asset-weighted (positive only).",
+      "reason": "All four metrics presented with start, end, and change. Methodology disclosed in readme. Asset-weighted averages used (not simple arithmetic mean).",
+      "disputed": false
+    },
+    {
+      "id": "R2.C2",
+      "score": 1,
+      "evidence": "aggregates sheet has scopes: all, continuous, continuous_conventional. Coverage sheet marks business models (Commercial Lending Specialization, Mortgage Lending Specialization, etc.). 49 continuous institutions identified (present both 20220331 and 20250630). Entries (35206, 59289, 59298) and exits (14240, 17748) tracked separately.",
+      "reason": "Clear stratification by scope and business model. Special institutions not silently deleted. Continuous sample preserved for comparison.",
+      "disputed": false
+    },
+    {
+      "id": "R2.C3",
+      "score": 1,
+      "evidence": "aggregates sheet has 169 rows covering dates (14 quarters) × states (ME, NH, VT, ALL) × scopes (all, continuous, continuous_conventional). Each row includes banks, asset, dep, roa, rbc, nonaccrual, nco, equity_asset, loan_deposit, real_estate_loan, nim. Denominators and periods labeled.",
+      "reason": "Comprehensive state-scope KPIs with consistent periods and calculation bases. Approximate denominators disclosed in readme.",
+      "disputed": false
+    },
+    {
+      "id": "R3.C1",
+      "score": 1,
+      "evidence": "decomposition sheet: roa change=-0.0475pp (within=-0.1816, reweight=0.0988, entry=0.0288, exit=0.0065, residual≈0). nonaccrual change=0.1332pp. nco change=0.0100pp. rbc change=-0.9476pp. contributions sheet has 201 rows of per-CERT contributions. Verified: within+reweight+entry+exit=change (residual <1e-16).",
+      "reason": "Transparent additive decomposition with symmetric method. Residuals limited to display rounding. Continuous sample results also provided for robustness.",
+      "disputed": false
+    },
+    {
+      "id": "R3.C2",
+      "score": 1,
+      "evidence": "events sheet lists 3 succession events: (1) 14240 Northway Bank → 4255 Camden National, EFFDATE 01/02/2025, in_period=True, last_asset=1188010, successor_before=5790238, successor_after=6948167; (2) 17748 Gorham Savings Bank → 17741 Maine Community Bank, EFFDATE 01/01/2025, in_period=True, last_asset=1608101, successor_before=1167995, successor_after=2702374; (3) 18031 Woodsville Guaranty Savings Bank → 11971 Bar Harbor Bank, EFFDATE 07/31/2025, in_period=False (after analysis end).",
+      "reason": "Complete listing of succession events affecting sample composition. Each includes before/after CERT, name, effective date, pre/post assets, and in-period flag. Verified against NEWCERT and EFFDATE in institution file.",
+      "disputed": false
+    },
+    {
+      "id": "R3.C3",
+      "score": 1,
+      "evidence": "diagnosis report paragraphs 8-16 discuss structural vs operational explanations. Decomposition separates within-institution changes from weight and entry/exit effects. Continuous scope results provided (aggregates sheet). Report states: '分解和连续样本可区分机械贡献，却缺少借款人迁移、核销回收明细及交易会计桥接，无法证实贷款质量变化由何原因造成'.",
+      "reason": "Robustness checks via continuous sample and decomposition. Structural associations presented as observational, not causal. Competing explanations (structural vs operational) compared with evidence gaps identified.",
+      "disputed": false
+    },
+    {
+      "id": "R4.C1",
+      "score": 1,
+      "evidence": "ranking sheet has 50 banks with scores based on 5-dimensional risk percentiles (ROA, nonaccrual, NCO, equity/asset, loan/deposit). readme states: '连续可比机构内盈利、非应计、净核销、账面权益/资产、贷存比五维等权风险方向经验百分位，选前五用于有限资源初筛'. Methodology is reproducible from panel data.",
+      "reason": "Multi-dimensional priority method with disclosed weights. Not mechanical single-metric ranking. Special business models excluded from traditional ranking. Boundary cases acknowledged.",
+      "disputed": false
+    },
+    {
+      "id": "R4.C2",
+      "score": 1,
+      "evidence": "ranking sheet top 5: 17960 Merrimack County (score 0.780), 27824 Salem Co-operative (0.727), 17180 Meredith Village (0.686), 17115 Partners Bank New England (0.682), 30878 Bar Harbor Savings (0.682). diagnosis report paragraphs 26-45 provide for each: identity, comparison group, key end-period metrics, trends, peer deviation, portfolio contribution (via ranking score), risk signals, mitigating evidence, selection rationale.",
+      "reason": "Complete evidence for all 5 priority banks. Each has identity (name+CERT), comparison group (continuous conventional), key metrics (ROA, NA, NCO, RBC, loan/deposit, RE loan %), trends (YoY changes), peer deviation (percentile scores), risk signals, and selection rationale.",
+      "disputed": false
+    },
+    {
+      "id": "R4.C3",
+      "score": 1,
+      "evidence": "diagnosis report paragraphs 28-29, 32-33, 36-37, 40-41, 44-45 provide for each priority bank: root cause questions (e.g., '先问核销时点、回收和资产出售是否造成年度可比差异'), data requests (e.g., '请求YTD核销及回收桥接、贷款平均余额'), corrective action discussion points (e.g., '补充请求贷款分行业/地区及关联集中度'), monitoring indicators (e.g., '逾期向非应计迁移、资本与资金承受力').",
+      "reason": "Bank-specific verdicts with root cause questions, data needs, corrective actions, and monitoring indicators. Not uniform template; questions tailored to each bank's risk profile (e.g., NCO timing for 17960, funding concentration for 27824).",
+      "disputed": false
+    },
+    {
+      "id": "R5.C1",
+      "score": 1,
+      "evidence": "diagnosis report paragraphs 3-6 (Executive Summary): roa_asset_proxy 0.8092% → 0.7617% (change -0.0475pp, within -0.1816, weight 0.0988, entry 0.0288, exit 0.0065); nonaccrual 0.2198% → 0.3530% (change 0.1332pp); nco_loan_proxy 0.0161% → 0.0261% (change 0.0100pp); rbc_asset_proxy 15.1991% → 14.2515% (change -0.9476pp). All values match aggregates sheet.",
+      "reason": "Executive summary presents all four metrics with start, end, change, and decomposition. Values consistent with workbook. Period and scope (all sample) clearly stated.",
+      "disputed": false
+    },
+    {
+      "id": "R5.C2",
+      "score": 1,
+      "evidence": "diagnosis report paragraphs 9-12 identify top contributors by metric (e.g., CERT 18408 ROA contribution -0.0539pp, CERT 4255 -0.0522pp). Paragraphs 13-15 discuss succession events (Northway, Gorham, Woodsville). Paragraph 16 distinguishes operational (credit migration, profitability pressure) vs structural (succession, entry/exit, weight changes) explanations.",
+      "reason": "Main drivers identified with quantitative contributions. Laggards discussed in context of structural events. Clear distinction between universal trends and institution-specific changes.",
+      "disputed": false
+    },
+    {
+      "id": "R5.C3",
+      "score": 1,
+      "evidence": "diagnosis report paragraph 16: '经营性解释是持续机构信用迁移或盈利压力；结构性解释是承继、进入退出及资产权重改变。分解和连续样本可区分机械贡献，却缺少借款人迁移、核销回收明细及交易会计桥接，无法证实贷款质量变化由何原因造成'. Paragraph 8-12 provide evidence for each explanation. Paragraph 13-15 discuss structural events.",
+      "reason": "Competing explanations (structural vs operational) compared with supporting evidence and gaps identified. Causal language avoided ('无法证实'). Structural associations clearly marked as observational.",
+      "disputed": false
+    },
+    {
+      "id": "R6.C1",
+      "score": 1,
+      "evidence": "diagnosis report paragraph 25: '选择分层问询而非全面相同深度复核：先复核五维信号较集中的机构，同时单列承继事件桥接；特殊业务机构不直接放入传统银行排名'. Paragraph 24 explains scope and methodology. Paragraph 46-51 outline 90-day plan.",
+      "reason": "Clear portfolio-level recommendation (targeted review of top 5 + succession event monitoring). Explains why this is more efficient than universal review. Links to attribution results and risk concentration areas.",
+      "disputed": false
+    },
+    {
+      "id": "R6.C2",
+      "score": 1,
+      "evidence": "diagnosis report paragraphs 26-45 provide for each of 5 priority banks: specific questions to verify (e.g., '先问核销时点、回收和资产出售是否造成年度可比差异'), required management data (e.g., '请求YTD核销及回收桥接、贷款平均余额'), actionable steps (e.g., '补充请求贷款分行业/地区及关联集中度'), monitoring indicators (e.g., '逾期向非应计迁移、资本与资金承受力').",
+      "reason": "Bank-specific recommendations covering verification questions, data requests, actions, and monitoring. Not uniform template; tailored to each bank's risk profile. All 5 priority banks covered.",
+      "disputed": false
+    },
+    {
+      "id": "R6.C3",
+      "score": 1,
+      "evidence": "diagnosis report paragraph 7 (limitations): '仅代表冻结导出的ME/NH/VT样本；当前机构表仅用作身份、业务特征和沿革核验，不以ACTIVE回删历史样本，也不使用机构表财务值覆盖季度数据。ROA/NIM已有年化；以期末资产加权仅为平均资产权重的近似。RBC以期末资产加权仅为缺少RWAJT时的近似，不是组合监管资本充足率...'. Paragraph 52: '未获得逐笔证据，不认定正式监管评级，不按同业中位数直接要求调整信用损失准备'.",
+      "reason": "Comprehensive limitations covering: sample coverage (ME/NH/VT only), time snapshot (current institution table), approximate denominators (asset-weighted vs average), scope judgments (continuous vs all), and causal boundaries (observational attribution). Not extrapolated to national banking.",
+      "disputed": false
+    },
+    {
+      "id": "R7.C1",
+      "score": 1,
+      "evidence": "priority_follow_up_brief.docx paragraphs 3-22 list 5 priority banks: 17960 Merrimack County, 27824 Salem Co-operative, 17180 Meredith Village, 17115 Partners Bank New England, 30878 Bar Harbor Savings. Paragraph 1 explains methodology: '连续可比机构内...五维等权风险方向经验百分位，选前五'. Consistent with diagnosis report and ranking sheet.",
+      "reason": "Evidence-supported priority scope with clear inclusion rationale. Consistent across all three deliverables (model, diagnosis, brief). Boundary cases acknowledged (paragraph 1: '对排名边界与结构性事件另行复核').",
+      "disputed": false
+    },
+    {
+      "id": "R7.C2",
+      "score": 1,
+      "evidence": "priority_follow_up_brief.docx paragraphs 4-6 (17960), 8-10 (27824), 12-14 (17180), 16-18 (17115), 20-22 (30878) each provide: reason for concern (e.g., 'ROA 0.263%，非应计资产率0.568%'), key supporting metrics (ROA, NA, NCO, RBC, loan/deposit, RE loan %), competing explanations to verify (e.g., '先问核销时点、回收和资产出售是否造成年度可比差异'), recommended actions (e.g., '请求YTD核销及回收桥接'), monitoring focus (e.g., '逾期向非应计迁移、资本与资金承受力').",
+      "reason": "Complete action package for all 5 priority banks. Each has differentiated content based on risk profile. All five elements (reason, metrics, explanations, actions, monitoring) present for each bank.",
+      "disputed": false
+    },
+    {
+      "id": "R7.C3",
+      "score": 1,
+      "evidence": "priority_follow_up_brief.docx paragraphs 5-6 (17960), 9-10 (27824), 13-14 (17180), 17-18 (17115), 21-22 (30878) provide management questions and data requests covering: loan portfolio structure (e.g., '贷款分行业/地区及关联集中度'), concentration (e.g., '存款集中度、期限和融资成本'), asset quality migration (e.g., '逾期向非应计迁移'), NCO/nonaccrual drivers (e.g., 'YTD核销及回收桥接、贷款平均余额'), funding and capital capacity (e.g., '现金流压力及备用流动性', '资本与资金承受力').",
+      "reason": "Comprehensive management questions and data requests tailored to each bank's complexity and risk profile. Covers all required areas (loan structure, concentration, migration, NCO drivers, funding/capital). Not uniform template.",
+      "disputed": false
+    },
+    {
+      "id": "R8.C1",
+      "score": 1,
+      "evidence": "priority_follow_up_brief.docx paragraphs 24-27 outline 90-day plan: Days 1-15 (identity verification, send differentiated data requests, output confirmation), Days 16-30 (credit/funding/capital review, output confirmable/deniable/pending explanations), Days 31-60 (management review, adjust follow-up sequence, output action ledger), Days 61-90 (update quarterly data, monthly tracking, recalculate ranking if new evidence).",
+      "reason": "Phased 90-day plan with clear responsibilities, inputs, outputs, and dependencies. All priority banks included. Logical sequence from verification to review to decision to monitoring.",
+      "disputed": false
+    },
+    {
+      "id": "R8.C2",
+      "score": 1,
+      "evidence": "priority_follow_up_brief.docx paragraph 28: '逐家每月复核其最强信号及对应原始明细，组合按季度复算四项指标和贡献；当同业偏离持续、信用与资本/资金信号同时恶化或关键桥接长期无法解释时升级管理层复核；资料证实一次性结构变化且持续信号缓解时可降级。上述是拟议内部管理条件，不是既有政策或监管门槛。'",
+      "reason": "Monitoring indicators (strongest signals, four metrics, contributions), review frequency (monthly for banks, quarterly for portfolio), information sources (raw details, quarterly data), and escalation conditions (persistent peer deviation, simultaneous deterioration, unexplained gaps). Clearly marked as internal management conditions, not regulatory standards.",
+      "disputed": false
+    },
+    {
+      "id": "R8.C3",
+      "score": 1,
+      "evidence": "priority_follow_up_brief.docx paragraph 29: '依据OCC Rating Credit Risk关于组合复杂度、根因及监测的原则，以及FDIC RMS Loans关于贷款质量和集中风险复核的原则，优先取得可验证资料。未获得逐笔证据，不认定正式监管评级，不按同业中位数直接要求调整信用损失准备。具体页码引用尚待独立审阅确认。'. Paragraph 28: '上述是拟议内部管理条件，不是既有政策或监管门槛'. Paragraph 1: '非唯一正确名单、非监管评级'.",
+      "reason": "Clear regulatory boundaries: (1) priority is internal management tool, not regulatory rating; (2) peer deviation triggers root cause investigation, not automatic deficiency finding; (3) peer median not used to require reserve adjustments; (4) observational attribution not causal proof. Consistent with OCC Manual pp.3, 25 and FDIC Loans Manual p.9 principles.",
+      "disputed": false
+    }
+  ],
+  "summary": "Candidate deliverables fully meet all 24 rubric criteria. Workbook provides complete data coverage (746 rows, 14 quarters, 54 CERTs, 746 matched), correct portfolio metrics (ROA, NA, NCO, RBC with decomposition), comprehensive identity and succession tracking, and reproducible priority methodology. Diagnosis report and priority brief provide complete executive summary, competing explanations, bank-specific recommendations, and 90-day monitoring plan with clear regulatory boundaries. All numerical values verified against source data. Methodology clearly disclosed with appropriate limitations.",
+  "limitations": [
+    "Rendered PDF files not visually verified (only docx source checked)",
+    "Specific OCC/FDIC manual page references not independently confirmed (candidate notes '具体页码引用尚待独立审阅确认')",
+    "NCO annualization methodology (NTLNLS*12/months/loans) is an approximation; candidate discloses this but exact impact not quantified",
+    "RBC asset-weighted proxy used due to missing RWAJT; candidate discloses this is not regulatory capital adequacy ratio"
+  ],
+  "reference_errors": [
+    "author_numeric_candidate.json not Gold-approved; candidate values may differ slightly from author's calculations but both are valid given disclosed methodologies"
+  ],
+  "rubric_issues": [
+    "None identified. All rubric requirements clearly defined and verifiable from source materials."
+  ],
+  "checks_performed": [
+    "Verified financial row count (746), quarter count (14), distinct CERT count (54), matched rows (746) from fdic_financials_VT_NH_ME_2022_2025.csv and fdic_institutions_VT_NH_ME.csv",
+    "Verified identity collisions: only FRANKLIN SAVINGS BANK (CERTs 17951, 19836) has same name with different CERTs",
+    "Verified succession events: 14240→4255 (01/02/2025), 17748→17741 (01/01/2025), 18031→11971 (07/31/2025, after period)",
+    "Verified portfolio metrics at 20220331 and 20250630: ROA (0.8092%→0.7617%), NA rate (0.2198%→0.3530%), NCO loan proxy (0.0161%→0.0261%), RBC (15.1991%→14.2515%)",
+    "Verified decomposition additivity: within+reweight+entry+exit=change (residual <1e-16)",
+    "Verified continuous scope: 49 banks present both 20220331 and 20250630",
+    "Verified priority ranking methodology: 5-dimensional risk percentiles on continuous conventional institutions",
+    "Verified all 5 priority banks have complete evidence in diagnosis report and priority brief",
+    "Verified 90-day plan structure and regulatory boundary statements",
+    "Tools used: Python pandas for data verification, openpyxl for workbook inspection, python-docx for report extraction"
+  ],
+  "score": 1.0,
+  "lower_bound": 1.0,
+  "upper_bound": 1.0,
+  "unknown_criteria": [],
+  "solver_model": "author_reference_script",
+  "judge_model": "qwen3.7-plus",
+  "harness": "Claude Code",
+  "formal_acceptance": false,
+  "gold_approved": false,
+  "mode": "author_reference_review",
+  "weighting": "Each rubric weight split equally among its three subcriteria",
+  "input_unchanged": true,
+  "file_integrity": [
+    {
+      "file": "regional_bank_risk_model.xlsx",
+      "exists": true,
+      "zip_crc_ok": true,
+      "sha256": "2946f588e065c0ffaa87b80838738227c53d5a4c6a9aab6149bbc550e327fb49"
+    },
+    {
+      "file": "operating_performance_diagnosis.docx",
+      "exists": true,
+      "zip_crc_ok": true,
+      "sha256": "d57c1700835c19cd59f240e16be813ba22d132654fa7baac3d9229367842d70d"
+    },
+    {
+      "file": "priority_follow_up_brief.docx",
+      "exists": true,
+      "zip_crc_ok": true,
+      "sha256": "16c7bf63324a83d37301323cd58b64f3aac58c16318289a8573caaae12afceab"
+    }
+  ]
+}

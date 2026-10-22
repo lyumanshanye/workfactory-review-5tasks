@@ -1,0 +1,354 @@
+{
+  "challenges": [
+    {
+      "id": "CH1",
+      "capability": "cross_source",
+      "also": [
+        "dirty_data",
+        "scope_judgement"
+      ],
+      "category": "judgement",
+      "material": "财务季度导出与机构资料导出的CERT数据类型不同，而机构名称并非唯一键；财务导出中两个不同州、不同证书号的机构都使用“FRANKLIN SAVINGS BANK”。financial_definitions.yaml第251行和institution_definitions.yaml第249行均将CERT定义为FDIC机构唯一标识。",
+      "right": "将CERT统一为规范化字符串后匹配，并以证书号而非名称确定机构身份；同名但证书号不同的银行保持分立。名称只用于展示和辅助核验，未匹配或冲突记录进入复核清单。这样才能避免把两家银行的季度序列、同业位置和风险信号合并。",
+      "naive": "直接按银行名称连接，或因一份文件把CERT写成数值、另一份写成字符串而留下未匹配记录；名称看似稳定且易读，因此在赶工时很诱人。",
+      "situations": [
+        "同名银行对应不同证书号",
+        "跨文件证书号类型不一致"
+      ],
+      "basis": {
+        "kind": "default",
+        "ref": "default:D5"
+      },
+      "affects": [
+        "regional_bank_risk_model.xlsx: 机构匹配表、银行季度序列、未匹配与歧义清单",
+        "operating_performance_diagnosis.docx: 落后机构及其趋势证据",
+        "priority_follow_up_brief.docx: 优先机构名称、证书号和逐家理由"
+      ],
+      "internal_names": [
+        "CERT",
+        "NAMEFULL",
+        "NAME",
+        "STALP"
+      ],
+      "readings": {
+        "intended": "规范化CERT后按证书号匹配；同名但证书号不同的记录属于不同机构。",
+        "alternatives": [
+          {
+            "reading": "以名称和州组合为主键，证书号仅作辅助。",
+            "likelihood": "low",
+            "why": "FDIC字段定义明确把证书号定义为机构唯一标识，而名称存在真实重名，名称加州也不适合作为长期法定身份桥梁。"
+          }
+        ],
+        "settled_by": {
+          "kind": "default",
+          "ref": "default:D5"
+        },
+        "intended_judgement": false,
+        "judgement_why": ""
+      }
+    },
+    {
+      "id": "CH2",
+      "capability": "scope_judgement",
+      "also": [
+        "cross_source",
+        "dirty_data"
+      ],
+      "category": "time_semantics",
+      "material": "机构资料导出是晚于2025年6月30日的当前快照，其中ACTIVE、REPDTE、EFFDATE及名称或继承关系反映后续状态。institution_definitions.yaml第107行把ACTIVE定义为“当前”开放且受保状态，第1349行把REPDTE定义为所选财务期间末日；财务季度导出则包含分析期间内的实际季度记录。",
+      "right": "把机构资料中的ACTIVE和当前名称视为快照属性，不用它们倒推历史季度是否在样本中。分析总体由财务季度导出及简报期间确定；后续关闭、合并或更名只用于解释身份沿革，并明确其生效时点。",
+      "naive": "先筛选机构资料中ACTIVE等于开放状态的银行，再回连全部历史季度。这样操作简单，却会删掉分析期内真实存在、后来退出或发生交易的机构，并扭曲进入退出归因。",
+      "situations": [
+        "当前状态被误用于历史季度",
+        "分析时点后的机构变化"
+      ],
+      "basis": {
+        "kind": "external",
+        "ref": "FDIC BankFind Suite机构字段定义，institution_definitions.yaml第107行与第1349行",
+        "how": "shipped"
+      },
+      "affects": [
+        "regional_bank_risk_model.xlsx: 季度样本覆盖、进入退出标记和状态时间线",
+        "operating_performance_diagnosis.docx: 样本边界及组合变化解释",
+        "priority_follow_up_brief.docx: 截至分析时点可跟进机构与后续变化说明"
+      ],
+      "internal_names": [
+        "ACTIVE",
+        "REPDTE",
+        "EFFDATE",
+        "INACTIVE",
+        "NEWCERT"
+      ],
+      "readings": {
+        "intended": "ACTIVE仅描述机构资料快照的当前状态；历史样本资格由财务季度记录及其报告期决定。",
+        "alternatives": [
+          {
+            "reading": "仅保留机构资料中当前仍开放的银行，并将该筛选应用于整个历史区间。",
+            "likelihood": "low",
+            "why": "字段定义明确使用“当前”状态，且该资料的报告时点晚于任务分析时点，不能代表每个历史季度。"
+          }
+        ],
+        "settled_by": {
+          "kind": "external",
+          "ref": "FDIC BankFind Suite机构字段定义，institution_definitions.yaml第107行与第1349行"
+        },
+        "intended_judgement": false,
+        "judgement_why": ""
+      }
+    },
+    {
+      "id": "CH3",
+      "capability": "cross_source",
+      "also": [
+        "scope_judgement"
+      ],
+      "category": "source_precedence",
+      "material": "财务季度导出和机构资料导出都带有ASSET、DEP、EQ、ROA等字段，但机构资料是当前快照，数值所属报告期晚于任务时点。financial_definitions.yaml第770行说明财务REPDTE是所选财务期间末日；institution_definitions.yaml第130行、第654行和第1374行说明机构资料中的同名字段含义。",
+      "right": "截至2025年6月30日的经营指标、规模和权重取自财务季度导出的对应季度；机构资料中的同名数值仅作当前资料核验，不覆盖历史财务值。所有跨源差异先按报告期对齐，只有同一计量时点才比较。",
+      "naive": "认为机构资料字段更多或更新时间更新，便用其中的ASSET、DEP或ROA覆盖财务季度记录。最新数值看似更权威，但它回答的是另一报告期的问题。",
+      "situations": [
+        "同名财务字段属于不同报告期"
+      ],
+      "basis": {
+        "kind": "external",
+        "ref": "FDIC BankFind Suite财务及机构字段定义，financial_definitions.yaml第770行与institution_definitions.yaml第130行、第654行、第1374行",
+        "how": "shipped"
+      },
+      "affects": [
+        "regional_bank_risk_model.xlsx: 期末规模、组合权重、银行指标和跨源核验",
+        "operating_performance_diagnosis.docx: 截至分析时点的组合关键指标与趋势结论"
+      ],
+      "internal_names": [
+        "ASSET",
+        "DEP",
+        "EQ",
+        "ROA",
+        "REPDTE"
+      ],
+      "readings": {
+        "intended": "期间财务事实以对应季度的财务导出为准，机构快照只提供身份和当前属性。",
+        "alternatives": [
+          {
+            "reading": "对重叠字段一律采用更新时间较新的机构资料值。",
+            "likelihood": "low",
+            "why": "更新时间较新不代表计量期间相同；任务要求的是指定时点，而字段定义允许直接识别各值所属报告期。"
+          }
+        ],
+        "settled_by": {
+          "kind": "convention",
+          "what": "银行期间分析中的同计量时点原则",
+          "why": "财务经理只有在报告期、合并范围和计量基础一致时才用另一来源替换或核对期间数值。"
+        },
+        "intended_judgement": false,
+        "judgement_why": ""
+      }
+    },
+    {
+      "id": "CH4",
+      "capability": "domain_calc",
+      "also": [
+        "large_volume",
+        "diagnosis",
+        "scope_judgement"
+      ],
+      "category": "method",
+      "material": "完整财务导出按银行和季度分布大量记录，同时包含金额、预计算比率和规模字段。financial_definitions.yaml第802行、第11343行、第12355行、第12631行及第16743行分别给出ROA、非应计资产率、净核销率、净息差和总风险资本比率的计量基础；部分精确组合分母未随导出提供。",
+      "right": "扫描完整表并按季度计算组合指标：可取得分子分母的指标采用总分子除以总分母；仅有银行比率时采用与定义最接近的暴露权重并标明近似。组合变化采用对称Kitagawa、Shapley或等价的可加分解，将持续机构自身变化、规模权重变化和进入退出影响完整回勾至总变化，并用连续样本复核。",
+      "naive": "对银行比率直接做算术平均，再把两个期末均值之差归因于“银行表现”。这种做法快捷，却让小型或特殊机构获得与大型银行相同权重，也把样本变化误当成经营变化。",
+      "situations": [
+        "组合比率需要分母加权",
+        "总变化需要可回勾归因"
+      ],
+      "basis": {
+        "kind": "convention",
+        "ref": "分母加权组合比率与Kitagawa或Shapley式可加变化分解"
+      },
+      "affects": [
+        "regional_bank_risk_model.xlsx: 组合关键指标、州别和同类指标、变化贡献表及稳健性分析",
+        "operating_performance_diagnosis.docx: 组合表现、主要变化驱动和连续样本结论",
+        "priority_follow_up_brief.docx: 资源优先级是否由真实恶化还是权重与样本变化驱动"
+      ],
+      "internal_names": [
+        "ASSET",
+        "LNLSGR",
+        "NAASSET",
+        "NCLNLSR",
+        "NIMY",
+        "RBCRWAJ",
+        "ROA",
+        "REPDTE"
+      ],
+      "readings": {
+        "intended": "按指标定义使用分母或最接近的披露暴露进行组合加权，并以可完全回勾的分解区分持续机构表现、权重和进入退出效应。",
+        "alternatives": [
+          {
+            "reading": "所有银行等权平均，并以期末均值差作为组合变化。",
+            "likelihood": "low",
+            "why": "等权平均不代表组合总暴露，且无法回答简报明确要求的样本和权重影响。"
+          },
+          {
+            "reading": "只采用期初固定权重进行贡献分析，不单列进入退出效应。",
+            "likelihood": "low",
+            "why": "固定权重可作为敏感性视角，但单独使用不能完整解释实际组合变化，也无法与总变化完全回勾。"
+          }
+        ],
+        "settled_by": {
+          "kind": "convention",
+          "what": "分母加权组合比率与对称可加变化分解",
+          "why": "银行组合分析通常按经济暴露汇总比率，并要求贡献项与报告总变化一致；具体可采用多种等价的透明方法。"
+        },
+        "intended_judgement": true,
+        "judgement_why": "材料没有规定唯一分解算法，但区域财务经理应选择可复核、可加且不过度赋权小型机构的方法；该选择同时改变组合指标、驱动判断和资源优先级。"
+      }
+    },
+    {
+      "id": "CH5",
+      "capability": "scope_judgement",
+      "also": [
+        "domain_calc",
+        "diagnosis",
+        "long_writing"
+      ],
+      "category": "judgement",
+      "material": "财务导出混合传统存贷款机构、新设机构及特殊业务模式机构；例如个人信托机构长期呈现极低存款和零贷款，却有异常突出的盈利比率，另有若干银行在分析区间中途首次出现。机构资料的BKCLASS、SPECGRPN和TRUST可辅助识别业务模式，相关定义见financial_definitions.yaml第990行及机构资料导出。",
+      "right": "保留财务导出总体，但建立连续传统机构、进入退出机构和特殊业务模式机构三类分析标记。组合总览报告全样本，同时以连续且业务可比的同类组判断落后与恶化；特殊机构单列解释，不让其比率支配同业排序，并展示替代范围下结论是否稳定。",
+      "naive": "把所有机构放入一个排名，或反过来静默删除特殊机构和中途进入者。前者制造失真的极端同业位置，后者又改变任务总体并掩盖样本构成影响。",
+      "situations": [
+        "特殊业务模式与传统银行不可直接同业比较",
+        "机构在分析期间中途进入"
+      ],
+      "basis": {
+        "kind": "convention",
+        "ref": "银行同业分析中的业务模式分层与连续样本敏感性检验"
+      },
+      "affects": [
+        "regional_bank_risk_model.xlsx: 分析范围、比较组、连续样本和优先级依据",
+        "operating_performance_diagnosis.docx: 落后机构、组合趋势和结论边界",
+        "priority_follow_up_brief.docx: 优先范围及逐家可比性说明"
+      ],
+      "internal_names": [
+        "BKCLASS",
+        "SPECGRPN",
+        "TRUST",
+        "CERT",
+        "REPDTE"
+      ],
+      "readings": {
+        "intended": "全样本用于覆盖与组合报告，连续且业务可比的机构用于核心同业诊断，进入退出和特殊模式另行展示并做敏感性检验。",
+        "alternatives": [
+          {
+            "reading": "所有机构不分业务模式参加同一同业排名。",
+            "likelihood": "low",
+            "why": "零贷款或近零存款的信托型机构与传统存贷款银行在盈利和信用比率上没有相同经济基础。"
+          },
+          {
+            "reading": "从所有分析中完全排除特殊机构和中途进入者。",
+            "likelihood": "low",
+            "why": "财务导出是任务总体，完全排除会遗漏真实组合规模与样本构成变化；合理做法是分层而非静默删除。"
+          }
+        ],
+        "settled_by": {
+          "kind": "convention",
+          "what": "银行同业分析中的业务模式分层与连续样本敏感性检验",
+          "why": "财务管理人员通常先保证经济可比性，再用全样本和替代范围验证结论，而不是让结构性差异决定排名。"
+        },
+        "intended_judgement": true,
+        "judgement_why": "比较组没有唯一监管门槛，但按业务模式和连续覆盖分层是该职业的常规判断；改用单一总体会同时改变关键指标、落后机构、归因和最终跟进范围。"
+      }
+    },
+    {
+      "id": "CH6",
+      "capability": "diagnosis",
+      "also": [
+        "cross_source",
+        "long_writing",
+        "domain_calc"
+      ],
+      "category": "content",
+      "material": "财务导出显示MAINE COMMUNITY BANK在最后阶段出现显著规模跃升，而GORHAM SAVINGS BANK的季度序列同期终止。机构资料中后者的NEWCERT指向前者，并带有对应生效关系；两家机构分别以CERT识别。同期若干组合比率也随权重重新分配而变化。",
+      "right": "将该机构承继关系作为组合变化的重要结构性驱动，桥接交易前后规模并分别展示报告样本、连续样本和剔除交易影响的结果。若多数持续机构未出现同方向变化，就明确规则出“地区银行普遍同步恶化”这一竞争性解释；同时把并购后指标变化称为观察性归因而非已证明的经营因果。",
+      "naive": "把规模跃升视为一家银行的有机增长，把消失的机构当作普通缺报，再将组合指标变化概括为全地区经营趋势。期末排序会支持这种表面叙述，但无法解释证书继承和权重转移。",
+      "situations": [
+        "机构承继造成规模和权重突变",
+        "组合变化并非普遍同步恶化"
+      ],
+      "basis": {
+        "kind": "convention",
+        "ref": "银行并购前后按证书继承关系桥接并进行同口径敏感性分析"
+      },
+      "affects": [
+        "regional_bank_risk_model.xlsx: 进入退出归因、机构桥接、连续样本与交易敏感性结果",
+        "operating_performance_diagnosis.docx: 主要变化驱动、竞争性解释及被排除的普遍恶化解释",
+        "priority_follow_up_brief.docx: 对承继机构的验证问题和跟进资料请求"
+      ],
+      "internal_names": [
+        "CERT",
+        "NEWCERT",
+        "EFFDATE",
+        "ACTIVE",
+        "ASSET",
+        "NAMEFULL"
+      ],
+      "readings": {
+        "intended": "把证书继承关系识别为结构性变化，定量隔离其权重影响，并检验持续机构是否支持普遍恶化解释。",
+        "alternatives": [
+          {
+            "reading": "把承继机构的规模增长全部视为有机增长，并把退出机构视为缺失记录。",
+            "likelihood": "low",
+            "why": "机构资料提供明确的证书继承关系，且财务序列的同步终止与跃升为同一解释提供交叉来源证据。"
+          }
+        ],
+        "settled_by": {
+          "kind": "convention",
+          "what": "银行并购前后按证书继承关系桥接并进行同口径敏感性分析",
+          "why": "机构交易会改变报告实体和组合权重，银行组合诊断必须先隔离结构变化，才能评价持续经营表现。"
+        },
+        "intended_judgement": false,
+        "judgement_why": ""
+      }
+    },
+    {
+      "id": "CH7",
+      "capability": "rule_application",
+      "also": [
+        "long_writing",
+        "diagnosis"
+      ],
+      "category": "reference",
+      "material": "OCC_Rating_Credit_Risk.pdf第3页说明风险评级体系应适应银行业务复杂度，第25页要求对显著偏离同业的比率继续分析根因；FDIC_RMS_Manual_3.2_Loans.pdf第3页要求贷款政策覆盖组合结构、分散化、集中度监测及纠正行动，第9页又说明不能仅为达到同业中位数或目标比率而调整信用损失准备。",
+      "right": "对最终选入跟进范围的每家银行逐项应用这些原则：说明偏离或恶化证据、业务复杂度、需要验证的根因、贷款组合或集中度资料请求及监测指标。把结论表述为内部跟进优先级，不冒充监管评级，也不把同业中位数当作准备金或合规门槛。",
+      "naive": "依据单一比率或总分排序直接贴上高风险标签，并为所有银行套用相同问题清单。这样便于制作简报，却忽略业务复杂度、根因调查要求和准备金判断的管理裁量。",
+      "situations": [
+        "同业显著偏离触发根因追查",
+        "跟进框架需适应机构复杂度"
+      ],
+      "basis": {
+        "kind": "external",
+        "ref": "OCC《Rating Credit Risk》手册第3页、第25页及FDIC《RMS Manual of Examination Policies, Section 3.2 Loans》PDF第3页、第9页",
+        "how": "shipped"
+      },
+      "affects": [
+        "operating_performance_diagnosis.docx: 竞争性解释、改进建议、监管含义边界和推荐行动",
+        "priority_follow_up_brief.docx: 逐家关注理由、管理层问题、证据请求、建议行动与监测安排",
+        "regional_bank_risk_model.xlsx: 优先级证据映射和逐家复核框架"
+      ],
+      "readings": {
+        "intended": "对每家被选机构结合其业务复杂度和多项证据决定是否优先跟进，并把同业偏离作为进一步调查信号而非监管评级或法定阈值。",
+        "alternatives": [
+          {
+            "reading": "将任一不利同业偏离直接视为监管缺陷，并按统一阈值确定优先级。",
+            "likelihood": "low",
+            "why": "OCC手册要求进一步识别根因并使体系适应机构复杂度，FDIC手册也明确反对仅为达到同业基准而调整准备金。"
+          }
+        ],
+        "settled_by": {
+          "kind": "external",
+          "ref": "OCC《Rating Credit Risk》手册第3页、第25页及FDIC《RMS Manual of Examination Policies, Section 3.2 Loans》PDF第3页、第9页"
+        },
+        "intended_judgement": false,
+        "judgement_why": ""
+      }
+    }
+  ],
+  "dropped_level1": null
+}

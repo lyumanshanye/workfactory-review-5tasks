@@ -1,0 +1,297 @@
+{
+ "p1": {
+  "status": "ok",
+  "tries": 1,
+  "at": "2026-10-13T10:47:48",
+  "problems": [],
+  "quota_total": 0
+ },
+ "request": {
+  "status": "ok",
+  "tries": 1,
+  "round": 1,
+  "at": "2026-10-13T11:06:48",
+  "problems": [],
+  "history": [
+   {
+    "try": 1,
+    "tag": "t1",
+    "problems": [],
+    "notes": [],
+    "at": "2026-10-13T11:06:48"
+   }
+  ]
+ },
+ "challenges": {
+  "status": "ok",
+  "tries": 1,
+  "round": 1,
+  "at": "2026-10-13T12:04:33",
+  "problems": [],
+  "history": [
+   {
+    "try": 1,
+    "tag": "t1",
+    "problems": [],
+    "notes": [
+     "(audit) naive handling tolerated as weak: ['CH7']",
+     "(audit) CH1: The brief's per-diem footing does not flag seasonal windows or the early arrival.",
+     "(audit) CH2: The brief's per-diem footing does not flag the unlisted town or the standard-rate line.",
+     "(audit) CH3: The brief's per-diem footing does not mention M&IE treatment on travel days.",
+     "(audit) CH4: The brief's cap and committee-decision request do not mention the contracted block gap or 41 CFR 301-74.",
+     "(audit) CH5: The brief asks for one row per traveler but does not warn about name mismatches or an unmatched nomination.",
+     "(audit) CH6: The clause is a standing eligibility policy; the solver still has to notice that the data contains the boundary case and the recorded exception.",
+     "(audit) CH7: The brief already directs companion and guest arrangements to be treated as non-travel program items, so the sum-the-rows mistake is unlikely."
+    ],
+    "at": "2026-10-13T12:04:33"
+   }
+  ]
+ },
+ "materials": {
+  "status": "ok",
+  "tries": 2,
+  "round": 1,
+  "at": "2026-10-13T12:50:19",
+  "problems": [],
+  "history": [
+   {
+    "try": 1,
+    "tag": "t1",
+    "problems": [
+     "eCFR_41_CFR_301-74.xml: a document needs a realistic outline (its section headings)",
+     "parameter 'conference dates': source must be `brief` or a file of this plan",
+     "parameter 'contracted conference-block room rate at the host hotel': source must be `brief` or a file of this plan",
+     "parameter 'guest registration fee': source must be `brief` or a file of this plan",
+     "parameter 'guest dinner': source must be `brief` or a file of this plan",
+     "parameter 'companion lodging add-on': source must be `brief` or a file of this plan"
+    ],
+    "notes": [],
+    "at": "2026-10-13T12:42:50"
+   },
+   {
+    "try": 2,
+    "tag": "t2",
+    "problems": [],
+    "notes": [],
+    "at": "2026-10-13T12:50:19"
+   }
+  ]
+ },
+ "intents": {
+  "status": "ok",
+  "tries": 3,
+  "round": 1,
+  "at": "2026-10-13T13:24:53",
+  "problems": [],
+  "history": [
+   {
+    "try": 1,
+    "tag": "t1",
+    "problems": [
+     "R7: 2 criteria; each rubric item has 3-5",
+     "R8: 2 criteria; each rubric item has 3-5",
+     "R9: 2 criteria; each rubric item has 3-5",
+     "R3.C1: numbers ['75%'] in the criterion text -- no values in P2; use a placeholder",
+     "R6.C3: numbers ['301', '74,'] in the criterion text -- no values in P2; use a placeholder",
+     "12% of the criteria are qualitative (at least 22%; the real task: 32%) -- grade the reasoning, the method and the conclusions in words (kind judgement, fact or recommendation, no value), each with its `points`",
+     "R5.C1: a `complete` criterion grades a set, list or table value (a verify check, or a fact listing three or more `points`) and says every member must be there"
+    ],
+    "notes": [],
+    "at": "2026-10-13T13:00:56"
+   },
+   {
+    "try": 2,
+    "tag": "t2",
+    "problems": [
+     "R8.C3: covered_by.asked_by 'so managers and People Operations know exactly who is cleared to attend' is not a phrase of the brief draft"
+    ],
+    "notes": [],
+    "at": "2026-10-13T13:12:16"
+   },
+   {
+    "try": 3,
+    "tag": "t3",
+    "problems": [],
+    "notes": [],
+    "at": "2026-10-13T13:24:53"
+   }
+  ]
+ },
+ "readings": {
+  "status": "ok",
+  "tries": 1,
+  "round": 1,
+  "at": "2026-10-13T13:31:15",
+  "problems": [],
+  "history": [
+   {
+    "try": 1,
+    "tag": "t1",
+    "audited": 21,
+    "problems": [],
+    "failures": 0,
+    "at": "2026-10-13T13:31:15"
+   }
+  ]
+ },
+ "ready_for_p3": {
+  "status": "ok",
+  "at": "2026-10-13T13:31:15",
+  "artifacts": [
+   "blueprint.json",
+   "request.json",
+   "challenges.json",
+   "materials.json",
+   "intents.json",
+   "readings.json"
+  ]
+ },
+ "p3_build": {
+  "status": "ok",
+  "tries": 5,
+  "at": "2026-10-13T22:12:22",
+  "sessions": 3,
+  "history": [
+   {
+    "session": "build3",
+    "rc": 0
+   }
+  ],
+  "pool": "glm",
+  "problems": []
+ },
+ "p3_rubric": {
+  "status": "ok",
+  "tries": 6,
+  "at": "2026-10-13T22:48:49",
+  "criteria": 24,
+  "problems": []
+ },
+ "p3_brief": {
+  "status": "ok",
+  "tries": 4,
+  "at": "2026-10-13T22:12:22",
+  "problems": []
+ },
+ "p3_build_audit": {
+  "status": "ok",
+  "tries": 3,
+  "at": "2026-10-13T22:18:11",
+  "built_at": "2026-10-13T22:12:22",
+  "rounds": 0,
+  "counted": [],
+  "cap": 2,
+  "problems": []
+ },
+ "p3_blind": {
+  "status": "ok",
+  "tries": 5,
+  "at": "2026-10-13T22:48:49",
+  "rounds": 3,
+  "drop": [
+   "R1.C1",
+   "R1.C2",
+   "R6.C2",
+   "R6.C4"
+  ],
+  "history": {
+   "block_gap_total": {
+    "reworked": 1
+   },
+   "cleared_travelers": {
+    "defined": 1
+   },
+   "exception_nominee": {
+    "defined": 1
+   },
+   "v_R6_C4": {
+    "defined": 1
+   },
+   "v_R6_C2": {
+    "reworked": 1
+   }
+  },
+  "agree": [
+   6,
+   6
+  ],
+  "found": [
+   13,
+   17
+  ],
+  "slots": 20,
+  "diagnosis": [
+   {
+    "solver": 1,
+    "kind": "ok",
+    "stated": 13,
+    "missed": 7,
+    "extraction": 1,
+    "extraction_keys": [
+     "boundary_cleared_traveler"
+    ],
+    "solver_missed": 6
+   },
+   {
+    "solver": 2,
+    "kind": "ok",
+    "stated": 17,
+    "missed": 3,
+    "extraction": 0,
+    "extraction_keys": [],
+    "solver_missed": 3
+   }
+  ],
+  "intent_issues": [
+   {
+    "key": "v_R6_C2",
+    "why": "The fee-schedule costing, separate program-line treatment, and committee-funding framing are supported by the planning brief and the memo instruction to explain how non-travel program items are treated. However, the shipped material contains no reference to IRS Publication 463 or to tax deductibility/taxable fringes, and D16's text does not require or authorize that specific legal conclusion. The IRS note is therefore an extra requirement that the instructions and files do not support."
+   }
+  ],
+  "built_at": "2026-10-13T22:12:22",
+  "problems": []
+ },
+ "p3_difficulty": {
+  "status": "ok",
+  "tries": 2,
+  "at": "2026-10-13T22:52:21",
+  "built_at": "2026-10-13T22:12:22",
+  "verdict": "ok",
+  "reworks": 0,
+  "hard_reworks": 1,
+  "gate_scoring": "llm",
+  "lost": 0.7761,
+  "crit_fail": 0.5672,
+  "lost_llm": 0.7687,
+  "full_share": 0.0,
+  "threshold": 0.3164,
+  "shape": {
+   "rubrics": 9,
+   "criteria": 24,
+   "criteria_per_rubric": 2.67,
+   "compound_share": 0.667
+  },
+  "seen_through": [],
+  "problems": []
+ },
+ "p3_gates": {
+  "status": "ok",
+  "tries": 1,
+  "at": "2026-10-13T22:59:12",
+  "problems": [],
+  "verdict": "PASS"
+ },
+ "p3_publish": {
+  "status": "ok",
+  "tries": 1,
+  "at": "2026-10-13T22:59:14",
+  "problems": []
+ },
+ "accepted": {
+  "status": "ok",
+  "tries": 1,
+  "at": "2026-10-13T22:59:14",
+  "problems": [],
+  "quota_cell": "T2|long_writing"
+ }
+}

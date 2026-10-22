@@ -1,0 +1,15 @@
+{
+  "task": "GA-REAL-002",
+  "source_policy": "all_original_public_files",
+  "instruction_sha256": "c5c23ffb86d72d7f52166e45b579e04e50f529015e8a7ac6b0949956114463e7",
+  "rubrics_sha256": "c567c1d64cad881fc044a5c931a7bb6d43a450ad45d69bf8db3166d68ff027d0",
+  "rubric_positive_count": 30,
+  "rubric_penalty_count": 1,
+  "reference_computation": "completed",
+  "reference_business_narrative": "draft_needs_domain_review",
+  "independent_gold_score": null,
+  "model_scores": null,
+  "formal_acceptance": false,
+  "prior_task_with_simulated_inputs_not_reused": true,
+  "note": "This candidate is not an accepted A2 task. Existing task-image build, fixed verifier and expert gates remain required."
+}

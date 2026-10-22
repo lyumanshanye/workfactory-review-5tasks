@@ -1,0 +1,950 @@
+{
+ "case": "v3-00301",
+ "built_at": "2026-10-18T00:34:51",
+ "blind_round": 1,
+ "summary": {
+  "solvers": [
+   {
+    "solver": 1,
+    "crit_fail": 0.3281,
+    "lost": 0.8,
+    "full": false,
+    "rubrics": 8,
+    "criteria": 29,
+    "left_out": 2,
+    "criteria_results": [
+     {
+      "id": "R1.C1",
+      "rubric": 1,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R1.C2",
+      "rubric": 1,
+      "mode": "values",
+      "passed": false,
+      "why": "excluded_decoy_state_county_pairs: not stated"
+     },
+     {
+      "id": "R1.C3",
+      "rubric": 1,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R1.C4",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The annual AQI summary sheet explicitly labels the selected state, county, and year, and the core annual AQI summary metrics are sourced to the supplied EPA annual AQI summary row."
+     },
+     {
+      "id": "R1.C5",
+      "rubric": 1,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R2.C1",
+      "rubric": 2,
+      "mode": "values",
+      "passed": false,
+      "why": "cancellation_days: [{'date': '2024-04-17 00:00:00', 'aqi': '122'}, {'date': '2024-05-18 00:00:00', 'aqi': '105'}, {'date': '2024-06-14 00:00:00', 'aqi': '115'}, {'date': '2024-06-15 00:00:00', 'aqi': '126'}, {'date': '2024-06-21 00:00:00', 'aqi': '169'}, {'date': '2024-06-22 00:00:00', 'aqi': '171'}, {'date': '2024-07-12 00:00:00', 'aqi': '115'}, {'date': '2024-07-23 00:00:00', 'aqi': '115'}, {'date': '2024-07-24 00:00:00', 'aqi': '119'}, {'date': '2024-07-26 00:00:00', 'aqi': '119'}, {'date': '2024-10-18 00:00:00', 'aqi': '103'}] differs (reference_right)"
+     },
+     {
+      "id": "R2.C2",
+      "rubric": 2,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R2.C3",
+      "rubric": 2,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R3.C1",
+      "rubric": 3,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R3.C2",
+      "rubric": 3,
+      "mode": "values",
+      "passed": false,
+      "why": "low_aqi_cancellation_days: [{'date': '2024-04-17 00:00:00', 'aqi': '122'}, {'date': '2024-05-18 00:00:00', 'aqi': '105'}, {'date': '2024-06-14 00:00:00', 'aqi': '115'}, {'date': '2024-06-15 00:00:00', 'aqi': '126'}, {'date': '2024-07-12 00:00:00', 'aqi': '115'}, {'date': '2024-07-23 00:00:00', 'aqi': '115'}, {'date': '2024-07-24 00:00:00', 'aqi': '119'}, {'date': '2024-07-26 00:00:00', 'aqi': '119'}, {'date': '2024-10-18 00:00:00', 'aqi': '103'}] differs (reference_right)"
+     },
+     {
+      "id": "R3.C3",
+      "rubric": 3,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R3.C4",
+      "rubric": 3,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook contains an 'observed_cancellation' indicator in daily_aqi and a separate 'cancellation_days' sheet that includes all 11 observed county cancellation dates, including those with AQI below 150. It does not redefine cancellation days to only days meeting the planned 150 AQI threshold; the 'meets_150_threshold' column simply flags whether each observed cancellation day also met the planning threshold. The threshold comparison sheet explicitly notes 11 observed cancellation days versus 2 days classified under the planned AQI >= 150 threshold, while retaining all observed dates."
+     },
+     {
+      "id": "R4.C1",
+      "rubric": 4,
+      "mode": "words",
+      "passed": false,
+      "why": "The workbook specifies a log-link negative binomial regression and reports overdispersion diagnostics, but it does not specify the required log(Pima County resident population estimate) offset in the model specification or model form. The stated model form has no offset term."
+     },
+     {
+      "id": "R4.C2",
+      "rubric": 4,
+      "mode": "values",
+      "passed": false,
+      "why": "primary_cancellation_ci_excludes_null: True differs (reference_right)"
+     },
+     {
+      "id": "R4.C3",
+      "rubric": 4,
+      "mode": "values",
+      "passed": null,
+      "why": "primary_aqi0_rr: left out (ambiguous); primary_aqi0_ci_upper: left out (ambiguous)"
+     },
+     {
+      "id": "R4.C4",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The primary model outcome is clearly defined as asthma-specific daily ED visit counts, not broader respiratory or all-cause counts, and the same asthma_ed_visits definition is used in the rate calculations."
+     },
+     {
+      "id": "R5.C1",
+      "rubric": 5,
+      "mode": "values",
+      "passed": null,
+      "why": "primary_lagged_terms: left out (ambiguous)"
+     },
+     {
+      "id": "R5.C2",
+      "rubric": 5,
+      "mode": "words",
+      "passed": false,
+      "why": "The workbook reports sample size (observations = 364) and residual degrees of freedom (residual df = 359), and the primary_model sheet contains coefficient estimates. However, it does not report residual deviance anywhere. The diagnostics include log-likelihood, AIC, and Pearson chi-square, but not residual deviance."
+     },
+     {
+      "id": "R5.C3",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook clearly reports an overdispersion diagnostic and states that the final primary model is negative binomial, not Poisson. The negative binomial dispersion parameter alpha is reported with a confidence interval."
+     },
+     {
+      "id": "R5.C4",
+      "rubric": 5,
+      "mode": "values",
+      "passed": false,
+      "why": "primary_ci_table: [{'term': 'aqi (lag 0, per 10 AQI units)', 'rate_ratio': '1.0182', 'ci95_lower': '0.993', 'ci95_upper': '1.0439'}, {'term': 'aqi (lag 1, per 10 AQI units)', 'rate_ratio': '1.0306', 'ci95_lower': '1.0025', 'ci95_upper': '1.0596'}, {'term': 'aqi (lag 2, per 10 AQI units)', 'rate_ratio': '0.9814', 'ci95_lower': '0.9584', 'ci95_upper': '1.005'}, {'term': 'cancelled_150 (same-day)', 'rate_ratio': '1.7656', 'ci95_lower': '1.1305', 'ci95_upper': '2.7575'}] differs (reference_right)"
+     },
+     {
+      "id": "R6.C1",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The primary model clearly defines cancellation status using the planned daily AQI threshold of 150, and the workbook labels that threshold unambiguously in both the model specification and the primary model output."
+     },
+     {
+      "id": "R6.C2",
+      "rubric": 6,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R6.C3",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The primary model includes separate terms for same-day AQI, previous-day AQI, second-previous-day AQI, and a cancellation-status indicator, all estimated in the same regression model on the same analytic dataset."
+     },
+     {
+      "id": "R7.C1",
+      "rubric": 7,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R7.C2",
+      "rubric": 7,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R7.C3",
+      "rubric": 7,
+      "mode": "values",
+      "passed": false,
+      "why": "missing_daily_rate_dates: not stated"
+     },
+     {
+      "id": "R7.C4",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook labels the rate fields as asthma-specific ED visit rates, using names like daily_asthma_rate_per_10,000, annual_asthma_ed_rate_per_10,000, and daily asthma ED visit counts. It explicitly defines the denominator as the Pima County resident population in the annual_summary and assumptions_limitations sheets, and does not use monitored days or broader respiratory visit volumes as the denominator."
+     },
+     {
+      "id": "R8.C1",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The assumptions and limitations section explicitly reports that the AQI >= 150 planning assumption was checked against the cancellation log and was not supported, and it identifies the observed lower threshold."
+     },
+     {
+      "id": "R8.C2",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The section identifies the fixed 2024 Census resident population estimate for Pima County as the denominator used for the rates."
+     },
+     {
+      "id": "R8.C3",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The limitations section semantically notes the model estimates an association rather than a confirmed causal relationship, and it identifies several plausible unmeasured confounders."
+     },
+     {
+      "id": "R8.C4",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The section states that the numerator uses asthma-specific ED visit counts from the syndromic registry, not broader respiratory or all-cause counts, and it describes syndromic surveillance completeness."
+     }
+    ]
+   },
+   {
+    "solver": 2,
+    "crit_fail": 0.3864,
+    "lost": 0.9,
+    "full": false,
+    "rubrics": 8,
+    "criteria": 29,
+    "left_out": 2,
+    "criteria_results": [
+     {
+      "id": "R1.C1",
+      "rubric": 1,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R1.C2",
+      "rubric": 1,
+      "mode": "values",
+      "passed": false,
+      "why": "excluded_decoy_state_county_pairs: not stated"
+     },
+     {
+      "id": "R1.C3",
+      "rubric": 1,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R1.C4",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The annual AQI summary sheet explicitly labels the selected state, county, and year, and states that the summary values are taken from the single supplied EPA AirData annual AQI row for Pima County."
+     },
+     {
+      "id": "R1.C5",
+      "rubric": 1,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R2.C1",
+      "rubric": 2,
+      "mode": "values",
+      "passed": false,
+      "why": "cancellation_days: [{'date': '2024-04-17 00:00:00', 'daily_AQI': '122'}, {'date': '2024-05-18 00:00:00', 'daily_AQI': '105'}, {'date': '2024-06-14 00:00:00', 'daily_AQI': '115'}, {'date': '2024-06-15 00:00:00', 'daily_AQI': '126'}, {'date': '2024-06-21 00:00:00', 'daily_AQI': '169'}, {'date': '2024-06-22 00:00:00', 'daily_AQI': '171'}, {'date': '2024-07-12 00:00:00', 'daily_AQI': '115'}, {'date': '2024-07-23 00:00:00', 'daily_AQI': '115'}, {'date': '2024-07-24 00:00:00', 'daily_AQI': '119'}, {'date': '2024-07-26 00:00:00', 'daily_AQI': '119'}, {'date': '2024-10-18 00:00:00', 'daily_AQI': '103'}] differs (reference_right)"
+     },
+     {
+      "id": "R2.C2",
+      "rubric": 2,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R2.C3",
+      "rubric": 2,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R3.C1",
+      "rubric": 3,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R3.C2",
+      "rubric": 3,
+      "mode": "values",
+      "passed": false,
+      "why": "low_aqi_cancellation_days: [{'date': '2024-04-17 00:00:00', 'daily_AQI': '122'}, {'date': '2024-05-18 00:00:00', 'daily_AQI': '105'}, {'date': '2024-06-14 00:00:00', 'daily_AQI': '115'}, {'date': '2024-06-15 00:00:00', 'daily_AQI': '126'}, {'date': '2024-07-12 00:00:00', 'daily_AQI': '115'}, {'date': '2024-07-23 00:00:00', 'daily_AQI': '115'}, {'date': '2024-07-24 00:00:00', 'daily_AQI': '119'}, {'date': '2024-07-26 00:00:00', 'daily_AQI': '119'}, {'date': '2024-10-18 00:00:00', 'daily_AQI': '103'}] differs (reference_right)"
+     },
+     {
+      "id": "R3.C3",
+      "rubric": 3,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R3.C4",
+      "rubric": 3,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook includes a dedicated 'cancellation_days_observed' sheet listing all 11 dates on which at least one Pima County school cancelled outdoor activity, including nine dates with AQI below 150 (e.g., 2024-04-17 AQI 122, 2024-05-18 AQI 105, 2024-06-14 AQI 115, 2024-07-12 AQI 115, 2024-10-18 AQI 103). It separately reports only the planned-threshold days in 'cancellation_days_threshold150', but this does not redefine observed cancellations because the observed sheet and assumptions clearly distinguish observed cancellations from threshold-based cancellation status."
+     },
+     {
+      "id": "R4.C1",
+      "rubric": 4,
+      "mode": "words",
+      "passed": false,
+      "why": "The primary model is a negative binomial GLM with log link and the workbook reports overdispersion diagnostics, but it does not include or document the required log of the Pima County resident population estimate as an offset. The model formula and dataset contain no population/offset term."
+     },
+     {
+      "id": "R4.C2",
+      "rubric": 4,
+      "mode": "values",
+      "passed": false,
+      "why": "primary_cancellation_rr: '2.02649473055113' differs (reference_right); primary_cancellation_ci_lower: '1.183784573318707' differs (reference_right); primary_cancellation_ci_upper: '3.469111682574586' differs (reference_right); primary_cancellation_ci_excludes_null: not stated"
+     },
+     {
+      "id": "R4.C3",
+      "rubric": 4,
+      "mode": "values",
+      "passed": null,
+      "why": "primary_aqi0_rr: left out (ambiguous); primary_aqi0_ci_upper: left out (ambiguous)"
+     },
+     {
+      "id": "R4.C4",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The primary model uses daily asthma-specific ED visit counts as the outcome, not broader respiratory or all-cause visits, and the same asthma ED visit definition is used in the model dataset and the rate calculations."
+     },
+     {
+      "id": "R5.C1",
+      "rubric": 5,
+      "mode": "values",
+      "passed": null,
+      "why": "primary_lagged_terms: left out (ambiguous)"
+     },
+     {
+      "id": "R5.C2",
+      "rubric": 5,
+      "mode": "words",
+      "passed": false,
+      "why": "The workbook does not fully report the primary count model's residual deviance value. It reports sample size (n=364) and residual df (df_residuals=357) in the model_spec_diagnostics sheet, but the primary coefficient estimates sheet omits these diagnostics, and the actual residual deviance is not stated; only the Poisson overdispersion deviance/df ratio (2.1183) is provided. Therefore the criterion requiring sample size, residual deviance, and residual degrees of freedom alongside the primary coefficient estimates is not met."
+     },
+     {
+      "id": "R5.C3",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook states the final primary model is a negative binomial GLM (NB2) and reports overdispersion diagnostics and the NB dispersion parameter alpha. The Poisson overdispersion is quantified by deviance/df and Pearson/df ratios, and alpha is reported with its standard error and confidence interval."
+     },
+     {
+      "id": "R5.C4",
+      "rubric": 5,
+      "mode": "values",
+      "passed": false,
+      "why": "primary_ci_table: [{'term': 'AQI_lag0', 'irr': '1.015463490310294', 'irr_ci_low': '0.9894052057091609', 'irr_ci_high': '1.042208080372967'}, {'term': 'AQI_lag1', 'irr': '1.036362447871751', 'irr_ci_low': '1.005938707510305', 'irr_ci_high': '1.067706327771194'}, {'term': 'AQI_lag2', 'irr': '0.9792162333035661', 'irr_ci_low': '0.9544056713504143', 'irr_ci_high': '1.004671766261092'}, {'term': 'cancellation_status_lag0', 'irr': '2.02649473055113', 'irr_ci_low': '1.183784573318707', 'irr_ci_high': '3.469111682574586'}] differs (reference_right)"
+     },
+     {
+      "id": "R6.C1",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook explicitly defines the primary cancellation-status exposure using the planned AQI >= 150 threshold and labels it clearly in the model specification and assumptions sheets."
+     },
+     {
+      "id": "R6.C2",
+      "rubric": 6,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R6.C3",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The primary model includes separate exposure terms for same-day, previous-day, and second-previous-day AQI, plus cancellation-status terms, all estimated from the shared analytic dataset."
+     },
+     {
+      "id": "R7.C1",
+      "rubric": 7,
+      "mode": "values",
+      "passed": false,
+      "why": "avg_daily_asthma_rate_per_10k: not stated"
+     },
+     {
+      "id": "R7.C2",
+      "rubric": 7,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R7.C3",
+      "rubric": 7,
+      "mode": "values",
+      "passed": false,
+      "why": "missing_daily_rate_dates: not stated"
+     },
+     {
+      "id": "R7.C4",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The asthma ED summary workbook clearly identifies asthma-specific ED visit counts and bases all rates on the Pima County resident population. The daily_rates sheet includes asthma_ed_visits and population_2024, and the annual_rate sheet explicitly defines the numerator as asthma-classified ED visits and the denominator as the Pima County resident population, not monitored days or broader respiratory visits."
+     },
+     {
+      "id": "R8.C1",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The limitations section states the planning assumption that cancellations occurred only at AQI >= 150 and then reports that the cancellation log did not support this: only 2 of 11 cancellation days met that threshold, while 9 occurred on Unhealthy for Sensitive Groups days (AQI 101-150). This identifies the observed threshold at which cancellations actually began."
+     },
+     {
+      "id": "R8.C2",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The section explicitly identifies the supplied Census county population estimate as the denominator for all rates."
+     },
+     {
+      "id": "R8.C3",
+      "rubric": 8,
+      "mode": "words",
+      "passed": false,
+      "why": "The limitations do identify plausible unmeasured confounders, but they do not state that the model estimates association rather than causation."
+     },
+     {
+      "id": "R8.C4",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The limitations state that outcome counts come from asthma-specific ED visits in the syndromic surveillance registry and describe completeness of reporting."
+     }
+    ]
+   }
+  ],
+  "crit_fail": 0.3573,
+  "lost": 0.85,
+  "full_share": 0.0
+ },
+ "all_llm": {
+  "solvers": [
+   {
+    "solver": 1,
+    "crit_fail": 0.1667,
+    "lost": 0.4,
+    "full": false,
+    "rubrics": 8,
+    "criteria": 31,
+    "left_out": 0,
+    "criteria_results": [
+     {
+      "id": "R1.C1",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The daily AQI sheet contains 366 data rows after the header, covering each unique date in the 2024 leap year from 2024-01-01 through 2024-12-31. All retained rows are Pima County rows, as shown by the defining_site values beginning with 04-019-."
+     },
+     {
+      "id": "R1.C2",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The daily AQI sheet contains no rows for any state-county pair other than 04-019. Therefore the listed out-of-state pairs that share Pima's county code are excluded."
+     },
+     {
+      "id": "R1.C3",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The annual AQI summary reports exactly the required summary statistics for Pima County: 366 days with AQI, 113 good days, 2 unhealthy days, maximum AQI of 171, and median AQI of 56."
+     },
+     {
+      "id": "R1.C4",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The annual summary is labeled with state, county, and year, and its source column ties the values to the supplied EPA annual AQI summary for Pima County in the planning year."
+     },
+     {
+      "id": "R1.C5",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The annual AQI summary reports 10 Unhealthy for Sensitive Groups days and a 90th-percentile/upper-decile AQI of 87, matching the criterion."
+     },
+     {
+      "id": "R2.C1",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "The cancellation_days sheet lists all required Pima County cancellation dates with matching daily AQI values, in the exact date/AQI pairs specified, with no duplicate county-day rows."
+     },
+     {
+      "id": "R2.C2",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "The cancellation_days sheet contains exactly 11 county-day data rows, matching the 11 distinct cancellation dates required."
+     },
+     {
+      "id": "R2.C3",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "All 11 cancellation date rows include a non-missing daily AQI value."
+     },
+     {
+      "id": "R3.C1",
+      "rubric": 3,
+      "mode": "words",
+      "passed": true,
+      "why": "The cancellation_days sheet lists 11 dates. Nine have AQI below 150, and two have AQI at or above 150."
+     },
+     {
+      "id": "R3.C2",
+      "rubric": 3,
+      "mode": "words",
+      "passed": true,
+      "why": "All nine specified below-150 cancellation dates are listed with their dates and daily AQI values, and none is missing."
+     },
+     {
+      "id": "R3.C3",
+      "rubric": 3,
+      "mode": "words",
+      "passed": true,
+      "why": "The minimum and maximum AQI among cancellation days match the required values."
+     },
+     {
+      "id": "R3.C4",
+      "rubric": 3,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook presents all observed county cancellation dates, including those with AQI below 150, and does not redefine cancellation days as only days at or above 150."
+     },
+     {
+      "id": "R4.C1",
+      "rubric": 4,
+      "mode": "words",
+      "passed": false,
+      "why": "The workbook selects a negative binomial model and reports an overdispersion diagnostic (alpha), but the primary model equation does not include the required log(Pima County resident population) offset. The model is specified on the visit count scale without an offset, while the population denominator is only used separately in rate calculations."
+     },
+     {
+      "id": "R4.C2",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The exponentiated cancellation-status coefficient and CI match the expected values within tolerance, and the CI excludes the null."
+     },
+     {
+      "id": "R4.C3",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook reports AQI effects per 10 units. Rescaling the reported same-day AQI estimate to a 1-unit basis gives the expected rate ratio and confidence interval."
+     },
+     {
+      "id": "R4.C4",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook clearly defines the outcome as asthma-specific ED visits, not broader respiratory or all-cause visits, and uses the same definition in the model and rate calculations."
+     },
+     {
+      "id": "R5.C1",
+      "rubric": 5,
+      "mode": "words",
+      "passed": false,
+      "why": "The primary model does not report the required lagged AQI rate ratios and CIs. It reports lag 1 AQI as 1.0306 (1.0025 to 1.0596), not 1.00302 (1.00025 to 1.00581), and lag 2 AQI as 0.9814 (0.9584 to 1.005), not 0.99813 (0.99576 to 1.00050). The differences exceed the 1% tolerance."
+     },
+     {
+      "id": "R5.C2",
+      "rubric": 5,
+      "mode": "words",
+      "passed": false,
+      "why": "Model diagnostics report sample size and residual degrees of freedom, but do not report residual deviance. The sheet instead reports Pearson chi-square and related NB dispersion diagnostics."
+     },
+     {
+      "id": "R5.C3",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook states that the final primary model is negative binomial, reports overdispersion diagnostics, and provides the NB dispersion parameter alpha with confidence interval and p-value."
+     },
+     {
+      "id": "R5.C4",
+      "rubric": 5,
+      "mode": "words",
+      "passed": false,
+      "why": "Cancellation status matches the required rate ratio and CI, but the AQI exposure terms do not match the required values. The workbook reports AQI terms per 10 AQI units, producing same-day RR 1.0182 (0.993 to 1.0439), lag 1 RR 1.0306 (1.0025 to 1.0596), and lag 2 RR 0.9814 (0.9584 to 1.005), none of which match the required values within tolerance."
+     },
+     {
+      "id": "R6.C1",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook clearly states that the cancellation exposure is defined as daily AQI >= 150 under the planning assumption, so the primary model uses the planned threshold and labels it clearly."
+     },
+     {
+      "id": "R6.C2",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The analytic dataset has n=364, and the workbook identifies exactly two cancellation days under the AQI >= 150 threshold, which implies and is consistent with 362 non-cancellation days."
+     },
+     {
+      "id": "R6.C3",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The primary model specification includes separate terms for same-day AQI, previous-day AQI, and second-previous-day AQI, plus a cancellation-status indicator, and the primary model results show all four terms estimated from the 364-day analytic sample."
+     },
+     {
+      "id": "R7.C1",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The annual summary reports mean daily asthma ED rate of 0.191 per 10,000 and annual asthma ED rate of 69.912 per 10,000. These differ from 0.19 and 69.91 by only 0.001 and 0.002 respectively, well within the 0.1 tolerance."
+     },
+     {
+      "id": "R7.C2",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The summary includes both required values: total annual asthma ED visits and Census county resident population denominator."
+     },
+     {
+      "id": "R7.C3",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The daily_rate sheet has one row per calendar day for the full 2024 analysis period, from 2024-01-01 through 2024-12-31. Since 2024 is a leap year, there are 366 data rows, and no missing dates are evident, so no missing-date listing is needed."
+     },
+     {
+      "id": "R7.C4",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The summary labels rates as asthma-specific ED visit rates and defines the denominator as the Census 2024 Pima County resident population. It does not use monitored days or broader respiratory visits as the denominator."
+     },
+     {
+      "id": "R8.C1",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The section explicitly compares the AQI>=150 planning assumption with the cancellation log and identifies the observed lower threshold."
+     },
+     {
+      "id": "R8.C2",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The section identifies the supplied Census county population estimate as the denominator and states that rates are per 10,000 residents."
+     },
+     {
+      "id": "R8.C3",
+      "rubric": 8,
+      "mode": "words",
+      "passed": false,
+      "why": "The limitations section identifies plausible unmeasured confounders but does not explicitly state that the model estimates association, not causation."
+     },
+     {
+      "id": "R8.C4",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The assumptions and limitations section states that the numerator is asthma-specific ED visits and describes syndromic surveillance completeness."
+     }
+    ]
+   },
+   {
+    "solver": 2,
+    "crit_fail": 0.25,
+    "lost": 0.5333,
+    "full": false,
+    "rubrics": 8,
+    "criteria": 31,
+    "left_out": 0,
+    "criteria_results": [
+     {
+      "id": "R1.C1",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The daily_aqi sheet contains 366 data rows after the header, with unique dates from 2024-01-01 through 2024-12-31. Every retained row is Arizona/Pima, and the defining_site values begin with the EPA state-county code prefix '04-019-', which matches state code 04 and county code 019."
+     },
+     {
+      "id": "R1.C2",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The daily_aqi sheet contains only rows for state_name Arizona and county_name Pima, so it excludes out-of-state rows sharing Pima's county code. No retained rows correspond to state-county pairs 06-019, 17-019, 18-019, 26-019, or 29-019."
+     },
+     {
+      "id": "R1.C3",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The annual_aqi_summary sheet reports exactly the required summary metrics for Pima County."
+     },
+     {
+      "id": "R1.C4",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The annual summary is labeled with the selected state, county, and year, and the source indicates it comes from the EPA annual AQI row for Pima County."
+     },
+     {
+      "id": "R1.C5",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The annual_aqi_summary also contains the required Unhealthy for Sensitive Groups days and upper-decile AQI value."
+     },
+     {
+      "id": "R2.C1",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "The cancellation_days_observed sheet lists exactly the 11 required Pima County cancellation dates, each with its matching daily AQI value, and no duplicate county-day rows appear."
+     },
+     {
+      "id": "R2.C2",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "The cancellation day list contains exactly 11 county-day data rows, matching the number of distinct cancellation dates."
+     },
+     {
+      "id": "R2.C3",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "All 11 cancellation dates have a non-missing daily AQI value in the cancellation day list."
+     },
+     {
+      "id": "R3.C1",
+      "rubric": 3,
+      "mode": "words",
+      "passed": true,
+      "why": "The observed cancellation days sheet lists 11 cancellation days: 9 with daily AQI below 150 and 2 at or above 150."
+     },
+     {
+      "id": "R3.C2",
+      "rubric": 3,
+      "mode": "words",
+      "passed": true,
+      "why": "All 9 below-threshold cancellation dates and AQI values from the criterion are present exactly, each with date and daily AQI value."
+     },
+     {
+      "id": "R3.C3",
+      "rubric": 3,
+      "mode": "words",
+      "passed": true,
+      "why": "Among the listed cancellation days, the lowest daily AQI is 103 and the highest is 171."
+     },
+     {
+      "id": "R3.C4",
+      "rubric": 3,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook includes a dedicated observed cancellation days sheet with all dates, including those below 150, and keeps the threshold-150-only list as a separate sheet rather than redefining all cancellation days."
+     },
+     {
+      "id": "R4.C1",
+      "rubric": 4,
+      "mode": "words",
+      "passed": false,
+      "why": "The workbook does state a negative-binomial GLM with log link and reports Poisson overdispersion diagnostics and alpha, but the required log population offset from the Census population estimate is absent from the model specification, formula, and dataset columns. Thus the primary model does not meet the full specification criterion."
+     },
+     {
+      "id": "R4.C2",
+      "rubric": 4,
+      "mode": "words",
+      "passed": false,
+      "why": "The primary model's cancellation-status rate ratio does not match the required exponentiated coefficient or confidence interval. The reported cancellation-status lag-0 IRR is 2.02649 with CI [1.18378, 3.46911], not 1.76560 with CI [1.13052, 2.75745]. The confidence interval does exclude the null, but the numeric point estimate and limits are outside the 1% tolerance."
+     },
+     {
+      "id": "R4.C3",
+      "rubric": 4,
+      "mode": "words",
+      "passed": false,
+      "why": "The same-day AQI rate ratio in the primary model is reported as 1.01546 per 10 AQI units, with CI [0.98941, 1.04221]. This is not the required 1.00180 with CI [0.99930, 1.00431]. Even rescaling to per-1-unit would not match within the stated 1% tolerance."
+     },
+     {
+      "id": "R4.C4",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The primary model is explicitly described as using daily asthma-specific ED visit counts, not broader respiratory or all-cause visits, and the rate-calculation summary uses the same asthma-specific definition."
+     },
+     {
+      "id": "R5.C1",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "Both AQI lag terms are present. The workbook reports AQI effects per 10 AQI units; converting the reported log coefficients and CI bounds to per-1-unit IRRs gives lag1 ~1.00358 (1.00059-1.00657) and lag2 ~0.99790 (0.99534-1.00047), which are within 1% of the expected values."
+     },
+     {
+      "id": "R5.C2",
+      "rubric": 5,
+      "mode": "words",
+      "passed": false,
+      "why": "The workbook reports sample size and residual degrees of freedom, but it does not report the fitted count model's raw residual deviance. It only reports Poisson overdispersion deviance/df and Pearson/df ratios."
+     },
+     {
+      "id": "R5.C3",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook clearly states the primary model is negative binomial and reports the dispersion parameter alpha with standard error and confidence interval. Overdispersion diagnostics are also provided."
+     },
+     {
+      "id": "R5.C4",
+      "rubric": 5,
+      "mode": "words",
+      "passed": false,
+      "why": "The AQI terms align after unit conversion, but the reported cancellation status same-day IRR does not match the required value. The workbook reports 2.0265 (1.1838-3.4691), while the criterion requires 1.7656 (1.1305-2.7575)."
+     },
+     {
+      "id": "R6.C1",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook clearly labels the primary cancellation-status definition using the planned daily AQI threshold of 150."
+     },
+     {
+      "id": "R6.C2",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The primary analytic dataset has 364 rows and the lag-0 cancellation indicator under the planned threshold has exactly 2 cancellation days and 362 non-cancellation days."
+     },
+     {
+      "id": "R6.C3",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The primary model includes separate same-day, previous-day, and second-previous-day AQI exposure terms, plus cancellation-status terms, all estimated from the same 364-day analytic dataset."
+     },
+     {
+      "id": "R7.C1",
+      "rubric": 7,
+      "mode": "words",
+      "passed": false,
+      "why": "The annual asthma ED visit rate is correctly reported as 69.91 per 10,000 residents, but the summary does not explicitly report an average daily asthma ED visit rate per 10,000 residents. It reports mean daily visits as a count (20.068), from which a daily rate could be derived, but the required daily rate is not stated as such."
+     },
+     {
+      "id": "R7.C2",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The annual asthma ED visit count of 7345 and the Census county resident population denominator of 1,050,599 are directly reported."
+     },
+     {
+      "id": "R7.C3",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The daily asthma ED visit rate sheet includes one row for every calendar day in the 2024 analysis period, and the assumptions explicitly state there are no missing dates."
+     },
+     {
+      "id": "R7.C4",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The rates are linked to asthma-specific ED visits and the denominator is identified as the Pima County resident population."
+     },
+     {
+      "id": "R8.C1",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The assumptions and limitations section states the planning assumption that cancellations occurred only at AQI 150 or above, then reports that this was not supported by the cancellation log and indicates the observed cancellations began in the Unhealthy for Sensitive Groups range."
+     },
+     {
+      "id": "R8.C2",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The section explicitly identifies the 2024 Census county population estimate as the denominator for all rates."
+     },
+     {
+      "id": "R8.C3",
+      "rubric": 8,
+      "mode": "words",
+      "passed": false,
+      "why": "The limitations section identifies plausible confounders but does not explicitly state that the model estimates association rather than causation."
+     },
+     {
+      "id": "R8.C4",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The assumptions and limitations section describes the outcome as asthma-specific ED visit counts and describes syndromic surveillance completeness."
+     }
+    ]
+   }
+  ],
+  "crit_fail": 0.2083,
+  "lost": 0.4667,
+  "full_share": 0.0
+ },
+ "gate_scoring": "llm",
+ "shape": {
+  "rubrics": 8,
+  "criteria": 31,
+  "criteria_per_rubric": 3.88,
+  "compound_share": 0.903
+ },
+ "gate": {
+  "threshold": 0.2531,
+  "hard_line": 0.7,
+  "baseline_lost": 0.6328,
+  "baseline_source": "data/p1/difficulty_baseline.json",
+  "lost": 0.4667,
+  "status": "ok",
+  "why": "blind solvers lost 47% of the weight (line 25%-70%)"
+ },
+ "review": [],
+ "seen_through": [],
+ "at": "2026-10-18T02:32:50"
+}

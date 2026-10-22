@@ -1,0 +1,753 @@
+{
+ "case": "v3-00169",
+ "built_at": "2026-10-13T22:12:22",
+ "blind_round": 3,
+ "summary": {
+  "solvers": [
+   {
+    "solver": 1,
+    "crit_fail": 0.6269,
+    "lost": 0.8507,
+    "full": false,
+    "rubrics": 9,
+    "criteria": 24,
+    "left_out": 0,
+    "criteria_results": [
+     {
+      "id": "R1.C3",
+      "rubric": 1,
+      "mode": "values",
+      "passed": false,
+      "why": "boundary_cleared_traveler: not stated"
+     },
+     {
+      "id": "R2.C1",
+      "rubric": 2,
+      "mode": "values",
+      "passed": false,
+      "why": "boundary_traveler_costs: not stated"
+     },
+     {
+      "id": "R2.C2",
+      "rubric": 2,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R2.C3",
+      "rubric": 2,
+      "mode": "values",
+      "passed": false,
+      "why": "client_visit_traveler_cost: '859' differs (reference_right)"
+     },
+     {
+      "id": "R3.C1",
+      "rubric": 3,
+      "mode": "values",
+      "passed": false,
+      "why": "total_mie: not stated"
+     },
+     {
+      "id": "R3.C2",
+      "rubric": 3,
+      "mode": "values",
+      "passed": false,
+      "why": "total_travel_request: '21123' differs (reference_right); cap_headroom: '53877' differs (reference_right)"
+     },
+     {
+      "id": "R3.C3",
+      "rubric": 3,
+      "mode": "words",
+      "passed": true,
+      "why": "For every cleared traveler, the travel period spans lodging nights plus one calendar day, and the workbook applies 75% M&IE on arrival/departure days and 100% on full days. The cost factor is therefore lodging nights + 0.5, which means no arrival or departure day is charged at full rate. This pattern holds across all cleared rows."
+     },
+     {
+      "id": "R4.C1",
+      "rubric": 4,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R4.C2",
+      "rubric": 4,
+      "mode": "values",
+      "passed": false,
+      "why": "block_gap_total: not stated"
+     },
+     {
+      "id": "R4.C3",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook keeps the contracted-block rate difference out of the travel and lodging request by budgeting only at per diem and flagging the gap for the committee. It also places guest and companion costs in the separate 'Other program items' section, explicitly not charged against the travel and lodging cap, rather than treating them as traveler costs."
+     },
+     {
+      "id": "R5.C1",
+      "rubric": 5,
+      "mode": "values",
+      "passed": false,
+      "why": "unmatched_nomination: not stated"
+     },
+     {
+      "id": "R5.C2",
+      "rubric": 5,
+      "mode": "values",
+      "passed": false,
+      "why": "merged_traveler: 'Kathleen Foster' differs (reference_right)"
+     },
+     {
+      "id": "R5.C3",
+      "rubric": 5,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R6.C1",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "The criterion requires the memo to recommend $22,166.00. The memo instead recommends $21,123.00, so it does not match the required figure, even though the memo's figure is internally consistent with the workbook summary."
+     },
+     {
+      "id": "R6.C3",
+      "rubric": 6,
+      "mode": "values",
+      "passed": false,
+      "why": "v_R6_C3: 'Items for the committee to decide' differs (reference_right)"
+     },
+     {
+      "id": "R7.C1",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo and workbook clearly explain the per-diem basis: Steamboat Springs season rates, early arrival treatment, Walden fallback to standard CONUS, reduced M&IE on travel days, and the rule that per diem lodging caps reimbursement below the contracted block rate."
+     },
+     {
+      "id": "R7.C2",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The committee-relevant limitations are sufficiently stated: costs are itinerary-driven in the detail workbook, approval and probation-exception determinations depend on the approval file, and block-rate gap and companion/guest items are shown as separate or decision-dependent amounts outside the current travel/lodging request."
+     },
+     {
+      "id": "R7.C3",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo explains the look-back boundary in a day-precise way and shows that the director-level exception is honored only where recorded."
+     },
+     {
+      "id": "R8.C1",
+      "rubric": 8,
+      "mode": "values",
+      "passed": false,
+      "why": "v_R8_C1: not stated"
+     },
+     {
+      "id": "R8.C2",
+      "rubric": 8,
+      "mode": "values",
+      "passed": false,
+      "why": "denial_bases: not stated"
+     },
+     {
+      "id": "R8.C3",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The register handles both identity cases defensibly. Kathleen Foster is recorded in a single row but the Nomination ID field includes both PD26-002 and PD26-009, with a note explaining the duplicate/consolidation, so neither nominating manager's submission disappears. Deepa Iyer is flagged as unreconciled with no matching HRIS roster employee, zeroed for budget purposes, and the note frames it as an unresolved identity issue requiring reconciliation rather than a substantive clearance determination."
+     },
+     {
+      "id": "R9.C1",
+      "rubric": 9,
+      "mode": "words",
+      "passed": true,
+      "why": "All lodging amounts in the Traveler Detail lines use the applicable per diem rates exactly. June nights are costed at $179, May nights at $123, and the unlisted Walden location is identified as standard CONUS. The $219 block rate appears only in the flag/notes and memo, not in any traveler line or program item."
+     },
+     {
+      "id": "R9.C2",
+      "rubric": 9,
+      "mode": "words",
+      "passed": true,
+      "why": "The capped travel and lodging total of $21,123 equals the sum of the cleared travelers' budgeted per diem lines. The guest/companion amounts and block-rate gap are kept separate and are not included in any traveler's line."
+     },
+     {
+      "id": "R9.C3",
+      "rubric": 9,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook traces per diem figures to published rates by locality and season in the Summary, and Notes explicitly identify Walden as unlisted and using the standard CONUS rate."
+     }
+    ]
+   },
+   {
+    "solver": 2,
+    "crit_fail": 0.5075,
+    "lost": 0.7015,
+    "full": false,
+    "rubrics": 9,
+    "criteria": 24,
+    "left_out": 0,
+    "criteria_results": [
+     {
+      "id": "R1.C3",
+      "rubric": 1,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R2.C1",
+      "rubric": 2,
+      "mode": "values",
+      "passed": false,
+      "why": "boundary_traveler_costs: ['PD26-003', 'PD26-012'] differs (reference_right)"
+     },
+     {
+      "id": "R2.C2",
+      "rubric": 2,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R2.C3",
+      "rubric": 2,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R3.C1",
+      "rubric": 3,
+      "mode": "values",
+      "passed": false,
+      "why": "total_mie: not stated"
+     },
+     {
+      "id": "R3.C2",
+      "rubric": 3,
+      "mode": "values",
+      "passed": false,
+      "why": "total_travel_request: '21307' differs (reference_right); cap_headroom: '53693' differs (reference_right)"
+     },
+     {
+      "id": "R3.C3",
+      "rubric": 3,
+      "mode": "words",
+      "passed": true,
+      "why": "For every cleared traveler, the M&IE day count inferred from arrival/departure dates and lodging nights is one more than the lodging night count, and the M&IE costs reflect 75% on arrival and departure days rather than a full-rate charge. Examples: 3 lodging nights produce M&IE of $322 (Steamboat $92 rate at 75/100/100/75 across 4 days), 4 lodging nights produce $414 ($92 at 75/100/100/100/75 across 5 days), Minh Pham's 6 nights produce $598 ($92 at 75 + five full days + 75), and Francisco Vasquez's split-location 4 nights produce $396 ($51 Walden arrival 75% + $276 Steamboat full days + $69 d"
+     },
+     {
+      "id": "R4.C1",
+      "rubric": 4,
+      "mode": "values",
+      "passed": false,
+      "why": "companion_program_total: '330' differs (reference_right)"
+     },
+     {
+      "id": "R4.C2",
+      "rubric": 4,
+      "mode": "values",
+      "passed": false,
+      "why": "block_gap_total: '3048' differs (reference_right)"
+     },
+     {
+      "id": "R4.C3",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook keeps the contracted block-rate overage and guest/companion costs outside the travel and lodging cap test. The cap summary requests only per-diem travel and lodging ($21,307 against $75,000), shows non-travel program items ($16,185) separately, and notes that registration/guest/companion items are program costs. The block-rate gap is shown in Parameters as a committee decision, not added to the travel/lodging request. Companion/guest costs are carried in Program Items only, not in cleared travelers' per-diem lodging totals."
+     },
+     {
+      "id": "R5.C1",
+      "rubric": 5,
+      "mode": "values",
+      "passed": false,
+      "why": "unmatched_nomination: not stated"
+     },
+     {
+      "id": "R5.C2",
+      "rubric": 5,
+      "mode": "values",
+      "passed": false,
+      "why": "merged_traveler: 'Kathleen Foster' differs (reference_right)"
+     },
+     {
+      "id": "R5.C3",
+      "rubric": 5,
+      "mode": "values",
+      "passed": false,
+      "why": "reconciled_traveler_count: '28' differs (reference_right)"
+     },
+     {
+      "id": "R6.C1",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo recommends $21,307.00, not the expected $22,166.00. The provided workbook summary also shows $21,307.00, so the memo is consistent with the workbook, but it does not meet the criterion's specified figure. The $859.00 difference corresponds to Raul Gutierrez's line, which the memo conservatively treats as not cleared due to the 12-month boundary."
+     },
+     {
+      "id": "R6.C3",
+      "rubric": 6,
+      "mode": "values",
+      "passed": false,
+      "why": "v_R6_C3: ['Conference-block rate vs per diem.', 'Deepa Iyer — no roster match.'] differs (reference_right)"
+     },
+     {
+      "id": "R7.C1",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The per-diem method is transparent enough for a Finance spot-check. The files identify the season windows for Steamboat Springs, show the early-arrival dates in the traveler detail, explain that Walden/Jackson County is unlisted and therefore uses the standard CONUS rate, state the 75/100/75 M&IE rule, and clarify that the model uses per-diem lodging while the contracted block rate exceeds it."
+     },
+     {
+      "id": "R7.C2",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The relevant limitations are stated or clearly implied: the estimates are built from the requested arrival/departure itineraries, approval and probation-exception determinations depend on what is recorded in the approval file, and the amounts would move if the committee covers the block-rate gap or changes companion/guest package funding."
+     },
+     {
+      "id": "R7.C3",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The determination reasoning is explained at the committee-reading level. The memo anchors the 12-month external-conference lookback to the event's first day, identifies the exactly-one-year boundary case for Raul Gutierrez, and distinguishes the recorded director exception for Tyler Evans from the missing exception for Alma Gomez."
+     },
+     {
+      "id": "R8.C1",
+      "rubric": 8,
+      "mode": "values",
+      "passed": false,
+      "why": "v_R8_C1: ['Adriana Cruz', 'Kathleen Foster', 'Minh Pham', 'Graciela Castro', 'Rajesh Agarwal', 'Alma Gomez', 'Anna Marek', 'Judith Powell', 'Kathy Foster', 'Nikhil Shah', 'Minjun Lee', 'Francisco Vasquez', 'Cedric Ware', 'Tyler Evans', 'Neha Nair', 'Megan Davis', 'Stephen Moore', 'Deborah Russell', 'Manuel Salazar', 'Tuan Vu', 'Rohan Chaudhary', 'Carl Holloway', 'Lan Tran', 'Raul Gutierrez', 'Deepa Iyer', 'Kevin Carter', 'Folake Okafor', 'Sergio Rodriguez'] differs (reference_right)"
+     },
+     {
+      "id": "R8.C2",
+      "rubric": 8,
+      "mode": "values",
+      "passed": false,
+      "why": "denial_bases: 'Reason / note' differs (reference_right)"
+     },
+     {
+      "id": "R8.C3",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The register handles the duplicate identity case defensibly: both PD26-002 (Kathleen Foster) and PD26-009 (Kathy Foster) remain in the register, so neither nominating manager's submission disappears, and PD26-009 explicitly cross-references PD26-002 as the same employee needing reconciliation/removal. The unmatched identity case, PD26-025 (Deepa Iyer), is held as not cleared with a follow-up instruction to reconcile identity/employment before any determination, rather than issuing a clearance decision."
+     },
+     {
+      "id": "R9.C1",
+      "rubric": 9,
+      "mode": "words",
+      "passed": true,
+      "why": "All cleared traveler lodging is costed at or below the applicable FY2026 per-diem rate. Steamboat June nights use $179/night, Steamboat May nights use $123/night, and the Walden night uses the standard CONUS $110/night. The $219 contracted block rate is not used in any traveler-level lodging cost; it appears only in exception/decision lines."
+     },
+     {
+      "id": "R9.C2",
+      "rubric": 9,
+      "mode": "words",
+      "passed": true,
+      "why": "The capped travel and lodging total of $21,307 exactly equals the sum of cleared traveler estimates. Companion, guest, and block-rate gap amounts are not included in any traveler line; they are shown separately in Program Items or exception rows."
+     },
+     {
+      "id": "R9.C3",
+      "rubric": 9,
+      "mode": "words",
+      "passed": true,
+      "why": "Each traveler line's lodging and M&IE can be traced to the rate table parameters. The Parameters sheet identifies Steamboat Springs/Routt County by season and M&IE, and identifies Walden as an unlisted town using the standard CONUS rate."
+     }
+    ]
+   }
+  ],
+  "crit_fail": 0.5672,
+  "lost": 0.7761,
+  "full_share": 0.0
+ },
+ "all_llm": {
+  "solvers": [
+   {
+    "solver": 1,
+    "crit_fail": 0.5821,
+    "lost": 0.7313,
+    "full": false,
+    "rubrics": 9,
+    "criteria": 24,
+    "left_out": 0,
+    "criteria_results": [
+     {
+      "id": "R1.C1",
+      "rubric": 1,
+      "mode": "words",
+      "passed": false,
+      "why": "The criterion requires PD26-024 Raul Gutierrez to be cleared because his prior conference ended exactly on the 12-month boundary and therefore falls outside the window. However, the travel_determination_register.csv marks PD26-024 as 'Not cleared' and describes the boundary case as a 'borderline look-back boundary; committee may review.' The register correctly denies PD26-004, but it does not clear PD26-024 as required."
+     },
+     {
+      "id": "R2.C1",
+      "rubric": 2,
+      "mode": "words",
+      "passed": false,
+      "why": "PD26-001 and PD26-003 match the expected per-traveler estimates, but PD26-012 does not. The workbook shows PD26-012 as lodging $537.00, M&IE $322.00, and total $859.00, while the criterion requires lodging $647.00, M&IE $396.00, and total $1,043.00. The difference is well beyond the $5 tolerance."
+     },
+     {
+      "id": "R2.C2",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "The early arriver PD26-003 lodging is $906.00, which matches three May nights at $123 plus three June nights at $179: (3 * 123) + (3 * 179) = $906.00. This is within the $5 tolerance."
+     },
+     {
+      "id": "R2.C3",
+      "rubric": 2,
+      "mode": "words",
+      "passed": false,
+      "why": "The client-visit traveler PD26-012 should total $1,043.00 by including the Walden night at standard CONUS and the associated M&IE. Instead, the workbook excludes the Walden night and shows conference-portion-only totals of $859.00, so the required $1,043.00 treatment is not applied."
+     },
+     {
+      "id": "R3.C1",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The M&IE calculation uses the expected 75%/100%/75% travel-day method, but the total M&IE for cleared travelers is $7,866.00, not $8,262.00. The $396.00 variance exceeds the 1% relative tolerance."
+     },
+     {
+      "id": "R3.C2",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The workbook's request total is $21,123.00 with $53,877.00 headroom against the $75,000 cap, rather than the required $22,166.00 request with $52,834.00 headroom. The $1,043.00 variance is outside tolerance."
+     },
+     {
+      "id": "R3.C3",
+      "rubric": 3,
+      "mode": "words",
+      "passed": true,
+      "why": "Each cleared traveler's M&IE day count is one more than their lodging night count, and arrival/departure days are not charged at the full M&IE rate."
+     },
+     {
+      "id": "R4.C1",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The guest/companion items are costed from the fee schedule and kept outside the capped travel/lodging request: guest registration $390, guest dinner $240, and companion lodging $330 total $960. Traveler detail rows for Megan Davis and Sergio Rodriguez exclude these from their per-diem estimates."
+     },
+     {
+      "id": "R4.C2",
+      "rubric": 4,
+      "mode": "words",
+      "passed": false,
+      "why": "The required contracted-block gap exception line of $3,168.00 is not present. The workbook only flags the block-rate gap in notes and does not carry a $3,168 exception line in Summary or Program Items."
+     },
+     {
+      "id": "R4.C3",
+      "rubric": 4,
+      "mode": "words",
+      "passed": false,
+      "why": "Companion items are kept outside the cap, but the block-rate exception line is missing, so the workbook cannot be said to keep that exception line outside the cap test or present it as a formal decision line. The block-rate issue is only narrative."
+     },
+     {
+      "id": "R5.C1",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The register includes the unmatched Deepa Iyer nomination as a not-cleared row with the nomination ID, nominee name, a blank employee ID, and a reason tied to no matching HRIS roster record. It is neither cleared nor omitted, and it remains counted among the not-cleared/open items."
+     },
+     {
+      "id": "R5.C2",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The two spellings Kathleen Foster and Kathy Foster are consolidated into one NEG-1010 row, with both nomination IDs noted. Deepa Iyer is recorded as not cleared for no matching roster record, not force-matched to any similarly named employee."
+     },
+     {
+      "id": "R5.C3",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The register contains 27 traveler rows: the duplicate Kathleen/Kathy Foster nominations are merged into one row, while the unmatched Deepa Iyer nomination is still reported as a separate not-cleared row. This neither inflates nor shrinks the unique proposed traveler count."
+     },
+     {
+      "id": "R6.C1",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo recommends $21,123.00, and the workbook summary total is also $21,123.00, so it is internally consistent. It also cites the Steamboat seasonal rates, Walden standard CONUS rate, and 75% M&IE treatment. However, the criterion requires the recommended figure to be $22,166.00, and the memo's figure does not match that required amount."
+     },
+     {
+      "id": "R6.C2",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does flag the hotel block-rate gap as a committee decision, but it does not cite 41 CFR part 301-74 as the basis for the conference lodging per-diem ceiling. It also does not flag Deepa Iyer's unreconciled nomination as a committee-only decision; instead it treats it as a not-cleared item requiring coordinator follow-up."
+     },
+     {
+      "id": "R7.C1",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo and workbook explain the per-diem basis well enough for a Finance spot-check: seasonal lodging rates by night including the early-arrival split, the unlisted Walden/Jackson County standard CONUS treatment, travel-day M&IE reduction, and the fact that per diem caps lodging below the contracted block rate."
+     },
+     {
+      "id": "R7.C2",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The limitations relevant to the committee are disclosed: per-traveler costs are based on the supplied itinerary dates, approval-dependent and probation-exception items remain contingent on the approval file, and block-rate gap or companion/guest funding decisions would affect the totals."
+     },
+     {
+      "id": "R7.C3",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The determination reasoning is explained as policy application, not discretion: the prior-conference look-back is tied to the twelve months preceding the 6/1/2026 event, Raul Gutierrez is identified as a boundary case with committee interpretation noted, and Tyler Evans is cleared because a recorded director-level exception exists."
+     },
+     {
+      "id": "R8.C1",
+      "rubric": 8,
+      "mode": "words",
+      "passed": false,
+      "why": "The register has the expected unique traveler rows and cleared rows include estimated costs, but it fails the requirement that every row carry a one-line basis. Cleared rows have blank Reason fields, and several cleared rows also have blank Notes fields, so there is no basis line for every row."
+     },
+     {
+      "id": "R8.C2",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The not-cleared rows give specific, policy-linked reasons rather than a generic 'ineligible'. Each listed case names the relevant ground: prior external conference, probation without director exception, missing written approval, verbal-only approval, and no HRIS roster match."
+     },
+     {
+      "id": "R8.C3",
+      "rubric": 8,
+      "mode": "words",
+      "passed": false,
+      "why": "The merged Kathleen Foster handling is defensible because the single row keeps both nomination IDs visible. However, the unmatched Deepa Iyer nomination is recorded as 'Not cleared' and the note only states it could not be reconciled; it does not direct follow-up rather than a clearance decision."
+     },
+     {
+      "id": "R9.C1",
+      "rubric": 9,
+      "mode": "words",
+      "passed": true,
+      "why": "All cleared traveler lodging costs are computed at the applicable per-diem rates: June nights at $179 and May nights at $123. No lodging line exceeds the stated FY2026 rate, and the $219 contracted block rate appears only as a flag/note, not in any traveler lodging cost."
+     },
+     {
+      "id": "R9.C2",
+      "rubric": 9,
+      "mode": "words",
+      "passed": true,
+      "why": "The travel and lodging request total $21,123 exactly matches the sum of cleared travelers' budgeted lines. Guest registration, guest dinner, and companion lodging are isolated in Program Items and excluded from the capped total; no block-rate gap or companion/guest amount is added into any traveler line."
+     },
+     {
+      "id": "R9.C3",
+      "rubric": 9,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook lists the applicable per-diem rates by locality and season, and each traveler line can be traced through its May/June night counts to those listed rates. Walden/Jackson County is explicitly identified as using the standard CONUS rate."
+     }
+    ]
+   },
+   {
+    "solver": 2,
+    "crit_fail": 0.5348,
+    "lost": 0.806,
+    "full": false,
+    "rubrics": 9,
+    "criteria": 24,
+    "left_out": 0,
+    "criteria_results": [
+     {
+      "id": "R1.C1",
+      "rubric": 1,
+      "mode": "words",
+      "passed": false,
+      "why": "The register correctly denies PD26-004, but it does not clear PD26-024. Instead, it marks PD26-024 as Not cleared because his prior conference ended on 06/02/2025, which is the boundary date. A day-precisely twelve-month window would place that prior conference outside the lookback period, so PD26-024 should have been cleared."
+     },
+     {
+      "id": "R2.C1",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "The three specified per-traveler estimates all match the expected lodging, M&IE, and total values within the $5 tolerance. PD26-003 has $906.00 lodging, $598.00 M&IE, and $1,504.00 total; PD26-012 has $647.00, $396.00, and $1,043.00; PD26-001 has $716.00, $414.00, and $1,130.00."
+     },
+     {
+      "id": "R2.C2",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "The early arriver's lodging is correctly split between the May pre-conference rate and the June conference-week rate. Three nights fall in the earlier window at $123 and three nights fall in the later window at $179, totaling $906. Both window end dates are handled correctly: May 31 is at the May rate and June 1 begins the June rate."
+     },
+     {
+      "id": "R2.C3",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "The client-visit traveler's estimate matches the stated split-location basis. The May 31 Walden night uses the standard CONUS lodging rate of $110, and the three Steamboat nights use the June in-season rate of $179, giving $647 lodging. The M&IE total of $396 reflects the Walden day at the standard CONUS M&IE rate under the 75% departure-day rule, plus full and partial Steamboat M&IE days."
+     },
+     {
+      "id": "R3.C1",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The workbook's M&IE treatment for cleared rows appears to follow the 75%/100%/75% rule, but the actual total M&IE across cleared travelers sums to $7,940.00, not the required $8,262.00. The shortfall is $322.00, outside the 1% tolerance."
+     },
+     {
+      "id": "R3.C2",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The Summary sheet shows total cleared travel and lodging of $21,307.00, not the required $22,166.00. The cap variance is correspondingly $53,693.00, not the required $52,834.00. The $859.00 difference is outside the stated tolerances."
+     },
+     {
+      "id": "R3.C3",
+      "rubric": 3,
+      "mode": "words",
+      "passed": true,
+      "why": "For all travelers the workbook marks as Cleared, the M&IE amounts are consistent with one more M&IE day than lodging nights and with no full-rate M&IE on arrival or departure days. The values follow the 75%/100%/75% pattern."
+     },
+     {
+      "id": "R4.C1",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook costs the guest/companion items as separate non-travel program lines totaling $960.00: $630 for Megan Davis's two guests and $330 for Sergio Rodriguez's companion lodging add-on. These amounts do not appear in the individual traveler estimates and are excluded from the capped travel and lodging total."
+     },
+     {
+      "id": "R4.C2",
+      "rubric": 4,
+      "mode": "words",
+      "passed": false,
+      "why": "The contracted-block gap is not carried as the required $3,168.00 exception line. The workbook instead uses an approximate block overage of $3,048 before tax and also introduces a $96 May gap. The memo likewise references $3,048, not $3,168."
+     },
+     {
+      "id": "R4.C3",
+      "rubric": 4,
+      "mode": "words",
+      "passed": false,
+      "why": "The treatment keeps companion items outside the travel and lodging cap, but it does not satisfy the full requirement for both items. The required block-rate exception line is absent, and while the block-rate gap is framed as a committee decision, the companion package is shown only as a departmental program item, not as a committee decision."
+     },
+     {
+      "id": "R5.C1",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R5.C2",
+      "rubric": 5,
+      "mode": "words",
+      "passed": false,
+      "why": ""
+     },
+     {
+      "id": "R5.C3",
+      "rubric": 5,
+      "mode": "words",
+      "passed": false,
+      "why": ""
+     },
+     {
+      "id": "R6.C1",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo recommends $21,307.00, not the required $22,166.00. It is internally consistent with the workbook's listed total of $21,307.00, but it fails the criterion's specific expected recommended figure/spot-check total."
+     },
+     {
+      "id": "R6.C2",
+      "rubric": 6,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo explicitly flags the conference-block rate vs per diem gap and the unreconciled roster nomination as committee decisions, and ties the federal conference lodging treatment to 41 CFR 301-74."
+     },
+     {
+      "id": "R7.C1",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The submitted file set provides enough per-diem detail for a Finance spot-check. It identifies Steamboat Springs May and June lodging rates, shows the early-arrival traveler dates and costs, explains M&IE reduction using the 75/100/75 rule, notes Walden is unlisted and uses standard CONUS rates, and clearly states the model budgets per-diem lodging rather than the higher contracted block rate."
+     },
+     {
+      "id": "R7.C2",
+      "rubric": 7,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not clearly state several key limitations. It does not explicitly say the entire estimate rests on requested itineraries and could change if travel dates change. It also does not frame the companions package as a committee funding decision that would move the total; the companion/guest items are listed as included program costs. Approval reliance is shown, but not stated as a limitation dependent on the approval file's completeness/accuracy."
+     },
+     {
+      "id": "R7.C3",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo explains the 12-month lookback with the day-precisely boundary case for Raul Gutierrez and shows that the recorded director exception controls the probationary-policy outcome for Tyler Evans versus Alma Gomez."
+     },
+     {
+      "id": "R8.C1",
+      "rubric": 8,
+      "mode": "words",
+      "passed": false,
+      "why": "The register has all 28 nomination rows once by PD ID and cleared rows contain estimated costs, but it does not satisfy the requirement that every row carry a one-line basis. Most cleared rows have blank Reason and Notes fields, so the basis line is missing. If reconciled by unique traveler rather than by nomination ID, the duplicate Kathleen/Kathy Foster representation also creates two rows for the same person."
+     },
+     {
+      "id": "R8.C2",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The named not-cleared rows provide specific, non-generic policy grounds. PD26-004 cites an external conference within the 12-month window; PD26-006 cites probation with no director-level exception; PD26-010 and PD26-020 cite missing written manager approval; PD26-025 cites no matching HRIS roster record and directs reconciliation."
+     },
+     {
+      "id": "R8.C3",
+      "rubric": 8,
+      "mode": "words",
+      "passed": false,
+      "why": "The unmatched Deepa Iyer case is handled as follow-up rather than a clearance decision, which is appropriate. However, the duplicate/merged identity case is not handled as the criterion requires: instead of a single merged row noting both nominations, the register keeps PD26-002 Kathleen Foster and PD26-009 Kathy Foster as separate rows, and the primary PD26-002 row does not cross-reference the duplicate."
+     },
+     {
+      "id": "R9.C1",
+      "rubric": 9,
+      "mode": "words",
+      "passed": true,
+      "why": "All lodging costs use the applicable per-diem rates: Steamboat June at $179/night, May at $123/night, and Walden standard at $110/night. No traveler line uses the $219 contracted block rate; that rate appears only in the parameter/gap rows."
+     },
+     {
+      "id": "R9.C2",
+      "rubric": 9,
+      "mode": "words",
+      "passed": true,
+      "why": "The Summary travel and lodging total of $21,307 equals the sum of the 21 cleared traveler estimates. Guest, companion, and block-rate gap amounts are not embedded in any traveler line."
+     },
+     {
+      "id": "R9.C3",
+      "rubric": 9,
+      "mode": "words",
+      "passed": true,
+      "why": "The model ties per-diem figures to the FY2026 extract through the Parameters sheet, and each traveler line's locality and dates map to the listed rate rows. The unlisted Walden night is explicitly identified as using the standard CONUS rate."
+     }
+    ]
+   }
+  ],
+  "crit_fail": 0.5585,
+  "lost": 0.7687,
+  "full_share": 0.0
+ },
+ "gate_scoring": "llm",
+ "shape": {
+  "rubrics": 9,
+  "criteria": 24,
+  "criteria_per_rubric": 2.67,
+  "compound_share": 0.667
+ },
+ "gate": {
+  "threshold": 0.3164,
+  "hard_line": 0.7,
+  "baseline_lost": 0.6328,
+  "baseline_source": "data/p1/difficulty_baseline.json",
+  "lost": 0.7687,
+  "status": "ok",
+  "why": "blind solvers lost 77% of the weight, above the 70% line (originals 63%) after 1 rework(s); kept (below 85%)"
+ },
+ "seen_through": [],
+ "at": "2026-10-13T22:52:21"
+}

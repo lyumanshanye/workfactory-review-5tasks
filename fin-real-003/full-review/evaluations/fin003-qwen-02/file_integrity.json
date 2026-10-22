@@ -1,0 +1,20 @@
+[
+  {
+    "file": "regional_bank_risk_model.xlsx",
+    "exists": true,
+    "zip_crc_ok": true,
+    "sha256": "1a73500db635adbbd8c9519e2f6c867928fbc644395693f359eb3e63f00a6313"
+  },
+  {
+    "file": "operating_performance_diagnosis.docx",
+    "exists": true,
+    "zip_crc_ok": true,
+    "sha256": "264b5451b83d75aa2d242081591281d92c91a83305c8fc8cd1fd62f38c15432c"
+  },
+  {
+    "file": "priority_follow_up_brief.docx",
+    "exists": true,
+    "zip_crc_ok": true,
+    "sha256": "fcb6fd6023e9ea61d6fe84c50586fb93a1e91b6006eb7cec6ae8dc3da2e59e1b"
+  }
+]

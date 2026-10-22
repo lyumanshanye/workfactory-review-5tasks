@@ -1,0 +1,14 @@
+{
+  "run": "fin003-gpt-01",
+  "raw_score": 0.680952380952381,
+  "raw_score_sha256": "ce6035185d1c90a2e00173cfc9e9e8016ddbc137819713f7d980838df24bbe51",
+  "score_approved": false,
+  "formal_acceptance": false,
+  "blockers": [
+    "Independent checks do not cover every criterion exactly once",
+    "Frozen rubric still contains ungrounded placeholders",
+    "Source field semantics not independently verified",
+    "Hidden requirements / acceptable alternatives not independently reviewed"
+  ],
+  "rule": "No score correction or clipping is performed; resolve disagreements in a separate reviewed result and keep the raw score immutable."
+}

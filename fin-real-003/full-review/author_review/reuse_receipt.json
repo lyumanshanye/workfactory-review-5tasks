@@ -1,0 +1,22 @@
+{
+  "upstream": "/inspire/hdd2/project/special-project-1/public/dyfu/jbsynth_v3",
+  "reused_module": "/inspire/hdd2/project/special-project-1/public/dyfu/jbsynth_v3/jbs/v3/p2_stages.py",
+  "templates_sha256": {
+    "request.md": "5fa2491f5a8f4988e8b090a45b27bb729e7ee6d570376d8d8198ab71e9918220",
+    "challenges.md": "f38c2bc1cb474794837b092d6e82005bb9126f3c5cada94e34cbf719bb495f59",
+    "materials.md": "0aa8f4f931c4ad1845041d3a5def1f2506bdb9f37f39b61e17abdddcbaa6d3d7",
+    "intents.md": "dd2bf722dc70de80e2f7d78d81fc967d7440e67ecbca385f01beea86cc46bdae",
+    "readings_spec.md": "15962e3f5bc5d80f15c99454cc6cb258c113f7b9237e750266ebb3f0d9a13537"
+  },
+  "original_blueprint": "v3-00150",
+  "adaptations": [
+    "frozen real inputs only",
+    "FIN observed snapshot rather than payroll scenario",
+    "Chinese authored prose",
+    "independent Qwen design review"
+  ],
+  "original_full_pipeline_executed": false,
+  "design_review_status": "revise",
+  "difficulty_calibrated": false,
+  "expert_gold_approved": false
+}

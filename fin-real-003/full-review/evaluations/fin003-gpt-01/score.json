@@ -1,0 +1,233 @@
+{
+  "criteria": [
+    {
+      "id": "R1.C1",
+      "score": 1,
+      "evidence": "工作簿 Sources & Limits r5 报告 746 行/54 证书/14 季度/746 匹配；独立从 fdic_financials_VT_NH_ME_2022_2025.csv 重算：len=746、REPDTE 唯一值 14、CERT 唯一值 54、与 institutions 交集 54、匹配行数 746。一致。",
+      "reason": "四项计数与冻结文件精确一致，可由底表回算。",
+      "disputed": false
+    },
+    {
+      "id": "R1.C2",
+      "score": 0,
+      "evidence": "Institution Map 含 Change 1/2、New CERT、Ultimate CERT、Effective/End date 列，但无独立的'身份异常清单'工作表；FRANKLIN SAVINGS BANK (17951/19836) 同名异证书保留为两行，但未显式标注'问题类型'与'处理结果'；CHANGEC1 代码 (223/440/510/520/810) 仅以数字呈现，未逐项列出'重名异证书/未匹配/歧义匹配/时间冲突'事项及对应报告日。",
+      "reason": "rubric 要求完整列示每项异常并带 CERT、名称、州、报告日、问题类型与处理结果；候选仅提供原始字段，未形成显式异常清单。",
+      "disputed": false
+    },
+    {
+      "id": "R1.C3",
+      "score": 1,
+      "evidence": "Read Me r6 明确'Financial names are period-end names; the institution snapshot supplies current structural metadata'；Sources & Limits r6 声明'not treated as information available at period-end'；Bank Latest r2 标注'As of 2025-06-30'；Institution Map 的 Metadata report date 列显示 06/30/2026 等晚于分析期日期，且与财务 REPDTE 分列展示。",
+      "reason": "明确区分期间财务事实、当前快照与后续沿革，未用较晚快照覆盖历史财务值。",
+      "disputed": false
+    },
+    {
+      "id": "R2.C1",
+      "score": 1,
+      "evidence": "Executive Dashboard r5/r9 与 Portfolio Trend r18：ROA 0.7617%、NPA 0.3530%、NCO 0.4781%、RBC 14.2515%。独立重算（资产加权 ROA、NAASSET/ASSET、NCLNLSR 贷款加权、RBCRWAJ>0 资产加权）：0.761710、0.352970、0.478085、14.251468，全部吻合；期初 2022-03-31 亦吻合（ROA 0.8092、NPA 0.2198、NCO 0.3234、RBC 15.1991）。",
+      "reason": "四项指标均采用暴露加权汇总，非简单算术平均；期初、期末与 YoY 变化齐备。",
+      "disputed": false
+    },
+    {
+      "id": "R2.C2",
+      "score": 0,
+      "evidence": "Priority 表含 Peer group (州×资产三分位)，Bank Latest 含 Peer group 列；但工作簿无'全样本/连续传统/进入退出/特殊业务模式'四层显式分层表。Change Attribution 仅以'Persistent Institutions=49'隐含连续样本，未单列进入退出层或特殊业务模式层；Institution Map 含 SPECGRPN/TRUST 但未形成可复核的分层汇总。",
+      "reason": "rubric 要求将全样本、连续传统、进入退出与特殊业务模式分层并说明替代范围影响；候选仅以同业组替代，未形成要求的分层结构。",
+      "disputed": false
+    },
+    {
+      "id": "R2.C3",
+      "score": 0,
+      "evidence": "遍历全部工作表未找到按州 (VT/NH/ME) 或按范围 (全样本/连续) 的聚合 KPI 表；Bank Latest 仅含机构级数据与同业中位数，无州别汇总行；Portfolio Trend 仅为全样本时序。",
+      "reason": "rubric 要求呈现各州及全样本/连续样本的核心指标表；候选缺失州别与范围别聚合表。",
+      "disputed": false
+    },
+    {
+      "id": "R3.C1",
+      "score": 1,
+      "evidence": "Change Attribution r5-r8 给出 ROA/NPA/NCO/RBC 的 Start、End、Total、Start-Sample-to-Persistent、Performance、Weight Shift、Interaction、Persistent-to-End。独立重算（49 家持续机构，按 CERT 对齐）：ROA 分解 s2p=0.04606、perf=-0.18042、wshift=0.07512、interact=-0.01195、p2e=0.02371，合计=-0.04747，与候选 -0.04747 一致；NPA/NCO/RBC 分解亦全部吻合（NPA perf=0.11820、NCO perf=0.13410、RBC perf=-1.12102）。",
+      "reason": "对称 Kitagawa 式分解，贡献合计与总变化回勾仅显示舍入误差。",
+      "disputed": false
+    },
+    {
+      "id": "R3.C2",
+      "score": 0,
+      "evidence": "Institution Map 含 NEWCERT/ULTCERT/Effective/End date 列，显示 14240→4255 (01/02/2025)、17748→17741 (01/01/2025)、18031→11971 (07/31/2025)、59298 CHANGEC1=510 (07/24/2025)、29743 CHANGEC1=440/CHANGEC2=430 等事件；但无独立的承继事件表，未逐项列出前后 CERT、机构名、生效日期、交易前后资产及归因处理。诊断报告 P15 仅点名 Northway/Gorham 两起，未完整覆盖 18031 与 59298 等。",
+      "reason": "rubric 要求完整列示每项承继事件并带前后资产与归因处理；候选仅提供原始字段，未形成完整事件表。",
+      "disputed": false
+    },
+    {
+      "id": "R3.C3",
+      "score": 0,
+      "evidence": "诊断报告 P43 提及'持续机构本身的比率变化'与'样本构成不是主因'，P25 提及归因；但未呈现剔除重大承继影响的敏感性、替代权重视角或连续样本与全样本的显式对比表；Priority 表未提供替代范围下的排序变化。",
+      "reason": "rubric 要求以多视角检验稳健性并指出哪些结论由结构变化驱动；候选仅文字陈述，缺乏可复核的敏感性结果。",
+      "disputed": false
+    },
+    {
+      "id": "R4.C1",
+      "score": 1,
+      "evidence": "Read Me r9 说明优先级权重（盈利 25%、信用 25%、资本 15%、资金 15%、增长 10%、集中度 10%）与分位方法；Priority 表含 Composite/Profit/Credit/Capital/Funding/Growth/Concentration 风险分位；Definitions r20 说明'higher indicates more follow-up need, not failure probability'；Read Me r8 说明 RBC=0 不视为零资本。",
+      "reason": "多指标方法可复核，防止单一极端比率支配，RBC 缺失不惩罚。",
+      "disputed": false
+    },
+    {
+      "id": "R4.C2",
+      "score": 0,
+      "evidence": "Priority 表含 7 家入选银行（5 Tier 1 + 2 Tier 2）的身份、同业组、期末指标、Composite 与 Basis 列；但缺失 rubric 要求的'趋势、同业偏离、组合贡献、主要风险信号、缓释证据'等独立字段；Basis 列为单句理由，未分项呈现完整证据类别。",
+      "reason": "rubric 要求对每家入选银行完整提供多类证据；候选仅以单列 Basis 概括，未形成结构化证据字段。",
+      "disputed": false
+    },
+    {
+      "id": "R4.C3",
+      "score": 0,
+      "evidence": "Priority 表无逐家'根因判定、贷款组合/集中度资料需求、纠正行动讨论点、监测指标'字段；Executive Dashboard r22-r28 的 Selected follow-up 表亦仅有 Basis 单列。逐家详细内容在 priority_follow_up_brief.docx 中，但工作簿本身未形成逐家验证框架。",
+      "reason": "rubric 要求在工作簿中对每家入选银行逐项判定根因、资料需求、纠正行动与监测指标；候选未在工作簿提供。",
+      "disputed": false
+    },
+    {
+      "id": "R5.C1",
+      "score": 1,
+      "evidence": "诊断报告 P6-P9：ROA 0.762%、NPA 0.353%、NCO 0.478%、RBC 14.251%，并给出 YoY 变化（ROA +0.105pp、NPA +0.058pp、NCO +0.089pp、RBC 较期初 -0.948pp）与覆盖说明（37 家/79% 资产）。与工作簿 Executive Dashboard r5/r9 及 Portfolio Trend r18 一致。",
+      "reason": "四项指标齐备，期间方向、口径与结构性影响（RBC 覆盖不完整）均说明，数值与工作簿一致。",
+      "disputed": false
+    },
+    {
+      "id": "R5.C2",
+      "score": 1,
+      "evidence": "诊断报告 P6-P9、P25-P34 识别持续机构自身表现为信用恶化与资本下降主因（贡献 +0.118/+0.134/-1.121 pp），权重变化次之；P26-P30 点名 Bangor/Union/Walden/First Federal Bath/Bar Harbor S&L 等机构并以数字支持；P21 提及 Maine Community Bank 并购效应。",
+      "reason": "驱动与机构识别有数字支持，与归因及范围标记一致。",
+      "disputed": false
+    },
+    {
+      "id": "R5.C3",
+      "score": 1,
+      "evidence": "诊断报告 P19-P22 比较净息差解释与一次性项目/并购会计/业务组合变化；P25 比较持续机构内生性与'仅由新机构加入造成'；P31 列举少数大额关系暴露、房地产压力、组合调味、核销时点等竞争解释并指出需验证事项；P34 列举资本竞争解释；P43 明确'归因是恒等式分解，不能识别因果'。",
+      "reason": "对重要变化同时给出结构性与经营性解释，说明支持证据与验证缺口，未宣称因果。",
+      "disputed": false
+    },
+    {
+      "id": "R6.C1",
+      "score": 1,
+      "evidence": "诊断报告 P45-P50 推荐分层 90 天复核方案：0-15 天资料请求、15-45 天深访、30-60 天 Tier 2 复核、45-75 天压力测试、75-90 天关闭/延长/升级决定；P51-P55 给出组合层面改进（固定样本趋势、月度风险指标、资金仪表盘、预警门槛）。",
+      "reason": "明确行动顺序、管理用途与新证据触发条件，连接归因与风险集中区域。",
+      "disputed": false
+    },
+    {
+      "id": "R6.C2",
+      "score": 1,
+      "evidence": "诊断报告 P46-P50 与简报 P13-P96 对 7 家入选银行逐家给出关注理由、管理层问题、资料请求、建议行动与后续监测；内容差异化（如 Bar Harbor S&L 聚焦 L/D 与 NIM，Walden 聚焦增长治理，Bangor 聚焦信用专题），非统一清单复制。",
+      "reason": "逐家建议与风险证据对应，覆盖全部入选机构。",
+      "disputed": false
+    },
+    {
+      "id": "R6.C3",
+      "score": 1,
+      "evidence": "诊断报告 P57-P64 与简报 P109-P116 列出 8 项限制：假设性回顾、样本仅覆盖 ME/NH/VT、季度比率受年化/季节/并购影响、缺借款人级文件、相关性非因果、归因为机械桥接、RBC 覆盖不完整、优先级为分诊工具。P14 说明样本覆盖，P16 说明近似计算，P41 说明同类组局限，P43 说明因果边界。",
+      "reason": "五类限制（时间快照、近似、范围判断、因果边界、比较组）均说明并指出对结论的影响。",
+      "disputed": false
+    },
+    {
+      "id": "R7.C1",
+      "score": 1,
+      "evidence": "简报 P4-P11 提出分层跟进范围：5 家 Tier 1 + 2 家 Tier 2 + 监测名单；P6 说明覆盖样本资产约 15.8%；P9-P11 给出纳入规则与证据门槛；名单与 CERT 与工作簿 Priority 表一致（30878/29636/14158/59289/18408 Tier 1；27824/17743 Tier 2）。",
+      "reason": "范围基于多维证据与材料性，名单跨交付物一致。",
+      "disputed": false
+    },
+    {
+      "id": "R7.C2",
+      "score": 1,
+      "evidence": "简报 P13-P96 对 7 家银行逐家列示：关注理由（P14/P26/P38/P50/P62/P74/P86）、关键支持指标、竞争解释、建议行动、后续监测重点；内容差异化，指出承继/业务模式/权重效应（如 P50 Walden 新设扩张、P38 Union 2025 上半年跳升、P74 Salem 盈利-资金韧性）。",
+      "reason": "五类内容齐备，逐家差异化。",
+      "disputed": false
+    },
+    {
+      "id": "R7.C3",
+      "score": 1,
+      "evidence": "简报对每家银行列出'管理层必须回答'（3 问）与'下一步资料请求'（3 类）：Bar Harbor S&L P16-P22、First Federal Bath P28-P34、Union P40-P46、Walden P52-P58、Bangor P64-P70、Salem P76-P82、Saco P88-P94；覆盖贷款组合、集中度、迁移、核销驱动、资金与资本、交易后整合（如 Union 资本组成/RWA/OCI）。",
+      "reason": "问题与资料请求针对机构证据，可用于验证或否定竞争解释。",
+      "disputed": false
+    },
+    {
+      "id": "R8.C1",
+      "score": 1,
+      "evidence": "简报 P97-P102 形成 90 天安排：升级/降级/关闭门槛（P99-P102）；诊断报告 P46-P50 分阶段（0-15/15-45/30-60/45-75/75-90 天）说明启动问询、资料复核、管理层讨论、压力测试、结论更新；P6 说明覆盖样本资产 15.8% 与资源取舍。",
+      "reason": "分阶段安排含责任方向、输入产出与依赖关系，所有优先银行纳入计划。",
+      "disputed": false
+    },
+    {
+      "id": "R8.C2",
+      "score": 1,
+      "evidence": "简报对每家银行列出'后续监测'（P24/P36/P48/P60/P72/P84/P96）：月度 NPA/NCO、净息差、L/D、存款净流量、ACL 覆盖、RBC/EQ/A 等；P99-P102 给出升级/降级/关闭条件（评级滞后、集中暴露未披露、抵押品高估、流动性压力、资本压力情景）；P104-P107 说明监测名单触发条件。",
+      "reason": "监测指标与原风险信号一致，升级条件为方向/持续性/多信号组合，非固定数值阈值。",
+      "disputed": false
+    },
+    {
+      "id": "R8.C3",
+      "score": 1,
+      "evidence": "简报 P2/P108-P116 与诊断报告 P2/P57-P65 明确声明：'非监管评级、投资建议或全国性行业判断'（P2）、'priority score is sample-relative...not a probability of default or regulatory rating'（P116）、'Correlation and timing support hypotheses, not causation'（P113）、'attribution tab provides a mechanical bridge, not a causal decomposition'（P114）；P41 说明同业偏离用于触发调查而非机械判定。",
+      "reason": "四项边界（内部工具非监管评级、同业偏离为调查信号、不以同业中位数要求准备金、观察性归因非因果）均清楚表达。",
+      "disputed": false
+    }
+  ],
+  "summary": "候选在核心数值（R1.C1、R2.C1、R3.C1、R5.C1）与诊断/建议/跟进内容（R5、R6、R7、R8 大部分）上表现扎实，独立重算全部吻合。主要缺口在结构化清单与分层：R1.C2 身份异常未形成显式清单、R2.C2 未按要求四层分层、R2.C3 缺失州别/范围别聚合表、R3.C2 承继事件未形成完整事件表、R3.C3 缺稳健性敏感性、R4.C2/C3 工作簿内逐家证据与验证框架不完整。总分 17/24（17 项 1 分，7 项 0 分，0 项 null）。",
+  "limitations": [
+    "未逐格核对 Quarterly Detail 746 行与源 CSV 的全部 25 个字段（仅抽样核对关键派生比率）。",
+    "未解析两份 docx 的 4+3 个表格内容（仅提取段落文本）。",
+    "未核验 Bank Latest 同业中位数计算（州×资产三分位）的正确性。",
+    "未读取 FDIC_RMS_Manual_3.2_Loans.pdf、OCC_Rating_Credit_Risk.pdf、financial_definitions.yaml、institution_definitions.yaml 的具体页码进行逐条对照。",
+    "未核验 Priority 表 Composite 分位计算的可复现性。"
+  ],
+  "reference_errors": [
+    "author_numeric_candidate.json 的 selected 名单（5 家：17960/27824/17180/17115/30878）与候选最终选定（7 家：30878/29636/14158/59289/18408/27824/17743）不同；rubric 明确主观名单不要求唯一，故不构成候选错误，仅说明参考候选非绝对真值。",
+    "author_numeric_candidate.json 的 events 仅列 3 起（14240/17748/18031），未含 59298 (CHANGEC1=510) 与 29743 (CHANGEC1=440/CHANGEC2=430)，参考候选本身不完整。"
+  ],
+  "rubric_issues": [
+    "R2.C3 的 {{state_scope_kpis}} 占位符未绑定唯一真值，但 rubric 要求'各州及全样本、连续可比样本'的聚合表；题面未明确要求州别聚合表，仅要求'同类比较'，候选以州×资产三分位同业组替代，是否充分存在歧义。",
+    "R3.C2 要求'完整列示每个影响分析期样本或权重的证书承继事件'；59298 (Bank of Burlington, CHANGEC1=510, 07/24/2025) 与 29743 (Aroostook County, CHANGEC1=440/CHANGEC2=430) 是否为承继事件或仅为名称/章程变更，institution_definitions.yaml 未读取核验，存在歧义。",
+    "R4.C2/R4.C3 要求工作簿内逐家完整证据与验证框架；但题面仅要求'priority_follow_up_brief.docx'提供逐家行动包，工作簿是否必须包含同等细节存在歧义。"
+  ],
+  "checks_performed": [
+    "Python 独立重算财务记录数/季度数/CERT 数/匹配数（fdic_financials + fdic_institutions 交集）",
+    "Python 独立重算 2022-03-31 与 2025-06-30 组合 ROA/NPA/NCO/RBC（暴露加权）",
+    "Python 独立重算 ROA/NPA/NCO/RBC 的 5 项分解（s2p/perf/wshift/interact/p2e），与 Change Attribution 表逐项比对",
+    "Python 提取全部工作表结构与关键单元（Read Me/Executive Dashboard/Portfolio Trend/Change Attribution/Priority/Bank Latest/Quarterly Detail/Institution Map/Definitions/Sources & Limits）",
+    "Python 提取两份 docx 全部段落文本（operating_performance_diagnosis 66 段、priority_follow_up_brief 118 段）",
+    "Python 核验承继事件：14240→4255 (01/02/2025)、17748→17741 (01/01/2025)、18031→11971 (07/31/2025)、59298 CHANGEC1=510 (07/24/2025)",
+    "Python 核验 FRANKLIN SAVINGS BANK 同名异证书 (17951/19836) 保留为两行",
+    "遍历工作簿搜索州别聚合表（未找到）",
+    "比对候选选定名单与 author_numeric_candidate.json selected 名单（不同，但 rubric 允许）",
+    "输出路径：/app/output/score.json、/app/output/regional_bank_risk_model.xlsx、/app/output/operating_performance_diagnosis.docx、/app/output/priority_follow_up_brief.docx"
+  ],
+  "score": 0.680952380952381,
+  "lower_bound": 0.680952380952381,
+  "upper_bound": 0.680952380952381,
+  "unknown_criteria": [],
+  "solver_model": "gpt-5.6-sol",
+  "judge_model": "qwen3.7-plus",
+  "harness": "Claude Code",
+  "formal_acceptance": false,
+  "gold_approved": false,
+  "mode": "tool_using_rubric_review",
+  "weighting": "Each rubric weight split equally among its three subcriteria",
+  "input_unchanged": true,
+  "file_integrity": [
+    {
+      "file": "regional_bank_risk_model.xlsx",
+      "exists": true,
+      "zip_crc_ok": true,
+      "sha256": "3f3bb2f7fbbdfc8f18671e831aad01abcaa8e4226938a2b5b29af8544ea23d1b"
+    },
+    {
+      "file": "operating_performance_diagnosis.docx",
+      "exists": true,
+      "zip_crc_ok": true,
+      "sha256": "73c03218a97c36bb5d9500a616b5b263bde885e40683c381e1258cd0593aef7a"
+    },
+    {
+      "file": "priority_follow_up_brief.docx",
+      "exists": true,
+      "zip_crc_ok": true,
+      "sha256": "11fb91ee711b466ebbe6c4734735f5116f37b73169835196c278614d8c464f0e"
+    }
+  ]
+}

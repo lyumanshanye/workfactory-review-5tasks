@@ -1,0 +1,9 @@
+You are the lead biostatistician for the Pima County Health Department. I am preparing the 2026–2027 school-year outdoor activity guidance, and the health officer and school superintendent will use this analysis at our October planning meeting to decide whether to revise the county's cancellation threshold and asthma surge planning. Our current planning document assumes that school outdoor activities were cancelled only when the daily AQI reached 150; use that threshold in the exposure classification. You have the attached exports and the AirNow AQI technical assistance document. Please deliver three workbooks. county_aqi_cancellation_workbook.xlsx should contain the cleaned daily AQI series for Pima County, the annual AQI summary, and the list of school outdoor activity cancellation days with their daily AQI values. aqi_asthma_model_workbook.xlsx should contain the primary model of daily asthma emergency-department visits as a function of daily AQI and cancellation status, including lagged exposure terms for 0–2 days and 95% confidence intervals. asthma_ed_visit_summary.xlsx should contain daily and annual asthma emergency-department visit rates per 10,000 residents and the assumptions and limitations behind the results.
+
+State any assumptions you make and any limitations of the data that affect the results.
+
+Local Reference Files:
+- daily_aqi_by_county_2024_extract.csv
+- epa_census_aqi_reference_2024.xlsx
+- pima_county_surveillance_exports_2024.xlsx
+- pima_county_environmental_health_sop_2026.pdf

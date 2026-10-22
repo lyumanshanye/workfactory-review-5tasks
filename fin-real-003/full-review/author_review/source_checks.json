@@ -1,0 +1,289 @@
+{
+  "checks": [
+    {
+      "check": "original_bytes",
+      "file": "FDIC_RMS_Manual_3.2_Loans.pdf",
+      "passed": true
+    },
+    {
+      "check": "original_bytes",
+      "file": "OCC_Rating_Credit_Risk.pdf",
+      "passed": true
+    },
+    {
+      "check": "original_bytes",
+      "file": "fdic_api_documentation.html",
+      "passed": true
+    },
+    {
+      "check": "original_bytes",
+      "file": "fdic_financials_VT_NH_ME_2022_2025.csv",
+      "passed": true
+    },
+    {
+      "check": "original_bytes",
+      "file": "fdic_institutions_VT_NH_ME.csv",
+      "passed": true
+    },
+    {
+      "check": "original_bytes",
+      "file": "financial_definitions.yaml",
+      "passed": true
+    },
+    {
+      "check": "original_bytes",
+      "file": "institution_definitions.yaml",
+      "passed": true
+    },
+    {
+      "check": "successor_CERT_17748_to_17741",
+      "passed": true,
+      "evidence": [
+        {
+          "CERT": "17748",
+          "NAME": "Gorham Savings Bank",
+          "NEWCERT": "17741",
+          "EFFDATE": "01/01/2025",
+          "ENDEFYMD": "01/01/2025",
+          "ACTIVE": "0",
+          "source_row": 80
+        }
+      ]
+    },
+    {
+      "check": "nonaccrual_assets_to_assets_endpoint_attribution_identity",
+      "passed": true,
+      "evidence": {
+        "dates": [
+          "20220331",
+          "20250630"
+        ],
+        "common": 49,
+        "pooled_ratios": [
+          "0.002197937548914018157378089333",
+          "0.003529700950836337250549146600"
+        ],
+        "within": "0.001104066996209675716825197821",
+        "reweight": "0.0003545093386515301805158882424",
+        "entry": "0.00003978001357824463470750198016",
+        "exit": "-0.0001665929465171314388775307768",
+        "residual": "2E-31"
+      },
+      "boundary": "One acceptable mathematical decomposition, not a required unique method or causal attribution. Current institutional histories do not prove historical contemporaneous availability."
+    }
+  ],
+  "failed": 0,
+  "succession_trajectories": [
+    {
+      "CERT": "17741",
+      "NAMEFULL": "MAINE COMMUNITY BANK",
+      "REPDTE": "20220331",
+      "ASSET": "1002149",
+      "NAASSET": "1717",
+      "source_row": 15
+    },
+    {
+      "CERT": "17748",
+      "NAMEFULL": "GORHAM SAVINGS BANK",
+      "REPDTE": "20220331",
+      "ASSET": "1547967",
+      "NAASSET": "7767",
+      "source_row": 17
+    },
+    {
+      "CERT": "17741",
+      "NAMEFULL": "MAINE COMMUNITY BANK",
+      "REPDTE": "20220630",
+      "ASSET": "999824",
+      "NAASSET": "1947",
+      "source_row": 66
+    },
+    {
+      "CERT": "17748",
+      "NAMEFULL": "GORHAM SAVINGS BANK",
+      "REPDTE": "20220630",
+      "ASSET": "1555791",
+      "NAASSET": "7622",
+      "source_row": 68
+    },
+    {
+      "CERT": "17741",
+      "NAMEFULL": "MAINE COMMUNITY BANK",
+      "REPDTE": "20220930",
+      "ASSET": "1011112",
+      "NAASSET": "1945",
+      "source_row": 118
+    },
+    {
+      "CERT": "17748",
+      "NAMEFULL": "GORHAM SAVINGS BANK",
+      "REPDTE": "20220930",
+      "ASSET": "1552351",
+      "NAASSET": "6350",
+      "source_row": 120
+    },
+    {
+      "CERT": "17741",
+      "NAMEFULL": "MAINE COMMUNITY BANK",
+      "REPDTE": "20221231",
+      "ASSET": "1004289",
+      "NAASSET": "1820",
+      "source_row": 171
+    },
+    {
+      "CERT": "17748",
+      "NAMEFULL": "GORHAM SAVINGS BANK",
+      "REPDTE": "20221231",
+      "ASSET": "1607984",
+      "NAASSET": "6143",
+      "source_row": 173
+    },
+    {
+      "CERT": "17741",
+      "NAMEFULL": "MAINE COMMUNITY BANK",
+      "REPDTE": "20230331",
+      "ASSET": "1010266",
+      "NAASSET": "1676",
+      "source_row": 225
+    },
+    {
+      "CERT": "17748",
+      "NAMEFULL": "GORHAM SAVINGS BANK",
+      "REPDTE": "20230331",
+      "ASSET": "1649776",
+      "NAASSET": "6401",
+      "source_row": 227
+    },
+    {
+      "CERT": "17741",
+      "NAMEFULL": "MAINE COMMUNITY BANK",
+      "REPDTE": "20230630",
+      "ASSET": "1036036",
+      "NAASSET": "1987",
+      "source_row": 279
+    },
+    {
+      "CERT": "17748",
+      "NAMEFULL": "GORHAM SAVINGS BANK",
+      "REPDTE": "20230630",
+      "ASSET": "1638948",
+      "NAASSET": "6702",
+      "source_row": 281
+    },
+    {
+      "CERT": "17741",
+      "NAMEFULL": "MAINE COMMUNITY BANK",
+      "REPDTE": "20230930",
+      "ASSET": "1063414",
+      "NAASSET": "2371",
+      "source_row": 333
+    },
+    {
+      "CERT": "17748",
+      "NAMEFULL": "GORHAM SAVINGS BANK",
+      "REPDTE": "20230930",
+      "ASSET": "1637222",
+      "NAASSET": "6912",
+      "source_row": 335
+    },
+    {
+      "CERT": "17741",
+      "NAMEFULL": "MAINE COMMUNITY BANK",
+      "REPDTE": "20231231",
+      "ASSET": "1084657",
+      "NAASSET": "6632",
+      "source_row": 387
+    },
+    {
+      "CERT": "17748",
+      "NAMEFULL": "GORHAM SAVINGS BANK",
+      "REPDTE": "20231231",
+      "ASSET": "1668860",
+      "NAASSET": "7520",
+      "source_row": 389
+    },
+    {
+      "CERT": "17741",
+      "NAMEFULL": "MAINE COMMUNITY BANK",
+      "REPDTE": "20240331",
+      "ASSET": "1107414",
+      "NAASSET": "7415",
+      "source_row": 441
+    },
+    {
+      "CERT": "17748",
+      "NAMEFULL": "GORHAM SAVINGS BANK",
+      "REPDTE": "20240331",
+      "ASSET": "1644996",
+      "NAASSET": "9414",
+      "source_row": 443
+    },
+    {
+      "CERT": "17741",
+      "NAMEFULL": "MAINE COMMUNITY BANK",
+      "REPDTE": "20240630",
+      "ASSET": "1160635",
+      "NAASSET": "7132",
+      "source_row": 495
+    },
+    {
+      "CERT": "17748",
+      "NAMEFULL": "GORHAM SAVINGS BANK",
+      "REPDTE": "20240630",
+      "ASSET": "1653584",
+      "NAASSET": "7932",
+      "source_row": 497
+    },
+    {
+      "CERT": "17741",
+      "NAMEFULL": "MAINE COMMUNITY BANK",
+      "REPDTE": "20240930",
+      "ASSET": "1162261",
+      "NAASSET": "2723",
+      "source_row": 549
+    },
+    {
+      "CERT": "17748",
+      "NAMEFULL": "GORHAM SAVINGS BANK",
+      "REPDTE": "20240930",
+      "ASSET": "1623796",
+      "NAASSET": "5501",
+      "source_row": 551
+    },
+    {
+      "CERT": "17741",
+      "NAMEFULL": "MAINE COMMUNITY BANK",
+      "REPDTE": "20241231",
+      "ASSET": "1167995",
+      "NAASSET": "3480",
+      "source_row": 603
+    },
+    {
+      "CERT": "17748",
+      "NAMEFULL": "GORHAM SAVINGS BANK",
+      "REPDTE": "20241231",
+      "ASSET": "1608101",
+      "NAASSET": "6153",
+      "source_row": 605
+    },
+    {
+      "CERT": "17741",
+      "NAMEFULL": "MAINE COMMUNITY BANK",
+      "REPDTE": "20250331",
+      "ASSET": "2702374",
+      "NAASSET": "9808",
+      "source_row": 656
+    },
+    {
+      "CERT": "17741",
+      "NAMEFULL": "MAINE COMMUNITY BANK",
+      "REPDTE": "20250630",
+      "ASSET": "2758302",
+      "NAASSET": "14212",
+      "source_row": 708
+    }
+  ],
+  "expert_review": false,
+  "difficulty_calibrated": false,
+  "limitations": "Source byte identity and one quantitative identity only; not all rubric answers, Office validation, or legal/regulatory expert review."
+}

@@ -1,0 +1,138 @@
+{
+  "task": "FIN-REAL-003",
+  "checks": [
+    {
+      "check": "source:FDIC_RMS_Manual_3.2_Loans.pdf",
+      "passed": true,
+      "evidence": {
+        "sha256": "b4a73592356ca77963ce25022b1bf12690040928cfb653301ca91ae99645c87b",
+        "origin": "colleague_public_library_snapshot"
+      }
+    },
+    {
+      "check": "source:OCC_Rating_Credit_Risk.pdf",
+      "passed": true,
+      "evidence": {
+        "sha256": "a0c2b4653965d6d2f6b8ab80c5cd0e2fdb016239c93e3582357134d3a4270dd6",
+        "origin": "colleague_public_library_snapshot"
+      }
+    },
+    {
+      "check": "source:fdic_api_documentation.html",
+      "passed": true,
+      "evidence": {
+        "sha256": "6094a3a9a88abf00c49b363d08248a12af69b8c9df8585665bfdfd4b7908a39d",
+        "origin": "direct_public_download"
+      }
+    },
+    {
+      "check": "source:fdic_financials_VT_NH_ME_2022_2025.csv",
+      "passed": true,
+      "evidence": {
+        "sha256": "47a3f8edee55758bfe23bb7e989371f7074a5057fac173a8b17d8a5b956068da",
+        "origin": "colleague_public_library_snapshot"
+      }
+    },
+    {
+      "check": "source:fdic_institutions_VT_NH_ME.csv",
+      "passed": true,
+      "evidence": {
+        "sha256": "cdf42c40e7797fd6afd8a0d74f27d375e4bc1d675345be8b2324afc337f2b9a5",
+        "origin": "colleague_public_library_snapshot"
+      }
+    },
+    {
+      "check": "source:financial_definitions.yaml",
+      "passed": true,
+      "evidence": {
+        "sha256": "b257457e4e821d6a0d9f88ffc4e6e0da80e4ccf67fa394cadb21587b50b23d59",
+        "origin": "direct_public_download"
+      }
+    },
+    {
+      "check": "source:institution_definitions.yaml",
+      "passed": true,
+      "evidence": {
+        "sha256": "6ed1763c66a9e240904a45712b23d825c0f31beaadb6cd0213fc1bf00b2af1b9",
+        "origin": "direct_public_download"
+      }
+    },
+    {
+      "check": "rubric_grounded",
+      "passed": false,
+      "evidence": {
+        "unbound_placeholders": [
+          "distinct_cert_count",
+          "financial_row_count",
+          "identity_review_items",
+          "matched_row_count",
+          "portfolio_change_decomposition",
+          "portfolio_net_chargeoff_rate",
+          "portfolio_nonaccrual_rate",
+          "portfolio_roa",
+          "portfolio_total_risk_capital_ratio",
+          "quarter_count",
+          "state_scope_kpis",
+          "succession_events"
+        ]
+      }
+    },
+    {
+      "check": "rubric_delivery_schema",
+      "passed": false,
+      "evidence": "Business intent hierarchy is not yet final rewardkit rubric"
+    },
+    {
+      "check": "two_critical_positive_items",
+      "passed": true,
+      "evidence": "Requires at least two +10 items"
+    },
+    {
+      "check": "negative_item",
+      "passed": false,
+      "evidence": "Requires at least one justified negative item without duplicate angle"
+    },
+    {
+      "check": "negative_weight_ratio",
+      "passed": false,
+      "evidence": {
+        "positive_weight": 70,
+        "negative_weight": 0
+      }
+    },
+    {
+      "check": "reference_file:regional_bank_risk_model.xlsx",
+      "passed": true,
+      "evidence": "Presence only; not content approval"
+    },
+    {
+      "check": "reference_file:operating_performance_diagnosis.docx",
+      "passed": true,
+      "evidence": "Presence only; not content approval"
+    },
+    {
+      "check": "reference_file:priority_follow_up_brief.docx",
+      "passed": true,
+      "evidence": "Presence only; not content approval"
+    },
+    {
+      "check": "independent_gold",
+      "passed": false,
+      "evidence": "Missing independent approved Gold review"
+    },
+    {
+      "check": "three_model_calibration",
+      "passed": false,
+      "evidence": "Missing final three-model calibration"
+    },
+    {
+      "check": "formal_environment",
+      "passed": false,
+      "evidence": "Requires pinned independent task environment and verifier; files alone do not prove execution"
+    }
+  ],
+  "failed": 7,
+  "delivery_ready": false,
+  "limitations": "Necessary evidence checks only; no automated semantic approval of sources, rubrics, business correctness or readability.",
+  "necessary_checks_passed": false
+}

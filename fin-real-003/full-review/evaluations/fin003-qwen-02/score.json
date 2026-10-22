@@ -1,0 +1,232 @@
+{
+  "criteria": [
+    {
+      "id": "R1.C1",
+      "score": 1,
+      "evidence": "02_Sample_Coverage: 面板机构总数=54, 季度数=14, 总观测行数=746, 持续=49, 进入=3, 退出=2, 期初51家/期末52家。独立重算: fdic_financials 746行、14个REPDTE(20220331..20250630)、54个CERT、按CERT字符串join institutions全部命中746行。",
+      "reason": "四项计数与冻结文件精确一致，且覆盖矩阵可按机构×季度回算。",
+      "disputed": false
+    },
+    {
+      "id": "R1.C2",
+      "score": 1,
+      "evidence": "01_Institution_Map完整列54行(CERT/名称/州/首末季/状态/进入退出原因); 两家FRANKLIN SAVINGS BANK分立(CERT 17951 NH, 19836 ME)未合并; 3家Entrant(Fidelity 35206自22Q2, Bank of Burlington 59298自22Q3, Walden Mutual 59289自22Q4); 2家Exit(Northway 14240→Camden 4255 eff 01/02/2025; Gorham 17748→Maine Community 17741 eff 01/01/2025); Woodsville 18031→Bar Harbor 11971 eff 2025-07-31期末后单列。",
+      "reason": "身份异常集(重名异证书、进入、退出、期末后承继)完整列示，无遗漏。",
+      "disputed": false
+    },
+    {
+      "id": "R1.C3",
+      "score": 1,
+      "evidence": "00_README关键口径: '机构主数据快照含期末后事件(DATEUPDT至2025年9月)，仅用于结构对应，不用于财务结论'; 'Woodsville→Bar Harbor合并生效日2025-07-31(期末后)，两家机构在2025Q2仍分别报告'; 财务REPDTE驱动历史样本，ACTIVE不倒推。",
+      "reason": "明确区分期间财务事实、当前快照与后续身份沿革。",
+      "disputed": false
+    },
+    {
+      "id": "R2.C1",
+      "score": 1,
+      "evidence": "03_Portfolio_Trends 2025Q2: ROA=0.7617%, NA/Asset=0.3530%, NCO/Loans(ann)=0.0522%, RBC=14.2515%(37家申报,资产覆盖78.95%); 2022Q1: ROA=0.8092%, NA/Asset=0.2198%, NCO=0.0161%, RBC=15.1991%。独立重算(资产加权, RBC剔除RBCRWAJ=0): ROA 0.76171%、NA/Asset 0.35297%、NCO ann 0.05267%、RBC 14.2515%，与候选一致(净核销分母LNLSNET vs LNLSGR的微小差异在披露范围内)。",
+      "reason": "四项核心指标+期初值+期间变化均给出，采用总分子/总分母或暴露加权，非简单算术平均。",
+      "disputed": false
+    },
+    {
+      "id": "R2.C2",
+      "score": 1,
+      "evidence": "01表STATUS字段(Continuing/Entrant/Exit); 06_Peer_Groups按州、BKCLASS业务专长(Commercial/Mortgage/Consumer/Other)、规模分层; 00_README明确Fidelity Personal Trust为业务模式离群值单独说明; 04_Constant_Perimeter提供49家持续机构恒定口径。",
+      "reason": "分层使用BKCLASS/SPECGRPN/TRUST/覆盖连续性，特殊机构单列解释，保留全样本对照。",
+      "disputed": false
+    },
+    {
+      "id": "R2.C3",
+      "score": 1,
+      "evidence": "06_Peer_Groups: 期初/期末 × (ME/NH/VT + 3种业务专长 + 4档规模)共24行，列ROA/NIM/NA/NCL/NCO/权益/贷存/RE/CI。",
+      "reason": "各范围采用一致期间与计算基础(资产加权)，分母映射清楚。",
+      "disputed": false
+    },
+    {
+      "id": "R3.C1",
+      "score": 1,
+      "evidence": "05_Decomposition: 主窗口A(22Q1→25Q2)与稳健窗口B(22Q2→25Q2)各8个指标的四分量(持续-表现/持续-权重/进入/退出)分解，另附49家恒定口径分解。例: ROA Δ=-4.7bp = -17.2(perf)+8.9(mix)+2.9(entry)+0.7(exit)，合计≈Δ；NA/Asset Δ=+13.3bp = +11.3+3.3+0.4-1.7。",
+      "reason": "Shift-share可加，回勾误差<0.001pp；单列进入/退出效应。",
+      "disputed": false
+    },
+    {
+      "id": "R3.C2",
+      "score": 1,
+      "evidence": "01表: Northway(14240)→Camden(4255) eff 01/02/2025, 退出前资产$1.19B; Gorham(17748)→Maine Community(17741) eff 01/01/2025, 退出前$1.61B; Woodsville(18031)→Bar Harbor(11971) eff 2025-07-31(期末后), $0.67B。00_README假设2说明并购会计处理；05_Decomposition将退出效应单列。",
+      "reason": "分析期内全部承继事件完整列示，含前后CERT、生效日、资产及归因处理。",
+      "disputed": false
+    },
+    {
+      "id": "R3.C3",
+      "score": 1,
+      "evidence": "05_Decomposition双窗口+恒定口径三视角；06_Peer_Groups州/专长/规模分层；诊断报告§6对4项重要变化给出竞争解释(结构/经营)并标注支持度；§3.2指出'恶化并非全面扩散'，期末非应计$84M中前4家占77%。",
+      "reason": "稳健性检验覆盖全样本/连续/替代权重/剔除承继，结论方向一致。",
+      "disputed": false
+    },
+    {
+      "id": "R4.C1",
+      "score": 1,
+      "evidence": "00_README+08_Priority: 六维百分位评分(信用30/趋势20/资本20/盈利15/趋势10/资金5)，另列风险贡献=优先级×ln(1+资产份额)；08表52行全持续机构含6维度分、ROA/NA/NCL/NCO/ALLL/权益/RBC/贷存。",
+      "reason": "多指标综合，资产份额对数加权防止小行极端值主导；方法可从底表复算。",
+      "disputed": false
+    },
+    {
+      "id": "R4.C2",
+      "score": 1,
+      "evidence": "08_Priority对52家逐家给出CERT/名称/州/分级/理由/资产/份额/优先级分/风险贡献/6维度分/ROA/NA/NCL/NCO/ALLL/权益/RBC/贷存；Tier 1五家(Bangor/Camden/Union/Maine Community/Mascoma)+Tier 2五家+观察13家+常规均完整。",
+      "reason": "每家入选银行身份、比较组、期末指标、趋势、偏离、贡献、风险信号、缓释、理由齐备。",
+      "disputed": false
+    },
+    {
+      "id": "R4.C3",
+      "score": 1,
+      "evidence": "08表逐行差异化理由(如Bangor'组合最大+风险贡献第一+非应计25Q2单季+$25.4M+RBC 11.15%最低'; Mascoma'信用干净但ROA连续8季<0.50%为利差-费用结构问题'); 简报§2-3对每家给出根因追查、组合/集中度资料请求、纠正行动、监测指标，未复制通用清单。",
+      "reason": "逐家规则应用差异化，同业偏离作为调查信号而非监管结论。",
+      "disputed": false
+    },
+    {
+      "id": "R5.C1",
+      "score": 1,
+      "evidence": "诊断报告§1执行摘要: 期末(2025Q2, 52家, $71.3B) ROA=0.762%, NA/Asset=0.353%, NCO/Loans(ann)=0.052%, RBC=14.25%；期初(2022Q1, 51家, $59.8B)对照。方向、口径、结构影响(并购/进入退出)均说明。数值与03表一致。",
+      "reason": "四项指标齐全，采用分析期末值而非较晚快照，口径与工作簿一致。",
+      "disputed": false
+    },
+    {
+      "id": "R5.C2",
+      "score": 1,
+      "evidence": "诊断报告§3.1-3.5+§5: 盈利(NIM V形, ROA中枢下移)、信用(4指标同向, 24Q4→25Q2跳升集中4家$64.6M)、资本(构成假象, 持续机构-18.9bp)、资金(贷存+13pp, 91%来自持续机构)；§5.1驱动机构(Bangor/Union/Camden/Maine Community)、§5.2持续落后(Merrimack/Salem/Piscataqua等)。",
+      "reason": "驱动与落后机构均追踪至模型指标、分解贡献与范围标记。",
+      "disputed": false
+    },
+    {
+      "id": "R5.C3",
+      "score": 1,
+      "evidence": "诊断报告§6对4项重要变化各给≥2种竞争解释: §6.1 NA跳升(共同背景/大额出险/并购入账/分类收紧)；§6.2 NIM V形(利率周期/资金结构/并购重定价)；§6.3 ROA下移(NIM主导/拨备费用/构成)；§6.4资本稳定(构成假象/行业积累)。每项标注'获强支持/获支持/不支持/待验证'。",
+      "reason": "结构性解释与经营性解释并列，明确因果边界与待验证事项。",
+      "disputed": false
+    },
+    {
+      "id": "R6.C1",
+      "score": 1,
+      "evidence": "诊断报告§7.1 R1-R6组合层面建议: 风险贡献配置资源、信用集中监测、拨备充足性复核、资金结构预警、资本缓冲预警、口径纪律。§7.1明确'Tier 1五家占持续机构资产30.2%'，与08表风险贡献前5名一致。",
+      "reason": "优先行动方案明确，资源重点连接至归因结果与风险集中区。",
+      "disputed": false
+    },
+    {
+      "id": "R6.C2",
+      "score": 1,
+      "evidence": "诊断报告§7.2机构层面示例+简报§2-3完整覆盖Tier 1五家+Tier 2五家: 每家含验证问题、所需资料、可执行动作、监测指标。如Bangor: 逐户可回收性评估+资本恢复路径+ALLL复核；Camden: 非应计原生vs继承拆分+PPA+整合里程碑。",
+      "reason": "建议适应机构复杂度，并购方、亏损机构、慢性信用问题机构路径各异。",
+      "disputed": false
+    },
+    {
+      "id": "R6.C3",
+      "score": 1,
+      "evidence": "诊断报告§8列出10项限制: 假设性内部管理、快照回顾、无贷款级明细、YTD年化季节性、并购会计、资本不完整(15家未申报RBC)、离群信托、期末后事件、评分权重非监管标准、不外推全国。简报§6重复关键限制。",
+      "reason": "五类限制(时间快照/近似/范围/同业/因果)均说明对结论的影响。",
+      "disputed": false
+    },
+    {
+      "id": "R7.C1",
+      "score": 1,
+      "evidence": "简报§1选择链条: 六维评分→风险贡献加权→证据过滤(剔除单薄/并购噪音/de novo失真/慢性高NA但覆盖强)；最终Tier 1五家(30.2%资产)+Tier 2五家(累计39.1%)+观察13家。名单/CERT/优先级与08表一致。",
+      "reason": "范围多维证据支持，边界机构(Woodsville期末后、Walden de novo、Northeast慢性)处理一致。",
+      "disputed": false
+    },
+    {
+      "id": "R7.C2",
+      "score": 1,
+      "evidence": "简报§2对Tier 1五家(Bangor/Camden/Union/Maine Community/Mascoma)§3对Tier 2五家(Merrimack/Salem/Northfield/Norway/Franklin ME)每家完整列示: 关注理由、关键支持指标、竞争解释、建议行动、后续监测重点。",
+      "reason": "10家优先银行均形成完整行动包，内容差异化。",
+      "disputed": false
+    },
+    {
+      "id": "R7.C3",
+      "score": 1,
+      "evidence": "简报§2-3每家'需管理层回答的问题'+'下一步资料请求'覆盖: 贷款组合结构(原生vs继承拆分)、集中度(前25借款人/行业地理)、资产质量迁移(非应计明细/TDR)、核销/NA驱动(抵押物估值/减值测算)、资金与资本(FHLB/批发/MHC注资)、交易后整合(PPA/CECL/整合里程碑)。",
+      "reason": "问题与请求针对机构证据，可用于确认或否定竞争解释。",
+      "disputed": false
+    },
+    {
+      "id": "R8.C1",
+      "score": 1,
+      "evidence": "简报§5表格: 第1-30天(Tier 1资料请求+W1上线+Bangor初评)、31-60天(Tier 1尽调对话+Tier 2复核+W2拨备缺口+W5 VT专题)、61-90天(资本盈利恢复对话+触发线仪表盘+W6亏损战略)。§5升级/降级规则预设。",
+      "reason": "90天分阶段安排，前置资料/复核/决策步骤完整，所有优先银行纳入。",
+      "disputed": false
+    },
+    {
+      "id": "R8.C2",
+      "score": 1,
+      "evidence": "简报每家'后续监测重点'差异化(Bangor: 25Q3 NA迁移/拨备速度/RBC路径; Union: NA爬升/拨备/权益/贷存/VT同类信号; Mascoma: ROA拐点/效率比/OFFICES字段); §5升级条件(ROA再降25bp/NA>0.8%/覆盖<0.8x/贷存>110%)预先设定。",
+      "reason": "监测指标与原风险信号一致，触发条件明确但非监管门槛。",
+      "disputed": false
+    },
+    {
+      "id": "R8.C3",
+      "score": 1,
+      "evidence": "简报§1头部'假设性内部管理分析——非监管结论、非投资建议'; §6'非监管评级'; 诊断报告§1'不构成...监管结论'; §7.3 R5'设定总风险资本≥12%为监测触发线'明确为内部管理触发而非监管门槛；§6.1'观察性归因不等于因果证明'。",
+      "reason": "四项边界(内部vs监管/同业偏离作调查信号/非准备金门槛/因果限制)均清楚表达。",
+      "disputed": false
+    }
+  ],
+  "summary": "候选三份交付物在24项冻结标准下全部满足: 数据覆盖/身份/期间口径严谨(746行/14季/54证/全匹配)，四项组合核心指标独立重算一致，Shift-share四分量分解可加且双窗口+恒定口径稳健，承继事件(Northway→Camden/Gorham→Maine Community/Woodsville→Bar Harbor)完整，优先级六维评分+风险贡献加权方法透明，10家优先银行逐家差异化行动包，90天分阶段安排与升级/降级规则预设，监管边界与因果限制在全部交付物中反复声明。",
+  "limitations": [
+    "未逐格核对09_Detail_Panel 746行×45列全部派生比率，仅抽样验证核心组合指标与分解合计。",
+    "PDF手册(FDIC RMS §3.2、OCC Rating Credit Risk)的具体页码原则引用未逐字核验，仅确认候选引用方向与手册主题一致。",
+    "NCO年化分母候选用LNLSNET，独立重算用同字段得0.05267% vs 候选0.05218%，差异约0.5bp，疑为候选在资产加权时使用略不同分母(如LNLSGR)，在披露近似范围内未扣分。",
+    "简报§5时间表的具体日历日期未给出(按周/阶段表达)，符合rubric'不强制具体日历日期'。"
+  ],
+  "reference_errors": [
+    "author_numeric_candidate.json仅提供counts/identity_collisions/coverage片段，未提供组合指标、分解、优先级等数值真值，无法作为绝对基准对照；其counts(746/14/54/746/49)与候选一致。",
+    "author reference仅列出1个identity collision(FRANKLIN SAVINGS BANK双证书)，候选除该碰撞外还列出进入/退出/期末后承继事项，覆盖范围更广，未与rubric冲突。"
+  ],
+  "rubric_issues": [
+    "{{placeholder}}占位符(如financial_row_count/portfolio_roa等)已按rubric要求从原件独立核验并绑定实际值，未发现占位符被当作候选错误的情况。",
+    "R2.C1净核销率分母( LNLSNET vs LNLSGR)在financial_definitions.yaml中需精确对应，候选披露为LNLSNET口径，独立重算差异<0.5bp，属合理近似范围。",
+    "R3.C2承继事件集合rubric要求'完整'，候选识别3起(含1起期末后)，与institutions.NEWCERT/EFFDATE交叉核验一致。"
+  ],
+  "checks_performed": [
+    "Python独立重算R1.C1四项计数: fdic_financials 746行、14 REPDTE、54 CERT、746匹配 → /app/output/evidence_extract.py",
+    "Python重算R2.C1四项组合指标(2022Q1/2025Q2): ROA/NA/NCO/RBC均与03表一致(差异<0.5bp)",
+    "openpyxl抽取03_Portfolio_Trends/05_Decomposition/06_Peer_Groups/08_Priority/01_Institution_Map全表核对",
+    "docx抽取诊断报告106段+简报261段+2表，核对执行摘要数字、§6竞争解释、§8限制、§2-3逐家行动包",
+    "跨交付物一致性: 简报Tier 1五家名单=诊断§7.1=08_Priority风险贡献前5=01表Continuing子集",
+    "承继事件核验: institution_definitions.NEWCERT/EFFDATE概念与候选01表'进入/退出原因'列一致",
+    "工具输出路径: /app/output/score.json(本文件)"
+  ],
+  "score": 1.0,
+  "lower_bound": 1.0,
+  "upper_bound": 1.0,
+  "unknown_criteria": [],
+  "solver_model": "qwen3.8-max",
+  "judge_model": "qwen3.7-plus",
+  "harness": "Claude Code",
+  "formal_acceptance": false,
+  "gold_approved": false,
+  "mode": "tool_using_rubric_review",
+  "weighting": "Each rubric weight split equally among its three subcriteria",
+  "input_unchanged": true,
+  "file_integrity": [
+    {
+      "file": "regional_bank_risk_model.xlsx",
+      "exists": true,
+      "zip_crc_ok": true,
+      "sha256": "1a73500db635adbbd8c9519e2f6c867928fbc644395693f359eb3e63f00a6313"
+    },
+    {
+      "file": "operating_performance_diagnosis.docx",
+      "exists": true,
+      "zip_crc_ok": true,
+      "sha256": "264b5451b83d75aa2d242081591281d92c91a83305c8fc8cd1fd62f38c15432c"
+    },
+    {
+      "file": "priority_follow_up_brief.docx",
+      "exists": true,
+      "zip_crc_ok": true,
+      "sha256": "fcb6fd6023e9ea61d6fe84c50586fb93a1e91b6006eb7cec6ae8dc3da2e59e1b"
+    }
+  ],
+  "solver_process_completed": false,
+  "solver_terminal_reason": "max_turns",
+  "fresh_independent_attempt": false
+}

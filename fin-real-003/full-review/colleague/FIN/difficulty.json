@@ -1,0 +1,1259 @@
+{
+ "case": "v3-00174",
+ "built_at": "2026-10-17T08:02:04",
+ "blind_round": 1,
+ "summary": {
+  "solvers": [
+   {
+    "solver": 1,
+    "crit_fail": 0.6667,
+    "lost": 0.914,
+    "full": false,
+    "rubrics": 10,
+    "criteria": 38,
+    "left_out": 4,
+    "criteria_results": [
+     {
+      "id": "R1.C1",
+      "rubric": 1,
+      "mode": "values",
+      "passed": null,
+      "why": "sec179_item_adjustments: not stated, left out (reference_wrong)"
+     },
+     {
+      "id": "R1.C2",
+      "rubric": 1,
+      "mode": "values",
+      "passed": false,
+      "why": "sec179_property_cost_2025: not stated; sec179_phaseout_reduction: not stated"
+     },
+     {
+      "id": "R1.C3",
+      "rubric": 1,
+      "mode": "values",
+      "passed": false,
+      "why": "sec179_carryover_2026: '171500' differs (reference_right)"
+     },
+     {
+      "id": "R1.C4",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The workpaper identifies that the Section 179 parameter sheet used the prior-year 2024 limits and that the signed checklist line was marked Pass despite this error. It explicitly states the correct 2025 limits from the 2025 Form 4562 instructions and requires correction of the parameter block/checklist item."
+     },
+     {
+      "id": "R2.C1",
+      "rubric": 2,
+      "mode": "values",
+      "passed": false,
+      "why": "special_depreciation_out_of_scope_items: [{'#': '3', 'Position / item': 'VAN-108 (UT-108)', 'What fails': 'Section 179 deduction of $52,000 claimed for a van that was not placed in service in 2025.', 'Reason (rule / source)': 'Purchased 12/29/2025; released to service 01/05/2026. Manual Sec 4.3: a vehicle is not in service the day it is invoiced.', '2025 deduction correction ($)': '-52000', 'Other effect / note': 'Electible in 2026 when placed in service.'}, {'#': '4', 'Position / item': 'VAN-109 (UT-109)', 'What fails': '100% special depreciation of $48,000 claimed for a van that was not placed in service in 2025.', 'Reason (rule / source)': 'Purchased 12/29/2025; released to service 01/05/2026. Manual Sec 4.3.', '2025 deduction correction ($)': '-48000', 'Other effect / note': 'Special allowance available in 2026.'}] differs (reference_right)"
+     },
+     {
+      "id": "R2.C2",
+      "rubric": 2,
+      "mode": "values",
+      "passed": false,
+      "why": "special_depreciation_removed_basis: not stated; special_depreciation_reduction: '-48000' differs (reference_right); special_depreciation_2025_corrected: not stated"
+     },
+     {
+      "id": "R2.C3",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "The workpaper review consistently distinguishes invoice date from placed-in-service date and states that vehicles purchased in late December 2025 but not released to service until January 2026 are not placed in service in 2025. This matches the requirement that invoice date alone does not establish placed-in-service status and that the vehicle must be ready and available for intended use before year-end."
+     },
+     {
+      "id": "R3.C1",
+      "rubric": 3,
+      "mode": "values",
+      "passed": null,
+      "why": "listed_property_adjustment_items: not stated, left out (reference_wrong)"
+     },
+     {
+      "id": "R3.C2",
+      "rubric": 3,
+      "mode": "values",
+      "passed": false,
+      "why": "van107_business_use_pct: '40% business use (8,000/20,000 miles)' differs (reference_right); van107_recapture: not stated"
+     },
+     {
+      "id": "R3.C3",
+      "rubric": 3,
+      "mode": "values",
+      "passed": false,
+      "why": "car103_tax_year_of_service: '8th service year' differs (reference_right)"
+     },
+     {
+      "id": "R3.C4",
+      "rubric": 3,
+      "mode": "values",
+      "passed": false,
+      "why": "reclassified_limit_total: not stated; reclassified_deduction_adjustment: not stated, left out (reference_wrong)"
+     },
+     {
+      "id": "R3.C5",
+      "rubric": 3,
+      "mode": "words",
+      "passed": true,
+      "why": "The review relies on the contemporaneous usage/fleet log rather than the workpaper planning percentages when substantiating listed-property business use. It corrects VAN-107 from 100% to 40% based on the fleet log, and it states that vehicles with commute/weekend personal use and no qualifying nonpersonal-use exception should be reported as listed property in Part V."
+     },
+     {
+      "id": "R4.C1",
+      "rubric": 4,
+      "mode": "values",
+      "passed": false,
+      "why": "unmatched_vehicle_records: not stated"
+     },
+     {
+      "id": "R4.C2",
+      "rubric": 4,
+      "mode": "values",
+      "passed": false,
+      "why": "vehicle_id_match_set: not stated"
+     },
+     {
+      "id": "R4.C3",
+      "rubric": 4,
+      "mode": "values",
+      "passed": false,
+      "why": "replacement_vehicle_basis: not stated; replacement_vehicle_pis_date: not stated"
+     },
+     {
+      "id": "R4.C4",
+      "rubric": 4,
+      "mode": "words",
+      "passed": false,
+      "why": "The output files do not contain a matching note explaining that fleet records are joined to fixed assets by permanent unit asset identification number or VIN because plate numbers may be reassigned. The files reference vehicle/asset numbers and a fleet usage log, but the specific matching-note explanation required by the criterion is absent."
+     },
+     {
+      "id": "R5.C1",
+      "rubric": 5,
+      "mode": "values",
+      "passed": false,
+      "why": "covered_vehicle_count: '13 in the workpapers + 1 retired unit in the log' differs (reference_right)"
+     },
+     {
+      "id": "R5.C2",
+      "rubric": 5,
+      "mode": "values",
+      "passed": null,
+      "why": "corrected_total_2025_deduction: left out (reference_wrong)"
+     },
+     {
+      "id": "R5.C3",
+      "rubric": 5,
+      "mode": "values",
+      "passed": false,
+      "why": "total_2025_deduction_adjustment: '-282949.82' differs (reference_right); largest_adjustment_component: not stated, left out (reference_wrong)"
+     },
+     {
+      "id": "R5.C4",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The analysis does not rely on the signed checklist as a substitute. It provides an item-by-item review of all listed assets and an Exception Log that specifically identifies previously signed checklist items that no longer hold, including checklist items 07, 08, and 12. The overall sign-off is also rejected because the memo and Summary state the return should not be filed as drafted and recommend sending the workpapers back to Jun for revision."
+     },
+     {
+      "id": "R6.C1",
+      "rubric": 6,
+      "mode": "values",
+      "passed": null,
+      "why": "exception_log_entries: not stated, left out (reference_wrong)"
+     },
+     {
+      "id": "R6.C2",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "Several exceptions do not explicitly cite either the 2025 Form 4562 instructions or an organisation policy; they state calculations or conclusions as the sole reason."
+     },
+     {
+      "id": "R6.C3",
+      "rubric": 6,
+      "mode": "values",
+      "passed": false,
+      "why": "exception_log_total_adjustment: left out (reference_wrong); exception_log_total_recapture: not stated"
+     },
+     {
+      "id": "R6.C4",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "The log is mostly framed as required corrections, but it defers a quantifiable correction and includes soft language rather than definitively resolving each item where records/rules allow."
+     },
+     {
+      "id": "R7.C1",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo states the 2025 Section 179 limits, explains the stale internal 2024 parameters, and identifies the corrected Section 179 position after applying the business-income cap and removing the late-year van."
+     },
+     {
+      "id": "R7.C2",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo identifies VAN-108 and VAN-109 as purchased in 2025 but not released to service until January 5, 2026, and states that their 2025 Section 179 and special depreciation positions must be removed."
+     },
+     {
+      "id": "R7.C3",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo covers the special depreciation correction by identifying the current-year property removed from the special depreciation base and the amount of that removal."
+     },
+     {
+      "id": "R7.C4",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo confirms which MACRS and amortization items hold as filed and identifies non-dollar classification and convention changes, with no amortization start-date changes required."
+     },
+     {
+      "id": "R7.C5",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo applies the current-year 2025 Form 4562 instructions to correct stale internal parameters and misclassified items, and it directs that the return be corrected to the 2025 amounts before filing."
+     },
+     {
+      "id": "R8.C1",
+      "rubric": 8,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo identifies VAN-107 as falling below the 50% business-use threshold and quantifies the disallowed current-year amount, but it does not state that the prior Section 179 recapture is recognized as other income in 2025. It only says the recapture is subject to Section 280F and must be computed from prior-year usage records."
+     },
+     {
+      "id": "R8.C2",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo clearly identifies the older passenger vehicle (CAR-103, 2018 sedan), corrects the service year from third to eighth, and states the resulting $2,688 deduction reduction."
+     },
+     {
+      "id": "R8.C3",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo reports the vehicles that must be reported in Part V listed property: VAN-107 moves to Part V line 27 and TRK-105/TRK-106 should be reported as listed property. It provides business-use/limit effects and includes the deduction adjustment in the net-effect table."
+     },
+     {
+      "id": "R8.C4",
+      "rubric": 8,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not state the general listed-property rules that contemporaneous mileage and usage logs control over planning percentages, nor that the mere descriptions 'truck' or 'van' do not create a nonpersonal-use exception. It applies the usage log for VAN-107 and explains TRK-105/TRK-106 should be listed property, but does not articulate these specific principles."
+     },
+     {
+      "id": "R9.C1",
+      "rubric": 9,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not report any vehicle plate reassignment or resulting mismatch risk. It does not name old and replacement vehicle unit identifiers or explain that the replacement's current-year deductions must not be assigned to the old unit."
+     },
+     {
+      "id": "R9.C2",
+      "rubric": 9,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not identify any vehicles present in only one source or flag them as unverified rather than dropping them. No such vehicles are named or listed, and no matching status is provided."
+     },
+     {
+      "id": "R9.C3",
+      "rubric": 9,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo contains no matching discussion stating that a permanent unit asset identifier or VIN governs the match, or that plates are reassignable. The required VIN/permanent ID versus plate guidance is absent."
+     },
+     {
+      "id": "R9.C4",
+      "rubric": 9,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not state the completeness limitation that the review covers the 23 assets and 14 vehicles shown in the provided exports and does not opine on assets outside those registers."
+     },
+     {
+      "id": "R10.C1",
+      "rubric": 10,
+      "mode": "values",
+      "passed": false,
+      "why": "memo_total_2025_deduction_change: '$-282,949.82' differs (reference_right); memo_prior_sec179_recapture: not stated"
+     },
+     {
+      "id": "R10.C2",
+      "rubric": 10,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo gives a clear recommendation to send the workpapers back to Jun for revision before Lisa Wallace's firm files. It does not defer the choice or recommend filing as drafted; it explicitly says 'File the return as drafted: no.'"
+     },
+     {
+      "id": "R10.C3",
+      "rubric": 10,
+      "mode": "words",
+      "passed": true,
+      "why": "The recommendation is tied to the known amount-changing exceptions: uncapped Section 179, VAN-108/VAN-109 not in service in 2025, VAN-107 business use, and the CAR-103 and TRK-113 limit errors. The memo states those positions must be corrected before filing, not filed uncorrected."
+     },
+     {
+      "id": "R10.C4",
+      "rubric": 10,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not explain that the signed checklist overall sign-off is overridden by the item-by-item findings or that the overall sign-off should not be used as evidence the return can be filed. It only notes that checklist item 12 was marked Pass, without addressing a signed overall checklist sign-off."
+     },
+     {
+      "id": "R10.C5",
+      "rubric": 10,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo is structured so a managing partner without the workbook can follow the category findings, total change, and bottom-line recommendation. It includes a brief verdict, separate category discussions, a net effect table, and a final recommendation."
+     }
+    ]
+   },
+   {
+    "solver": 2,
+    "crit_fail": 0.5762,
+    "lost": 0.914,
+    "full": false,
+    "rubrics": 10,
+    "criteria": 39,
+    "left_out": 3,
+    "criteria_results": [
+     {
+      "id": "R1.C1",
+      "rubric": 1,
+      "mode": "values",
+      "passed": null,
+      "why": "sec179_item_adjustments: not stated, left out (reference_wrong)"
+     },
+     {
+      "id": "R1.C2",
+      "rubric": 1,
+      "mode": "values",
+      "passed": false,
+      "why": "sec179_property_cost_2025: not stated"
+     },
+     {
+      "id": "R1.C3",
+      "rubric": 1,
+      "mode": "values",
+      "passed": false,
+      "why": "sec179_carryover_2026: '$149,020' differs (reference_right)"
+     },
+     {
+      "id": "R1.C4",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The workpaper identifies the stale Section 179 parameter block as carrying the prior-year 2024 limits of $1,220,000 / $3,050,000, states the 2025 limits are $2,500,000 / $4,000,000, and requires the parameter sheet and signed checklist item 12 to be corrected for the 2025 return rather than using stale internal planning figures."
+     },
+     {
+      "id": "R2.C1",
+      "rubric": 2,
+      "mode": "values",
+      "passed": false,
+      "why": "special_depreciation_out_of_scope_items: [{'Item No.': 8, 'Asset No.': 'VAN-109', 'Description': 'Cargo van - permanently shelved, company-liveried', 'Type': 'Vehicle', 'As-filed method / convention': '100% special depreciation', 'Business use % (workpaper)': 100, 'Business use % (log / actual)': 100, 'As-filed 2025 deduction': 48000, 'Corrected 2025 deduction (before Sec. 179 income limit)': 0, 'Adjustment': -48000, 'Verdict': 'Adjustment', 'Review note': 'Purchased 12/29/2025 but not ready for service until 01/05/2026; not placed in service in 2025. Remove the 2025 special depreciation allowance of $48,000.'}] differs (reference_right)"
+     },
+     {
+      "id": "R2.C2",
+      "rubric": 2,
+      "mode": "values",
+      "passed": false,
+      "why": "special_depreciation_removed_basis: not stated; special_depreciation_2025_corrected: not stated"
+     },
+     {
+      "id": "R2.C3",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "The review states placed-in-service dates should follow fleet release dates rather than invoice dates, and it removes 2025 deductions for vehicles purchased 12/29/2025 but not ready for service until 01/05/2026, which matches the requirement that a 2025 vehicle must be ready and available for intended use before year-end."
+     },
+     {
+      "id": "R3.C1",
+      "rubric": 3,
+      "mode": "values",
+      "passed": null,
+      "why": "listed_property_adjustment_items: not stated, left out (reference_wrong)"
+     },
+     {
+      "id": "R3.C2",
+      "rubric": 3,
+      "mode": "values",
+      "passed": false,
+      "why": "van107_disallowed_2025: '-7020' differs (reference_right); van107_recapture: '15172' differs (reference_right)"
+     },
+     {
+      "id": "R3.C3",
+      "rubric": 3,
+      "mode": "values",
+      "passed": false,
+      "why": "car103_excess_adjustment: '-2688' differs (reference_right)"
+     },
+     {
+      "id": "R3.C4",
+      "rubric": 3,
+      "mode": "values",
+      "passed": false,
+      "why": "reclassified_limit_total: not stated; reclassified_deduction_adjustment: not stated, left out (reference_wrong)"
+     },
+     {
+      "id": "R3.C5",
+      "rubric": 3,
+      "mode": "words",
+      "passed": true,
+      "why": "The listed-property analysis uses the contemporaneous usage log rather than unadjusted workpaper percentages where they differ, and identifies vehicles with personal use and no qualifying nonpersonal-use exception as listed property reportable on Form 4562 Part V. VAN-107 is corrected from 100% to 40% based on the log, and TRK-105/TRK-106 are expressly described as listed property, not qualified nonpersonal-use vehicles, with Part V reporting required."
+     },
+     {
+      "id": "R4.C1",
+      "rubric": 4,
+      "mode": "values",
+      "passed": false,
+      "why": "unmatched_vehicle_records: not stated"
+     },
+     {
+      "id": "R4.C2",
+      "rubric": 4,
+      "mode": "values",
+      "passed": false,
+      "why": "vehicle_id_match_set: not stated"
+     },
+     {
+      "id": "R4.C3",
+      "rubric": 4,
+      "mode": "values",
+      "passed": false,
+      "why": "replacement_vehicle_basis: not stated; replacement_vehicle_pis_date: not stated"
+     },
+     {
+      "id": "R4.C4",
+      "rubric": 4,
+      "mode": "words",
+      "passed": false,
+      "why": "The required matching note is not present. The output files do not explain that fleet records are joined to fixed assets by permanent unit asset identification number or VIN because plate numbers may be reassigned. The Item Review sheet references asset numbers like TRK-101 and VAN-107, but does not describe the matching methodology or the reason to avoid plate numbers. The PDF memo similarly discusses fleet records and placed-in-service dates but never states that matching uses a permanent unit asset identification number or VIN rather than plate numbers."
+     },
+     {
+      "id": "R5.C1",
+      "rubric": 5,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R5.C2",
+      "rubric": 5,
+      "mode": "values",
+      "passed": true,
+      "why": ""
+     },
+     {
+      "id": "R5.C3",
+      "rubric": 5,
+      "mode": "values",
+      "passed": false,
+      "why": "total_2025_deduction_adjustment: '-281208' differs (reference_right); largest_adjustment_component: left out (reference_wrong)"
+     },
+     {
+      "id": "R5.C4",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The analysis flags specific signed checklist items that do not hold after the corrected positions are applied, and it requires the checklist to be re-performed and re-dated rather than accepting the sign-off as verification. This addresses the overall sign-off by invalidating the current checklist conclusions."
+     },
+     {
+      "id": "R6.C1",
+      "rubric": 6,
+      "mode": "values",
+      "passed": null,
+      "why": "exception_log_entries: left out (reference_wrong)"
+     },
+     {
+      "id": "R6.C2",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "The exception log does not consistently cite the governing IRS 2025 Form 4562 instruction or the organization policy for each exception. Several exceptions are stated as internal conclusions or only reference form lines, rather than citing the governing instruction or policy."
+     },
+     {
+      "id": "R6.C3",
+      "rubric": 6,
+      "mode": "values",
+      "passed": false,
+      "why": "exception_log_total_adjustment: left out (reference_wrong); exception_log_total_recapture: '15172' differs (reference_right)"
+     },
+     {
+      "id": "R6.C4",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "The exception log is mostly framed as required corrections, but it includes a conditional/TBD item that defers quantification even though the record repository and rules appear sufficient to resolve it, so the log fails the requirement not to defer quantities."
+     },
+     {
+      "id": "R7.C1",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo states the 2025 Section 179 maximum deduction and phase-out threshold ($2,500,000 / $4,000,000), explains that the stale parameter block used 2024 limits and had no dollar effect, and gives the corrected Section 179 deduction as limited to $986,500 with $149,020 carried to 2026."
+     },
+     {
+      "id": "R7.C2",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo identifies the two late-year vehicles that were not ready for service until 2026 and expressly removes both the Section 179 and special depreciation positions for 2025."
+     },
+     {
+      "id": "R7.C3",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo addresses special depreciation by identifying the current-year property removed from the special depreciation base and confirming the remaining special allowance amounts that are correct."
+     },
+     {
+      "id": "R7.C4",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo confirms that all three amortization items hold as filed, confirms the regular non-vehicle MACRS and continuing vehicle MACRS positions that pass, and identifies the classification change for the solar asset."
+     },
+     {
+      "id": "R7.C5",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo makes clear that the review is governed by the 2025 IRS Form 4562 instructions, not the stale prior-year checklist and workpaper formulas, and that the return must be corrected to the 2025 amounts."
+     },
+     {
+      "id": "R8.C1",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo identifies VAN-107 as the vehicle whose business use fell to 40%, reports the deduction limitation and resulting disallowance ($11,700 vs $4,680), and reports the prior Section 179/excess depreciation recapture of about $15,172 as 2025 ordinary income."
+     },
+     {
+      "id": "R8.C2",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo identifies the older passenger vehicle CAR-103, states the corrected tax year of service as year eight, and gives the resulting deduction reduction from $6,720 to $4,032."
+     },
+     {
+      "id": "R8.C3",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo reports that TRK-105 and TRK-106 were treated as nonpersonal-use vehicles in general MACRS but must be listed property in Part V, gives the business-use and Section 179 limit effects, and includes the resulting adjustments in the aggregate deduction adjustment totals."
+     },
+     {
+      "id": "R8.C4",
+      "rubric": 8,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not explicitly state that contemporaneous mileage and usage logs control over planning percentages, nor does it state that the mere descriptions 'truck' or 'van' do not create a nonpersonal-use exception. It implies these points through specific examples, but the required listed-property findings are not stated as general rules."
+     },
+     {
+      "id": "R9.C1",
+      "rubric": 9,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not report any vehicle plate reassignment or resulting mismatch risk. It does not name an old and a replacement vehicle unit identifier connected to a reassigned plate, nor does it explain that the replacement's current-year deductions must not be assigned to the old unit."
+     },
+     {
+      "id": "R9.C2",
+      "rubric": 9,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not identify vehicles present in only one source or flag them as unverified rather than dropping them. The only source-reconciliation comment concerns a retired unit, which is described as correctly excluded, not as unverified."
+     },
+     {
+      "id": "R9.C3",
+      "rubric": 9,
+      "mode": "words",
+      "passed": false,
+      "why": "There is no matching discussion stating that the permanent unit asset identifier or VIN, rather than the plate, governs the match. The memo also does not state that plate numbers are reassignable."
+     },
+     {
+      "id": "R9.C4",
+      "rubric": 9,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo states the review covers 23 assets and 14 vehicles in the workpapers/log, but it does not express the full completeness limitation that it does not opine on assets outside those registers."
+     },
+     {
+      "id": "R10.C1",
+      "rubric": 10,
+      "mode": "values",
+      "passed": false,
+      "why": "memo_prior_sec179_recapture: '+$15,172' differs (reference_right)"
+     },
+     {
+      "id": "R10.C2",
+      "rubric": 10,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo contains a single clear bottom-line recommendation to return the workpapers for revision before e-filing. It does not recommend filing as drafted and does not defer the decision."
+     },
+     {
+      "id": "R10.C3",
+      "rubric": 10,
+      "mode": "words",
+      "passed": true,
+      "why": "The recommendation is tied to known amount-changing exceptions in the exception log and conveys that the workpapers should not be filed with uncorrected amount-changing errors."
+     },
+     {
+      "id": "R10.C4",
+      "rubric": 10,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo explains that checklist sign-offs were made despite the identified failures and cannot be used as evidence that the return is ready to file."
+     },
+     {
+      "id": "R10.C5",
+      "rubric": 10,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo is self-contained and organized so a managing partner can follow the category findings, the total change, and the recommendation without opening the workbook."
+     }
+    ]
+   }
+  ],
+  "crit_fail": 0.6215,
+  "lost": 0.914,
+  "full_share": 0.0
+ },
+ "all_llm": {
+  "solvers": [
+   {
+    "solver": 1,
+    "crit_fail": 0.6111,
+    "lost": 0.914,
+    "full": false,
+    "rubrics": 10,
+    "criteria": 42,
+    "left_out": 0,
+    "criteria_results": [
+     {
+      "id": "R1.C1",
+      "rubric": 1,
+      "mode": "words",
+      "passed": false,
+      "why": "The output assigns verdicts to all positions, but it does not match the required Section 179 adjustment set. TRK-105 and TRK-106 are marked as standing with full Section 179 allowed rather than capped at $48,484.00 and $43,996.00. FA-207 is shown with a $171,500.00 Section 179 business-income disallowance rather than $79,020.00. Only VAN-108 at $52,000.00 matches the required adjustment set."
+     },
+     {
+      "id": "R1.C2",
+      "rubric": 1,
+      "mode": "words",
+      "passed": false,
+      "why": "The workpaper does identify the 2025 maximum deduction as $2,500,000 and the phase-out threshold as $4,000,000, but it does not state the cost of Section 179 property placed in service in 2025 as $1,434,000.00 or explicitly compute the dollar phase-out reduction as $0.00. Instead, it discusses elections of $1,210,000/$1,158,000 and that the income cap binds."
+     },
+     {
+      "id": "R1.C3",
+      "rubric": 1,
+      "mode": "words",
+      "passed": false,
+      "why": "The allowed 2025 Section 179 deduction and business income figure are correctly stated as $986,500.00, but the unused carryover to 2026 is stated as $171,500.00, not the required $79,020.00."
+     },
+     {
+      "id": "R1.C4",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The analysis explicitly calls out that the Section 179 parameter sheet carries 2024 limits instead of the 2025 limits, notes that checklist item 12 was marked Pass, and states that the 2025 return must be corrected to follow the 2025 Form 4562 instructions rather than stale internal planning figures."
+     },
+     {
+      "id": "R2.C1",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook identifies VAN-108 and VAN-109 as not placed in service in 2025 and gives the January 5, 2026 release-to-service date for both. The exception log also cites the placed-in-service rule that invoice date alone does not put a vehicle in service. No other asset is treated as failing 2025 placed-in-service for this issue."
+     },
+     {
+      "id": "R2.C2",
+      "rubric": 2,
+      "mode": "words",
+      "passed": false,
+      "why": "The file removes $52,000 for VAN-108 and $48,000 for VAN-109 from 2025 deductions but does not state the $100,000 basis removal as such. It explicitly reduces the special depreciation allowance by $48,000 for VAN-109, but it never recalculates or reports the corrected 2025 special depreciation allowance as $189,170.00."
+     },
+     {
+      "id": "R2.C3",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "The analysis states that the invoice date alone does not place a vehicle in service and uses the release-to-service date to determine 2025 eligibility, which semantically covers the required ready-and-available-before-year-end rule."
+     },
+     {
+      "id": "R3.C1",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The file assigns vehicle-level verdicts and matches CAR-103 ($2,688) and VAN-107 current-year disallowance ($7,020), but it does not make the required listed-property adjustments for TRK-105 ($48,484) and TRK-106 ($43,996). It also does not quantify VAN-107's prior Section 179 recapture income as $5,840; it only says the recapture must be computed later."
+     },
+     {
+      "id": "R3.C2",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The 40.0% corrected business use, $4,680 allowable limit, and $7,020 current-year disallowance are present, but the required prior Section 179 recapture income of $5,840 is not stated. Because the recapture amount is an explicit required element, the criterion fails."
+     },
+     {
+      "id": "R3.C3",
+      "rubric": 3,
+      "mode": "words",
+      "passed": true,
+      "why": "The output correctly identifies CAR-103 as having a corrected tax year of service of 8, applies the 4-plus-year passenger automobile limit of $5,760 at 70% business use to reach $4,032, and records the excess as $2,688."
+     },
+     {
+      "id": "R3.C4",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The output notes that TRK-105 and TRK-106 should be reported as listed property in Part V, but it fails to reclassify their deduction treatment. It does not show the required aggregate business-use-adjusted listed-property limit of $19,520 or the required $92,480 deduction adjustment."
+     },
+     {
+      "id": "R3.C5",
+      "rubric": 3,
+      "mode": "words",
+      "passed": true,
+      "why": "The analysis uses the usage log/fleet records rather than relying solely on the unadjusted workpaper percentages for key vehicles, and it states that the crew-cab trucks with personal use and no qualifying nonpersonal-use exception should be reported as listed property in Part V."
+     },
+     {
+      "id": "R4.C1",
+      "rubric": 4,
+      "mode": "words",
+      "passed": false,
+      "why": "The output does not list UT-104 with plate KH-449 and permanent asset identifier V-104 as an unmatched or only-in-one-source record, and it does not explain the plate-based join misassignment."
+     },
+     {
+      "id": "R4.C2",
+      "rubric": 4,
+      "mode": "words",
+      "passed": false,
+      "why": "The replacement vehicle is not shown as the UT-110 - V-110 match set. The V-110 row exists and uses current-year first-year treatment, but UT-110 is never mentioned and the reuse/plate-matching context is absent."
+     },
+     {
+      "id": "R4.C3",
+      "rubric": 4,
+      "mode": "words",
+      "passed": true,
+      "why": "The V-110 calculation uses current-year replacement-vehicle treatment rather than the retired unit's recovery status. The $39,100 business-use basis is 85% of $46,000, and the first-year special allowance treatment produces the correct $17,170 listed-property allowance."
+     },
+     {
+      "id": "R4.C4",
+      "rubric": 4,
+      "mode": "words",
+      "passed": false,
+      "why": "There is no matching note explaining that fleet records are joined to fixed assets by permanent unit asset identification number or VIN because plate numbers may be reassigned."
+     },
+     {
+      "id": "R5.C1",
+      "rubric": 5,
+      "mode": "words",
+      "passed": false,
+      "why": "The Item Review sheet lists 23 numbered items (rows 2-24) but only 13 vehicle rows (TRK-101 through VAN-114). The criterion requires 14 covered vehicles, with all fleet vehicles included exactly once; UT-104 is only mentioned as retired/excluded, not itemized in the analysis sheet."
+     },
+     {
+      "id": "R5.C2",
+      "rubric": 5,
+      "mode": "words",
+      "passed": false,
+      "why": "The original total matches the criterion, but the corrected total in the output is $1,293,564.50, not $1,295,306.32. Since the criterion requires both amounts, it fails."
+     },
+     {
+      "id": "R5.C3",
+      "rubric": 5,
+      "mode": "words",
+      "passed": false,
+      "why": "The output total adjustment is -$282,949.82 and the largest single component is -$171,500.00 (Section 179 business-income cap), neither matching the required $281,208.00 total adjustment nor $79,020.00 largest component."
+     },
+     {
+      "id": "R5.C4",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The analysis performs item-by-item verification and flags specific signed checklist items that were marked Pass but do not hold (items 12, 07, 08). It also reaches an adverse overall sign-off conclusion by stating the return should not be filed as drafted and should be sent back before filing. It does not rely on the checklist sign-off as a substitute for verification."
+     },
+     {
+      "id": "R6.C1",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "The exception log does not list the exact required failing positions and amounts. It includes CAR-103, VAN-107, VAN-108, and VAN-109, but omits FA-207 at $79,020.00, TRK-105 at $48,484.00, and TRK-106 at $43,996.00. It also does not quantify the VAN-107 recapture as $5,840.00, and it does not provide a corrected Form 4562 line or part for every exception."
+     },
+     {
+      "id": "R6.C2",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "Several exceptions are stated as conclusions without citing the governing IRS 2025 Form 4562 instruction or organization policy. Some rows cite Form 4562 or Manual Sec 4.3, but not every exception does."
+     },
+     {
+      "id": "R6.C3",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "The exception log does not show the required current-year deduction adjustments totaling $281,208.00 plus separately disclosed recapture income of $5,840.00. Its total correction is instead -$282,949.82, and no $5,840.00 recapture amount is disclosed."
+     },
+     {
+      "id": "R6.C4",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "The log is partially framed as required corrections, but it defers quantification of the VAN-107 recapture and uses verification language for TRK-105/TRK-106 rather than treating all items as quantified required pre-e-filing corrections."
+     },
+     {
+      "id": "R7.C1",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo states the 2025 Section 179 maximum deduction and phase-out threshold, identifies the stale internal parameter block, and provides the corrected Section 179 deduction after applying the business-income limitation."
+     },
+     {
+      "id": "R7.C2",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo identifies the two December 2025 vehicles that were not ready for service until January 2026 and expressly says their 2025 special depreciation and Section 179 positions must be removed."
+     },
+     {
+      "id": "R7.C3",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo addresses special depreciation by identifying the current-year property removed from the special depreciation base and the resulting corrected 2025 allowance."
+     },
+     {
+      "id": "R7.C4",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo confirms which MACRS and amortization items hold as filed and identifies classification/convention changes; it does not identify any amortization start-date changes because all three Section 197 amortization items stand."
+     },
+     {
+      "id": "R7.C5",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo applies the current-year 2025 IRS Form 4562 instructions to override the stale prior-year internal parameter/checklist treatment and directs correction of the return to the 2025 amounts before filing."
+     },
+     {
+      "id": "R8.C1",
+      "rubric": 8,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo identifies VAN-107 as the vehicle whose business use fell below the threshold and reports the current-year overstatement of $7,020, but it does not report the prior Section 179 recapture as an amount recognized as other income in 2025. It only states the recapture is subject to Section 280F and must be computed from prior-year records."
+     },
+     {
+      "id": "R8.C2",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo reports CAR-103 as the older passenger vehicle with an unadvanced limit row, gives the corrected service year as the eighth year, and states the resulting deduction reduction."
+     },
+     {
+      "id": "R8.C3",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo reports vehicles that must be moved to Part V listed property, including VAN-107 to line 27 ADS due to 40% business use, and TRK-105/TRK-106 reclassification as listed property. It also reports the business-use and limit effects for VAN-107 and includes the deduction adjustments in the net effect table."
+     },
+     {
+      "id": "R8.C4",
+      "rubric": 8,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not state the general listed-property findings that contemporaneous mileage and usage logs control over planning percentages, nor that the mere descriptions 'truck' or 'van' do not create a nonpersonal-use exception. It references specific usage records but omits these broader principles."
+     },
+     {
+      "id": "R9.C1",
+      "rubric": 9,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not mention a vehicle plate reassignment or the resulting mismatch risk. It only says the retired unit UT-104 is properly excluded, without naming a replacement unit or explaining that the replacement's current-year deductions must not be assigned to the old unit."
+     },
+     {
+      "id": "R9.C2",
+      "rubric": 9,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not report any vehicles that appear in only one source or flag them as unverified rather than dropped. There is no source-reconciliation or single-source vehicle discussion."
+     },
+     {
+      "id": "R9.C3",
+      "rubric": 9,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo contains no matching discussion stating that the permanent unit asset identifier or VIN, not the plate, governs the match, nor that plate numbers are reassignable."
+     },
+     {
+      "id": "R9.C4",
+      "rubric": 9,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not state the completeness limitation that the review covers 23 assets and 14 vehicles shown in the provided exports and does not opine on assets outside those registers."
+     },
+     {
+      "id": "R10.C1",
+      "rubric": 10,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo states the total change as a reduction of $282,949.82, not $281,208.00, and it does not state any 2025 other income from prior Section 179 recapture as $5,840.00. Instead, it says that recapture amount still needs to be computed."
+     },
+     {
+      "id": "R10.C2",
+      "rubric": 10,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo makes one clear bottom-line recommendation to revise the workpapers before e-filing, and it does not defer the decision or recommend filing as drafted."
+     },
+     {
+      "id": "R10.C3",
+      "rubric": 10,
+      "mode": "words",
+      "passed": true,
+      "why": "The recommendation is tied to the identified amount-changing exceptions and directs correction before filing, so no known amount-changing error would be filed uncorrected."
+     },
+     {
+      "id": "R10.C4",
+      "rubric": 10,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not explain that the signed checklist overall sign-off is overridden by item-by-item findings or that it cannot be used as evidence that the return can be filed. It only mentions checklist item 12 in a limited context."
+     },
+     {
+      "id": "R10.C5",
+      "rubric": 10,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo is organized so a managing partner could follow the category findings, the total change, and the recommendation without opening the workbook."
+     }
+    ]
+   },
+   {
+    "solver": 2,
+    "crit_fail": 0.5,
+    "lost": 0.7097,
+    "full": false,
+    "rubrics": 10,
+    "criteria": 42,
+    "left_out": 0,
+    "criteria_results": [
+     {
+      "id": "R1.C1",
+      "rubric": 1,
+      "mode": "words",
+      "passed": false,
+      "why": "The required Section 179 per-item adjustment amounts are not reflected. The workbook shows TRK-105 corrected to $45,240 and TRK-106 corrected to $44,280, not the required $48,484 and $43,996. FA-207 is treated as a classification-only adjustment with no $79,020 Section 179 deferral item, and the workbook uses a global carryover of $149,020 rather than the required FA-207 $79,020 deferral."
+     },
+     {
+      "id": "R1.C2",
+      "rubric": 1,
+      "mode": "words",
+      "passed": false,
+      "why": "The output does not recalculate the Section 179 Part I limitation using all required 2025 parameters. It gives the 2025 maximum deduction and phase-out threshold, but it does not state a 2025 cost of Section 179 property placed in service of $1,434,000.00 or explicitly compute a dollar phase-out reduction of $0.00."
+     },
+     {
+      "id": "R1.C3",
+      "rubric": 1,
+      "mode": "words",
+      "passed": false,
+      "why": "The output identifies the allowed 2025 Section 179 deduction and business income as $986,500, but it uses an unused carryover of $149,020 rather than the required $79,020."
+     },
+     {
+      "id": "R1.C4",
+      "rubric": 1,
+      "mode": "words",
+      "passed": true,
+      "why": "The workpaper explicitly identifies that the internal Section 179 parameter sheet and checklist used prior-year limits and states that the 2025 limits must be corrected. This semantically satisfies the requirement to call out stale planning figures and require 2025 parameters."
+     },
+     {
+      "id": "R2.C1",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "The workbook and memo identify exactly VAN-108 and VAN-109 as the assets that must be adjusted because they were not placed in service in 2025. Both are noted as purchased 12/29/2025, not ready for service until 01/05/2026, and therefore not placed in service in 2025. No other asset is adjusted on that placed-in-service ground."
+     },
+     {
+      "id": "R2.C2",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "The item-level corrections remove $52,000 for VAN-108 and $48,000 for VAN-109, totaling $100,000 of 2025 property/deduction basis. The $48,000 special depreciation allowance on VAN-109 is specifically removed, and the remaining special-allowance items total $189,170 ($52,000 VAN-102 + $17,170 V-110 + $120,000 FA-202)."
+     },
+     {
+      "id": "R2.C3",
+      "rubric": 2,
+      "mode": "words",
+      "passed": true,
+      "why": "The analysis distinguishes invoice/purchase date from placed-in-service date and applies a readiness standard before year-end. It states that placed-in-service dates should follow fleet release/readiness dates rather than invoice dates, and that vehicles not ready until 01/05/2026 are not placed in service in 2025."
+     },
+     {
+      "id": "R3.C1",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The output does not produce the required listed-property adjustment amounts. CAR-103 and the VAN-107 current-year disallowance match the expected amounts, but TRK-105 is adjusted by only $12,760 instead of $48,484, TRK-106 by $9,720 instead of $43,996, and VAN-107 recapture is $15,172 instead of $5,840."
+     },
+     {
+      "id": "R3.C2",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The 40% business-use percentage, $4,680 allowable limit, and $7,020 disallowed current-year amount are correctly identified, but the required prior Section 179 recapture income of $5,840 is not used; the output states $15,172."
+     },
+     {
+      "id": "R3.C3",
+      "rubric": 3,
+      "mode": "words",
+      "passed": true,
+      "why": "CAR-103 is correctly recomputed using year 8 and the later-years passenger automobile limit row of $5,760. The business-use-adjusted limit is $4,032 and the disallowed excess is $2,688, matching the rubric."
+     },
+     {
+      "id": "R3.C4",
+      "rubric": 3,
+      "mode": "words",
+      "passed": false,
+      "why": "The output reclassifies TRK-105 and TRK-106 to Part V listed property, but it computes their allowed amounts as Section 179 business-use portions of $45,240 and $44,280, for a combined adjustment of $22,480. It does not arrive at the required aggregate business-use-adjusted listed-property limit of $19,520 or the required deduction adjustment of $92,480."
+     },
+     {
+      "id": "R3.C5",
+      "rubric": 3,
+      "mode": "words",
+      "passed": true,
+      "why": "The listed-property analysis relies on the contemporaneous usage log rather than the unadjusted workpaper percentages, and it states that vehicles with personal use such as TRK-105 and TRK-106 are listed property under Part V because they do not qualify for the nonpersonal-use exception."
+     },
+     {
+      "id": "R4.C1",
+      "rubric": 4,
+      "mode": "words",
+      "passed": false,
+      "why": "The output does not contain a fleet-matched vehicle register or a specific unmatched/only-in-one-source list. It only briefly says UT-104 was correctly excluded, without listing plate KH-449, permanent asset identifier V-104, or explaining the naive plate-based join misassignment."
+     },
+     {
+      "id": "R4.C2",
+      "rubric": 4,
+      "mode": "words",
+      "passed": false,
+      "why": "The correct match set UT-110 - V-110 is not identified, and there is no statement linking the replacement vehicle under a reused plate to its own current-year record. V-110 appears only as a reviewed amount."
+     },
+     {
+      "id": "R4.C3",
+      "rubric": 4,
+      "mode": "words",
+      "passed": false,
+      "why": "The V-110 special allowance is shown as $20,200 x 85% = $17,170, which is the passenger-auto cap calculation, but the output does not reference the required $46,000 basis or 2025-06-30 placed-in-service date for the replacement vehicle."
+     },
+     {
+      "id": "R4.C4",
+      "rubric": 4,
+      "mode": "words",
+      "passed": false,
+      "why": "There is no matching note explaining that fleet records should be joined to fixed assets by permanent unit asset identification number or VIN because plate numbers can be reassigned."
+     },
+     {
+      "id": "R5.C1",
+      "rubric": 5,
+      "mode": "words",
+      "passed": false,
+      "why": "The workbook's Item Review sheet contains exactly 23 item rows, but only 13 of those rows are classified as Vehicle. The memo states the fleet log had 14 vehicles and that retired unit UT-104/V-104 was excluded, so the analysis sheet does not include all 14 fleet vehicles exactly once. The covered-asset count of 23 is met, but the covered-vehicle count is not."
+     },
+     {
+      "id": "R5.C2",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The corrected total 2025 depreciation and amortization deduction and the original workpaper total match the required amounts exactly."
+     },
+     {
+      "id": "R5.C3",
+      "rubric": 5,
+      "mode": "words",
+      "passed": false,
+      "why": "The total adjustment is correct at $281,208.00, but the required largest single component of $79,020.00 does not appear in the output. The largest component shown is the Section 179 business-income limitation of $149,020.00, or if limited to item-specific corrections, $52,000.00 for VAN-108."
+     },
+     {
+      "id": "R5.C4",
+      "rubric": 5,
+      "mode": "words",
+      "passed": true,
+      "why": "The analysis flags signed checklist items that conflict with the corrected positions and does not treat the sign-off as a substitute for item-by-item verification."
+     },
+     {
+      "id": "R6.C1",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "The exception log does not list the expected failing positions with the required dollar adjustments. FA-207 is shown as classification only with $0, and several other amounts differ from the required values."
+     },
+     {
+      "id": "R6.C2",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "Several exception log entries state conclusions without citing the governing IRS 2025 Form 4562 instruction or the organization policy for each exception."
+     },
+     {
+      "id": "R6.C3",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "The total deduction adjustment sums to $281,208.00, but the separately disclosed recapture income is $15,172.00, not the required $5,840.00."
+     },
+     {
+      "id": "R6.C4",
+      "rubric": 6,
+      "mode": "words",
+      "passed": false,
+      "why": "The exception log contains a conditional/TBD item that defers quantification, so it is not entirely framed as fully quantified required corrections."
+     },
+     {
+      "id": "R7.C1",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo explicitly addresses Section 179 by identifying the corrected annual deduction and carryforward, and it discloses the 2025 limits used versus the stale 2024 parameter block."
+     },
+     {
+      "id": "R7.C2",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo identifies both late-year vehicles and clearly states that their Section 179 and special depreciation positions must be removed from 2025."
+     },
+     {
+      "id": "R7.C3",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo covers special depreciation by confirming the items that are correct and stating the amount removed from the current-year special depreciation base."
+     },
+     {
+      "id": "R7.C4",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo addresses MACRS classes and amortization by confirming which items hold as filed and identifying the classification change for solar property."
+     },
+     {
+      "id": "R7.C5",
+      "rubric": 7,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo is framed as a correction against current-year 2025 IRS Form 4562 instructions, treats the prior-year internal checklist and stale workpaper parameters as requiring correction, and directs the return to be revised to 2025 amounts."
+     },
+     {
+      "id": "R8.C1",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo identifies VAN-107 as the vehicle whose business use fell below the >50% listed-property threshold, gives the corrected current-year deduction limit of $4,680 rather than $11,700, and reports approximately $15,172 of prior Section 179/accelerated depreciation recapture included in 2025 ordinary income."
+     },
+     {
+      "id": "R8.C2",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo reports CAR-103 as the older passenger vehicle with an unadvanced limit row, gives the corrected tax year of service as year eight, and states the resulting corrected deduction of $4,032 instead of $6,720."
+     },
+     {
+      "id": "R8.C3",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo identifies TRK-105 and TRK-106 as vehicles incorrectly treated as nonpersonal-use trucks in general MACRS, states they are listed property reportable in Part V, gives their business-use percentages and corrected Section 179 limits, and includes the aggregate deduction adjustment in the item-specific correction totals."
+     },
+     {
+      "id": "R8.C4",
+      "rubric": 8,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo consistently uses contemporaneous mileage/usage log evidence to override the workpaper percentages and treats the mere truck/van descriptions as insufficient for nonpersonal-use classification, as shown by the crew-cab trucks and VAN-107."
+     },
+     {
+      "id": "R9.C1",
+      "rubric": 9,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not mention any vehicle plate reassignment, old and replacement vehicle unit identifiers, or resulting mismatch risk. It does not explain that the replacement vehicle's deductions must not be assigned to the old unit."
+     },
+     {
+      "id": "R9.C2",
+      "rubric": 9,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo does not identify any vehicles present in only one source or flag them as unverified rather than dropping them. It instead says the fleet log reconciles to active units and the retired unit is correctly excluded."
+     },
+     {
+      "id": "R9.C3",
+      "rubric": 9,
+      "mode": "words",
+      "passed": false,
+      "why": "There is no matching discussion stating that the permanent unit asset identifier or VIN, rather than the plate, governs the match, nor that plate numbers are reassignable."
+     },
+     {
+      "id": "R9.C4",
+      "rubric": 9,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo states the review covers 23 assets and 14 vehicles, but it does not state the full completeness limitation that the review does not opine on assets outside those provided registers or exports."
+     },
+     {
+      "id": "R10.C1",
+      "rubric": 10,
+      "mode": "words",
+      "passed": false,
+      "why": "The memo correctly states the total change to the 2025 depreciation and amortization deduction as $281,208, but it does not state the 2025 other income from prior Section 179 recapture as $5,840.00. Instead, the memo states the recapture as approximately $15,172 and lists it as +$15,172 in the dollar summary."
+     },
+     {
+      "id": "R10.C2",
+      "rubric": 10,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo contains exactly one clear recommendation: revise the workpapers before e-filing. It does not defer the choice or recommend filing as drafted."
+     },
+     {
+      "id": "R10.C3",
+      "rubric": 10,
+      "mode": "words",
+      "passed": true,
+      "why": "The recommendation is tied to the known amount-changing exceptions from the exception log, and the memo states the positions do not hold up as filed and must be corrected before filing."
+     },
+     {
+      "id": "R10.C4",
+      "rubric": 10,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo explains that checklist lines were signed off as passed despite conflicting with underlying records, and that the checklist must be corrected and re-performed. This sufficiently communicates that the signed checklist sign-off cannot be used as evidence the return is ready to file."
+     },
+     {
+      "id": "R10.C5",
+      "rubric": 10,
+      "mode": "words",
+      "passed": true,
+      "why": "The memo is self-contained and gives a managing partner the category findings, dollar impact, total change, and recommendation without needing to open the workbook."
+     }
+    ]
+   }
+  ],
+  "crit_fail": 0.5555,
+  "lost": 0.8118,
+  "full_share": 0.0
+ },
+ "gate_scoring": "llm",
+ "shape": {
+  "rubrics": 10,
+  "criteria": 42,
+  "criteria_per_rubric": 4.2,
+  "compound_share": 0.952
+ },
+ "gate": {
+  "threshold": 0.2531,
+  "hard_line": 0.7,
+  "baseline_lost": 0.6328,
+  "baseline_source": "data/p1/difficulty_baseline.json",
+  "lost": 0.8118,
+  "status": "ok",
+  "why": "blind solvers lost 81% of the weight, above the 70% line (originals 63%); back to the build to be made more tractable",
+  "recorded": "rework_hard"
+ },
+ "review": [],
+ "seen_through": [],
+ "at": "2026-10-17T11:01:08"
+}

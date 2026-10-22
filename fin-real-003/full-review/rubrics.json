@@ -1,0 +1,634 @@
+{
+  "rubrics": [
+    {
+      "id": "R1",
+      "title": "数据覆盖、机构匹配与时间口径",
+      "deliverable": "regional_bank_risk_model.xlsx",
+      "weight": 9,
+      "weight_rationale": "机构身份、期间范围和来源优先级是全部趋势、归因及优先级判断的基础。",
+      "criteria": [
+        {
+          "id": "R1.C1",
+          "kind": "value",
+          "what": "模型报告完整扫描后的财务记录数{{financial_row_count}}、分析季度数{{quarter_count}}、不同证书号数{{distinct_cert_count}}及成功匹配记录数{{matched_row_count}}，并使各数可由底表回算。",
+          "from": [
+            "CH1",
+            "CH2",
+            "fdic_financials_VT_NH_ME_2022_2025.csv",
+            "fdic_institutions_VT_NH_ME.csv"
+          ],
+          "covered_by": {
+            "by": "request",
+            "asked_by": "清楚展示样本覆盖、机构对应关系"
+          },
+          "acceptance": "期间边界包含首尾报告日；扫描完整财务导出，不抽样，不先按当前ACTIVE筛除历史记录；计数与冻结文件精确一致。",
+          "verification": "程序按规范化CERT和REPDTE重算四项计数，并与模型汇总及明细行数核对。",
+          "alternatives": "仅统计当前仍开放机构不接受，因为ACTIVE是晚于分析时点的当前快照。",
+          "values": [
+            {
+              "key": "financial_row_count",
+              "what": "分析期间内财务导出的完整记录数",
+              "shape": "scalar"
+            },
+            {
+              "key": "quarter_count",
+              "what": "分析期间内不同季度末报告日数量",
+              "shape": "scalar"
+            },
+            {
+              "key": "distinct_cert_count",
+              "what": "分析期间财务记录中规范化后的不同CERT数量",
+              "shape": "scalar"
+            },
+            {
+              "key": "matched_row_count",
+              "what": "以规范化CERT成功连接机构资料的财务记录数",
+              "shape": "scalar"
+            }
+          ]
+        },
+        {
+          "id": "R1.C2",
+          "kind": "item",
+          "complete": true,
+          "what": "完整列示{{identity_review_items}}中的每个重名异证书、未匹配、歧义匹配或时间冲突事项；每项带CERT、名称、州、相关报告日、问题类型及处理结果，漏列任一项即不通过。",
+          "from": [
+            "CH1",
+            "CH2",
+            "fdic_financials_VT_NH_ME_2022_2025.csv",
+            "fdic_institutions_VT_NH_ME.csv",
+            "financial_definitions.yaml",
+            "institution_definitions.yaml"
+          ],
+          "covered_by": {
+            "by": "deliverable",
+            "asked_by": "提供可追溯的银行季度分析模型，呈现样本覆盖、机构匹配及支持复核的明细"
+          },
+          "acceptance": "CERT统一为规范字符串并作为身份桥梁；同名异证书机构保持分立，名称只作展示和核验。",
+          "verification": "程序独立执行规范化连接，生成异常集合并逐项比较；另检查两个FRANKLIN SAVINGS BANK未被合并。",
+          "alternatives": "名称或名称加州作为主键不接受，字段定义将CERT界定为机构唯一标识。",
+          "values": [
+            {
+              "key": "identity_review_items",
+              "what": "跨源连接中全部重名异证书、未匹配、歧义匹配及状态时间冲突事项",
+              "shape": "table",
+              "max_entries": 50
+            }
+          ]
+        },
+        {
+          "id": "R1.C3",
+          "kind": "judgement",
+          "what": "模型明确区分期间财务事实、当前机构快照和后续身份沿革：历史样本由财务REPDTE决定，ACTIVE不倒推历史资格，分析时点的ASSET、DEP、EQ和ROA不被较晚快照覆盖。",
+          "from": [
+            "CH2",
+            "CH3",
+            "financial_definitions.yaml",
+            "institution_definitions.yaml",
+            "fdic_api_documentation.html"
+          ],
+          "covered_by": {
+            "by": "request",
+            "asked_by": "评估期间为2022年3月31日至2025年6月30日"
+          },
+          "acceptance": "说明来源优先级及时间含义，并保留后续关闭、合并或更名的生效日期；依据包括financial_definitions.yaml的REPDTE第770行及institution_definitions.yaml的ACTIVE第107行、REPDTE第1349行。",
+          "verification": "抽查历史退出机构仍保留于其实际报告季度，并确认指定时点财务值来自财务导出同一季度。",
+          "alternatives": "以更新时间较新的机构快照覆盖指定季度财务值不接受。"
+        }
+      ]
+    },
+    {
+      "id": "R2",
+      "title": "组合指标、比较范围与同业基准",
+      "deliverable": "regional_bank_risk_model.xlsx",
+      "weight": 10,
+      "weight_rationale": "关键指标计算和经济可比范围直接决定经营表现诊断及落后机构识别。",
+      "criteria": [
+        {
+          "id": "R2.C1",
+          "kind": "value",
+          "what": "模型给出分析期末组合资产回报率{{portfolio_roa}}、非应计资产率{{portfolio_nonaccrual_rate}}、净核销率{{portfolio_net_chargeoff_rate}}和总风险资本比率{{portfolio_total_risk_capital_ratio}}，并同时给出各自期初值与期间变化。",
+          "from": [
+            "CH3",
+            "CH4",
+            "fdic_financials_VT_NH_ME_2022_2025.csv",
+            "financial_definitions.yaml"
+          ],
+          "covered_by": {
+            "by": "request",
+            "asked_by": "执行摘要请明确呈现样本整体资产回报率、非应计资产率、净核销率和总风险资本比率"
+          },
+          "acceptance": "有分子分母时采用总分子除以总分母；仅有银行比率时采用与定义最接近的披露暴露权重并披露近似，不接受简单算术平均。",
+          "verification": "程序依据ROA第802行、非应计资产率第11343行、净核销率第12355行及RBCRWAJ第16743行重算，并核对期初、期末和差额。",
+          "alternatives": "透明且经济等价的暴露加权方法可接受；所有银行等权平均不接受。",
+          "values": [
+            {
+              "key": "portfolio_roa",
+              "what": "分析期末按字段定义或最接近暴露权重汇总的组合ROA",
+              "shape": "scalar"
+            },
+            {
+              "key": "portfolio_nonaccrual_rate",
+              "what": "分析期末按相应资产分母汇总的组合非应计资产率",
+              "shape": "scalar"
+            },
+            {
+              "key": "portfolio_net_chargeoff_rate",
+              "what": "分析期末按相应贷款暴露汇总的组合净核销率",
+              "shape": "scalar"
+            },
+            {
+              "key": "portfolio_total_risk_capital_ratio",
+              "what": "分析期末按可得风险暴露或已披露近似权重汇总的组合总风险资本比率",
+              "shape": "scalar"
+            }
+          ]
+        },
+        {
+          "id": "R2.C2",
+          "kind": "judgement",
+          "what": "模型将全样本组合、连续传统机构、期间进入退出机构和特殊业务模式机构分层；核心同业判断采用经济可比组，特殊机构单列解释，并说明替代范围对结论的影响。",
+          "from": [
+            "CH5",
+            "fdic_financials_VT_NH_ME_2022_2025.csv",
+            "fdic_institutions_VT_NH_ME.csv",
+            "financial_definitions.yaml"
+          ],
+          "covered_by": {
+            "by": "request",
+            "asked_by": "清楚展示样本覆盖、时间趋势、同类比较、组合变化归因、优先级依据"
+          },
+          "acceptance": "允许有依据的比较组设计，但必须使用BKCLASS、SPECGRPN、TRUST、覆盖连续性或相近业务特征解释分类；不得静默删除特殊机构或中途进入者。",
+          "verification": "检查每个CERT均有范围标记和理由，并比较全样本与连续可比样本的主要结论。",
+          "alternatives": "固定唯一同业组不作要求；把信托型与传统存贷款机构无差别排名不接受。"
+        },
+        {
+          "id": "R2.C3",
+          "kind": "value",
+          "what": "模型呈现{{state_scope_kpis}}，覆盖各州及全样本、连续可比样本的盈利、信用质量、资本、资金、贷款结构、规模和增长指标，并标明分母、期间及近似项。",
+          "from": [
+            "CH4",
+            "CH5",
+            "fdic_financials_VT_NH_ME_2022_2025.csv",
+            "financial_definitions.yaml"
+          ],
+          "covered_by": {
+            "by": "deliverable",
+            "asked_by": "呈现核心指标、趋势、同类比较、组合变化归因"
+          },
+          "acceptance": "同一指标在各范围采用一致期间和计算基础；比率、金额及增长率不得混用，近似分母必须显式标识。",
+          "verification": "程序从完整财务表按州和范围标记聚合，逐格核对指标值、期间标签和分母映射。",
+          "alternatives": "可采用其他合理的业务可比分层，但须保留全样本对照并可重算。",
+          "values": [
+            {
+              "key": "state_scope_kpis",
+              "what": "各州和规定范围在期初、期末及期间变化上的核心经营与风险汇总指标",
+              "shape": "table",
+              "max_entries": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R3",
+      "title": "组合变化归因与结构性事件",
+      "deliverable": "regional_bank_risk_model.xlsx",
+      "weight": 10,
+      "weight_rationale": "管理层需要区分真实经营变化、规模权重变化和样本构成变化，避免错误配置复核资源。",
+      "criteria": [
+        {
+          "id": "R3.C1",
+          "kind": "value",
+          "what": "对核心组合指标给出{{portfolio_change_decomposition}}，分别量化持续机构自身表现、规模权重及进入退出效应，并使各贡献与报告总变化完整回勾。",
+          "from": [
+            "CH4",
+            "CH5",
+            "fdic_financials_VT_NH_ME_2022_2025.csv",
+            "financial_definitions.yaml"
+          ],
+          "covered_by": {
+            "by": "request",
+            "asked_by": "说明组合结果的变化在多大程度上来自持续机构自身表现，又在多大程度上来自样本构成或规模权重变化"
+          },
+          "acceptance": "接受对称Kitagawa、Shapley或其他透明可加方法；须说明边界、权重和残差处理，回勾误差仅限显示舍入。",
+          "verification": "程序重算各指标期初至期末变化，检查贡献合计及连续样本复算结果。",
+          "alternatives": "不限定唯一分解算法；只用期初固定权重且不单列进入退出效应不接受。",
+          "values": [
+            {
+              "key": "portfolio_change_decomposition",
+              "what": "各核心指标总变化及持续机构表现、权重变化、进入退出贡献的可加分解",
+              "shape": "table",
+              "max_entries": 50
+            }
+          ]
+        },
+        {
+          "id": "R3.C2",
+          "kind": "item",
+          "complete": true,
+          "what": "完整列示{{succession_events}}中的每个影响分析期样本或权重的证书承继事件；每项带前后CERT、机构名、生效日期、交易前后资产及其归因处理，漏列任一项即不通过。",
+          "from": [
+            "CH2",
+            "CH6",
+            "fdic_financials_VT_NH_ME_2022_2025.csv",
+            "fdic_institutions_VT_NH_ME.csv",
+            "institution_definitions.yaml"
+          ],
+          "covered_by": {
+            "by": "deliverable",
+            "asked_by": "呈现组合变化归因及支持复核的明细"
+          },
+          "acceptance": "依据NEWCERT、EFFDATE和季度序列交叉核验；MAINE COMMUNITY BANK与GORHAM SAVINGS BANK的同步跃升和终止不得分别误作有机增长与普通缺报。",
+          "verification": "程序提取分析期相关继承关系并与模型事件表逐项比较，再核对事件前后季度资产桥接。",
+          "alternatives": "仅按名称连续拼接或把退出视为缺报不接受。",
+          "values": [
+            {
+              "key": "succession_events",
+              "what": "分析期间影响样本构成或组合权重的全部可验证证书承继事件",
+              "shape": "table",
+              "max_entries": 50
+            }
+          ]
+        },
+        {
+          "id": "R3.C3",
+          "kind": "judgement",
+          "what": "模型以全样本、连续样本、替代权重及剔除重大承继影响的视角检验稳健性，指出哪些结论稳定、哪些由结构变化驱动，并检验持续机构是否支持“地区银行普遍同步恶化”的解释。",
+          "from": [
+            "CH4",
+            "CH5",
+            "CH6",
+            "fdic_financials_VT_NH_ME_2022_2025.csv",
+            "fdic_institutions_VT_NH_ME.csv"
+          ],
+          "covered_by": {
+            "by": "request",
+            "asked_by": "对于重要变化，请提出并比较合理的竞争性解释"
+          },
+          "acceptance": "判断必须引用可复核的方向、覆盖比例或贡献证据；结构性关联只作观察性归因，不宣称并购造成经营结果。",
+          "verification": "对照各敏感性结果、机构方向分布和分解贡献，检查文字结论是否一致。",
+          "alternatives": "允许其他透明稳健性设计；仅凭期末排序概括地区趋势不接受。"
+        }
+      ]
+    },
+    {
+      "id": "R4",
+      "title": "优先级证据与逐家规则应用",
+      "deliverable": "regional_bank_risk_model.xlsx",
+      "weight": 9,
+      "weight_rationale": "优先级必须建立在多维证据、可比性和逐家验证框架上，而不是机械排名。",
+      "criteria": [
+        {
+          "id": "R4.C1",
+          "kind": "judgement",
+          "what": "模型形成可追溯的优先级方法，综合持续落后、近期恶化、改善但仍脆弱、资本承受力、信用质量、资金、贷款结构、增长及业务复杂度，并解释证据冲突如何处理。",
+          "from": [
+            "CH4",
+            "CH5",
+            "CH7",
+            "OCC_Rating_Credit_Risk.pdf",
+            "FDIC_RMS_Manual_3.2_Loans.pdf"
+          ],
+          "covered_by": {
+            "by": "request",
+            "asked_by": "指出主要变化驱动与持续落后机构"
+          },
+          "acceptance": "不要求固定阈值、固定数量或唯一名单；方法须能从底表复算，并防止特殊业务模式或单一极端比率支配判断。",
+          "verification": "逐家重演评分或证据矩阵，检查入选与未入选边界是否由披露规则和数据支持。",
+          "alternatives": "其他有依据的多指标方法可接受；将任一同业偏离直接视为监管缺陷不接受。"
+        },
+        {
+          "id": "R4.C2",
+          "kind": "item",
+          "complete": true,
+          "what": "对模型选入优先范围的每家银行完整提供身份、比较组、关键期末指标、趋势、同业偏离、组合贡献、主要风险信号、缓释证据及入选理由；遗漏任一入选银行或任一核心证据类别即不通过。",
+          "from": [
+            "CH1",
+            "CH4",
+            "CH5",
+            "CH6",
+            "fdic_financials_VT_NH_ME_2022_2025.csv",
+            "fdic_institutions_VT_NH_ME.csv"
+          ],
+          "covered_by": {
+            "by": "request",
+            "asked_by": "优先范围不设固定银行名单或固定数量，但选择必须能够从模型和报告中核验"
+          },
+          "acceptance": "银行以名称和CERT共同识别；理由至少由多项相互关联证据支持，且与范围、归因及敏感性结果一致。",
+          "verification": "从模型优先标记取得名单，逐家检查必需证据字段并回算引用指标。",
+          "alternatives": "任何证据充分且内部一致的优先范围可接受；固定取排名前列不自动成立。"
+        },
+        {
+          "id": "R4.C3",
+          "kind": "verdict",
+          "complete": true,
+          "what": "对每家入选银行逐项判定需要追查的根因、与业务复杂度相适应的贷款组合或集中度资料、纠正行动讨论点及监测指标，并将同业偏离仅作为调查信号。",
+          "from": [
+            "CH7",
+            "OCC_Rating_Credit_Risk.pdf",
+            "FDIC_RMS_Manual_3.2_Loans.pdf"
+          ],
+          "covered_by": {
+            "by": "deliverable",
+            "asked_by": "呈现优先级依据及支持复核的明细"
+          },
+          "acceptance": "逐家应用OCC手册第3页和第25页、FDIC贷款手册第3页和第9页的原则；不得把内部优先级冒充监管评级，也不得把同业中位数当作准备金门槛。",
+          "verification": "按入选名单逐家检查规则映射、机构特定性和证据链接，确认不存在统一复制的问题清单。",
+          "alternatives": "可采用不同的机构特定验证问题，但必须覆盖复杂度、根因、组合管理和监测。"
+        }
+      ]
+    },
+    {
+      "id": "R5",
+      "title": "诊断报告的关键结论与竞争性解释",
+      "deliverable": "operating_performance_diagnosis.docx",
+      "weight": 9,
+      "weight_rationale": "报告必须把模型结果转化为管理层可理解、可验证且不过度因果化的经营诊断。",
+      "criteria": [
+        {
+          "id": "R5.C1",
+          "kind": "verify",
+          "what": "执行摘要同时呈现期末组合资产回报率、非应计资产率、净核销率和总风险资本比率，并说明期间方向、主要范围口径和最重要的结构性影响；所有数值与工作簿一致。",
+          "from": [
+            "CH3",
+            "CH4",
+            "CH5",
+            "regional_bank_risk_model.xlsx"
+          ],
+          "covered_by": {
+            "by": "request",
+            "asked_by": "执行摘要请明确呈现样本整体资产回报率、非应计资产率、净核销率和总风险资本比率"
+          },
+          "acceptance": "四项指标不得遗漏，且不以机构快照的较晚数值替代分析期末值。",
+          "verification": "程序抽取报告数值、期间和口径，与工作簿对应单元及来源映射逐项比较。",
+          "alternatives": "合理舍入可接受；采用不同报告期或等权均值不接受。"
+        },
+        {
+          "id": "R5.C2",
+          "kind": "judgement",
+          "what": "报告识别组合表现的主要驱动和持续落后或近期恶化机构，以支持数字说明自身表现、权重和进入退出贡献，并区分普遍趋势、个别机构变化及承继事件。",
+          "from": [
+            "CH4",
+            "CH5",
+            "CH6",
+            "regional_bank_risk_model.xlsx"
+          ],
+          "covered_by": {
+            "by": "request",
+            "asked_by": "指出主要变化驱动与持续落后机构"
+          },
+          "acceptance": "至少解释盈利、信用质量、资本和资金信号之间的关系；结论必须与分解及连续样本检验一致。",
+          "verification": "将报告所称驱动和机构逐项追踪至模型指标、贡献和范围标记。",
+          "alternatives": "可形成不同但有数据支持的诊断；只列最差比率而不解释驱动不接受。"
+        },
+        {
+          "id": "R5.C3",
+          "kind": "judgement",
+          "what": "对重要变化比较至少一种结构性解释与一种经营性解释，说明支持证据、反证和待验证事项，并明确哪些解释可被现有数据削弱、哪些仍不能判定。",
+          "from": [
+            "CH6",
+            "CH7",
+            "regional_bank_risk_model.xlsx",
+            "OCC_Rating_Credit_Risk.pdf"
+          ],
+          "covered_by": {
+            "by": "request",
+            "asked_by": "提出并比较合理的竞争性解释，说明哪些解释获得现有证据支持、哪些仍需验证"
+          },
+          "acceptance": "须讨论证书承继或权重转移，并用持续机构方向检验普遍同步恶化解释；不得将观察性关联写成已证明因果。",
+          "verification": "检查每个重大结论是否同时具有证据、竞争解释和验证缺口，并与模型敏感性结果相符。",
+          "alternatives": "其他受数据支持的竞争解释可接受，但不得省略结构变化和因果边界。"
+        }
+      ]
+    },
+    {
+      "id": "R6",
+      "title": "诊断报告的建议与结论边界",
+      "deliverable": "operating_performance_diagnosis.docx",
+      "weight": 7,
+      "weight_rationale": "建议需要把诊断转化为可执行行动，同时如实陈述数据和方法限制。",
+      "criteria": [
+        {
+          "id": "R6.C1",
+          "kind": "recommendation",
+          "what": "报告推荐一个明确的组合层面优先行动方案，说明为何相较于普遍复核或单比率筛选更有效，并将资源重点连接到归因结果、稳健性和风险集中区域。",
+          "from": [
+            "CH4",
+            "CH5",
+            "CH6",
+            "regional_bank_risk_model.xlsx"
+          ],
+          "covered_by": {
+            "by": "request",
+            "asked_by": "明确推荐管理层采用的优先行动方案"
+          },
+          "acceptance": "建议须说明行动顺序、预期管理用途和何种新证据会改变优先级。",
+          "verification": "检查推荐方案能否由模型中的贡献、比较组和优先证据直接支持。",
+          "alternatives": "不同资源配置方案可接受，但必须解释取舍且不能依赖任意监管阈值。"
+        },
+        {
+          "id": "R6.C2",
+          "kind": "recommendation",
+          "complete": true,
+          "what": "对报告认定需优先跟进的每家银行给出机构特定改进建议，涵盖拟验证问题、所需管理资料、可执行动作和监测指标；每项均连接其风险证据，漏掉任一入选机构即不通过。",
+          "from": [
+            "CH5",
+            "CH7",
+            "OCC_Rating_Credit_Risk.pdf",
+            "FDIC_RMS_Manual_3.2_Loans.pdf"
+          ],
+          "covered_by": {
+            "by": "request",
+            "asked_by": "给出可执行的组合层面和机构层面改进建议"
+          },
+          "acceptance": "建议须适应机构业务复杂度和已识别风险，不得把统一问题清单复制给全部银行。",
+          "verification": "将报告名单与模型名单核对，并逐家检查证据、请求、行动和指标的对应关系。",
+          "alternatives": "具体行动可不同，但必须针对该机构证据并符合手册中的根因追查原则。"
+        },
+        {
+          "id": "R6.C3",
+          "kind": "fact",
+          "what": "报告说明样本仅覆盖冻结财务导出中的地区银行、机构资料为较晚当前快照、部分组合比率使用暴露权重近似、比较组和分解方法影响结论，且观察性归因不能证明因果。",
+          "from": [
+            "CH2",
+            "CH3",
+            "CH4",
+            "CH5",
+            "CH6"
+          ],
+          "covered_by": {
+            "by": "general_ask",
+            "asked_by": "请在全部交付物中清楚陈述结果所依赖的假设和限制"
+          },
+          "acceptance": "限制不仅列举，还说明可能影响哪些趋势、排名、归因或优先判断。",
+          "verification": "逐项检查五类限制及其结论影响，并确认未外推为全国银行业判断。",
+          "alternatives": "可增加其他限制，但不得省略时间快照、近似计算、范围判断和因果边界。"
+        }
+      ]
+    },
+    {
+      "id": "R7",
+      "title": "跟进简报的优先范围与逐家行动包",
+      "deliverable": "priority_follow_up_brief.docx",
+      "weight": 9,
+      "weight_rationale": "简报直接支持管理层确定问询、财务复核和持续监测的资源安排。",
+      "criteria": [
+        {
+          "id": "R7.C1",
+          "kind": "recommendation",
+          "what": "简报提出一个有证据支持的优先跟进范围，解释纳入、暂缓及边界案例的理由，并使名单、CERT和优先顺序与模型及诊断报告一致。",
+          "from": [
+            "CH1",
+            "CH4",
+            "CH5",
+            "CH6",
+            "regional_bank_risk_model.xlsx",
+            "operating_performance_diagnosis.docx"
+          ],
+          "covered_by": {
+            "by": "request",
+            "asked_by": "选择一个有证据支持的优先跟进范围"
+          },
+          "acceptance": "不要求固定银行或固定数量；范围须基于多维证据、可比性、结构性影响和资源取舍。",
+          "verification": "跨三个交付物核对名单、CERT、优先层级及每项理由，检查边界机构处理是否一致。",
+          "alternatives": "任何可核验且证据充分的范围可接受；仅按单项比率排序不接受。"
+        },
+        {
+          "id": "R7.C2",
+          "kind": "item",
+          "complete": true,
+          "what": "对简报中的每家优先银行完整列示关注理由、关键支持指标、需要验证的竞争解释、建议行动及后续监测重点；漏列任一银行或核心要素即不通过。",
+          "from": [
+            "CH4",
+            "CH5",
+            "CH6",
+            "CH7",
+            "regional_bank_risk_model.xlsx"
+          ],
+          "covered_by": {
+            "by": "request",
+            "asked_by": "逐家说明关注理由、需要管理层回答的问题、下一步资料请求、建议行动及后续监测重点"
+          },
+          "acceptance": "逐家内容必须有差异化，并指出承继、业务模式或权重效应是否改变风险解读。",
+          "verification": "以简报名单为全集，逐家检查五类内容并追踪至模型证据。",
+          "alternatives": "呈现顺序可不同，但所有入选银行均须形成完整行动包。"
+        },
+        {
+          "id": "R7.C3",
+          "kind": "item",
+          "complete": true,
+          "what": "为每家优先银行完整提出管理层问题和资料请求，覆盖贷款组合结构、集中度、资产质量迁移、核销或非应计驱动、资金与资本承受力及适用的交易后整合资料。",
+          "from": [
+            "CH6",
+            "CH7",
+            "OCC_Rating_Credit_Risk.pdf",
+            "FDIC_RMS_Manual_3.2_Loans.pdf"
+          ],
+          "covered_by": {
+            "by": "request",
+            "asked_by": "需要管理层回答的问题、下一步资料请求"
+          },
+          "acceptance": "请求应能验证已列竞争解释，并根据机构复杂度删减或扩展；不要求不存在业务的资料。",
+          "verification": "逐家将问题和资料请求映射到风险证据及手册原则，检查是否可用于确认或否定解释。",
+          "alternatives": "可采用等效资料名称；无差别通用清单且未联系机构证据不接受。"
+        }
+      ]
+    },
+    {
+      "id": "R8",
+      "title": "九十天监测安排与监管边界",
+      "deliverable": "priority_follow_up_brief.docx",
+      "weight": 7,
+      "weight_rationale": "管理层需要可执行的近期安排，并必须避免将内部分析误述为监管结论。",
+      "criteria": [
+        {
+          "id": "R8.C1",
+          "kind": "fact",
+          "what": "简报形成未来九十天的分阶段安排，说明启动问询、资料接收与复核、管理层讨论、结论更新和持续监测各阶段的责任方向、输入、产出及依赖关系。",
+          "from": [
+            "CH7",
+            "regional_bank_risk_model.xlsx",
+            "operating_performance_diagnosis.docx"
+          ],
+          "covered_by": {
+            "by": "request",
+            "asked_by": "跟进方案应支持未来九十天的管理安排"
+          },
+          "acceptance": "安排须能执行并体现优先顺序；允许按周、阶段或里程碑表达，不强制具体日历日期。",
+          "verification": "检查所有优先银行均被纳入计划，且前置资料、复核和决策步骤不存在逻辑断裂。",
+          "alternatives": "不同阶段划分可接受，但仅列愿望清单而无责任方向和产出不接受。"
+        },
+        {
+          "id": "R8.C2",
+          "kind": "judgement",
+          "what": "简报为组合及逐家银行设置与诊断相符的监测指标、复核频率、信息来源和升级条件，并说明新数据如何触发继续、降级或扩大跟进。",
+          "from": [
+            "CH4",
+            "CH5",
+            "CH7",
+            "regional_bank_risk_model.xlsx"
+          ],
+          "covered_by": {
+            "by": "request",
+            "asked_by": "后续监测重点"
+          },
+          "acceptance": "升级条件可采用方向、持续性、同业偏离或多信号组合，不要求任意固定数值阈值；须避免把内部触发条件称为监管标准。",
+          "verification": "逐项核对监测指标与原风险信号、可得数据及九十天行动计划的一致性。",
+          "alternatives": "不同频率和触发设计可接受，只要可执行、有证据基础且明确非监管门槛。"
+        },
+        {
+          "id": "R8.C3",
+          "kind": "fact",
+          "what": "简报明确声明优先级是内部管理工具而非监管评级或法定缺陷认定，同业偏离用于触发根因调查，不以同业中位数直接要求调整信用损失准备，并重申观察性归因的因果限制。",
+          "from": [
+            "CH6",
+            "CH7",
+            "OCC_Rating_Credit_Risk.pdf",
+            "FDIC_RMS_Manual_3.2_Loans.pdf"
+          ],
+          "covered_by": {
+            "by": "general_ask",
+            "asked_by": "请在全部交付物中清楚陈述结果所依赖的假设和限制"
+          },
+          "acceptance": "四项边界均须清楚表达，并与OCC手册第3页、第25页及FDIC贷款手册第9页一致。",
+          "verification": "检查是否存在把内部排序、同业基准或观察性事件表述为监管结论或已证实因果的语句。",
+          "alternatives": "可采用等效措辞，但不得弱化监管评级、准备金判断和因果推断边界。"
+        }
+      ]
+    }
+  ],
+  "chains": [
+    {
+      "challenge": "CH4",
+      "criteria": [
+        "R2.C1",
+        "R3.C1",
+        "R3.C3",
+        "R4.C1",
+        "R5.C2",
+        "R7.C1"
+      ],
+      "how": "若错误采用等权平均或不可回勾归因，组合指标、变化驱动、稳健性、优先级、报告诊断和跟进范围都会联动改变。"
+    },
+    {
+      "challenge": "CH5",
+      "criteria": [
+        "R2.C2",
+        "R2.C3",
+        "R3.C3",
+        "R4.C2",
+        "R5.C2",
+        "R7.C2"
+      ],
+      "how": "若不区分连续传统机构、进入退出机构和特殊业务模式，州别与同业结果、趋势解释、落后机构和逐家行动包都会受到结构性失真。"
+    }
+  ],
+  "unresolved_checks": [
+    "构建步骤须从七个冻结文件程序化计算全部占位值，并保存字段映射、舍入规则和复算结果，不得人工填写答案。",
+    "构建步骤须在实际列结构上确认各比率是否具备可直接汇总的分子分母；缺少精确分母时，应确定最接近的披露暴露权重并记录近似影响。",
+    "构建步骤须从NEWCERT、EFFDATE及季度序列生成完整承继事件集合，不得只硬编码挑战中点名的机构。",
+    "优先银行范围属于开放式专业判断，不生成唯一主观名单；评分应核验方法、证据充分性、跨交付物一致性和逐家完整性。",
+    "数值核验容差应由构建步骤依据源字段精度和交付物显示舍入设定；底层未舍入结果必须与程序重算一致。"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "review_target": "fin003-reference-01",
+  "raw_judge_model": "qwen3.7-plus",
+  "raw_judge_all_positive": true,
+  "gold_approved": false,
+  "status": "raw_judge_requires_correction",
+  "findings": [
+    {
+      "criterion": "R2.C1",
+      "problem": "裁判声称已验证 NTLNLS*12/months/LNLSNET，但参考候选实际分母为 LNLSGR。0.0260897476% 与后者一致。该处验证说明存在事实错误，必须保留两种合理分母的不同语义，不能混称已验证。",
+      "action": "原始评分不改写；以独立重算记录为准复核该证据。"
+    },
+    {
+      "criterion": "R4.C2",
+      "problem": "裁判把 ranking score 称为 portfolio contribution。排序分位分数不是组合变化贡献；候选有独立 contributions 表，但裁判未证明逐家覆盖缓释证据与组合贡献链。",
+      "action": "不得以此满分断言证明 Gold 完整通过；逐家追踪原件、贡献表、正文和未满足类别。"
+    },
+    {
+      "criterion": "R3.C3",
+      "problem": "裁判仅以连续样本和一般结构解释认定全部敏感性通过，未给出替代权重、剔除重大承继影响、持续机构方向分布的实算证据。",
+      "action": "核查冻结 rubric 是否对公开题面提出过细隐藏要求，再区分候选缺口与 rubric 缺口，不能为压低分数直接扣分。"
+    },
+    {
+      "criterion": "R4.C3",
+      "problem": "裁判承认未独立确认手册页码，但仍声称相关原则全部验证。工具审阅不等于逐页证据审核。",
+      "action": "待实际定位原始 PDF 页码与原则，保持未批准状态。"
+    }
+  ],
+  "rule": "保留原始工具轨迹和原始分数。人工审查问题单不回填修改模型原始得分，也不将该分数用于宣布正式验收。"
+}

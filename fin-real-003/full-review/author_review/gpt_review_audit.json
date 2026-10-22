@@ -1,0 +1,22 @@
+{
+  "review_target": "fin003-gpt-01",
+  "review_approved": false,
+  "formal_acceptance": false,
+  "raw_judge_results_preserved": true,
+  "findings": [
+    {
+      "criteria": ["R2.C1", "R3.C1", "R5.C1"],
+      "type": "missed_source_identity_error",
+      "evidence": "regional_bank_risk_model.xlsx / Executive Dashboard!A8:A9 标签 Net charge-off rate (%)，值 0.4780848762281273，恰为 NCLNLSR 的贷款加权值。原件 NCLNLSR 是非流动贷款率，不是净核销率。NTLNLS 年化/期末贷款代理为 0.02608974760200908%。",
+      "independent_check": "../../diagnostics/fin003-gpt-01/metric_mapping.json",
+      "action": "裁判相应正向认定存在事实错误；保留原始得分，暂停正式分数批准。"
+    },
+    {
+      "criteria": ["R1.C2", "R3.C2", "R4.C2", "R4.C3"],
+      "type": "possible_format_or_hidden_requirement_penalty",
+      "evidence": "裁判部分扣分理由要求显式、结构化清单或必须在工作簿提供；公开题面要求信息可复核但未逐一指定独立工作表。已存在的正文、机构表及组合贡献不能仅因布局不同而忽略。",
+      "action": "逐项检验实际信息是否缺失，区分内容缺失与不同可接受布局。不能以非规定格式压低分数。"
+    }
+  ],
+  "conclusion": "原始 Qwen 分数仅作为诊断记录，不作为难度达标证据；既存在漏判真实错误，也存在过度格式化判分风险。"
+}
