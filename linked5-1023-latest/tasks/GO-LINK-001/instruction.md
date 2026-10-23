@@ -60,7 +60,6 @@ Word和CSV作为交付时推荐行程及参数的快照。工作簿应提示参�
 | GSA_FY2025_MIE_Breakdown.docx | GSA餐杂费分项资料，须核对与所用费率的适用关系 |
 | eCFR_41_CFR_301-11.xml | 2025年1月1日冻结的差旅报销规则 |
 | eCFR_41_CFR_301-74.xml | 同日冻结的会议相关规则 |
-| USDA_DR2300-005_Agriculture_Travel_Regulation.pdf | USDA差旅规定DR2300-005，2015年12月8日版 |
 | Conference-Attendance-fillable-Approval-Template.pdf | USDA会议／培训参会审批空白模板，供审批信息项参考 |
 
 本题预算范围为题面列明的费用；机构审批另需但资料未给出的信息或成本，应列入补证登记，不自行补数。参会审批模板仅作信息项参考，不要求填写，也不替代主办方审批。

@@ -63,23 +63,6 @@
   },
   {
     "domain": "GO",
-    "file": "USDA_DR2300-005_Agriculture_Travel_Regulation.pdf",
-    "origin": "primary_source_download",
-    "url": "https://www.usda.gov/sites/default/files/documents/DR%202300-005%20Agriculture%20Travel%20Regulation.pdf",
-    "final_url": "https://usda.azureedge.us/sites/default/files/documents/DR%202300-005%20Agriculture%20Travel%20Regulation.pdf",
-    "landing_url": "https://www.usda.gov/directives/dr-2300-005",
-    "status": "downloaded",
-    "content_type": "application/pdf",
-    "sha256": "5bbe59c6a1f09b7efd9d9bd1afc8da0d5e9583cec6ec3c8fa227b83efd8ef254",
-    "bytes": 316665,
-    "retrieved_at": "2026-10-23T11:16:21.806307+00:00",
-    "unchanged": true,
-    "description": "农业部DR2300-005差旅规定，官网提供的冻结版本",
-    "license": "US federal government work, public domain in the US (17 U.S.C. 105)",
-    "document_date": "2015-12-08"
-  },
-  {
-    "domain": "GO",
     "file": "Conference-Attendance-fillable-Approval-Template.pdf",
     "origin": "primary_source_download",
     "url": "https://www.usda.gov/sites/default/files/documents/Conference-Attendance-fillable-Approval-Template.pdf",
