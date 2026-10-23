@@ -1,0 +1,212 @@
+[
+  {
+    "id": "DA01",
+    "weight": 3,
+    "dimension": "指令遵循",
+    "description": "两份要求的交付物能用相应办公软件打开，文件名和格式符合题面。",
+    "verification_anchor": "按实际文件打开验证，不仅检查扩展名。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "county_income_review.xlsx",
+      "publication_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "DA02",
+    "weight": 7,
+    "dimension": "内容质量-事实忠实性",
+    "description": "目标县范围从Census的SUMLEV=050确定，不把州及全国汇总加入县级排名。",
+    "verification_anchor": "人口原件共3144条SUMLEV=050；5位GeoFIPS不是充分的县级识别条件。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "county_income_review.xlsx",
+      "publication_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "DA03",
+    "weight": 7,
+    "dimension": "内容质量-分析与论证质量",
+    "description": "提供未直接匹配地区的逐项证据和排除理由，能够追溯原件，不以名称猜配。",
+    "verification_anchor": "直接同码匹配两张BEA表3091个；53个未直接匹配需留记录。替代范围需有原件支持。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "county_income_review.xlsx",
+      "publication_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "DA04",
+    "weight": 10,
+    "dimension": "内容质量-数值与计算准确性",
+    "description": "BEA人口口径的2020—2024人均名义收入增长排名符合其声明可比范围和未舍入排序规则。",
+    "verification_anchor": "独立按(2024总收入/2024人口)/(2020总收入/2020人口)-1重算；标准范围3082个，首名48301。接受有原件依据的可比性收窄，须重算其完整榜单。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "county_income_review.xlsx",
+      "publication_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "DA05",
+    "weight": 10,
+    "dimension": "内容质量-数值与计算准确性",
+    "description": "Census人口口径的2020—2024人均名义收入增长排名符合其声明可比范围和未舍入排序规则。",
+    "verification_anchor": "替换为人口表POPESTIMATE2020/2024，独立重算；标准范围前20与BEA口径相同。不得为制造差异改数据。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "county_income_review.xlsx",
+      "publication_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "DA06",
+    "weight": 7,
+    "dimension": "内容质量-数值与计算准确性",
+    "description": "总收入换算成人均美元时正确使用千美元到美元的单位因子。",
+    "verification_anchor": "CAINC1 LineCode1单位Thousands of dollars、LineCode2人口、LineCode3美元；绝对人均数值乘1000。仅增长率抵消因子不证明绝对值正确。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Implicit",
+    "type": "Binary",
+    "target_files": [
+      "county_income_review.xlsx",
+      "publication_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "DA07",
+    "weight": 7,
+    "dimension": "内容质量-专业规范",
+    "description": "保留缺值与真实零负值的区别，有明确排名排除理由。",
+    "verification_anchor": "不把(D)/(NA)等缺值填零；零负分项本身不构成正总收入人均增长排名的排除条件。本包合格集合未发现非正分项，不强制声称存在该现象。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "county_income_review.xlsx",
+      "publication_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "DA08",
+    "weight": 7,
+    "dimension": "内容质量-数值与计算准确性",
+    "description": "两榜并集内各县的收入分项贡献采用可加总的正确分母及单位。",
+    "verification_anchor": "CAINC4 LineCode45/46/47的2024减2020，除以2020总收入×100，贡献百分点和等于总收入增长百分比，允许原件舍入误差；不能将分项自身增速相加。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "county_income_review.xlsx",
+      "publication_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "DA09",
+    "weight": 7,
+    "dimension": "内容质量-分析与论证质量",
+    "description": "对两榜并集提供人口分母作用的数值解释，并与收入来源贡献区分。",
+    "verification_anchor": "可用对数恒等式、精确反事实分解等；需数值可复核、定义明确，不要求特定算法。分项对总收入增长贡献不自动等于对人均增长的因果贡献。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "county_income_review.xlsx",
+      "publication_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "DA10",
+    "weight": 7,
+    "dimension": "内容质量-事实忠实性",
+    "description": "如实比较两份前20名，结论与自己提交的榜单相符。",
+    "verification_anchor": "标准范围交集20、并集20；没有成员变化也是有效发现。有依据的收窄范围须以其实际两榜为准，不能预设名单必然变化。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "county_income_review.xlsx",
+      "publication_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "DA11",
+    "weight": 7,
+    "dimension": "内容质量-专业规范",
+    "description": "说明2020县码表与当前快照地域集合差异带来的具体发布范围限制。",
+    "verification_anchor": "保留地域集合差异与受影响地区；同码不单独证明历史边界不变。不得假造缺失地域交叉表。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "county_income_review.xlsx",
+      "publication_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "DA12",
+    "weight": 7,
+    "dimension": "内容质量-分析与论证质量",
+    "description": "发布建议用实际结果决定发布、收窄或暂缓事项，而非只列通用风险。",
+    "verification_anchor": "如两榜稳定支持限定样本结论、无法直接对应地区暂缓、不将名义增长写成福利或实际购买力；接受其他有证据的建议。",
+    "criterion_type": "Subjective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "county_income_review.xlsx",
+      "publication_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "DA13",
+    "weight": 7,
+    "dimension": "结构与组织",
+    "description": "每个纳入和排除对象具有可回查到具体原件记录的证据路径。",
+    "verification_anchor": "抽查前20并集及全部排除记录；正确文件名与FIPS/LineCode/年份或解析记录编号均可，不强制某一种编号方案。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "county_income_review.xlsx",
+      "publication_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "DA14",
+    "weight": -10,
+    "dimension": "安全合规",
+    "description": "把材料不存在的映射、观测或已执行研究结果当作真实证据时扣分。",
+    "verification_anchor": "须列具体伪造事实及对应缺失原件；清楚标为建议或假设不触发。不与一般算术错误重复处罚。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Implicit",
+    "type": "Binary",
+    "target_files": [
+      "county_income_review.xlsx",
+      "publication_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  }
+]

@@ -1,0 +1,444 @@
+忠诚派(Loyalists) 1.18.0 升级路线：平衡测试
+计划
+balance_test_plan ·  → 静态配置审查 游戏内验证方案
+配套工作簿：loyalist_progression_review.xlsx（数值与来源逐条可溯）
+0. 文档性质与合规声明
+“ ”本文档为 待执行的测试方案 ，不是测试报告。
+  全部数值与规则语义均来自/app/input_files  随附的Wesnoth 1.18.0  官方WML 配置
+ 与src/ 实现，做了纯静态审查；未安装、未运行游戏。
+ 文档中不含、也不会给出任何运行日志、敌军实际数据、胜率或测试结果。三项测试
+“ ”“ ”“ ”的 设置 观察指标 判定标准 均为假设性方案，等待团队进入对局后执行与填写。
+ 所有条件性能力（charge / firststrike / magical / steadfast / leadership / heals / 
+illuminates / teleport “ ”）一律按 条件效果 处理，未当作无条件数值加成。
+ “ ” “未在缺乏对战样本的情况下断言任何单位 必须加强或削弱 ；本文只提出 值得优先验证
+”的分支问题 及可证伪的假设。
+  未修改任何原始文件；缺失素材不影响本审查，缺失规则依据已在§5  与工作簿Sheet 8 
+如实披露。
+1. 范围、方法与证据链
+ 审查起点为data/multiplayer/factions/loyalists-default.cfg：第9  行recruit= 定义可
+招募集合，第7  行leader=  定义领袖集合，二者严格区分（详见工作簿Sheet 2）。
+ 可招募集合(default recruit)：Cavalryman, Horseman, Spearman, Fencer, 
+Heavy Infantryman, Bowman, Mage, Merman Fighter。
+ 领袖集合(default leader)：Lieutenant, Swordsman, Pikeman, Javelineer, 
+Shock Trooper, Longbowman, White Mage, Red Mage  。其中
+Swordsman/Pikeman/Javelineer/Shock Trooper/Longbowman/White 
+Mage/Red Mage  同时是recruit 闭包中的升级目标；Lieutenant  是唯一自带
+leadership 的领袖起点。
+ 从recruit  集合沿各单位advances_to= “ ”  递归，得到全部 常规升级可达 单位与15 条终端
+ 路径（工作簿Sheet 3  ）。口径：仅统计advances_to= 明文写出的目标；不含需战役显式
+ 启用的{ENABLE_ADVANCEMENT} 可选宏。
+关键引擎语义（静态审查已确认，作为证据链基础）
+ experience=  字段“ ”经验门槛 含义：
+    即该级升到下一级所需累计经验（types.cpp:407 experience_needed_）。它不是升级耗时；实
+际每次击杀/  命中获得的经验由game_config::kill_xp/combat_xp 决定
+（attack.cpp:1220/1399  ），而其常量在未随附的game_config 源文件中，无法静态换算为回合
+ 数。故工作簿Sheet 3 “ ”的 累计经验门槛 仅为静态经验总量指标，用于横向比较升级投资规模，不
+“ ”称 升级时间 。
+ [defense]  数值“防御(defense)”含义：
+    “是 被命中率%”，越低越好（城堡40=敌人仅40%  命中）。公式cth = defense_modifier + 
+weapon.accuracy − opp.parry（attack.cpp:168  ）。负值（如mounted forest=−70）是防御
+上限cap：叠加村庄等也无法超过（movetype.cpp:40-50,194-199；special-notes.cfg:102）。
+ resistance  数值“抗性(resistance)”含义：
+    100=正常受伤，<100 减伤，>100  易伤。有效抗性= movetype[resistance] 被单位自身
+[resistance]整项覆盖（types.cpp:335 merge overwrite=true；movetype.cpp:768-780）。伤
+ 害计算中damage_multiplier ×= resistance/100（attack.cpp:199-203）。
+  冲锋charge 的真实代价：
+    {WEAPON_SPECIAL_CHARGE}  为[damage] multiply=2 apply_to=both 
+active_on=offense（weapon_specials.cfg:134-145）。即冲锋方进攻时自身伤害×2，但承受防
+守方反击伤害也×2 “ ”。这是 面板伤害翻倍 背后被隐藏的对等风险。
+  先手firststrike 的真实作用：
+    改变结算顺序而非伤害：defender_strikes_first = (d.firststrike && !a.firststrike)
+（attack.cpp:1402,1419-1443  ）。防守方若持firststrike ——而进攻方没有，则防守方先出手 先
+手击杀可完全免除后续反击。
+  领导力leadership 是光环：
+    value=(25×(level−other.level))，affect_self=no，仅影响邻接的更低级同方单位
+（abilities.cfg:192；attack.cpp:193）。领袖自身不吃加成。
+下表汇总三项待验证分支所涉及的关键配置事实（均无特性基础值）：
+单位 等级 HP 移动 经验门槛 费用 关键抗
+性/能力
+来源
+Lancer 2 50 10 100 47 charge 
+12×3；
+mounted 
+pierce抗
+120
+Horse_L
+ancer.cfg
+:8-31
+Grand 
+Knight
+3 84 7 150 86 charge 
+19×2 + 
+剑
+12×4；无
+能力
+Horse_G
+rand_Kni
+ght.cfg:8
+-41
+Paladin 3 77 8 150 82 heals+4
+；arcane
+抗70；剑
+9×5 
+arcane
+Horse_P
+aladin.cf
+g:24-56
+Silver 
+Mage
+3 48 6 150 59 teleport
+；fire/
+cold抗50
+Mage_Sil
+ver.cfg:2
+8-56
+Great 
+Mage
+4 65 5 200 110 fire抗
+70；
+fireball 
+17×4；无
+能力
+Mage_Gr
+eat.cfg
+Pikeman/
+Halberdi
+er
+2/3 55/72 5 69/150 24/52 firststrik
+e；pierce
+抗60
+Loyalist_
+Pikeman/
+Halberdi
+er.cfg
+2. 三项优先验证的升级分支问题
+“ ”以下三项均为 真实存在的升级分叉 ，且面板（伤害/HP/价格）容易得出与条件依赖相反的
+ →  →  →  → 直观结论。每项给出：证据 竞争性解释 可复现测试设置 观察指标 可支 持/否定该
+判断的结果。测试设置为待执行方案，可明确提出假设；不含任何预设结果。
+ 测试1  ｜骑兵charge “ ”的 双倍反击 代价是否抵消其面板爆发
+（Horseman→Lancer / Knight→Grand Knight）
+待验证假设
+ 在对抗持firststrike 的矛兵线（Spearman/Pikeman/Halberdier/Javelineer  ）时，骑兵
+charge 的进攻×2 “  会被 防守方先手+ ”  自身承受双倍反击 显著抵消，导致Lancer/Grand 
+Knight “的净交换比不如其面板伤害所暗示的优势。此为条件性代价，仅看 伤害×次数/价
+”格 无法预见。
+①  证据（静态配置+ 实现）
+ charge = [damage] multiply=2 apply_to=both active_on=offense
+（weapon_specials.cfg:134-145）：进攻伤害×2，且承受反击伤害×2，两者对等。
+ firststrike 使防守方先出手：defender_strikes_first=(d.firststrike && !
+a.firststrike)（attack.cpp:1402  ）。矛兵线全部持firststrike
+（Loyalist_Spearman.cfg:92、Pikeman.cfg:40、Halberdier.cfg:38、
+Javelineer.cfg:36）。
+ mounted  基础pierce 抗性=120（units.cfg:685）：骑兵对矛兵的穿刺反击天然易
+伤；charge 再×2 进一步放大。
+ Lancer HP 仅50、无三级（Horse_Lancer.cfg:8-14）；Grand Knight HP84 但移
+动降至7（Horse_Grand_Knight.cfg:8-11）。二者都缺乏减伤能力。
+② 竞争性解释（同样能解释观察，需在测试中区分）
+ 解释A “：骑兵被 先手+ ”双倍反击 克制是设计意图（矛兵本就是反骑兵角色），并非需要
+——修正的失衡 若 如此，测试应显示骑兵在非矛兵对手前仍强势。
+ 解释B  ：观察到的骑兵劣势主要来自mounted  的pierce 易伤与低HP  ，而非charge 
+—— “  的双倍反击本身 需通过 有无charge ”触发 的对照区分。
+ 解释C：骑兵价值在机动/抢点/击杀软目标，正面换兵本就不该赢；净交换比劣势不代表
+分支失衡。
+ 解释D：地形/时段（lawful 白天+25%  ）等外部修正主导结果，掩盖了charge 机制本
+——  身 需固定ToD 与地形对照。
+③ 可复现测试设置（待执行；不含结果）
+1.  地图：选用开阔为主、含少量村庄的对称多人图（如官方2p 图），双方城堡对置，中段
+ 为flat/  少量forest  ，避免洞穴与深水干扰mounted cap。
+2. 阵营：A  方Loyalists（骑兵分支），B  方任选一个以firststrike 矛兵为核心的对手
+ （如Loyalists  镜像只招Spearman  线，或其他阵营的枪兵）；记录B 方确切招募集
+合。
+3.  固定ToD  ：使用默认昼夜循环；关键交战尽量安排在相同时段（如均为白天
+lawful_bonus=+25，schedules.cfg:30 “），或分 白天/ ”夜晚 两组分别记录以隔离时
+段效应。
+4.  变量组（对照charge 是否触发）：组1 = 骑兵主动进攻矛兵（charge 生效，承受双倍
+反击）；组2 = 骑兵处于防守、由矛兵进攻（charge 不生效，active_on=offense）。
+其余条件尽量一致。
+5. 单位控制：使用相同特性（优先无特性/统一特性）与相同等级起点的骑兵与矛兵；每组重
+ ≥复足够多次独立交战（建议 30 次/  组）以平滑RNG，记录每次的存活HP 与击杀。
+6.  分支对照：分别对Lancer(L2 终点)  与Grand Knight(L3) “重复上述，比较 高机动低
+HP” “与 高HP ”  低机动 两种终端对charge 代价的敏感度。
+7. 记录：每次交战的攻/守方、地形、时段、进攻武器、双方剩余HP、是否触发先手击杀；
+不预设任何胜负或比率结论。
+④ 观察指标
+ 净交换比：骑兵每次进攻造成的敌方HP  损失÷ 自身承受的HP 损失（分组1/组2、分
+Lancer/Grand Knight）。
+ charge “ ”触发前后的 自身受伤 差异：组1（进攻）与组2（防守）中骑兵单位承受伤害
+ 的对比，用以隔离apply_to=both 的贡献。
+  先手击杀率：矛兵firststrike 在反击中直接击杀/重创骑兵的频次。
+  存活率与续航：骑兵在多轮交战后的存活数量，区分Lancer(HP50)  与Grand 
+Knight(HP84)。
+ 地形/  时段分层：在flat vs forest  、白天vs 夜晚下的上述指标变化，检验解释C/D。
+⑤ 判定标准
+支持该判断（若观察到）：
+ 组1（charge 进攻矛兵）的骑兵净交换比明显劣于组2  （防守不触发charge），且差距
+“ ”  → “主要由 承受双倍反击 解释 支持charge ”双倍反击是被面板忽略的代价 这一判断。
+ Lancer 因低HP+  先手击杀而净交换比显著差于Grand Knight → “支持L2  即终点的
+Lancer ”是玻璃炮 的判断。
+ 在固定地形/  → 时段后差距依然稳定存在 排除解释D，强化机制性结论。
+否定该判断（若观察到）：
+ 组1 与组2  → “净交换比无实质差异，或骑兵进攻矛兵仍稳定占优 否定charge 代价显
+”  著 的判断，说明矛兵克制更多来自pierce 易伤/低HP（解释B  ）而非charge 机制。
+  →  骑兵劣势在非矛兵对手前同样出现 指向通用生存问题而非charge×firststrike 交互
+（解释A/B）。
+ 分层后差距随时段/  → 地形剧烈波动、无稳定模式 说明样本或外部修正主导，判断不成
+立，需扩样或重设。
+ 测试2｜Red Mage 终端分叉：Silver Mage(生存+机动) vs Great 
+Mage(L4 爆发) 的经验投资是否物有所值
+待验证假设
+Mage→Red Mage 后的分叉中，Great Mage  是唯一常规可达L4、面板伤害最高
+（fireball 17×4），但累计经验门槛最高（Mage48+Red83+Arch150+Great... 路径
+∑=281）；Silver Mage ∑仅需 =131  、带teleport  且fire/cold 抗50。假设：在法师镜
+像/法术密集对局中，Silver Mage “ ”的法术抗性与机动带来的 存活与到位 价值，可能抵消甚
+ 至超过Great Mage “  的额外面板伤害，使 高经验投资的L4”并非总是更优选择。
+①  证据（静态配置+ 实现）
+ 抗性对比：Silver Mage fire=50、cold=50（Mage_Silver.cfg:28-31）；Great 
+Mage fire=70、其余100（Mage_Great.cfg  ）。对方法师fireball  为fire  → 伤害
+Silver Mage 承受约一半。
+ 能力对比：Silver Mage  带{ABILITY_TELEPORT}（Mage_Silver.cfg:33；
+abilities.cfg:248，本方拥有空村庄间瞬移）；Great Mage 无能力。
+ 经验/费用：Silver Mage cost59、level3、经验门槛150；Great Mage cost110、
+level4、经验门槛200（Mage_Great.cfg  ）。路径累计经验门槛Silver=131 vs 
+Great=281  （工作簿Sheet 3）。
+ 机动：Silver Mage 移动6、Great Mage 移动5  （均smallfoot  ）；伤害Great 
+17×4 fire vs Silver 9×4 fire  （皆magical，恒70%命中，
+weapon_specials.cfg:110）。
+ 可达性：Great Mage→Elder Mage  需{ENABLE_ADVANCEMENT} 可选宏
+（optional_unit_advancements.cfg:24 为注释示例），default  不可达；故Great 
+Mage  为常规线终点，仅AMLA。
+② 竞争性解释（同样能解释观察，需在测试中区分）
+ 解释A：Great Mage “ ”的额外伤害足以在 被集火前 先击杀关键目标，高经验投资换取的
+——  是决定性爆发 若 如此，测试应显示Great Mage 先手秒杀能力更强、总输出更高。
+ 解释B  ：观察到的Silver Mage  优势仅来自fire/cold 抗50  这一单项，与teleport/机
+—— “  动无关 需通过 有无teleport ”可用村庄 的对照区分。
+ 解释C “ ”：结果由对局是否为 法术镜像 决定；面对物理/穿刺为主的对手，Silver Mage 
+抗性无的放矢，Great Mage ——更优 需按对 手阵营分层。
+ 解释D  ：经验门槛差异在实际对局中不构成约束（很少单位真能升到L4 “），因此 投资回
+”报 问题在实战中不显著。
+③ 可复现测试设置（待执行；不含结果）
+8.  地图：含多个可争夺村庄的对称图（用于让teleport 有意义），双方城堡对置。
+9. 阵营与对手：A  方Loyalists  走Mage→Red Mage  线；分别设置两类B ——方 (i) 法术
+密集对手（含敌方法师/arcane-fire 输出）；(ii) 物理/穿刺为主对手。用于检验解释C。
+10.终端对照：A  方一组升Silver Mage  、一组升Arch Mage→Great Mage；其余招募与
+金币尽量一致，记录为达到各终端所投入的累计经验/回合（仅记录，不预设快慢结论）。
+11.teleport “ ” ——变量：设置 村庄归属 两种子情境 (a) A 方控制多个空村庄（teleport 可
+用）；(b) 村庄被争夺/无空村庄（teleport 近乎不可用）。以隔离解释B。
+12.  固定ToD 与地形：关键交战安排相同时段；Silver/Great  均为smallfoot/neutral  或
+lawful  ，注意Red Mage  及其后为neutral（Mage_Red.cfg:14）、Mage/White 为 
+lawful  ，记录实际alignment 以正确解读时段修正。
+13.  ≥重复：每组 30 次独立交战/遭遇，记录存活、输出、到位情况；不预设任何胜率。
+④ 观察指标
+ 存活率：Silver Mage vs Great Mage 在敌方集火下的存活回合/存活比例（分法术对
+手与物理对手）。
+ “ ” “ ”有效输出：单位在其存活期间造成的总伤害（区分 高伤害但早死 与 低伤害但持续 ）。
+ 到位/机动：从城堡到关键交战点的回合数；teleport  在(a) 情境下的使用频次与由此获
+得的战术收益（如抢村、规避集火）。
+ 经验投资回报：达到各终端的实际回合/  经验投入vs 其后每回合的边际贡献。
+  分层结果：法术对手vs 物理对手下上述指标的方向是否反转（检验解释C）。
+⑤ 判定标准
+支持该判断（若观察到）：
+  在法术镜像下Silver Mage  存活率与有效输出显著优于Great Mage “，且优势随 村庄
+可用(teleport)”  → “放大 支持 生存+  机动的条件价值可抵消L4 ”面板 的判断。
+  达到Great Mage 的经验/  → “回合投入明显更高、而其边际贡献未成比例提升 支持 高经
+”验投资需情境验证、并非普适更优 的判断。
+ 物理对手下结论反转（Great Mage → 更优） 支持解释C，说明该分支价值高度依赖对
+手构成，不能一概而论。
+否定该判断（若观察到）：
+ Great Mage  在被集火前即稳定秒杀关键目标、总输出与存活均不低于Silver Mage → 
+“否定Silver  生存价值抵消L4”的判断，L4 爆发确为更优。
+ Silver Mage “优势在 无空村庄(teleport 不可用)”  →  情境下消失 说明优势主要来自
+teleport 而非抗性/机动本身，需重述判断（部分支持解释B）。
+  → 两类对手下均无稳定差异 该分叉在实战中不具决策显著性（趋近解释D），无需优先
+调整。
+ 测试3｜Knight 终端分叉：Paladin(heals+arcane 抗) vs Grand 
+Knight(纯爆发) 的续航价值是否翻转面板比较
+待验证假设
+Knight→Paladin  与Knight→Grand Knight  的经验投资完全相同（同为Knight 后一级，
+∑  门槛一致），仅终端不同。面板上Grand Knight（HP84、剑12×4、lance19×2）看似
+ 全面压制Paladin（HP77、剑9×5 arcane、lance16×2）。假设：在持久战/  多轮
+skirmish  或对抗arcane-弱抗目标（如不死系）时，Paladin  的heals+4  续航与arcane 
+抗70、arcane “ ”  伤害带来的 非面板价值 ，可能使其总体贡献不低于甚至超过Grand 
+Knight，从而翻转仅看伤害/HP 的直观排序。
+①  证据（静态配置+ 实现）
+ 能力：Paladin  带{ABILITY_HEALS}（Horse_Paladin.cfg:28；abilities.cfg:22 
+→ heals value=4 ≤，回合开始治疗邻接友军 4HP 或抑制中毒）。Grand Knight 无任
+何能力（Horse_Grand_Knight.cfg）。
+ 抗性与伤害类型：Paladin arcane 抗70（Horse_Paladin.cfg:24-26  ），且近战剑为
+arcane  伤害9×5（:37-45）；Grand Knight  剑为blade 12×4、无抗性加成
+（Horse_Grand_Knight.cfg:22-30）。
+ 面板差：Grand Knight HP84 vs Paladin77  ；移动Grand7 vs Paladin8（Grand 
+Knight 牺牲机动换HP/  伤害）。费用86 vs 82。
+  两者同为mounted：pierce 抗120、林地/洞窟防御cap（units.cfg:685,674,680）
+——共享骑兵的地形与穿刺弱点。
+② 竞争性解释（同样能解释观察，需在测试中区分）
+ 解释A：Paladin  的heals+4 “ ”对 自身 无防御加成（affect_self 治疗邻接友军），在单
+挑/小规模交换中几乎不体现，Grand Knight ——的面板优势直接决定结果 若如此，1v1 
+ 或小规模应恒为Grand Knight 占优。
+ 解释B：Paladin “  的价值仅在 对抗arcane-弱抗对手（不死/ ”  亡灵） 时显现；面对高
+arcane ——抗或纯物理对手则无的放矢 需按对手分层。
+ 解释C “ ”：续航价值只有在 长对局、多轮持续交战、有可治疗的受损友军 时才累积；短平
+ 快对局中Grand Knight ——更优 需按对局 长度/交战轮次分层。
+ 解释D：移动8 vs7 的机动差在开阔图影响有限，不足以改变结论。
+③ 可复现测试设置（待执行；不含结果）
+14.地图：开阔对称图，含可供拉锯的村庄/ “ ” “森林边缘；分别准备 短对局 与长对局（多轮拉
+”锯） 两种节奏设置。
+15.阵营与对手：A  方Loyalists  走Horseman→Knight  线；设置三类B ——方 (i) 不
+死/arcane-弱抗对手；(ii) 物理/blade-pierce 对手；(iii)  镜像Loyalists。用于检验解
+释B。
+16.终端对照：A  方一组升Paladin  、一组升Grand Knight  ；从Knight 起经验投资一致，
+仅终端选择不同。
+17. “编队变量：设置Paladin 邻接受损友军（heals ” “生效） 与Paladin 孤立（heals 无从
+”发挥） 两种子情境，以隔离解释A。
+18.交战轮次：记录从首次接触到战线稳定的多轮交战；长对局组刻意延长拉锯，观察续航累
+积。
+19.  固定ToD/  ≥地形并分层记录；每组 30 次独立交战/遭遇，不预设胜负。
+④ 观察指标
+  单交换比：每次交战中Paladin/Grand Knight 造成的敌方HP  损失÷ 自身损失（1v1 
+与小队两种规模）。
+ 续航贡献：Paladin  每回合经heals 为邻接友军恢复的累计HP，及其对战线维持的影响
+“ ”（对照 孤立 子情境）。
+  对arcane-弱抗对手：Paladin  的arcane  剑9×5  对不死系目标的实际击杀效率vs 
+Grand Knight  的blade 剑。
+ 存活与到位：多轮拉锯后两终端的存活数量、HP 分布；移动8 vs7 在抢点上的差异。
+ 分层结果：按对手类型(i/ii/iii)、对局节奏(短/长)、编队(邻接/孤立)交叉比较，检验解释
+A/B/C。
+⑤ 判定标准
+支持该判断（若观察到）：
+  长对局+ Paladin 邻接受损友军时，其所在一方的战线维持/  总存活显著优于Grand 
+Knight  → “ ”组，且优势随交战轮次累积 支持 续航翻转面板 的判断。
+  对抗不死系时Paladin  的arcane  → “剑击杀效率明显更高 支持arcane 伤害+抗性的针
+”对价值 这一面板外因素。
+ 1v1/孤立/  短对局下Grand Knight  恒优，而上述条件改变后Paladin  → 追平或反超 支
+“ ”持 价值高度条件依赖 的核心论点。
+否定该判断（若观察到）：
+ “  在长对局、有可治疗友军、对抗不死系等 最有利于Paladin”的情境下，Grand Knight 
+ → “ ”仍稳定占优 否定 续航翻转面板 的判断，Grand Knight 面板优势稳健。
+ Paladin  的heals 贡献在实战节奏下可忽略（治疗量4/ → 回合远小于敌方输出） 支持解
+释A，续航价值被高估。
+  → 三类对手、两种节奏、两种编队下均无稳定差异 该终端分叉不具决策显著性，无需优
+先验证。
+3. 三项测试的优先顺序与依据
+排序依据三条：(a) “ ”——机制的 面板隐藏度 代价 越不可见于伤害/HP/价格面板，越需要游戏
+内验证；(b) ——决策广度 影响的升级分叉/终端数量与经验投资规模；(c) ——可证伪性 能 否
+用对照设计干净地隔离该机制、排除竞争性解释。
+优先级 测试 面板隐藏度 决策广度 可证伪性/对照
+清晰度
+排序理由
+P1 测试1  ｜骑兵
+charge 双倍
+反击
+高
+（apply_to=b
+oth 的反击×2 
+完全不在伤害
+面板显示）
+ 高（同时决定
+Lancer  与
+Grand 
+Knight 两个终
+ 端，且与
+firststrike 矛
+兵线交互）
+高（组1  进攻
+vs 组2  防守直
+ 接开关
+charge，天然
+对照）
+机制最隐蔽、
+覆盖面最广、
+“且存在 触
+发/ ”不触发 的
+干净对照，信
+息价值最高，
+应最先做。
+P2 测试2｜Silver 
+vs Great 
+Mage
+中高（抗性/
+teleport/经验
+门槛不在伤害
+面板体现）
+高（Red 
+Mage 终端分
+叉，涉及全忠
+诚派最高经验
+∑投资 281 与
+ 唯一L4）
+中高（可按对
+手类型、村庄
+可用性分层，
+ 但teleport 情
+境控制稍复
+杂）
+经验投资规模
+最大、且价值
+高度依赖对手
+构成，需要分
+层对局才能判
+断，优先级次
+于机制最隐蔽
+的P1。
+P3 测试3｜
+Paladin vs 
+Grand 
+Knight
+中（heals/
+arcane抗为条
+件价值，但面
+板已有HP/伤
+害可直接对
+比）
+中（Knight 终
+端二选一；与
+P1的Grand 
+Knight部分重
+叠）
+中（续航价值
+需长对局+编
+队控制才显
+现，隔离成本
+较高）
+与P1  共享
+Grand 
+Knight 样本、
+结论部分耦
+合；续航效应
+需更长对局与
+更细编队控制
+才能显现，故
+置于末位，可
+与P1合并采集
+部分数据。
+执行建议：P1  与P3  均涉及Grand Knight “，可在同一批骑兵对局中同时采集charge ” “代价 与 终端
+”续航 数据以省样本；P2  因对手构成与经验投资维度独立，单独成批。所有批次先跑固定ToD/地形的
+对照，再放开分层，以避免时段/地形修正混淆机制结论（对应各测试的解释D/C）。
+4. 观察指标与数据采集口径（通用）
+ 不预设结果： “ ”所有比率（净交换比、存活率、击杀效率）均为 执行后采集 ，本文档不给
+出任何数值或方向预设。
+ 最小记录字段：每场交战记录：攻/  守方、进攻武器与是否触发charge/firststrike、双
+方地形、时段(lawful_bonus)、双方剩余HP、是否先手击杀、特性。
+ 样本与RNG：  ≥每组 30  次独立交战以平滑RNG；若引擎/回放支持固定种子，记录种
+子以便复现。样本量与显著性判定在执行阶段确定。
+ 分层报告：按对手类型、地形、时段、对局节奏、编队分层报告，避免用单一平均值掩盖
+“条件依赖（这正是本审查反对 伤害/ ”价格机械排序 的原因）。
+5. 未能静态解析、需游戏内确认的事项（披露）
+ kill_xp/combat_xp 常量：attack.cpp:1220/1399  引用，但定义在未随附的
+game_config  → “ ”中 经验门槛 无法换算为实际升级回合数；测试中需实测各终端的 真实
+到达回合。
+ recall_cost 默认值：types.cpp:252  −默认 1（用队伍值），unit.cpp:2380  回退
+20  → “ ”；随附配置未给定具体对局值 召回成本按 未固定 处理，未纳入对比。
+ 复合/  叠加地形的underlying_def_terrain：movetype.cpp:296-368 对复合地形取底
+层地形最优/  → 最差值；具体地图的组合未随附 防御 cap 在真实地图上的精确表现需游戏
+内验证（与测试1  的mounted 林地cap 相关）。
+ Elder Mage / Royal Warrior 可达性：default recruit  闭包中不可达（无单位
+advances_to 指向；Great Mage advances_to=null，Royal Warrior 为角色基类）
+→  未计入常规路径，仅工作簿Sheet 1 末组对照。
+ Sergeant / Young Ogre / Gryphon  线：不在loyalists-default.cfg  的
+recruit/leader  （部分见AOH → “  或其他阵营） 标注为 非default recruit ”闭包 ，不纳
+入主路径结论。
+ AI 行为权重：ai.cfg / ai_candidate_actions.cfg  影响AI  是否主动charge  、如何用
+firststrike  →  防守等，属行为层而非数值；缺乏对战样本 不做任何 AI 相关结论，测试
+均以受控/人工交战为准。
+— “本文档为待执行测试方案，所有 设置/指标/ ”判定标准 均为假设性设计，等待团队进入对局后执行与填
+ 写；不含运行日志、敌军数据、胜率或测试结果。数值与规则语义溯源见配套
+loyalist_progression_review.xlsx（Sheet 1–9）。

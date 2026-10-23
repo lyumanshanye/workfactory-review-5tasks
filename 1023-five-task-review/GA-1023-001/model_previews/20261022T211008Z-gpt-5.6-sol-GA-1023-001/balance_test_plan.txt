@@ -1,0 +1,149 @@
+忠诚派升级路线审查｜Wesnoth 1.18.0
+静态审查｜非实测结果 · 1
+忠诚派升级路线审查与游戏内验证方案
+The Battle for Wesnoth 1.18.0｜静态证据与待执行测试
+未运行游戏；不含虚构日志、敌军数据、胜率或测试结果。
+执行摘要
+从 loyalists-default.cfg:9 的 8 个可招募单位递归 advances_to，得到 34 个常规升级可达单位与 15 条终端路径。
+领袖集合单独记录。完整证据链、继承值、覆盖项和来源位置见配套工作簿。
+ 优先 1：法师分支——输出、伤害类型、阵营倾向与治疗/照明/传送的条件价值。
+ 优先 2：Horseman 分支——Lancer 即时终端机动/三击冲锋与 Knight 生存/三级上限的时间窗口交换。
+ 优先 3：Merman Warrior 分支——Hoplite 仅防守的坚守与 Triton 的 HP、移动、双伤害类型交换。
+三项都是可证伪的测试问题，不是加强或削弱建议。
+一、范围与证据口径
+集合 成员 来源
+招募 Cavalryman,Horseman,Spearma
+n,Fencer,Heavy 
+Infantryman,Bowman,Mage,Mer
+man Fighter
+loyalists-default.cfg:9
+领袖 Lieutenant,Swordsman,Pikeman
+,Javelineer,Shock 
+Trooper,Longbowman,White 
+Mage,Red Mage
+同文件:8
+随机领袖 Lieutenant,Swordsman,Pikeman
+,Javelineer,Longbowman,White 
+Mage,Red Mage
+同文件:8
+经验：experience 是当前形态到下一进阶的基础门槛，不是时间。全局倍率见 types.cpp:577-588；智能特
+质-20%见 traits.cfg:186-199；交战/击杀经验见 attack.cpp:1214-1221,1395-1400。工作簿路径门槛和不含
+已有 XP、倍率、特质、敌方等级、交战、击杀与存活。
+防御：movement_type 的 defense 是被命中率；负值有上限语义（movetype.cpp:40-50,83-86）。抗性 80 代
+表承伤 80%，单位同名项覆盖继承值（movetype.cpp:768-779）。
+证据层：直接配置、移动类型继承、条件宏、实现核对和未解析事项分别标注。Merman 线跨到 data/core/
+units/merfolk/，没有按目录名漏查。
+二、面板容易忽略的代价
+ Magical 固定 70%命中（weapon_specials.cfg:110-121），所以法师裸伤必须按目标地形防御与抗性分层。
+ Charge 仅进攻生效，并让攻击者所受反击也×2（weapon_specials.cfg:134-146）；高爆发伴随风险。
+忠诚派升级路线审查｜Wesnoth 1.18.0
+静态审查｜非实测结果 · 2
+ First strike 改变出手顺序而非伤害（weapon_specials.cfg:172-181），收益依赖反击与提前击杀。
+ mounted 森林消耗3、洞穴/菌地 4；swimmer 水域消耗1 但森林/丘陵4；高面板移动不保证特定路线更快
+（units.cfg:652-694,918-959）。
+ 治疗、解毒、照明、传送、坚守分别依赖邻接/状态/时段/己方空村/防守方向，不能当作恒定加成
+（abilities.cfg:4-137,226-277）。
+ 二级终端 Lancer/Javelineer 换取即时形态；非终端线保留三级选择。AMLA_DEFAULT 是+3HP 与下次
+XP+20%，不是另一常规等级（amla.cfg:4-30）。
+三、共同测试协议
+使用1.18.0、固定地图版本、双方阵营、起始金、经验倍率与随机种子。由同一操作者或固定策略脚本执行；分
+支 A/B 镜像换边；每次只改分支或预先声明的地形条件。保存回放和逐回合记录。以下均为待执行方案。
+优先1｜Mage：输出与支援价值是否被裸伤误读？
+证据：Mage 以 48 基础经验分 White/Red。White 为 35HP、lawful、9×3 奥术魔法、cures、奥术承伤
+70%；Red 为 42HP、neutral、8×4 火焰魔法并继续 Arch/Silver。Mage of Light 有照明+cures；Silver 有传
+送和火/冷承伤 50%。来源：Mage.cfg:11-18；Mage_White.cfg:10-17,27-64；Mage_Red.cfg:10-48；
+Mage_of_Light.cfg:28-66；Mage_Silver.cfg:28-56。
+待验证判断：毒、夜间或密集编队可能抬高White 线队伍价值；高防御目标、火焰需求或村庄网络可能使Red/
+Silver/Arch 反转。
+竞争性解释：支援能力可能很少触发；Red 较高HP 和四击可通过击杀间接防护；传送受村庄控制限制；lawful/
+neutral 可能是主要解释。
+可复现设置：两组固定图：①中央高防御据点、完整昼夜、固定毒攻击；同 XP/HP 同回合选White 或 Red。②至
+少四个分散可控村庄，三级比较Mage of Light/Silver/Arch。固定目标、抗性、地形、时段、初始状态与动作脚
+本，镜像换边。
+指标 支持判断 否定/削弱判断
+自身有效输出与过量伤害 排序随抗性/防御切换 各条件排序稳定且裸伤足以解释
+治疗/解毒/照明覆盖及站位机会成
+本
+高触发改变可行动友军或撤退 高触发仍不改变队伍状态
+传送次数、节省移动、提前占村/参
+战
+合法村网产生时点优势 有网络仍无有效位移收益
+生存/承伤 功能收益伴随明确代价 差异仅由随机命中解释
+优先2｜Horseman：Lancer 即时收益能否补偿风险与三级机会成本？
+证据：Horseman 38HP、8 移动、9×2 冲锋，54 经验分支。Lancer 50HP、10 移动、12×3 冲锋且 L2 终端；
+Knight 58HP、8 移动、8×4 剑、14×2 冲锋并需 100 经验进 Paladin/Grand Knight。来源：
+Horseman.cfg:9-31；Horse_Lancer.cfg:9-31；Horse_Knight.cfg:10-40。
+待验证判断：Lancer 在升级后短窗可能凭机动与三击完成击杀/撤出；高反击、粗糙地形或长局中 Knight 线可能
+更可靠。
+忠诚派升级路线审查｜Wesnoth 1.18.0
+静态审查｜非实测结果 · 3
+竞争性解释：三击改变分布但不保证击杀；Knight 可用剑避开冲锋风险；平坦度可能解释表现；对局可能在三级
+前结束。
+可复现设置：复制同一满HP、同特质、54/54XP 的 Horseman。平原走廊与森林/丘陵混合路线；白天/黄昏/夜
+间；无、低、高反击三档固定目标，HP 围绕预设击杀阈值。短窗 3 回合，长窗至Knight 三级或回合上限；路
+线/目标预先脚本化并换边。
+指标 支持判断 否定/削弱判断
+首接触回合/可达目标 平原Lancer 优势、混合图收缩 两图无时点差
+击杀分布/过量伤害 目标阈值改变排序 所有阈值排序相同
+反击承伤/死亡/撤退 高反击抵消Lancer 收益 双向冲锋无额外代价
+三级前有效行动 Knight 长窗补回短窗差距 窗口内三级无贡献
+优先3｜Merman Warrior：Hoplite 防守能否抵消Triton 机动与覆盖？
+证据：Warrior 需 60 基础经验分 Triton/Hoplite。Triton 60HP、移动 6、14×3 穿刺与 19×2 剑刃；Hoplite 
+52HP、移动 5、15×2 穿刺，覆盖 blade80/pierce70/impact80/fire80/cold70 并有仅防守的 steadfast。来
+源：Warrior.cfg:9-16；Triton.cfg:9-38；Hoplite.cfg:9-40；abilities.cfg:117-137。
+待验证判断：Hoplite 可能在水域狭口防守延迟崩线；主动攻击、跨陆转点或面对穿刺抗性目标时 Triton 可能更
+有价值。
+竞争性解释：水域防御已足够使抗性边际小；敌方可换目标；Hoplite 低HP 抵消抗性；Triton 双类型仅在目标抗
+性分化时有用。
+可复现设置：三种固定路段：水域狭口、50%水陆混合、纯陆转点。分别测试原地防守与主动攻击；blade/
+pierce/impact/fire/cold 逐类隔离，固定伤害/次数。另设穿刺与剑刃抗性不同的目标。固定 HP、特质、时段和
+支援。
+指标 支持判断 否定/削弱判断
+按类型/方向有效承伤 Hoplite 优势集中于防守 防守无优势或攻击同等优势
+守点连续回合/突破回合 水域狭口延迟突破 抗性不改变突破
+到达与失去接敌回合 Triton 混合/陆地少失行动 移动差无时点影响
+对分化抗性目标输出 双类型改变击杀阈值 抗性变化不改变结果
+四、优先顺序与停止条件
+顺序 依据 停止/修订条件
+1 法师 早期分叉且条件维度最多；先校准
+能力触发记录。
+毒/昼夜/村庄条件未触发则修场
+景，不下结论。
+2 Horseman 终端时点、机动与双向风险可短/长
+窗直接检验。
+路线或反击档无辨识度则调整阈
+值。
+3 Merman 强依赖水域与伤害类型，适用面较
+窄。
+先确认steadfast 仅防守生效；水
+陆转换不足则不外推。
+若换边后差异由地图侧优势主导、能力未触发或随机波动大，应增加配对样本或修订场景，而不是把无区分度当
+作平衡结论。
+忠诚派升级路线审查｜Wesnoth 1.18.0
+静态审查｜非实测结果 · 4
+五、统一记录与不可静态回答事项
+记录字段 内容
+构建 版本、地图/版本、模组、经验倍率、种子
+状态 单位 ID/分支/特质/HP/XP/时段/坐标/地形/邻接
+战斗 武器、类型、显示伤害/次数/命中、实际命中、造
+成/承受、状态
+能力 治疗/解毒、照明覆盖、传送起终点/村庄归属、坚守方
+向、冲锋反击
+地图结果 首接触、占村、失去行动、突破、撤退、死亡
+配对 A/B、换边、重复编号；不丢弃反预期回放
+真实分支选择率、升级回合、地图条件频率、对手构成、存活率、治疗覆盖率、伤害分布、胜率和玩家水平交互
+只能通过游戏内回放/遥测/配对实验回答。本计划不声称维护者正在实施，也不预设改数方向。
+附录｜证据导航
+主题 来源
+阵营 data/multiplayer/factions/loyalists-default.cfg:2-
+10
+移动类型 data/core/units.cfg:433-695,918-959
+能力 data/core/macros/abilities.cfg:4-137,213-277
+武器特技 data/core/macros/weapon_specials.cfg:81-
+146,171-180
+AMLA/特质 data/core/macros/amla.cfg:4-30；traits.cfg:128-
+221
+实现 src/movetype.cpp:40-50,744-779；src/units/
+types.cpp:577-588；src/actions/attack.cpp:1214-
+1474
+逐单位 loyalist_progression_review.xlsx各证据表

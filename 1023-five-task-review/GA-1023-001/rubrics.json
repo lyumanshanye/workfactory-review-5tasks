@@ -1,0 +1,212 @@
+[
+  {
+    "id": "GA01",
+    "weight": 3,
+    "dimension": "指令遵循",
+    "description": "交付两份指定名称、可打开的xlsx与docx。",
+    "verification_anchor": "读取实际文件验证，不只检查扩展名。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "loyalist_progression_review.xlsx",
+      "balance_test_plan.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "GA02",
+    "weight": 7,
+    "dimension": "内容质量-事实忠实性",
+    "description": "常规升级图以官方recruit八个单位起步，领袖集合单列而不当作招募集合。",
+    "verification_anchor": "loyalists-default.cfg的recruit与leader；八起点包括Mage与Merman Fighter，不限于human-loyalists路径或只看领袖。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "loyalist_progression_review.xlsx",
+      "balance_test_plan.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "GA03",
+    "weight": 10,
+    "dimension": "内容质量-事实忠实性",
+    "description": "常规升级可达集合及边完整且可追溯，不添加终端AMLA为新单位边。",
+    "verification_anchor": "按每个单位advances_to求闭包；独立审计将核对原始路径与边集合。null终止常规升级，不代表不能获得AMLA。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "loyalist_progression_review.xlsx",
+      "balance_test_plan.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "GA04",
+    "weight": 7,
+    "dimension": "内容质量-数值与计算准确性",
+    "description": "路径经验指标按声明定义正确计算，并解释不是实际升级时间。",
+    "verification_anchor": "从起点到目标累加中间节点基础experience；Horseman到Knight或Lancer为54，Spearman到三个二级分支为42。特质、倍率和战斗经历另影响实际过程。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "loyalist_progression_review.xlsx",
+      "balance_test_plan.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "GA05",
+    "weight": 7,
+    "dimension": "内容质量-数值与计算准确性",
+    "description": "攻击比较保留伤害类型、射程和次数，不仅用总面板伤害比较不同攻击。",
+    "verification_anchor": "逐个回查[attack]，Knight有8×4blade普通剑和14×2pierce冲锋，Lancer12×3pierce冲锋；不能把普通剑也当冲锋。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "loyalist_progression_review.xlsx",
+      "balance_test_plan.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "GA06",
+    "weight": 10,
+    "dimension": "内容质量-专业规范",
+    "description": "区分移动类型继承、单位覆盖及条件能力，抗性配置解释为承伤百分比。",
+    "verification_anchor": "如Swordsman blade/impact=80是20%基础抗性；Pikeman pierce=60是40%基础抗性。能力不能自动加到全部基础场景。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "loyalist_progression_review.xlsx",
+      "balance_test_plan.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "GA07",
+    "weight": 7,
+    "dimension": "内容质量-专业规范",
+    "description": "防御与移动解释保留引擎语义，负防御值不当作负概率或线性平均。",
+    "verification_anchor": "mounted forest=-70；movetype.cpp config_to_min/max与terrain_defense双约束。允许仅保留原值并披露待解析事项，不强求在缺规则时编造复合地形结果。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "loyalist_progression_review.xlsx",
+      "balance_test_plan.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "GA08",
+    "weight": 7,
+    "dimension": "内容质量-专业规范",
+    "description": "能力与武器特殊效果引用真实宏及实现，条件范围明确。",
+    "verification_anchor": "weapon_specials CHARGE的multiply=2、apply_to=both、active_on=offense；TELEPORT受宏筛选的村庄所有权、占用等条件约束，不能写任意瞬移。接受选择其他实际能力作深入比较。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "loyalist_progression_review.xlsx",
+      "balance_test_plan.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "GA09",
+    "weight": 7,
+    "dimension": "内容质量-分析与论证质量",
+    "description": "三个优先问题均来自实际升级分支差异，有配置证据和竞争解释。",
+    "verification_anchor": "可选不同于参考的分支，但每个问题有可定位单位/路径与数值或能力条件；不能将所有问题写成泛泛“需测试”。",
+    "criterion_type": "Subjective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "loyalist_progression_review.xlsx",
+      "balance_test_plan.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "GA10",
+    "weight": 7,
+    "dimension": "结构与组织",
+    "description": "每个问题的待执行设置足以复现，说明关键控制条件及比较对象。",
+    "verification_anchor": "单位ID/攻击、HP/特质/时间、地形与必要条件应足以重建；条件能力须有正负对照。允许确定性机制核验，不一律要求随机模拟200次。",
+    "criterion_type": "Subjective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "loyalist_progression_review.xlsx",
+      "balance_test_plan.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "GA11",
+    "weight": 7,
+    "dimension": "内容质量-分析与论证质量",
+    "description": "观察指标和支持/否定条件对应问题，能够改变推荐而非只确认预设结论。",
+    "verification_anchor": "如生存、反击代价、机动或治疗效果；竞争解释被证据支持时应收窄或否定结论。无需预报尚未执行的数值。",
+    "criterion_type": "Subjective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "loyalist_progression_review.xlsx",
+      "balance_test_plan.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "GA12",
+    "weight": 7,
+    "dimension": "内容质量-分析与论证质量",
+    "description": "三项验证有明确优先顺序及资源或决策依据。",
+    "verification_anchor": "接受不同顺序；解释当前为何优先解决某一误判或高影响依赖，不能只有P1/P2/P3标签。",
+    "criterion_type": "Subjective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "loyalist_progression_review.xlsx",
+      "balance_test_plan.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "GA13",
+    "weight": 7,
+    "dimension": "内容质量-专业规范",
+    "description": "区分配置cost、基础XP、真实招募或升级投入，不以路径cost之和冒称实际花费。",
+    "verification_anchor": "unit_type的cost不是每次升级的额外支付；若使用cost作估值须明确其含义及局限。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Implicit",
+    "type": "Binary",
+    "target_files": [
+      "loyalist_progression_review.xlsx",
+      "balance_test_plan.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "GA14",
+    "weight": -10,
+    "dimension": "安全合规",
+    "description": "把未执行的游戏测试、胜率或运行日志伪称真实结果时扣分。",
+    "verification_anchor": "定位具体声称已观测结果的原文；清楚标注的待执行计划、理论推算或假设不触发。不能因没有实际运行而扣分，题面仅要求静态审查。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "loyalist_progression_review.xlsx",
+      "balance_test_plan.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "run_id": "20261022T212326Z-qwen3.8-max-DA-1023-001",
+  "task_id": "DA-1023-001",
+  "snapshot": "2186e947e8a88063",
+  "input_hashes": {
+    "CAINC1__ALL_AREAS.csv": "98c5ef2a2d3f72e482eac5bca0544ce3114375f8908226872b4f429d0e0f2028",
+    "national_county2020.txt": "9f6e5f6eb6ac2f5e9a36d5fd01dec77991bddc75118f748a069441a4782970d6",
+    "co-est2024-alldata.csv": "abcc8720d669e793bbfdcd440eeec37a78db3b452adbe4ccd1eadf7c72b522b9",
+    "CAINC4__ALL_AREAS.csv": "61858e273cbd7dcfb2a9d374952cc65ef0f3cb4ce45eac5a7c851f291b6d0ceb"
+  },
+  "output_hashes": {
+    "county_income_review.xlsx": "ee817f4baf782ac2dfc3837dd74e8682250f0eb74c4c21243f6e6513751fb4b8",
+    "publication_memo.docx": "43b0027c95fa5657beea395897af4ddb553336f43f0a1f6f6a3300d85fc034cb"
+  },
+  "numeric_assertions": 43452,
+  "numeric_errors": [],
+  "source_counts": {
+    "target": 3144,
+    "direct": 3091,
+    "eligible": 3082,
+    "unmatched": 53
+  },
+  "inspected_population_cells": {
+    "sheet": "07_人口口径核对",
+    "B5": 3082,
+    "B6": 3082,
+    "B7": 3082
+  },
+  "broad_population_claims": [
+    "① 更换人口来源不改变结论：BEA人口(CAINC1 LineCode 2)与Census人口估计(POPESTIMATE)在全部3144条县级记录、2020与2024两端逐条完全一致(差值均为0)。据此生成的两榜——BEA人口榜与Census人口榜——前20名成员、名次逐条相同(重叠20/20)。再改用Census另一口径ESTIMATESBASE2020作2020分母重排，前20仍完全一致(20/20)。\"人均收入增长领先\"名单对人口来源稳健。"
+  ],
+  "contribution_representation": "Shares of change; raw amounts and base totals permit exact growth-contribution reconstruction.",
+  "content_score": null,
+  "difficulty": null,
+  "limits": [
+    "Specific returned workbook layout only; not a generic artifact parser.",
+    "Checks cover comparable-data and contribution rows, not every workbook tab or narrative statement.",
+    "Numeric consistency does not approve publication claims or historical boundary compatibility.",
+    "Different but mathematically equivalent decompositions are not errors merely for differing from the reference.",
+    "One observed unsupported claim is not proof of a stable repeated model weakness."
+  ],
+  "review_note": "research/da_qwen_substantive_observation.md",
+  "review_note_sha256": "0151d72952a77a81a49809861a594df323397928b1e664f9ebf032c338eb9080"
+}

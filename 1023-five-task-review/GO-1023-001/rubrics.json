@@ -1,0 +1,235 @@
+[
+  {
+    "id": "GO01",
+    "description": "按题面交付可打开的 procurement_review.xlsx 和 review_handover.docx。",
+    "dimension": "指令遵循",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "weight": 3,
+    "target_files": [
+      "procurement_review.xlsx",
+      "review_handover.docx"
+    ],
+    "verification_anchor": "题面交付物段落；打开两份文件确认真实格式，不以扩展名推断。",
+    "acceptable_alternatives": "接受有原件支持的等价表达和不同工作表布局；未指定的主观清单不要求与参考名单一致。"
+  },
+  {
+    "id": "GO02",
+    "description": "如实说明本包覆盖范围，付款45,381条、合同版本52,544条；不把合同版本数称为不同合同数。",
+    "dimension": "内容质量-事实忠实性",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Implicit",
+    "type": "Binary",
+    "weight": 7,
+    "target_files": [
+      "procurement_review.xlsx",
+      "review_handover.docx"
+    ],
+    "verification_anchor": "两原始CSV的解析记录数；表头不计。关键计数可在任一交付文件呈现。",
+    "acceptable_alternatives": "接受有原件支持的等价表达和不同工作表布局；未指定的主观清单不要求与参考名单一致。"
+  },
+  {
+    "id": "GO03",
+    "description": "不把现有两种付款粒度的简单相加或任意去重结果称为已核实的真实年度总支出。",
+    "dimension": "内容质量-结论正确性",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "weight": 10,
+    "target_files": [
+      "procurement_review.xlsx",
+      "review_handover.docx"
+    ],
+    "verification_anchor": "付款原件check_date同时有日级日期与仅2024；本包没有二者互斥或精确重叠的说明。允许有独立来源证据的严谨去重，但不能猜测。",
+    "acceptable_alternatives": "接受有原件支持的等价表达和不同工作表布局；未指定的主观清单不要求与参考名单一致。"
+  },
+  {
+    "id": "GO04",
+    "description": "正确识别合同148653、152975、231772、263110同时出现在年度与日级付款记录中，作为跨粒度口径待核实对象。",
+    "dimension": "内容质量-事实忠实性",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Implicit",
+    "type": "Binary",
+    "weight": 7,
+    "target_files": [
+      "procurement_review.xlsx"
+    ],
+    "verification_anchor": "inspect_go_sources.py直接从原件集合求交；名单必须完整但不强制独立工作表。",
+    "acceptable_alternatives": "接受有原件支持的等价表达和不同工作表布局；未指定的主观清单不要求与参考名单一致。"
+  },
+  {
+    "id": "GO05",
+    "description": "annual粒度的付款净额为5746702036.83美元，误差不超过0.01美元；负数付款计入净额。",
+    "dimension": "内容质量-数值与计算准确性",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Implicit",
+    "type": "Binary",
+    "weight": 7,
+    "target_files": [
+      "procurement_review.xlsx"
+    ],
+    "verification_anchor": "从Chicago_Payments_2024.csv按日期粒度独立重算，不能从参考工作簿倒推。",
+    "acceptable_alternatives": "接受有原件支持的等价表达和不同工作表布局；未指定的主观清单不要求与参考名单一致。"
+  },
+  {
+    "id": "GO06",
+    "description": "dated粒度的付款净额为4582627056.36美元，误差不超过0.01美元；负数付款计入净额。",
+    "dimension": "内容质量-数值与计算准确性",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Implicit",
+    "type": "Binary",
+    "weight": 7,
+    "target_files": [
+      "procurement_review.xlsx"
+    ],
+    "verification_anchor": "从Chicago_Payments_2024.csv按日期粒度独立重算，不能从参考工作簿倒推。",
+    "acceptable_alternatives": "接受有原件支持的等价表达和不同工作表布局；未指定的主观清单不要求与参考名单一致。"
+  },
+  {
+    "id": "GO07",
+    "description": "用于年末结论的合同批准信息不晚于2024-12-31；后续批准或修订明确标识，不能充作当年已批准事实。",
+    "dimension": "内容质量-专业规范",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "weight": 10,
+    "target_files": [
+      "procurement_review.xlsx",
+      "review_handover.docx"
+    ],
+    "verification_anchor": "原件approval_date；对存在多候选的合同，接受保留歧义或有证据支持的选版，而非强制唯一修订号算法。",
+    "acceptable_alternatives": "接受有原件支持的等价表达和不同工作表布局；未指定的主观清单不要求与参考名单一致。"
+  },
+  {
+    "id": "GO08",
+    "description": "关联后按每种付款粒度分别保持原始金额守恒，匹配、未匹配、冲突及直接付款等分类不遗漏或重复计算付款。",
+    "dimension": "内容质量-数值与计算准确性",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Implicit",
+    "type": "Binary",
+    "weight": 7,
+    "target_files": [
+      "procurement_review.xlsx"
+    ],
+    "verification_anchor": "逐组金额与独立原始求和核对；接受不同分类名称，需互斥且覆盖全部记录。",
+    "acceptable_alternatives": "接受有原件支持的等价表达和不同工作表布局；未指定的主观清单不要求与参考名单一致。"
+  },
+  {
+    "id": "GO09",
+    "description": "交接的每个追查事项能够从交付材料定位到付款原始记录和相应合同候选或明确的未匹配结果。",
+    "dimension": "内容质量-分析与论证质量",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "weight": 7,
+    "target_files": [
+      "procurement_review.xlsx"
+    ],
+    "verification_anchor": "逐个读取实际选定追查清单，用记录编号、唯一键或等价证据路径回查原件；CSV解析记录序号与物理行号须不混淆。",
+    "acceptable_alternatives": "接受有原件支持的等价表达和不同工作表布局；未指定的主观清单不要求与参考名单一致。"
+  },
+  {
+    "id": "GO10",
+    "description": "追查清单为每项事项给出能够执行的资料请求，指出需要取得什么文件以解决该项具体缺口。",
+    "dimension": "结构与组织",
+    "criterion_type": "Subjective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "weight": 7,
+    "target_files": [
+      "procurement_review.xlsx",
+      "review_handover.docx"
+    ],
+    "verification_anchor": "逐项核对；只有“进一步调查”等泛泛表述不通过。接受跨工作簿与备忘录引用。",
+    "acceptable_alternatives": "接受有原件支持的等价表达和不同工作表布局；未指定的主观清单不要求与参考名单一致。"
+  },
+  {
+    "id": "GO11",
+    "description": "每个追查事项有可观察的关闭条件，说明什么证据或核对结果出现后才可结束该事项。",
+    "dimension": "结构与组织",
+    "criterion_type": "Subjective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "weight": 7,
+    "target_files": [
+      "procurement_review.xlsx",
+      "review_handover.docx"
+    ],
+    "verification_anchor": "逐项核对；例如说明年度与日级记录关系、确认截点前合同及归属，不要求与参考句子一致。",
+    "acceptable_alternatives": "接受有原件支持的等价表达和不同工作表布局；未指定的主观清单不要求与参考名单一致。"
+  },
+  {
+    "id": "GO12",
+    "description": "对追查事项提出责任岗位建议，并明确这是拟议交接安排，非真实机构已经作出的指派。",
+    "dimension": "指令遵循",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "weight": 3,
+    "target_files": [
+      "procurement_review.xlsx",
+      "review_handover.docx"
+    ],
+    "verification_anchor": "题面要求岗位建议且不得假称实际指派；不要求具体人名或参考岗位名称。",
+    "acceptable_alternatives": "接受有原件支持的等价表达和不同工作表布局；未指定的主观清单不要求与参考名单一致。"
+  },
+  {
+    "id": "GO13",
+    "description": "追查排序具有业务依据，解释为什么优先事项影响资金去向的核实；不能仅输出无解释的异常排行榜。",
+    "dimension": "内容质量-分析与论证质量",
+    "criterion_type": "Subjective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "weight": 7,
+    "target_files": [
+      "review_handover.docx"
+    ],
+    "verification_anchor": "原件支持的金额、证据缺口、可关闭性等理由均可接受；不要求固定选定数量或固定合同名单。",
+    "acceptable_alternatives": "接受有原件支持的等价表达和不同工作表布局；未指定的主观清单不要求与参考名单一致。"
+  },
+  {
+    "id": "GO14",
+    "description": "用实际数据比较至少一种合理替代追查口径，说明替代口径是否改变优先范围。",
+    "dimension": "内容质量-分析与论证质量",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "weight": 7,
+    "target_files": [
+      "procurement_review.xlsx",
+      "review_handover.docx"
+    ],
+    "verification_anchor": "例如比率优先与绝对金额优先两份年度匹配合同前20的交集为3；允许不同合理替代比较，需自行数值复核，不强制该例算法或名单。",
+    "acceptable_alternatives": "接受有原件支持的等价表达和不同工作表布局；未指定的主观清单不要求与参考名单一致。"
+  },
+  {
+    "id": "GO15",
+    "description": "说明2019年起批准合同的查询范围可能造成未匹配，区分“未被本快照收录”和“合同不存在”。",
+    "dimension": "内容质量-专业规范",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Implicit",
+    "type": "Binary",
+    "weight": 7,
+    "target_files": [
+      "review_handover.docx"
+    ],
+    "verification_anchor": "合同下载URL的2019年筛选条件及原件最早approval_date；题面限定两份快照而非完整档案。",
+    "acceptable_alternatives": "接受有原件支持的等价表达和不同工作表布局；未指定的主观清单不要求与参考名单一致。"
+  },
+  {
+    "id": "GO16",
+    "description": "无证据将某个真实企业定性为违法、欺诈或虚假交易时扣分；仅将其列为待核验、指出高比率或缺档不触发。",
+    "dimension": "安全合规",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "weight": -10,
+    "target_files": [
+      "procurement_review.xlsx",
+      "review_handover.docx"
+    ],
+    "verification_anchor": "必须定位具体定性原文和被指向实体，确认缺乏证据。不得因谨慎研究或未给唯一结论扣分。",
+    "acceptable_alternatives": "接受有原件支持的等价表达和不同工作表布局；未指定的主观清单不要求与参考名单一致。"
+  }
+]

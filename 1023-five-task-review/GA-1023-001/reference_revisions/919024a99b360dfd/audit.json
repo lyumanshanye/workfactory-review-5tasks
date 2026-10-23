@@ -1,0 +1,23 @@
+{
+  "revision": "919024a99b360dfd",
+  "base_snapshot": "2186e947e8a88063",
+  "status": "lineage_weapons_and_pdf_checked_not_gold",
+  "checks": 378,
+  "output_hashes": {
+    "balance_test_plan.docx": "1ca7672f5630d49c89b70aa213e2891b1a3a9e3ad8b7e1023b808ad571bb44f2",
+    "loyalist_progression_review.xlsx": "c83007f8cedef1a97a61658d98e950a6793c99c8c5dbf019329ddb60c532faa8"
+  },
+  "pdf_sha256": "b175a064e80eebe5a1ecf192d202610acccabbd6434a35c9d4fbd4428399927f",
+  "pages": 3,
+  "contact_sha256": "c7730328b10037fefda9080ed28aadfb82a54272451930f4d86a1e876664e645",
+  "combat_cases": 44,
+  "healing_cases": 8,
+  "teleport_cases": 6,
+  "mage_time_cases": 4,
+  "limits": [
+    "No game execution or win-rate evidence.",
+    "Does not approve every narrative claim or experiment design.",
+    "Visual inspection and independent substantive/Gold review remain separate.",
+    "The frozen task and active solver runs still use the original reference version."
+  ]
+}

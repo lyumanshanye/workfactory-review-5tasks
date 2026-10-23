@@ -1,0 +1,104 @@
+{
+  "domain": "GO",
+  "task": "GO-1023-001",
+  "legacy_blueprint": {
+    "task_id": "GO-FULL-0008",
+    "name": "work/go-full-0008",
+    "title": "通用办公：采购申请、订单与收货校验请求完整性和发起人权限与可执行审批任务清单（0050）",
+    "blueprint": "full-taxonomy-workflow",
+    "role": "业务流程运营专员",
+    "scenario": "你作为业务流程运营专员，需在通用办公场景中对采购申请、订单与收货执行校验请求完整性和发起人权限，最终支持可执行审批任务清单的可追溯决策。",
+    "operation": "校验请求完整性和发起人权限",
+    "inputs": [
+      "业务申请表或电子表单",
+      "审批记录与授权矩阵",
+      "合同、发票或收货凭证"
+    ],
+    "decision_topic": "可执行审批任务清单",
+    "rules": [
+      "执行前必须验证授权、审批完成度和职责分离要求",
+      "不可逆或高影响操作必须设置人工确认门禁"
+    ],
+    "seed": 20261017050,
+    "category": "subagent-workflow",
+    "difficulty": "A2",
+    "task_complexity": "C5",
+    "weakness_tags": [],
+    "domain": "GO",
+    "domain_l2": "T8-系统执行与流程流转",
+    "domain_l3": "采购申请、订单与收货｜校验请求完整性和发起人权限｜可执行审批任务清单｜流程001",
+    "domain_l4": "基于业务申请表或电子表单、审批记录与授权矩阵、合同、发票或收货凭证，按执行前必须验证授权、审批完成度和职责分离要求完成可执行审批任务清单并留存证据",
+    "capabilities": [
+      "校验请求完整性和发起人权限",
+      "子代理协作",
+      "结果汇总验收"
+    ],
+    "taxonomy_status": "specified"
+  },
+  "onet_enhanced_blueprint": {
+    "task_id": "ONET-LEGACY-0050",
+    "name": "work/onet-legacy-0050",
+    "title": "通用办公：采购申请、订单与收货校验请求完整性和发起人权限与可执行审批任务清单（0050）",
+    "blueprint": "full-taxonomy-workflow",
+    "role": "业务流程运营专员",
+    "scenario": "你作为业务流程运营专员，需在通用办公场景中对采购申请、订单与收货执行校验请求完整性和发起人权限，最终支持可执行审批任务清单的可追溯决策。\n\n职业分类参考：O*NET 31.0 43-1011.00 First-Line Supervisors of Office and Administrative Support Workers。职业定义：Directly supervise and coordinate the activities of clerical and administrative support workers.",
+    "operation": "校验请求完整性和发起人权限",
+    "inputs": [
+      "业务申请表或电子表单",
+      "审批记录与授权矩阵",
+      "合同、发票或收货凭证"
+    ],
+    "decision_topic": "可执行审批任务清单",
+    "rules": [
+      "执行前必须验证授权、审批完成度和职责分离要求",
+      "不可逆或高影响操作必须设置人工确认门禁"
+    ],
+    "seed": 20261020050,
+    "category": "subagent-workflow",
+    "difficulty": "A2",
+    "task_complexity": "C5",
+    "weakness_tags": [],
+    "domain": "GO",
+    "domain_l2": "T8-系统执行与流程流转",
+    "domain_l3": "采购申请、订单与收货｜校验请求完整性和发起人权限｜可执行审批任务清单｜流程001",
+    "domain_l4": "基于业务申请表或电子表单、审批记录与授权矩阵、合同、发票或收货凭证，按执行前必须验证授权、审批完成度和职责分离要求完成可执行审批任务清单并留存证据",
+    "capabilities": [
+      "校验请求完整性和发起人权限",
+      "子代理协作",
+      "结果汇总验收"
+    ],
+    "taxonomy_status": "specified",
+    "legacy_recipe_id": "GO-FULL-0008",
+    "validation_profile": "legacy-reproduction",
+    "onet_mapping": {
+      "database": "O*NET",
+      "version": "31.0",
+      "occupation_code": "43-1011.00",
+      "occupation": {
+        "O*NET-SOC Code": "43-1011.00",
+        "Title": "First-Line Supervisors of Office and Administrative Support Workers",
+        "Description": "Directly supervise and coordinate the activities of clerical and administrative support workers."
+      },
+      "mapping_level": "authored_L2_correspondence",
+      "is_official_domain_mapping": false,
+      "task_id": null,
+      "scope": "occupation_background_not_equivalent_professional_workflow",
+      "occupation_url": "https://www.onetonline.org/link/summary/43-1011.00"
+    }
+  },
+  "sources": [
+    {
+      "path": "/inspire/hdd2/project/special-project-1/public/yelv/research/合成工作类数据和移动coding数据/工作类任务/构题管线_v0.1/full_batch/plan.json",
+      "sha256": "1c338186602d9bda7bf749aaffcacb932e331a9c44fbd7dae2f656ca2a1847c1",
+      "pool_size": 2000
+    },
+    {
+      "path": "/inspire/hdd2/project/special-project-1/public/yelv/research/合成工作类数据和移动coding数据/工作类任务/onet_base_v0_1/builds/onet-legacy-2000-v2/plan.json",
+      "sha256": "80e2946e0c94bbea4d8956f234a471f9969c42d8d31eccbb851619c96264560d",
+      "pool_size": 2000
+    }
+  ],
+  "adaptation": "保留采购资料完整性核对与可执行交接目标；不假称公开付款表能证明发起人权限或真实审批结论。",
+  "inherit_difficulty": false,
+  "official_onet_workflow_equivalence": false
+}

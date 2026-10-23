@@ -1,0 +1,258 @@
+[
+  {
+    "id": "FIN01",
+    "weight": 3,
+    "dimension": "指令遵循",
+    "description": "交付可打开且名称正确的一份xlsx与两份docx。",
+    "verification_anchor": "按题面文件清单逐个打开验证真实格式；不能只检查扩展名。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "regional_bank_risk_model.xlsx",
+      "operating_performance_diagnosis.docx",
+      "priority_follow_up_brief.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "FIN02",
+    "weight": 7,
+    "dimension": "内容质量-事实忠实性",
+    "description": "银行季度身份和样本覆盖能从真实原件核对，不以当前ACTIVE或当前名称回填历史样本。",
+    "verification_anchor": "原财务快照746条、54家、14季度；机构表较晚，按CERT及季度核对。固定全期49家。计数不是对全部覆盖审查的替代。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "regional_bank_risk_model.xlsx",
+      "operating_performance_diagnosis.docx",
+      "priority_follow_up_brief.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "FIN03",
+    "weight": 10,
+    "dimension": "内容质量-专业规范",
+    "description": "正确区分非应计贷款率NCLNLSR与净核销率NTLNLSR，不把前者改名为后者。",
+    "verification_anchor": "financial_definitions.yaml的NCLNLSR=NCLNLS/LNLSGRJ；NTLNLSR=NTLNLSA/LNLSGR5。检查报告正文、图表及模型命名。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Implicit",
+    "type": "Binary",
+    "target_files": [
+      "regional_bank_risk_model.xlsx",
+      "operating_performance_diagnosis.docx",
+      "priority_follow_up_brief.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "FIN04",
+    "weight": 10,
+    "dimension": "内容质量-专业规范",
+    "description": "对0/0或不可用分母不填成真实0%风险指标，并披露相应组合覆盖范围。",
+    "verification_anchor": "补充快照227个季度RWAJT=0、13个季度LNLSGR5=0。不能将这些记录作为最差资本或零核销的证据；原因未获材料支持时保留未知。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Implicit",
+    "type": "Binary",
+    "target_files": [
+      "regional_bank_risk_model.xlsx",
+      "operating_performance_diagnosis.docx",
+      "priority_follow_up_brief.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "FIN05",
+    "weight": 7,
+    "dimension": "内容质量-数值与计算准确性",
+    "description": "样本ROA使用正确平均资产口径，汇总结果可独立复核。",
+    "verification_anchor": "ΣNETINCA/ΣASSET5×100；全动态首期0.8071653986%、末期0.7581298534%。允许有说明的其他样本，但须核对其实际分子分母与覆盖，不把期末资产加权当同一精确指标。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "regional_bank_risk_model.xlsx",
+      "operating_performance_diagnosis.docx",
+      "priority_follow_up_brief.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "FIN06",
+    "weight": 7,
+    "dimension": "内容质量-数值与计算准确性",
+    "description": "样本非应计资产率的数值和名称一致。",
+    "verification_anchor": "ΣNAASSET/ΣASSET×100，全动态首期0.2197937549%、末期0.3529700951%；若同时给P9+NA代理，应另命名，不用其顶替非应计资产率。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "regional_bank_risk_model.xlsx",
+      "operating_performance_diagnosis.docx",
+      "priority_follow_up_brief.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "FIN07",
+    "weight": 7,
+    "dimension": "内容质量-数值与计算准确性",
+    "description": "净核销率以年化净核销和平均贷款口径计算，处理YTD、负值与官方近似因子。",
+    "verification_anchor": "可计算子样本ΣNTLNLSA/ΣLNLSGR5×100；末期0.0267332928%。NTLNLS不能跨季度相加，负值可为净收回；官方Q3年化与精确4/3可有近似因子差异，接受明确且可核算的近似。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "regional_bank_risk_model.xlsx",
+      "operating_performance_diagnosis.docx",
+      "priority_follow_up_brief.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "FIN08",
+    "weight": 7,
+    "dimension": "内容质量-数值与计算准确性",
+    "description": "总风险资本组合率使用风险加权资产分母且标明可计算子样本。",
+    "verification_anchor": "ΣRBC/ΣRWAJT×100；末期14.2145168140%。权益/资产、总资产加权资本比率不等同。若采用其他有说明口径需正确命名并报告精确指标不能计算的限制。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "regional_bank_risk_model.xlsx",
+      "operating_performance_diagnosis.docx",
+      "priority_follow_up_brief.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "FIN09",
+    "weight": 10,
+    "dimension": "内容质量-分析与论证质量",
+    "description": "量化区分持续机构表现、规模权重及样本变化，给出能够复核的变化归因。",
+    "verification_anchor": "可用固定样本、对称分解或其他合理桥接；实际归因和应回到总变动，需解释残差。各指标因分母适用性可有不同固定样本；不能预设所有变化都是并购。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "regional_bank_risk_model.xlsx",
+      "operating_performance_diagnosis.docx",
+      "priority_follow_up_brief.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "FIN10",
+    "weight": 7,
+    "dimension": "内容质量-分析与论证质量",
+    "description": "经营诊断结合盈利、资本、信用、资金和结构形成具体判断及合理竞争解释。",
+    "verification_anchor": "至少一个重要判断同时比较分子与分母变化并说明待证的业务原因；LNRE广义房地产不当作商业地产细分，贷款/存款不冒称法定流动性比率。",
+    "criterion_type": "Subjective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "regional_bank_risk_model.xlsx",
+      "operating_performance_diagnosis.docx",
+      "priority_follow_up_brief.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "FIN11",
+    "weight": 7,
+    "dimension": "内容质量-分析与论证质量",
+    "description": "优先跟进范围由实际模型信号支持，逐家理由可回查，不要求与参考主观名单一致。",
+    "verification_anchor": "逐家核验真实CERT、季度及指标；接受不同数量与组合，但不能把样本相对排名当监管风险评级。",
+    "criterion_type": "Subjective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "regional_bank_risk_model.xlsx",
+      "operating_performance_diagnosis.docx",
+      "priority_follow_up_brief.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "FIN12",
+    "weight": 7,
+    "dimension": "结构与组织",
+    "description": "逐家资料请求和下一步行动对应具体未解决原因，能支持未来90天安排。",
+    "verification_anchor": "每家至少有针对性的待答问题、所需资料及监测条件，不以同一泛泛段落替代全部对象；接受按问题分组并清楚对应银行。",
+    "criterion_type": "Subjective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "regional_bank_risk_model.xlsx",
+      "operating_performance_diagnosis.docx",
+      "priority_follow_up_brief.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "FIN13",
+    "weight": 7,
+    "dimension": "内容质量-专业规范",
+    "description": "推荐行动方案有比较理由，并区分手册指导、分析判断与监管结论。",
+    "verification_anchor": "FDIC Loans PDF3–4页不规定通用贷款比率界限；OCC PDF3页强调系统须适配复杂度。不能把自设阈值冒充法定要求。",
+    "criterion_type": "Subjective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "regional_bank_risk_model.xlsx",
+      "operating_performance_diagnosis.docx",
+      "priority_follow_up_brief.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "FIN14",
+    "weight": 7,
+    "dimension": "内容质量-分析与论证质量",
+    "description": "持续落后机构由跨期证据支持，不把单一末期排名直接称作持续落后。",
+    "verification_anchor": "明确观测期间及持续性定义，列实际机构和逐期指标；如采用完整四个6月ROA均低于当期样本中位数的定义，本样本识别10家。接受其他有依据的同季、同口径持续性定义，不强制此名单或阈值。",
+    "criterion_type": "Subjective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "regional_bank_risk_model.xlsx",
+      "operating_performance_diagnosis.docx",
+      "priority_follow_up_brief.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "FIN15",
+    "weight": 7,
+    "dimension": "内容质量-分析与论证质量",
+    "description": "同类比较以明确、可复核的同业范围为基准，解释机构相对位置及可比性限制。",
+    "verification_anchor": "至少一种有业务依据的州别、规模或业务结构同业分组；标明期间、样本及可计算范围，给出实际基准值与机构差异。仅列全样本排序或声称以后会做同业比较不满足；不强制参考的两类分组。",
+    "criterion_type": "Subjective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "regional_bank_risk_model.xlsx",
+      "operating_performance_diagnosis.docx",
+      "priority_follow_up_brief.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "FIN16",
+    "weight": -10,
+    "dimension": "安全合规",
+    "description": "伪造银行管理层答复、未提供的贷款档案或实际90天执行结果时扣分。",
+    "verification_anchor": "必须定位具体伪造事实；清楚标为拟议、待核验或假设不触发。与普通计算错误分开，禁止重复扣同一缺陷。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Implicit",
+    "type": "Binary",
+    "target_files": [
+      "regional_bank_risk_model.xlsx",
+      "operating_performance_diagnosis.docx",
+      "priority_follow_up_brief.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  }
+]

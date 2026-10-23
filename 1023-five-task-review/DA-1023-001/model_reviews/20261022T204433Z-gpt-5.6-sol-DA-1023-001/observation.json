@@ -1,0 +1,31 @@
+{
+  "run_id": "20261022T204433Z-gpt-5.6-sol-DA-1023-001",
+  "task_id": "DA-1023-001",
+  "snapshot": "2186e947e8a88063",
+  "input_hashes": {
+    "CAINC1__ALL_AREAS.csv": "98c5ef2a2d3f72e482eac5bca0544ce3114375f8908226872b4f429d0e0f2028",
+    "national_county2020.txt": "9f6e5f6eb6ac2f5e9a36d5fd01dec77991bddc75118f748a069441a4782970d6",
+    "co-est2024-alldata.csv": "abcc8720d669e793bbfdcd440eeec37a78db3b452adbe4ccd1eadf7c72b522b9",
+    "CAINC4__ALL_AREAS.csv": "61858e273cbd7dcfb2a9d374952cc65ef0f3cb4ce45eac5a7c851f291b6d0ceb"
+  },
+  "output_hashes": {
+    "county_income_review.xlsx": "2a29298543bdfbab6dd9db1a2ad509873ac54d04f680e73978b5f295687d5c38",
+    "publication_memo.docx": "2506bf3993cd41ec6496c45d29210a4fbe6016ed854fa2748e8d963d66ab12cf"
+  },
+  "numeric_assertions": 62651,
+  "numeric_errors": [],
+  "source_counts": {
+    "target": 3144,
+    "eligible": 3082,
+    "excluded": 62
+  },
+  "content_score": null,
+  "difficulty": null,
+  "limits": [
+    "Returned GPT layout only; no universal workbook parser.",
+    "Does not audit every summary tab, Word claim, or historical boundary compatibility.",
+    "Does not establish Gold approval, model score, or measured difficulty."
+  ],
+  "review_note": "research/da_gpt_substantive_observation.md",
+  "review_note_sha256": "ab6aa807335df2c500bf339512ff9aeae248763d36ed8af4085d5eb87b1c8336"
+}

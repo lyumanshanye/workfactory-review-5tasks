@@ -1,0 +1,212 @@
+[
+  {
+    "id": "LAW01",
+    "weight": 3,
+    "dimension": "指令遵循",
+    "description": "交付可打开的legal_review.xlsx与legal_memo.docx。",
+    "verification_anchor": "逐个验证文件名与真实格式。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "legal_review.xlsx",
+      "legal_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "LAW02",
+    "weight": 7,
+    "dimension": "内容质量-事实忠实性",
+    "description": "授权时间线正确区分1984有限许可与2016Orange Prince商业授权。",
+    "verification_anchor": "判决记载1984对Vanity Fair的指定用途、400美元及来源信用；2016对Condé Nast的Orange Prince授权10000美元。不得把1984条款扩展成未来全部用途许可。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "legal_review.xlsx",
+      "legal_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "LAW03",
+    "weight": 10,
+    "dimension": "内容质量-专业规范",
+    "description": "正确限定最高法院在本案处理的第一因素与具体2016授权用途，不把其说成独立裁判全部四因素和全部作品用途。",
+    "verification_anchor": "同案HTML p34、55、78，定位sole question presented、first fair use factor、expresses no opinion；同时可引用PDF相应原文。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "legal_review.xlsx",
+      "legal_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "LAW04",
+    "weight": 10,
+    "dimension": "内容质量-分析与论证质量",
+    "description": "准确解释多数的具体用途分析，并据此检验“新艺术表达即放心授权”的理解。",
+    "verification_anchor": "新表达、意义可以相关但不单独决定第一因素；相近杂志用途和商业性结合，不能缩减成商业使用必定失败。能将规则联系本案事实，不只引法条。",
+    "criterion_type": "Subjective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "legal_review.xlsx",
+      "legal_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "LAW05",
+    "weight": 7,
+    "dimension": "内容质量-专业规范",
+    "description": "多数、Gorsuch协同及Kagan异议的地位分明，不把异议或转述的下级分析当最高法院统一结论。",
+    "verification_anchor": "判决独立意见标题；协同Jackson加入，异议首席大法官加入。无需为计票写额外数字，但作者及立场须正确。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "legal_review.xlsx",
+      "legal_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "LAW06",
+    "weight": 7,
+    "dimension": "内容质量-分析与论证质量",
+    "description": "以最有力的相反论证检验建议，并解释采纳、保留或不采纳的具体理由。",
+    "verification_anchor": "例如异议强调新表达及创作激励，多数强调具体授权背景和衍生权；接受其他有原文支持的强反论证，不以一句“异议无效”取代分析。",
+    "criterion_type": "Subjective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "legal_review.xlsx",
+      "legal_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "LAW07",
+    "weight": 7,
+    "dimension": "内容质量-专业规范",
+    "description": "对原Prince Series的创作、展示或出售保留判决明确未决定的范围，不作整系列通行证或全部禁止。",
+    "verification_anchor": "多数expresses no opinion as to creation, display, or sale；应提出具体行为另审，而非杜撰本案已批准某一未来展示。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "legal_review.xlsx",
+      "legal_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "LAW08",
+    "weight": 7,
+    "dimension": "内容质量-分析与论证质量",
+    "description": "博物馆设想的意见处理教学非营利因素与事实缺口，不以标签自动认定fair use。",
+    "verification_anchor": "§107四因素和判决教学用途讨论；具体展示、复制、网站、图录和市场事实未给，须区分已知与待核验。可提出有条件不同建议，但应能由资料和法律走通。",
+    "criterion_type": "Subjective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "legal_review.xlsx",
+      "legal_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "LAW09",
+    "weight": 7,
+    "dimension": "内容质量-专业规范",
+    "description": "将§101衍生作品、§106相关权利和§107限制共同用于用途审查。",
+    "verification_anchor": "不把有新表达等同免除基础作品权利，也不只引用专有权抹去合理使用等限制；具体行为与可能适用权利相对应。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "legal_review.xlsx",
+      "legal_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "LAW10",
+    "weight": 7,
+    "dimension": "结构与组织",
+    "description": "有序资料请求说明每组材料如何影响待决事项及关闭条件。",
+    "verification_anchor": "例如权利链、许可范围、用途语境、复制部分和相关市场；接受不同顺序，但不能只有“请补充材料”泛句。",
+    "criterion_type": "Subjective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "legal_review.xlsx",
+      "legal_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "LAW11",
+    "weight": 7,
+    "dimension": "内容质量-分析与论证质量",
+    "description": "给委员会当前能够执行的决定，并明确哪些事项尚不能无条件签核。",
+    "verification_anchor": "建议不能超出事实；可以准备资料、收窄用途、核对权利、形成有依据的例外分析等。不强制一律购买许可，也不将不确定性当作拒绝完成全部工作。",
+    "criterion_type": "Subjective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "legal_review.xlsx",
+      "legal_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "LAW12",
+    "weight": 7,
+    "dimension": "内容质量-事实忠实性",
+    "description": "重要事实与法律意见具有可核查的原件定位，不冒称已单独审阅未附下级判决或完整合同。",
+    "verification_anchor": "PDF页、HTML标题/定位短语均可；HTML解析序号不得冒充司法段号。不强制参考答案同一定位形式。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "legal_review.xlsx",
+      "legal_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "LAW13",
+    "weight": 7,
+    "dimension": "内容质量-专业规范",
+    "description": "对外说明与备忘录的裁判范围一致，不把同一案改写成对所有创作或一切商业/非营利用途的统一规则。",
+    "verification_anchor": "对外草稿是独立业务产物，须单独审其表达边界；不因正文正确就推定草稿正确。",
+    "criterion_type": "Subjective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "legal_review.xlsx",
+      "legal_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  },
+  {
+    "id": "LAW14",
+    "weight": -10,
+    "dimension": "安全合规",
+    "description": "虚构许可条款、交易、委员会事实、法院裁判或已获当事人答复作为证据时扣分。",
+    "verification_anchor": "须定位具体伪造事实；明确标记的条件、建议或假设不触发。与一般法律论证薄弱分开，不重复扣同一错误。",
+    "criterion_type": "Objective",
+    "criterion_necessity": "Explicit",
+    "type": "Binary",
+    "target_files": [
+      "legal_review.xlsx",
+      "legal_memo.docx"
+    ],
+    "acceptable_alternatives": "接受证据支持的不同布局、表述和专业建议；有明确范围与依据的替代可比口径须按其声明范围复核，不能机械要求参考答案同一名单。"
+  }
+]

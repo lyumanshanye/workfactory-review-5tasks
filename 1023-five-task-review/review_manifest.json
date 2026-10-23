@@ -1,0 +1,242 @@
+{
+  "snapshot": "2186e947e8a88063",
+  "status": "human_review_not_formal_acceptance",
+  "source_manifest_verified": true,
+  "tasks": {
+    "GO-1023-001": {
+      "domain": "GO",
+      "input_files": 2,
+      "reference_files": 2,
+      "criteria": 16
+    },
+    "FIN-1023-001": {
+      "domain": "FIN",
+      "input_files": 8,
+      "reference_files": 3,
+      "criteria": 16
+    },
+    "LAW-1023-002": {
+      "domain": "LAW",
+      "input_files": 5,
+      "reference_files": 2,
+      "criteria": 14
+    },
+    "DA-1023-001": {
+      "domain": "DA",
+      "input_files": 4,
+      "reference_files": 2,
+      "criteria": 14
+    },
+    "GA-1023-001": {
+      "domain": "GA",
+      "input_files": 414,
+      "reference_files": 2,
+      "criteria": 14
+    }
+  },
+  "pdf_render_checks": [
+    {
+      "task_id": "GO-1023-001",
+      "file": "review_handover.pdf",
+      "pages": 2,
+      "text_characters": 1661,
+      "cjk_characters": 1172,
+      "page_images": 2,
+      "sha256": "3ed2d5bff0ebcd2d302ef76857cf698dd19690fb3544733f8eae4a5d94efbdba",
+      "visual_review": "pending"
+    },
+    {
+      "task_id": "FIN-1023-001",
+      "file": "operating_performance_diagnosis.pdf",
+      "pages": 3,
+      "text_characters": 2395,
+      "cjk_characters": 1263,
+      "page_images": 3,
+      "sha256": "b3fb01df957eaacb203789e5282edbdc344670e81bd5f838b94a5e309b9386f0",
+      "visual_review": "pending"
+    },
+    {
+      "task_id": "FIN-1023-001",
+      "file": "priority_follow_up_brief.pdf",
+      "pages": 6,
+      "text_characters": 7088,
+      "cjk_characters": 3756,
+      "page_images": 6,
+      "sha256": "532dcc11aed9c49be6b694d3e37357ba4002bddc75aeadc16c1bef0def517abb",
+      "visual_review": "pending"
+    },
+    {
+      "task_id": "LAW-1023-002",
+      "file": "legal_memo.pdf",
+      "pages": 3,
+      "text_characters": 3286,
+      "cjk_characters": 2318,
+      "page_images": 3,
+      "sha256": "505d80c0bc7163c3336bfd9a640834ea0a93b5af41c2bc717f9507be5f923a71",
+      "visual_review": "pending"
+    },
+    {
+      "task_id": "DA-1023-001",
+      "file": "publication_memo.pdf",
+      "pages": 2,
+      "text_characters": 1330,
+      "cjk_characters": 803,
+      "page_images": 2,
+      "sha256": "6fe52d330f1cfb56994daa18631b3e20a7d8f7014709c346a3f2db4e2de65e82",
+      "visual_review": "pending"
+    },
+    {
+      "task_id": "GA-1023-001",
+      "file": "balance_test_plan.pdf",
+      "pages": 3,
+      "text_characters": 2314,
+      "cjk_characters": 1451,
+      "page_images": 3,
+      "sha256": "06590963d668099d52c46b26809b78d850b8f839d809e89f55a5382a725a9e5b",
+      "visual_review": "pending"
+    }
+  ],
+  "model_pdf_render_checks": [
+    {
+      "run_id": "20261022T203209Z-gpt-5.6-sol-GO-1023-001",
+      "task_id": "GO-1023-001",
+      "file": "review_handover.pdf",
+      "pages": 2,
+      "text_characters": 3126,
+      "cjk_characters": 1778,
+      "page_images": 2,
+      "sha256": "d51266f8c8641cf880e284c6e468072e410785f9032075463183cd9bb931299a",
+      "visual_review": "pending"
+    },
+    {
+      "run_id": "20261022T203209Z-qwen3.8-max-GO-1023-001",
+      "task_id": "GO-1023-001",
+      "file": "review_handover.pdf",
+      "pages": 10,
+      "text_characters": 13091,
+      "cjk_characters": 7193,
+      "page_images": 10,
+      "sha256": "0d766a2b29f1b54f3fa43e155c064dbb504d48fbb9836264e5cc4fd9e7803d89",
+      "visual_review": "pending"
+    },
+    {
+      "run_id": "20261022T203104Z-gpt-5.6-sol-FIN-1023-001",
+      "task_id": "FIN-1023-001",
+      "file": "operating_performance_diagnosis.pdf",
+      "pages": 3,
+      "text_characters": 5141,
+      "cjk_characters": 2456,
+      "page_images": 3,
+      "sha256": "966e9e66f03499bc963322c90e1c19c50bd5cdc647e607af26536a07bcd30623",
+      "visual_review": "pending"
+    },
+    {
+      "run_id": "20261022T203104Z-gpt-5.6-sol-FIN-1023-001",
+      "task_id": "FIN-1023-001",
+      "file": "priority_follow_up_brief.pdf",
+      "pages": 3,
+      "text_characters": 3725,
+      "cjk_characters": 2062,
+      "page_images": 3,
+      "sha256": "3c6160be5397bbd95b8b735bd3182985e016421388781a8f693e938f2c6e18dc",
+      "visual_review": "pending"
+    },
+    {
+      "run_id": "20261022T220259Z-qwen3.8-max-FIN-1023-001",
+      "task_id": "FIN-1023-001",
+      "file": "operating_performance_diagnosis.pdf",
+      "pages": 8,
+      "text_characters": 11481,
+      "cjk_characters": 5370,
+      "page_images": 8,
+      "sha256": "390e50a0ba25252335fe9c6d53b1f92d82d80d9b0b4eded1a167af922f6d13eb",
+      "visual_review": "pending"
+    },
+    {
+      "run_id": "20261022T220259Z-qwen3.8-max-FIN-1023-001",
+      "task_id": "FIN-1023-001",
+      "file": "priority_follow_up_brief.pdf",
+      "pages": 9,
+      "text_characters": 11282,
+      "cjk_characters": 5338,
+      "page_images": 9,
+      "sha256": "8e5ae8036eba7a7d5d08ab092c904f9f1318a9d5c6bfd743c9bb7bfa2ce97e0f",
+      "visual_review": "pending"
+    },
+    {
+      "run_id": "20261022T212311Z-gpt-5.6-sol-LAW-1023-002",
+      "task_id": "LAW-1023-002",
+      "file": "legal_memo.pdf",
+      "pages": 5,
+      "text_characters": 5086,
+      "cjk_characters": 2842,
+      "page_images": 5,
+      "sha256": "4ce4aea5b5c0683342aa0c9e115881eeff163a00587d76455b775baf016a885f",
+      "visual_review": "pending"
+    },
+    {
+      "run_id": "20261022T213906Z-qwen3.8-max-LAW-1023-002",
+      "task_id": "LAW-1023-002",
+      "file": "legal_memo.pdf",
+      "pages": 10,
+      "text_characters": 15806,
+      "cjk_characters": 8490,
+      "page_images": 10,
+      "sha256": "5176ee35de311252890df80b108b34273ccdb44c92b51307ec0c3fb1e7477ff8",
+      "visual_review": "pending"
+    },
+    {
+      "run_id": "20261022T204433Z-gpt-5.6-sol-DA-1023-001",
+      "task_id": "DA-1023-001",
+      "file": "publication_memo.pdf",
+      "pages": 2,
+      "text_characters": 2158,
+      "cjk_characters": 1279,
+      "page_images": 2,
+      "sha256": "d3600015fc58bf52434b4e56bee22a6944efa4ad0cccdee60e4e05bee19b9e29",
+      "visual_review": "pending"
+    },
+    {
+      "run_id": "20261022T212326Z-qwen3.8-max-DA-1023-001",
+      "task_id": "DA-1023-001",
+      "file": "publication_memo.pdf",
+      "pages": 2,
+      "text_characters": 2569,
+      "cjk_characters": 1543,
+      "page_images": 2,
+      "sha256": "2d445e4229a044f7f8a4e2aeb85b92e40cbeb5cdb24b42c0ed7a80406f0c397a",
+      "visual_review": "pending"
+    },
+    {
+      "run_id": "20261022T211008Z-gpt-5.6-sol-GA-1023-001",
+      "task_id": "GA-1023-001",
+      "file": "balance_test_plan.pdf",
+      "pages": 4,
+      "text_characters": 4858,
+      "cjk_characters": 2123,
+      "page_images": 4,
+      "sha256": "a95cf8037177865e73926f2e497585ef901f50ec84170788704230016a950bbc",
+      "visual_review": "pending"
+    },
+    {
+      "run_id": "20261022T214552Z-qwen3.8-max-GA-1023-001",
+      "task_id": "GA-1023-001",
+      "file": "balance_test_plan.pdf",
+      "pages": 10,
+      "text_characters": 13301,
+      "cjk_characters": 5141,
+      "page_images": 10,
+      "sha256": "8a7b876d4e6336328026e0b1228eaad006264cbff8344ff6d5a8febb40332c56",
+      "visual_review": "pending"
+    }
+  ],
+  "model_runs": 12,
+  "reference_revisions": [
+    {
+      "task_id": "GA-1023-001",
+      "revision": "919024a99b360dfd",
+      "path": "/inspire/hdd2/project/special-project-1/public/yelv/research/合成工作类数据和移动coding数据/工作类任务/1023forginit/research/reference_revisions/GA-1023-001/919024a99b360dfd"
+    }
+  ],
+  "accepted": 0
+}

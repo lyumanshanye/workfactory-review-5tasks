@@ -1,0 +1,104 @@
+{
+  "domain": "LAW",
+  "task": "LAW-1023-002",
+  "legacy_blueprint": {
+    "task_id": "LAW-FULL-0067",
+    "name": "work/law-full-0067",
+    "title": "法律：知识产权纠纷检索并整理类案材料与应优先补充哪些材料（0465）",
+    "blueprint": "full-taxonomy-workflow",
+    "role": "客户联络律师",
+    "scenario": "你作为客户联络律师，需在法律场景中对知识产权纠纷执行检索并整理类案材料，最终支持应优先补充哪些材料的可追溯决策。",
+    "operation": "检索并整理类案材料",
+    "inputs": [
+      "时限表、送达记录与项目日历",
+      "题包提供的法规、案例与内部检索摘要",
+      "起诉状、答辩状与代理词草稿"
+    ],
+    "decision_topic": "应优先补充哪些材料",
+    "rules": [
+      "对同一事项的冲突记录必须并列展示，不得在无授权依据时擅自选边。",
+      "证据状态仅使用题包定义的枚举值，无法确定时记为待核验。"
+    ],
+    "seed": 20261017465,
+    "category": "subagent-workflow",
+    "difficulty": "A2",
+    "task_complexity": "C5",
+    "weakness_tags": [],
+    "domain": "LAW",
+    "domain_l2": "Law1-诉讼律师",
+    "domain_l3": "知识产权纠纷｜检索并整理类案材料｜应优先补充哪些材料｜流程012",
+    "domain_l4": "基于时限表、送达记录与项目日历、题包提供的法规、案例与内部检索摘要、起诉状、答辩状与代理词草稿，按对同一事项的冲突记录必须并列展示，不得在无授权依据时擅自选边。完成应优先补充哪些材料并留存证据",
+    "capabilities": [
+      "检索并整理类案材料",
+      "子代理协作",
+      "结果汇总验收"
+    ],
+    "taxonomy_status": "specified"
+  },
+  "onet_enhanced_blueprint": {
+    "task_id": "ONET-LEGACY-0465",
+    "name": "work/onet-legacy-0465",
+    "title": "法律：知识产权纠纷检索并整理类案材料与应优先补充哪些材料（0465）",
+    "blueprint": "full-taxonomy-workflow",
+    "role": "客户联络律师",
+    "scenario": "你作为客户联络律师，需在法律场景中对知识产权纠纷执行检索并整理类案材料，最终支持应优先补充哪些材料的可追溯决策。\n\n职业分类参考：O*NET 31.0 23-1011.00 Lawyers。职业定义：Represent clients in criminal and civil litigation and other legal proceedings, draw up legal documents, or manage or advise clients on legal transactions. May specialize in a single area or may practice broadly in many areas of law.",
+    "operation": "检索并整理类案材料",
+    "inputs": [
+      "时限表、送达记录与项目日历",
+      "题包提供的法规、案例与内部检索摘要",
+      "起诉状、答辩状与代理词草稿"
+    ],
+    "decision_topic": "应优先补充哪些材料",
+    "rules": [
+      "对同一事项的冲突记录必须并列展示，不得在无授权依据时擅自选边。",
+      "证据状态仅使用题包定义的枚举值，无法确定时记为待核验。"
+    ],
+    "seed": 20261020465,
+    "category": "subagent-workflow",
+    "difficulty": "A2",
+    "task_complexity": "C5",
+    "weakness_tags": [],
+    "domain": "LAW",
+    "domain_l2": "Law1-诉讼律师",
+    "domain_l3": "知识产权纠纷｜检索并整理类案材料｜应优先补充哪些材料｜流程012",
+    "domain_l4": "基于时限表、送达记录与项目日历、题包提供的法规、案例与内部检索摘要、起诉状、答辩状与代理词草稿，按对同一事项的冲突记录必须并列展示，不得在无授权依据时擅自选边。完成应优先补充哪些材料并留存证据",
+    "capabilities": [
+      "检索并整理类案材料",
+      "子代理协作",
+      "结果汇总验收"
+    ],
+    "taxonomy_status": "specified",
+    "legacy_recipe_id": "LAW-FULL-0067",
+    "validation_profile": "legacy-reproduction",
+    "onet_mapping": {
+      "database": "O*NET",
+      "version": "31.0",
+      "occupation_code": "23-1011.00",
+      "occupation": {
+        "O*NET-SOC Code": "23-1011.00",
+        "Title": "Lawyers",
+        "Description": "Represent clients in criminal and civil litigation and other legal proceedings, draw up legal documents, or manage or advise clients on legal transactions. May specialize in a single area or may practice broadly in many areas of law."
+      },
+      "mapping_level": "authored_L2_correspondence",
+      "is_official_domain_mapping": false,
+      "task_id": null,
+      "scope": "occupation_background_not_equivalent_professional_workflow",
+      "occupation_url": "https://www.onetonline.org/link/summary/23-1011.00"
+    }
+  },
+  "sources": [
+    {
+      "path": "/inspire/hdd2/project/special-project-1/public/yelv/research/合成工作类数据和移动coding数据/工作类任务/构题管线_v0.1/full_batch/plan.json",
+      "sha256": "1c338186602d9bda7bf749aaffcacb932e331a9c44fbd7dae2f656ca2a1847c1",
+      "pool_size": 2000
+    },
+    {
+      "path": "/inspire/hdd2/project/special-project-1/public/yelv/research/合成工作类数据和移动coding数据/工作类任务/onet_base_v0_1/builds/onet-legacy-2000-v2/plan.json",
+      "sha256": "80e2946e0c94bbea4d8956f234a471f9969c42d8d31eccbb851619c96264560d",
+      "pool_size": 2000
+    }
+  ],
+  "adaptation": "保留知识产权争议中的证据补充决策；改为真实Warhol判决边界及逐用途授权审核，不虚构多个案件或交易。",
+  "inherit_difficulty": false,
+  "official_onet_workflow_equivalence": false
+}

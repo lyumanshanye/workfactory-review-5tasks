@@ -1,0 +1,104 @@
+{
+  "domain": "DA",
+  "task": "DA-1023-001",
+  "legacy_blueprint": {
+    "task_id": "DA-FULL-0026",
+    "name": "work/da-full-0026",
+    "title": "数据分析：跨源冲突换算币种与度量单位与关联失败记录是否进入主数据集（0180）",
+    "blueprint": "full-taxonomy-workflow",
+    "role": "业务数据分析师",
+    "scenario": "你作为业务数据分析师，需在数据分析场景中对跨源冲突执行换算币种与度量单位，最终支持关联失败记录是否进入主数据集的可追溯决策。",
+    "operation": "换算币种与度量单位",
+    "inputs": [
+      "更正与撤回记录",
+      "历史数据快照",
+      "原始事务明细表"
+    ],
+    "decision_topic": "关联失败记录是否进入主数据集",
+    "rules": [
+      "关联不得无声产生多对多行数膨胀",
+      "金额换算必须明确汇率日期和舍入层级"
+    ],
+    "seed": 20261017180,
+    "category": "subagent-workflow",
+    "difficulty": "A2",
+    "task_complexity": "C5",
+    "weakness_tags": [],
+    "domain": "DA",
+    "domain_l2": "DA2-数据清洗与集成",
+    "domain_l3": "跨源冲突｜换算币种与度量单位｜关联失败记录是否进入主数据集｜流程004",
+    "domain_l4": "基于更正与撤回记录、历史数据快照、原始事务明细表，按关联不得无声产生多对多行数膨胀完成关联失败记录是否进入主数据集并留存证据",
+    "capabilities": [
+      "换算币种与度量单位",
+      "子代理协作",
+      "结果汇总验收"
+    ],
+    "taxonomy_status": "proposed-gap-fill"
+  },
+  "onet_enhanced_blueprint": {
+    "task_id": "ONET-LEGACY-0180",
+    "name": "work/onet-legacy-0180",
+    "title": "数据分析：跨源冲突换算币种与度量单位与关联失败记录是否进入主数据集（0180）",
+    "blueprint": "full-taxonomy-workflow",
+    "role": "业务数据分析师",
+    "scenario": "你作为业务数据分析师，需在数据分析场景中对跨源冲突执行换算币种与度量单位，最终支持关联失败记录是否进入主数据集的可追溯决策。\n\n职业分类参考：O*NET 31.0 15-2051.00 Data Scientists。职业定义：Develop and implement a set of techniques or analytics applications to transform raw data into meaningful information using data-oriented programming languages and visualization software. Apply data mining, data modeling, natural language processing, and machine learning to extract and analyze information from large structured and unstructured datasets. Visualize, interpret, and report data findings. May create dynamic data reports.",
+    "operation": "换算币种与度量单位",
+    "inputs": [
+      "更正与撤回记录",
+      "历史数据快照",
+      "原始事务明细表"
+    ],
+    "decision_topic": "关联失败记录是否进入主数据集",
+    "rules": [
+      "关联不得无声产生多对多行数膨胀",
+      "金额换算必须明确汇率日期和舍入层级"
+    ],
+    "seed": 20261020180,
+    "category": "subagent-workflow",
+    "difficulty": "A2",
+    "task_complexity": "C5",
+    "weakness_tags": [],
+    "domain": "DA",
+    "domain_l2": "DA2-数据清洗与集成",
+    "domain_l3": "跨源冲突｜换算币种与度量单位｜关联失败记录是否进入主数据集｜流程004",
+    "domain_l4": "基于更正与撤回记录、历史数据快照、原始事务明细表，按关联不得无声产生多对多行数膨胀完成关联失败记录是否进入主数据集并留存证据",
+    "capabilities": [
+      "换算币种与度量单位",
+      "子代理协作",
+      "结果汇总验收"
+    ],
+    "taxonomy_status": "proposed-gap-fill",
+    "legacy_recipe_id": "DA-FULL-0026",
+    "validation_profile": "legacy-reproduction",
+    "onet_mapping": {
+      "database": "O*NET",
+      "version": "31.0",
+      "occupation_code": "15-2051.00",
+      "occupation": {
+        "O*NET-SOC Code": "15-2051.00",
+        "Title": "Data Scientists",
+        "Description": "Develop and implement a set of techniques or analytics applications to transform raw data into meaningful information using data-oriented programming languages and visualization software. Apply data mining, data modeling, natural language processing, and machine learning to extract and analyze information from large structured and unstructured datasets. Visualize, interpret, and report data findings. May create dynamic data reports."
+      },
+      "mapping_level": "authored_L2_correspondence",
+      "is_official_domain_mapping": false,
+      "task_id": null,
+      "scope": "occupation_background_not_equivalent_professional_workflow",
+      "occupation_url": "https://www.onetonline.org/link/summary/15-2051.00"
+    }
+  },
+  "sources": [
+    {
+      "path": "/inspire/hdd2/project/special-project-1/public/yelv/research/合成工作类数据和移动coding数据/工作类任务/构题管线_v0.1/full_batch/plan.json",
+      "sha256": "1c338186602d9bda7bf749aaffcacb932e331a9c44fbd7dae2f656ca2a1847c1",
+      "pool_size": 2000
+    },
+    {
+      "path": "/inspire/hdd2/project/special-project-1/public/yelv/research/合成工作类数据和移动coding数据/工作类任务/onet_base_v0_1/builds/onet-legacy-2000-v2/plan.json",
+      "sha256": "80e2946e0c94bbea4d8956f234a471f9969c42d8d31eccbb851619c96264560d",
+      "pool_size": 2000
+    }
+  ],
+  "adaptation": "保留跨源度量口径与关联失败是否纳入研究的决策；不要求币种换算或原模板不适用的业务规则。",
+  "inherit_difficulty": false,
+  "official_onet_workflow_equivalence": false
+}
