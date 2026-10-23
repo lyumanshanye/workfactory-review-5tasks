@@ -16,13 +16,13 @@
 
 | 题目 | GPT | Qwen |
 |---|---:|---:|
-| GO | running | running |
+| GO | 100.0 | running |
 | FIN | running | running |
 | LAW | running | running |
 | DA | running | running |
 | GA | running | running |
 
-实分覆盖：GPT 0/5，Qwen 0/5。当前完成部分均分：{"gpt": null, "qwen": null}；只有各自五题全出分后才作本版目标判定。状态见 [CALIBRATION_STATUS.json](CALIBRATION_STATUS.json)。
+实分覆盖：GPT 1/5，Qwen 0/5。当前完成部分均分：{"gpt": 100.0, "qwen": null}；只有各自五题全出分后才作本版目标判定。状态见 [CALIBRATION_STATUS.json](CALIBRATION_STATUS.json)。
 
 ## 验证与版本
 
