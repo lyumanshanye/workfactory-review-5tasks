@@ -1,13 +1,12 @@
 {
   "status": "pending",
-  "checks": 20,
-  "passed": 20,
+  "checks": 30,
+  "passed": 30,
   "pending": [
     "qwen/GO",
     "gpt/FIN",
     "qwen/FIN",
     "gpt/LAW",
-    "gpt/DA",
     "qwen/DA",
     "gpt/GA",
     "qwen/GA"
@@ -91,6 +90,46 @@
     },
     {
       "check": "qwen/LAW/independent_score",
+      "passed": true
+    },
+    {
+      "check": "gpt/DA/fresh_capture",
+      "passed": true
+    },
+    {
+      "check": "gpt/DA/source_instruction_unchanged",
+      "passed": true
+    },
+    {
+      "check": "gpt/DA/only_declared_input_files",
+      "passed": true
+    },
+    {
+      "check": "gpt/DA/output_chain_unchanged",
+      "passed": true
+    },
+    {
+      "check": "gpt/DA/no_grading_material_given_to_solver",
+      "passed": true
+    },
+    {
+      "check": "gpt/DA/native_judge_succeeded",
+      "passed": true
+    },
+    {
+      "check": "gpt/DA/whole_judge_snapshot_unchanged",
+      "passed": true
+    },
+    {
+      "check": "gpt/DA/grading_problem_matches_capture",
+      "passed": true
+    },
+    {
+      "check": "gpt/DA/exact_criteria_and_weights",
+      "passed": true
+    },
+    {
+      "check": "gpt/DA/independent_score",
       "passed": true
     }
   ]
