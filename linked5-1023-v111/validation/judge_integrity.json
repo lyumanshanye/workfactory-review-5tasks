@@ -1,10 +1,9 @@
 {
   "status": "pending",
   "passed": false,
-  "checks": 20,
+  "checks": 30,
   "pending": [
     "FIN",
-    "DA",
     "GA"
   ],
   "details": [
@@ -86,6 +85,46 @@
     },
     {
       "check": "LAW/details_copies_match",
+      "passed": true
+    },
+    {
+      "check": "DA/native_exit",
+      "passed": true
+    },
+    {
+      "check": "DA/verifier_available",
+      "passed": true
+    },
+    {
+      "check": "DA/frozen_unchanged",
+      "passed": true
+    },
+    {
+      "check": "DA/originals_still_match",
+      "passed": true
+    },
+    {
+      "check": "DA/complete_criteria",
+      "passed": true
+    },
+    {
+      "check": "DA/no_criterion_errors",
+      "passed": true
+    },
+    {
+      "check": "DA/independent_weighted_score",
+      "passed": true
+    },
+    {
+      "check": "DA/numeric_reward_file",
+      "passed": true
+    },
+    {
+      "check": "DA/no_fail_closed_placeholder",
+      "passed": true
+    },
+    {
+      "check": "DA/details_copies_match",
       "passed": true
     }
   ]

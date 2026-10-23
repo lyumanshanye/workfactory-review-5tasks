@@ -1,6 +1,6 @@
 {
   "version": "1.1.1",
-  "updated_at": "2026-10-23T07:07:05.437603+00:00",
+  "updated_at": "2026-10-23T07:13:31.968078+00:00",
   "target_percent": {
     "gpt": 85,
     "qwen": 70
@@ -15,9 +15,9 @@
       75
     ]
   },
-  "scored": 5,
+  "scored": 6,
   "scored_by_model": {
-    "gpt": 3,
+    "gpt": 4,
     "qwen": 2
   },
   "observed_mean_percent": {

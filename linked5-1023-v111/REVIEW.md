@@ -20,9 +20,9 @@
 | FIN | 100.0 | running |
 | LAW | running | 100.0 |
 | DA | 100.0 | running |
-| GA | running | running |
+| GA | 100.0 | running |
 
-实分覆盖：GPT 3/5，Qwen 2/5。当前完成部分均分：{"gpt": 100.0, "qwen": 95.93025}；只有各自五题全出分后才作本版目标判定。状态见 [CALIBRATION_STATUS.json](CALIBRATION_STATUS.json)。
+实分覆盖：GPT 4/5，Qwen 2/5。当前完成部分均分：{"gpt": 100.0, "qwen": 95.93025}；只有各自五题全出分后才作本版目标判定。状态见 [CALIBRATION_STATUS.json](CALIBRATION_STATUS.json)。
 
 ## 验证与版本
 
