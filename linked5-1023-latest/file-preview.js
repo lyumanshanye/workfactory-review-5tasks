@@ -86,7 +86,7 @@
       }
       status.textContent='文档内容预览 · 原文件可下载';ready();
     }else if(ext==='pdf'){
-      const response=await fetch(new URL('pdf-preview-index.json?v=colleague-20261022',base));
+      const response=await fetch(new URL('pdf-preview-index.json?v=usda-20261023',base));
       const index=response.ok?await response.json():{};
       const document=index[path];
       if(document?.pages?.length){
