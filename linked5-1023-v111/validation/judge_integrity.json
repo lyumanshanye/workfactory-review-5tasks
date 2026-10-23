@@ -1,9 +1,8 @@
 {
   "status": "pending",
   "passed": false,
-  "checks": 30,
+  "checks": 40,
   "pending": [
-    "FIN",
     "GA"
   ],
   "details": [
@@ -45,6 +44,46 @@
     },
     {
       "check": "GO/details_copies_match",
+      "passed": true
+    },
+    {
+      "check": "FIN/native_exit",
+      "passed": true
+    },
+    {
+      "check": "FIN/verifier_available",
+      "passed": true
+    },
+    {
+      "check": "FIN/frozen_unchanged",
+      "passed": true
+    },
+    {
+      "check": "FIN/originals_still_match",
+      "passed": true
+    },
+    {
+      "check": "FIN/complete_criteria",
+      "passed": true
+    },
+    {
+      "check": "FIN/no_criterion_errors",
+      "passed": true
+    },
+    {
+      "check": "FIN/independent_weighted_score",
+      "passed": true
+    },
+    {
+      "check": "FIN/numeric_reward_file",
+      "passed": true
+    },
+    {
+      "check": "FIN/no_fail_closed_placeholder",
+      "passed": true
+    },
+    {
+      "check": "FIN/details_copies_match",
       "passed": true
     },
     {

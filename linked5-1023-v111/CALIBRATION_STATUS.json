@@ -1,6 +1,6 @@
 {
   "version": "1.1.1",
-  "updated_at": "2026-10-23T07:16:27.481882+00:00",
+  "updated_at": "2026-10-23T07:23:41.426755+00:00",
   "target_percent": {
     "gpt": 85,
     "qwen": 70
@@ -15,14 +15,14 @@
       75
     ]
   },
-  "scored": 7,
+  "scored": 8,
   "scored_by_model": {
     "gpt": 4,
-    "qwen": 3
+    "qwen": 4
   },
   "observed_mean_percent": {
     "gpt": 100.0,
-    "qwen": 89.62400000000001
+    "qwen": 81.1965
   },
   "all_ten_scored": false,
   "within_pilot_target_bands": false,
