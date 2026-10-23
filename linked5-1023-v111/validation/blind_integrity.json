@@ -1,9 +1,8 @@
 {
   "status": "pending",
-  "checks": 30,
-  "passed": 30,
+  "checks": 40,
+  "passed": 40,
   "pending": [
-    "qwen/GO",
     "gpt/FIN",
     "qwen/FIN",
     "gpt/LAW",
@@ -50,6 +49,46 @@
     },
     {
       "check": "gpt/GO/independent_score",
+      "passed": true
+    },
+    {
+      "check": "qwen/GO/fresh_capture",
+      "passed": true
+    },
+    {
+      "check": "qwen/GO/source_instruction_unchanged",
+      "passed": true
+    },
+    {
+      "check": "qwen/GO/only_declared_input_files",
+      "passed": true
+    },
+    {
+      "check": "qwen/GO/output_chain_unchanged",
+      "passed": true
+    },
+    {
+      "check": "qwen/GO/no_grading_material_given_to_solver",
+      "passed": true
+    },
+    {
+      "check": "qwen/GO/native_judge_succeeded",
+      "passed": true
+    },
+    {
+      "check": "qwen/GO/whole_judge_snapshot_unchanged",
+      "passed": true
+    },
+    {
+      "check": "qwen/GO/grading_problem_matches_capture",
+      "passed": true
+    },
+    {
+      "check": "qwen/GO/exact_criteria_and_weights",
+      "passed": true
+    },
+    {
+      "check": "qwen/GO/independent_score",
       "passed": true
     },
     {
