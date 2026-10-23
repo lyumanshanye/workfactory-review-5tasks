@@ -1,0 +1,14 @@
+{
+  "domain": "GO",
+  "source_file": "gsa_per_diem_files.html",
+  "source_url": "https://www.gsa.gov/travel/plan-a-trip/per-diem-rates/per-diem-files",
+  "source_sha256": "3c09580ee0d43ef4651a486a78b3e5f85cf57e85e91977c3ff02afce1a145151",
+  "raw_href": "https://www.gsa.gov/system/files/FY2026_PerDiemMasterRatesFile.xlsx",
+  "resolved_target_url": "https://www.gsa.gov/system/files/FY2026_PerDiemMasterRatesFile.xlsx",
+  "target_file": "FY2026_PerDiemMasterRatesFile.xlsx",
+  "target_sha256": "5a3214fdafa1034799e2ff61d8997cface1a1ff0322be3efad78595b12b4e244",
+  "evidence_kind": "html_anchor",
+  "xpath": "/html/body/div[2]/main/div/div/div/div/div/div/div[1]/div/div/div/div/div[1]/ul[2]/li[2]/a",
+  "anchor_or_context": "FY 26 Per Diem Rates [XLSX - 41 KB]",
+  "business_dependency": "GSA下载网页引用两年费率表和餐费拆分表 → 按逐日行程适用FTR → 比较人数/城市预算 → 形成有条件批准与补证清单"
+}

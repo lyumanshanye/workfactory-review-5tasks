@@ -1,0 +1,71 @@
+[
+  {
+    "domain": "GA",
+    "file": "dota2Train.csv",
+    "origin": "supplied_fedcache_zip_member",
+    "original_archive": "/inspire/hdd2/project/special-project-1/public/dyfu/jbsynth_seed/fedcache_lt20m.tar.gz",
+    "cache_file": "/inspire/hdd2/project/special-project-1/public/yelv/research/合成工作类数据和移动coding数据/工作类任务/1023forcodex/research/cache_selected/archive.ics.uci.edu/archive_ics_uci_edu_static_public_367_dota2_games_results_zip_b44d514a.zip",
+    "zip_member": "dota2Train.csv",
+    "url": "https://archive.ics.uci.edu/static/public/367/dota2+games+results.zip",
+    "sha256": "16823bf0ad99b4931e94809268807ef398edb7b1288b12b384aeddbee3d9ebda",
+    "bytes": 22372518,
+    "license": "CC BY 4.0; Stephen Tridgell (2016), DOI 10.24432/C5W593",
+    "unchanged": true,
+    "original_archive_member": "fedcache_lt20m/archive.ics.uci.edu/archive_ics_uci_edu_static_public_367_dota2_games_results_zip_b44d514a.zip",
+    "cache_zip_sha256": "5bf3d2fe75c55ffba506f4aaee0d88684aa8e651f622ff32a0ec7928ae476717"
+  },
+  {
+    "domain": "GA",
+    "file": "dota2Test.csv",
+    "origin": "supplied_fedcache_zip_member",
+    "original_archive": "/inspire/hdd2/project/special-project-1/public/dyfu/jbsynth_seed/fedcache_lt20m.tar.gz",
+    "cache_file": "/inspire/hdd2/project/special-project-1/public/yelv/research/合成工作类数据和移动coding数据/工作类任务/1023forcodex/research/cache_selected/archive.ics.uci.edu/archive_ics_uci_edu_static_public_367_dota2_games_results_zip_b44d514a.zip",
+    "zip_member": "dota2Test.csv",
+    "url": "https://archive.ics.uci.edu/static/public/367/dota2+games+results.zip",
+    "sha256": "bcc9ce564421db7340b1464dedd2691bb18af06613726ff72d142ffc2ee2aff9",
+    "bytes": 2485646,
+    "license": "CC BY 4.0; Stephen Tridgell (2016), DOI 10.24432/C5W593",
+    "unchanged": true,
+    "original_archive_member": "fedcache_lt20m/archive.ics.uci.edu/archive_ics_uci_edu_static_public_367_dota2_games_results_zip_b44d514a.zip",
+    "cache_zip_sha256": "5bf3d2fe75c55ffba506f4aaee0d88684aa8e651f622ff32a0ec7928ae476717"
+  },
+  {
+    "domain": "GA",
+    "file": "uci_dota2_dataset.html",
+    "origin": "primary_source_download",
+    "url": "https://archive.ics.uci.edu/dataset/367/dota2+games+results",
+    "final_url": "https://archive.ics.uci.edu/dataset/367/dota2+games+results",
+    "status": "downloaded",
+    "content_type": "text/html",
+    "sha256": "09ffd39176491450f9e60514813ac54a34102f4703eaee4c48e00a7576703b9b",
+    "bytes": 286559,
+    "retrieved_at": "2026-10-22T18:40:16.593756+00:00",
+    "unchanged": true
+  },
+  {
+    "domain": "GA",
+    "file": "dota2_collector_page.html",
+    "origin": "primary_source_download",
+    "url": "https://gist.github.com/da-steve101/1a7ae319448db431715bd75391a66e1b",
+    "final_url": "https://gist.github.com/da-steve101/1a7ae319448db431715bd75391a66e1b",
+    "status": "downloaded",
+    "content_type": "text/html; charset=utf-8",
+    "sha256": "32906cee2772a041df2c93a70423a917bb5d125b9430e10ef084f9dbb16474c7",
+    "bytes": 178154,
+    "retrieved_at": "2026-10-22T18:40:06.714971+00:00",
+    "unchanged": true
+  },
+  {
+    "domain": "GA",
+    "file": "heroes_mapping.json",
+    "origin": "primary_source_download",
+    "url": "https://raw.githubusercontent.com/kronusme/dota2-api/master/data/heroes.json",
+    "final_url": "https://raw.githubusercontent.com/kronusme/dota2-api/master/data/heroes.json",
+    "status": "downloaded",
+    "content_type": "text/plain; charset=utf-8",
+    "sha256": "fcb68f00c52f71ccbf311af6b6ceb1b44a26836476c3f8c47547dae0332bf3ec",
+    "bytes": 13274,
+    "retrieved_at": "2026-10-22T18:40:07.354257+00:00",
+    "unchanged": true
+  }
+]

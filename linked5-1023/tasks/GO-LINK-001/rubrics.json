@@ -1,0 +1,89 @@
+{
+  "task_id": "GO-LINK-001",
+  "criteria": [
+    {
+      "id": "GO001",
+      "name": "GO001",
+      "weight": 7,
+      "type": "binary",
+      "description": "从GSA原始网页定位真实费率或M&IE文件引用，且说明其在预算中的用途。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+    },
+    {
+      "id": "GO002",
+      "name": "GO002",
+      "weight": 10,
+      "type": "binary",
+      "description": "三城市逐日按县、季节、FY2025/FY2026正确匹配费率，提供两年原表行号。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+    },
+    {
+      "id": "GO003",
+      "name": "GO003",
+      "weight": 10,
+      "type": "binary",
+      "description": "住宿按实际报价而非上限计费，四晚正确，12%税另计且不突破可报销基础。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+    },
+    {
+      "id": "GO004",
+      "name": "GO004",
+      "weight": 10,
+      "type": "binary",
+      "description": "首末日M&IE先按75%计算再扣整份政府供餐金额，保留杂费下限；其他日供餐扣减正确。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+    },
+    {
+      "id": "GO005",
+      "name": "GO005",
+      "weight": 7,
+      "type": "binary",
+      "description": "酒店免费早餐及茶歇不误扣；政府供餐日期和餐别全部使用。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+    },
+    {
+      "id": "GO006",
+      "name": "GO006",
+      "weight": 10,
+      "type": "binary",
+      "description": "六方案人数、机票、当地交通、注册和固定场地费不重复/遗漏，基础总额准确到分。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+    },
+    {
+      "id": "GO007",
+      "name": "GO007",
+      "weight": 10,
+      "type": "binary",
+      "description": "5%储备与53000预算正确比较，先人数后成本的选址/人数决定正确。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+    },
+    {
+      "id": "GO008",
+      "name": "GO008",
+      "weight": 7,
+      "type": "binary",
+      "description": "机票加20%的六方案压力预算和可执行超限措施正确。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+    },
+    {
+      "id": "GO009",
+      "name": "GO009",
+      "weight": 7,
+      "type": "binary",
+      "description": "解释跨财政年度版本选择及本次实际费率是否变化，不凭版本变化推定涨价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+    },
+    {
+      "id": "GO010",
+      "name": "GO010",
+      "weight": 7,
+      "type": "binary",
+      "description": "审批登记覆盖授权、住宿安全、采购和资金确认，含角色、证据、期限和阻断状态，不假称已审批。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+    },
+    {
+      "id": "GO011",
+      "name": "GO011",
+      "weight": 3,
+      "type": "binary",
+      "description": "三份精确命名交付均可读，工作簿含Daily/Options/Sources，金额单位、来源和假设清楚。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+    },
+    {
+      "id": "GO012",
+      "name": "GO012",
+      "weight": 7,
+      "type": "binary",
+      "description": "批准简报与工作簿/CSV的推荐、关键金额和条件一致，内部建议与FTR义务明确区分。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+    }
+  ]
+}

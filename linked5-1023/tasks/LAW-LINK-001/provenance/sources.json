@@ -1,0 +1,89 @@
+[
+  {
+    "domain": "LAW",
+    "file": "eCFR_16_CFR_314_2025-01-01.xml",
+    "origin": "supplied_public_lib",
+    "seed_id": "ftc_safeguards_rule_amendments",
+    "original_path": "/inspire/hdd2/project/special-project-1/public/dyfu/jbsynth_v3_assets/public_lib/seeds/ftc_safeguards_rule_amendments/files/eCFR_16_CFR_314_2025-01-01.xml",
+    "url": "https://www.ecfr.gov/api/versioner/v1/full/2025-01-01/title-16.xml?part=314",
+    "landing_url": "https://www.ecfr.gov/current/title-16/part-314",
+    "sha256": "3ba7ecc3463953a1db1ccf38f4b0ade4182e36c7e24e111eb8869910e271d41a",
+    "bytes": 38914,
+    "license": "US federal government work, public domain in the US (17 U.S.C. 105)",
+    "unchanged": true
+  },
+  {
+    "domain": "LAW",
+    "file": "eCFR_16_CFR_314_2021-12-01.xml",
+    "origin": "supplied_public_lib",
+    "seed_id": "ftc_safeguards_rule_amendments",
+    "original_path": "/inspire/hdd2/project/special-project-1/public/dyfu/jbsynth_v3_assets/public_lib/seeds/ftc_safeguards_rule_amendments/files/eCFR_16_CFR_314_2021-12-01.xml",
+    "url": "https://www.ecfr.gov/api/versioner/v1/full/2021-12-01/title-16.xml?part=314",
+    "landing_url": "https://www.ecfr.gov/on/2021-12-01/title-16/part-314",
+    "sha256": "8a6bad94fe3adba35606a032b71d625e406766ddd78376d643970d2a7999d76f",
+    "bytes": 7090,
+    "license": "US federal government work, public domain in the US (17 U.S.C. 105)",
+    "unchanged": true
+  },
+  {
+    "domain": "LAW",
+    "file": "FR_2021-25736_Safeguards_Rule_Final.pdf",
+    "origin": "supplied_public_lib",
+    "seed_id": "ftc_safeguards_rule_amendments",
+    "original_path": "/inspire/hdd2/project/special-project-1/public/dyfu/jbsynth_v3_assets/public_lib/seeds/ftc_safeguards_rule_amendments/files/FR_2021-25736_Safeguards_Rule_Final.pdf",
+    "url": "https://www.govinfo.gov/content/pkg/FR-2021-12-09/pdf/2021-25736.pdf",
+    "landing_url": "https://www.federalregister.gov/documents/2021/12/09/2021-25736/standards-for-safeguarding-customer-information",
+    "sha256": "bfce7badd3f7b1f9380022d6f5a3d30933db33a1722e6372ad43ba4876dea6b0",
+    "bytes": 759532,
+    "license": "US federal government work, public domain in the US (17 U.S.C. 105)",
+    "unchanged": true
+  },
+  {
+    "domain": "LAW",
+    "file": "FR_2023-24412_Safeguards_Breach_Notification.pdf",
+    "origin": "supplied_public_lib",
+    "seed_id": "ftc_safeguards_rule_amendments",
+    "original_path": "/inspire/hdd2/project/special-project-1/public/dyfu/jbsynth_v3_assets/public_lib/seeds/ftc_safeguards_rule_amendments/files/FR_2023-24412_Safeguards_Breach_Notification.pdf",
+    "url": "https://www.govinfo.gov/content/pkg/FR-2023-11-13/pdf/2023-24412.pdf",
+    "landing_url": "https://www.federalregister.gov/documents/2023/11/13/2023-24412/standards-for-safeguarding-customer-information",
+    "sha256": "4f53b6ac3dc9e9afa150543d1c07ed31612b79838db9de2967569b68283f2235",
+    "bytes": 337390,
+    "license": "US federal government work, public domain in the US (17 U.S.C. 105)",
+    "unchanged": true
+  },
+  {
+    "domain": "LAW",
+    "file": "ecfr_314_reference_page.html",
+    "origin": "primary_source_download",
+    "url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-314",
+    "final_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-314",
+    "status": "downloaded",
+    "content_type": "text/html; charset=utf-8",
+    "sha256": "0ad37be5c8d633d1d26300be1f595ece58c4bb7c7de6f57d762e2da016dc659e",
+    "bytes": 157628,
+    "retrieved_at": "2026-10-22T18:40:04.137159+00:00",
+    "unchanged": true
+  },
+  {
+    "domain": "LAW",
+    "file": "ftc_safeguards_guide.html",
+    "origin": "primary_source_download",
+    "url": "https://search.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know",
+    "final_url": "https://search.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know",
+    "sha256": "2dd6845b64730e27a31af0efdc088eb90ea5ee5d275d8edc0d1af0874d473be3",
+    "bytes": 1011908,
+    "status": "downloaded",
+    "unchanged": true
+  },
+  {
+    "domain": "LAW",
+    "file": "fr_notification_publication.html",
+    "origin": "primary_source_download",
+    "url": "https://www.govinfo.gov/content/pkg/FR-2023-11-13/html/2023-24412.htm",
+    "final_url": "https://www.govinfo.gov/content/pkg/FR-2023-11-13/html/2023-24412.htm",
+    "sha256": "e53e5f6bb17e911ed4e964901fb7095af3ff93aa81e0a50a080799889a7c1814",
+    "bytes": 85968,
+    "status": "downloaded",
+    "unchanged": true
+  }
+]

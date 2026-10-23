@@ -1,0 +1,1084 @@
+{
+  "status": "passed",
+  "checks": 192,
+  "passed": 192,
+  "failed": [],
+  "details": [
+    {
+      "check": "exactly_five_domains",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/deliverable/outdoor_activity_model.xlsx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/deliverable/activity_policy_brief.docx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/deliverable/review_calendar.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/artifact_list",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/rubric_ids",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/rubric_json_toml_match",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/native_judge_settings",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/prompt_template",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/visibility",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/fixed_template/test.sh",
+      "passed": true,
+      "details": "byte-identical to specification code block"
+    },
+    {
+      "check": "DA/fixed_template/finalize.py",
+      "passed": true,
+      "details": "byte-identical to specification code block"
+    },
+    {
+      "check": "DA/input_inventory",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/source_hash/daily_aqi_by_county_2024.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/provided_original/daily_aqi_by_county_2024.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/source_hash/annual_aqi_by_county_2024.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/provided_original/annual_aqi_by_county_2024.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/source_hash/national_county2020.txt",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/provided_original/national_county2020.txt",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/source_hash/AQI_Technical_Assistance_Document.pdf",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/provided_original/AQI_Technical_Assistance_Document.pdf",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/source_hash/epa_download_files.html",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/source_hash/epa_file_formats.html",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/genuine_web_citation",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/binary_formats_open",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/deliverable/credit_review.xlsx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/deliverable/credit_review_memo.docx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/deliverable/follow_up_register.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/artifact_list",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/rubric_ids",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/rubric_json_toml_match",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/native_judge_settings",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/prompt_template",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/visibility",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/fixed_template/test.sh",
+      "passed": true,
+      "details": "byte-identical to specification code block"
+    },
+    {
+      "check": "FIN/fixed_template/finalize.py",
+      "passed": true,
+      "details": "byte-identical to specification code block"
+    },
+    {
+      "check": "FIN/input_inventory",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/source_hash/fdic_financials_VT_NH_ME_2022_2025.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/provided_original/fdic_financials_VT_NH_ME_2022_2025.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/source_hash/fdic_institutions_VT_NH_ME.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/provided_original/fdic_institutions_VT_NH_ME.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/source_hash/FDIC_RMS_Manual_3.2_Loans.pdf",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/provided_original/FDIC_RMS_Manual_3.2_Loans.pdf",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/source_hash/fdic_api_documentation.html",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/source_hash/financial_definitions.yaml",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/source_hash/institution_definitions.yaml",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/genuine_web_citation",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/binary_formats_open",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/deliverable/balance_review.xlsx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/deliverable/balance_review_brief.docx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/deliverable/playtest_queue.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/artifact_list",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/rubric_ids",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/rubric_json_toml_match",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/native_judge_settings",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/prompt_template",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/visibility",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/fixed_template/test.sh",
+      "passed": true,
+      "details": "byte-identical to specification code block"
+    },
+    {
+      "check": "GA/fixed_template/finalize.py",
+      "passed": true,
+      "details": "byte-identical to specification code block"
+    },
+    {
+      "check": "GA/input_inventory",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/source_hash/dota2Train.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/provided_zip_member/dota2Train.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/source_hash/dota2Test.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/provided_zip_member/dota2Test.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/source_hash/uci_dota2_dataset.html",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/source_hash/dota2_collector_page.html",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/source_hash/heroes_mapping.json",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/genuine_web_citation",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/binary_formats_open",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/deliverable/conference_budget.xlsx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/deliverable/approval_brief.docx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/deliverable/approval_register.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/artifact_list",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/rubric_ids",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/rubric_json_toml_match",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/native_judge_settings",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/prompt_template",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/visibility",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/fixed_template/test.sh",
+      "passed": true,
+      "details": "byte-identical to specification code block"
+    },
+    {
+      "check": "GO/fixed_template/finalize.py",
+      "passed": true,
+      "details": "byte-identical to specification code block"
+    },
+    {
+      "check": "GO/input_inventory",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/source_hash/FY2026_PerDiemMasterRatesFile.xlsx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/provided_original/FY2026_PerDiemMasterRatesFile.xlsx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/source_hash/FY2025_PerDiemMasterRatesFile.xlsx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/provided_original/FY2025_PerDiemMasterRatesFile.xlsx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/source_hash/eCFR_41_CFR_301-11.xml",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/provided_original/eCFR_41_CFR_301-11.xml",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/source_hash/eCFR_41_CFR_301-74.xml",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/provided_original/eCFR_41_CFR_301-74.xml",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/source_hash/gsa_per_diem_files.html",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/source_hash/GSA_FY2025_MIE_Breakdown.docx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/genuine_web_citation",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/binary_formats_open",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/deliverable/safeguards_gap_register.xlsx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/deliverable/legal_action_memo.docx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/deliverable/ftc_notice_draft.txt",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/artifact_list",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/rubric_ids",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/rubric_json_toml_match",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/native_judge_settings",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/prompt_template",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/visibility",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/fixed_template/test.sh",
+      "passed": true,
+      "details": "byte-identical to specification code block"
+    },
+    {
+      "check": "LAW/fixed_template/finalize.py",
+      "passed": true,
+      "details": "byte-identical to specification code block"
+    },
+    {
+      "check": "LAW/input_inventory",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/source_hash/eCFR_16_CFR_314_2025-01-01.xml",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/provided_original/eCFR_16_CFR_314_2025-01-01.xml",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/source_hash/eCFR_16_CFR_314_2021-12-01.xml",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/provided_original/eCFR_16_CFR_314_2021-12-01.xml",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/source_hash/FR_2021-25736_Safeguards_Rule_Final.pdf",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/provided_original/FR_2021-25736_Safeguards_Rule_Final.pdf",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/source_hash/FR_2023-24412_Safeguards_Breach_Notification.pdf",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/provided_original/FR_2023-24412_Safeguards_Breach_Notification.pdf",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/source_hash/ecfr_314_reference_page.html",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/source_hash/ftc_safeguards_guide.html",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/source_hash/fr_notification_publication.html",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/genuine_web_citation",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/binary_formats_open",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/independent_total",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/stress_budget",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/independent_priority",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/weighted_quarter/20220331",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/weighted_quarter/20220630",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/weighted_quarter/20220930",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/weighted_quarter/20221231",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/weighted_quarter/20230331",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/weighted_quarter/20230630",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/weighted_quarter/20230930",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/weighted_quarter/20231231",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/weighted_quarter/20240331",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/weighted_quarter/20240630",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/weighted_quarter/20240930",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/weighted_quarter/20241231",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/weighted_quarter/20250331",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/weighted_quarter/20250630",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/fixed_weight_independent",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/independent_A_B_difference",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/missing_day_policy",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/hours",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/annual_reconciliation",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/operative_rules",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/deadline",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/selection",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/independent_holdout/H057",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/wilson/H057",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/independent_holdout/H103",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/wilson/H103",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/independent_holdout/H036",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/wilson/H036",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/independent_holdout/H091",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/wilson/H091",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/independent_holdout/H061",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/wilson/H061",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/independent_holdout/H080",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/wilson/H080",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "fixed_finalizer/valid_pooled_score",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "fixed_finalizer/judge_error_fail_closed",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/docker_runtime",
+      "passed": true,
+      "details": {
+        "domain": "GO",
+        "image": "workfactory/go-link-001:1.0.0",
+        "image_id": "sha256:9af5e4f67da551e58a9e28dd87e3638bcb5c880dc2eae85d6b4ceaea17a5a672",
+        "build_validation": "shared_identical_Dockerfile_and_requirements",
+        "Dockerfile_sha256": "2fa241d2c7bbcb933694006b265661bcb3235653284254262702008a86b2cd48",
+        "requirements_sha256": "78768d86098a0fcd35e6b5e367e40876ba381f57389de6bc69e091bb65b4cd86",
+        "started_epoch": 1792697322.0793495,
+        "runtime_exit_code": 0,
+        "oracle_exit_code": 0,
+        "status": "passed",
+        "finished_epoch": 1792697333.934471
+      }
+    },
+    {
+      "check": "GO/built_Dockerfile_matches",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/docker_runtime",
+      "passed": true,
+      "details": {
+        "domain": "FIN",
+        "image": "workfactory/go-link-001:1.0.0",
+        "image_id": "sha256:9af5e4f67da551e58a9e28dd87e3638bcb5c880dc2eae85d6b4ceaea17a5a672",
+        "build_validation": "shared_identical_Dockerfile_and_requirements",
+        "Dockerfile_sha256": "2fa241d2c7bbcb933694006b265661bcb3235653284254262702008a86b2cd48",
+        "requirements_sha256": "78768d86098a0fcd35e6b5e367e40876ba381f57389de6bc69e091bb65b4cd86",
+        "started_epoch": 1792697479.4168878,
+        "runtime_exit_code": 0,
+        "oracle_exit_code": 0,
+        "status": "passed",
+        "finished_epoch": 1792697493.532766
+      }
+    },
+    {
+      "check": "FIN/built_Dockerfile_matches",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/docker_runtime",
+      "passed": true,
+      "details": {
+        "domain": "LAW",
+        "image": "workfactory/go-link-001:1.0.0",
+        "image_id": "sha256:9af5e4f67da551e58a9e28dd87e3638bcb5c880dc2eae85d6b4ceaea17a5a672",
+        "build_validation": "shared_identical_Dockerfile_and_requirements",
+        "Dockerfile_sha256": "2fa241d2c7bbcb933694006b265661bcb3235653284254262702008a86b2cd48",
+        "requirements_sha256": "78768d86098a0fcd35e6b5e367e40876ba381f57389de6bc69e091bb65b4cd86",
+        "started_epoch": 1792697493.590937,
+        "runtime_exit_code": 0,
+        "oracle_exit_code": 0,
+        "status": "passed",
+        "finished_epoch": 1792697503.1033993
+      }
+    },
+    {
+      "check": "LAW/built_Dockerfile_matches",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/docker_runtime",
+      "passed": true,
+      "details": {
+        "domain": "DA",
+        "image": "workfactory/go-link-001:1.0.0",
+        "image_id": "sha256:9af5e4f67da551e58a9e28dd87e3638bcb5c880dc2eae85d6b4ceaea17a5a672",
+        "build_validation": "shared_identical_Dockerfile_and_requirements",
+        "Dockerfile_sha256": "2fa241d2c7bbcb933694006b265661bcb3235653284254262702008a86b2cd48",
+        "requirements_sha256": "78768d86098a0fcd35e6b5e367e40876ba381f57389de6bc69e091bb65b4cd86",
+        "started_epoch": 1792697503.1694324,
+        "runtime_exit_code": 0,
+        "oracle_exit_code": 0,
+        "status": "passed",
+        "finished_epoch": 1792697512.5122538
+      }
+    },
+    {
+      "check": "DA/built_Dockerfile_matches",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/docker_runtime",
+      "passed": true,
+      "details": {
+        "domain": "GA",
+        "image": "workfactory/go-link-001:1.0.0",
+        "image_id": "sha256:9af5e4f67da551e58a9e28dd87e3638bcb5c880dc2eae85d6b4ceaea17a5a672",
+        "build_validation": "shared_identical_Dockerfile_and_requirements",
+        "Dockerfile_sha256": "2fa241d2c7bbcb933694006b265661bcb3235653284254262702008a86b2cd48",
+        "requirements_sha256": "78768d86098a0fcd35e6b5e367e40876ba381f57389de6bc69e091bb65b4cd86",
+        "started_epoch": 1792697512.5550272,
+        "runtime_exit_code": 0,
+        "oracle_exit_code": 0,
+        "status": "passed",
+        "finished_epoch": 1792697522.922823
+      }
+    },
+    {
+      "check": "GA/built_Dockerfile_matches",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/offline_oracle_equivalence/approval_brief.docx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/offline_oracle_equivalence/approval_register.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GO/offline_oracle_equivalence/conference_budget.xlsx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/offline_oracle_equivalence/credit_review.xlsx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/offline_oracle_equivalence/credit_review_memo.docx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "FIN/offline_oracle_equivalence/follow_up_register.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/offline_oracle_equivalence/ftc_notice_draft.txt",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/offline_oracle_equivalence/legal_action_memo.docx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "LAW/offline_oracle_equivalence/safeguards_gap_register.xlsx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/offline_oracle_equivalence/activity_policy_brief.docx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/offline_oracle_equivalence/outdoor_activity_model.xlsx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA/offline_oracle_equivalence/review_calendar.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/offline_oracle_equivalence/balance_review.xlsx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/offline_oracle_equivalence/balance_review_brief.docx",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "GA/offline_oracle_equivalence/playtest_queue.csv",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "check": "DA-LINK-001/native_preflight",
+      "passed": true,
+      "details": {
+        "task": "DA-LINK-001",
+        "passed": true,
+        "discovered_rewards": 1,
+        "criteria": 11
+      }
+    },
+    {
+      "check": "FIN-LINK-001/native_preflight",
+      "passed": true,
+      "details": {
+        "task": "FIN-LINK-001",
+        "passed": true,
+        "discovered_rewards": 1,
+        "criteria": 13
+      }
+    },
+    {
+      "check": "GA-LINK-001/native_preflight",
+      "passed": true,
+      "details": {
+        "task": "GA-LINK-001",
+        "passed": true,
+        "discovered_rewards": 1,
+        "criteria": 12
+      }
+    },
+    {
+      "check": "GO-LINK-001/native_preflight",
+      "passed": true,
+      "details": {
+        "task": "GO-LINK-001",
+        "passed": true,
+        "discovered_rewards": 1,
+        "criteria": 12
+      }
+    },
+    {
+      "check": "LAW-LINK-001/native_preflight",
+      "passed": true,
+      "details": {
+        "task": "LAW-LINK-001",
+        "passed": true,
+        "discovered_rewards": 1,
+        "criteria": 12
+      }
+    },
+    {
+      "check": "DA-LINK-001/document_render",
+      "passed": true,
+      "details": {
+        "task": "DA-LINK-001",
+        "file": "activity_policy_brief.docx",
+        "passed": true,
+        "stdout": "convert /batch/tasks/DA-LINK-001/solution/golden_output/activity_policy_brief.docx as a Writer document -> /logs/previews/activity_policy_brief.pdf using filter : writer_pdf_Export\nOverwriting: /logs/previews/activity_policy_brief.pdf\n",
+        "stderr": "Warning: failed to launch javaldx - java may not function correctly\n"
+      }
+    },
+    {
+      "check": "FIN-LINK-001/document_render",
+      "passed": true,
+      "details": {
+        "task": "FIN-LINK-001",
+        "file": "credit_review_memo.docx",
+        "passed": true,
+        "stdout": "convert /batch/tasks/FIN-LINK-001/solution/golden_output/credit_review_memo.docx as a Writer document -> /logs/previews/credit_review_memo.pdf using filter : writer_pdf_Export\nOverwriting: /logs/previews/credit_review_memo.pdf\n",
+        "stderr": "Warning: failed to launch javaldx - java may not function correctly\n"
+      }
+    },
+    {
+      "check": "GA-LINK-001/document_render",
+      "passed": true,
+      "details": {
+        "task": "GA-LINK-001",
+        "file": "balance_review_brief.docx",
+        "passed": true,
+        "stdout": "convert /batch/tasks/GA-LINK-001/solution/golden_output/balance_review_brief.docx as a Writer document -> /logs/previews/balance_review_brief.pdf using filter : writer_pdf_Export\nOverwriting: /logs/previews/balance_review_brief.pdf\n",
+        "stderr": "Warning: failed to launch javaldx - java may not function correctly\n"
+      }
+    },
+    {
+      "check": "GO-LINK-001/document_render",
+      "passed": true,
+      "details": {
+        "task": "GO-LINK-001",
+        "file": "approval_brief.docx",
+        "passed": true,
+        "stdout": "convert /batch/tasks/GO-LINK-001/solution/golden_output/approval_brief.docx as a Writer document -> /logs/previews/approval_brief.pdf using filter : writer_pdf_Export\nOverwriting: /logs/previews/approval_brief.pdf\n",
+        "stderr": "Warning: failed to launch javaldx - java may not function correctly\n"
+      }
+    },
+    {
+      "check": "LAW-LINK-001/document_render",
+      "passed": true,
+      "details": {
+        "task": "LAW-LINK-001",
+        "file": "legal_action_memo.docx",
+        "passed": true,
+        "stdout": "convert /batch/tasks/LAW-LINK-001/solution/golden_output/legal_action_memo.docx as a Writer document -> /logs/previews/legal_action_memo.pdf using filter : writer_pdf_Export\nOverwriting: /logs/previews/legal_action_memo.pdf\n",
+        "stderr": "Warning: failed to launch javaldx - java may not function correctly\n"
+      }
+    }
+  ],
+  "scope": "Static source/format/schema checks and independent business recomputation. Not LLM judge or difficulty calibration."
+}

@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "details": [
+    {
+      "task": "DA-LINK-001",
+      "file": "activity_policy_brief.docx",
+      "passed": true,
+      "stdout": "convert /batch/tasks/DA-LINK-001/solution/golden_output/activity_policy_brief.docx as a Writer document -> /logs/previews/activity_policy_brief.pdf using filter : writer_pdf_Export\nOverwriting: /logs/previews/activity_policy_brief.pdf\n",
+      "stderr": "Warning: failed to launch javaldx - java may not function correctly\n"
+    },
+    {
+      "task": "FIN-LINK-001",
+      "file": "credit_review_memo.docx",
+      "passed": true,
+      "stdout": "convert /batch/tasks/FIN-LINK-001/solution/golden_output/credit_review_memo.docx as a Writer document -> /logs/previews/credit_review_memo.pdf using filter : writer_pdf_Export\nOverwriting: /logs/previews/credit_review_memo.pdf\n",
+      "stderr": "Warning: failed to launch javaldx - java may not function correctly\n"
+    },
+    {
+      "task": "GA-LINK-001",
+      "file": "balance_review_brief.docx",
+      "passed": true,
+      "stdout": "convert /batch/tasks/GA-LINK-001/solution/golden_output/balance_review_brief.docx as a Writer document -> /logs/previews/balance_review_brief.pdf using filter : writer_pdf_Export\nOverwriting: /logs/previews/balance_review_brief.pdf\n",
+      "stderr": "Warning: failed to launch javaldx - java may not function correctly\n"
+    },
+    {
+      "task": "GO-LINK-001",
+      "file": "approval_brief.docx",
+      "passed": true,
+      "stdout": "convert /batch/tasks/GO-LINK-001/solution/golden_output/approval_brief.docx as a Writer document -> /logs/previews/approval_brief.pdf using filter : writer_pdf_Export\nOverwriting: /logs/previews/approval_brief.pdf\n",
+      "stderr": "Warning: failed to launch javaldx - java may not function correctly\n"
+    },
+    {
+      "task": "LAW-LINK-001",
+      "file": "legal_action_memo.docx",
+      "passed": true,
+      "stdout": "convert /batch/tasks/LAW-LINK-001/solution/golden_output/legal_action_memo.docx as a Writer document -> /logs/previews/legal_action_memo.pdf using filter : writer_pdf_Export\nOverwriting: /logs/previews/legal_action_memo.pdf\n",
+      "stderr": "Warning: failed to launch javaldx - java may not function correctly\n"
+    }
+  ]
+}

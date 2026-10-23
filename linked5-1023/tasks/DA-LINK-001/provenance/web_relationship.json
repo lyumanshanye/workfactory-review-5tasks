@@ -1,0 +1,14 @@
+{
+  "domain": "DA",
+  "source_file": "epa_download_files.html",
+  "source_url": "https://aqs.epa.gov/aqsweb/airdata/download_files.html",
+  "source_sha256": "815afb5445d66d1762caecfc5a5c4072640d7d2548638bb3c90c0ad43bdb814b",
+  "raw_href": "FileFormats.html",
+  "resolved_target_url": "https://aqs.epa.gov/aqsweb/airdata/FileFormats.html",
+  "target_file": "epa_file_formats.html",
+  "target_sha256": "a3e79ac6d940b73a3c29e5a389b59e708f7c16f126d7c929342abfa91aa629b4",
+  "evidence_kind": "html_anchor",
+  "xpath": "/html/body/section/div[2]/div/div/div/p[3]/a",
+  "anchor_or_context": "Description of data and formats",
+  "business_dependency": "EPA下载网页引用格式说明 → 日AQI按FIPS对齐年度汇总和县表 → 比较两种室内切换政策 → 交付日期级决策日历"
+}

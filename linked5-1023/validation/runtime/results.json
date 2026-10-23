@@ -1,0 +1,67 @@
+[
+  {
+    "domain": "GO",
+    "image": "workfactory/go-link-001:1.0.0",
+    "image_id": "sha256:9af5e4f67da551e58a9e28dd87e3638bcb5c880dc2eae85d6b4ceaea17a5a672",
+    "build_validation": "shared_identical_Dockerfile_and_requirements",
+    "Dockerfile_sha256": "2fa241d2c7bbcb933694006b265661bcb3235653284254262702008a86b2cd48",
+    "requirements_sha256": "78768d86098a0fcd35e6b5e367e40876ba381f57389de6bc69e091bb65b4cd86",
+    "started_epoch": 1792697322.0793495,
+    "runtime_exit_code": 0,
+    "oracle_exit_code": 0,
+    "status": "passed",
+    "finished_epoch": 1792697333.934471
+  },
+  {
+    "domain": "FIN",
+    "image": "workfactory/go-link-001:1.0.0",
+    "image_id": "sha256:9af5e4f67da551e58a9e28dd87e3638bcb5c880dc2eae85d6b4ceaea17a5a672",
+    "build_validation": "shared_identical_Dockerfile_and_requirements",
+    "Dockerfile_sha256": "2fa241d2c7bbcb933694006b265661bcb3235653284254262702008a86b2cd48",
+    "requirements_sha256": "78768d86098a0fcd35e6b5e367e40876ba381f57389de6bc69e091bb65b4cd86",
+    "started_epoch": 1792697479.4168878,
+    "runtime_exit_code": 0,
+    "oracle_exit_code": 0,
+    "status": "passed",
+    "finished_epoch": 1792697493.532766
+  },
+  {
+    "domain": "LAW",
+    "image": "workfactory/go-link-001:1.0.0",
+    "image_id": "sha256:9af5e4f67da551e58a9e28dd87e3638bcb5c880dc2eae85d6b4ceaea17a5a672",
+    "build_validation": "shared_identical_Dockerfile_and_requirements",
+    "Dockerfile_sha256": "2fa241d2c7bbcb933694006b265661bcb3235653284254262702008a86b2cd48",
+    "requirements_sha256": "78768d86098a0fcd35e6b5e367e40876ba381f57389de6bc69e091bb65b4cd86",
+    "started_epoch": 1792697493.590937,
+    "runtime_exit_code": 0,
+    "oracle_exit_code": 0,
+    "status": "passed",
+    "finished_epoch": 1792697503.1033993
+  },
+  {
+    "domain": "DA",
+    "image": "workfactory/go-link-001:1.0.0",
+    "image_id": "sha256:9af5e4f67da551e58a9e28dd87e3638bcb5c880dc2eae85d6b4ceaea17a5a672",
+    "build_validation": "shared_identical_Dockerfile_and_requirements",
+    "Dockerfile_sha256": "2fa241d2c7bbcb933694006b265661bcb3235653284254262702008a86b2cd48",
+    "requirements_sha256": "78768d86098a0fcd35e6b5e367e40876ba381f57389de6bc69e091bb65b4cd86",
+    "started_epoch": 1792697503.1694324,
+    "runtime_exit_code": 0,
+    "oracle_exit_code": 0,
+    "status": "passed",
+    "finished_epoch": 1792697512.5122538
+  },
+  {
+    "domain": "GA",
+    "image": "workfactory/go-link-001:1.0.0",
+    "image_id": "sha256:9af5e4f67da551e58a9e28dd87e3638bcb5c880dc2eae85d6b4ceaea17a5a672",
+    "build_validation": "shared_identical_Dockerfile_and_requirements",
+    "Dockerfile_sha256": "2fa241d2c7bbcb933694006b265661bcb3235653284254262702008a86b2cd48",
+    "requirements_sha256": "78768d86098a0fcd35e6b5e367e40876ba381f57389de6bc69e091bb65b4cd86",
+    "started_epoch": 1792697512.5550272,
+    "runtime_exit_code": 0,
+    "oracle_exit_code": 0,
+    "status": "passed",
+    "finished_epoch": 1792697522.922823
+  }
+]

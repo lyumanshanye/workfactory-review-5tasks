@@ -1,0 +1,1 @@
+{"task":"LAW-LINK-001","domain":"LAW","status":"running","subject":"author_reference_candidate","blind_solver_run":false,"started_epoch":1792723061.238542,"criteria":12,"judge":"qwen3.7-plus","engine":"harbor-rewardkit 0.1.7 / Claude Code 2.1.114","mode":"individual","criterion_timeout_sec":7200,"verifier_timeout_sec":18000,"formal_acceptance":false}

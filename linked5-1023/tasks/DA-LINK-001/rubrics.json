@@ -1,0 +1,82 @@
+{
+  "task_id": "DA-LINK-001",
+  "criteria": [
+    {
+      "id": "DA001",
+      "name": "DA001",
+      "weight": 7,
+      "type": "binary",
+      "description": "核实EPA下载与格式页实际引用，准确说明日表/年表/技术说明的业务衔接。\nInspect output/outdoor_activity_model.xlsx, output/activity_policy_brief.docx, output/review_calendar.csv."
+    },
+    {
+      "id": "DA002",
+      "name": "DA002",
+      "weight": 7,
+      "type": "binary",
+      "description": "三县FIPS与县原表身份校验正确，原始行号、日期键/重复/缺失/站点质量检查明确。\nInspect output/outdoor_activity_model.xlsx, output/activity_policy_brief.docx, output/review_calendar.csv."
+    },
+    {
+      "id": "DA003",
+      "name": "DA003",
+      "weight": 10,
+      "type": "binary",
+      "description": "三县366日索引与缺测准确，不用0或年度数字补造逐日观测。\nInspect output/outdoor_activity_model.xlsx, output/activity_policy_brief.docx, output/review_calendar.csv."
+    },
+    {
+      "id": "DA004",
+      "name": "DA004",
+      "weight": 10,
+      "type": "binary",
+      "description": "六档天数、Days with AQI及Max AQI逐县重算准确，与原始年表逐项对账并如实处理差异。\nInspect output/outdoor_activity_model.xlsx, output/activity_policy_brief.docx, output/review_calendar.csv."
+    },
+    {
+      "id": "DA005",
+      "name": "DA005",
+      "weight": 10,
+      "type": "binary",
+      "description": "日历仅含三县2024周一至周五但含节假日，县日期唯一且无遗漏。\nInspect output/outdoor_activity_model.xlsx, output/activity_policy_brief.docx, output/review_calendar.csv."
+    },
+    {
+      "id": "DA006",
+      "name": "DA006",
+      "weight": 10,
+      "type": "binary",
+      "description": "A>=101、B>=151的超标室内标记与101至150的B动作准确。\nInspect output/outdoor_activity_model.xlsx, output/activity_policy_brief.docx, output/review_calendar.csv."
+    },
+    {
+      "id": "DA007",
+      "name": "DA007",
+      "weight": 10,
+      "type": "binary",
+      "description": "缺测一律待测室内备用，单独标记且不混入观测超标或两政策差异。\nInspect output/outdoor_activity_model.xlsx, output/activity_policy_brief.docx, output/review_calendar.csv."
+    },
+    {
+      "id": "DA008",
+      "name": "DA008",
+      "weight": 10,
+      "type": "binary",
+      "description": "按县/月及总计的场次、差异和40×1.5潜在人时准确，日历可复算。\nInspect output/outdoor_activity_model.xlsx, output/activity_policy_brief.docx, output/review_calendar.csv."
+    },
+    {
+      "id": "DA009",
+      "name": "DA009",
+      "weight": 7,
+      "type": "binary",
+      "description": "重点县月和A/B资源差异建议由真实汇总支持，可落实备用场地和活动方式。\nInspect output/outdoor_activity_model.xlsx, output/activity_policy_brief.docx, output/review_calendar.csv."
+    },
+    {
+      "id": "DA010",
+      "name": "DA010",
+      "weight": 7,
+      "type": "binary",
+      "description": "不把回顾日AQI当实时预测、小时暴露或哮喘因果；明确监测覆盖、敏感人群和潜在非真实人时。\nInspect output/outdoor_activity_model.xlsx, output/activity_policy_brief.docx, output/review_calendar.csv."
+    },
+    {
+      "id": "DA011",
+      "name": "DA011",
+      "weight": 3,
+      "type": "binary",
+      "description": "三份精确命名产物可读，工作簿五表完整，CSV与备忘录/汇总关键数值一致。\nInspect output/outdoor_activity_model.xlsx, output/activity_policy_brief.docx, output/review_calendar.csv."
+    }
+  ]
+}

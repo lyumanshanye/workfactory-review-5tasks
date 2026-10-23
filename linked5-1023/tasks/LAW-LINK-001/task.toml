@@ -1,0 +1,77 @@
+schema_version = "1.4"
+artifacts = ["/app/output/safeguards_gap_register.xlsx", "/app/output/legal_action_memo.docx", "/app/output/ftc_notice_draft.txt"]
+
+[task]
+name = "work/law-link-001"
+version = "1.0.0"
+description = "4800名消费者的小型金融机构：泄露通报与安全整改决策"
+keywords = ["law", "office", "A2"]
+
+[metadata]
+task_id = "LAW-LINK-001"
+author_organization = "yelv"
+category = "weakness"
+domain = "法律"
+domain_code = "LAW"
+domain_l2 = "金融数据保护合规"
+domain_l3 = "证据核对与决策"
+domain_l4 = "4800名消费者的小型金融机构：泄露通报与安全整改决策"
+capabilities = "FTC业务指南网页引用eCFR具体条款 → 冻结规则核对小机构例外和事件门槛 → 确定通报时间与内容 → 关联控制缺口和整改"
+difficulty = "A2"
+difficulty_status = "design_target_not_calibrated"
+vl_dependency = "否"
+source_note = "Supplied original seed bytes and frozen primary-source pages; hypothetical business parameters explicitly stated in instruction."
+source_policy = "original_bytes_no_fabricated_source_records"
+acceptance_status = "candidate_pending_independent_gold_review_and_model_calibration"
+tools = "Python/Excel/Word"
+task_complexity = "C2"
+weakness_tag = ["W11-无据自造数据与口径", "W12-跨源交叉核对缺失"]
+tool_set = ["filesystem", "shell", "python"]
+skill_set = []
+expected_tool_dependencies = ["filesystem", "python"]
+expected_skill_dependencies = []
+business_domain = "法律"
+
+[[metadata.deliverables]]
+path = "safeguards_gap_register.xlsx"
+required = true
+desc = "4800名消费者的小型金融机构：泄露通报与安全整改决策的业务交付"
+
+[[metadata.deliverables]]
+path = "legal_action_memo.docx"
+required = true
+desc = "4800名消费者的小型金融机构：泄露通报与安全整改决策的业务交付"
+
+[[metadata.deliverables]]
+path = "ftc_notice_draft.txt"
+required = true
+desc = "4800名消费者的小型金融机构：泄露通报与安全整改决策的业务交付"
+
+[agent]
+timeout_sec = 72000.0        # 缺省 72000；
+
+[verifier]
+timeout_sec = 18000.0
+user = "root"
+
+[verifier.env]
+# Judge 相关变量统一 JUDGE_ 前缀，只写在 [verifier.env]、严禁写入 [environment.env]。
+# 必选项（运行环境注入，AP 必给）；可选项一律用 ${VAR:-默认值} 语法给默认值。
+JUDGE_API_KEY = "${JUDGE_API_KEY:-}"            # 必选：judge 网关 key
+JUDGE_BASE_URL = "${JUDGE_BASE_URL:-}"          # 必选：judge 网关地址（可带 /v1，test.sh 负责剥）
+JUDGE_MODEL = "${JUDGE_MODEL:-qwen3.7-plus}"         # 可选：裁判模型（经 REWARDKIT_MODEL 运行时生效）
+JUDGE_PROVIDER = "${JUDGE_PROVIDER:-anthropic}" # 可选：信息性声明
+JUDGE_API_PROTOCOL = "${JUDGE_API_PROTOCOL:-anthropic}"  # 可选：openai 时降级为 LLM judge（见 test.sh）
+# 兼容旧环境的兜底注入
+EVAL_API_KEY = "${EVAL_API_KEY:-}"
+EVAL_API_BASE = "${EVAL_API_BASE:-}"
+LITELLM_DROP_PARAMS = "true"
+
+[environment]
+os = "linux"
+build_timeout_sec = 18000.0
+network_mode = "public"      # claude-code 框架下不要写 no-network（见 3.2 警示）
+cpus = 2
+memory_mb = 8192
+storage_mb = 30720                            # 照抄
+

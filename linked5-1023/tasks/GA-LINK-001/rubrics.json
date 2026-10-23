@@ -1,0 +1,89 @@
+{
+  "task_id": "GA-LINK-001",
+  "criteria": [
+    {
+      "id": "GA001",
+      "name": "GA001",
+      "weight": 7,
+      "type": "binary",
+      "description": "确认UCI真实网页引用及采集代码格式与117列数据的差异，来源用途不混淆。\nInspect output/balance_review.xlsx, output/balance_review_brief.docx, output/playtest_queue.csv."
+    },
+    {
+      "id": "GA002",
+      "name": "GA002",
+      "weight": 7,
+      "type": "binary",
+      "description": "两split尺寸、标签/符号/每方5人、缺失、重复与跨split精确交集检查正确，未声称已排除无ID的全部泄漏。\nInspect output/balance_review.xlsx, output/balance_review_brief.docx, output/playtest_queue.csv."
+    },
+    {
+      "id": "GA003",
+      "name": "GA003",
+      "weight": 7,
+      "type": "binary",
+      "description": "H001-H113对应第5-117列，胜负映射正确，不凭JSON位置编造英雄身份。\nInspect output/balance_review.xlsx, output/balance_review_brief.docx, output/playtest_queue.csv."
+    },
+    {
+      "id": "GA004",
+      "name": "GA004",
+      "weight": 10,
+      "type": "binary",
+      "description": "训练分层键、>=100阈值、稀疏层总体回退和正负方预期率均正确。\nInspect output/balance_review.xlsx, output/balance_review_brief.docx, output/playtest_queue.csv."
+    },
+    {
+      "id": "GA005",
+      "name": "GA005",
+      "weight": 10,
+      "type": "binary",
+      "description": "全部113项训练出场、分方支持、原始胜率、预期率和百分点校正差准确。\nInspect output/balance_review.xlsx, output/balance_review_brief.docx, output/playtest_queue.csv."
+    },
+    {
+      "id": "GA006",
+      "name": "GA006",
+      "weight": 10,
+      "type": "binary",
+      "description": "合格门槛与最高三/最低三、H编号并列规则准确，仅训练选六项且无重复。\nInspect output/balance_review.xlsx, output/balance_review_brief.docx, output/playtest_queue.csv."
+    },
+    {
+      "id": "GA007",
+      "name": "GA007",
+      "weight": 10,
+      "type": "binary",
+      "description": "保留集沿用训练基线，不重估、不重选，六项训练/测试统计与方向复现>=100规则正确。\nInspect output/balance_review.xlsx, output/balance_review_brief.docx, output/playtest_queue.csv."
+    },
+    {
+      "id": "GA008",
+      "name": "GA008",
+      "weight": 7,
+      "type": "binary",
+      "description": "六项两split Wilson区间z=1.96正确，分方校正差和稀疏层回退占比均可复算。\nInspect output/balance_review.xlsx, output/balance_review_brief.docx, output/playtest_queue.csv."
+    },
+    {
+      "id": "GA009",
+      "name": "GA009",
+      "weight": 10,
+      "type": "binary",
+      "description": "六个试玩假设逐项连接真实训练信号、保留复核、混杂检查及可反证对照设计。\nInspect output/balance_review.xlsx, output/balance_review_brief.docx, output/playtest_queue.csv."
+    },
+    {
+      "id": "GA010",
+      "name": "GA010",
+      "weight": 7,
+      "type": "binary",
+      "description": "试玩队列有指标、支持/推翻条件、责任角色和可解释优先级，不直接等同上线削弱/增强。\nInspect output/balance_review.xlsx, output/balance_review_brief.docx, output/playtest_queue.csv."
+    },
+    {
+      "id": "GA011",
+      "name": "GA011",
+      "weight": 7,
+      "type": "binary",
+      "description": "明确Wilson仅为原始率区间、多重探索、历史版本/玩家信息缺失与因果/外推边界。\nInspect output/balance_review.xlsx, output/balance_review_brief.docx, output/playtest_queue.csv."
+    },
+    {
+      "id": "GA012",
+      "name": "GA012",
+      "weight": 3,
+      "type": "binary",
+      "description": "三份精确命名交付可读，五表和六行CSV齐全，跨产物六项和关键数字一致。\nInspect output/balance_review.xlsx, output/balance_review_brief.docx, output/playtest_queue.csv."
+    }
+  ]
+}

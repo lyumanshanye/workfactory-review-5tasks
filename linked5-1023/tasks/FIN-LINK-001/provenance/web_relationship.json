@@ -1,0 +1,14 @@
+{
+  "domain": "FIN",
+  "source_file": "fdic_api_documentation.html",
+  "source_url": "https://api.fdic.gov/banks/docs/",
+  "source_sha256": "6094a3a9a88abf00c49b363d08248a12af69b8c9df8585665bfdfd4b7908a39d",
+  "raw_href": "risview_properties.yaml",
+  "resolved_target_url": "https://api.fdic.gov/banks/docs/risview_properties.yaml",
+  "target_file": "financial_definitions.yaml",
+  "target_sha256": "b257457e4e821d6a0d9f88ffc4e6e0da80e4ccf67fa394cadb21587b50b23d59",
+  "evidence_kind": "html_anchor",
+  "xpath": "/html/body/div[3]/ul[1]/li[7]/a",
+  "anchor_or_context": "Financial API Definitions (YAML format)",
+  "business_dependency": "FDIC文档页引用Financial/Institution字段定义 → 以CERT和季度核对银行范围 → 计算可比信用代理指标 → 把八个核查名额落实到证据请求"
+}

@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "details": [
+    {
+      "task": "DA-LINK-001",
+      "passed": true,
+      "discovered_rewards": 1,
+      "criteria": 11
+    },
+    {
+      "task": "FIN-LINK-001",
+      "passed": true,
+      "discovered_rewards": 1,
+      "criteria": 13
+    },
+    {
+      "task": "GA-LINK-001",
+      "passed": true,
+      "discovered_rewards": 1,
+      "criteria": 12
+    },
+    {
+      "task": "GO-LINK-001",
+      "passed": true,
+      "discovered_rewards": 1,
+      "criteria": 12
+    },
+    {
+      "task": "LAW-LINK-001",
+      "passed": true,
+      "discovered_rewards": 1,
+      "criteria": 12
+    }
+  ],
+  "judge_calls": 0
+}

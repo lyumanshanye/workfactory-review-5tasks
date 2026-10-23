@@ -1,0 +1,77 @@
+schema_version = "1.4"
+artifacts = ["/app/output/outdoor_activity_model.xlsx", "/app/output/activity_policy_brief.docx", "/app/output/review_calendar.csv"]
+
+[task]
+name = "work/da-link-001"
+version = "1.0.0"
+description = "亚利桑那三县户外活动：把AQI历史记录转成可复核的排期政策"
+keywords = ["da", "office", "A2"]
+
+[metadata]
+task_id = "DA-LINK-001"
+author_organization = "yelv"
+category = "weakness"
+domain = "通用办公"
+domain_code = "DA"
+domain_l2 = "公共环境数据决策"
+domain_l3 = "证据核对与决策"
+domain_l4 = "亚利桑那三县户外活动：把AQI历史记录转成可复核的排期政策"
+capabilities = "EPA下载网页引用格式说明 → 日AQI按FIPS对齐年度汇总和县表 → 比较两种室内切换政策 → 交付日期级决策日历"
+difficulty = "A2"
+difficulty_status = "design_target_not_calibrated"
+vl_dependency = "否"
+source_note = "Supplied original seed bytes and frozen primary-source pages; hypothetical business parameters explicitly stated in instruction."
+source_policy = "original_bytes_no_fabricated_source_records"
+acceptance_status = "candidate_pending_independent_gold_review_and_model_calibration"
+tools = "Python/Excel/Word"
+task_complexity = "C2"
+weakness_tag = ["W11-无据自造数据与口径", "W12-跨源交叉核对缺失"]
+tool_set = ["filesystem", "shell", "python"]
+skill_set = []
+expected_tool_dependencies = ["filesystem", "python"]
+expected_skill_dependencies = []
+business_domain = "数据分析"
+
+[[metadata.deliverables]]
+path = "outdoor_activity_model.xlsx"
+required = true
+desc = "亚利桑那三县户外活动：把AQI历史记录转成可复核的排期政策的业务交付"
+
+[[metadata.deliverables]]
+path = "activity_policy_brief.docx"
+required = true
+desc = "亚利桑那三县户外活动：把AQI历史记录转成可复核的排期政策的业务交付"
+
+[[metadata.deliverables]]
+path = "review_calendar.csv"
+required = true
+desc = "亚利桑那三县户外活动：把AQI历史记录转成可复核的排期政策的业务交付"
+
+[agent]
+timeout_sec = 72000.0        # 缺省 72000；
+
+[verifier]
+timeout_sec = 18000.0
+user = "root"
+
+[verifier.env]
+# Judge 相关变量统一 JUDGE_ 前缀，只写在 [verifier.env]、严禁写入 [environment.env]。
+# 必选项（运行环境注入，AP 必给）；可选项一律用 ${VAR:-默认值} 语法给默认值。
+JUDGE_API_KEY = "${JUDGE_API_KEY:-}"            # 必选：judge 网关 key
+JUDGE_BASE_URL = "${JUDGE_BASE_URL:-}"          # 必选：judge 网关地址（可带 /v1，test.sh 负责剥）
+JUDGE_MODEL = "${JUDGE_MODEL:-qwen3.7-plus}"         # 可选：裁判模型（经 REWARDKIT_MODEL 运行时生效）
+JUDGE_PROVIDER = "${JUDGE_PROVIDER:-anthropic}" # 可选：信息性声明
+JUDGE_API_PROTOCOL = "${JUDGE_API_PROTOCOL:-anthropic}"  # 可选：openai 时降级为 LLM judge（见 test.sh）
+# 兼容旧环境的兜底注入
+EVAL_API_KEY = "${EVAL_API_KEY:-}"
+EVAL_API_BASE = "${EVAL_API_BASE:-}"
+LITELLM_DROP_PARAMS = "true"
+
+[environment]
+os = "linux"
+build_timeout_sec = 18000.0
+network_mode = "public"      # claude-code 框架下不要写 no-network（见 3.2 警示）
+cpus = 2
+memory_mb = 8192
+storage_mb = 30720                            # 照抄
+
