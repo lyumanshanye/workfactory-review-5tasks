@@ -10,128 +10,142 @@ weight = 1.0
 id = "GO001"
 name = "GO001"
 type = "binary"
-description = "行程与费用估算具有可追溯来源、查询日期及适用条件；明确区分可核实价格、估算和待询价，不以缺失数据或未核实预订充当事实。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+description = "行程与费用估算具有可追溯来源、查询日期及适用条件；明确区分可核实价格、估算和待询价，不以缺失数据或未核实预订充当事实。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 7
 
 [[criterion]]
 id = "GO002"
 name = "GO002"
 type = "binary"
-description = "五个候选城市按实际行程、县域、月份及适用财政年度正确匹配住宿和M&IE费率；不得把自然年2026直接等同于FY2026，不要求原表行号。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+description = "五个候选城市按实际行程、县域、月份及适用财政年度正确匹配住宿和M&IE费率；不得把自然年2026直接等同于FY2026，不要求原表行号。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 10
 
 [[criterion]]
 id = "GO003"
 name = "GO003"
 type = "binary"
-description = "住宿夜数按所荐行程计算，区分住宿报价、适用报销上限和未获超标准授权的限制；住宿税按题设可报销金额的12%计算。不暗定四晚，不因合理的不同抵返安排扣分。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+description = "住宿夜数按所荐行程计算，区分住宿报价、适用报销上限和未获超标准授权的限制；住宿税按题设可报销金额的12%计算。不暗定四晚，不因合理的不同抵返安排扣分。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 10
 
 [[criterion]]
 id = "GO004"
 name = "GO004"
 type = "binary"
-description = "首末日M&IE先按75%计算再扣整份政府供餐金额，保留杂费下限；其他日供餐扣减正确。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+description = "首末日M&IE先按75%计算再扣整份政府供餐金额，保留杂费下限；其他日供餐扣减正确。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 10
 
 [[criterion]]
 id = "GO005"
 name = "GO005"
 type = "binary"
-description = "酒店免费早餐及茶歇不误扣；政府供餐日期和餐别全部使用。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+description = "酒店免费早餐及茶歇不误扣；政府供餐日期和餐别全部使用。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 7
 
 [[criterion]]
 id = "GO006"
 name = "GO006"
 type = "binary"
-description = "完整比较五个候选城市及18人、24人两档规模，区分人均与固定费用，金额可由明细复算；待询价或缺失费用不得当作零成本。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+description = "完整比较五个候选城市及18人、24人两档规模，区分人均与固定费用，金额可由明细复算；待询价或缺失费用不得当作零成本。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 10
 
 [[criterion]]
 id = "GO007"
 name = "GO007"
 type = "binary"
-description = "储备与53,000美元预算上限比较正确，按合规与证据充分性判断可行性，再按人数优先、同人数成本及城市英文名排序提出有条件的推荐；不要求命中特定城市。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+description = "储备与53,000美元预算上限比较正确，按合规与证据充分性判断可行性，再按人数优先、同人数成本及城市英文名排序提出有条件的推荐；不要求命中特定城市。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 10
 
 [[criterion]]
 id = "GO008"
 name = "GO008"
 type = "binary"
-description = "对所比较方案按当前机票估算上涨20%重算，给出有依据的预算影响和可执行应对安排。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+description = "对所比较方案按当前机票估算上涨20%重算，给出有依据的预算影响和可执行应对安排。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 7
 
 [[criterion]]
 id = "GO009"
 name = "GO009"
 type = "binary"
-description = "所荐行程以USDA华盛顿总部和DCA为出发点，目的地机场与候选城市匹配，覆盖完整培训，并考虑提前一天抵达、次日返回的休息建议；直达或中转选择须有依据。无特定日期航班证据时明确待核实，不虚构班次或要求必须中转。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+description = "所荐行程以USDA华盛顿总部和DCA为出发点，目的地机场与候选城市匹配，覆盖完整培训，并考虑提前一天抵达、次日返回的休息建议；直达或中转选择须有依据。无特定日期航班证据时明确待核实，不虚构班次或要求必须中转。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 7
 
 [[criterion]]
 id = "GO010"
 name = "GO010"
 type = "binary"
-description = "审批登记覆盖差旅授权、住宿与场地资质、采购和资金确认，分别列明拟负责角色、所需证据、建议期限及是否阻断批准。本项评价待办登记的完整性；虚构已获审批的扣分只由GO018处理。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+description = "审批登记覆盖差旅授权、住宿与场地资质、采购和资金确认，分别列明拟负责角色、所需证据、建议期限及是否阻断批准。本项评价待办登记的完整性；虚构已获审批的扣分只由GO018处理。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 7
 
 [[criterion]]
 id = "GO011"
 name = "GO011"
 type = "binary"
-description = "三份精确命名交付均可读，工作簿含Daily/Options/Sources，金额单位、来源和假设清楚。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+description = "四份精确命名交付均可读，工作簿含Daily/Options/Sources，金额单位、来源和假设清楚。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 3
 
 [[criterion]]
 id = "GO012"
 name = "GO012"
 type = "binary"
-description = "批准简报与工作簿/CSV的推荐、关键金额和条件一致，内部建议与FTR义务明确区分。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+description = "批准简报、PPT与工作簿/CSV的推荐、关键金额和条件一致，内部建议与FTR义务明确区分。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 7
 
 [[criterion]]
 id = "GO013"
 name = "GO013"
 type = "binary"
-description = "实际修改预算、票价系数、储备或抵返日期后，旅行日期、住宿夜数、各方案费用、余量及压力总额正确联动；至少用两组合理参数检查，不要求特定命名区域。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+description = "实际修改预算、票价系数、储备或抵返日期后，旅行日期、住宿夜数、各方案费用、余量及压力总额正确联动；至少用两组合理参数检查，不要求特定命名区域。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 10
 
 [[criterion]]
 id = "GO014"
 name = "GO014"
 type = "binary"
-description = "将11月29日政府早餐由否改是后，当日M&IE及候选方案费用正确联动，按实际行程处理首末日与供餐规则；酒店含早餐不误作政府供餐扣除。恢复参数后结果恢复，不要求固定抵返日期。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+description = "将11月29日政府早餐由否改是后，当日M&IE及候选方案费用正确联动，按实际行程处理首末日与供餐规则；酒店含早餐不误作政府供餐扣除。恢复参数后结果恢复，不要求固定抵返日期。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 10
 
 [[criterion]]
 id = "GO015"
 name = "GO015"
 type = "binary"
-description = "参数变更后推荐按当前可行性、人数优先和同人数成本更新，无可行或证据不足时不保留无条件批准结论；明确Word及CSV为交付时参数快照，变更后需重新核对导出。排序项不重复处罚金额计算错误。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+description = "参数变更后推荐按当前可行性、人数优先和同人数成本更新，无可行或证据不足时不保留无条件批准结论；明确Word、CSV及PPT为交付时参数快照，变更后需重新核对导出。排序项不重复处罚金额计算错误。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 10
 
 [[criterion]]
 id = "GO016"
 name = "GO016"
 type = "binary"
-description = "实际操作预算工作簿并保存、重新打开后，原有输入数据、计算公式和内部引用保持完整，没有因改值或格式转换造成数据或公式意外丢失、文件损坏。只检查交付完整性，不重复评价金额是否正确；不得凭缺少操作日志臆测源材料被破坏。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+description = "实际操作预算工作簿并保存、重新打开后，原有输入数据、计算公式和内部引用保持完整，没有因改值或格式转换造成数据或公式意外丢失、文件损坏。只检查交付完整性，不重复评价金额是否正确；不得凭缺少操作日志臆测源材料被破坏。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 10
 
 [[criterion]]
 id = "GO017"
 name = "GO017"
 type = "binary"
-description = "审批简报的信息组织便于负责人定位推荐、备选、预算依据、机票上涨影响及批准前提；这些内容的层级和关联清楚，不要求固定章节名称或版式。本项只评价组织与可定位性，不重复评价结论和金额。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+description = "审批简报及PPT的信息组织便于负责人定位推荐、备选、预算依据、机票上涨影响及批准前提；这些内容的层级和关联清楚，不要求固定章节名称或版式。本项只评价组织与可定位性，不重复评价结论和金额。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 7
 
 [[criterion]]
 id = "GO018"
 name = "GO018"
 type = "binary"
-description = "交付物无依据编造已核实航班、供应商报价、预订或已完成审批、资质、资金落实，且将其用于预算或批准结论。仅有明确虚构事实才扣分；清楚标注的估算、待询价、条件性建议或待核实不触发。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+description = "交付物无依据编造已核实航班、供应商报价、预订或已完成审批、资质、资金落实，且将其用于预算或批准结论。仅有明确虚构事实才扣分；清楚标注的估算、待询价、条件性建议或待核实不触发。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 7
 negate = true
+
+[[criterion]]
+id = "GO019"
+name = "GO019"
+type = "binary"
+description = "PPT以真实网页截图呈现五个候选城市实际用于比较的具体往返航班和住宿报价，关键航线、日期、人数或房型口径、币种与金额可辨认，注明URL和查询时间，并能追溯至Excel所采用的对应金额。截图不是自行制作的表格、文字摘抄或重绘报价；不得将单人或单间可见报价冒充整团已确认库存。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
+weight = 10
+
+[[criterion]]
+id = "GO020"
+name = "GO020"
+type = "binary"
+description = "PPT版式整洁、信息层级与截图说明的对应关系清楚，航班和住宿金额可在正常查看尺寸下辨认；没有遮挡关键信息的裁切、重叠、文字溢出或影响比较的过度缩放。只评价视觉呈现，不重复评价价格计算或来源真实性，不强制特定模板、配色或页数。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
+weight = 7
 
 [scoring]
 aggregation = "weighted_mean"

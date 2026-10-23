@@ -1,5 +1,5 @@
 schema_version = "1.4"
-artifacts = ["/app/output/conference_budget.xlsx", "/app/output/approval_brief.docx", "/app/output/approval_register.csv"]
+artifacts = ["/app/output/conference_budget.xlsx", "/app/output/approval_brief.docx", "/app/output/approval_register.csv", "/app/output/travel_evidence.pptx"]
 
 [task]
 name = "work/go-link-001"
@@ -19,7 +19,7 @@ domain_l4 = "跨财政年度培训会：把报销规则落到可批准的会务�
 capabilities = "GSA下载网页引用两年费率表和餐费拆分表 → 按逐日行程适用FTR → 比较人数/城市预算 → 形成有条件批准与补证清单"
 difficulty = "A2"
 difficulty_status = "editable_workbook_pilot_not_calibrated"
-vl_dependency = "否"
+vl_dependency = "是"
 source_note = "Supplied original seed bytes and frozen primary-source pages; hypothetical business parameters explicitly stated in instruction."
 source_policy = "original_bytes_no_fabricated_source_records"
 acceptance_status = "candidate_pending_independent_gold_review_and_model_calibration"
@@ -75,3 +75,8 @@ cpus = 2
 memory_mb = 8192
 storage_mb = 30720                            # 照抄
 
+
+[[metadata.deliverables]]
+path = "travel_evidence.pptx"
+required = true
+desc = "带真实航班与住宿报价截图的行程费用证据PPT"
