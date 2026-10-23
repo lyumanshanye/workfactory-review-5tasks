@@ -66,7 +66,7 @@ weight = 7
 id = "GO009"
 name = "GO009"
 type = "binary"
-description = "所荐行程以USDA华盛顿办公地点为出发点，自主选择合理的出发机场，并结合航班、接驳成本和时间说明选择依据；目的地机场与候选城市匹配，覆盖完整培训，考虑提前抵达及次日返回的休息建议。直达或中转均接受，不暗定DCA，也不强制穷举机场；没有特定日期航班证据时明确待核实，不虚构班次。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
+description = "行程覆盖完整培训，并考虑提前抵达、次日返回的休息建议；日期、时区与直达或中转安排有依据，不暗定抵返日期或必须中转。机场及接驳的比较由GO021评价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 7
 
 [[criterion]]
@@ -108,7 +108,7 @@ weight = 10
 id = "GO015"
 name = "GO015"
 type = "binary"
-description = "参数变更后推荐按当前可行性、人数优先和同人数成本更新，无可行或证据不足时不保留无条件批准结论；明确Word、CSV及PPT为交付时参数快照，变更后需重新核对导出。排序项不重复处罚金额计算错误。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
+description = "实际改值后，工作簿的推荐按当前可行性、人数优先及同人数成本更新；无可行方案时明确提示，不保留旧的可批准结论。排序按当前计算值评价，计算错误不在本项重复扣分；快照提示由GO027评价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 10
 
 [[criterion]]
@@ -137,7 +137,7 @@ negate = true
 id = "GO019"
 name = "GO019"
 type = "binary"
-description = "PPT以真实网页截图呈现五个候选城市实际用于比较的具体往返航班和住宿报价，关键航线、日期、人数或房型口径、币种与金额可辨认，注明URL和查询时间，并能追溯至Excel所采用的对应金额。截图不是自行制作的表格、文字摘抄或重绘报价；不得将单人或单间可见报价冒充整团已确认库存。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
+description = "PPT包含五城实际采用的具体往返航班与住宿报价的真实网页截图，能辨认航线、日期、房型或人数口径、币种及金额，不以自制表格、文字摘抄或重绘图片替代。截图与预算的换算核对由GO022评价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 10
 
 [[criterion]]
@@ -146,6 +146,62 @@ name = "GO020"
 type = "binary"
 description = "PPT版式整洁、信息层级与截图说明的对应关系清楚，航班和住宿金额可在正常查看尺寸下辨认；没有遮挡关键信息的裁切、重叠、文字溢出或影响比较的过度缩放。只评价视觉呈现，不重复评价价格计算或来源真实性，不强制特定模板、配色或页数。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
 weight = 7
+
+[[criterion]]
+id = "GO021"
+name = "GO021"
+type = "binary"
+description = "比较华盛顿地区合理的出发机场，结合往返机场接驳成本、时间和航班安排说明取舍，相关可计费用进入预算；不只按裸票价推荐。不强制穷举机场或选DCA。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
+weight = 7
+
+[[criterion]]
+id = "GO022"
+name = "GO022"
+type = "binary"
+description = "PPT截图报价与Excel对应金额一致；单程与往返、每人或每间、每晚与全程、币种及含税口径的换算正确，人数和夜数可复算。不把单人或单间报价冒充整团已确认库存。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
+weight = 10
+
+[[criterion]]
+id = "GO023"
+name = "GO023"
+type = "binary"
+description = "正确处理实际报价中已明示的必要税费、服务费、早餐等包含条件，不仅取宣传起价而遗漏已明示必要费用。不强制购买未要求的附加服务，无法核实的费用可列待确认。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
+weight = 7
+
+[[criterion]]
+id = "GO024"
+name = "GO024"
+type = "binary"
+description = "Sources及PPT记录实际报价的原始URL、查询时间、所对应的出行或入住日期及关键价格条件，政策与费率版本可追溯。只评溯源记录，不重复评价金额正确性。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
+weight = 7
+
+[[criterion]]
+id = "GO025"
+name = "GO025"
+type = "binary"
+description = "按农村发展局RD Instruction 2036-A识别适用的差旅与会议培训审批要求及批准前提；不以预算未超限替代机构审批，不借用其他部门或过期通知的权限阈值。未核实条款须如实标明。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
+weight = 7
+
+[[criterion]]
+id = "GO026"
+name = "GO026"
+type = "binary"
+description = "说明影响比较或执行的重要信息缺口、对推荐的限制及所需补证；待询价不能按零成本视作可行，依据不完整时不能声称已无条件充分比较五城。允许有依据且适用条件明确的推荐。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
+weight = 7
+
+[[criterion]]
+id = "GO027"
+name = "GO027"
+type = "binary"
+description = "工作簿明确提示Word、CSV和PPT为交付时行程与参数快照，参数变更后须重新核对并导出；不得声称静态文档已随Excel自动更新。只评价交接提示，不重复评价初始金额一致性。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
+weight = 7
+
+[[criterion]]
+id = "GO028"
+name = "GO028"
+type = "binary"
+description = "approval_register.csv为可正常读取的UTF-8 CSV，包含事项、拟负责角色、所需证据、建议完成期限及是否阻断批准字段。仅评编码、可读性和字段，登记内容由GO010评价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx."
+weight = 3
 
 [scoring]
 aggregation = "weighted_mean"
