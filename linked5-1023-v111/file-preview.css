@@ -160,3 +160,5 @@ body.preview-app {
 }
 
 body.embedded .preview-topbar{display:none}body.embedded .preview-main{max-width:none;margin:0;padding:14px}body.embedded .preview-status{font-size:11px;margin:0 0 10px}
+
+.origin-banner{padding:12px 15px;margin:0 0 16px;border-radius:8px;font-size:12px;background:#eaf5ee;color:#286b49}.origin-banner.synthetic{background:#fff0dd;color:#955b13}.origin-banner a{display:block;margin-top:5px;overflow-wrap:anywhere}

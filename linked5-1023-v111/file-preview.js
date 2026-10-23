@@ -14,6 +14,7 @@
     url=new URL(raw,base);
     if(url.origin!==base.origin||!url.pathname.startsWith(base.pathname)||/^(data|javascript):/.test(url.protocol))throw Error('此预览仅支持本审阅站内的文件。');
     path=decodeURIComponent(url.pathname.slice(base.pathname.length));
+    fetch('input-origin-index.json',{cache:'no-store'}).then(r=>r.ok?r.json():{}).then(index=>{const origin=index[path];if(!origin)return;const banner=el('div','origin-banner '+origin.origin_kind);banner.append(el('strong','',origin.origin_label+' · '+origin.origin_detail));if(origin.source_url){const link=el('a','',origin.source_url);link.href=origin.source_url;link.target='_blank';link.rel='noopener';banner.append(link);}root.before(banner);}).catch(()=>{});
     const name=path.split('/').pop(),ext=name.includes('.')?name.split('.').pop().toLowerCase():'';
     const domain=new URLSearchParams(location.search).get('domain');
     const labels={GO:'通用办公',FIN:'金融',LAW:'法律',DA:'数据分析',GA:'游戏'};
