@@ -1,0 +1,9 @@
+{
+  "parent_version": "1.0.0",
+  "version": "1.1.0",
+  "hypothetical_file": "decision_constraints.json",
+  "original_inputs_unchanged": true,
+  "original_native_templates_unchanged": true,
+  "new_constraint_sha256": "b0d48e22637be4b8a482d98f3d01dc97cad0b2cbfcfd161e867b9b57f497ff69",
+  "draft_refinement": "Before v1.1 model exposure: explicit day-of-week room pricing makes resource allocation a genuine cost/benefit tradeoff rather than a constant-cost AQI sort."
+}

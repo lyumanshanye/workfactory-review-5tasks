@@ -1,0 +1,110 @@
+{
+  "task_id": "LAW-LINK-001",
+  "criteria": [
+    {
+      "id": "LAW001",
+      "name": "LAW001",
+      "weight": 3,
+      "type": "binary",
+      "description": "用FTC指南实际eCFR引用建立证据链；适用2025冻结XML而非当前网页或2021旧版。\nInspect output/safeguards_gap_register.xlsx, output/legal_action_memo.docx, output/ftc_notice_draft.txt."
+    },
+    {
+      "id": "LAW002",
+      "name": "LAW002",
+      "weight": 3,
+      "type": "binary",
+      "description": "解释2021/2023相关变化，并正确指出314.4(j)于2024-05-13生效。\nInspect output/safeguards_gap_register.xlsx, output/legal_action_memo.docx, output/ftc_notice_draft.txt."
+    },
+    {
+      "id": "LAW003",
+      "name": "LAW003",
+      "weight": 7,
+      "type": "binary",
+      "description": "4800人的例外仅为314.4(b)(1)、(d)(2)、(h)、(i)，不扩张为全规则豁免。\nInspect output/safeguards_gap_register.xlsx, output/legal_action_memo.docx, output/ftc_notice_draft.txt."
+    },
+    {
+      "id": "LAW004",
+      "name": "LAW004",
+      "weight": 7,
+      "type": "binary",
+      "description": "所有给定控制缺口均被处理，Qualified Individual、MFA、服务商合同、一般监测及人员更新义务与豁免区分正确。\nInspect output/safeguards_gap_register.xlsx, output/legal_action_memo.docx, output/ftc_notice_draft.txt."
+    },
+    {
+      "id": "LAW005",
+      "name": "LAW005",
+      "weight": 7,
+      "type": "binary",
+      "description": "550人达到门槛，密钥被获取使加密不排除notification event，事实与定义准确对应。\nInspect output/safeguards_gap_register.xlsx, output/legal_action_memo.docx, output/ftc_notice_draft.txt."
+    },
+    {
+      "id": "LAW006",
+      "name": "LAW006",
+      "weight": 7,
+      "type": "binary",
+      "description": "发现日为03-03非涉事员工知悉而非03-06/03-07；最迟04-02，且仍要求尽快。\nInspect output/safeguards_gap_register.xlsx, output/legal_action_memo.docx, output/ftc_notice_draft.txt."
+    },
+    {
+      "id": "LAW007",
+      "name": "LAW007",
+      "weight": 7,
+      "type": "binary",
+      "description": "口头警方请求不能当然延期FTC提交，准确区分书面执法决定和延迟公开机制。\nInspect output/safeguards_gap_register.xlsx, output/legal_action_memo.docx, output/ftc_notice_draft.txt."
+    },
+    {
+      "id": "LAW008",
+      "name": "LAW008",
+      "weight": 7,
+      "type": "binary",
+      "description": "通报草稿覆盖机构联系人、数据类型、日期范围、550人数、事件概要、执法书面决定/联系六类内容且事实忠实。\nInspect output/safeguards_gap_register.xlsx, output/legal_action_memo.docx, output/ftc_notice_draft.txt."
+    },
+    {
+      "id": "LAW009",
+      "name": "LAW009",
+      "weight": 3,
+      "type": "binary",
+      "description": "草稿明确是假设演练且未提交，不编造修复、外联或书面执法决定。\nInspect output/safeguards_gap_register.xlsx, output/legal_action_memo.docx, output/ftc_notice_draft.txt."
+    },
+    {
+      "id": "LAW010",
+      "name": "LAW010",
+      "weight": 3,
+      "type": "binary",
+      "description": "5000/550和4800/499两种边界分析正确，不将499人免通报误作免除安全义务。\nInspect output/safeguards_gap_register.xlsx, output/legal_action_memo.docx, output/ftc_notice_draft.txt."
+    },
+    {
+      "id": "LAW011",
+      "name": "LAW011",
+      "weight": 3,
+      "type": "binary",
+      "description": "今天/7天/30天行动有角色与完成证据，内部优先期限不冒充法定宽限。\nInspect output/safeguards_gap_register.xlsx, output/legal_action_memo.docx, output/ftc_notice_draft.txt."
+    },
+    {
+      "id": "LAW012",
+      "name": "LAW012",
+      "weight": 3,
+      "type": "binary",
+      "description": "三份精确命名交付可读，工作簿四表完整且结论相互一致，条款/页码可复核。\nInspect output/safeguards_gap_register.xlsx, output/legal_action_memo.docx, output/ftc_notice_draft.txt."
+    },
+    {
+      "id": "LAW013",
+      "name": "LAW013",
+      "weight": 10,
+      "type": "binary",
+      "description": "反事实C按A/B/C有效加密及密钥事实区分314.2(m)涵盖集合，ExposureLedger正确给出逐导出记录数、跨导出去重人数、通知事件去重人数及JSON定位，不与原550人案合并。\nInspect output/safeguards_gap_register.xlsx, output/legal_action_memo.docx, output/ftc_notice_draft.txt."
+    },
+    {
+      "id": "LAW014",
+      "name": "LAW014",
+      "weight": 10,
+      "type": "binary",
+      "description": "当A密钥是否泄露待核实时，正确给出通知事件不同消费者的可确认下界/上界、是否跨500的条件及需补证事项；结合冻结规则和所有事实03-03已知说明通知/尽快/最迟日期，不凭不确定性伪称已排除通报或重启发现时点。\nInspect output/safeguards_gap_register.xlsx, output/legal_action_memo.docx, output/ftc_notice_draft.txt."
+    },
+    {
+      "id": "LAW015",
+      "name": "LAW015",
+      "weight": 10,
+      "type": "binary",
+      "description": "LAW-D1/LAW-D2逐条以集合/条款证据纠正；备忘录、ExposureLedger和Scenarios区分原案550、基准反事实C及缺证分支，原通报草稿仍忠实原550案，不混写事实或编造通知完成。\nInspect output/safeguards_gap_register.xlsx, output/legal_action_memo.docx, output/ftc_notice_draft.txt."
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "status": "passed",
+  "passed": 51,
+  "checks": 51,
+  "details": [
+    {
+      "check": "GO/original_inputs_unchanged",
+      "passed": true
+    },
+    {
+      "check": "GO/native_templates_unchanged",
+      "passed": true
+    },
+    {
+      "check": "GO/version_and_criteria",
+      "passed": true
+    },
+    {
+      "check": "GO/input_visibility",
+      "passed": true
+    },
+    {
+      "check": "GO/provenance_sha",
+      "passed": true
+    },
+    {
+      "check": "GO/office_crc/approval_brief.docx",
+      "passed": true
+    },
+    {
+      "check": "GO/office_crc/conference_budget.xlsx",
+      "passed": true
+    },
+    {
+      "check": "FIN/original_inputs_unchanged",
+      "passed": true
+    },
+    {
+      "check": "FIN/native_templates_unchanged",
+      "passed": true
+    },
+    {
+      "check": "FIN/version_and_criteria",
+      "passed": true
+    },
+    {
+      "check": "FIN/input_visibility",
+      "passed": true
+    },
+    {
+      "check": "FIN/provenance_sha",
+      "passed": true
+    },
+    {
+      "check": "FIN/office_crc/credit_review_memo.docx",
+      "passed": true
+    },
+    {
+      "check": "FIN/office_crc/credit_review.xlsx",
+      "passed": true
+    },
+    {
+      "check": "LAW/original_inputs_unchanged",
+      "passed": true
+    },
+    {
+      "check": "LAW/native_templates_unchanged",
+      "passed": true
+    },
+    {
+      "check": "LAW/version_and_criteria",
+      "passed": true
+    },
+    {
+      "check": "LAW/input_visibility",
+      "passed": true
+    },
+    {
+      "check": "LAW/provenance_sha",
+      "passed": true
+    },
+    {
+      "check": "LAW/office_crc/legal_action_memo.docx",
+      "passed": true
+    },
+    {
+      "check": "LAW/office_crc/safeguards_gap_register.xlsx",
+      "passed": true
+    },
+    {
+      "check": "DA/original_inputs_unchanged",
+      "passed": true
+    },
+    {
+      "check": "DA/native_templates_unchanged",
+      "passed": true
+    },
+    {
+      "check": "DA/version_and_criteria",
+      "passed": true
+    },
+    {
+      "check": "DA/input_visibility",
+      "passed": true
+    },
+    {
+      "check": "DA/provenance_sha",
+      "passed": true
+    },
+    {
+      "check": "DA/office_crc/outdoor_activity_model.xlsx",
+      "passed": true
+    },
+    {
+      "check": "DA/office_crc/activity_policy_brief.docx",
+      "passed": true
+    },
+    {
+      "check": "GA/original_inputs_unchanged",
+      "passed": true
+    },
+    {
+      "check": "GA/native_templates_unchanged",
+      "passed": true
+    },
+    {
+      "check": "GA/version_and_criteria",
+      "passed": true
+    },
+    {
+      "check": "GA/input_visibility",
+      "passed": true
+    },
+    {
+      "check": "GA/provenance_sha",
+      "passed": true
+    },
+    {
+      "check": "GA/office_crc/balance_review_brief.docx",
+      "passed": true
+    },
+    {
+      "check": "GA/office_crc/balance_review.xlsx",
+      "passed": true
+    },
+    {
+      "check": "GO/year_buckets_from_daily",
+      "passed": true
+    },
+    {
+      "check": "GO/transfer_cent_enumeration",
+      "passed": true
+    },
+    {
+      "check": "GO/constraint_changes_approval",
+      "passed": true
+    },
+    {
+      "check": "FIN/two_substitution_paths",
+      "passed": true
+    },
+    {
+      "check": "FIN/full_review_enumeration",
+      "passed": true
+    },
+    {
+      "check": "FIN/effort_infeasibility_and_minimum",
+      "passed": true
+    },
+    {
+      "check": "LAW/interval_sweep_counts",
+      "passed": true
+    },
+    {
+      "check": "LAW/unknown_key_bounds",
+      "passed": true
+    },
+    {
+      "check": "LAW/original_notice_not_replaced",
+      "passed": true
+    },
+    {
+      "check": "DA/candidate_and_weekday_costs",
+      "passed": true
+    },
+    {
+      "check": "DA/exact_branch_and_bound_optima",
+      "passed": true
+    },
+    {
+      "check": "DA/all_funding_constraints",
+      "passed": true
+    },
+    {
+      "check": "DA/meaningful_cost_tradeoff",
+      "passed": true
+    },
+    {
+      "check": "GA/sufficient_statistic_LOCO",
+      "passed": true
+    },
+    {
+      "check": "GA/allocation_enumeration",
+      "passed": true
+    },
+    {
+      "check": "GA/frozen_six_preserved",
+      "passed": true
+    }
+  ],
+  "expert_gold_confirmed": false
+}

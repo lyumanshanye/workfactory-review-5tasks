@@ -1,0 +1,44 @@
+{
+  "kind": "Explicit hypothetical internal business constraints authored for this exercise; not original public-source records",
+  "domain": "LAW",
+  "version": "1.1.0",
+  "rules": {
+    "counterfactual_name": "C: export-overlap review, separate from original 550-person case",
+    "all_export_facts_known_at": "2025-03-03 09:00",
+    "consumers_maintained": 4800,
+    "exports": [
+      {
+        "export": "A",
+        "from_id": 1,
+        "to_id": 320,
+        "encryption": "encrypted",
+        "key_obtained_by_attacker": true
+      },
+      {
+        "export": "B",
+        "from_id": 201,
+        "to_id": 505,
+        "encryption": "plaintext",
+        "key_obtained_by_attacker": false
+      },
+      {
+        "export": "C",
+        "from_id": 401,
+        "to_id": 600,
+        "encryption": "encrypted",
+        "key_obtained_by_attacker": false
+      }
+    ],
+    "encryption_assumption": "All exports were acquired without authorization. Export C uses effective encryption, its key was not compromised, and there is reliable evidence no plaintext was obtained from C alone. Same C-number denotes the same consumer across exports; bounds inclusive."
+  },
+  "unreviewed_internal_claims": [
+    {
+      "id": "LAW-D1",
+      "statement": "把三个导出文件的记录条数相加即可作为notification event的不同消费者人数。"
+    },
+    {
+      "id": "LAW-D2",
+      "statement": "因为维护消费者不足5000，受影响人数口径即使跨过500，也不需要向FTC报告。"
+    }
+  ]
+}

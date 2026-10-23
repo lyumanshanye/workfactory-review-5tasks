@@ -1,0 +1,40 @@
+{
+  "kind": "Explicit hypothetical internal business constraints authored for this exercise; not original public-source records",
+  "domain": "DA",
+  "version": "1.1.0",
+  "rules": {
+    "discretionary_budget_per_month": 900,
+    "additional_room_cost": {
+      "Maricopa": 120,
+      "Pima": 160,
+      "Yuma": 80
+    },
+    "service_priority_weight": {
+      "Maricopa": 3,
+      "Pima": 2,
+      "Yuma": 1
+    },
+    "eligible_AQI_min": 101,
+    "eligible_AQI_max": 150,
+    "max_discretionary_counties_per_date": 1,
+    "objective": "maximize monthly sum((AQI-100)*service_priority_weight) over additionally funded whole-session indoor switches; any equally optimal feasible schedule accepted",
+    "baseline": "Policy B, including missing-day indoor backup, is already funded separately. Additional subsidy pays for whole-session indoor switching only, not baseline indoor options.",
+    "weekday_adjustment": {
+      "Monday": 0,
+      "Tuesday": 80,
+      "Wednesday": 40,
+      "Thursday": 0,
+      "Friday": -40
+    }
+  },
+  "unreviewed_internal_claims": [
+    {
+      "id": "DA-D1",
+      "statement": "给每月AQI最高的可选场次依次拨款，必然得到最高总服务优先积分。"
+    },
+    {
+      "id": "DA-D2",
+      "statement": "额外补贴不够时可以取消B政策的超标室内或缺测备用，以便让追加计划满足预算。"
+    }
+  ]
+}

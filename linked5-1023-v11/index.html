@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>1023 五题 · 业务关联审阅</title><link rel="stylesheet" href="review.css"><script src="review.js" defer></script></head>
+<body><aside class="sidebar"><a class="brand" href="./"><span class="brand-icon">W</span><span>WORKFACTORY<small>加难版 · v1.1 校准</small></span></a><div class="nav-label">本批次 · 五个业务领域</div><nav id="task-nav" aria-label="选择题目"></nav><div class="sidebar-bottom"><span class="dot"></span>原始附件 · 只读审阅<br><small>业务关联、文件、规则可追溯</small><a href="../fin-real-003/full-review/" target="_blank" rel="noopener">打开上一批审阅 ↗</a></div></aside>
+<div class="shell"><header class="topbar"><span>研究工作台 <span class="slash">/</span> 五题合成 <span class="slash">/</span> 1023</span><a class="download" href="work_linked5_1023forcodex.zip" download>下载完整题包 ↓</a></header>
+<main><div class="page-intro"><span class="eyebrow">LINKED BUSINESS TASKS</span><h1>从证据到决策，逐题审阅。</h1><p>加难版 v1.1：目标为 GPT 约85分、Qwen 约70分，是否达到以独立盲解实分为准。</p></div>
+<section class="contract" aria-label="模型可见材料"><div class="contract-icon">i</div><div><h2>根据规范，模型实际拿到哪些文件？</h2><p><strong>该题 instruction.md + environment/input_files/ 下的全部文件。</strong>输入映射到只读 <code>/app/input_files/</code>，最终交付写入 <code>/app/output/</code>。</p><p class="contract-muted">参考答案、rubric、tests、provenance 不给盲测模型。这里全部展示，供你人工审阅。</p></div></section>
+<div class="metrics"><div><span id="count-tasks">5</span><small>业务任务</small></div><div><span id="count-inputs">30</span><small>模型输入文件</small></div><div><span id="count-checks">192 / 192</span><small>数据与运行检查</small></div><div><span id="count-judges">—</span><small>独立作答实测</small></div></div>
+<section class="task-heading"><div><div id="task-id" class="eyebrow"></div><h2 id="task-title"></h2><p id="task-subtitle"></p></div><span id="task-domain" class="domain-badge"></span></section>
+<section class="chain-card"><div class="section-label">这道题为什么能连在一起</div><div id="business-chain" class="business-chain"></div></section>
+<div class="content-card"><nav class="tabs" id="tabs" aria-label="审阅模块"></nav><div id="content" class="content"></div></div>
+<footer><span>候选参考交付尚待独立专家确认；judge 对象与盲测成绩分开记录。</span><span id="snapshot-time"></span></footer></main></div></body></html>

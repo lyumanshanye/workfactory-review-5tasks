@@ -1,0 +1,29 @@
+{
+  "kind": "Explicit hypothetical internal business constraints authored for this exercise; not original public-source records",
+  "domain": "FIN",
+  "version": "1.1.0",
+  "rules": {
+    "start": 20240630,
+    "end": 20250630,
+    "available_days": 13,
+    "basic_days_per_bank": 1,
+    "full_review_additional_days": 2,
+    "full_review_required_states": [
+      "VT",
+      "NH",
+      "ME"
+    ],
+    "conditional_days": 14,
+    "full_review_objective": "maximize sum(P9ASSET+NAASSET) at 20250630 among selected full reviews; exactly one full review per state at the minimum feasible budget; tie by CERT"
+  },
+  "unreviewed_internal_claims": [
+    {
+      "id": "FIN-D1",
+      "statement": "固定银行集合的变化已经剔除资产权重变化，可以把剩余变化全部称为银行自身信用恶化。"
+    },
+    {
+      "id": "FIN-D2",
+      "statement": "13人日足够让八家都完成基础核查，同时三州各做一次完整复核。"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "domain": "GO",
+    "file": "approval_brief.docx",
+    "pdf": "approval_brief.pdf",
+    "pages": 2,
+    "status": "passed"
+  },
+  {
+    "domain": "FIN",
+    "file": "credit_review_memo.docx",
+    "pdf": "credit_review_memo.pdf",
+    "pages": 2,
+    "status": "passed"
+  },
+  {
+    "domain": "LAW",
+    "file": "legal_action_memo.docx",
+    "pdf": "legal_action_memo.pdf",
+    "pages": 2,
+    "status": "passed"
+  },
+  {
+    "domain": "DA",
+    "file": "activity_policy_brief.docx",
+    "pdf": "activity_policy_brief.pdf",
+    "pages": 2,
+    "status": "passed"
+  },
+  {
+    "domain": "GA",
+    "file": "balance_review_brief.docx",
+    "pdf": "balance_review_brief.pdf",
+    "pages": 2,
+    "status": "passed"
+  }
+]
