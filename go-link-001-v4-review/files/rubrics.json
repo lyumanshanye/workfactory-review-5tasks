@@ -1,0 +1,325 @@
+{
+  "task_id": "GO-LINK-001",
+  "criteria": [
+    {
+      "id": "GO001",
+      "name": "GO001",
+      "weight": 7,
+      "type": "binary",
+      "description": "实际采用的报价和政策可追溯至原始URL、查询时间、适用出行日期及关键条件；明确区分已核实价格、估算和待询价。只评来源记录与证据状态，报价换算由GO022评价，缺口对决策的影响由GO026评价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-事实忠实性",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO002",
+      "name": "GO002",
+      "weight": 10,
+      "type": "binary",
+      "description": "五城按县域、行程所涉月份分别正确匹配FY2025/FY2026/FY2027住宿上限及M&IE，实际2026年11至12月预算使用FY2027；辨明餐杂费分项资料适用性，不把自然年等同财政年度。不要求原表行号。本项只评费率取数与适用性，历史影响分析由GO009评价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-数值与计算准确性",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO003",
+      "name": "GO003",
+      "weight": 10,
+      "type": "binary",
+      "description": "住宿夜数按所荐行程计算，区分住宿报价、适用报销上限和未获超标准授权的限制；住宿税按题设可报销金额的12%计算。不暗定四晚，不因合理的不同抵返安排扣分。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-专业规范",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO004",
+      "name": "GO004",
+      "weight": 10,
+      "type": "binary",
+      "description": "逐日M&IE正确处理首末日75%、扣除整份政府供餐及杂费下限，使用题设全部供餐日期和餐别；酒店免费早餐及茶歇不误作政府供餐扣除。本项评价初始核算，早餐开关联动由GO014评价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-专业规范",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Implicit"
+    },
+    {
+      "id": "GO006",
+      "name": "GO006",
+      "weight": 10,
+      "type": "binary",
+      "description": "五城均比较18人和24人两档，区分人均、固定及待询价费用，已知基础费用可由明细复算；相关交通、机构供餐及场地等费用均有明细或显式缺口。只评成本覆盖及汇总，不重复评分政策算法、报价换算或推荐逻辑。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-数值与计算准确性",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO007",
+      "name": "GO007",
+      "weight": 10,
+      "type": "binary",
+      "description": "正确计提储备并对照53,000美元上限；在合规、酒店质量及证据条件下，按人数优先、同人数成本最低、城市英文名并列排序给出基准推荐。不要求指定城市；待询价下是否可批准的表达由GO026评价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-结论正确性",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO008",
+      "name": "GO008",
+      "weight": 7,
+      "type": "binary",
+      "description": "对比较方案以当前调整后的整团机票额再上涨20%重算，纳入储备，说明预算影响及可执行应对。只评压力情景数值与应对，连续涨幅切换点由GO038评价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-分析与论证质量",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO009",
+      "name": "GO009",
+      "weight": 10,
+      "type": "binary",
+      "description": "保持人数、行程月日结构、市场报价及其他假设相同，量化FY2025/FY2026相对FY2027的预算差异，区分住宿上限和M&IE变化，判断合规限制与推荐是否改变。历史情景不得冒充历史实际报价或本次报销标准；报价超过旧上限应标不合规/待授权，不得截价宣称可订。零变化结论须有测算支持。费率取数由GO002评价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-分析与论证质量",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO010",
+      "name": "GO010",
+      "weight": 7,
+      "type": "binary",
+      "description": "UTF-8 approval_register.csv可读取，针对差旅授权、住宿/场地资质、采购、资金及申请表缺项列出具体事项、拟负责角色、所需证据、建议期限和是否阻断批准。只评可执行的补证登记，不重复评分其他交付中的待核实标记。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-专业规范",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO011",
+      "name": "GO011",
+      "weight": 3,
+      "type": "binary",
+      "description": "五份精确命名交付均可读；工作簿Daily/Options/Sources及决策分析可定位，保存重开后公式和数据保持完整。提示Word/CSV/PPT/PDF为快照、参数变化需重新核对导出。本项仅评基本交付与交接，不重复评价专业内容。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "指令遵循",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO012",
+      "name": "GO012",
+      "weight": 7,
+      "type": "binary",
+      "description": "Word、PPT、审批PDF、CSV及工作簿中的推荐、人数、日期、关键金额和批准条件相互一致。本项只评不同文件之间的冲突，统一传递的同一上游计算错误不在此重复扣分。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-事实忠实性",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO013",
+      "name": "GO013",
+      "weight": 10,
+      "type": "binary",
+      "description": "修改预算、票价系数、储备和日期后，受影响的夜数、逐日费用及汇总正确重算。日期超出报价适用范围时，明确提示报价失效/需重询，受影响方案不能仍显示可直接执行；允许标为按旧价暂估。不要求Excel联网获取新价。裁判实际检查至少两组有效参数。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-数值与计算准确性",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO014",
+      "name": "GO014",
+      "weight": 7,
+      "type": "binary",
+      "description": "将11月29日政府早餐由否改是后，当日M&IE及各候选费用按适用首末日规则正确联动，不新增采购费用；恢复参数后恢复原结果。只评联动实现，初始供餐政策判断由GO004评价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-数值与计算准确性",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO015",
+      "name": "GO015",
+      "weight": 10,
+      "type": "binary",
+      "description": "参数改变后，工作簿按当前费用、报价有效性及人数优先规则更新推荐，无可行方案时明确提示。只评选择逻辑：已在GO013评价的数值误差不再扣分，但仍按计算值错误排序、或把已标失效报价当可执行方案，应判不满足。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-结论正确性",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO017",
+      "name": "GO017",
+      "type": "binary",
+      "description": "Word及PPT便于负责人定位推荐、备选、关键预算、切换条件及批准前提，信息层级和关联清楚。不要求固定章节或页数，只评价组织，不重复评价金额与结论。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "weight": 3,
+      "dimension": "结构与组织",
+      "criterion_type": "Subjective",
+      "criterion_necessity": "Implicit"
+    },
+    {
+      "id": "GO018",
+      "name": "GO018",
+      "type": "binary",
+      "description": "交付物无依据编造已核实航班、供应商报价、预订或已完成审批、资质、资金落实，且将其用于预算或批准结论。仅有明确虚构事实才扣分；清楚标注的估算、待询价、条件性建议或待核实不触发。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "weight": -7,
+      "dimension": "安全合规",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO019",
+      "name": "GO019",
+      "weight": 10,
+      "type": "binary",
+      "dimension": "内容质量-事实忠实性",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "description": "PPT包含五城实际用于预算的具体往返航班及住宿报价真实网页截图，能识别航线、日期、房型/人数、币种及金额，不以自制表格、摘抄或重绘替代。只评截图证据，来源字段及换算分别由GO001、GO022评价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+    },
+    {
+      "id": "GO020",
+      "name": "GO020",
+      "weight": 3,
+      "type": "binary",
+      "dimension": "视觉美感",
+      "criterion_type": "Subjective",
+      "criterion_necessity": "Explicit",
+      "description": "PPT版式整洁、信息层级与截图说明的对应关系清楚，航班和住宿金额可在正常查看尺寸下辨认；没有遮挡关键信息的裁切、重叠、文字溢出或影响比较的过度缩放。只评价视觉呈现，不重复评价价格计算或来源真实性，不强制特定模板、配色或页数。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+    },
+    {
+      "id": "GO021",
+      "name": "GO021",
+      "weight": 7,
+      "dimension": "内容质量-分析与论证质量",
+      "type": "binary",
+      "criterion_type": "Subjective",
+      "criterion_necessity": "Explicit",
+      "description": "比较华盛顿地区合理的出发机场，结合个人往返机场交通成本、时间和航班安排说明取舍，相关可计费用进入预算。以总部作统一比较基点，不默认机构包车；住所、实际报销和通勤扣减未知时待核实，不编造个人记录。不强制穷举机场或选DCA。本项评价机场交通取舍，联合候选完整性由GO037评价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+    },
+    {
+      "id": "GO022",
+      "name": "GO022",
+      "weight": 10,
+      "dimension": "内容质量-数值与计算准确性",
+      "type": "binary",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "description": "PPT截图报价与Excel对应金额一致；单程与往返、每人或每间、每晚与全程、币种及含税口径换算正确，人数和夜数可复算。计入报价已明示的必要税费、服务费，正确处理早餐等包含条件，未核实费用列待确认；不强制购买未要求的附加服务。不把单人或单间报价冒充整团已确认库存。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+    },
+    {
+      "id": "GO023",
+      "name": "GO023",
+      "weight": 10,
+      "dimension": "内容质量-分析与论证质量",
+      "type": "binary",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "description": "每城比较至少两家具体酒店的住客评分、满分、评价数量和近期重要反馈，来源可核实；用统一且有理由的质量口径解释价格与住宿质量取舍。不以星级、跨平台原始分数或少量好评替代口碑判断，不为低价酒店临时放宽标准。检索后不足两家合格须提供具体排除依据。只评质量筛选，不重复评报价转换。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+    },
+    {
+      "id": "GO025",
+      "name": "GO025",
+      "weight": 7,
+      "dimension": "内容质量-专业规范",
+      "type": "binary",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "description": "按RD Instruction 2036-A识别适用审批要求，区分内部建议和法规义务；不得把预算未超限等同获批。审批模板旧OCFO/OIG/HR933标签须核实适用性才作为当前义务，未核实可明确标待核对，不要求无依据作确定结论。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+    },
+    {
+      "id": "GO026",
+      "name": "GO026",
+      "weight": 7,
+      "dimension": "内容质量-分析与论证质量",
+      "type": "binary",
+      "criterion_type": "Subjective",
+      "criterion_necessity": "Explicit",
+      "description": "说明哪些缺失报价、库存或合规证据会改变排名或阻断执行，为推荐明确列出成立条件；不将未知费用默认为零或把部分估算称完整可批准总额。不能只罗列待核实而不解释决策影响。本项评缺口的决策后果，登记手续由GO010评价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+    },
+    {
+      "id": "GO029",
+      "name": "GO029",
+      "weight": 7,
+      "type": "binary",
+      "description": "使用原审批PDF页面/标签填写有依据的机构、培训类别、日期、地点和人数等已知字段，不能全部留空或用另制报告代替。正常查看及打印时内容完整可见，遵守模板可见行数限制；允许明确标注工作名称。只评模板与已知基础字段。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "指令遵循",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO031",
+      "name": "GO031",
+      "weight": 3,
+      "type": "binary",
+      "description": "申请表说明有材料支持的培训目的、预期成果及RD使命关联；具体课程或业务成果未知时，指出需补充的内容与核实问题。不得编造课程、战略指标或用泛泛口号冒充具体业务依据。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-分析与论证质量",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO032",
+      "name": "GO032",
+      "weight": 3,
+      "type": "binary",
+      "description": "申请表分别回应人数必要性和远程替代问题，区分可负担人数与业务必需人数。无业务证据时明确待论证，并指出需要哪些参训需求或远程替代依据；不以预算富余证明必须出行。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-分析与论证质量",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO034",
+      "name": "GO034",
+      "weight": 7,
+      "type": "binary",
+      "description": "申请表费用字段或明确关联说明区分已知基础费用、待询价和储备，资料未齐时标为部分估算而非完整申请总额。只评申请字段是否准确表达费用范围；已在预算项扣分且一致传递的算术错误不重复扣分。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-专业规范",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO035",
+      "name": "GO035",
+      "weight": 3,
+      "type": "binary",
+      "description": "未知联系人、财务编码、历史支出、计划/CPE/捐助/展位及合规确认标待核实或明确关联补充说明，不无据勾选。逐项交代议程、Location Cost Estimate和Attendee Cost Detail的现有对应或待补状态，不把团体汇总冒充个人明细。本项只评申请表状态披露。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-专业规范",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO037",
+      "name": "GO037",
+      "weight": 10,
+      "type": "binary",
+      "description": "记录城市、出发机场、航班、酒店及日期组成的实际候选和搜索/排除依据，说明替代组合如何影响费用或可行性，不能仅列五城各一总价声称联合最优。行程覆盖完整培训，日期时区及衔接合理；不要求穷举市场或指定求解器。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-分析与论证质量",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO038",
+      "name": "GO038",
+      "weight": 10,
+      "type": "binary",
+      "description": "定义整团已知基础费用及其中机票额，计算推荐与有效竞争备选在0至20%涨幅内的切换临界值；未知费用差保留为参数。正确处理同斜率和无交点，并检查交点附近预算及其他候选是否使交点失效。不强求存在切换点，只有通用公式不足以通过。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-数值与计算准确性",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO039",
+      "name": "GO039",
+      "weight": 10,
+      "type": "binary",
+      "description": "对主要候选给出基准及机票上涨20%时可承受的未报价基础费用上限，预算须先剔除储备再扣已知费用，正确使用整团机票额；负值明确表示已知成本已超预算，不当作可采购金额。结论须有可复算结果，不能直接拿含储备余量作基础费用限额。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-数值与计算准确性",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    },
+    {
+      "id": "GO040",
+      "name": "GO040",
+      "weight": 10,
+      "type": "binary",
+      "description": "将有效阈值转成推荐与主要备选的分段行动条件，并以候选比较或支配关系检查其他记录方案不会推翻结论；说明相关条件下保留24人、转18人或均不可行。只需覆盖推荐成立的条件及会推翻它的关键边界，不要求穷举所有未知费用组合或出现每种切换。只评行动逻辑及条件完整性，不重复扣GO038/039算术错误。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
+      "dimension": "内容质量-结论正确性",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit"
+    }
+  ]
+}

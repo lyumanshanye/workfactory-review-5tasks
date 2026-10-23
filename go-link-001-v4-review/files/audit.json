@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "criteria": 32,
+  "positive_total": 238,
+  "negative_absolute_total": 7,
+  "negative_positive_ratio": 0.029411764705882353,
+  "content_quality_positive": 222,
+  "content_quality_ratio": 0.9327731092436975,
+  "critical_positive_count": 15,
+  "dimension_positive_totals": {
+    "内容质量-事实忠实性": 24,
+    "内容质量-数值与计算准确性": 67,
+    "内容质量-专业规范": 44,
+    "内容质量-结论正确性": 30,
+    "内容质量-分析与论证质量": 57,
+    "指令遵循": 10,
+    "结构与组织": 3,
+    "视觉美感": 3
+  },
+  "negative_native_encoding": "positive weight with negate=true",
+  "scores_recomputed": false,
+  "old_criteria": 40,
+  "native_synchronized": true,
+  "deliverables": [
+    "approval_brief.docx",
+    "approval_register.csv",
+    "conference_attendance_approval.pdf",
+    "conference_budget.xlsx",
+    "travel_evidence.pptx"
+  ],
+  "input_sha256": {
+    "FY2025_PerDiemMasterRatesFile.xlsx": "82e7312b20f9421812f9c738b11e8075492180c2a762a26b8f1afa866f3f9039",
+    "eCFR_41_CFR_301-11.xml": "d84c616073d5bda01bd4ca5b9b63b9d46522c5c4d78899b41aec9025f25b11df",
+    "Conference-Attendance-fillable-Approval-Template.pdf": "b86acf0719a7c884e5453edc97e4dd34b6e6d6cbe4dd52cc1b47f733e21b978a",
+    "eCFR_41_CFR_301-74.xml": "e7305f7f6f1c67dca7e755f53f446360ce82d1bb73aa38aa5ae2a648565dda14",
+    "FY2026_PerDiemMasterRatesFile.xlsx": "5a3214fdafa1034799e2ff61d8997cface1a1ff0322be3efad78595b12b4e244",
+    "GSA_FY2025_MIE_Breakdown.docx": "cc55916865cb21268a1fcbd1b75c5077698207033b41672fd1142f385c8fa4ef",
+    "FY2027_PerDiemRates_Validated090126.xlsx": "818af7d0e568228804f6e8d3d475504cf0c22562544f4d808509fc4aa8790618"
+  },
+  "original_inputs_unchanged": true,
+  "merged_into": {
+    "GO005": "GO004",
+    "GO016": "GO011",
+    "GO024": "GO001",
+    "GO027": "GO011",
+    "GO028": "GO010",
+    "GO030": "GO029",
+    "GO033": "GO035",
+    "GO036": "GO025"
+  },
+  "pdf_criteria": 5,
+  "pdf_positive_weight": 23,
+  "pdf_weight_share": 0.09663865546218488,
+  "task_version": "4.0.0-draft",
+  "instruction_sha256": "8c9555cfee575982f33ade6e91704460b5c669507c22b14d505060bd6b1efb19",
+  "rubric_sha256": "c49ab7360e45506ef869dd1e2e07116d5c772d7f77dace6cec1770081c16d415",
+  "model_runs_launched": false
+}
