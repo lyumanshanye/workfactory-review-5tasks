@@ -1,0 +1,14 @@
+{
+  "url": "https://apps.bea.gov/regional/zip/CAINC4.zip",
+  "retrieved_at": "2026-10-23T10:41:33.202036+00:00",
+  "last_modified": "Thu, 05 Feb 2026 17:50:56 GMT",
+  "member": "CAINC4__Footnotes.html",
+  "sha256": "a3f35ff70534dcd5ee1faf3420665547a6673e6d818fe756f258b6cfd880e19c",
+  "archive_sha256": "0de2d6308b4e6eb18ec70f438a70e354c35e909f3c343ec511580d5ddb5e81e9",
+  "matched_csv_member": "CAINC4__ALL_AREAS_1969_2024.csv",
+  "matched_csv_sha256": "61858e273cbd7dcfb2a9d374952cc65ef0f3cb4ce45eac5a7c851f291b6d0ceb",
+  "csv_identical_to_existing": true,
+  "source_transformed": false,
+  "publisher": "U.S. Bureau of Economic Analysis",
+  "archive_is_input": false
+}

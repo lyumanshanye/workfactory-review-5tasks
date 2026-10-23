@@ -1,0 +1,16 @@
+{
+  "name": "fdic_financials_supplement_official.csv",
+  "publisher": "Federal Deposit Insurance Corporation",
+  "url": "https://api.fdic.gov/banks/financials?filters=STALP%3A%28VT+OR+NH+OR+ME%29+AND+REPDTE%3A%5B20220331+TO+20250630%5D&fields=CERT%2CREPDTE%2CNAMEFULL%2CSTALP%2CASSET%2CDEP%2CLNLSGR%2CLNLSNET%2CNAASSET%2CNCLNLSR%2CNTLNLS%2CNTLNLSA%2CNTLNLSR%2CLNLSGR5%2CNETINCA%2CASSET5%2CRBC%2CRWAJT%2CROA%2CRBCRWAJ&sort_by=REPDTE&sort_order=ASC&limit=10000&format=csv",
+  "fetched_at": "2026-10-22T19:03:04.083500+00:00",
+  "bytes": 160717,
+  "sha256": "8466c3c3f42be002826ed94e5c2d3ce0873abb6c7b2c1c06dd2665b63e24090f",
+  "rows": 746,
+  "transformed": false,
+  "origin": "official_api_response",
+  "fresh_download": true,
+  "response_content_type": "text/csv; charset=utf-8",
+  "role": "missing_denominators_and_official_net_chargeoff_rate",
+  "request_limit": 10000,
+  "coverage_complete_for_original_keys": true
+}

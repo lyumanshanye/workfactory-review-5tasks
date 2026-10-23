@@ -1,0 +1,12 @@
+{
+  "name": "financial_definitions.yaml",
+  "origin": "direct_public_download",
+  "url": "https://api.fdic.gov/banks/docs/risview_properties.yaml",
+  "final_url": "https://api.fdic.gov/banks/docs/risview_properties.yaml",
+  "publisher": "FDIC",
+  "fetched_at": "2026-10-22T04:42:30.240502+00:00",
+  "bytes": 616633,
+  "sha256": "b257457e4e821d6a0d9f88ffc4e6e0da80e4ccf67fa394cadb21587b50b23d59",
+  "content_type": "text/yaml; charset=UTF-8",
+  "transformed": false
+}

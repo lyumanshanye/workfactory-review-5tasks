@@ -1,0 +1,50 @@
+[
+  {
+    "file": "FDIC_RMS_Manual_3.2_Loans.pdf",
+    "label": "FDIC_RMS_Manual_3.2_Loans.pdf",
+    "url": "https://www.fdic.gov/resources/supervision-and-examinations/examination-policies-manual/section3-2.pdf",
+    "attachment": true
+  },
+  {
+    "file": "OCC_Rating_Credit_Risk.pdf",
+    "label": "OCC_Rating_Credit_Risk.pdf",
+    "url": "https://www.occ.gov/publications-and-resources/publications/comptrollers-handbook/files/rating-credit-risk/pub-ch-rating-credit-risk.pdf",
+    "attachment": true
+  },
+  {
+    "file": "fdic_api_documentation.html",
+    "label": "FDIC 官方接口说明",
+    "url": "https://banks.data.fdic.gov/docs/",
+    "attachment": false
+  },
+  {
+    "file": "fdic_financials_VT_NH_ME_2022_2025.csv",
+    "label": "fdic_financials_VT_NH_ME_2022_2025.csv",
+    "url": "https://api.fdic.gov/banks/financials?filters=STALP:(VT%20OR%20NH%20OR%20ME)%20AND%20REPDTE:[20220331%20TO%2020250630]&fields=CERT,REPDTE,NAMEFULL,STALP,ASSET,DEP,LNLSNET,LNLSGR,LNRE,LNCI,LNCON,NTLNLS,P3ASSET,P9ASSET,NAASSET,EQ,EQV,RBCRWAJ,NIMY,ROA,ROE,ELNATRY,LNATRESR,NCLNLSR&sort_by=REPDTE&sort_order=ASC&limit=10000&format=csv",
+    "attachment": true
+  },
+  {
+    "file": "fdic_financials_supplement_official.csv",
+    "label": "fdic_financials_supplement_official.csv",
+    "url": "https://api.fdic.gov/banks/financials?filters=STALP%3A%28VT+OR+NH+OR+ME%29+AND+REPDTE%3A%5B20220331+TO+20250630%5D&fields=CERT%2CREPDTE%2CNAMEFULL%2CSTALP%2CASSET%2CDEP%2CLNLSGR%2CLNLSNET%2CNAASSET%2CNCLNLSR%2CNTLNLS%2CNTLNLSA%2CNTLNLSR%2CLNLSGR5%2CNETINCA%2CASSET5%2CRBC%2CRWAJT%2CROA%2CRBCRWAJ&sort_by=REPDTE&sort_order=ASC&limit=10000&format=csv",
+    "attachment": true
+  },
+  {
+    "file": "fdic_institutions_VT_NH_ME.csv",
+    "label": "fdic_institutions_VT_NH_ME.csv",
+    "url": "https://api.fdic.gov/banks/institutions?filters=STALP:(VT%20OR%20NH%20OR%20ME)&limit=10000&format=csv",
+    "attachment": true
+  },
+  {
+    "file": "financial_definitions.yaml",
+    "label": "financial_definitions.yaml",
+    "url": "https://api.fdic.gov/banks/docs/risview_properties.yaml",
+    "attachment": true
+  },
+  {
+    "file": "institution_definitions.yaml",
+    "label": "institution_definitions.yaml",
+    "url": "https://api.fdic.gov/banks/docs/institution_properties.yaml",
+    "attachment": true
+  }
+]

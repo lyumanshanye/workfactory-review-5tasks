@@ -1,0 +1,38 @@
+[
+  {
+    "file": "CAINC1__ALL_AREAS.csv",
+    "label": "CAINC1__ALL_AREAS.csv",
+    "url": "https://apps.bea.gov/regional/zip/CAINC1.zip",
+    "attachment": true
+  },
+  {
+    "file": "CAINC1__Footnotes.html",
+    "label": "BEA CAINC1 官方脚注（官方发布包）",
+    "url": "https://apps.bea.gov/regional/zip/CAINC1.zip",
+    "attachment": false
+  },
+  {
+    "file": "CAINC4__ALL_AREAS.csv",
+    "label": "CAINC4__ALL_AREAS.csv",
+    "url": "https://apps.bea.gov/regional/zip/CAINC4.zip",
+    "attachment": true
+  },
+  {
+    "file": "CAINC4__Footnotes.html",
+    "label": "BEA CAINC4 官方脚注（官方发布包）",
+    "url": "https://apps.bea.gov/regional/zip/CAINC4.zip",
+    "attachment": false
+  },
+  {
+    "file": "co-est2024-alldata.csv",
+    "label": "co-est2024-alldata.csv",
+    "url": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2024/counties/totals/co-est2024-alldata.csv",
+    "attachment": true
+  },
+  {
+    "file": "national_county2020.txt",
+    "label": "national_county2020.txt",
+    "url": "https://www2.census.gov/geo/docs/reference/codes2020/national_county2020.txt",
+    "attachment": true
+  }
+]
