@@ -1,0 +1,216 @@
+{
+  "rows": [
+    [
+      "可调整预算参数 / Adjustable Budget Parameters",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "参数 / Parameter",
+      "值 / Value",
+      "单位",
+      "回算范围 / 说明",
+      null,
+      null
+    ],
+    [
+      "批准预算上限 Budget cap (incl. reserve)",
+      53000,
+      "USD",
+      "0 – 100,000",
+      null,
+      null
+    ],
+    [
+      "票价调整系数 Fare adjustment factor",
+      1,
+      "×",
+      "0.5 – 2.0",
+      null,
+      null
+    ],
+    [
+      "应急储备比例 Reserve ratio",
+      0.05,
+      "%",
+      "0 – 20% of base subtotal",
+      null,
+      null
+    ],
+    [
+      "机票压力倍数 Airfare stress multiplier",
+      1.2,
+      "×",
+      "题面固定: 调整后票价 ×1.2",
+      null,
+      null
+    ],
+    [
+      "住宿税率 Lodging tax rate (internal est.)",
+      0.12,
+      "%",
+      "题面内部估算口径, 非当地实际税率",
+      null,
+      null
+    ],
+    [
+      "11/29 政府提供早餐 Nov-29 govt breakfast (1=是/0=否)",
+      0,
+      "1/0",
+      "改为1=是: 不新增采购费, 触发M&IE早餐扣减",
+      null,
+      null
+    ],
+    [
+      "抵达日期 Arrival date",
+      "2026-11-28 00:00:00",
+      "date",
+      "可调, 须完整参训",
+      null,
+      null
+    ],
+    [
+      "返程日期 Return date",
+      "2026-12-02 00:00:00",
+      "date",
+      "可调, 须完整参训",
+      null,
+      null
+    ],
+    [
+      "注册费/人 Registration per person",
+      180,
+      "USD",
+      "含11/29,11/30,12/1午餐",
+      null,
+      null
+    ],
+    [
+      "参训人数方案A Headcount option A",
+      18,
+      "人",
+      "固定候选",
+      null,
+      null
+    ],
+    [
+      "参训人数方案B Headcount option B",
+      24,
+      "人",
+      "固定候选",
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "M&IE 分项 (GSA FY2025 M&IE Breakdown, 适用 $92 档; FY2027分项待核对)",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "M&IE 全日档 M&IE full-day tier",
+      92,
+      "USD",
+      null,
+      null,
+      null
+    ],
+    [
+      "早餐扣减 Breakfast deduction",
+      23,
+      "USD",
+      null,
+      null,
+      null
+    ],
+    [
+      "午餐扣减 Lunch deduction",
+      26,
+      "USD",
+      null,
+      null,
+      null
+    ],
+    [
+      "晚餐扣减 Dinner deduction",
+      38,
+      "USD",
+      null,
+      null,
+      null
+    ],
+    [
+      "杂费(下限) Incidental floor",
+      5,
+      "USD",
+      null,
+      null,
+      null
+    ],
+    [
+      "首末日比例 First/last-day factor",
+      0.75,
+      "×",
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "提示 / Reminder: 修改上述参数后, Daily 与 Options 自动更新; 交付的 Word / CSV / PPT 为当前参数快照, 参数变更后须重新核对并重新导出相应文件, 避免误用旧结论。",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  ],
+  "total_rows": 26,
+  "total_columns": 6,
+  "column_limit": 60,
+  "truncated": false
+}

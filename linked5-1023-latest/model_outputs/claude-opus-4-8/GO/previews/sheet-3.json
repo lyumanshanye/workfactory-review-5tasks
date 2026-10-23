@@ -1,0 +1,280 @@
+{
+  "rows": [
+    [
+      "资料依据、查询日期与预算口径 / Sources, query dates, pricing basis",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "项目 Item",
+      "数值/口径 Value",
+      "来源 Source",
+      "查询/版本日期 Date",
+      "适用条件/备注 Conditions & notes",
+      null
+    ],
+    [
+      "行程 Itinerary",
+      "抵达 2026-11-28, 返程 2026-12-02",
+      "题面(培训11/29–12/1)+提前一天抵/次日返",
+      "2026-10-23",
+      "住宿4夜(11/28–12/1); 行程日5天(11/28–12/2); 首末日M&IE 75%",
+      null
+    ],
+    [
+      "出发机场 Origin airport",
+      "DCA(里根机场)为主",
+      "USDA HQ 1400 Independence Ave SW 距DCA约4.8英里(~15min); IAD约26mi, BWI约32mi(45–60min)",
+      "2026-10-23",
+      "DCA接驳成本/时间最低; 若无合适直达再比IAD/BWI",
+      null
+    ],
+    [
+      "机票 Chicago ORD",
+      "RT $271.00 (DCA↔ORD, American 直飞)",
+      "Google Flights (google.com/travel/flights)",
+      "2026-10-23",
+      "往返 11/28–12/2 最低经济舱总价含税费; 非GSA city-pair合同价, 实订以ETS合同价为准",
+      null
+    ],
+    [
+      "机票 Denver DEN",
+      "RT $437.00 (DCA↔DEN, Frontier 直飞)",
+      "Google Flights",
+      "2026-10-23",
+      "同上; Frontier基础经济, 行李/选座另计",
+      null
+    ],
+    [
+      "机票 Phoenix PHX",
+      "RT $473.00 (DCA↔PHX, 1中转JFK; 直飞American约$546)",
+      "Google Flights",
+      "2026-10-23",
+      "同上; 取最低价, 直飞略高",
+      null
+    ],
+    [
+      "机票 Boston BOS",
+      "RT $322.00 (DCA↔BOS, Delta 直飞)",
+      "Google Flights",
+      "2026-10-23",
+      "同上",
+      null
+    ],
+    [
+      "机票 Seattle SEA",
+      "RT $643.00 (DCA↔SEA, Frontier 1中转DEN; 直飞Alaska约$977)",
+      "Google Flights",
+      "2026-10-23",
+      "同上; 当前票价偏高(页面提示 Prices high)",
+      null
+    ],
+    [
+      "住宿上限 Lodging cap",
+      "Chi 232/232/232/148; Den 170; Phx 165; Bos 213; Sea 188 (每夜)",
+      "GSA FY2027 Per Diem (FY2027_PerDiemRates_Validated090126.xlsx)",
+      "Validated 2026-09-01",
+      "按入住日所属季节; 芝加哥12/1起降至148; 为可报销上限, 实订须≤上限且含早餐",
+      null
+    ],
+    [
+      "M&IE 率",
+      "全部候选地 $92/日; 首末日 $69",
+      "GSA FY2027 Per Diem file",
+      "Validated 2026-09-01",
+      "首末日75% (FTR 301-11.101)",
+      null
+    ],
+    [
+      "M&IE 分项",
+      "早$23/午$26/晚$38/杂$5",
+      "GSA FY2025 M&IE Breakdown (GSA_FY2025_MIE_Breakdown.docx), $92档",
+      "FY2025",
+      "适用于$92档; FY2027分项官方表待核对(待核实)",
+      null
+    ],
+    [
+      "供餐扣减 Meal deductions",
+      "11/28晚;11/29午;11/30午;12/1午+晚;12/2午",
+      "题面(注册含3午餐; 机构供11/28晚/12/1晚/12/2午) + FTR 301-11.18 / RD 2036-A §2036.11(d)",
+      "2026-10-23",
+      "酒店免费早餐不扣减(FTR 301-11.17); 茶歇(咖啡/水果)为light refreshments不扣减(301-74.7/.21)",
+      null
+    ],
+    [
+      "每人 M&IE 合计",
+      "$234.00 (默认; 11/29政府早餐=是则$211.00)",
+      "逐日计算见 Daily",
+      "2026-10-23",
+      "扣减后不低于杂费下限$5/日(301-11.18)",
+      null
+    ],
+    [
+      "住宿税 Lodging tax",
+      "可报销住宿×12%",
+      "题面内部估算口径",
+      "n/a",
+      "非当地实际税率; 仅内部预算估算",
+      null
+    ],
+    [
+      "注册费 Registration",
+      "$180/人",
+      "题面",
+      "n/a",
+      "含11/29,11/30,12/1午餐",
+      null
+    ],
+    [
+      "本地交通 Local transit",
+      "Chi70/Den80/Phx50/Bos50/Sea65 (每人往返估算)",
+      "内部估算: HQ↔DCA + 目的地机场↔市区往返(公共交通/出租均值)",
+      "2026-10-23",
+      "估算非正式报价, 批准前需实际核定(待核实): ORD~18mi,DEN~25mi,PHX~4mi,BOS~4mi,SEA~15mi",
+      null
+    ],
+    [
+      "应急储备 Reserve",
+      "基础费用小计 ×5%",
+      "题面",
+      "n/a",
+      "适用于基础(可计算)小计; 纳入待询价后须重算",
+      null
+    ],
+    [
+      "预算上限 Cap",
+      "$53,000 (含储备)",
+      "题面",
+      "n/a",
+      "各方案含储备总额不得超过",
+      null
+    ],
+    [
+      "场地/会议室 Venue",
+      "待询价 TBD",
+      "尚无报价; 资质/采购/资金未核验(题面)",
+      "pending",
+      "FTR 301-74.2(b) room hire; 须FEMA核准设施 FTR 301-74.10 / RD 2036-A §2036.74(a)",
+      null
+    ],
+    [
+      "机构供餐费 Catered meals",
+      "待询价 TBD",
+      "尚无餐饮报价",
+      "pending",
+      "11/28晚/12/1晚/12/2午; 须竞争性采购(RD 2036-A §2036.74(b)(7))",
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "合规依据 / Compliance references (区分法规要求与内部建议):",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "FTR 41 CFR 301-11.17: 酒店免费早餐与承运人供餐不减per diem。",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "FTR 41 CFR 301-11.18: 政府供餐/注册含餐须按GSA分项扣减M&IE; 首末日从降后(75%)额扣全额; 不低于杂费额。",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "FTR 41 CFR 301-11.100 / .101: 住宿实报不超当地上限; 首末日M&IE为75%。",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "FTR 41 CFR 301-74.2/.4/.5: 会议成本须含差旅/per diem/会议室/地面交通等; 比较须用既定per diem率; 选址以最小成本为原则。",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "FTR 41 CFR 301-74.7/.21: 可提供茶歇(light refreshments), 不扣M&IE。",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "RD Instruction 2036-A (生效 2024-07-19) §2036.74(a): 须对≥3个地理上分散地点做成本比较; 禁止拆分事件/采购。",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "RD Instruction 2036-A §2036.74(b): 机构总成本>$20,000的会议/培训须经 OCFO 事前批准(本预算约$42k, 适用) — 阻断性审批。",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "RD Instruction 2036-A §2036.11(d): 政府供餐按301-11.18扣减; 会议供餐者不得另报同餐。",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "RD Instruction 2036-A 交通: 须经 e-Gov(ETS)提前≥14天订票, 优先 contract city-pair 合同价(本工作簿票价为市场最低价估算, 实订以合同价为准 — 待核实)。",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "RD Instruction 2036-A 住宿: 优先GSA合同/FEMA消防合规酒店(Hotel-Motel Fire Safety Act)。",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "内部建议(非法规): 本地交通、场地与供餐为估算/待询价, 须在批准前以实际报价替换并重算。",
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  ],
+  "total_rows": 34,
+  "total_columns": 6,
+  "column_limit": 60,
+  "truncated": false
+}

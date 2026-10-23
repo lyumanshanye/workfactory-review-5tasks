@@ -1,0 +1,21 @@
+{
+  "type": "xlsx",
+  "sheets": [
+    {
+      "name": "Parameters",
+      "href": "model_outputs/claude-opus-4-8/GO/previews/sheet-0.json"
+    },
+    {
+      "name": "Daily",
+      "href": "model_outputs/claude-opus-4-8/GO/previews/sheet-1.json"
+    },
+    {
+      "name": "Options",
+      "href": "model_outputs/claude-opus-4-8/GO/previews/sheet-2.json"
+    },
+    {
+      "name": "Sources",
+      "href": "model_outputs/claude-opus-4-8/GO/previews/sheet-3.json"
+    }
+  ]
+}

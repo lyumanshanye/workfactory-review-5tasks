@@ -1,0 +1,35 @@
+{
+  "run_id": "go-rd-ppt-opus48-001",
+  "model": "claude-opus-4-8",
+  "files": [
+    {
+      "name": "conference_budget.xlsx",
+      "href": "model_outputs/claude-opus-4-8/GO/conference_budget.xlsx",
+      "bytes": 25322,
+      "description": "Claude 独立作答 · 预算工作簿",
+      "sha256": "fedbf33751d6aebef13191bbbf1d368e1ba2a38969d7d583d40957acdb17ebf6"
+    },
+    {
+      "name": "approval_brief.docx",
+      "href": "model_outputs/claude-opus-4-8/GO/approval_brief.docx",
+      "bytes": 40001,
+      "description": "Claude 独立作答 · 审批建议",
+      "sha256": "3731f7dc4d894449f45f1273cec21c3b1ab8143bad683f07fd2d0542d0f424a8"
+    },
+    {
+      "name": "approval_register.csv",
+      "href": "model_outputs/claude-opus-4-8/GO/approval_register.csv",
+      "bytes": 2515,
+      "description": "Claude 独立作答 · 审批与补证登记",
+      "sha256": "34de0846303906b62a64a75cbd780f768ffa8b01374a77939a4c3b4a12fe3360"
+    },
+    {
+      "name": "travel_evidence.pptx",
+      "href": "model_outputs/claude-opus-4-8/GO/travel_evidence.pptx",
+      "bytes": 4361652,
+      "description": "Claude 独立作答 · 航班及住宿截图证据",
+      "sha256": "4e5ff0bd74e6072d2c45839b175a498459d4ffdc49c233505d0e851a1b9b8fdc"
+    }
+  ],
+  "original_bytes_unchanged": true
+}

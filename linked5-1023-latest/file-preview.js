@@ -21,7 +21,7 @@
     document.title=(labels[domain]?labels[domain]+' · ':'')+name+' · 在线预览';document.getElementById('preview-title').textContent=name;document.getElementById('preview-path').textContent=(labels[domain]?labels[domain]+' · '+domain+' / ':'')+path;
     if(labels[domain])document.querySelector('.preview-brand').href='./?domain='+domain+'#inputs';
     const download=document.getElementById('preview-download');download.href=url.href;download.download=name;
-    async function json(href){const target=new URL(href,base);target.searchParams.set('v','colleague-20261022');const r=await fetch(target);if(!r.ok)throw Error('文件加载失败（HTTP '+r.status+'）');return r.json();}
+    async function json(href){const target=new URL(href,base);target.searchParams.set('v','claude-output-20261023');const r=await fetch(target);if(!r.ok)throw Error('文件加载失败（HTTP '+r.status+'）');return r.json();}
     function table(rows,header=false,total){
       const controls=el('div','preview-controls'),search=el('input','preview-search');search.type='search';search.placeholder='筛选当前预览中的内容';search.setAttribute('aria-label','筛选表格');controls.append(search);
       const wrap=el('div','preview-table-wrap'),pagination=el('div','preview-pagination');let page=0,filtered=rows;
@@ -79,6 +79,10 @@
       if(data.type==='docx'){
         note('文档内容预览：按原文顺序展示段落与表格；原始排版请下载 DOCX 查看。');const doc=el('article','preview-doc');
         for(const block of data.blocks){if(block.type==='table'){const wrap=el('div','preview-table-wrap'),t=el('table');for(const row of block.rows){const tr=el('tr');row.forEach(c=>tr.append(el('td','',c??'')));t.append(tr);}wrap.append(t);doc.append(wrap);}else{const heading=String(block.style||'').match(/(?:Heading|标题)\s*(\d)/i);doc.append(el(heading?'h'+Math.min(3,Number(heading[1])):'p','',block.text||'\u00a0'));}}root.append(doc);
+      }else if(data.type==='pptx'){
+        note('原始 PPT 逐页排版预览，截图与版式来自模型交付文件；原 PPT 可下载。');
+        const pager=el('div','preview-pagination'),wrap=el('div','preview-pdf-pages'),img=el('img');img.style.cssText='display:block;width:100%;height:auto;background:white';wrap.append(img);root.append(pager,wrap);let page=0;
+        function show(){img.src=new URL(data.pages[page].href,base).href;img.alt=name+' · 第 '+(page+1)+' 页';const prev=btn('← 上一页',()=>{page--;show();}),next=btn('下一页 →',()=>{page++;show();});prev.disabled=page===0;next.disabled=page===data.pages.length-1;pager.replaceChildren(prev,el('span','','第 '+(page+1)+' / '+data.pages.length+' 页'),next);}show();
       }else if(data.type==='xlsx'){
         const tabs=el('div','preview-tabs');tabs.setAttribute('role','tablist');root.append(tabs);const body=el('div');root.append(body);let serial=0;
         async function select(sheet,index){const current=++serial;[...tabs.children].forEach((b,i)=>b.setAttribute('aria-selected',String(i===index)));body.textContent='正在加载工作表…';const values=await json(sheet.href);if(current!==serial)return;body.replaceChildren();const keep=[...root.children];for(const child of keep)if(child!==tabs&&child!==body)child.remove();if(values.truncated)note('此表共 '+values.total_rows+' 行、'+values.total_columns+' 列；在线预览前 '+values.rows.length+' 行、最多 '+(values.column_limit||50)+' 列。完整数据请下载原文件。');else note('工作表：'+sheet.name+' · '+values.total_rows+' 行、'+values.total_columns+' 列。公式按原式显示，未重算。');table(values.rows,false,values.total_rows);body.remove();}

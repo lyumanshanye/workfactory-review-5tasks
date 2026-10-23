@@ -1,0 +1,212 @@
+{
+  "type": "docx",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "集中培训会务 — 审批建议 (Approval Brief)"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "USDA Rural Development · 培训 2026-11-29 至 12-01 · 出发地 USDA总部(1400 Independence Ave SW) · 证据查询日 2026-10-23"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "1. 建议 (Recommendation)"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "推荐: Phoenix, AZ (PHX) — 24 人。含储备总额 US$42,240.24, 为5个候选地24人方案中最低, 且≤批准上限 US$53,000。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "备选: Denver, CO (DEN) — 24 人, 含储备总额 US$42,653.52 (次低)。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "决策规则: 在符合预算与差旅规定前提下优先更多参训者(24>18); 同人数取含储备总额最低; 完全并列按城市英文名。全部5地24人方案在基础口径下均≤$53k, 故优先选24人、取最低总额者 Phoenix。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "行程: 2026-11-28 抵达、12-02 返程(提前1天/次日返), 住宿4夜, 行程日5天; 主用机场 DCA(里根), 距总部约4.8英里、接驳最省时省费。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "2. 关键金额 (每人与方案, USD)"
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          "方案(24人)",
+          "每人小计",
+          "含储备总额",
+          "≤$53,000",
+          "+20%机票后"
+        ],
+        [
+          "Phoenix (推荐)",
+          "1,676.20",
+          "42,240.24",
+          "是",
+          "44,624.16"
+        ],
+        [
+          "Denver (备选)",
+          "1,692.60",
+          "42,653.52",
+          "是",
+          "44,856.00"
+        ],
+        [
+          "Chicago",
+          "1,700.28",
+          "42,847.06",
+          "是",
+          "44,212.90"
+        ],
+        [
+          "Boston",
+          "1,740.24",
+          "43,854.05",
+          "是",
+          "45,476.93"
+        ],
+        [
+          "Seattle",
+          "1,964.24",
+          "49,498.85",
+          "是",
+          "52,739.57"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "推荐方案每人构成: 机票$473.00 + 住宿(4夜@GSA$165)$660.00 + 住宿税12%$79.20 + M&IE$234.00 + 注册费$180.00 + 本地交通(估算)$50.00 = $1,676.20。24人基础小计$40,228.80, 储备5%$2,011.44, 总额$42,240.24, 对$53k余量$10,759.76。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "18人方案各城市含储备总额更低(见工作簿 Options 表), 若最终核减人数仍在预算内。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "3. 行程依据与计价口径 (可追溯来源)"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "机票: Google Flights 往返(DCA)最低经济舱含税总价, 查询2026-10-23 — ORD $271 / BOS $322 / DEN $437 / PHX $473(直飞$546) / SEA $643(直飞$977)。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "住宿: 按 GSA FY2027 per diem 上限(可报销上限)计, 每人单间含早 — Phoenix $165、Denver $170、Seattle $188、Boston $213、Chicago $232(11/28–30)及$148(12/1); 住宿税按可报销额×12%(内部估算口径, 非当地实际税率)。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "M&IE: 各候选地$92/日, 首末日75%($69)(FTR 301-11.101); 按FTR 301-11.18扣减注册含午餐(11/29·11/30·12/1)与机构供餐(11/28晚·12/1晚·12/2午)后, 每人$234.00; 酒店免费早餐不扣(301-11.17), 茶歇(咖啡/水果)不扣(301-74.7/.21)。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "注册费$180/人(含3天午餐); 本地交通为机场接驳往返内部估算(待核定)。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "选址依据: FTR 301-74.5(用既定per diem率比较、最小成本选址)与 RD Instruction 2036-A(生效2024-07-19)§2036.74(a)(≥3个地理分散地点成本比较)。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "4. 机票上涨20%时的应对"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "在调整后票价再涨20%情景下, 推荐 Phoenix 24人升至 US$44,624.16(余量$8,375.84), 仍稳健; 全部24人方案仍≤$53k。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "Seattle 24人升至 US$52,739.57, 余量极小且未含场地/供餐, 风险最高, 不建议。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "应对: ①维持推荐 Phoenix; ②订票经 e-Gov(ETS)提前≥14天锁定, 优先 GSA city-pair 合同价; ③若实际票价显著高于估算, 在$10,759.76余量内吸收或按规核减人数至18人(Phoenix 18人仅$31,680.18)。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "5. 执行条件与前置审批 (批准前须完成)"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "RD 2036-A §2036.74(b): 机构总成本>$20,000 的培训须 OCFO 事前批准(本预算约$42k适用), 并提交使命论证、人数论证、详细成本分析、竞争性采购证明等。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "培训场地/会议室租金 与 机构供餐(3餐) 尚无报价, 属待询价; 须取得合规(FEMA消防, FTR 301-74.10)且竞争性采购报价后计入$10,759.76余量并重算储备与总额、复核≤$53k。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "GSA city-pair 合同票价经 ETS 复核(本件票价为市场最低估算); 酒店须为FEMA核准/消防合规且房价≤per diem含早。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "资金可用性、酒店资质与采购安排尚未核验, 须经预算官/采购确认。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "6. 待核实事项 (内部建议, 非法规结论)"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "本地交通为估算, 待各地机场接驳实际核定; FY2027 M&IE官方分项表待核对(现用FY2025 $92档分项)。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "参训名单及各自官方驻地待确认(影响per diem 50英里规则及机票口径); 各参训者参会审批按USDA模板另行办理(模板仅作信息项参考, 不替代主办审批)。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Google Hotels 市场截图以CN¥显示(服务器地理定位所致), 仅作房源可得性佐证; 预算住宿口径以 GSA per diem(USD) 为准。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "7. 参数快照与提示"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "本建议为交付参数快照: 票价系数=1、储备=5%、11/29政府早餐=否、抵/返=2026-11-28/12-02、上限=$53,000。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "工作簿(conference_budget.xlsx)中上述参数可调, 各方案费用、是否超预算及推荐将自动更新; 参数变更后须重新核对并重新导出本Word、CSV与PPT, 避免将旧文档误作当前结论。"
+    }
+  ]
+}
