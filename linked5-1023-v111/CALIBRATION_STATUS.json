@@ -1,6 +1,6 @@
 {
   "version": "1.1.1",
-  "updated_at": "2026-10-23T07:36:43.337795+00:00",
+  "updated_at": "2026-10-23T07:41:48.101379+00:00",
   "target_percent": {
     "gpt": 85,
     "qwen": 70
@@ -15,18 +15,18 @@
       75
     ]
   },
-  "scored": 9,
+  "scored": 10,
   "scored_by_model": {
-    "gpt": 4,
+    "gpt": 5,
     "qwen": 5
   },
   "observed_mean_percent": {
     "gpt": 100.0,
     "qwen": 81.93394
   },
-  "all_ten_scored": false,
+  "all_ten_scored": true,
   "within_pilot_target_bands": false,
-  "status": "calibration_running",
+  "status": "pilot_targets_not_met",
   "single_fresh_attempt_per_model_task": true,
   "transport_retry_policy": "First valid capture only; all infrastructure-invalid attempts retained, no valid low score retried.",
   "expert_gold_confirmed": false,
