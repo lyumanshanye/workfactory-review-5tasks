@@ -4,13 +4,14 @@ header{border-bottom:1px solid #cbd4ce;background:#f3f6f4;padding:22px max(20px,
 main{max-width:1200px;margin:auto;padding:24px 20px 70px}h1{font-size:26px;line-height:1.35}h2{font-size:22px;margin-top:34px}h3{font-size:18px}
 a{color:#176c50;text-underline-offset:3px}nav{display:flex;flex-wrap:wrap;gap:16px}p,li,td{overflow-wrap:anywhere}
 table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;border-bottom:1px solid #dce2de;padding:9px 12px;vertical-align:top}th{background:#f3f6f4}
+.task-list{min-width:1000px}.task-list th:first-child{width:110px}.task-list th:nth-child(2){width:330px}
 .scroll{overflow:auto;max-width:100%;max-height:650px}section{border-top:1px solid #cbd4ce;margin-top:30px;padding-top:8px}
 details{border-bottom:1px solid #dce2de;padding:12px 0}summary{cursor:pointer;font-weight:600;overflow-wrap:anywhere}details:not([open])>:not(summary){display:none}code{font-size:13px;background:#f3f6f4;overflow-wrap:anywhere}
 .state{color:#78541a;background:#fff4d9;border-left:4px solid #c79943;padding:12px 16px}.meta{color:#58665f;font-size:14px}
 .preview{display:block;max-width:100%;height:auto;border:1px solid #dce2de;margin:16px 0}.download{display:flex;flex-wrap:wrap;gap:12px}
 pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;background:#f3f6f4;padding:16px}iframe{width:100%;height:680px;border:1px solid #cbd4ce}
 @media(max-width:600px){h1{font-size:22px}th,td{padding:8px}main{padding:16px 12px}iframe{height:480px}}
-</style></head><body><header><nav><a href="../index.html">五领域题目</a><a href="#brief">题面</a><a href="#inputs">输入原件</a><a href="#outputs">参考产物</a><a href="#models">模型产物</a><a href="#rubric">Rubric</a><a href="#sources">来源</a></nav><h1>县域收入增长研究的发布复核</h1><p class="meta">DA-1023-001 · 数据分析 · 2186e947e8a88063</p></header><main><p class="state">审阅草稿。输入隔离、参考复制入口及文档转换已通过；三模型解题、Gold评分与难度校准尚未完成。</p><section id="brief"><h1>县域收入增长研究的发布复核</h1>
+</style></head><body><header><nav><a href="../index.html">五领域题目</a><a href="#quality">本轮审阅</a><a href="#brief">题面</a><a href="#inputs">输入原件</a><a href="#outputs">参考产物</a><a href="#models">模型产物</a><a href="#rubric">Rubric</a><a href="#sources">来源</a></nav><h1>县域收入增长研究的发布复核</h1><p class="meta">DA-1023-001 · 数据分析 · 题包 2186e947e8a88063 · 审阅 2026-10-23</p></header><main><p class="state">审阅草稿。GPT、Qwen各已有本题完整产物，待内容评分；Opus运行、Gold验收和实测难度尚未完成。</p><section id="quality"><h2>本轮审阅</h2><p><strong>当前完成度与可核验性较稳</strong></p><p>四份官方材料围绕县域收入发布复核形成关联，比较范围、排除、排名和人口影响有明确规则，主要数值结果可以独立重算。</p><p><strong>待完成：</strong>当前GPT产物的已核验部分表现较好，设计上的计算工作量不能证明模型难度；Gold叙述、历史地域可比性及评分验收仍需完成。</p><p class="meta">设计判断，非实测难度等级或正式评分。<a href="../delivery-review.html">交付合规审查</a></p></section><section id="brief"><h1>县域收入增长研究的发布复核</h1>
 <p>你是区域经济研究组的数据分析负责人。团队准备发布2020至2024年县域收入变化简报，需要你先判断哪些地区可可靠比较，以及人口口径和地域版本差异会不会改变对增长领先地区的判断。请使用随附BEA收入、收入分项、Census人口和县代码原件完成分析。这是新拟研究委托，不代表这些机构已经认可本次比较。</p>
 <p>研究负责人希望看到两个彼此关联的结果：一份足以复核的县域比较数据集，以及一份能够决定哪些结论可以发布、哪些应暂缓的说明。请关注实际业务影响：同一个“人均收入增长领先”的结论，在合理更换人口来源或处理无法直接比较的地区后是否仍成立；居民收入来源和人口变化分别解释了什么。</p>
 <h2>交付物</h2>

@@ -1,0 +1,39 @@
+{
+  "snapshot": "2186e947e8a88063",
+  "reviewed_on": "2026-10-23",
+  "scope": "editorial_design_review_not_measured_difficulty",
+  "overall_preferred": "FIN",
+  "delivery_maturity_preferred": "DA",
+  "comparison": "综合考虑任务设计、专业判断和预期挑战，优先看金融题。只看当前题包的清晰度、可核验性与完成度，数据分析题更稳。三模型成绩尚未齐全，这不是实测难度排名。",
+  "compliance_report": "research/delivery_compliance_review_20261023.md",
+  "tasks": {
+    "FIN-1023-001": {
+      "verdict": "综合考虑难度，优先审阅",
+      "strength": "从真实银行季度数据、官方指标定义和审查手册出发，要求完成组合变化归因、竞争性解释、机构筛选和尽调行动，计算结果还要支持管理决策。",
+      "remaining": "参考答案的组合经营解释和逐家90天行动仍需补强；部分综合评分项需要拆分或明确分档。尚无完整三模型成绩，不能认定实测难度达标。",
+      "review_note": "research/manual_gold_fin_review.md"
+    },
+    "DA-1023-001": {
+      "verdict": "当前完成度与可核验性较稳",
+      "strength": "四份官方材料围绕县域收入发布复核形成关联，比较范围、排除、排名和人口影响有明确规则，主要数值结果可以独立重算。",
+      "remaining": "当前GPT产物的已核验部分表现较好，设计上的计算工作量不能证明模型难度；Gold叙述、历史地域可比性及评分验收仍需完成。"
+    },
+    "LAW-1023-002": {
+      "verdict": "具体用途判断有价值，论证与评分需补强",
+      "strength": "围绕真实判决及法条，区分裁判范围、不同作品用途和未决事实，要求给出有边界的授权建议及相反论证。",
+      "remaining": "参考对具体行为和权利的映射、相反论证深度仍不足；可接受替代说明有跨领域模板残留。",
+      "review_note": "research/manual_gold_law_review.md"
+    },
+    "GO-1023-001": {
+      "verdict": "交接目标明确，来源口径仍待核实",
+      "strength": "采购付款复核要求保留合同版本、时间截点和证据缺口，并将重大未决事项转化为追查与交接安排。",
+      "remaining": "付款原件中不同日期粒度记录的官方关系仍未核实；不能将缺少规则依据本身当作任务难度，或要求猜出唯一年度总额。"
+    },
+    "GA-1023-001": {
+      "verdict": "规则依赖丰富，冻结参考的测试方案需补强",
+      "strength": "官方配置、宏与实现共同支持升级路径、条件能力和测试设计，需要从静态证据推导待验证问题。",
+      "remaining": "冻结参考的实验参数、问题专属判定和优先顺序理由不足。页面另附待审修订候选，尚未替换冻结参考，也未获批Gold。",
+      "review_note": "research/manual_gold_ga_review.md"
+    }
+  }
+}
