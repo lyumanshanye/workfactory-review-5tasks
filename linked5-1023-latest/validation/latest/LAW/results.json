@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "controls": [
+    {
+      "control": "live_positive",
+      "passed": true,
+      "capability_groups": {
+        "identity_key_uncertainty": true,
+        "notice_and_attributed_clock": true,
+        "scale_snapshot_and_invalid_input": true
+      },
+      "report_sha256": "868da068fe2af04832f4c88f91080d5a52395260a5c588cdd02adfff2d751dd9"
+    },
+    {
+      "control": "all_values",
+      "passed": true,
+      "exit_code": 1,
+      "capability_groups": {
+        "identity_key_uncertainty": false,
+        "notice_and_attributed_clock": false,
+        "scale_snapshot_and_invalid_input": false
+      },
+      "elapsed_sec": 42.8
+    },
+    {
+      "control": "breaching_employee_starts_clock",
+      "passed": true,
+      "exit_code": 1,
+      "capability_groups": {
+        "identity_key_uncertainty": true,
+        "notice_and_attributed_clock": false,
+        "scale_snapshot_and_invalid_input": true
+      },
+      "elapsed_sec": 43.1
+    }
+  ],
+  "source_sha256": "a32eefbc43c36715521035acdc3a97bda37ead65678e3eb9a0f66fa9b249262f",
+  "role": "Operation-checker controls; not native grade"
+}

@@ -1,0 +1,65 @@
+{
+  "model_answers_selected_by_score": false,
+  "selections": [
+    {
+      "provider": "gpt",
+      "domain": "GO",
+      "source": "blind_runs/go-wording-regrade-001/gpt/GO",
+      "selection_reason": "Unchanged original answer, clarified GO007 rubric only"
+    },
+    {
+      "provider": "gpt",
+      "domain": "FIN",
+      "source": "blind_runs/difficulty-v11-transport-retry-001/gpt/FIN",
+      "selection_reason": "First valid independent capture; only transport-invalid attempts can be replaced"
+    },
+    {
+      "provider": "gpt",
+      "domain": "LAW",
+      "source": "blind_runs/difficulty-v11-001/gpt/LAW",
+      "selection_reason": "First valid independent capture; only transport-invalid attempts can be replaced"
+    },
+    {
+      "provider": "gpt",
+      "domain": "DA",
+      "source": "blind_runs/difficulty-v11-001/gpt/DA",
+      "selection_reason": "First valid independent capture; only transport-invalid attempts can be replaced"
+    },
+    {
+      "provider": "gpt",
+      "domain": "GA",
+      "source": "blind_runs/difficulty-v11-transport-retry-001/gpt/GA",
+      "selection_reason": "First valid independent capture; only transport-invalid attempts can be replaced"
+    },
+    {
+      "provider": "qwen",
+      "domain": "GO",
+      "source": "blind_runs/go-wording-regrade-001/qwen/GO",
+      "selection_reason": "Unchanged original answer, clarified GO007 rubric only"
+    },
+    {
+      "provider": "qwen",
+      "domain": "FIN",
+      "source": "blind_runs/difficulty-v11-001/qwen/FIN",
+      "selection_reason": "First valid independent capture; only transport-invalid attempts can be replaced"
+    },
+    {
+      "provider": "qwen",
+      "domain": "LAW",
+      "source": "blind_runs/difficulty-v11-001/qwen/LAW",
+      "selection_reason": "First valid independent capture; only transport-invalid attempts can be replaced"
+    },
+    {
+      "provider": "qwen",
+      "domain": "DA",
+      "source": "blind_runs/difficulty-v11-001/qwen/DA",
+      "selection_reason": "First valid independent capture; only transport-invalid attempts can be replaced"
+    },
+    {
+      "provider": "qwen",
+      "domain": "GA",
+      "source": "blind_runs/difficulty-v11-001/qwen/GA",
+      "selection_reason": "First valid independent capture; only transport-invalid attempts can be replaced"
+    }
+  ]
+}

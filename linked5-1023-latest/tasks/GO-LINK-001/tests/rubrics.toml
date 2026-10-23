@@ -1,0 +1,115 @@
+[judge]
+judge = "claude-code"
+prompt_template = "prompt.md"
+model = "qwen3.7-plus"
+timeout = 7200
+mode = "individual"
+weight = 1.0
+
+[[criterion]]
+id = "GO001"
+name = "GO001"
+weight = 4.052632
+type = "binary"
+description = "从GSA原始网页定位真实费率或M&IE文件引用，且说明其在预算中的用途。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+
+[[criterion]]
+id = "GO002"
+name = "GO002"
+weight = 5.789474
+type = "binary"
+description = "三城市逐日按县、季节、FY2025/FY2026正确匹配费率，提供两年原表行号。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+
+[[criterion]]
+id = "GO003"
+name = "GO003"
+weight = 5.789474
+type = "binary"
+description = "住宿按实际报价而非上限计费，四晚正确，12%税另计且不突破可报销基础。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+
+[[criterion]]
+id = "GO004"
+name = "GO004"
+weight = 5.789474
+type = "binary"
+description = "首末日M&IE先按75%计算再扣整份政府供餐金额，保留杂费下限；其他日供餐扣减正确。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+
+[[criterion]]
+id = "GO005"
+name = "GO005"
+weight = 4.052632
+type = "binary"
+description = "酒店免费早餐及茶歇不误扣；政府供餐日期和餐别全部使用。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+
+[[criterion]]
+id = "GO006"
+name = "GO006"
+weight = 5.789474
+type = "binary"
+description = "六方案人数、机票、当地交通、注册和固定场地费不重复/遗漏，基础总额准确到分。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+
+[[criterion]]
+id = "GO007"
+name = "GO007"
+weight = 5.789474
+type = "binary"
+description = "5%储备与53000预算正确比较，先人数后成本的选址/人数决定正确。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+
+[[criterion]]
+id = "GO008"
+name = "GO008"
+weight = 4.052632
+type = "binary"
+description = "机票加20%的六方案压力预算和可执行超限措施正确。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+
+[[criterion]]
+id = "GO009"
+name = "GO009"
+weight = 4.052632
+type = "binary"
+description = "解释跨财政年度版本选择及本次实际费率是否变化，不凭版本变化推定涨价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+
+[[criterion]]
+id = "GO010"
+name = "GO010"
+weight = 4.052632
+type = "binary"
+description = "审批登记覆盖授权、住宿安全、采购和资金确认，含角色、证据、期限和阻断状态，不假称已审批。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+
+[[criterion]]
+id = "GO011"
+name = "GO011"
+weight = 1.736842
+type = "binary"
+description = "三份精确命名交付均可读，工作簿含Daily/Options/Sources，金额单位、来源和假设清楚。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+
+[[criterion]]
+id = "GO012"
+name = "GO012"
+weight = 4.052628
+type = "binary"
+description = "批准简报与工作簿/CSV的推荐、关键金额和条件一致，内部建议与FTR义务明确区分。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv."
+
+[[criterion]]
+id = "GO013"
+name = "GO013"
+weight = 15
+type = "binary"
+description = "工作簿的命名输入WF_BUDGET/WF_AIR_MULTIPLIER/WF_RESERVE_RATE可编辑并及WF_ARRIVAL实际驱动有效旅行日期、首日比例、住宿夜数和Options全部六方案基础、储备、总额、余量及当前票价基础上再涨20%的压力总额；命名总额输出直接引用Options对应单元格。用至少两组允许范围内的新参数实际重算验证，静态数值或仅含未生效公式不算满足。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv. LibreOffice is installed.\nOptional independent operation check: python3 /tests/check_recalc.py /app/output/conference_budget.xlsx --output /tmp/recalc-report.json. Report groups map respectively to price_reserve_recalculation, meal_recalculation, decision_and_snapshot; errors opening the named interface must be reported. This is actual edit/recalculation evidence, not a reference-file diff."
+
+[[criterion]]
+id = "GO014"
+name = "GO014"
+weight = 15
+type = "binary"
+description = "WF_GOV_BREAKFAST_0929从0改1后，三地09-29政府供餐扣减（包括到达日改为09-29时的首日75%情景）、Daily最终M&IE及全部六方案费用实际联动，遵守原FTR扣减/杂费规则且不把酒店免费早餐新增扣除。三项命名MIE输出直接引用Daily对应结果。默认值恢复后能回到原结果；接受等价布局和公式实现。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv. LibreOffice is installed.\nOptional independent operation check: python3 /tests/check_recalc.py /app/output/conference_budget.xlsx --output /tmp/recalc-report.json. Report groups map respectively to price_reserve_recalculation, meal_recalculation, decision_and_snapshot; errors opening the named interface must be reported. This is actual edit/recalculation evidence, not a reference-file diff."
+
+[[criterion]]
+id = "GO015"
+name = "GO015"
+weight = 15
+type = "binary"
+description = "审批建议随当前参数按先人数后含储备总额及城市英文名排序更新；无可行方案时命名输出NONE/0，不留旧的可批准结论。WF_SNAPSHOT_CURRENT正确反映任一输入变更，界面明确Word/CSV为默认参数快照需重新导出，默认下三份交付一致。实际改值检查可行、不可行和恢复默认三种情况。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv. LibreOffice is installed.\nOptional independent operation check: python3 /tests/check_recalc.py /app/output/conference_budget.xlsx --output /tmp/recalc-report.json. Report groups map respectively to price_reserve_recalculation, meal_recalculation, decision_and_snapshot; errors opening the named interface must be reported. This is actual edit/recalculation evidence, not a reference-file diff. 排序和快照能力按工作簿当前Options的计算值评估；票价/供餐计算错误由前两项单独评估，避免同一计算错误在排序项重复扣分。"
+
+[scoring]
+aggregation = "weighted_mean"

@@ -1,0 +1,96 @@
+{
+  "status": "passed",
+  "checks": 15,
+  "details": [
+    {
+      "domain": "GO",
+      "file": "approval_brief.docx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "domain": "GO",
+      "file": "approval_register.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "domain": "GO",
+      "file": "conference_budget.xlsx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "domain": "FIN",
+      "file": "credit_review.xlsx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "domain": "FIN",
+      "file": "credit_review_memo.docx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "domain": "FIN",
+      "file": "follow_up_register.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "domain": "LAW",
+      "file": "ftc_notice_draft.txt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "domain": "LAW",
+      "file": "legal_action_memo.docx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "domain": "LAW",
+      "file": "safeguards_gap_register.xlsx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "domain": "DA",
+      "file": "activity_policy_brief.docx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "domain": "DA",
+      "file": "outdoor_activity_model.xlsx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "domain": "DA",
+      "file": "review_calendar.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "domain": "GA",
+      "file": "balance_review.xlsx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "domain": "GA",
+      "file": "balance_review_brief.docx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "domain": "GA",
+      "file": "playtest_queue.csv",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

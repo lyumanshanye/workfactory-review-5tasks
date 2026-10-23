@@ -1,0 +1,27 @@
+{
+  "evidence_source_version": "1.1.0",
+  "evidence_reused": [
+    "runtime/results.json",
+    "runtime_output_comparison.json",
+    "document_render.json",
+    "previews/"
+  ],
+  "reason": "All instructions, inputs and 15 reference deliverables are byte-identical; only GO007 rubric wording and GO version differ. These records are inherited verification, not a newly executed Docker run.",
+  "reference_deliverables_byte_identical": [
+    "tasks/GO-LINK-001/solution/golden_output/approval_register.csv",
+    "tasks/GO-LINK-001/solution/golden_output/approval_brief.docx",
+    "tasks/GO-LINK-001/solution/golden_output/conference_budget.xlsx",
+    "tasks/FIN-LINK-001/solution/golden_output/credit_review_memo.docx",
+    "tasks/FIN-LINK-001/solution/golden_output/follow_up_register.csv",
+    "tasks/FIN-LINK-001/solution/golden_output/credit_review.xlsx",
+    "tasks/LAW-LINK-001/solution/golden_output/legal_action_memo.docx",
+    "tasks/LAW-LINK-001/solution/golden_output/ftc_notice_draft.txt",
+    "tasks/LAW-LINK-001/solution/golden_output/safeguards_gap_register.xlsx",
+    "tasks/DA-LINK-001/solution/golden_output/review_calendar.csv",
+    "tasks/DA-LINK-001/solution/golden_output/outdoor_activity_model.xlsx",
+    "tasks/DA-LINK-001/solution/golden_output/activity_policy_brief.docx",
+    "tasks/GA-LINK-001/solution/golden_output/balance_review_brief.docx",
+    "tasks/GA-LINK-001/solution/golden_output/playtest_queue.csv",
+    "tasks/GA-LINK-001/solution/golden_output/balance_review.xlsx"
+  ]
+}

@@ -1,0 +1,1666 @@
+{
+  "passed": true,
+  "capability_groups": {
+    "identity_key_uncertainty": true,
+    "notice_and_attributed_clock": true,
+    "scale_snapshot_and_invalid_input": true
+  },
+  "scenarios": [
+    {
+      "scenario": "default",
+      "parameters": {
+        "WF_MAINTAINED": 4800,
+        "WF_A_KEY": "YES",
+        "WF_ALIAS_5": "UNKNOWN",
+        "WF_ALIAS_6": "UNKNOWN",
+        "WF_MIRA_AGENCY": "YES",
+        "WF_MIRA_DAY": 2,
+        "WF_ALEX_DAY": 3
+      },
+      "checks": [
+        {
+          "name": "WF_MODEL_VALID",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "name": "WF_SNAPSHOT_CURRENT",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MIN",
+          "expected": 594,
+          "actual": 594,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MAX",
+          "expected": 596,
+          "actual": 596,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MIN",
+          "expected": 499,
+          "actual": 499,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MAX",
+          "expected": 501,
+          "actual": 501,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTICE_STATE",
+          "expected": "CONDITIONAL",
+          "actual": "CONDITIONAL",
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_EARLIEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_LATEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_EARLIEST",
+          "expected": 20250401,
+          "actual": 20250401,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_LATEST",
+          "expected": 20250401,
+          "actual": 20250401,
+          "passed": true
+        },
+        {
+          "name": "WF_SMALL_EXEMPT",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "aliases_distinct",
+      "parameters": {
+        "WF_MAINTAINED": 4800,
+        "WF_A_KEY": "YES",
+        "WF_ALIAS_5": "DIFFERENT",
+        "WF_ALIAS_6": "DIFFERENT",
+        "WF_MIRA_AGENCY": "YES",
+        "WF_MIRA_DAY": 2,
+        "WF_ALEX_DAY": 3
+      },
+      "checks": [
+        {
+          "name": "WF_MODEL_VALID",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "name": "WF_SNAPSHOT_CURRENT",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MIN",
+          "expected": 596,
+          "actual": 596,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MAX",
+          "expected": 596,
+          "actual": 596,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MIN",
+          "expected": 501,
+          "actual": 501,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MAX",
+          "expected": 501,
+          "actual": 501,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTICE_STATE",
+          "expected": "REQUIRED",
+          "actual": "REQUIRED",
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_EARLIEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_LATEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_EARLIEST",
+          "expected": 20250401,
+          "actual": 20250401,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_LATEST",
+          "expected": 20250401,
+          "actual": 20250401,
+          "passed": true
+        },
+        {
+          "name": "WF_SMALL_EXEMPT",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "one_alias_same",
+      "parameters": {
+        "WF_MAINTAINED": 4800,
+        "WF_A_KEY": "YES",
+        "WF_ALIAS_5": "SAME",
+        "WF_ALIAS_6": "DIFFERENT",
+        "WF_MIRA_AGENCY": "YES",
+        "WF_MIRA_DAY": 2,
+        "WF_ALEX_DAY": 3
+      },
+      "checks": [
+        {
+          "name": "WF_MODEL_VALID",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "name": "WF_SNAPSHOT_CURRENT",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MIN",
+          "expected": 595,
+          "actual": 595,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MAX",
+          "expected": 595,
+          "actual": 595,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MIN",
+          "expected": 500,
+          "actual": 500,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MAX",
+          "expected": 500,
+          "actual": 500,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTICE_STATE",
+          "expected": "REQUIRED",
+          "actual": "REQUIRED",
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_EARLIEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_LATEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_EARLIEST",
+          "expected": 20250401,
+          "actual": 20250401,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_LATEST",
+          "expected": 20250401,
+          "actual": 20250401,
+          "passed": true
+        },
+        {
+          "name": "WF_SMALL_EXEMPT",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "both_aliases_same",
+      "parameters": {
+        "WF_MAINTAINED": 4800,
+        "WF_A_KEY": "YES",
+        "WF_ALIAS_5": "SAME",
+        "WF_ALIAS_6": "SAME",
+        "WF_MIRA_AGENCY": "YES",
+        "WF_MIRA_DAY": 2,
+        "WF_ALEX_DAY": 3
+      },
+      "checks": [
+        {
+          "name": "WF_MODEL_VALID",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "name": "WF_SNAPSHOT_CURRENT",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MIN",
+          "expected": 594,
+          "actual": 594,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MAX",
+          "expected": 594,
+          "actual": 594,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MIN",
+          "expected": 499,
+          "actual": 499,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MAX",
+          "expected": 499,
+          "actual": 499,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTICE_STATE",
+          "expected": "NOT_REQUIRED",
+          "actual": "NOT_REQUIRED",
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_EARLIEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_LATEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_EARLIEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_LATEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_SMALL_EXEMPT",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "key_absent",
+      "parameters": {
+        "WF_MAINTAINED": 4800,
+        "WF_A_KEY": "NO",
+        "WF_ALIAS_5": "UNKNOWN",
+        "WF_ALIAS_6": "UNKNOWN",
+        "WF_MIRA_AGENCY": "YES",
+        "WF_MIRA_DAY": 2,
+        "WF_ALEX_DAY": 3
+      },
+      "checks": [
+        {
+          "name": "WF_MODEL_VALID",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "name": "WF_SNAPSHOT_CURRENT",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MIN",
+          "expected": 594,
+          "actual": 594,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MAX",
+          "expected": 596,
+          "actual": 596,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MIN",
+          "expected": 305,
+          "actual": 305,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MAX",
+          "expected": 305,
+          "actual": 305,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTICE_STATE",
+          "expected": "NOT_REQUIRED",
+          "actual": "NOT_REQUIRED",
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_EARLIEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_LATEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_EARLIEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_LATEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_SMALL_EXEMPT",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "key_unknown",
+      "parameters": {
+        "WF_MAINTAINED": 4800,
+        "WF_A_KEY": "UNKNOWN",
+        "WF_ALIAS_5": "UNKNOWN",
+        "WF_ALIAS_6": "UNKNOWN",
+        "WF_MIRA_AGENCY": "YES",
+        "WF_MIRA_DAY": 2,
+        "WF_ALEX_DAY": 3
+      },
+      "checks": [
+        {
+          "name": "WF_MODEL_VALID",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "name": "WF_SNAPSHOT_CURRENT",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MIN",
+          "expected": 594,
+          "actual": 594,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MAX",
+          "expected": 596,
+          "actual": 596,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MIN",
+          "expected": 305,
+          "actual": 305,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MAX",
+          "expected": 501,
+          "actual": 501,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTICE_STATE",
+          "expected": "CONDITIONAL",
+          "actual": "CONDITIONAL",
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_EARLIEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_LATEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_EARLIEST",
+          "expected": 20250401,
+          "actual": 20250401,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_LATEST",
+          "expected": 20250401,
+          "actual": 20250401,
+          "passed": true
+        },
+        {
+          "name": "WF_SMALL_EXEMPT",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "key_unknown_below_threshold",
+      "parameters": {
+        "WF_MAINTAINED": 4800,
+        "WF_A_KEY": "UNKNOWN",
+        "WF_ALIAS_5": "SAME",
+        "WF_ALIAS_6": "SAME",
+        "WF_MIRA_AGENCY": "YES",
+        "WF_MIRA_DAY": 2,
+        "WF_ALEX_DAY": 3
+      },
+      "checks": [
+        {
+          "name": "WF_MODEL_VALID",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "name": "WF_SNAPSHOT_CURRENT",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MIN",
+          "expected": 594,
+          "actual": 594,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MAX",
+          "expected": 594,
+          "actual": 594,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MIN",
+          "expected": 305,
+          "actual": 305,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MAX",
+          "expected": 499,
+          "actual": 499,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTICE_STATE",
+          "expected": "NOT_REQUIRED",
+          "actual": "NOT_REQUIRED",
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_EARLIEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_LATEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_EARLIEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_LATEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_SMALL_EXEMPT",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "agency_no",
+      "parameters": {
+        "WF_MAINTAINED": 4800,
+        "WF_A_KEY": "YES",
+        "WF_ALIAS_5": "DIFFERENT",
+        "WF_ALIAS_6": "DIFFERENT",
+        "WF_MIRA_AGENCY": "NO",
+        "WF_MIRA_DAY": 2,
+        "WF_ALEX_DAY": 3
+      },
+      "checks": [
+        {
+          "name": "WF_MODEL_VALID",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "name": "WF_SNAPSHOT_CURRENT",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MIN",
+          "expected": 596,
+          "actual": 596,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MAX",
+          "expected": 596,
+          "actual": 596,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MIN",
+          "expected": 501,
+          "actual": 501,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MAX",
+          "expected": 501,
+          "actual": 501,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTICE_STATE",
+          "expected": "REQUIRED",
+          "actual": "REQUIRED",
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_EARLIEST",
+          "expected": 20250303,
+          "actual": 20250303,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_LATEST",
+          "expected": 20250303,
+          "actual": 20250303,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_EARLIEST",
+          "expected": 20250402,
+          "actual": 20250402,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_LATEST",
+          "expected": 20250402,
+          "actual": 20250402,
+          "passed": true
+        },
+        {
+          "name": "WF_SMALL_EXEMPT",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "agency_unknown",
+      "parameters": {
+        "WF_MAINTAINED": 4800,
+        "WF_A_KEY": "YES",
+        "WF_ALIAS_5": "DIFFERENT",
+        "WF_ALIAS_6": "DIFFERENT",
+        "WF_MIRA_AGENCY": "UNKNOWN",
+        "WF_MIRA_DAY": 2,
+        "WF_ALEX_DAY": 3
+      },
+      "checks": [
+        {
+          "name": "WF_MODEL_VALID",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "name": "WF_SNAPSHOT_CURRENT",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MIN",
+          "expected": 596,
+          "actual": 596,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MAX",
+          "expected": 596,
+          "actual": 596,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MIN",
+          "expected": 501,
+          "actual": 501,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MAX",
+          "expected": 501,
+          "actual": 501,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTICE_STATE",
+          "expected": "REQUIRED",
+          "actual": "REQUIRED",
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_EARLIEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_LATEST",
+          "expected": 20250303,
+          "actual": 20250303,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_EARLIEST",
+          "expected": 20250401,
+          "actual": 20250401,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_LATEST",
+          "expected": 20250402,
+          "actual": 20250402,
+          "passed": true
+        },
+        {
+          "name": "WF_SMALL_EXEMPT",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "employee_earlier",
+      "parameters": {
+        "WF_MAINTAINED": 4800,
+        "WF_A_KEY": "YES",
+        "WF_ALIAS_5": "UNKNOWN",
+        "WF_ALIAS_6": "UNKNOWN",
+        "WF_MIRA_AGENCY": "YES",
+        "WF_MIRA_DAY": 2,
+        "WF_ALEX_DAY": 1
+      },
+      "checks": [
+        {
+          "name": "WF_MODEL_VALID",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "name": "WF_SNAPSHOT_CURRENT",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MIN",
+          "expected": 594,
+          "actual": 594,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MAX",
+          "expected": 596,
+          "actual": 596,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MIN",
+          "expected": 499,
+          "actual": 499,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MAX",
+          "expected": 501,
+          "actual": 501,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTICE_STATE",
+          "expected": "CONDITIONAL",
+          "actual": "CONDITIONAL",
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_EARLIEST",
+          "expected": 20250301,
+          "actual": 20250301,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_LATEST",
+          "expected": 20250301,
+          "actual": 20250301,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_EARLIEST",
+          "expected": 20250331,
+          "actual": 20250331,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_LATEST",
+          "expected": 20250331,
+          "actual": 20250331,
+          "passed": true
+        },
+        {
+          "name": "WF_SMALL_EXEMPT",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "agent_excluded",
+      "parameters": {
+        "WF_MAINTAINED": 4800,
+        "WF_A_KEY": "YES",
+        "WF_ALIAS_5": "UNKNOWN",
+        "WF_ALIAS_6": "UNKNOWN",
+        "WF_MIRA_AGENCY": "NO",
+        "WF_MIRA_DAY": 1,
+        "WF_ALEX_DAY": 5
+      },
+      "checks": [
+        {
+          "name": "WF_MODEL_VALID",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "name": "WF_SNAPSHOT_CURRENT",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MIN",
+          "expected": 594,
+          "actual": 594,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MAX",
+          "expected": 596,
+          "actual": 596,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MIN",
+          "expected": 499,
+          "actual": 499,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MAX",
+          "expected": 501,
+          "actual": 501,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTICE_STATE",
+          "expected": "CONDITIONAL",
+          "actual": "CONDITIONAL",
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_EARLIEST",
+          "expected": 20250305,
+          "actual": 20250305,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_LATEST",
+          "expected": 20250305,
+          "actual": 20250305,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_EARLIEST",
+          "expected": 20250404,
+          "actual": 20250404,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_LATEST",
+          "expected": 20250404,
+          "actual": 20250404,
+          "passed": true
+        },
+        {
+          "name": "WF_SMALL_EXEMPT",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "officer_earlier",
+      "parameters": {
+        "WF_MAINTAINED": 4800,
+        "WF_A_KEY": "YES",
+        "WF_ALIAS_5": "UNKNOWN",
+        "WF_ALIAS_6": "UNKNOWN",
+        "WF_MIRA_AGENCY": "YES",
+        "WF_MIRA_DAY": 7,
+        "WF_ALEX_DAY": 7
+      },
+      "checks": [
+        {
+          "name": "WF_MODEL_VALID",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "name": "WF_SNAPSHOT_CURRENT",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MIN",
+          "expected": 594,
+          "actual": 594,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MAX",
+          "expected": 596,
+          "actual": 596,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MIN",
+          "expected": 499,
+          "actual": 499,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MAX",
+          "expected": 501,
+          "actual": 501,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTICE_STATE",
+          "expected": "CONDITIONAL",
+          "actual": "CONDITIONAL",
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_EARLIEST",
+          "expected": 20250306,
+          "actual": 20250306,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_LATEST",
+          "expected": 20250306,
+          "actual": 20250306,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_EARLIEST",
+          "expected": 20250405,
+          "actual": 20250405,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_LATEST",
+          "expected": 20250405,
+          "actual": 20250405,
+          "passed": true
+        },
+        {
+          "name": "WF_SMALL_EXEMPT",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "maintained_5000",
+      "parameters": {
+        "WF_MAINTAINED": 5000,
+        "WF_A_KEY": "YES",
+        "WF_ALIAS_5": "UNKNOWN",
+        "WF_ALIAS_6": "UNKNOWN",
+        "WF_MIRA_AGENCY": "YES",
+        "WF_MIRA_DAY": 2,
+        "WF_ALEX_DAY": 3
+      },
+      "checks": [
+        {
+          "name": "WF_MODEL_VALID",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "name": "WF_SNAPSHOT_CURRENT",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MIN",
+          "expected": 594,
+          "actual": 594,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MAX",
+          "expected": 596,
+          "actual": 596,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MIN",
+          "expected": 499,
+          "actual": 499,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MAX",
+          "expected": 501,
+          "actual": 501,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTICE_STATE",
+          "expected": "CONDITIONAL",
+          "actual": "CONDITIONAL",
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_EARLIEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_LATEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_EARLIEST",
+          "expected": 20250401,
+          "actual": 20250401,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_LATEST",
+          "expected": 20250401,
+          "actual": 20250401,
+          "passed": true
+        },
+        {
+          "name": "WF_SMALL_EXEMPT",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "maintained_4999",
+      "parameters": {
+        "WF_MAINTAINED": 4999,
+        "WF_A_KEY": "YES",
+        "WF_ALIAS_5": "UNKNOWN",
+        "WF_ALIAS_6": "UNKNOWN",
+        "WF_MIRA_AGENCY": "YES",
+        "WF_MIRA_DAY": 2,
+        "WF_ALEX_DAY": 3
+      },
+      "checks": [
+        {
+          "name": "WF_MODEL_VALID",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "name": "WF_SNAPSHOT_CURRENT",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MIN",
+          "expected": 594,
+          "actual": 594,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MAX",
+          "expected": 596,
+          "actual": 596,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MIN",
+          "expected": 499,
+          "actual": 499,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MAX",
+          "expected": 501,
+          "actual": 501,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTICE_STATE",
+          "expected": "CONDITIONAL",
+          "actual": "CONDITIONAL",
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_EARLIEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_LATEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_EARLIEST",
+          "expected": 20250401,
+          "actual": 20250401,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_LATEST",
+          "expected": 20250401,
+          "actual": 20250401,
+          "passed": true
+        },
+        {
+          "name": "WF_SMALL_EXEMPT",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "bad_key",
+      "parameters": {
+        "WF_MAINTAINED": 4800,
+        "WF_A_KEY": "?",
+        "WF_ALIAS_5": "UNKNOWN",
+        "WF_ALIAS_6": "UNKNOWN",
+        "WF_MIRA_AGENCY": "YES",
+        "WF_MIRA_DAY": 2,
+        "WF_ALEX_DAY": 3
+      },
+      "checks": [
+        {
+          "name": "WF_MODEL_VALID",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_SNAPSHOT_CURRENT",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MIN",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MAX",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MIN",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MAX",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTICE_STATE",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_EARLIEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_LATEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_EARLIEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_LATEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_SMALL_EXEMPT",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "bad_day",
+      "parameters": {
+        "WF_MAINTAINED": 4800,
+        "WF_A_KEY": "YES",
+        "WF_ALIAS_5": "UNKNOWN",
+        "WF_ALIAS_6": "UNKNOWN",
+        "WF_MIRA_AGENCY": "YES",
+        "WF_MIRA_DAY": 8,
+        "WF_ALEX_DAY": 3
+      },
+      "checks": [
+        {
+          "name": "WF_MODEL_VALID",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_SNAPSHOT_CURRENT",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MIN",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MAX",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MIN",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MAX",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTICE_STATE",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_EARLIEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_LATEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_EARLIEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_LATEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_SMALL_EXEMPT",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "bad_count",
+      "parameters": {
+        "WF_MAINTAINED": 2.2,
+        "WF_A_KEY": "YES",
+        "WF_ALIAS_5": "UNKNOWN",
+        "WF_ALIAS_6": "UNKNOWN",
+        "WF_MIRA_AGENCY": "YES",
+        "WF_MIRA_DAY": 2,
+        "WF_ALEX_DAY": 3
+      },
+      "checks": [
+        {
+          "name": "WF_MODEL_VALID",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_SNAPSHOT_CURRENT",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MIN",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MAX",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MIN",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MAX",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTICE_STATE",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_EARLIEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_LATEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_EARLIEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_LATEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_SMALL_EXEMPT",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "inconsistent_maintained_count",
+      "parameters": {
+        "WF_MAINTAINED": 599,
+        "WF_A_KEY": "YES",
+        "WF_ALIAS_5": "UNKNOWN",
+        "WF_ALIAS_6": "UNKNOWN",
+        "WF_MIRA_AGENCY": "YES",
+        "WF_MIRA_DAY": 2,
+        "WF_ALEX_DAY": 3
+      },
+      "checks": [
+        {
+          "name": "WF_MODEL_VALID",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_SNAPSHOT_CURRENT",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MIN",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MAX",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MIN",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MAX",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTICE_STATE",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_EARLIEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_LATEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_EARLIEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_LATEST",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "name": "WF_SMALL_EXEMPT",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "restore_default",
+      "parameters": {
+        "WF_MAINTAINED": 4800,
+        "WF_A_KEY": "YES",
+        "WF_ALIAS_5": "UNKNOWN",
+        "WF_ALIAS_6": "UNKNOWN",
+        "WF_MIRA_AGENCY": "YES",
+        "WF_MIRA_DAY": 2,
+        "WF_ALEX_DAY": 3
+      },
+      "checks": [
+        {
+          "name": "WF_MODEL_VALID",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "name": "WF_SNAPSHOT_CURRENT",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MIN",
+          "expected": 594,
+          "actual": 594,
+          "passed": true
+        },
+        {
+          "name": "WF_DISTINCT_MAX",
+          "expected": 596,
+          "actual": 596,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MIN",
+          "expected": 499,
+          "actual": 499,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTIFICATION_MAX",
+          "expected": 501,
+          "actual": 501,
+          "passed": true
+        },
+        {
+          "name": "WF_NOTICE_STATE",
+          "expected": "CONDITIONAL",
+          "actual": "CONDITIONAL",
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_EARLIEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DISCOVERY_LATEST",
+          "expected": 20250302,
+          "actual": 20250302,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_EARLIEST",
+          "expected": 20250401,
+          "actual": 20250401,
+          "passed": true
+        },
+        {
+          "name": "WF_DEADLINE_LATEST",
+          "expected": 20250401,
+          "actual": 20250401,
+          "passed": true
+        },
+        {
+          "name": "WF_SMALL_EXEMPT",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "not_native_judge_scores": true,
+  "oracle": "Independent disjoint-set identity graphs + Cartesian uncertainty enumeration + Python calendar arithmetic",
+  "scope_note": "Auxiliary numeric/clock/flag probes; native judge additionally inspects legal text, obligation applicability and source citations"
+}

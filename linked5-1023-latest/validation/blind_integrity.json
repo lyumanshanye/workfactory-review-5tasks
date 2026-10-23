@@ -1,0 +1,408 @@
+{
+  "status": "passed",
+  "checks": 100,
+  "passed": 100,
+  "pending": [],
+  "details": [
+    {
+      "check": "gpt/GO/fresh_capture",
+      "passed": true
+    },
+    {
+      "check": "gpt/GO/source_instruction_unchanged",
+      "passed": true
+    },
+    {
+      "check": "gpt/GO/only_declared_input_files",
+      "passed": true
+    },
+    {
+      "check": "gpt/GO/output_chain_unchanged",
+      "passed": true
+    },
+    {
+      "check": "gpt/GO/no_grading_material_given_to_solver",
+      "passed": true
+    },
+    {
+      "check": "gpt/GO/native_judge_succeeded",
+      "passed": true
+    },
+    {
+      "check": "gpt/GO/whole_judge_snapshot_unchanged",
+      "passed": true
+    },
+    {
+      "check": "gpt/GO/grading_problem_matches_capture",
+      "passed": true
+    },
+    {
+      "check": "gpt/GO/exact_criteria_and_weights",
+      "passed": true
+    },
+    {
+      "check": "gpt/GO/independent_score",
+      "passed": true
+    },
+    {
+      "check": "qwen/GO/fresh_capture",
+      "passed": true
+    },
+    {
+      "check": "qwen/GO/source_instruction_unchanged",
+      "passed": true
+    },
+    {
+      "check": "qwen/GO/only_declared_input_files",
+      "passed": true
+    },
+    {
+      "check": "qwen/GO/output_chain_unchanged",
+      "passed": true
+    },
+    {
+      "check": "qwen/GO/no_grading_material_given_to_solver",
+      "passed": true
+    },
+    {
+      "check": "qwen/GO/native_judge_succeeded",
+      "passed": true
+    },
+    {
+      "check": "qwen/GO/whole_judge_snapshot_unchanged",
+      "passed": true
+    },
+    {
+      "check": "qwen/GO/grading_problem_matches_capture",
+      "passed": true
+    },
+    {
+      "check": "qwen/GO/exact_criteria_and_weights",
+      "passed": true
+    },
+    {
+      "check": "qwen/GO/independent_score",
+      "passed": true
+    },
+    {
+      "check": "gpt/FIN/fresh_capture",
+      "passed": true
+    },
+    {
+      "check": "gpt/FIN/source_instruction_unchanged",
+      "passed": true
+    },
+    {
+      "check": "gpt/FIN/only_declared_input_files",
+      "passed": true
+    },
+    {
+      "check": "gpt/FIN/output_chain_unchanged",
+      "passed": true
+    },
+    {
+      "check": "gpt/FIN/no_grading_material_given_to_solver",
+      "passed": true
+    },
+    {
+      "check": "gpt/FIN/native_judge_succeeded",
+      "passed": true
+    },
+    {
+      "check": "gpt/FIN/whole_judge_snapshot_unchanged",
+      "passed": true
+    },
+    {
+      "check": "gpt/FIN/grading_problem_matches_capture",
+      "passed": true
+    },
+    {
+      "check": "gpt/FIN/exact_criteria_and_weights",
+      "passed": true
+    },
+    {
+      "check": "gpt/FIN/independent_score",
+      "passed": true
+    },
+    {
+      "check": "qwen/FIN/fresh_capture",
+      "passed": true
+    },
+    {
+      "check": "qwen/FIN/source_instruction_unchanged",
+      "passed": true
+    },
+    {
+      "check": "qwen/FIN/only_declared_input_files",
+      "passed": true
+    },
+    {
+      "check": "qwen/FIN/output_chain_unchanged",
+      "passed": true
+    },
+    {
+      "check": "qwen/FIN/no_grading_material_given_to_solver",
+      "passed": true
+    },
+    {
+      "check": "qwen/FIN/native_judge_succeeded",
+      "passed": true
+    },
+    {
+      "check": "qwen/FIN/whole_judge_snapshot_unchanged",
+      "passed": true
+    },
+    {
+      "check": "qwen/FIN/grading_problem_matches_capture",
+      "passed": true
+    },
+    {
+      "check": "qwen/FIN/exact_criteria_and_weights",
+      "passed": true
+    },
+    {
+      "check": "qwen/FIN/independent_score",
+      "passed": true
+    },
+    {
+      "check": "gpt/LAW/fresh_capture",
+      "passed": true
+    },
+    {
+      "check": "gpt/LAW/source_instruction_unchanged",
+      "passed": true
+    },
+    {
+      "check": "gpt/LAW/only_declared_input_files",
+      "passed": true
+    },
+    {
+      "check": "gpt/LAW/output_chain_unchanged",
+      "passed": true
+    },
+    {
+      "check": "gpt/LAW/no_grading_material_given_to_solver",
+      "passed": true
+    },
+    {
+      "check": "gpt/LAW/native_judge_succeeded",
+      "passed": true
+    },
+    {
+      "check": "gpt/LAW/whole_judge_snapshot_unchanged",
+      "passed": true
+    },
+    {
+      "check": "gpt/LAW/grading_problem_matches_capture",
+      "passed": true
+    },
+    {
+      "check": "gpt/LAW/exact_criteria_and_weights",
+      "passed": true
+    },
+    {
+      "check": "gpt/LAW/independent_score",
+      "passed": true
+    },
+    {
+      "check": "qwen/LAW/fresh_capture",
+      "passed": true
+    },
+    {
+      "check": "qwen/LAW/source_instruction_unchanged",
+      "passed": true
+    },
+    {
+      "check": "qwen/LAW/only_declared_input_files",
+      "passed": true
+    },
+    {
+      "check": "qwen/LAW/output_chain_unchanged",
+      "passed": true
+    },
+    {
+      "check": "qwen/LAW/no_grading_material_given_to_solver",
+      "passed": true
+    },
+    {
+      "check": "qwen/LAW/native_judge_succeeded",
+      "passed": true
+    },
+    {
+      "check": "qwen/LAW/whole_judge_snapshot_unchanged",
+      "passed": true
+    },
+    {
+      "check": "qwen/LAW/grading_problem_matches_capture",
+      "passed": true
+    },
+    {
+      "check": "qwen/LAW/exact_criteria_and_weights",
+      "passed": true
+    },
+    {
+      "check": "qwen/LAW/independent_score",
+      "passed": true
+    },
+    {
+      "check": "gpt/DA/fresh_capture",
+      "passed": true
+    },
+    {
+      "check": "gpt/DA/source_instruction_unchanged",
+      "passed": true
+    },
+    {
+      "check": "gpt/DA/only_declared_input_files",
+      "passed": true
+    },
+    {
+      "check": "gpt/DA/output_chain_unchanged",
+      "passed": true
+    },
+    {
+      "check": "gpt/DA/no_grading_material_given_to_solver",
+      "passed": true
+    },
+    {
+      "check": "gpt/DA/native_judge_succeeded",
+      "passed": true
+    },
+    {
+      "check": "gpt/DA/whole_judge_snapshot_unchanged",
+      "passed": true
+    },
+    {
+      "check": "gpt/DA/grading_problem_matches_capture",
+      "passed": true
+    },
+    {
+      "check": "gpt/DA/exact_criteria_and_weights",
+      "passed": true
+    },
+    {
+      "check": "gpt/DA/independent_score",
+      "passed": true
+    },
+    {
+      "check": "qwen/DA/fresh_capture",
+      "passed": true
+    },
+    {
+      "check": "qwen/DA/source_instruction_unchanged",
+      "passed": true
+    },
+    {
+      "check": "qwen/DA/only_declared_input_files",
+      "passed": true
+    },
+    {
+      "check": "qwen/DA/output_chain_unchanged",
+      "passed": true
+    },
+    {
+      "check": "qwen/DA/no_grading_material_given_to_solver",
+      "passed": true
+    },
+    {
+      "check": "qwen/DA/native_judge_succeeded",
+      "passed": true
+    },
+    {
+      "check": "qwen/DA/whole_judge_snapshot_unchanged",
+      "passed": true
+    },
+    {
+      "check": "qwen/DA/grading_problem_matches_capture",
+      "passed": true
+    },
+    {
+      "check": "qwen/DA/exact_criteria_and_weights",
+      "passed": true
+    },
+    {
+      "check": "qwen/DA/independent_score",
+      "passed": true
+    },
+    {
+      "check": "gpt/GA/fresh_capture",
+      "passed": true
+    },
+    {
+      "check": "gpt/GA/source_instruction_unchanged",
+      "passed": true
+    },
+    {
+      "check": "gpt/GA/only_declared_input_files",
+      "passed": true
+    },
+    {
+      "check": "gpt/GA/output_chain_unchanged",
+      "passed": true
+    },
+    {
+      "check": "gpt/GA/no_grading_material_given_to_solver",
+      "passed": true
+    },
+    {
+      "check": "gpt/GA/native_judge_succeeded",
+      "passed": true
+    },
+    {
+      "check": "gpt/GA/whole_judge_snapshot_unchanged",
+      "passed": true
+    },
+    {
+      "check": "gpt/GA/grading_problem_matches_capture",
+      "passed": true
+    },
+    {
+      "check": "gpt/GA/exact_criteria_and_weights",
+      "passed": true
+    },
+    {
+      "check": "gpt/GA/independent_score",
+      "passed": true
+    },
+    {
+      "check": "qwen/GA/fresh_capture",
+      "passed": true
+    },
+    {
+      "check": "qwen/GA/source_instruction_unchanged",
+      "passed": true
+    },
+    {
+      "check": "qwen/GA/only_declared_input_files",
+      "passed": true
+    },
+    {
+      "check": "qwen/GA/output_chain_unchanged",
+      "passed": true
+    },
+    {
+      "check": "qwen/GA/no_grading_material_given_to_solver",
+      "passed": true
+    },
+    {
+      "check": "qwen/GA/native_judge_succeeded",
+      "passed": true
+    },
+    {
+      "check": "qwen/GA/whole_judge_snapshot_unchanged",
+      "passed": true
+    },
+    {
+      "check": "qwen/GA/grading_problem_matches_capture",
+      "passed": true
+    },
+    {
+      "check": "qwen/GA/exact_criteria_and_weights",
+      "passed": true
+    },
+    {
+      "check": "qwen/GA/independent_score",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,4447 @@
+{
+  "passed": true,
+  "capability_groups": {
+    "period_and_cohort_bridge": true,
+    "current_capacity_and_ranking": true,
+    "raw_revision_missingness_and_guards": true
+  },
+  "scenarios": [
+    {
+      "scenario": "default",
+      "parameters": {
+        "WF_START_PERIOD": 20240630,
+        "WF_END_PERIOD": 20250630,
+        "WF_REVIEW_SLOTS": 8
+      },
+      "edits": [],
+      "expected": {
+        "valid": true,
+        "priority": [
+          6280,
+          59289,
+          29636,
+          59086,
+          30878,
+          19836,
+          14158,
+          19690
+        ],
+        "bridge": {
+          "ALL": {
+            "observed_start": 0.2985664684799583,
+            "observed_end": 0.3681931415496082,
+            "observed_change": 0.06962667306964987,
+            "fixed_start": 0.29434260032551035,
+            "fixed_end": 0.3573736915641285,
+            "fixed_change": 0.06303109123861816,
+            "residual": 0.006595581831031705,
+            "common_n": 52,
+            "entering_n": 0,
+            "exiting_n": 2,
+            "entering_assets": 0.0,
+            "exiting_assets": 2924280.0
+          },
+          "ME": {
+            "observed_start": 0.2641998489512872,
+            "observed_end": 0.3673774075438955,
+            "observed_change": 0.1031775585926083,
+            "fixed_start": 0.2555476385748969,
+            "fixed_end": 0.35303711403447746,
+            "fixed_change": 0.09748947545958059,
+            "residual": 0.00568808313302771,
+            "common_n": 22,
+            "entering_n": 0,
+            "exiting_n": 1,
+            "entering_assets": 0.0,
+            "exiting_assets": 1653584.0
+          },
+          "NH": {
+            "observed_start": 0.36509033391700024,
+            "observed_end": 0.3059539746763494,
+            "observed_change": -0.05913635924065086,
+            "fixed_start": 0.3718626431893237,
+            "fixed_end": 0.29904610815666627,
+            "fixed_change": -0.07281653503265745,
+            "residual": 0.013680175792006588,
+            "common_n": 18,
+            "entering_n": 0,
+            "exiting_n": 1,
+            "entering_assets": 0.0,
+            "exiting_assets": 1270696.0
+          },
+          "VT": {
+            "observed_start": 0.3386038550827622,
+            "observed_end": 0.49473123387301093,
+            "observed_change": 0.15612737879024874,
+            "fixed_start": 0.3386038550827622,
+            "fixed_end": 0.4954172442996505,
+            "fixed_change": 0.1568133892168883,
+            "residual": -0.0006860104266395717,
+            "common_n": 12,
+            "entering_n": 0,
+            "exiting_n": 0,
+            "entering_assets": 0.0,
+            "exiting_assets": 0.0
+          }
+        },
+        "invalid_rows": 0
+      },
+      "bridge_checks": [
+        {
+          "name": "WF_OBS_START_ALL",
+          "expected": 0.2985664684799583,
+          "actual": 0.298566468479958,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ALL",
+          "expected": 0.3681931415496082,
+          "actual": 0.368193141549608,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ALL",
+          "expected": 0.06962667306964987,
+          "actual": 0.0696266730696499,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ALL",
+          "expected": 0.29434260032551035,
+          "actual": 0.29434260032551,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ALL",
+          "expected": 0.3573736915641285,
+          "actual": 0.357373691564129,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ALL",
+          "expected": 0.06303109123861816,
+          "actual": 0.0630310912386183,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ALL",
+          "expected": 0.006595581831031705,
+          "actual": 0.00659558183103159,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ALL",
+          "expected": 52,
+          "actual": 52,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ALL",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ALL",
+          "expected": 2,
+          "actual": 2,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ALL",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ALL",
+          "expected": 2924280.0,
+          "actual": 2924280,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_ME",
+          "expected": 0.2641998489512872,
+          "actual": 0.264199848951287,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ME",
+          "expected": 0.3673774075438955,
+          "actual": 0.367377407543895,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ME",
+          "expected": 0.1031775585926083,
+          "actual": 0.103177558592608,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ME",
+          "expected": 0.2555476385748969,
+          "actual": 0.255547638574897,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ME",
+          "expected": 0.35303711403447746,
+          "actual": 0.353037114034477,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ME",
+          "expected": 0.09748947545958059,
+          "actual": 0.0974894754595806,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ME",
+          "expected": 0.00568808313302771,
+          "actual": 0.00568808313302771,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ME",
+          "expected": 22,
+          "actual": 22,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ME",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ME",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ME",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ME",
+          "expected": 1653584.0,
+          "actual": 1653584,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_NH",
+          "expected": 0.36509033391700024,
+          "actual": 0.365090333917,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_NH",
+          "expected": 0.3059539746763494,
+          "actual": 0.305953974676349,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_NH",
+          "expected": -0.05913635924065086,
+          "actual": -0.0591363592406509,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_NH",
+          "expected": 0.3718626431893237,
+          "actual": 0.371862643189324,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_NH",
+          "expected": 0.29904610815666627,
+          "actual": 0.299046108156666,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_NH",
+          "expected": -0.07281653503265745,
+          "actual": -0.0728165350326575,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_NH",
+          "expected": 0.013680175792006588,
+          "actual": 0.0136801757920066,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_NH",
+          "expected": 18,
+          "actual": 18,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_NH",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_NH",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_NH",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_NH",
+          "expected": 1270696.0,
+          "actual": 1270696,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_VT",
+          "expected": 0.3386038550827622,
+          "actual": 0.338603855082762,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_VT",
+          "expected": 0.49473123387301093,
+          "actual": 0.494731233873011,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_VT",
+          "expected": 0.15612737879024874,
+          "actual": 0.156127378790249,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_VT",
+          "expected": 0.3386038550827622,
+          "actual": 0.338603855082762,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_VT",
+          "expected": 0.4954172442996505,
+          "actual": 0.495417244299651,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_VT",
+          "expected": 0.1568133892168883,
+          "actual": 0.156813389216888,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_VT",
+          "expected": -0.0006860104266395717,
+          "actual": -0.000686010426639572,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_VT",
+          "expected": 12,
+          "actual": 12,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "bridge_passed": true,
+      "priority_actual": [
+        6280,
+        59289,
+        29636,
+        59086,
+        30878,
+        19836,
+        14158,
+        19690,
+        null,
+        null,
+        null,
+        null
+      ],
+      "priority_passed": true,
+      "states_passed": true
+    },
+    {
+      "scenario": "earlier_periods",
+      "parameters": {
+        "WF_START_PERIOD": 20220331,
+        "WF_END_PERIOD": 20230331,
+        "WF_REVIEW_SLOTS": 6
+      },
+      "edits": [],
+      "expected": {
+        "valid": true,
+        "priority": [
+          14134,
+          59086,
+          29636,
+          6271,
+          6280,
+          30878
+        ],
+        "bridge": {
+          "ALL": {
+            "observed_start": 0.22863048234230052,
+            "observed_end": 0.19368529658391312,
+            "observed_change": -0.0349451857583874,
+            "fixed_start": 0.22863048234230052,
+            "fixed_end": 0.1906723661175834,
+            "fixed_change": -0.03795811622471712,
+            "residual": 0.003012930466329722,
+            "common_n": 51,
+            "entering_n": 3,
+            "exiting_n": 0,
+            "entering_assets": 226566.0,
+            "exiting_assets": 0.0
+          },
+          "ME": {
+            "observed_start": 0.21364908015342204,
+            "observed_end": 0.17569231136980243,
+            "observed_change": -0.037956768783619615,
+            "fixed_start": 0.21364908015342204,
+            "fixed_end": 0.16527474070444884,
+            "fixed_change": -0.04837433944897321,
+            "residual": 0.010417570665353593,
+            "common_n": 23,
+            "entering_n": 0,
+            "exiting_n": 0,
+            "entering_assets": 0.0,
+            "exiting_assets": 0.0
+          },
+          "NH": {
+            "observed_start": 0.15607345480159426,
+            "observed_end": 0.1322795033891772,
+            "observed_change": -0.023793951412417053,
+            "fixed_start": 0.15607345480159426,
+            "fixed_end": 0.13245035747737957,
+            "fixed_change": -0.023623097324214692,
+            "residual": -0.00017085408820236014,
+            "common_n": 17,
+            "entering_n": 2,
+            "exiting_n": 0,
+            "entering_assets": 111229.0,
+            "exiting_assets": 0.0
+          },
+          "VT": {
+            "observed_start": 0.45413913500245046,
+            "observed_end": 0.4262578775342193,
+            "observed_change": -0.02788125746823117,
+            "fixed_start": 0.45413913500245046,
+            "fixed_end": 0.43946291447613983,
+            "fixed_change": -0.014676220526310624,
+            "residual": -0.013205036941920545,
+            "common_n": 11,
+            "entering_n": 1,
+            "exiting_n": 0,
+            "entering_assets": 115337.0,
+            "exiting_assets": 0.0
+          }
+        },
+        "invalid_rows": 0
+      },
+      "bridge_checks": [
+        {
+          "name": "WF_OBS_START_ALL",
+          "expected": 0.22863048234230052,
+          "actual": 0.228630482342301,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ALL",
+          "expected": 0.19368529658391312,
+          "actual": 0.193685296583913,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ALL",
+          "expected": -0.0349451857583874,
+          "actual": -0.0349451857583874,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ALL",
+          "expected": 0.22863048234230052,
+          "actual": 0.228630482342301,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ALL",
+          "expected": 0.1906723661175834,
+          "actual": 0.190672366117583,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ALL",
+          "expected": -0.03795811622471712,
+          "actual": -0.0379581162247171,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ALL",
+          "expected": 0.003012930466329722,
+          "actual": 0.00301293046632972,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ALL",
+          "expected": 51,
+          "actual": 51,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ALL",
+          "expected": 3,
+          "actual": 3,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ALL",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ALL",
+          "expected": 226566.0,
+          "actual": 226566,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ALL",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_ME",
+          "expected": 0.21364908015342204,
+          "actual": 0.213649080153422,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ME",
+          "expected": 0.17569231136980243,
+          "actual": 0.175692311369802,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ME",
+          "expected": -0.037956768783619615,
+          "actual": -0.0379567687836196,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ME",
+          "expected": 0.21364908015342204,
+          "actual": 0.213649080153422,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ME",
+          "expected": 0.16527474070444884,
+          "actual": 0.165274740704449,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ME",
+          "expected": -0.04837433944897321,
+          "actual": -0.0483743394489732,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ME",
+          "expected": 0.010417570665353593,
+          "actual": 0.0104175706653536,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ME",
+          "expected": 23,
+          "actual": 23,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ME",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ME",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ME",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ME",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_NH",
+          "expected": 0.15607345480159426,
+          "actual": 0.156073454801594,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_NH",
+          "expected": 0.1322795033891772,
+          "actual": 0.132279503389177,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_NH",
+          "expected": -0.023793951412417053,
+          "actual": -0.0237939514124171,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_NH",
+          "expected": 0.15607345480159426,
+          "actual": 0.156073454801594,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_NH",
+          "expected": 0.13245035747737957,
+          "actual": 0.13245035747738,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_NH",
+          "expected": -0.023623097324214692,
+          "actual": -0.0236230973242147,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_NH",
+          "expected": -0.00017085408820236014,
+          "actual": -0.00017085408820236,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_NH",
+          "expected": 17,
+          "actual": 17,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_NH",
+          "expected": 2,
+          "actual": 2,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_NH",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_NH",
+          "expected": 111229.0,
+          "actual": 111229,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_NH",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_VT",
+          "expected": 0.45413913500245046,
+          "actual": 0.45413913500245,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_VT",
+          "expected": 0.4262578775342193,
+          "actual": 0.426257877534219,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_VT",
+          "expected": -0.02788125746823117,
+          "actual": -0.0278812574682312,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_VT",
+          "expected": 0.45413913500245046,
+          "actual": 0.45413913500245,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_VT",
+          "expected": 0.43946291447613983,
+          "actual": 0.43946291447614,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_VT",
+          "expected": -0.014676220526310624,
+          "actual": -0.0146762205263106,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_VT",
+          "expected": -0.013205036941920545,
+          "actual": -0.0132050369419206,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_VT",
+          "expected": 11,
+          "actual": 11,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_VT",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_VT",
+          "expected": 115337.0,
+          "actual": 115337,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "bridge_passed": true,
+      "priority_actual": [
+        14134,
+        59086,
+        29636,
+        6271,
+        6280,
+        30878,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "priority_passed": true,
+      "states_passed": true
+    },
+    {
+      "scenario": "rolling_periods",
+      "parameters": {
+        "WF_START_PERIOD": 20231231,
+        "WF_END_PERIOD": 20241231,
+        "WF_REVIEW_SLOTS": 12
+      },
+      "edits": [],
+      "expected": {
+        "valid": true,
+        "priority": [
+          6280,
+          24540,
+          29636,
+          59289,
+          30878,
+          19836,
+          19690,
+          6271,
+          59086,
+          17960,
+          14136,
+          17658
+        ],
+        "bridge": {
+          "ALL": {
+            "observed_start": 0.23601137854842977,
+            "observed_end": 0.28166528660051954,
+            "observed_change": 0.04565390805208977,
+            "fixed_start": 0.23601137854842977,
+            "fixed_end": 0.2700037201344453,
+            "fixed_change": 0.03399234158601552,
+            "residual": 0.011661566466074247,
+            "common_n": 54,
+            "entering_n": 0,
+            "exiting_n": 0,
+            "entering_assets": 0.0,
+            "exiting_assets": 0.0
+          },
+          "ME": {
+            "observed_start": 0.22831582102256678,
+            "observed_end": 0.23814549955413955,
+            "observed_change": 0.009829678531572766,
+            "fixed_start": 0.22831582102256678,
+            "fixed_end": 0.22495722575576912,
+            "fixed_change": -0.0033585952667976593,
+            "residual": 0.013188273798370426,
+            "common_n": 23,
+            "entering_n": 0,
+            "exiting_n": 0,
+            "entering_assets": 0.0,
+            "exiting_assets": 0.0
+          },
+          "NH": {
+            "observed_start": 0.1770519307719061,
+            "observed_end": 0.37319343080176975,
+            "observed_change": 0.19614150002986366,
+            "fixed_start": 0.1770519307719061,
+            "fixed_end": 0.35831132981729286,
+            "fixed_change": 0.18125939904538677,
+            "residual": 0.014882100984476898,
+            "common_n": 19,
+            "entering_n": 0,
+            "exiting_n": 0,
+            "entering_assets": 0.0,
+            "exiting_assets": 0.0
+          },
+          "VT": {
+            "observed_start": 0.402456421470736,
+            "observed_end": 0.3202491088491981,
+            "observed_change": -0.08220731262153791,
+            "fixed_start": 0.402456421470736,
+            "fixed_end": 0.3181923750395691,
+            "fixed_change": -0.08426404643116692,
+            "residual": 0.0020567338096290078,
+            "common_n": 12,
+            "entering_n": 0,
+            "exiting_n": 0,
+            "entering_assets": 0.0,
+            "exiting_assets": 0.0
+          }
+        },
+        "invalid_rows": 0
+      },
+      "bridge_checks": [
+        {
+          "name": "WF_OBS_START_ALL",
+          "expected": 0.23601137854842977,
+          "actual": 0.23601137854843,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ALL",
+          "expected": 0.28166528660051954,
+          "actual": 0.281665286600519,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ALL",
+          "expected": 0.04565390805208977,
+          "actual": 0.0456539080520898,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ALL",
+          "expected": 0.23601137854842977,
+          "actual": 0.23601137854843,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ALL",
+          "expected": 0.2700037201344453,
+          "actual": 0.270003720134445,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ALL",
+          "expected": 0.03399234158601552,
+          "actual": 0.0339923415860156,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ALL",
+          "expected": 0.011661566466074247,
+          "actual": 0.0116615664660742,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ALL",
+          "expected": 54,
+          "actual": 54,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ALL",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ALL",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ALL",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ALL",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_ME",
+          "expected": 0.22831582102256678,
+          "actual": 0.228315821022567,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ME",
+          "expected": 0.23814549955413955,
+          "actual": 0.23814549955414,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ME",
+          "expected": 0.009829678531572766,
+          "actual": 0.00982967853157277,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ME",
+          "expected": 0.22831582102256678,
+          "actual": 0.228315821022567,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ME",
+          "expected": 0.22495722575576912,
+          "actual": 0.224957225755769,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ME",
+          "expected": -0.0033585952667976593,
+          "actual": -0.00335859526679763,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ME",
+          "expected": 0.013188273798370426,
+          "actual": 0.0131882737983704,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ME",
+          "expected": 23,
+          "actual": 23,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ME",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ME",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ME",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ME",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_NH",
+          "expected": 0.1770519307719061,
+          "actual": 0.177051930771906,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_NH",
+          "expected": 0.37319343080176975,
+          "actual": 0.37319343080177,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_NH",
+          "expected": 0.19614150002986366,
+          "actual": 0.196141500029864,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_NH",
+          "expected": 0.1770519307719061,
+          "actual": 0.177051930771906,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_NH",
+          "expected": 0.35831132981729286,
+          "actual": 0.358311329817293,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_NH",
+          "expected": 0.18125939904538677,
+          "actual": 0.181259399045387,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_NH",
+          "expected": 0.014882100984476898,
+          "actual": 0.0148821009844769,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_NH",
+          "expected": 19,
+          "actual": 19,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_NH",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_NH",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_NH",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_NH",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_VT",
+          "expected": 0.402456421470736,
+          "actual": 0.402456421470736,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_VT",
+          "expected": 0.3202491088491981,
+          "actual": 0.320249108849198,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_VT",
+          "expected": -0.08220731262153791,
+          "actual": -0.0822073126215379,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_VT",
+          "expected": 0.402456421470736,
+          "actual": 0.402456421470736,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_VT",
+          "expected": 0.3181923750395691,
+          "actual": 0.318192375039569,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_VT",
+          "expected": -0.08426404643116692,
+          "actual": -0.0842640464311669,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_VT",
+          "expected": 0.0020567338096290078,
+          "actual": 0.00205673380962901,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_VT",
+          "expected": 12,
+          "actual": 12,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "bridge_passed": true,
+      "priority_actual": [
+        6280,
+        24540,
+        29636,
+        59289,
+        30878,
+        19836,
+        19690,
+        6271,
+        59086,
+        17960,
+        14136,
+        17658
+      ],
+      "priority_passed": true,
+      "states_passed": true
+    },
+    {
+      "scenario": "close_periods",
+      "parameters": {
+        "WF_START_PERIOD": 20250331,
+        "WF_END_PERIOD": 20250630,
+        "WF_REVIEW_SLOTS": 3
+      },
+      "edits": [],
+      "expected": {
+        "valid": true,
+        "priority": [
+          6280,
+          59289,
+          29636
+        ],
+        "bridge": {
+          "ALL": {
+            "observed_start": 0.2933967451075215,
+            "observed_end": 0.3681931415496082,
+            "observed_change": 0.07479639644208669,
+            "fixed_start": 0.2933967451075215,
+            "fixed_end": 0.36806732338811066,
+            "fixed_change": 0.07467057828058915,
+            "residual": 0.00012581816149753733,
+            "common_n": 52,
+            "entering_n": 0,
+            "exiting_n": 0,
+            "entering_assets": 0.0,
+            "exiting_assets": 0.0
+          },
+          "ME": {
+            "observed_start": 0.2593664223043565,
+            "observed_end": 0.3673774075438955,
+            "observed_change": 0.10801098523953895,
+            "fixed_start": 0.2593664223043565,
+            "fixed_end": 0.3671369881916528,
+            "fixed_change": 0.10777056588729628,
+            "residual": 0.0002404193522426712,
+            "common_n": 22,
+            "entering_n": 0,
+            "exiting_n": 0,
+            "entering_assets": 0.0,
+            "exiting_assets": 0.0
+          },
+          "NH": {
+            "observed_start": 0.2880046293640895,
+            "observed_end": 0.3059539746763494,
+            "observed_change": 0.01794934531225989,
+            "fixed_start": 0.2880046293640895,
+            "fixed_end": 0.3025954201787228,
+            "fixed_change": 0.014590790814633325,
+            "residual": 0.0033585544976265647,
+            "common_n": 18,
+            "entering_n": 0,
+            "exiting_n": 0,
+            "entering_assets": 0.0,
+            "exiting_assets": 0.0
+          },
+          "VT": {
+            "observed_start": 0.48511083004015504,
+            "observed_end": 0.49473123387301093,
+            "observed_change": 0.009620403832855895,
+            "fixed_start": 0.48511083004015504,
+            "fixed_end": 0.49918600388027157,
+            "fixed_change": 0.014075173840116528,
+            "residual": -0.004454770007260633,
+            "common_n": 12,
+            "entering_n": 0,
+            "exiting_n": 0,
+            "entering_assets": 0.0,
+            "exiting_assets": 0.0
+          }
+        },
+        "invalid_rows": 0
+      },
+      "bridge_checks": [
+        {
+          "name": "WF_OBS_START_ALL",
+          "expected": 0.2933967451075215,
+          "actual": 0.293396745107521,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ALL",
+          "expected": 0.3681931415496082,
+          "actual": 0.368193141549608,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ALL",
+          "expected": 0.07479639644208669,
+          "actual": 0.0747963964420867,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ALL",
+          "expected": 0.2933967451075215,
+          "actual": 0.293396745107521,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ALL",
+          "expected": 0.36806732338811066,
+          "actual": 0.368067323388111,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ALL",
+          "expected": 0.07467057828058915,
+          "actual": 0.0746705782805892,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ALL",
+          "expected": 0.00012581816149753733,
+          "actual": 0.000125818161497537,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ALL",
+          "expected": 52,
+          "actual": 52,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ALL",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ALL",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ALL",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ALL",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_ME",
+          "expected": 0.2593664223043565,
+          "actual": 0.259366422304356,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ME",
+          "expected": 0.3673774075438955,
+          "actual": 0.367377407543895,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ME",
+          "expected": 0.10801098523953895,
+          "actual": 0.108010985239539,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ME",
+          "expected": 0.2593664223043565,
+          "actual": 0.259366422304356,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ME",
+          "expected": 0.3671369881916528,
+          "actual": 0.367136988191653,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ME",
+          "expected": 0.10777056588729628,
+          "actual": 0.107770565887296,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ME",
+          "expected": 0.0002404193522426712,
+          "actual": 0.000240419352242671,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ME",
+          "expected": 22,
+          "actual": 22,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ME",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ME",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ME",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ME",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_NH",
+          "expected": 0.2880046293640895,
+          "actual": 0.288004629364089,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_NH",
+          "expected": 0.3059539746763494,
+          "actual": 0.305953974676349,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_NH",
+          "expected": 0.01794934531225989,
+          "actual": 0.0179493453122599,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_NH",
+          "expected": 0.2880046293640895,
+          "actual": 0.288004629364089,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_NH",
+          "expected": 0.3025954201787228,
+          "actual": 0.302595420178723,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_NH",
+          "expected": 0.014590790814633325,
+          "actual": 0.0145907908146333,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_NH",
+          "expected": 0.0033585544976265647,
+          "actual": 0.00335855449762656,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_NH",
+          "expected": 18,
+          "actual": 18,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_NH",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_NH",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_NH",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_NH",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_VT",
+          "expected": 0.48511083004015504,
+          "actual": 0.485110830040155,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_VT",
+          "expected": 0.49473123387301093,
+          "actual": 0.494731233873011,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_VT",
+          "expected": 0.009620403832855895,
+          "actual": 0.00962040383285589,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_VT",
+          "expected": 0.48511083004015504,
+          "actual": 0.485110830040155,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_VT",
+          "expected": 0.49918600388027157,
+          "actual": 0.499186003880272,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_VT",
+          "expected": 0.014075173840116528,
+          "actual": 0.0140751738401165,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_VT",
+          "expected": -0.004454770007260633,
+          "actual": -0.00445477000726063,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_VT",
+          "expected": 12,
+          "actual": 12,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "bridge_passed": true,
+      "priority_actual": [
+        6280,
+        59289,
+        29636,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "priority_passed": true,
+      "states_passed": true
+    },
+    {
+      "scenario": "capacity_ten",
+      "parameters": {
+        "WF_START_PERIOD": 20240630,
+        "WF_END_PERIOD": 20250630,
+        "WF_REVIEW_SLOTS": 10
+      },
+      "edits": [],
+      "expected": {
+        "valid": true,
+        "priority": [
+          6280,
+          59289,
+          29636,
+          59086,
+          30878,
+          19836,
+          14158,
+          19690,
+          6271,
+          24540
+        ],
+        "bridge": {
+          "ALL": {
+            "observed_start": 0.2985664684799583,
+            "observed_end": 0.3681931415496082,
+            "observed_change": 0.06962667306964987,
+            "fixed_start": 0.29434260032551035,
+            "fixed_end": 0.3573736915641285,
+            "fixed_change": 0.06303109123861816,
+            "residual": 0.006595581831031705,
+            "common_n": 52,
+            "entering_n": 0,
+            "exiting_n": 2,
+            "entering_assets": 0.0,
+            "exiting_assets": 2924280.0
+          },
+          "ME": {
+            "observed_start": 0.2641998489512872,
+            "observed_end": 0.3673774075438955,
+            "observed_change": 0.1031775585926083,
+            "fixed_start": 0.2555476385748969,
+            "fixed_end": 0.35303711403447746,
+            "fixed_change": 0.09748947545958059,
+            "residual": 0.00568808313302771,
+            "common_n": 22,
+            "entering_n": 0,
+            "exiting_n": 1,
+            "entering_assets": 0.0,
+            "exiting_assets": 1653584.0
+          },
+          "NH": {
+            "observed_start": 0.36509033391700024,
+            "observed_end": 0.3059539746763494,
+            "observed_change": -0.05913635924065086,
+            "fixed_start": 0.3718626431893237,
+            "fixed_end": 0.29904610815666627,
+            "fixed_change": -0.07281653503265745,
+            "residual": 0.013680175792006588,
+            "common_n": 18,
+            "entering_n": 0,
+            "exiting_n": 1,
+            "entering_assets": 0.0,
+            "exiting_assets": 1270696.0
+          },
+          "VT": {
+            "observed_start": 0.3386038550827622,
+            "observed_end": 0.49473123387301093,
+            "observed_change": 0.15612737879024874,
+            "fixed_start": 0.3386038550827622,
+            "fixed_end": 0.4954172442996505,
+            "fixed_change": 0.1568133892168883,
+            "residual": -0.0006860104266395717,
+            "common_n": 12,
+            "entering_n": 0,
+            "exiting_n": 0,
+            "entering_assets": 0.0,
+            "exiting_assets": 0.0
+          }
+        },
+        "invalid_rows": 0
+      },
+      "bridge_checks": [
+        {
+          "name": "WF_OBS_START_ALL",
+          "expected": 0.2985664684799583,
+          "actual": 0.298566468479958,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ALL",
+          "expected": 0.3681931415496082,
+          "actual": 0.368193141549608,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ALL",
+          "expected": 0.06962667306964987,
+          "actual": 0.0696266730696499,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ALL",
+          "expected": 0.29434260032551035,
+          "actual": 0.29434260032551,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ALL",
+          "expected": 0.3573736915641285,
+          "actual": 0.357373691564129,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ALL",
+          "expected": 0.06303109123861816,
+          "actual": 0.0630310912386183,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ALL",
+          "expected": 0.006595581831031705,
+          "actual": 0.00659558183103159,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ALL",
+          "expected": 52,
+          "actual": 52,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ALL",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ALL",
+          "expected": 2,
+          "actual": 2,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ALL",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ALL",
+          "expected": 2924280.0,
+          "actual": 2924280,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_ME",
+          "expected": 0.2641998489512872,
+          "actual": 0.264199848951287,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ME",
+          "expected": 0.3673774075438955,
+          "actual": 0.367377407543895,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ME",
+          "expected": 0.1031775585926083,
+          "actual": 0.103177558592608,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ME",
+          "expected": 0.2555476385748969,
+          "actual": 0.255547638574897,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ME",
+          "expected": 0.35303711403447746,
+          "actual": 0.353037114034477,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ME",
+          "expected": 0.09748947545958059,
+          "actual": 0.0974894754595806,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ME",
+          "expected": 0.00568808313302771,
+          "actual": 0.00568808313302771,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ME",
+          "expected": 22,
+          "actual": 22,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ME",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ME",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ME",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ME",
+          "expected": 1653584.0,
+          "actual": 1653584,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_NH",
+          "expected": 0.36509033391700024,
+          "actual": 0.365090333917,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_NH",
+          "expected": 0.3059539746763494,
+          "actual": 0.305953974676349,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_NH",
+          "expected": -0.05913635924065086,
+          "actual": -0.0591363592406509,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_NH",
+          "expected": 0.3718626431893237,
+          "actual": 0.371862643189324,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_NH",
+          "expected": 0.29904610815666627,
+          "actual": 0.299046108156666,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_NH",
+          "expected": -0.07281653503265745,
+          "actual": -0.0728165350326575,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_NH",
+          "expected": 0.013680175792006588,
+          "actual": 0.0136801757920066,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_NH",
+          "expected": 18,
+          "actual": 18,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_NH",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_NH",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_NH",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_NH",
+          "expected": 1270696.0,
+          "actual": 1270696,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_VT",
+          "expected": 0.3386038550827622,
+          "actual": 0.338603855082762,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_VT",
+          "expected": 0.49473123387301093,
+          "actual": 0.494731233873011,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_VT",
+          "expected": 0.15612737879024874,
+          "actual": 0.156127378790249,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_VT",
+          "expected": 0.3386038550827622,
+          "actual": 0.338603855082762,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_VT",
+          "expected": 0.4954172442996505,
+          "actual": 0.495417244299651,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_VT",
+          "expected": 0.1568133892168883,
+          "actual": 0.156813389216888,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_VT",
+          "expected": -0.0006860104266395717,
+          "actual": -0.000686010426639572,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_VT",
+          "expected": 12,
+          "actual": 12,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "bridge_passed": true,
+      "priority_actual": [
+        6280,
+        59289,
+        29636,
+        59086,
+        30878,
+        19836,
+        14158,
+        19690,
+        6271,
+        24540,
+        null,
+        null
+      ],
+      "priority_passed": true,
+      "states_passed": true
+    },
+    {
+      "scenario": "promote_revised_bank",
+      "parameters": {
+        "WF_START_PERIOD": 20240630,
+        "WF_END_PERIOD": 20250630,
+        "WF_REVIEW_SLOTS": 8
+      },
+      "edits": [
+        {
+          "CERT": 28155,
+          "REPDTE": 20250630,
+          "field": "P9ASSET",
+          "value": 25360.08
+        }
+      ],
+      "expected": {
+        "valid": true,
+        "priority": [
+          6280,
+          28155,
+          29636,
+          59289,
+          59086,
+          30878,
+          19836,
+          14158
+        ],
+        "bridge": {
+          "ALL": {
+            "observed_start": 0.2985664684799583,
+            "observed_end": 0.40377777388630554,
+            "observed_change": 0.10521130540634721,
+            "fixed_start": 0.29434260032551035,
+            "fixed_end": 0.3944071673778408,
+            "fixed_change": 0.10006456705233047,
+            "residual": 0.005146738354016744,
+            "common_n": 52,
+            "entering_n": 0,
+            "exiting_n": 2,
+            "entering_assets": 0.0,
+            "exiting_assets": 2924280.0
+          },
+          "ME": {
+            "observed_start": 0.2641998489512872,
+            "observed_end": 0.3673774075438955,
+            "observed_change": 0.1031775585926083,
+            "fixed_start": 0.2555476385748969,
+            "fixed_end": 0.35303711403447746,
+            "fixed_change": 0.09748947545958059,
+            "residual": 0.00568808313302771,
+            "common_n": 22,
+            "entering_n": 0,
+            "exiting_n": 1,
+            "entering_assets": 0.0,
+            "exiting_assets": 1653584.0
+          },
+          "NH": {
+            "observed_start": 0.36509033391700024,
+            "observed_end": 0.4576869470267521,
+            "observed_change": 0.09259661310975187,
+            "fixed_start": 0.3718626431893237,
+            "fixed_end": 0.44998741123877495,
+            "fixed_change": 0.07812476804945123,
+            "residual": 0.014471845060300637,
+            "common_n": 18,
+            "entering_n": 0,
+            "exiting_n": 1,
+            "entering_assets": 0.0,
+            "exiting_assets": 1270696.0
+          },
+          "VT": {
+            "observed_start": 0.3386038550827622,
+            "observed_end": 0.49473123387301093,
+            "observed_change": 0.15612737879024874,
+            "fixed_start": 0.3386038550827622,
+            "fixed_end": 0.4954172442996505,
+            "fixed_change": 0.1568133892168883,
+            "residual": -0.0006860104266395717,
+            "common_n": 12,
+            "entering_n": 0,
+            "exiting_n": 0,
+            "entering_assets": 0.0,
+            "exiting_assets": 0.0
+          }
+        },
+        "invalid_rows": 0
+      },
+      "bridge_checks": [
+        {
+          "name": "WF_OBS_START_ALL",
+          "expected": 0.2985664684799583,
+          "actual": 0.298566468479958,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ALL",
+          "expected": 0.40377777388630554,
+          "actual": 0.403777773886306,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ALL",
+          "expected": 0.10521130540634721,
+          "actual": 0.105211305406347,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ALL",
+          "expected": 0.29434260032551035,
+          "actual": 0.29434260032551,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ALL",
+          "expected": 0.3944071673778408,
+          "actual": 0.394407167377841,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ALL",
+          "expected": 0.10006456705233047,
+          "actual": 0.100064567052331,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ALL",
+          "expected": 0.005146738354016744,
+          "actual": 0.00514673835401669,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ALL",
+          "expected": 52,
+          "actual": 52,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ALL",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ALL",
+          "expected": 2,
+          "actual": 2,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ALL",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ALL",
+          "expected": 2924280.0,
+          "actual": 2924280,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_ME",
+          "expected": 0.2641998489512872,
+          "actual": 0.264199848951287,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ME",
+          "expected": 0.3673774075438955,
+          "actual": 0.367377407543895,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ME",
+          "expected": 0.1031775585926083,
+          "actual": 0.103177558592608,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ME",
+          "expected": 0.2555476385748969,
+          "actual": 0.255547638574897,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ME",
+          "expected": 0.35303711403447746,
+          "actual": 0.353037114034477,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ME",
+          "expected": 0.09748947545958059,
+          "actual": 0.0974894754595806,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ME",
+          "expected": 0.00568808313302771,
+          "actual": 0.00568808313302771,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ME",
+          "expected": 22,
+          "actual": 22,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ME",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ME",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ME",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ME",
+          "expected": 1653584.0,
+          "actual": 1653584,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_NH",
+          "expected": 0.36509033391700024,
+          "actual": 0.365090333917,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_NH",
+          "expected": 0.4576869470267521,
+          "actual": 0.457686947026752,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_NH",
+          "expected": 0.09259661310975187,
+          "actual": 0.0925966131097519,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_NH",
+          "expected": 0.3718626431893237,
+          "actual": 0.371862643189324,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_NH",
+          "expected": 0.44998741123877495,
+          "actual": 0.449987411238775,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_NH",
+          "expected": 0.07812476804945123,
+          "actual": 0.0781247680494512,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_NH",
+          "expected": 0.014471845060300637,
+          "actual": 0.0144718450603007,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_NH",
+          "expected": 18,
+          "actual": 18,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_NH",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_NH",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_NH",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_NH",
+          "expected": 1270696.0,
+          "actual": 1270696,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_VT",
+          "expected": 0.3386038550827622,
+          "actual": 0.338603855082762,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_VT",
+          "expected": 0.49473123387301093,
+          "actual": 0.494731233873011,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_VT",
+          "expected": 0.15612737879024874,
+          "actual": 0.156127378790249,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_VT",
+          "expected": 0.3386038550827622,
+          "actual": 0.338603855082762,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_VT",
+          "expected": 0.4954172442996505,
+          "actual": 0.495417244299651,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_VT",
+          "expected": 0.1568133892168883,
+          "actual": 0.156813389216888,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_VT",
+          "expected": -0.0006860104266395717,
+          "actual": -0.000686010426639572,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_VT",
+          "expected": 12,
+          "actual": 12,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "bridge_passed": true,
+      "priority_actual": [
+        6280,
+        28155,
+        29636,
+        59289,
+        59086,
+        30878,
+        19836,
+        14158,
+        null,
+        null,
+        null,
+        null
+      ],
+      "priority_passed": true,
+      "states_passed": true
+    },
+    {
+      "scenario": "change_start_weight",
+      "parameters": {
+        "WF_START_PERIOD": 20240630,
+        "WF_END_PERIOD": 20250630,
+        "WF_REVIEW_SLOTS": 8
+      },
+      "edits": [
+        {
+          "CERT": 59289,
+          "REPDTE": 20240630,
+          "field": "ASSET",
+          "value": 180062.3
+        }
+      ],
+      "expected": {
+        "valid": true,
+        "priority": [
+          6280,
+          59289,
+          29636,
+          59086,
+          30878,
+          19836,
+          14158,
+          19690
+        ],
+        "bridge": {
+          "ALL": {
+            "observed_start": 0.29824211441840565,
+            "observed_end": 0.3681931415496082,
+            "observed_change": 0.06995102713120255,
+            "fixed_start": 0.29400852047129483,
+            "fixed_end": 0.35917213492220845,
+            "fixed_change": 0.06516361445091362,
+            "residual": 0.004787412680288927,
+            "common_n": 52,
+            "entering_n": 0,
+            "exiting_n": 2,
+            "entering_assets": 0.0,
+            "exiting_assets": 2924280.0
+          },
+          "ME": {
+            "observed_start": 0.2641998489512872,
+            "observed_end": 0.3673774075438955,
+            "observed_change": 0.1031775585926083,
+            "fixed_start": 0.2555476385748969,
+            "fixed_end": 0.35303711403447746,
+            "fixed_change": 0.09748947545958059,
+            "residual": 0.00568808313302771,
+            "common_n": 22,
+            "entering_n": 0,
+            "exiting_n": 1,
+            "entering_assets": 0.0,
+            "exiting_assets": 1653584.0
+          },
+          "NH": {
+            "observed_start": 0.36353051836310274,
+            "observed_end": 0.3059539746763494,
+            "observed_change": -0.057576543686753356,
+            "fixed_start": 0.3701483707897573,
+            "fixed_end": 0.30661960347871686,
+            "fixed_change": -0.06352876731104046,
+            "residual": 0.005952223624287101,
+            "common_n": 18,
+            "entering_n": 0,
+            "exiting_n": 1,
+            "entering_assets": 0.0,
+            "exiting_assets": 1270696.0
+          },
+          "VT": {
+            "observed_start": 0.3386038550827622,
+            "observed_end": 0.49473123387301093,
+            "observed_change": 0.15612737879024874,
+            "fixed_start": 0.3386038550827622,
+            "fixed_end": 0.4954172442996505,
+            "fixed_change": 0.1568133892168883,
+            "residual": -0.0006860104266395717,
+            "common_n": 12,
+            "entering_n": 0,
+            "exiting_n": 0,
+            "entering_assets": 0.0,
+            "exiting_assets": 0.0
+          }
+        },
+        "invalid_rows": 0
+      },
+      "bridge_checks": [
+        {
+          "name": "WF_OBS_START_ALL",
+          "expected": 0.29824211441840565,
+          "actual": 0.298242114418406,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ALL",
+          "expected": 0.3681931415496082,
+          "actual": 0.368193141549608,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ALL",
+          "expected": 0.06995102713120255,
+          "actual": 0.0699510271312025,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ALL",
+          "expected": 0.29400852047129483,
+          "actual": 0.294008520471295,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ALL",
+          "expected": 0.35917213492220845,
+          "actual": 0.359172134922208,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ALL",
+          "expected": 0.06516361445091362,
+          "actual": 0.0651636144509137,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ALL",
+          "expected": 0.004787412680288927,
+          "actual": 0.00478741268028887,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ALL",
+          "expected": 52,
+          "actual": 52,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ALL",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ALL",
+          "expected": 2,
+          "actual": 2,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ALL",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ALL",
+          "expected": 2924280.0,
+          "actual": 2924280,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_ME",
+          "expected": 0.2641998489512872,
+          "actual": 0.264199848951287,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ME",
+          "expected": 0.3673774075438955,
+          "actual": 0.367377407543895,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ME",
+          "expected": 0.1031775585926083,
+          "actual": 0.103177558592608,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ME",
+          "expected": 0.2555476385748969,
+          "actual": 0.255547638574897,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ME",
+          "expected": 0.35303711403447746,
+          "actual": 0.353037114034477,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ME",
+          "expected": 0.09748947545958059,
+          "actual": 0.0974894754595806,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ME",
+          "expected": 0.00568808313302771,
+          "actual": 0.00568808313302771,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ME",
+          "expected": 22,
+          "actual": 22,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ME",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ME",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ME",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ME",
+          "expected": 1653584.0,
+          "actual": 1653584,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_NH",
+          "expected": 0.36353051836310274,
+          "actual": 0.363530518363103,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_NH",
+          "expected": 0.3059539746763494,
+          "actual": 0.305953974676349,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_NH",
+          "expected": -0.057576543686753356,
+          "actual": -0.0575765436867534,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_NH",
+          "expected": 0.3701483707897573,
+          "actual": 0.370148370789757,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_NH",
+          "expected": 0.30661960347871686,
+          "actual": 0.306619603478717,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_NH",
+          "expected": -0.06352876731104046,
+          "actual": -0.0635287673110405,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_NH",
+          "expected": 0.005952223624287101,
+          "actual": 0.00595222362428716,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_NH",
+          "expected": 18,
+          "actual": 18,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_NH",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_NH",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_NH",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_NH",
+          "expected": 1270696.0,
+          "actual": 1270696,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_VT",
+          "expected": 0.3386038550827622,
+          "actual": 0.338603855082762,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_VT",
+          "expected": 0.49473123387301093,
+          "actual": 0.494731233873011,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_VT",
+          "expected": 0.15612737879024874,
+          "actual": 0.156127378790249,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_VT",
+          "expected": 0.3386038550827622,
+          "actual": 0.338603855082762,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_VT",
+          "expected": 0.4954172442996505,
+          "actual": 0.495417244299651,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_VT",
+          "expected": 0.1568133892168883,
+          "actual": 0.156813389216888,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_VT",
+          "expected": -0.0006860104266395717,
+          "actual": -0.000686010426639572,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_VT",
+          "expected": 12,
+          "actual": 12,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "bridge_passed": true,
+      "priority_actual": [
+        6280,
+        59289,
+        29636,
+        59086,
+        30878,
+        19836,
+        14158,
+        19690,
+        null,
+        null,
+        null,
+        null
+      ],
+      "priority_passed": true,
+      "states_passed": true
+    },
+    {
+      "scenario": "blank_numerator",
+      "parameters": {
+        "WF_START_PERIOD": 20240630,
+        "WF_END_PERIOD": 20250630,
+        "WF_REVIEW_SLOTS": 8
+      },
+      "edits": [
+        {
+          "CERT": 59289,
+          "REPDTE": 20250630,
+          "field": "P9ASSET",
+          "value": null
+        }
+      ],
+      "expected": {
+        "valid": true,
+        "priority": [
+          6280,
+          59086,
+          29636,
+          30878,
+          19836,
+          14158,
+          19690,
+          6271
+        ],
+        "bridge": {
+          "ALL": {
+            "observed_start": 0.2985664684799583,
+            "observed_end": 0.3649627698324009,
+            "observed_change": 0.06639630135244257,
+            "fixed_start": 0.29432074841311745,
+            "fixed_end": 0.3547973853414734,
+            "fixed_change": 0.060476636928355976,
+            "residual": 0.00591966442408659,
+            "common_n": 51,
+            "entering_n": 0,
+            "exiting_n": 3,
+            "entering_assets": 0.0,
+            "exiting_assets": 3030199.0
+          },
+          "ME": {
+            "observed_start": 0.2641998489512872,
+            "observed_end": 0.3673774075438955,
+            "observed_change": 0.1031775585926083,
+            "fixed_start": 0.2555476385748969,
+            "fixed_end": 0.35303711403447746,
+            "fixed_change": 0.09748947545958059,
+            "residual": 0.00568808313302771,
+            "common_n": 22,
+            "entering_n": 0,
+            "exiting_n": 1,
+            "entering_assets": 0.0,
+            "exiting_assets": 1653584.0
+          },
+          "NH": {
+            "observed_start": 0.36509033391700024,
+            "observed_end": 0.2915383089703696,
+            "observed_change": -0.07355202494663066,
+            "fixed_start": 0.37228943223943733,
+            "fixed_end": 0.2881043291212824,
+            "fixed_change": -0.08418510311815491,
+            "residual": 0.010633078171524257,
+            "common_n": 17,
+            "entering_n": 0,
+            "exiting_n": 2,
+            "entering_assets": 0.0,
+            "exiting_assets": 1376615.0
+          },
+          "VT": {
+            "observed_start": 0.3386038550827622,
+            "observed_end": 0.49473123387301093,
+            "observed_change": 0.15612737879024874,
+            "fixed_start": 0.3386038550827622,
+            "fixed_end": 0.4954172442996505,
+            "fixed_change": 0.1568133892168883,
+            "residual": -0.0006860104266395717,
+            "common_n": 12,
+            "entering_n": 0,
+            "exiting_n": 0,
+            "entering_assets": 0.0,
+            "exiting_assets": 0.0
+          }
+        },
+        "invalid_rows": 1
+      },
+      "bridge_checks": [
+        {
+          "name": "WF_OBS_START_ALL",
+          "expected": 0.2985664684799583,
+          "actual": 0.298566468479958,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ALL",
+          "expected": 0.3649627698324009,
+          "actual": 0.364962769832401,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ALL",
+          "expected": 0.06639630135244257,
+          "actual": 0.0663963013524426,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ALL",
+          "expected": 0.29432074841311745,
+          "actual": 0.294320748413117,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ALL",
+          "expected": 0.3547973853414734,
+          "actual": 0.354797385341473,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ALL",
+          "expected": 0.060476636928355976,
+          "actual": 0.060476636928356,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ALL",
+          "expected": 0.00591966442408659,
+          "actual": 0.00591966442408654,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ALL",
+          "expected": 51,
+          "actual": 51,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ALL",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ALL",
+          "expected": 3,
+          "actual": 3,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ALL",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ALL",
+          "expected": 3030199.0,
+          "actual": 3030199,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_ME",
+          "expected": 0.2641998489512872,
+          "actual": 0.264199848951287,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ME",
+          "expected": 0.3673774075438955,
+          "actual": 0.367377407543895,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ME",
+          "expected": 0.1031775585926083,
+          "actual": 0.103177558592608,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ME",
+          "expected": 0.2555476385748969,
+          "actual": 0.255547638574897,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ME",
+          "expected": 0.35303711403447746,
+          "actual": 0.353037114034477,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ME",
+          "expected": 0.09748947545958059,
+          "actual": 0.0974894754595806,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ME",
+          "expected": 0.00568808313302771,
+          "actual": 0.00568808313302771,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ME",
+          "expected": 22,
+          "actual": 22,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ME",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ME",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ME",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ME",
+          "expected": 1653584.0,
+          "actual": 1653584,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_NH",
+          "expected": 0.36509033391700024,
+          "actual": 0.365090333917,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_NH",
+          "expected": 0.2915383089703696,
+          "actual": 0.29153830897037,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_NH",
+          "expected": -0.07355202494663066,
+          "actual": -0.0735520249466307,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_NH",
+          "expected": 0.37228943223943733,
+          "actual": 0.372289432239437,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_NH",
+          "expected": 0.2881043291212824,
+          "actual": 0.288104329121282,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_NH",
+          "expected": -0.08418510311815491,
+          "actual": -0.084185103118155,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_NH",
+          "expected": 0.010633078171524257,
+          "actual": 0.0106330781715243,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_NH",
+          "expected": 17,
+          "actual": 17,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_NH",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_NH",
+          "expected": 2,
+          "actual": 2,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_NH",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_NH",
+          "expected": 1376615.0,
+          "actual": 1376615,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_VT",
+          "expected": 0.3386038550827622,
+          "actual": 0.338603855082762,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_VT",
+          "expected": 0.49473123387301093,
+          "actual": 0.494731233873011,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_VT",
+          "expected": 0.15612737879024874,
+          "actual": 0.156127378790249,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_VT",
+          "expected": 0.3386038550827622,
+          "actual": 0.338603855082762,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_VT",
+          "expected": 0.4954172442996505,
+          "actual": 0.495417244299651,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_VT",
+          "expected": 0.1568133892168883,
+          "actual": 0.156813389216888,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_VT",
+          "expected": -0.0006860104266395717,
+          "actual": -0.000686010426639572,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_VT",
+          "expected": 12,
+          "actual": 12,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "bridge_passed": true,
+      "priority_actual": [
+        6280,
+        59086,
+        29636,
+        30878,
+        19836,
+        14158,
+        19690,
+        6271,
+        null,
+        null,
+        null,
+        null
+      ],
+      "priority_passed": true,
+      "states_passed": true
+    },
+    {
+      "scenario": "zero_denominator",
+      "parameters": {
+        "WF_START_PERIOD": 20240630,
+        "WF_END_PERIOD": 20250630,
+        "WF_REVIEW_SLOTS": 8
+      },
+      "edits": [
+        {
+          "CERT": 59289,
+          "REPDTE": 20250630,
+          "field": "ASSET",
+          "value": 0
+        }
+      ],
+      "expected": {
+        "valid": true,
+        "priority": [
+          6280,
+          59086,
+          29636,
+          30878,
+          19836,
+          14158,
+          19690,
+          6271
+        ],
+        "bridge": {
+          "ALL": {
+            "observed_start": 0.2985664684799583,
+            "observed_end": 0.3649627698324009,
+            "observed_change": 0.06639630135244257,
+            "fixed_start": 0.29432074841311745,
+            "fixed_end": 0.3547973853414734,
+            "fixed_change": 0.060476636928355976,
+            "residual": 0.00591966442408659,
+            "common_n": 51,
+            "entering_n": 0,
+            "exiting_n": 3,
+            "entering_assets": 0.0,
+            "exiting_assets": 3030199.0
+          },
+          "ME": {
+            "observed_start": 0.2641998489512872,
+            "observed_end": 0.3673774075438955,
+            "observed_change": 0.1031775585926083,
+            "fixed_start": 0.2555476385748969,
+            "fixed_end": 0.35303711403447746,
+            "fixed_change": 0.09748947545958059,
+            "residual": 0.00568808313302771,
+            "common_n": 22,
+            "entering_n": 0,
+            "exiting_n": 1,
+            "entering_assets": 0.0,
+            "exiting_assets": 1653584.0
+          },
+          "NH": {
+            "observed_start": 0.36509033391700024,
+            "observed_end": 0.2915383089703696,
+            "observed_change": -0.07355202494663066,
+            "fixed_start": 0.37228943223943733,
+            "fixed_end": 0.2881043291212824,
+            "fixed_change": -0.08418510311815491,
+            "residual": 0.010633078171524257,
+            "common_n": 17,
+            "entering_n": 0,
+            "exiting_n": 2,
+            "entering_assets": 0.0,
+            "exiting_assets": 1376615.0
+          },
+          "VT": {
+            "observed_start": 0.3386038550827622,
+            "observed_end": 0.49473123387301093,
+            "observed_change": 0.15612737879024874,
+            "fixed_start": 0.3386038550827622,
+            "fixed_end": 0.4954172442996505,
+            "fixed_change": 0.1568133892168883,
+            "residual": -0.0006860104266395717,
+            "common_n": 12,
+            "entering_n": 0,
+            "exiting_n": 0,
+            "entering_assets": 0.0,
+            "exiting_assets": 0.0
+          }
+        },
+        "invalid_rows": 1
+      },
+      "bridge_checks": [
+        {
+          "name": "WF_OBS_START_ALL",
+          "expected": 0.2985664684799583,
+          "actual": 0.298566468479958,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ALL",
+          "expected": 0.3649627698324009,
+          "actual": 0.364962769832401,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ALL",
+          "expected": 0.06639630135244257,
+          "actual": 0.0663963013524426,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ALL",
+          "expected": 0.29432074841311745,
+          "actual": 0.294320748413117,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ALL",
+          "expected": 0.3547973853414734,
+          "actual": 0.354797385341473,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ALL",
+          "expected": 0.060476636928355976,
+          "actual": 0.060476636928356,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ALL",
+          "expected": 0.00591966442408659,
+          "actual": 0.00591966442408654,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ALL",
+          "expected": 51,
+          "actual": 51,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ALL",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ALL",
+          "expected": 3,
+          "actual": 3,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ALL",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ALL",
+          "expected": 3030199.0,
+          "actual": 3030199,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_ME",
+          "expected": 0.2641998489512872,
+          "actual": 0.264199848951287,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ME",
+          "expected": 0.3673774075438955,
+          "actual": 0.367377407543895,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ME",
+          "expected": 0.1031775585926083,
+          "actual": 0.103177558592608,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ME",
+          "expected": 0.2555476385748969,
+          "actual": 0.255547638574897,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ME",
+          "expected": 0.35303711403447746,
+          "actual": 0.353037114034477,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ME",
+          "expected": 0.09748947545958059,
+          "actual": 0.0974894754595806,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ME",
+          "expected": 0.00568808313302771,
+          "actual": 0.00568808313302771,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ME",
+          "expected": 22,
+          "actual": 22,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ME",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ME",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ME",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ME",
+          "expected": 1653584.0,
+          "actual": 1653584,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_NH",
+          "expected": 0.36509033391700024,
+          "actual": 0.365090333917,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_NH",
+          "expected": 0.2915383089703696,
+          "actual": 0.29153830897037,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_NH",
+          "expected": -0.07355202494663066,
+          "actual": -0.0735520249466307,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_NH",
+          "expected": 0.37228943223943733,
+          "actual": 0.372289432239437,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_NH",
+          "expected": 0.2881043291212824,
+          "actual": 0.288104329121282,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_NH",
+          "expected": -0.08418510311815491,
+          "actual": -0.084185103118155,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_NH",
+          "expected": 0.010633078171524257,
+          "actual": 0.0106330781715243,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_NH",
+          "expected": 17,
+          "actual": 17,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_NH",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_NH",
+          "expected": 2,
+          "actual": 2,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_NH",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_NH",
+          "expected": 1376615.0,
+          "actual": 1376615,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_VT",
+          "expected": 0.3386038550827622,
+          "actual": 0.338603855082762,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_VT",
+          "expected": 0.49473123387301093,
+          "actual": 0.494731233873011,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_VT",
+          "expected": 0.15612737879024874,
+          "actual": 0.156127378790249,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_VT",
+          "expected": 0.3386038550827622,
+          "actual": 0.338603855082762,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_VT",
+          "expected": 0.4954172442996505,
+          "actual": 0.495417244299651,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_VT",
+          "expected": 0.1568133892168883,
+          "actual": 0.156813389216888,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_VT",
+          "expected": -0.0006860104266395717,
+          "actual": -0.000686010426639572,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_VT",
+          "expected": 12,
+          "actual": 12,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "bridge_passed": true,
+      "priority_actual": [
+        6280,
+        59086,
+        29636,
+        30878,
+        19836,
+        14158,
+        19690,
+        6271,
+        null,
+        null,
+        null,
+        null
+      ],
+      "priority_passed": true,
+      "states_passed": true
+    },
+    {
+      "scenario": "zero_becomes_missing",
+      "parameters": {
+        "WF_START_PERIOD": 20240630,
+        "WF_END_PERIOD": 20250630,
+        "WF_REVIEW_SLOTS": 8
+      },
+      "edits": [
+        {
+          "CERT": 12874,
+          "REPDTE": 20250630,
+          "field": "P9ASSET",
+          "value": null
+        }
+      ],
+      "expected": {
+        "valid": true,
+        "priority": [
+          6280,
+          59289,
+          29636,
+          59086,
+          30878,
+          19836,
+          14158,
+          19690
+        ],
+        "bridge": {
+          "ALL": {
+            "observed_start": 0.2985664684799583,
+            "observed_end": 0.37190559096893855,
+            "observed_change": 0.07333912248898022,
+            "fixed_start": 0.29673445864115633,
+            "fixed_end": 0.3610739387771393,
+            "fixed_change": 0.06433948013598295,
+            "residual": 0.008999642352997272,
+            "common_n": 51,
+            "entering_n": 0,
+            "exiting_n": 3,
+            "entering_assets": 0.0,
+            "exiting_assets": 3961130.0
+          },
+          "ME": {
+            "observed_start": 0.2641998489512872,
+            "observed_end": 0.3731540102281925,
+            "observed_change": 0.10895416127690533,
+            "fixed_start": 0.2583714404181649,
+            "fixed_end": 0.3588436269086016,
+            "fixed_change": 0.10047218649043671,
+            "residual": 0.008481974786468616,
+            "common_n": 21,
+            "entering_n": 0,
+            "exiting_n": 2,
+            "entering_assets": 0.0,
+            "exiting_assets": 2690434.0
+          },
+          "NH": {
+            "observed_start": 0.36509033391700024,
+            "observed_end": 0.3059539746763494,
+            "observed_change": -0.05913635924065086,
+            "fixed_start": 0.3718626431893237,
+            "fixed_end": 0.29904610815666627,
+            "fixed_change": -0.07281653503265745,
+            "residual": 0.013680175792006588,
+            "common_n": 18,
+            "entering_n": 0,
+            "exiting_n": 1,
+            "entering_assets": 0.0,
+            "exiting_assets": 1270696.0
+          },
+          "VT": {
+            "observed_start": 0.3386038550827622,
+            "observed_end": 0.49473123387301093,
+            "observed_change": 0.15612737879024874,
+            "fixed_start": 0.3386038550827622,
+            "fixed_end": 0.4954172442996505,
+            "fixed_change": 0.1568133892168883,
+            "residual": -0.0006860104266395717,
+            "common_n": 12,
+            "entering_n": 0,
+            "exiting_n": 0,
+            "entering_assets": 0.0,
+            "exiting_assets": 0.0
+          }
+        },
+        "invalid_rows": 1
+      },
+      "bridge_checks": [
+        {
+          "name": "WF_OBS_START_ALL",
+          "expected": 0.2985664684799583,
+          "actual": 0.298566468479958,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ALL",
+          "expected": 0.37190559096893855,
+          "actual": 0.371905590968939,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ALL",
+          "expected": 0.07333912248898022,
+          "actual": 0.0733391224889802,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ALL",
+          "expected": 0.29673445864115633,
+          "actual": 0.296734458641156,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ALL",
+          "expected": 0.3610739387771393,
+          "actual": 0.361073938777139,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ALL",
+          "expected": 0.06433948013598295,
+          "actual": 0.064339480135983,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ALL",
+          "expected": 0.008999642352997272,
+          "actual": 0.00899964235299722,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ALL",
+          "expected": 51,
+          "actual": 51,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ALL",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ALL",
+          "expected": 3,
+          "actual": 3,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ALL",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ALL",
+          "expected": 3961130.0,
+          "actual": 3961130,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_ME",
+          "expected": 0.2641998489512872,
+          "actual": 0.264199848951287,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ME",
+          "expected": 0.3731540102281925,
+          "actual": 0.373154010228192,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ME",
+          "expected": 0.10895416127690533,
+          "actual": 0.108954161276905,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ME",
+          "expected": 0.2583714404181649,
+          "actual": 0.258371440418165,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ME",
+          "expected": 0.3588436269086016,
+          "actual": 0.358843626908602,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ME",
+          "expected": 0.10047218649043671,
+          "actual": 0.100472186490437,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ME",
+          "expected": 0.008481974786468616,
+          "actual": 0.00848197478646862,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ME",
+          "expected": 21,
+          "actual": 21,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ME",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ME",
+          "expected": 2,
+          "actual": 2,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ME",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ME",
+          "expected": 2690434.0,
+          "actual": 2690434,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_NH",
+          "expected": 0.36509033391700024,
+          "actual": 0.365090333917,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_NH",
+          "expected": 0.3059539746763494,
+          "actual": 0.305953974676349,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_NH",
+          "expected": -0.05913635924065086,
+          "actual": -0.0591363592406509,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_NH",
+          "expected": 0.3718626431893237,
+          "actual": 0.371862643189324,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_NH",
+          "expected": 0.29904610815666627,
+          "actual": 0.299046108156666,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_NH",
+          "expected": -0.07281653503265745,
+          "actual": -0.0728165350326575,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_NH",
+          "expected": 0.013680175792006588,
+          "actual": 0.0136801757920066,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_NH",
+          "expected": 18,
+          "actual": 18,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_NH",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_NH",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_NH",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_NH",
+          "expected": 1270696.0,
+          "actual": 1270696,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_VT",
+          "expected": 0.3386038550827622,
+          "actual": 0.338603855082762,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_VT",
+          "expected": 0.49473123387301093,
+          "actual": 0.494731233873011,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_VT",
+          "expected": 0.15612737879024874,
+          "actual": 0.156127378790249,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_VT",
+          "expected": 0.3386038550827622,
+          "actual": 0.338603855082762,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_VT",
+          "expected": 0.4954172442996505,
+          "actual": 0.495417244299651,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_VT",
+          "expected": 0.1568133892168883,
+          "actual": 0.156813389216888,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_VT",
+          "expected": -0.0006860104266395717,
+          "actual": -0.000686010426639572,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_VT",
+          "expected": 12,
+          "actual": 12,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "bridge_passed": true,
+      "priority_actual": [
+        6280,
+        59289,
+        29636,
+        59086,
+        30878,
+        19836,
+        14158,
+        19690,
+        null,
+        null,
+        null,
+        null
+      ],
+      "priority_passed": true,
+      "states_passed": true
+    },
+    {
+      "scenario": "unknown_quarter",
+      "parameters": {
+        "WF_START_PERIOD": 20240630,
+        "WF_END_PERIOD": 20250101,
+        "WF_REVIEW_SLOTS": 8
+      },
+      "edits": [],
+      "expected": {
+        "valid": false,
+        "priority": [],
+        "bridge": {},
+        "invalid_rows": 0
+      },
+      "bridge_checks": [],
+      "bridge_passed": true,
+      "priority_actual": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "priority_passed": true,
+      "states_passed": true
+    },
+    {
+      "scenario": "reversed_periods",
+      "parameters": {
+        "WF_START_PERIOD": 20250630,
+        "WF_END_PERIOD": 20240630,
+        "WF_REVIEW_SLOTS": 8
+      },
+      "edits": [],
+      "expected": {
+        "valid": false,
+        "priority": [],
+        "bridge": {},
+        "invalid_rows": 0
+      },
+      "bridge_checks": [],
+      "bridge_passed": true,
+      "priority_actual": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "priority_passed": true,
+      "states_passed": true
+    },
+    {
+      "scenario": "bad_capacity",
+      "parameters": {
+        "WF_START_PERIOD": 20240630,
+        "WF_END_PERIOD": 20250630,
+        "WF_REVIEW_SLOTS": 2
+      },
+      "edits": [],
+      "expected": {
+        "valid": false,
+        "priority": [],
+        "bridge": {},
+        "invalid_rows": 0
+      },
+      "bridge_checks": [],
+      "bridge_passed": true,
+      "priority_actual": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "priority_passed": true,
+      "states_passed": true
+    },
+    {
+      "scenario": "fractional_capacity",
+      "parameters": {
+        "WF_START_PERIOD": 20240630,
+        "WF_END_PERIOD": 20250630,
+        "WF_REVIEW_SLOTS": 4.5
+      },
+      "edits": [],
+      "expected": {
+        "valid": false,
+        "priority": [],
+        "bridge": {},
+        "invalid_rows": 0
+      },
+      "bridge_checks": [],
+      "bridge_passed": true,
+      "priority_actual": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "priority_passed": true,
+      "states_passed": true
+    },
+    {
+      "scenario": "restore_default",
+      "parameters": {
+        "WF_START_PERIOD": 20240630,
+        "WF_END_PERIOD": 20250630,
+        "WF_REVIEW_SLOTS": 8
+      },
+      "edits": [],
+      "expected": {
+        "valid": true,
+        "priority": [
+          6280,
+          59289,
+          29636,
+          59086,
+          30878,
+          19836,
+          14158,
+          19690
+        ],
+        "bridge": {
+          "ALL": {
+            "observed_start": 0.2985664684799583,
+            "observed_end": 0.3681931415496082,
+            "observed_change": 0.06962667306964987,
+            "fixed_start": 0.29434260032551035,
+            "fixed_end": 0.3573736915641285,
+            "fixed_change": 0.06303109123861816,
+            "residual": 0.006595581831031705,
+            "common_n": 52,
+            "entering_n": 0,
+            "exiting_n": 2,
+            "entering_assets": 0.0,
+            "exiting_assets": 2924280.0
+          },
+          "ME": {
+            "observed_start": 0.2641998489512872,
+            "observed_end": 0.3673774075438955,
+            "observed_change": 0.1031775585926083,
+            "fixed_start": 0.2555476385748969,
+            "fixed_end": 0.35303711403447746,
+            "fixed_change": 0.09748947545958059,
+            "residual": 0.00568808313302771,
+            "common_n": 22,
+            "entering_n": 0,
+            "exiting_n": 1,
+            "entering_assets": 0.0,
+            "exiting_assets": 1653584.0
+          },
+          "NH": {
+            "observed_start": 0.36509033391700024,
+            "observed_end": 0.3059539746763494,
+            "observed_change": -0.05913635924065086,
+            "fixed_start": 0.3718626431893237,
+            "fixed_end": 0.29904610815666627,
+            "fixed_change": -0.07281653503265745,
+            "residual": 0.013680175792006588,
+            "common_n": 18,
+            "entering_n": 0,
+            "exiting_n": 1,
+            "entering_assets": 0.0,
+            "exiting_assets": 1270696.0
+          },
+          "VT": {
+            "observed_start": 0.3386038550827622,
+            "observed_end": 0.49473123387301093,
+            "observed_change": 0.15612737879024874,
+            "fixed_start": 0.3386038550827622,
+            "fixed_end": 0.4954172442996505,
+            "fixed_change": 0.1568133892168883,
+            "residual": -0.0006860104266395717,
+            "common_n": 12,
+            "entering_n": 0,
+            "exiting_n": 0,
+            "entering_assets": 0.0,
+            "exiting_assets": 0.0
+          }
+        },
+        "invalid_rows": 0
+      },
+      "bridge_checks": [
+        {
+          "name": "WF_OBS_START_ALL",
+          "expected": 0.2985664684799583,
+          "actual": 0.298566468479958,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ALL",
+          "expected": 0.3681931415496082,
+          "actual": 0.368193141549608,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ALL",
+          "expected": 0.06962667306964987,
+          "actual": 0.0696266730696499,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ALL",
+          "expected": 0.29434260032551035,
+          "actual": 0.29434260032551,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ALL",
+          "expected": 0.3573736915641285,
+          "actual": 0.357373691564129,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ALL",
+          "expected": 0.06303109123861816,
+          "actual": 0.0630310912386183,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ALL",
+          "expected": 0.006595581831031705,
+          "actual": 0.00659558183103159,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ALL",
+          "expected": 52,
+          "actual": 52,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ALL",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ALL",
+          "expected": 2,
+          "actual": 2,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ALL",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ALL",
+          "expected": 2924280.0,
+          "actual": 2924280,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_ME",
+          "expected": 0.2641998489512872,
+          "actual": 0.264199848951287,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_ME",
+          "expected": 0.3673774075438955,
+          "actual": 0.367377407543895,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_ME",
+          "expected": 0.1031775585926083,
+          "actual": 0.103177558592608,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_ME",
+          "expected": 0.2555476385748969,
+          "actual": 0.255547638574897,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_ME",
+          "expected": 0.35303711403447746,
+          "actual": 0.353037114034477,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_ME",
+          "expected": 0.09748947545958059,
+          "actual": 0.0974894754595806,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_ME",
+          "expected": 0.00568808313302771,
+          "actual": 0.00568808313302771,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_ME",
+          "expected": 22,
+          "actual": 22,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_ME",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_ME",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_ME",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_ME",
+          "expected": 1653584.0,
+          "actual": 1653584,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_NH",
+          "expected": 0.36509033391700024,
+          "actual": 0.365090333917,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_NH",
+          "expected": 0.3059539746763494,
+          "actual": 0.305953974676349,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_NH",
+          "expected": -0.05913635924065086,
+          "actual": -0.0591363592406509,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_NH",
+          "expected": 0.3718626431893237,
+          "actual": 0.371862643189324,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_NH",
+          "expected": 0.29904610815666627,
+          "actual": 0.299046108156666,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_NH",
+          "expected": -0.07281653503265745,
+          "actual": -0.0728165350326575,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_NH",
+          "expected": 0.013680175792006588,
+          "actual": 0.0136801757920066,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_NH",
+          "expected": 18,
+          "actual": 18,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_NH",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_NH",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_NH",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_NH",
+          "expected": 1270696.0,
+          "actual": 1270696,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_START_VT",
+          "expected": 0.3386038550827622,
+          "actual": 0.338603855082762,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_END_VT",
+          "expected": 0.49473123387301093,
+          "actual": 0.494731233873011,
+          "passed": true
+        },
+        {
+          "name": "WF_OBS_CHANGE_VT",
+          "expected": 0.15612737879024874,
+          "actual": 0.156127378790249,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_START_VT",
+          "expected": 0.3386038550827622,
+          "actual": 0.338603855082762,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_END_VT",
+          "expected": 0.4954172442996505,
+          "actual": 0.495417244299651,
+          "passed": true
+        },
+        {
+          "name": "WF_FIXED_CHANGE_VT",
+          "expected": 0.1568133892168883,
+          "actual": 0.156813389216888,
+          "passed": true
+        },
+        {
+          "name": "WF_RESIDUAL_VT",
+          "expected": -0.0006860104266395717,
+          "actual": -0.000686010426639572,
+          "passed": true
+        },
+        {
+          "name": "WF_COMMON_N_VT",
+          "expected": 12,
+          "actual": 12,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_N_VT",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_ENTERING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "WF_EXITING_ASSETS_VT",
+          "expected": 0.0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "bridge_passed": true,
+      "priority_actual": [
+        6280,
+        59289,
+        29636,
+        59086,
+        30878,
+        19836,
+        14158,
+        19690,
+        null,
+        null,
+        null,
+        null
+      ],
+      "priority_passed": true,
+      "states_passed": true
+    }
+  ],
+  "not_native_judge_scores": true,
+  "oracle": "Independent pandas arithmetic from original CSV; no author workbook as expected answers",
+  "group_scope": "Period bridge, ranking on date/capacity, raw revision+missingness+guards; raw-edit numeric errors are assigned only to the third auxiliary group"
+}

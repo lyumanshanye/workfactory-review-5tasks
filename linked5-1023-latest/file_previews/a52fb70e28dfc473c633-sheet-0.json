@@ -1,0 +1,1 @@
+{"type":"sheet","name":"ControlPanel","rows":[["命名输入","可编辑值","说明"],["WF_BUDGET",53000,"批准总额上限（含储备）"],["WF_AIR_MULTIPLIER",1,"题设票价的当前倍率，压力在此基础上再涨20%"],["WF_RESERVE_RATE",0.05,"应急储备率"],["WF_GOV_BREAKFAST_0929",0,"09-29政府另供早餐：0否/1是；酒店免费早餐不受此开关影响"],["WF_ARRIVAL",20250928,"到达日YYYYMMDD：20250927/28/29；10-02返回及原供餐日历不变"]],"total_rows":6,"total_columns":3,"truncated":false}

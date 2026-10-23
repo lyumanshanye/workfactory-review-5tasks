@@ -1,0 +1,12 @@
+{
+  "version": "2.0.0",
+  "parent_task_version": "1.0.0",
+  "original_inputs_unchanged": true,
+  "new_synthetic_input_files": [],
+  "new_authored_hypothetical_case_location": "instruction.md: supplement E",
+  "fixed_templates_unchanged": true,
+  "core_weight_percent": 55,
+  "functional_weight_percent": 45,
+  "criteria": 15,
+  "scores_unknown": true
+}

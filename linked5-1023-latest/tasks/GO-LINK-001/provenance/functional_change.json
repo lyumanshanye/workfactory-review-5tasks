@@ -1,0 +1,11 @@
+{
+  "version": "2.0.0",
+  "parent_task_version": "1.0.0",
+  "scope": "New reusable-budget-workbook problem; previous v1.1 and LAWv1.2 trials preserved",
+  "original_inputs_unchanged": true,
+  "new_synthetic_input_files": [],
+  "fixed_templates_unchanged": true,
+  "core_weight_percent": 55,
+  "reusable_workbook_weight_percent": 45,
+  "criteria": 15
+}

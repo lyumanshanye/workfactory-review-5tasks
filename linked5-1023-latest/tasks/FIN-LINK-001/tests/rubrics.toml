@@ -1,0 +1,122 @@
+[judge]
+judge = "claude-code"
+prompt_template = "prompt.md"
+model = "qwen3.7-plus"
+timeout = 7200
+mode = "individual"
+weight = 1.0
+
+[[criterion]]
+id = "FIN001"
+name = "FIN001"
+weight = 3.666667
+type = "binary"
+description = "核实FDIC文档对字段定义的真实引用，并准确区分金额、百分比、代理率与监管评级。\nInspect output/credit_review.xlsx, output/credit_review_memo.docx, output/follow_up_register.csv."
+
+[[criterion]]
+id = "FIN002"
+name = "FIN002"
+weight = 3.666667
+type = "binary"
+description = "CERT+REPDTE键、季度/银行覆盖、缺失季度和重复检查可核验；机构连接基数正确。\nInspect output/credit_review.xlsx, output/credit_review_memo.docx, output/follow_up_register.csv."
+
+[[criterion]]
+id = "FIN003"
+name = "FIN003"
+weight = 5.238095
+type = "binary"
+description = "历史银行未被更晚机构ACTIVE筛除，机构快照日期和历史可用性边界明确。\nInspect output/credit_review.xlsx, output/credit_review_memo.docx, output/follow_up_register.csv."
+
+[[criterion]]
+id = "FIN004"
+name = "FIN004"
+weight = 5.238095
+type = "binary"
+description = "银行代理率分子和ASSET分母正确；房地产、权益、ROA、RBCRWAJ口径正确，缺失不补0。\nInspect output/credit_review.xlsx, output/credit_review_memo.docx, output/follow_up_register.csv."
+
+[[criterion]]
+id = "FIN005"
+name = "FIN005"
+weight = 5.238095
+type = "binary"
+description = "全部季度各州及区域汇总按分子之和/资产之和计算，而非均值百分数。\nInspect output/credit_review.xlsx, output/credit_review_memo.docx, output/follow_up_register.csv."
+
+[[criterion]]
+id = "FIN006"
+name = "FIN006"
+weight = 5.238095
+type = "binary"
+description = "20240630/20250630观察端点数值及银行明细正确，提供原始CSV行号。\nInspect output/credit_review.xlsx, output/credit_review_memo.docx, output/follow_up_register.csv."
+
+[[criterion]]
+id = "FIN007"
+name = "FIN007"
+weight = 5.238095
+type = "binary"
+description = "共同银行集合、20240630固定资产权重、固定最新州别的端点与百分点变化正确。\nInspect output/credit_review.xlsx, output/credit_review_memo.docx, output/follow_up_register.csv."
+
+[[criterion]]
+id = "FIN008"
+name = "FIN008"
+weight = 3.666667
+type = "binary"
+description = "进入/退出银行与资产规模可核验，残差被解释为范围/权重差异而非纯粹因果效果。\nInspect output/credit_review.xlsx, output/credit_review_memo.docx, output/follow_up_register.csv."
+
+[[criterion]]
+id = "FIN009"
+name = "FIN009"
+weight = 5.238095
+type = "binary"
+description = "八家名单按先三州各最高、再全域补齐及CERT并列规则准确产生，且不重复。\nInspect output/credit_review.xlsx, output/credit_review_memo.docx, output/follow_up_register.csv."
+
+[[criterion]]
+id = "FIN010"
+name = "FIN010"
+weight = 3.666667
+type = "binary"
+description = "每家有真实端点指标/可得同比及原始记录，核查理由与具体补证紧密对应。\nInspect output/credit_review.xlsx, output/credit_review_memo.docx, output/follow_up_register.csv."
+
+[[criterion]]
+id = "FIN011"
+name = "FIN011"
+weight = 3.666667
+type = "binary"
+description = "备忘录结合贷款手册的具体章节/页定位解释信用复核和代理局限，不虚构监管门槛。\nInspect output/credit_review.xlsx, output/credit_review_memo.docx, output/follow_up_register.csv."
+
+[[criterion]]
+id = "FIN012"
+name = "FIN012"
+weight = 1.571429
+type = "binary"
+description = "三份精确命名产物可读且必需表齐全、千美元/百分比/百分点明确。\nInspect output/credit_review.xlsx, output/credit_review_memo.docx, output/follow_up_register.csv."
+
+[[criterion]]
+id = "FIN013"
+name = "FIN013"
+weight = 3.666666
+type = "binary"
+description = "备忘录、Priority和八行CSV在银行、数字、行动上一致，建议和事实区分清楚。\nInspect output/credit_review.xlsx, output/credit_review_memo.docx, output/follow_up_register.csv."
+
+[[criterion]]
+id = "FIN014"
+name = "FIN014"
+weight = 15
+type = "binary"
+description = "修改允许的两个季度后，观察汇总、当前共同银行集合、起点固定资产权重、终点州别、成员进入退出及规模、残差均实际重算并可追溯；命名输出引用EndpointBridge。实际验证至少两组非默认期间，包括共同集合或成员规模不同的一组。默认固定权重或预计算少量场景不算满足。\nInspect output/credit_review.xlsx, output/credit_review_memo.docx, output/follow_up_register.csv. LibreOffice is installed. Tests/check_recalc.py can operate workbook copies; its auxiliary report is evidence, not a replacement native grade."
+
+[[criterion]]
+id = "FIN015"
+name = "FIN015"
+weight = 15
+type = "binary"
+description = "修改WF_REVIEW_SLOTS并换期后，Priority按当前有效数据先VT/NH/ME州覆盖再全域高值补足，CERT并列规则和不重复正确；12项命名CERT、计数及起点/终点指标原始行号同步。实际修改一条有效金额以产生真实排序变化，验证不是固定名单；成本/桥接的同一底层误差不额外当作排序逻辑错误。\nInspect output/credit_review.xlsx, output/credit_review_memo.docx, output/follow_up_register.csv. LibreOffice is installed. Tests/check_recalc.py can operate workbook copies; its auxiliary report is evidence, not a replacement native grade."
+
+[[criterion]]
+id = "FIN016"
+name = "FIN016"
+weight = 15
+type = "binary"
+description = "实际更改RawFinancials中的ASSET/P9ASSET/NAASSET（包括将分子项留空）后，银行和聚合数据联动，空值不冒充0，审计报告排除；本地修订状态和默认快照状态准确，Word/CSV静态快照边界明确。非法季度/颠倒端点/无效容量显示WF_MODEL_VALID为FALSE且清空可执行名单，恢复默认和原始金额可恢复。\nInspect output/credit_review.xlsx, output/credit_review_memo.docx, output/follow_up_register.csv. LibreOffice is installed. Tests/check_recalc.py can operate workbook copies; its auxiliary report is evidence, not a replacement native grade."
+
+[scoring]
+aggregation = "weighted_mean"

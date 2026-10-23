@@ -1,0 +1,1 @@
+{"type":"sheet","name":"Dashboard","rows":[["命名输出","当前结果","说明"],["WF_SELECTED_CITY","Phoenix","按人数、费用、城市名优先"],["WF_SELECTED_N",24,"无可行方案为0"],["WF_SNAPSHOT_CURRENT",true,"五项输入均为默认值才与Word/CSV快照一致"],["文档版次状态","Word/CSV与默认参数一致","未声称静态文档自动更新"],["压力下可行城市","Phoenix","当前票价基础上再涨20%，按同一人数/费用目标排序"],["压力下可行人数",18,"0表示需追加资金或另行调整"]],"total_rows":7,"total_columns":3,"truncated":false}

@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "controls": [
+    {
+      "control": "live_positive",
+      "passed": true,
+      "capability_groups": {
+        "period_and_cohort_bridge": true,
+        "current_capacity_and_ranking": true,
+        "raw_revision_missingness_and_guards": true
+      },
+      "report_sha256": "dfd17500b5c11e4e8af706669a5f19acd4319724e155d6b0aee754298e13f68f"
+    },
+    {
+      "control": "all_values",
+      "passed": true,
+      "exit_code": 1,
+      "capability_groups": {
+        "period_and_cohort_bridge": false,
+        "current_capacity_and_ranking": false,
+        "raw_revision_missingness_and_guards": false
+      },
+      "elapsed_sec": 74.4
+    },
+    {
+      "control": "stale_start_weights",
+      "passed": true,
+      "exit_code": 1,
+      "capability_groups": {
+        "period_and_cohort_bridge": false,
+        "current_capacity_and_ranking": true,
+        "raw_revision_missingness_and_guards": false
+      },
+      "elapsed_sec": 83.8
+    }
+  ],
+  "source_sha256": "40b05276583419fa0ca7550c42122b7726b31db7fe1592c6abb9889f3b7c8a34",
+  "role": "Operation checker validation only; not native model or author scores"
+}

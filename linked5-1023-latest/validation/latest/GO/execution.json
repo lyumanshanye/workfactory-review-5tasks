@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "domain": "GO",
+  "role": "Offline author operation checks, not model scores",
+  "image_id": "sha256:9af5e4f67da551e58a9e28dd87e3638bcb5c880dc2eae85d6b4ceaea17a5a672",
+  "exit_code": 0,
+  "source_frozen_unchanged": true,
+  "elapsed_sec": 18.8
+}

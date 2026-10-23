@@ -1,0 +1,68 @@
+DRAFT — HYPOTHETICAL EXERCISE ONLY — NOT SUBMITTED
+FTC Safeguards Rule Notification (16 CFR 314.4(j))
+Prepared for: Harbor Education Finance LLC
+Date prepared: 2025-03-07
+Status: DRAFT FOR INTERNAL REVIEW ONLY — DO NOT SUBMIT, SEND, OR FILE
+Assumption: All facts, entities, persons, and dates in this notice are hypothetical for this exercise only.
+
+---
+
+NOTIFICATION TO THE FEDERAL TRADE COMMISSION
+Pursuant to 16 CFR 314.4(j)
+
+(1) Name and contact information of the reporting financial institution:
+
+Name: Harbor Education Finance LLC
+Business: Consumer education loan services (financial institution under 16 CFR 314.1(b))
+Contact person: Dana Lee, Compliance Officer
+Email: compliance@example.invalid
+Phone: +1-202-555-0100
+Address: [To be confirmed — provide principal place of business address before filing]
+
+(2) Description of the types of information that were involved in the notification event:
+
+The notification event involved customer information consisting of: consumer names, residential addresses, loan account numbers, and outstanding loan balances. This information constitutes nonpublic personal information under 16 CFR 314.2(l) and 16 CFR 313.3(n). The information was maintained in an encrypted export file, but the encryption key was also obtained by the unauthorized actor, rendering the information "unencrypted" for purposes of 16 CFR 314.2(m).
+
+(3) Date or date range of the notification event (if possible to determine):
+
+The unauthorized access and download occurred during the period from 2025-03-01 through 2025-03-02. The exact date within this range has not been determined with precision; the investigation is ongoing. The notification event was discovered on 2025-03-03 at 09:00 when a non-involved employee (Alex) confirmed the facts.
+
+(4) Number of consumers affected or potentially affected by the notification event:
+
+550 distinct consumers. These 550 consumers are all within the approximately 4800 consumers whose customer information Harbor maintains. No other consumers have been identified as affected at this time. The investigation is ongoing to confirm that no additional consumers are affected.
+
+(5) General description of the notification event:
+
+On 2025-03-03 at 09:00, a non-involved employee of Harbor Education Finance LLC confirmed that an unauthorized actor accessed and downloaded an encrypted export file containing customer information (names, addresses, loan account numbers, and loan balances) for 550 distinct consumers during the period 2025-03-01 to 2025-03-02. The decryption key for the export file was also obtained by the unauthorized actor. There is no reliable evidence negating unauthorized acquisition. The incident is under active investigation by external forensic investigators engaged on 2025-03-07. Containment and remediation measures are in progress, including credential revocation, encryption key rotation, and access restriction. Harbor is reviewing its information security program to address identified gaps and achieve full compliance with 16 CFR Part 314.
+
+(6) Law enforcement determination regarding public disclosure:
+
+No written determination has been received from any law enforcement official stating that notifying the public of the breach would impede a criminal investigation or cause damage to national security. On 2025-03-07, a law enforcement official made an oral request that Harbor temporarily refrain from public disclosure, but no written determination has been provided, no specific duration has been specified, and no order has been issued preventing notification to the FTC. If a written determination is received, Harbor will notify the FTC and provide contact information for the law enforcement official in accordance with 16 CFR 314.4(j)(1)(vi).
+
+---
+
+CERTIFICATION
+
+I certify that the information provided in this notification is true and accurate to the best of my knowledge.
+
+Name: Dana Lee
+Title: Compliance Officer
+Entity: Harbor Education Finance LLC
+Date: [To be completed at time of filing]
+Email: compliance@example.invalid
+Phone: +1-202-555-0100
+
+---
+
+FILING INSTRUCTIONS (FOR INTERNAL USE ONLY — DO NOT INCLUDE IN SUBMISSION):
+
+1. This notice must be submitted electronically via the form located on the FTC's website at https://www.ftc.gov.
+2. The deadline for filing is 2025-04-02 (30 calendar days from discovery on 2025-03-03).
+3. The rule requires notification "as soon as possible" — do not wait until the deadline.
+4. Retain a copy of the submitted notice and the FTC confirmation of receipt.
+5. If a written law enforcement determination is received before filing, update section (6) and provide LE contact information.
+6. If a written law enforcement determination is received after filing, notify FTC and request delay of public disclosure (up to 30 days initial, 60 days extension if LE seeks it in writing).
+
+---
+
+END OF DRAFT NOTICE

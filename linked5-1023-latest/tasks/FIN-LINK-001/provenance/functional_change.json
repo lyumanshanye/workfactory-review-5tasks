@@ -1,0 +1,11 @@
+{
+  "version": "2.0.0",
+  "parent_task_version": "1.0.0",
+  "original_inputs_unchanged": true,
+  "new_synthetic_input_files": [],
+  "fixed_templates_unchanged": true,
+  "core_weight_percent": 55,
+  "functional_weight_percent": 45,
+  "criteria": 16,
+  "scores_unknown": true
+}

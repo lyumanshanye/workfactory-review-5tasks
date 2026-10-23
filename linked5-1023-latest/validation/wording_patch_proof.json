@@ -1,0 +1,12 @@
+{
+  "changed": [
+    "GO-LINK-001/rubrics.json",
+    "GO-LINK-001/task.toml",
+    "GO-LINK-001/tests/rubrics.toml"
+  ],
+  "old_manifest_sha256": "cb5af7ab980b32c7ee53bf810aa9f075ccc0245b4beca97884041d5ca7b45bcd",
+  "new_manifest_sha256": "08e47745db30d944d006192899ffd1f21380e59b00aff1b77471b33d5865298c",
+  "same_model_problem": true,
+  "only_GO007_wording_and_GO_version_changed": true,
+  "no_valid_low_model_answer_retried": true
+}
