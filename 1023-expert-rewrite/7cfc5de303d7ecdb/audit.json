@@ -1,0 +1,60 @@
+{
+  "revision": "7cfc5de303d7ecdb",
+  "status": "two_revisions_audited_pending_formal_grading",
+  "tasks": {
+    "DA-1023-001": {
+      "status": "numerical_and_contract_audit_passed_not_accepted",
+      "numerical_audit": {
+        "status": "numerical_audit_passed_not_gold",
+        "assertions": 89668,
+        "counties": 3144,
+        "direct_matches": 3091,
+        "eligible": 3082,
+        "coverage": "all five-year raw totals and population values; eligible growth/ranks; top20 union and contributions",
+        "limits": [
+          "does not independently establish historical boundary compatibility",
+          "does not approve all narrative or publication recommendations",
+          "does not measure model difficulty"
+        ]
+      },
+      "supplemental_checks": 53,
+      "criteria": 21,
+      "positive_weight": 141,
+      "negative_weight": 10,
+      "domain_anchor_fraction": 0.8085106382978723,
+      "unchanged_old_inputs": true,
+      "formal_score": null,
+      "inherited_scores": false
+    },
+    "FIN-1023-001": {
+      "status": "numerical_and_contract_audit_passed_not_accepted",
+      "numerical_audit": {
+        "status": "numerical_audit_passed_not_gold",
+        "assertions": 15297,
+        "bank_quarters": 746,
+        "verified": "four per-bank rates, raw denominators, all period/state/sample aggregates, bank contributions, portfolio attribution, same-season persistence and state/size peer benchmarks",
+        "limits": [
+          "does not approve every narrative or selected priority",
+          "does not establish why zero denominators are reported",
+          "does not calibrate difficulty"
+        ]
+      },
+      "supplemental_checks": 355,
+      "criteria": 32,
+      "positive_weight": 217,
+      "negative_weight": 10,
+      "domain_anchor_fraction": 0.5391705069124424,
+      "unchanged_old_inputs": true,
+      "formal_score": null,
+      "inherited_scores": false
+    }
+  },
+  "paid_model_calls": 0,
+  "old_snapshot_unchanged": true,
+  "other_three_tasks_unchanged": true,
+  "limitations": [
+    "No new Gold or model judge scores.",
+    "DA platform taxonomy mapping and FIN second-level category remain subject to submission configuration.",
+    "C levels are author proposals, not measured difficulty."
+  ]
+}

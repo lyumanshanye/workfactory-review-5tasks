@@ -1,0 +1,38 @@
+{
+  "task_id": "FIN-1023-001",
+  "title": "北新英格兰银行组合风险诊断与90天尽调安排",
+  "version": "1.0.1",
+  "parent_snapshot": "2186e947e8a88063",
+  "task_metadata": {
+    "domain": "金融",
+    "domain_l2": "",
+    "domain_l3": "区域银行经营风险诊断",
+    "domain_l4": "组合变化归因与条件尽调安排",
+    "capabilities": "银行比率口径、跨期组合归因、竞争解释、同业比较、逐家90天条件行动",
+    "task_complexity": "C4",
+    "weakness_tag": [
+      "W7",
+      "W11",
+      "W12"
+    ],
+    "task_id": "FIN-1023-001",
+    "vl_dependency": "否",
+    "source_note": "真实公开原件支持的新拟海外研究委托；随批provenance含来源和哈希，输入未改写。",
+    "difficulty_status": "pending_three_model_calibration",
+    "complexity_status": "author_proposed_not_difficulty",
+    "taxonomy_status": "金融二级候选为银行经营与风险管理；专家版所列九项无直接匹配，未冒充已获平台批准。"
+  },
+  "keywords": [
+    "银行经营",
+    "风险归因",
+    "资本分母",
+    "尽调取舍"
+  ],
+  "measured_difficulty": null,
+  "formal_acceptance": false,
+  "gold_score": null,
+  "inherited_model_scores": false,
+  "taxonomy_note": "金融二级候选为银行经营与风险管理；专家版所列九项无直接匹配，未冒充已获平台批准。",
+  "source_inputs_synthesized": false,
+  "weakness_evidence_status": "design_triggers_not_new_model_observations"
+}

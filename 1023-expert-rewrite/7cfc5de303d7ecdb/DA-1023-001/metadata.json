@@ -1,0 +1,37 @@
+{
+  "task_id": "DA-1023-001",
+  "title": "县域收入增长简报的发布复核",
+  "version": "1.0.1",
+  "parent_snapshot": "2186e947e8a88063",
+  "task_metadata": {
+    "domain": "数据分析",
+    "domain_l2": "数据处理与分析",
+    "domain_l3": "统计发布复核",
+    "domain_l4": "县域收入人口口径与排名稳定性",
+    "capabilities": "多源地域对应、缺值审查、增长及贡献分解、人口敏感性、限定范围的发布决定",
+    "task_complexity": "C3",
+    "weakness_tag": [
+      "W7",
+      "W12"
+    ],
+    "task_id": "DA-1023-001",
+    "vl_dependency": "否",
+    "source_note": "真实公开原件支持的新拟海外研究委托；随批provenance含来源和哈希，输入未改写。",
+    "difficulty_status": "pending_three_model_calibration",
+    "complexity_status": "author_proposed_not_difficulty",
+    "taxonomy_status": "内部保留DA；专家版平台候选映射为通用办公→数据处理与分析，提交枚举需确认。"
+  },
+  "keywords": [
+    "县域收入",
+    "地域可比性",
+    "人口分母",
+    "发布复核"
+  ],
+  "measured_difficulty": null,
+  "formal_acceptance": false,
+  "gold_score": null,
+  "inherited_model_scores": false,
+  "taxonomy_note": "内部保留DA；专家版平台候选映射为通用办公→数据处理与分析，提交枚举需确认。",
+  "source_inputs_synthesized": false,
+  "weakness_evidence_status": "design_triggers_not_new_model_observations"
+}

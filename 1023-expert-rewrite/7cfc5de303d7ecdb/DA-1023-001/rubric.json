@@ -1,0 +1,404 @@
+{
+  "metadata": {
+    "scoring": {
+      "s_max": 141
+    }
+  },
+  "rubric": [
+    {
+      "id": "DA01",
+      "weight": 3,
+      "dimension": "指令遵循",
+      "description": "提交的必交文件名称和数量符合交付清单。",
+      "verification_anchor": "一份county_income_review.xlsx和一份publication_memo.docx；本项仅检查交付清单。",
+      "target_files": [
+        "county_income_review.xlsx",
+        "publication_memo.docx"
+      ],
+      "source_requirement": "交付物及最后一段硬约束",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Binary",
+      "replaces": "DA01",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。"
+    },
+    {
+      "id": "DA02",
+      "weight": 3,
+      "dimension": "指令遵循",
+      "description": "两份必交Office文件内容可用对应软件正常打开。",
+      "verification_anchor": "实际读取工作簿和Word正文，不仅检查扩展名；只判断文件可用性，不判断分析正确性。",
+      "target_files": [
+        "county_income_review.xlsx",
+        "publication_memo.docx"
+      ],
+      "source_requirement": "交付物：可复核底稿及中文意见",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Binary",
+      "replaces": "DA01",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。"
+    },
+    {
+      "id": "DA03",
+      "weight": 7,
+      "dimension": "内容质量-事实忠实性",
+      "description": "以Census县级记录建立完整目标集合。",
+      "verification_anchor": "SUMLEV=050对应3144条；州和全国汇总不属于目标县。不同统计层级不能仅凭五位代码混入。",
+      "target_files": [
+        "county_income_review.xlsx"
+      ],
+      "source_requirement": "工作目标第1段",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Binary",
+      "replaces": "DA02",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。"
+    },
+    {
+      "id": "DA04",
+      "weight": 7,
+      "dimension": "内容质量-事实忠实性",
+      "description": "为不能与两张BEA表直接同码对应的目标实体记录去向及原件依据。",
+      "verification_anchor": "标准直接同码范围3091个、未直接对应53个；逐个核对其目标县代码和缺少哪一侧记录。官方脚注中的组合地区不是缺失值为零的证据。",
+      "target_files": [
+        "county_income_review.xlsx"
+      ],
+      "source_requirement": "工作目标第1段：所有目标实体处理去向",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Gradient",
+      "replaces": "DA03,DA13",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。",
+      "levels": {
+        "1": "53个未直接对应实体的实质正确完成比例p=100%。",
+        "0.75": "53个未直接对应实体的实质正确完成比例75%≤p<100%。",
+        "0.5": "53个未直接对应实体的实质正确完成比例50%≤p<75%。",
+        "0.25": "53个未直接对应实体的实质正确完成比例0%<p<50%。",
+        "0": "53个未直接对应实体的实质正确完成比例p=0%，或没有可核查结果。"
+      }
+    },
+    {
+      "id": "DA05",
+      "weight": 7,
+      "dimension": "内容质量-专业规范",
+      "description": "对已能同码对应但端点数据不可用的实体保留实际缺失标记和具体排除原因。",
+      "verification_anchor": "09110至09190九个康涅狄格规划区缺少本包2020年BEA收入/人口值，不能填0计算增长。只检查这类端点缺失处理，不重复评价不同码实体。",
+      "target_files": [
+        "county_income_review.xlsx"
+      ],
+      "source_requirement": "硬约束第2段：可用值及排除",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Gradient",
+      "replaces": "DA07",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。",
+      "levels": {
+        "1": "九个缺少2020年端点的规划区的实质正确完成比例p=100%。",
+        "0.75": "九个缺少2020年端点的规划区的实质正确完成比例75%≤p<100%。",
+        "0.5": "九个缺少2020年端点的规划区的实质正确完成比例50%≤p<75%。",
+        "0.25": "九个缺少2020年端点的规划区的实质正确完成比例0%<p<50%。",
+        "0": "九个缺少2020年端点的规划区的实质正确完成比例p=0%，或没有可核查结果。"
+      }
+    },
+    {
+      "id": "DA06",
+      "weight": 7,
+      "dimension": "内容质量-事实忠实性",
+      "description": "分析使用的收入与人口数值忠实于其明确引用的原始记录。",
+      "verification_anchor": "逐地区、年份和指标核对CAINC1、CAINC4、Census；缺失保留缺失。评估所呈现的有效比较记录中数值提取正确比例；后续公式按其所用输入单独核查，避免同一提取错误级联归零。",
+      "target_files": [
+        "county_income_review.xlsx"
+      ],
+      "source_requirement": "底稿：关键原始数值及来源",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Gradient",
+      "replaces": "新增：原始数值核验",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。",
+      "levels": {
+        "1": "底稿所用地区-年份的收入与人口记录的实质正确完成比例p=100%。",
+        "0.75": "底稿所用地区-年份的收入与人口记录的实质正确完成比例75%≤p<100%。",
+        "0.5": "底稿所用地区-年份的收入与人口记录的实质正确完成比例50%≤p<75%。",
+        "0.25": "底稿所用地区-年份的收入与人口记录的实质正确完成比例0%<p<50%。",
+        "0": "底稿所用地区-年份的收入与人口记录的实质正确完成比例p=0%，或没有可核查结果。"
+      }
+    },
+    {
+      "id": "DA07",
+      "weight": 10,
+      "dimension": "内容质量-数值与计算准确性",
+      "description": "按各自人口来源正确计算2020至2024年人均名义收入增长。",
+      "verification_anchor": "增长=(I2024/P2024)/(I2020/P2020)-1；按报告实际引用的正端点复算两种口径，不再次处罚前置提取或范围错误。标准同码可计算范围3082个。",
+      "target_files": [
+        "county_income_review.xlsx"
+      ],
+      "source_requirement": "工作目标第2段：两种人口口径增长",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Gradient",
+      "replaces": "DA04,DA05",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。",
+      "levels": {
+        "1": "两种口径下已报告地区的增长计算的实质正确完成比例p=100%。",
+        "0.75": "两种口径下已报告地区的增长计算的实质正确完成比例75%≤p<100%。",
+        "0.5": "两种口径下已报告地区的增长计算的实质正确完成比例50%≤p<75%。",
+        "0.25": "两种口径下已报告地区的增长计算的实质正确完成比例0%<p<50%。",
+        "0": "两种口径下已报告地区的增长计算的实质正确完成比例p=0%，或没有可核查结果。"
+      }
+    },
+    {
+      "id": "DA08",
+      "weight": 7,
+      "dimension": "内容质量-数值与计算准确性",
+      "description": "绝对人均美元数值正确处理收入千美元与人口人数的单位。",
+      "verification_anchor": "绝对人均美元=总收入千美元×1000/人口；仅增长率中单位抵消不代表绝对值已换算正确。接受明确以千美元/人报告的等价值。",
+      "target_files": [
+        "county_income_review.xlsx"
+      ],
+      "source_requirement": "硬约束第3段：单位及分母",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Binary",
+      "replaces": "DA06",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。"
+    },
+    {
+      "id": "DA09",
+      "weight": 7,
+      "dimension": "内容质量-数值与计算准确性",
+      "description": "两套前20名由各自已报告增长率按规定排序产生。",
+      "verification_anchor": "以其明示比较集合及增长结果核对：未舍入增长率降序，同值代码升序；分别取前20。仅检查排序与选取，不再次处罚相同前置数值或范围错误。",
+      "target_files": [
+        "county_income_review.xlsx"
+      ],
+      "source_requirement": "排名硬约束",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Binary",
+      "replaces": "DA04,DA05",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。"
+    },
+    {
+      "id": "DA10",
+      "weight": 10,
+      "dimension": "内容质量-数值与计算准确性",
+      "description": "榜单并集内收入来源贡献使用一致的基期分母，具有可加总含义。",
+      "verification_anchor": "标准算法为CAINC4的45/46/47行增量除以基期总收入×100，贡献单位百分点；或能回到总收入增长的等价分解。按其引用输入复算，不把分项自身增速相加。每个地区作为一个同类评价单位。",
+      "target_files": [
+        "county_income_review.xlsx"
+      ],
+      "source_requirement": "工作目标第2段：可加总收入来源分解",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Gradient",
+      "replaces": "DA08",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。",
+      "levels": {
+        "1": "其两榜并集内各地区的收入来源分解的实质正确完成比例p=100%。",
+        "0.75": "其两榜并集内各地区的收入来源分解的实质正确完成比例75%≤p<100%。",
+        "0.5": "其两榜并集内各地区的收入来源分解的实质正确完成比例50%≤p<75%。",
+        "0.25": "其两榜并集内各地区的收入来源分解的实质正确完成比例0%<p<50%。",
+        "0": "其两榜并集内各地区的收入来源分解的实质正确完成比例p=0%，或没有可核查结果。"
+      }
+    },
+    {
+      "id": "DA11",
+      "weight": 7,
+      "dimension": "内容质量-数值与计算准确性",
+      "description": "榜单并集内人口分母影响有可复算的量化结果。",
+      "verification_anchor": "接受ln(I1/I0)-ln(P1/P0)=ln(PC1/PC0)，或定义完整的反事实等价分解；明确单位和交互项分配。按其引用数值复算，不把收入来源贡献误称为人口贡献。",
+      "target_files": [
+        "county_income_review.xlsx"
+      ],
+      "source_requirement": "工作目标第2段：人口影响",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Gradient",
+      "replaces": "DA09",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。",
+      "levels": {
+        "1": "其两榜并集内各地区的人口影响计算的实质正确完成比例p=100%。",
+        "0.75": "其两榜并集内各地区的人口影响计算的实质正确完成比例75%≤p<100%。",
+        "0.5": "其两榜并集内各地区的人口影响计算的实质正确完成比例50%≤p<75%。",
+        "0.25": "其两榜并集内各地区的人口影响计算的实质正确完成比例0%<p<50%。",
+        "0": "其两榜并集内各地区的人口影响计算的实质正确完成比例p=0%，或没有可核查结果。"
+      }
+    },
+    {
+      "id": "DA12",
+      "weight": 7,
+      "dimension": "内容质量-结论正确性",
+      "description": "人口来源敏感性的文字结论与提交的两套榜单一致。",
+      "verification_anchor": "标准范围前20交集和并集均20，成员与名次均相同；采用有依据的收窄范围时，按其实际榜单判断。不能预设榜单必然变化。",
+      "target_files": [
+        "publication_memo.docx"
+      ],
+      "source_requirement": "工作目标第2段：据实量化差异",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Binary",
+      "replaces": "DA10",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。"
+    },
+    {
+      "id": "DA13",
+      "weight": 7,
+      "dimension": "内容质量-专业规范",
+      "description": "地域可比性说明使用官方脚注中的具体地域与年份规则。",
+      "verification_anchor": "核查其涉及的地域规则事实：HI的Kalawao并Maui；VA部分独立市与邻县组合；CT2024起九规划区；AK2020起Chugach/Copper River；同码本身不证明所有历史边界不变。不能声称原件提供了不存在的完整交叉表。",
+      "target_files": [
+        "county_income_review.xlsx",
+        "publication_memo.docx"
+      ],
+      "source_requirement": "工作目标第1段及两份官方脚注",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Gradient",
+      "replaces": "DA11",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。",
+      "levels": {
+        "1": "上述五类地域口径判断的实质正确完成比例p=100%。",
+        "0.75": "上述五类地域口径判断的实质正确完成比例75%≤p<100%。",
+        "0.5": "上述五类地域口径判断的实质正确完成比例50%≤p<75%。",
+        "0.25": "上述五类地域口径判断的实质正确完成比例0%<p<50%。",
+        "0": "上述五类地域口径判断的实质正确完成比例p=0%，或没有可核查结果。"
+      }
+    },
+    {
+      "id": "DA14",
+      "weight": 10,
+      "dimension": "内容质量-结论正确性",
+      "description": "发布意见明确限定可发布结果的实际样本及统计含义。",
+      "verification_anchor": "可发布限定直接对应且端点可计算范围的名义增长事实；应列范围、人口口径和回顾快照性质。不能把3082个结果称作完整3144县或未经限定的全国排名。",
+      "target_files": [
+        "publication_memo.docx"
+      ],
+      "source_requirement": "工作目标第3段：具体发布决定",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Binary",
+      "replaces": "DA12",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。"
+    },
+    {
+      "id": "DA15",
+      "weight": 7,
+      "dimension": "内容质量-分析与论证质量",
+      "description": "暂缓事项给出会影响决定的具体补证，而非通用免责声明。",
+      "verification_anchor": "例如对未直接对应地区要求官方同域收入/人口、组合地区拆分或交叉资料，对缺端点规划区要求同域历史数据；说明取得后如何决定恢复比较。接受其他针对实际缺口的等价安排。",
+      "target_files": [
+        "publication_memo.docx"
+      ],
+      "source_requirement": "工作目标第3段：暂缓及补证",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Binary",
+      "replaces": "DA12",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。"
+    },
+    {
+      "id": "DA16",
+      "weight": 7,
+      "dimension": "内容质量-分析与论证质量",
+      "description": "备忘录用实际入榜地区的数值解释收入来源与人口作用。",
+      "verification_anchor": "至少一项具体地区解释能定位到工作簿贡献和人口数值，并说明其对增长判断的意义；不以只有方法公式的段落替代。允许不同例子及分解方法。",
+      "target_files": [
+        "publication_memo.docx"
+      ],
+      "source_requirement": "工作目标第3段：实际地区支持解释",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Binary",
+      "replaces": "DA09,DA12",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。"
+    },
+    {
+      "id": "DA17",
+      "weight": 7,
+      "dimension": "内容质量-专业规范",
+      "description": "备忘录将名义收入增长与购买力、收入分布和福利判断区分。",
+      "verification_anchor": "本包无价格指数和家庭分布数据；不将名义县均值直接当作实际购买力或全体居民福利改善。只考统计含义，不要求提供包外资料。",
+      "target_files": [
+        "publication_memo.docx"
+      ],
+      "source_requirement": "交付物：名义收入的解释边界",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Binary",
+      "replaces": "DA12",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。"
+    },
+    {
+      "id": "DA18",
+      "weight": 7,
+      "dimension": "内容质量-专业规范",
+      "description": "收入和人口分解被解释为算术关系而非已识别的因果机制。",
+      "verification_anchor": "收入分项贡献与人口分母影响是按所用方法的分解，不足以证明迁徙、政策或居民行为导致增长；可以明确提出待证假设。",
+      "target_files": [
+        "publication_memo.docx"
+      ],
+      "source_requirement": "交付物：区分事实、分解和原因",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Binary",
+      "replaces": "DA09",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。"
+    },
+    {
+      "id": "DA19",
+      "weight": 7,
+      "dimension": "结构与组织",
+      "description": "已纳入比较记录具备可定位到具体源表的检索键。",
+      "verification_anchor": "文件名+FIPS+LineCode/字段+年份可定位即可，或等价可核查记录号；本项只检查已纳入记录的定位，不重复评价排除记录证据。",
+      "target_files": [
+        "county_income_review.xlsx"
+      ],
+      "source_requirement": "底稿：来源可定位",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Gradient",
+      "replaces": "DA13",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。",
+      "levels": {
+        "1": "已纳入比较记录的来源定位的实质正确完成比例p=100%。",
+        "0.75": "已纳入比较记录的来源定位的实质正确完成比例75%≤p<100%。",
+        "0.5": "已纳入比较记录的来源定位的实质正确完成比例50%≤p<75%。",
+        "0.25": "已纳入比较记录的来源定位的实质正确完成比例0%<p<50%。",
+        "0": "已纳入比较记录的来源定位的实质正确完成比例p=0%，或没有可核查结果。"
+      }
+    },
+    {
+      "id": "DA20",
+      "weight": 7,
+      "dimension": "内容质量-专业规范",
+      "description": "人口敏感性结论没有将同源人口估计冒充两个独立来源的交叉验证。",
+      "verification_anchor": "CAINC1脚注1将人口定义为Census年中估计。可以比较两份表的实际值是否一致，但一致不证明人口估计已经由独立来源验证。",
+      "target_files": [
+        "publication_memo.docx"
+      ],
+      "source_requirement": "人口来源比较及CAINC1官方脚注1",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Binary",
+      "replaces": "新增：实际来源相关性",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。"
+    },
+    {
+      "id": "DA21",
+      "weight": -10,
+      "dimension": "安全合规",
+      "description": "备忘录把本次并未开展的居民访谈或家庭调查记作已取得证据。",
+      "verification_anchor": "仅核查备忘录是否声称本项目已经访谈居民或完成新家庭调查并以其作依据；明确的后续建议或假设不触发。不同于普通计算、引用键或范围错误。",
+      "target_files": [
+        "publication_memo.docx"
+      ],
+      "source_requirement": "硬约束第1段：不得声称完成补证",
+      "criterion_type": "Objective",
+      "criterion_necessity": "Explicit",
+      "type": "Binary",
+      "replaces": "DA14",
+      "acceptable_alternatives": "接受能由随附原件支持的不同表格布局、专业建议和合法口径；按报告明示范围及方法复算，不以参考答案的专有名单或措辞判分。"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "fdic_api_documentation.html",
+  "origin": "direct_public_download",
+  "url": "https://banks.data.fdic.gov/docs/",
+  "final_url": "https://api.fdic.gov/banks/docs",
+  "publisher": "FDIC",
+  "fetched_at": "2026-10-22T04:37:30.760956+00:00",
+  "bytes": 32871,
+  "sha256": "6094a3a9a88abf00c49b363d08248a12af69b8c9df8585665bfdfd4b7908a39d",
+  "content_type": "text/html; charset=UTF-8",
+  "transformed": false
+}

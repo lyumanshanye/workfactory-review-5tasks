@@ -1,0 +1,104 @@
+{
+  "domain": "FIN",
+  "task": "FIN-1023-001",
+  "legacy_blueprint": {
+    "task_id": "FIN-FULL-0002",
+    "name": "work/fin-full-0002",
+    "title": "金融：A股上市公司清洗并重构历史财务数据与投资评级与目标价（0009）",
+    "blueprint": "full-taxonomy-workflow",
+    "role": "卖方行业首席分析师",
+    "scenario": "你作为卖方行业首席分析师，需在金融场景中对A股上市公司执行清洗并重构历史财务数据，最终支持投资评级与目标价的可追溯决策。",
+    "operation": "清洗并重构历史财务数据",
+    "inputs": [
+      "定期报告与临时公告",
+      "业绩说明会逐字稿",
+      "交易所问询函及回复"
+    ],
+    "decision_topic": "投资评级与目标价",
+    "rules": [
+      "事实、预测和分析师判断必须明确区分",
+      "目标价必须绑定估值日、方法和核心假设"
+    ],
+    "seed": 20261017009,
+    "category": "dependency-aware-workflow",
+    "difficulty": "A3",
+    "task_complexity": "C4",
+    "weakness_tags": [],
+    "domain": "FIN",
+    "domain_l2": "Fin2-股票研究",
+    "domain_l3": "A股上市公司｜清洗并重构历史财务数据｜投资评级与目标价｜流程001",
+    "domain_l4": "基于定期报告与临时公告、业绩说明会逐字稿、交易所问询函及回复，按事实、预测和分析师判断必须明确区分完成投资评级与目标价并留存证据",
+    "capabilities": [
+      "清洗并重构历史财务数据",
+      "依赖编排",
+      "跨源核验"
+    ],
+    "taxonomy_status": "specified"
+  },
+  "onet_enhanced_blueprint": {
+    "task_id": "ONET-LEGACY-0009",
+    "name": "work/onet-legacy-0009",
+    "title": "金融：A股上市公司清洗并重构历史财务数据与投资评级与目标价（0009）",
+    "blueprint": "full-taxonomy-workflow",
+    "role": "卖方行业首席分析师",
+    "scenario": "你作为卖方行业首席分析师，需在金融场景中对A股上市公司执行清洗并重构历史财务数据，最终支持投资评级与目标价的可追溯决策。\n\n职业分类参考：O*NET 31.0 13-2051.00 Financial and Investment Analysts。职业定义：Conduct quantitative analyses of information involving investment programs or financial data of public or private institutions, including valuation of businesses.",
+    "operation": "清洗并重构历史财务数据",
+    "inputs": [
+      "定期报告与临时公告",
+      "业绩说明会逐字稿",
+      "交易所问询函及回复"
+    ],
+    "decision_topic": "投资评级与目标价",
+    "rules": [
+      "事实、预测和分析师判断必须明确区分",
+      "目标价必须绑定估值日、方法和核心假设"
+    ],
+    "seed": 20261020009,
+    "category": "dependency-aware-workflow",
+    "difficulty": "A3",
+    "task_complexity": "C4",
+    "weakness_tags": [],
+    "domain": "FIN",
+    "domain_l2": "Fin2-股票研究",
+    "domain_l3": "A股上市公司｜清洗并重构历史财务数据｜投资评级与目标价｜流程001",
+    "domain_l4": "基于定期报告与临时公告、业绩说明会逐字稿、交易所问询函及回复，按事实、预测和分析师判断必须明确区分完成投资评级与目标价并留存证据",
+    "capabilities": [
+      "清洗并重构历史财务数据",
+      "依赖编排",
+      "跨源核验"
+    ],
+    "taxonomy_status": "specified",
+    "legacy_recipe_id": "FIN-FULL-0002",
+    "validation_profile": "legacy-reproduction",
+    "onet_mapping": {
+      "database": "O*NET",
+      "version": "31.0",
+      "occupation_code": "13-2051.00",
+      "occupation": {
+        "O*NET-SOC Code": "13-2051.00",
+        "Title": "Financial and Investment Analysts",
+        "Description": "Conduct quantitative analyses of information involving investment programs or financial data of public or private institutions, including valuation of businesses."
+      },
+      "mapping_level": "authored_L2_correspondence",
+      "is_official_domain_mapping": false,
+      "task_id": null,
+      "scope": "occupation_background_not_equivalent_professional_workflow",
+      "occupation_url": "https://www.onetonline.org/link/summary/13-2051.00"
+    }
+  },
+  "sources": [
+    {
+      "path": "/inspire/hdd2/project/special-project-1/public/yelv/research/合成工作类数据和移动coding数据/工作类任务/构题管线_v0.1/full_batch/plan.json",
+      "sha256": "1c338186602d9bda7bf749aaffcacb932e331a9c44fbd7dae2f656ca2a1847c1",
+      "pool_size": 2000
+    },
+    {
+      "path": "/inspire/hdd2/project/special-project-1/public/yelv/research/合成工作类数据和移动coding数据/工作类任务/onet_base_v0_1/builds/onet-legacy-2000-v2/plan.json",
+      "sha256": "80e2946e0c94bbea4d8956f234a471f9969c42d8d31eccbb851619c96264560d",
+      "pool_size": 2000
+    }
+  ],
+  "adaptation": "保留历史财务重构与决策支持；从A股估值改为美国银行风险复核，不继承目标价、行业假设或原难度。",
+  "inherit_difficulty": false,
+  "official_onet_workflow_equivalence": false
+}
