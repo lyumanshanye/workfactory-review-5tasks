@@ -86,7 +86,7 @@
       "name": "GO009",
       "weight": 7,
       "type": "binary",
-      "description": "所荐行程以USDA华盛顿总部和DCA为出发点，目的地机场与候选城市匹配，覆盖完整培训，并考虑提前一天抵达、次日返回的休息建议；直达或中转选择须有依据。无特定日期航班证据时明确待核实，不虚构班次或要求必须中转。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx.",
+      "description": "所荐行程以USDA华盛顿办公地点为出发点，自主选择合理的出发机场，并结合航班、接驳成本和时间说明选择依据；目的地机场与候选城市匹配，覆盖完整培训，考虑提前抵达及次日返回的休息建议。直达或中转均接受，不暗定DCA，也不强制穷举机场；没有特定日期航班证据时明确待核实，不虚构班次。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx.",
       "dimension": "内容质量-专业规范",
       "criterion_type": "Objective",
       "criterion_necessity": "Implicit"
