@@ -1,0 +1,23 @@
+{
+  "kind": "Explicit hypothetical internal business constraints authored for this exercise; not original public-source records",
+  "domain": "GA",
+  "version": "1.1.0",
+  "rules": {
+    "omitted_cluster_min_train_rows": 1000,
+    "remaining_hero_min_n": 500,
+    "remaining_hero_min_each_side": 100,
+    "full_test_slots": 3,
+    "full_test_min_each_selection_direction": 1,
+    "objective": "Among original FrozenSix eligible under all eligible leave-one-cluster-out runs, maximize sum(worst absolute adjusted gap across those runs), with at least one high and one low; tie by sorted H identifiers. Training only."
+  },
+  "unreviewed_internal_claims": [
+    {
+      "id": "GA-D1",
+      "statement": "六项在保留集方向复现，足以说明单一cluster构成不可能主导信号。"
+    },
+    {
+      "id": "GA-D2",
+      "statement": "为了选出三个完整试玩名额，可以用测试集重新估计分层基线，再把最强三项换进训练冻结六项。"
+    }
+  ]
+}

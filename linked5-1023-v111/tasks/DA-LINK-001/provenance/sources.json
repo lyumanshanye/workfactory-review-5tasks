@@ -1,0 +1,80 @@
+[
+  {
+    "domain": "DA",
+    "file": "daily_aqi_by_county_2024.csv",
+    "origin": "supplied_public_lib",
+    "seed_id": "epa_aqi_county",
+    "original_path": "/inspire/hdd2/project/special-project-1/public/dyfu/jbsynth_v3_assets/public_lib/seeds/epa_aqi_county/files/daily_aqi_by_county_2024.csv",
+    "url": "https://aqs.epa.gov/aqsweb/airdata/daily_aqi_by_county_2024.zip",
+    "landing_url": "https://aqs.epa.gov/aqsweb/airdata/download_files.html",
+    "sha256": "d2f6956102fb0557519806192f1d489fda821c5800e7d3d0f9c8324a7239f2a7",
+    "bytes": 26626210,
+    "license": "US federal government work, public domain in the US (17 U.S.C. 105)",
+    "unchanged": true
+  },
+  {
+    "domain": "DA",
+    "file": "annual_aqi_by_county_2024.csv",
+    "origin": "supplied_public_lib",
+    "seed_id": "epa_aqi_county",
+    "original_path": "/inspire/hdd2/project/special-project-1/public/dyfu/jbsynth_v3_assets/public_lib/seeds/epa_aqi_county/files/annual_aqi_by_county_2024.csv",
+    "url": "https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2024.zip",
+    "landing_url": null,
+    "sha256": "c7cd2d324634bb87ef474c86370461efe3f74e60570b61102bbe1365d3d56c9d",
+    "bytes": 68633,
+    "license": "US federal government work, public domain in the US (17 U.S.C. 105)",
+    "unchanged": true
+  },
+  {
+    "domain": "DA",
+    "file": "national_county2020.txt",
+    "origin": "supplied_public_lib",
+    "seed_id": "epa_aqi_county",
+    "original_path": "/inspire/hdd2/project/special-project-1/public/dyfu/jbsynth_v3_assets/public_lib/seeds/epa_aqi_county/files/national_county2020.txt",
+    "url": "https://www2.census.gov/geo/docs/reference/codes2020/national_county2020.txt",
+    "landing_url": null,
+    "sha256": "9f6e5f6eb6ac2f5e9a36d5fd01dec77991bddc75118f748a069441a4782970d6",
+    "bytes": 126639,
+    "license": "US federal government work, public domain in the US (17 U.S.C. 105)",
+    "unchanged": true
+  },
+  {
+    "domain": "DA",
+    "file": "AQI_Technical_Assistance_Document.pdf",
+    "origin": "supplied_public_lib",
+    "seed_id": "epa_aqi_county",
+    "original_path": "/inspire/hdd2/project/special-project-1/public/dyfu/jbsynth_v3_assets/public_lib/seeds/epa_aqi_county/files/AQI_Technical_Assistance_Document.pdf",
+    "url": "https://document.airnow.gov/technical-assistance-document-for-the-reporting-of-daily-air-quailty.pdf",
+    "landing_url": null,
+    "sha256": "b69de26a0f3d4603572595fc8b49be8fd157fd0faaaab023410bb13b4b6e5e0c",
+    "bytes": 1029442,
+    "license": "US federal government work, public domain in the US (17 U.S.C. 105)",
+    "unchanged": true
+  },
+  {
+    "domain": "DA",
+    "file": "epa_download_files.html",
+    "origin": "primary_source_download",
+    "url": "https://aqs.epa.gov/aqsweb/airdata/download_files.html",
+    "final_url": "https://aqs.epa.gov/aqsweb/airdata/download_files.html",
+    "status": "downloaded",
+    "content_type": "text/html",
+    "sha256": "815afb5445d66d1762caecfc5a5c4072640d7d2548638bb3c90c0ad43bdb814b",
+    "bytes": 386197,
+    "retrieved_at": "2026-10-22T18:40:20.463181+00:00",
+    "unchanged": true
+  },
+  {
+    "domain": "DA",
+    "file": "epa_file_formats.html",
+    "origin": "primary_source_download",
+    "url": "https://aqs.epa.gov/aqsweb/airdata/FileFormats.html",
+    "final_url": "https://aqs.epa.gov/aqsweb/airdata/FileFormats.html",
+    "status": "downloaded",
+    "content_type": "text/html",
+    "sha256": "a3e79ac6d940b73a3c29e5a389b59e708f7c16f126d7c929342abfa91aa629b4",
+    "bytes": 147724,
+    "retrieved_at": "2026-10-22T18:40:15.437735+00:00",
+    "unchanged": true
+  }
+]

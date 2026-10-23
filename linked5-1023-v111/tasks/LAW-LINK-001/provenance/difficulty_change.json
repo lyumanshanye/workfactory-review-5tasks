@@ -1,0 +1,8 @@
+{
+  "parent_version": "1.0.0",
+  "version": "1.1.0",
+  "hypothetical_file": "decision_constraints.json",
+  "original_inputs_unchanged": true,
+  "original_native_templates_unchanged": true,
+  "new_constraint_sha256": "820dd465413770a27fddf1b3ba073d73118d122866a62d31c9bc37f49114f3a3"
+}

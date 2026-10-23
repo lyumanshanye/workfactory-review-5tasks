@@ -1,0 +1,9 @@
+{
+  "parent_version": "1.0.0",
+  "version": "1.1.0",
+  "hypothetical_file": "decision_constraints.json",
+  "original_inputs_unchanged": true,
+  "original_native_templates_unchanged": true,
+  "new_constraint_sha256": "01f9e8ee57633225dc755840db1d556cf5045030b318393ce749785939d43bd0",
+  "draft_refinement": "Before any v1.1 solver run, caps made 41000/12000 so approved-transfer and no-transfer cases differ; combined cap remains53000."
+}

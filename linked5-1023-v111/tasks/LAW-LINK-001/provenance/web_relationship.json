@@ -1,0 +1,14 @@
+{
+  "domain": "LAW",
+  "source_file": "ftc_safeguards_guide.html",
+  "source_url": "https://search.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know",
+  "source_sha256": "2dd6845b64730e27a31af0efdc088eb90ea5ee5d275d8edc0d1af0874d473be3",
+  "raw_href": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-314",
+  "resolved_target_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-314",
+  "target_file": "ecfr_314_reference_page.html",
+  "target_sha256": "0ad37be5c8d633d1d26300be1f595ece58c4bb7c7de6f57d762e2da016dc659e",
+  "evidence_kind": "html_anchor",
+  "xpath": "/html/body/div/main/div[1]/div/div/div/div[2]/div/article/div/div[2]/div/div/p[1]/a[1]",
+  "anchor_or_context": "Standards for Safeguarding Customer Information",
+  "business_dependency": "FTC业务指南网页引用eCFR具体条款 → 冻结规则核对小机构例外和事件门槛 → 确定通报时间与内容 → 关联控制缺口和整改"
+}

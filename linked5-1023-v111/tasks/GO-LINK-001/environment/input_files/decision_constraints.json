@@ -1,0 +1,31 @@
+{
+  "kind": "Explicit hypothetical internal business constraints authored for this exercise; not original public-source records",
+  "domain": "GO",
+  "version": "1.1.0",
+  "rules": {
+    "fy_caps": {
+      "2025": 41000,
+      "2026": 12000
+    },
+    "reserve_rate": 0.05,
+    "transfer_limit": 1500,
+    "allocation": {
+      "airfare": "FY2025",
+      "venue": "FY2025",
+      "local_transport": "half to each FY",
+      "registration": "2/3 to FY2025, 1/3 to FY2026",
+      "lodging_and_tax": "night date",
+      "MIE": "travel date"
+    }
+  },
+  "unreviewed_internal_claims": [
+    {
+      "id": "GO-D1",
+      "statement": "只要总额不超过53000，就可以直接用FY2026余额填补FY2025缺口，无需另外批准。"
+    },
+    {
+      "id": "GO-D2",
+      "statement": "机票上涨20%只影响基础费用，应急储备可以保持原金额。"
+    }
+  ]
+}
