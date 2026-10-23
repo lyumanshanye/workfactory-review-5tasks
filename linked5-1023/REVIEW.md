@@ -6,11 +6,11 @@
 
 | 题号 | 业务任务 | 题面 | 候选参考交付 | 网页引用证据 |
 |---|---|---|---|---|
-| GO-LINK-001 | 跨财政年度培训会：把报销规则落到可批准的会务预算 | [instruction](tasks/GO-LINK-001/instruction.md) | [文件夹](tasks/GO-LINK-001/solution/golden_output/) | [原始链接及哈希](tasks/GO-LINK-001/provenance/web_relationship.json) |
-| FIN-LINK-001 | 新英格兰三州银行：季度信用复核与八个核查名额分配 | [instruction](tasks/FIN-LINK-001/instruction.md) | [文件夹](tasks/FIN-LINK-001/solution/golden_output/) | [原始链接及哈希](tasks/FIN-LINK-001/provenance/web_relationship.json) |
-| LAW-LINK-001 | 4800名消费者的小型金融机构：泄露通报与安全整改决策 | [instruction](tasks/LAW-LINK-001/instruction.md) | [文件夹](tasks/LAW-LINK-001/solution/golden_output/) | [原始链接及哈希](tasks/LAW-LINK-001/provenance/web_relationship.json) |
-| DA-LINK-001 | 亚利桑那三县户外活动：把AQI历史记录转成可复核的排期政策 | [instruction](tasks/DA-LINK-001/instruction.md) | [文件夹](tasks/DA-LINK-001/solution/golden_output/) | [原始链接及哈希](tasks/DA-LINK-001/provenance/web_relationship.json) |
-| GA-LINK-001 | Dota 2平衡复核：将历史对局信号转成六项受控试玩假设 | [instruction](tasks/GA-LINK-001/instruction.md) | [文件夹](tasks/GA-LINK-001/solution/golden_output/) | [原始链接及哈希](tasks/GA-LINK-001/provenance/web_relationship.json) |
+| GO-LINK-001 | 跨财政年度培训会：把报销规则落到可批准的会务预算 | [instruction](tasks/GO-LINK-001/instruction.md) | [文件夹](index.html?domain=GO#reference) | [原始链接及哈希](tasks/GO-LINK-001/provenance/web_relationship.json) |
+| FIN-LINK-001 | 新英格兰三州银行：季度信用复核与八个核查名额分配 | [instruction](tasks/FIN-LINK-001/instruction.md) | [文件夹](index.html?domain=FIN#reference) | [原始链接及哈希](tasks/FIN-LINK-001/provenance/web_relationship.json) |
+| LAW-LINK-001 | 4800名消费者的小型金融机构：泄露通报与安全整改决策 | [instruction](tasks/LAW-LINK-001/instruction.md) | [文件夹](index.html?domain=LAW#reference) | [原始链接及哈希](tasks/LAW-LINK-001/provenance/web_relationship.json) |
+| DA-LINK-001 | 亚利桑那三县户外活动：把AQI历史记录转成可复核的排期政策 | [instruction](tasks/DA-LINK-001/instruction.md) | [文件夹](index.html?domain=DA#reference) | [原始链接及哈希](tasks/DA-LINK-001/provenance/web_relationship.json) |
+| GA-LINK-001 | Dota 2平衡复核：将历史对局信号转成六项受控试玩假设 | [instruction](tasks/GA-LINK-001/instruction.md) | [文件夹](index.html?domain=GA#reference) | [原始链接及哈希](tasks/GA-LINK-001/provenance/web_relationship.json) |
 
 ## 每题为什么是同一条业务链
 
@@ -18,7 +18,7 @@
 
 GSA下载网页引用两年费率表和餐费拆分表 → 按逐日行程适用FTR → 比较人数/城市预算 → 形成有条件批准与补证清单。
 
-网页：[gsa_per_diem_files.html](https://www.gsa.gov/travel/plan-a-trip/per-diem-rates/per-diem-files) 实际引用 [FY2026_PerDiemMasterRatesFile.xlsx](https://www.gsa.gov/system/files/FY2026_PerDiemMasterRatesFile.xlsx)。离线原件位于 [输入目录](tasks/GO-LINK-001/environment/input_files/)，不是手工添加到题面的虚构关联。
+网页：[gsa_per_diem_files.html](https://www.gsa.gov/travel/plan-a-trip/per-diem-rates/per-diem-files) 实际引用 [FY2026_PerDiemMasterRatesFile.xlsx](https://www.gsa.gov/system/files/FY2026_PerDiemMasterRatesFile.xlsx)。离线原件位于 [输入目录](index.html?domain=GO#inputs)，不是手工添加到题面的虚构关联。
 
 模型收到的文件：
 
@@ -31,9 +31,9 @@ GSA下载网页引用两年费率表和餐费拆分表 → 按逐日行程适用
 
 供人工审阅的候选交付（不给模型）：
 
-- [conference_budget.xlsx](tasks/GO-LINK-001/solution/golden_output/conference_budget.xlsx)
-- [approval_brief.docx](tasks/GO-LINK-001/solution/golden_output/approval_brief.docx) · [PDF预览](validation/previews/approval_brief.pdf)
-- [approval_register.csv](tasks/GO-LINK-001/solution/golden_output/approval_register.csv)
+- [conference_budget.xlsx](tasks/GO-LINK-001/reference_output/conference_budget.xlsx)
+- [approval_brief.docx](tasks/GO-LINK-001/reference_output/approval_brief.docx) · [PDF预览](tasks/GO-LINK-001/reference_pdf/approval_brief.pdf)
+- [approval_register.csv](tasks/GO-LINK-001/reference_output/approval_register.csv)
 
 候选解复算摘要：`{"recommendation": "Phoenix", "attendees": 24, "total": 51174.48, "stress_total": 53744.88000000001, "options": 6}`。
 
@@ -41,7 +41,7 @@ GSA下载网页引用两年费率表和餐费拆分表 → 按逐日行程适用
 
 FDIC文档页引用Financial/Institution字段定义 → 以CERT和季度核对银行范围 → 计算可比信用代理指标 → 把八个核查名额落实到证据请求。
 
-网页：[fdic_api_documentation.html](https://api.fdic.gov/banks/docs/) 实际引用 [financial_definitions.yaml](https://api.fdic.gov/banks/docs/risview_properties.yaml)。离线原件位于 [输入目录](tasks/FIN-LINK-001/environment/input_files/)，不是手工添加到题面的虚构关联。
+网页：[fdic_api_documentation.html](https://api.fdic.gov/banks/docs/) 实际引用 [financial_definitions.yaml](https://api.fdic.gov/banks/docs/risview_properties.yaml)。离线原件位于 [输入目录](index.html?domain=FIN#inputs)，不是手工添加到题面的虚构关联。
 
 模型收到的文件：
 
@@ -54,9 +54,9 @@ FDIC文档页引用Financial/Institution字段定义 → 以CERT和季度核对�
 
 供人工审阅的候选交付（不给模型）：
 
-- [credit_review.xlsx](tasks/FIN-LINK-001/solution/golden_output/credit_review.xlsx)
-- [credit_review_memo.docx](tasks/FIN-LINK-001/solution/golden_output/credit_review_memo.docx) · [PDF预览](validation/previews/credit_review_memo.pdf)
-- [follow_up_register.csv](tasks/FIN-LINK-001/solution/golden_output/follow_up_register.csv)
+- [credit_review.xlsx](tasks/FIN-LINK-001/reference_output/credit_review.xlsx)
+- [credit_review_memo.docx](tasks/FIN-LINK-001/reference_output/credit_review_memo.docx) · [PDF预览](tasks/FIN-LINK-001/reference_pdf/credit_review_memo.pdf)
+- [follow_up_register.csv](tasks/FIN-LINK-001/reference_output/follow_up_register.csv)
 
 候选解复算摘要：`{"rows": 746, "banks": 54, "quarters": 14, "selected_CERT": [6280, 59289, 29636, 59086, 30878, 19836, 14158, 19690], "regional_observed_change_pp": 0.06962667306964987, "regional_fixed_change_pp": 0.06303109123861816}`。
 
@@ -64,7 +64,7 @@ FDIC文档页引用Financial/Institution字段定义 → 以CERT和季度核对�
 
 FTC业务指南网页引用eCFR具体条款 → 冻结规则核对小机构例外和事件门槛 → 确定通报时间与内容 → 关联控制缺口和整改。
 
-网页：[ftc_safeguards_guide.html](https://search.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know) 实际引用 [ecfr_314_reference_page.html](https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-314)。离线原件位于 [输入目录](tasks/LAW-LINK-001/environment/input_files/)，不是手工添加到题面的虚构关联。
+网页：[ftc_safeguards_guide.html](https://search.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know) 实际引用 [ecfr_314_reference_page.html](https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-314)。离线原件位于 [输入目录](index.html?domain=LAW#inputs)，不是手工添加到题面的虚构关联。
 
 模型收到的文件：
 
@@ -78,9 +78,9 @@ FTC业务指南网页引用eCFR具体条款 → 冻结规则核对小机构例�
 
 供人工审阅的候选交付（不给模型）：
 
-- [safeguards_gap_register.xlsx](tasks/LAW-LINK-001/solution/golden_output/safeguards_gap_register.xlsx)
-- [legal_action_memo.docx](tasks/LAW-LINK-001/solution/golden_output/legal_action_memo.docx) · [PDF预览](validation/previews/legal_action_memo.pdf)
-- [ftc_notice_draft.txt](tasks/LAW-LINK-001/solution/golden_output/ftc_notice_draft.txt)
+- [safeguards_gap_register.xlsx](tasks/LAW-LINK-001/reference_output/safeguards_gap_register.xlsx)
+- [legal_action_memo.docx](tasks/LAW-LINK-001/reference_output/legal_action_memo.docx) · [PDF预览](tasks/LAW-LINK-001/reference_pdf/legal_action_memo.pdf)
+- [ftc_notice_draft.txt](tasks/LAW-LINK-001/reference_output/ftc_notice_draft.txt)
 
 候选解复算摘要：`{"discovery": "2025-03-03", "deadline": "2025-04-02", "FTC_notice_required": true, "exemptions": ["314.4(b)(1)", "314.4(d)(2)", "314.4(h)", "314.4(i)"]}`。
 
@@ -88,7 +88,7 @@ FTC业务指南网页引用eCFR具体条款 → 冻结规则核对小机构例�
 
 EPA下载网页引用格式说明 → 日AQI按FIPS对齐年度汇总和县表 → 比较两种室内切换政策 → 交付日期级决策日历。
 
-网页：[epa_download_files.html](https://aqs.epa.gov/aqsweb/airdata/download_files.html) 实际引用 [epa_file_formats.html](https://aqs.epa.gov/aqsweb/airdata/FileFormats.html)。离线原件位于 [输入目录](tasks/DA-LINK-001/environment/input_files/)，不是手工添加到题面的虚构关联。
+网页：[epa_download_files.html](https://aqs.epa.gov/aqsweb/airdata/download_files.html) 实际引用 [epa_file_formats.html](https://aqs.epa.gov/aqsweb/airdata/FileFormats.html)。离线原件位于 [输入目录](index.html?domain=DA#inputs)，不是手工添加到题面的虚构关联。
 
 模型收到的文件：
 
@@ -101,9 +101,9 @@ EPA下载网页引用格式说明 → 日AQI按FIPS对齐年度汇总和县表 �
 
 供人工审阅的候选交付（不给模型）：
 
-- [outdoor_activity_model.xlsx](tasks/DA-LINK-001/solution/golden_output/outdoor_activity_model.xlsx)
-- [activity_policy_brief.docx](tasks/DA-LINK-001/solution/golden_output/activity_policy_brief.docx) · [PDF预览](validation/previews/activity_policy_brief.pdf)
-- [review_calendar.csv](tasks/DA-LINK-001/solution/golden_output/review_calendar.csv)
+- [outdoor_activity_model.xlsx](tasks/DA-LINK-001/reference_output/outdoor_activity_model.xlsx)
+- [activity_policy_brief.docx](tasks/DA-LINK-001/reference_output/activity_policy_brief.docx) · [PDF预览](tasks/DA-LINK-001/reference_pdf/activity_policy_brief.pdf)
+- [review_calendar.csv](tasks/DA-LINK-001/reference_output/review_calendar.csv)
 
 候选解复算摘要：`{"daily_rows": 1097, "calendar_rows": 786, "extra_indoor": 67, "extra_hours": 4020, "annual_nonzero_differences": 0, "missing_dates": {"Maricopa": "", "Pima": "", "Yuma": "2024-11-26"}}`。
 
@@ -111,7 +111,7 @@ EPA下载网页引用格式说明 → 日AQI按FIPS对齐年度汇总和县表 �
 
 UCI数据页明确引用采集代码及英雄映射 → 核实真实117列编码与引用材料差异 → 只用训练集选假设 → 测试集复核后安排受控试玩。
 
-网页：[uci_dota2_dataset.html](https://archive.ics.uci.edu/dataset/367/dota2+games+results) 实际引用 [dota2_collector_page.html](https://gist.github.com/da-steve101/1a7ae319448db431715bd75391a66e1b)。离线原件位于 [输入目录](tasks/GA-LINK-001/environment/input_files/)，不是手工添加到题面的虚构关联。
+网页：[uci_dota2_dataset.html](https://archive.ics.uci.edu/dataset/367/dota2+games+results) 实际引用 [dota2_collector_page.html](https://gist.github.com/da-steve101/1a7ae319448db431715bd75391a66e1b)。离线原件位于 [输入目录](index.html?domain=GA#inputs)，不是手工添加到题面的虚构关联。
 
 模型收到的文件：
 
@@ -123,9 +123,9 @@ UCI数据页明确引用采集代码及英雄映射 → 核实真实117列编码
 
 供人工审阅的候选交付（不给模型）：
 
-- [balance_review.xlsx](tasks/GA-LINK-001/solution/golden_output/balance_review.xlsx)
-- [balance_review_brief.docx](tasks/GA-LINK-001/solution/golden_output/balance_review_brief.docx) · [PDF预览](validation/previews/balance_review_brief.pdf)
-- [playtest_queue.csv](tasks/GA-LINK-001/solution/golden_output/playtest_queue.csv)
+- [balance_review.xlsx](tasks/GA-LINK-001/reference_output/balance_review.xlsx)
+- [balance_review_brief.docx](tasks/GA-LINK-001/reference_output/balance_review_brief.docx) · [PDF预览](tasks/GA-LINK-001/reference_pdf/balance_review_brief.pdf)
+- [playtest_queue.csv](tasks/GA-LINK-001/reference_output/playtest_queue.csv)
 
 候选解复算摘要：`{"train_rows": 92650, "test_rows": 10294, "cross_exact_rows": 0, "selected": ["H057", "H103", "H036", "H091", "H061", "H080"], "replicated": ["H057", "H103", "H036", "H091", "H061", "H080"]}`。
 
@@ -133,7 +133,7 @@ UCI数据页明确引用采集代码及英雄映射 → 核实真实117列编码
 
 192/192 项来源、结构、模板及独立业务重算检查通过，详见 [audit.json](validation/audit.json)。五题使用字节相同的Dockerfile和依赖清单；共享已实际构建的镜像、分别挂载各题只读原始输入，离线Oracle及工具/依赖/用户权限检查均通过。未为同配方重复构建五个镜像。
 
-参考交付为作者候选解，尚未获得独立专家Gold确认；新题尚未跑LLM judge或三模型难度校准，不能用旧题分数充当新题分数。A2/C2为设计标签，未声明正式验收达标。
+参考交付为作者候选解，尚未获得独立专家Gold确认。本轮作者候选参考交付的qwen3.7-plus原生判分：5/5完成，0题运行中。已完成主分：GO=1.000000；FIN=0.933333；LAW=1.000000；DA=1.000000；GA=1.000000。详情见 [JUDGE_STATUS.md](JUDGE_STATUS.md)。此分数不是GPT/Qwen独立作答成绩，尚未进行三模型难度校准。原生结果与冻结文件的50项完整性核验全部通过，见 [核验结果](validation/judge_integrity.json)。FIN008扣分涉及对比期间不符，独立CSV重算证据见 [期间复核](validation/FIN008_scope_audit.md)；原始主分0.933333保留，未覆盖评分。 不能用旧题分数充当新题分数。A2/C2为设计标签，未声明正式验收达标。
 
 ## 复现和打包
 

@@ -1,0 +1,213 @@
+{
+  "updated_at": "2026-10-23T03:17:19.783018+00:00",
+  "audit": "Independent deterministic FIN008 scope audit",
+  "original_native_reward": 0.933333,
+  "score_overridden": false,
+  "task_files_modified": false,
+  "source": "tasks/FIN-LINK-001/environment/input_files/fdic_financials_VT_NH_ME_2022_2025.csv",
+  "source_sha256": "47a3f8edee55758bfe23bb7e989371f7074a5057fac173a8b17d8a5b956068da",
+  "instruction_evidence": [
+    "使用CSV中的全部VT、NH、ME记录。季度范围以金融CSV实际提供的2022-03-31至2025-06-30为准；重点比较2024-06-30与2025-06-30。金融数据按CERT+REPDTE识别银行季度；机构资料按CERT连接，必须检查连接基数。机构资料是更晚的快照，ACTIVE不能作为删除历史银行或回填历史经营状态的依据。名称不能代替主键。",
+    "3. 另取两个端点都有有效数据的固定银行集合，以2024-06-30资产固定为权重，分别计算两个端点的代理率及变化（百分点）；各州归属按2025-06-30州别固定。与端点观察口径比较，列明进入/退出银行及其金额规模，将剩余差异称作范围和权重变化影响，不做无依据的因果拆分。"
+  ],
+  "criterion": {
+    "id": "FIN008",
+    "name": "FIN008",
+    "value": 0.0,
+    "raw": "no",
+    "weight": 7.0,
+    "description": "进入/退出银行与资产规模可核验，残差被解释为范围/权重差异而非纯粹因果效果。\nInspect output/credit_review.xlsx, output/credit_review_memo.docx, output/follow_up_register.csv.",
+    "reasoning": "Criterion FIN008 has two parts: (1) entering/exiting banks and asset scale must be verifiable, and (2) the residual must be explained as scope/weighting differences rather than pure causal effect.\n\nPart 2 is satisfied: the memo explicitly states '共同银行以2024-06-30资产固定加权，区域变化+0.0630个百分点；与观察变化的差+0.0066个百分点同时含范围和权重变化，不能说纯为银行恶化或单一成因', correctly attributing the residual to scope/weighting changes.\n\nPart 1 is NOT satisfied: The EndpointBridge sheet lists exiting banks (CERT 14240, 17748) but shows entering_CERT=None and entering_end_assets=0 for all states. However, the actual data shows 3 entering banks (CERT 59289, 59298, 35206) with assets 145991, 269483, 72604 respectively. The memo states '进入/退出CERT及金额见EndpointBridge', but this sheet does not contain the entering banks. While one entering bank (59289) appears in follow_up_register.csv, the primary reference point (EndpointBridge) is incomplete, making the entering banks and their asset scale not fully verifiable as claimed."
+  },
+  "required_period": {
+    "start": 20240630,
+    "end": 20250630,
+    "start_banks": 54,
+    "end_banks": 52,
+    "entering": [],
+    "exiting": [
+      14240,
+      17748
+    ],
+    "entering_end_assets": {},
+    "exiting_start_assets": {
+      "14240": 1270696,
+      "17748": 1653584
+    }
+  },
+  "alternative_period": {
+    "start": 20220331,
+    "end": 20250630,
+    "start_banks": 51,
+    "end_banks": 52,
+    "entering": [
+      35206,
+      59289,
+      59298
+    ],
+    "exiting": [
+      14240,
+      17748
+    ],
+    "entering_end_assets": {
+      "35206": 72604,
+      "59289": 145991,
+      "59298": 269483
+    },
+    "exiting_start_assets": {
+      "14240": 1221074,
+      "17748": 1547967
+    }
+  },
+  "candidate_endpoint_bridge": [
+    {
+      "state": "ALL",
+      "start_banks": 54,
+      "end_banks": 52,
+      "common_banks": 52,
+      "observed_start_pct": 0.2985664684799583,
+      "observed_end_pct": 0.3681931415496082,
+      "observed_change_pp": 0.06962667306964987,
+      "fixed_start_pct": 0.2943426003255104,
+      "fixed_end_pct": 0.3573736915641285,
+      "fixed_change_pp": 0.06303109123861816,
+      "scope_reweight_residual_pp": 0.006595581831031705,
+      "entering_CERT": null,
+      "exiting_CERT": "14240,17748",
+      "entering_end_assets": 0,
+      "exiting_start_assets": 2924280
+    },
+    {
+      "state": "ME",
+      "start_banks": 23,
+      "end_banks": 22,
+      "common_banks": 22,
+      "observed_start_pct": 0.2641998489512872,
+      "observed_end_pct": 0.3673774075438955,
+      "observed_change_pp": 0.1031775585926083,
+      "fixed_start_pct": 0.2555476385748969,
+      "fixed_end_pct": 0.3530371140344775,
+      "fixed_change_pp": 0.09748947545958059,
+      "scope_reweight_residual_pp": 0.00568808313302771,
+      "entering_CERT": null,
+      "exiting_CERT": "17748",
+      "entering_end_assets": 0,
+      "exiting_start_assets": 1653584
+    },
+    {
+      "state": "NH",
+      "start_banks": 19,
+      "end_banks": 18,
+      "common_banks": 18,
+      "observed_start_pct": 0.3650903339170002,
+      "observed_end_pct": 0.3059539746763494,
+      "observed_change_pp": -0.05913635924065086,
+      "fixed_start_pct": 0.3718626431893237,
+      "fixed_end_pct": 0.2990461081566663,
+      "fixed_change_pp": -0.07281653503265745,
+      "scope_reweight_residual_pp": 0.01368017579200659,
+      "entering_CERT": null,
+      "exiting_CERT": "14240",
+      "entering_end_assets": 0,
+      "exiting_start_assets": 1270696
+    },
+    {
+      "state": "VT",
+      "start_banks": 12,
+      "end_banks": 12,
+      "common_banks": 12,
+      "observed_start_pct": 0.3386038550827622,
+      "observed_end_pct": 0.4947312338730109,
+      "observed_change_pp": 0.1561273787902487,
+      "fixed_start_pct": 0.3386038550827622,
+      "fixed_end_pct": 0.4954172442996505,
+      "fixed_change_pp": 0.1568133892168883,
+      "scope_reweight_residual_pp": -0.0006860104266395717,
+      "entering_CERT": null,
+      "exiting_CERT": null,
+      "entering_end_assets": 0,
+      "exiting_start_assets": 0
+    }
+  ],
+  "evidence_rows": [
+    {
+      "source_row": 10,
+      "CERT": 14240,
+      "REPDTE": 20220331,
+      "ASSET": 1221074,
+      "NAMEFULL": "NORTHWAY BANK"
+    },
+    {
+      "source_row": 17,
+      "CERT": 17748,
+      "REPDTE": 20220331,
+      "ASSET": 1547967,
+      "NAMEFULL": "GORHAM SAVINGS BANK"
+    },
+    {
+      "source_row": 490,
+      "CERT": 14240,
+      "REPDTE": 20240630,
+      "ASSET": 1270696,
+      "NAMEFULL": "NORTHWAY BANK"
+    },
+    {
+      "source_row": 497,
+      "CERT": 17748,
+      "REPDTE": 20240630,
+      "ASSET": 1653584,
+      "NAMEFULL": "GORHAM SAVINGS BANK"
+    },
+    {
+      "source_row": 526,
+      "CERT": 35206,
+      "REPDTE": 20240630,
+      "ASSET": 84424,
+      "NAMEFULL": "FIDELITY PERSONAL TRUST COMPANY, FSB"
+    },
+    {
+      "source_row": 531,
+      "CERT": 59289,
+      "REPDTE": 20240630,
+      "ASSET": 105919,
+      "NAMEFULL": "WALDEN MUTUAL BANK"
+    },
+    {
+      "source_row": 532,
+      "CERT": 59298,
+      "REPDTE": 20240630,
+      "ASSET": 218470,
+      "NAMEFULL": "BANK OF BURLINGTON"
+    },
+    {
+      "source_row": 738,
+      "CERT": 35206,
+      "REPDTE": 20250630,
+      "ASSET": 72604,
+      "NAMEFULL": "FIDELITY PERSONAL TRUST COMPANY, FSB"
+    },
+    {
+      "source_row": 743,
+      "CERT": 59289,
+      "REPDTE": 20250630,
+      "ASSET": 145991,
+      "NAMEFULL": "WALDEN MUTUAL BANK"
+    },
+    {
+      "source_row": 744,
+      "CERT": 59298,
+      "REPDTE": 20250630,
+      "ASSET": 269483,
+      "NAMEFULL": "BANK OF BURLINGTON"
+    }
+  ],
+  "checks": {
+    "required_period_no_entering": true,
+    "alleged_entrants_exist_at_required_start": true,
+    "alternative_period_matches_alleged_entrants": true,
+    "candidate_entry_assets_match": true,
+    "candidate_exit_assets_match": true,
+    "candidate_exit_members_match": true
+  },
+  "conclusion": "The three alleged entrants already exist at 2024-06-30. The native FIN008 rejection contradicts the required endpoint scope; its entrant set instead matches 2022-03-31 to 2025-06-30. The latter is an inference about the judge error, not an explicit period stated by the judge. Original native score is retained."
+}
