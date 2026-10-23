@@ -38,5 +38,8 @@
   "blind_outputs/latest/gpt/FIN/credit_review_memo.docx": "file_previews/ec072217d7d49eb5ed78.json",
   "model_outputs/claude-opus-4-8/GO/conference_budget.xlsx": "model_outputs/claude-opus-4-8/GO/previews/conference_budget.json",
   "model_outputs/claude-opus-4-8/GO/approval_brief.docx": "model_outputs/claude-opus-4-8/GO/previews/approval_brief.json",
-  "model_outputs/claude-opus-4-8/GO/travel_evidence.pptx": "model_outputs/claude-opus-4-8/GO/previews/travel_evidence-pages.json"
+  "model_outputs/claude-opus-4-8/GO/travel_evidence.pptx": "model_outputs/claude-opus-4-8/GO/previews/travel_evidence-pages.json",
+  "model_outputs/gpt-5.6-sol/GO/conference_budget.xlsx": "model_outputs/gpt-5.6-sol/GO/previews/conference_budget.json",
+  "model_outputs/gpt-5.6-sol/GO/approval_brief.docx": "model_outputs/gpt-5.6-sol/GO/previews/approval_brief.json",
+  "model_outputs/gpt-5.6-sol/GO/travel_evidence.pptx": "model_outputs/gpt-5.6-sol/GO/previews/travel_evidence-pages.json"
 }

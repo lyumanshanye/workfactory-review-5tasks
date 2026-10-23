@@ -1,0 +1,35 @@
+{
+  "run_id": "go-rd-ppt-gpt56-003",
+  "model": "gpt-5.6-sol",
+  "files": [
+    {
+      "name": "conference_budget.xlsx",
+      "href": "model_outputs/gpt-5.6-sol/GO/conference_budget.xlsx",
+      "bytes": 619097,
+      "description": "GPT 独立作答 · 预算工作簿",
+      "sha256": "bef58c605dac4b6b19985c226900f965aa19f5aa5234ea4120433e9a59ff2185"
+    },
+    {
+      "name": "approval_brief.docx",
+      "href": "model_outputs/gpt-5.6-sol/GO/approval_brief.docx",
+      "bytes": 40116,
+      "description": "GPT 独立作答 · 审批建议",
+      "sha256": "3b88871f9c8ecf5508933d980fddd41eb700fb55bcd253f96bb3cc119b5ab00f"
+    },
+    {
+      "name": "approval_register.csv",
+      "href": "model_outputs/gpt-5.6-sol/GO/approval_register.csv",
+      "bytes": 1905,
+      "description": "GPT 独立作答 · 审批与补证登记",
+      "sha256": "9c3ceee647b1337836ca3b58234226342d9c15116fa0da2e93c47c4111cce973"
+    },
+    {
+      "name": "travel_evidence.pptx",
+      "href": "model_outputs/gpt-5.6-sol/GO/travel_evidence.pptx",
+      "bytes": 7532141,
+      "description": "GPT 独立作答 · 航班及住宿截图证据",
+      "sha256": "d8ed2b7bbc002c131bf88a5b7031a26ffc8c6a41ce4f270b0cf24d7684ba6cfa"
+    }
+  ],
+  "original_bytes_unchanged": true
+}

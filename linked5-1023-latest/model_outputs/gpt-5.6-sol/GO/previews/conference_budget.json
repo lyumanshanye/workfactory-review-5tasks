@@ -1,0 +1,17 @@
+{
+  "type": "xlsx",
+  "sheets": [
+    {
+      "name": "Options",
+      "href": "model_outputs/gpt-5.6-sol/GO/previews/sheet-0.json"
+    },
+    {
+      "name": "Daily",
+      "href": "model_outputs/gpt-5.6-sol/GO/previews/sheet-1.json"
+    },
+    {
+      "name": "Sources",
+      "href": "model_outputs/gpt-5.6-sol/GO/previews/sheet-2.json"
+    }
+  ]
+}

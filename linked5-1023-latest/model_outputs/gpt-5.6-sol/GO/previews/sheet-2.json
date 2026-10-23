@@ -1,0 +1,278 @@
+{
+  "rows": [
+    [
+      "资料依据与预算口径",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "ID",
+      "主题",
+      "来源/文件",
+      "条款/页/条件",
+      "查询时间",
+      "金额/口径",
+      "适用方案",
+      "状态"
+    ],
+    [
+      "FL-ORD",
+      "机票",
+      "https://www.google.com/travel/flights?hl=en&curr=USD",
+      "DCA–ORD; 2026-11-28/12-02; 1 adult economy; American 6:00–7:32, nonstop; American 15:00–18:04, nonstop. Google称必需税费已含，行李等可另收。",
+      "2026-10-23 14:00 UTC",
+      "USD 271.00/人往返",
+      "Chicago",
+      "动态估算；未预订"
+    ],
+    [
+      "HT-ORD",
+      "住宿",
+      "https://www.google.com/travel/search?hl=en&gl=us&curr=USD",
+      "Embassy Suites by Hilton Chicago O'Hare Rosemont; 2026-11-28至12-02；页面默认2旅客/1房（作为每房起价代理，非单人已确认报价）；页面卡片标Free breakfast。税费、房型、单人入住价格、团体房量待酒店书面确认。",
+      "2026-10-23 14:00 UTC",
+      "USD 126.00/房夜起",
+      "Chicago",
+      "动态估算；未预订"
+    ],
+    [
+      "FL-DEN",
+      "机票",
+      "https://www.google.com/travel/flights?hl=en&curr=USD",
+      "DCA–DEN; 2026-11-28/12-02; 1 adult economy; Frontier 7:00–9:16, nonstop; Frontier 7:30–12:48, nonstop. Google称必需税费已含，行李等可另收。",
+      "2026-10-23 14:00 UTC",
+      "USD 466.00/人往返",
+      "Denver",
+      "动态估算；未预订"
+    ],
+    [
+      "HT-DEN",
+      "住宿",
+      "https://www.google.com/travel/search?hl=en&gl=us&curr=USD",
+      "Holiday Inn Express Denver Downtown by IHG; 2026-11-28至12-02；页面默认2旅客/1房（作为每房起价代理，非单人已确认报价）；页面卡片标Free breakfast。税费、房型、单人入住价格、团体房量待酒店书面确认。",
+      "2026-10-23 14:00 UTC",
+      "USD 75.00/房夜起",
+      "Denver",
+      "动态估算；未预订"
+    ],
+    [
+      "FL-PHX",
+      "机票",
+      "https://www.google.com/travel/flights?hl=en&curr=USD",
+      "DCA–PHX; 2026-11-28/12-02; 1 adult economy; American 10:32–13:51, nonstop; American 12:49–19:00, nonstop. Google称必需税费已含，行李等可另收。",
+      "2026-10-23 14:00 UTC",
+      "USD 581.00/人往返",
+      "Phoenix",
+      "动态估算；未预订"
+    ],
+    [
+      "HT-PHX",
+      "住宿",
+      "https://www.google.com/travel/search?hl=en&gl=us&curr=USD",
+      "SureStay InnSuites Phoenix Hotel & Suites by Best Western; 2026-11-28至12-02；页面默认2旅客/1房（作为每房起价代理，非单人已确认报价）；页面卡片标Free breakfast。税费、房型、单人入住价格、团体房量待酒店书面确认。",
+      "2026-10-23 14:00 UTC",
+      "USD 93.00/房夜起",
+      "Phoenix",
+      "动态估算；未预订"
+    ],
+    [
+      "FL-BOS",
+      "机票",
+      "https://www.google.com/travel/flights?hl=en&curr=USD",
+      "DCA–BOS; 2026-11-28/12-02; 1 adult economy; Delta 6:00–7:38, nonstop; Delta 16:00–17:59, nonstop. Google称必需税费已含，行李等可另收。",
+      "2026-10-23 14:00 UTC",
+      "USD 330.00/人往返",
+      "Boston",
+      "动态估算；未预订"
+    ],
+    [
+      "HT-BOS",
+      "住宿",
+      "https://www.google.com/travel/search?hl=en&gl=us&curr=USD",
+      "Hyatt Place Boston / Seaport District; 2026-11-28至12-02；页面默认2旅客/1房（作为每房起价代理，非单人已确认报价）；页面卡片标Free breakfast。税费、房型、单人入住价格、团体房量待酒店书面确认。",
+      "2026-10-23 14:00 UTC",
+      "USD 202.00/房夜起",
+      "Boston",
+      "动态估算；未预订"
+    ],
+    [
+      "FL-SEA",
+      "机票",
+      "https://www.google.com/travel/flights?hl=en&curr=USD",
+      "DCA–SEA; 2026-11-28/12-02; 1 adult economy; Alaska 8:00–11:06, nonstop; Alaska 14:02–21:59, nonstop. Google称必需税费已含，行李等可另收。",
+      "2026-10-23 14:00 UTC",
+      "USD 977.00/人往返",
+      "Seattle",
+      "动态估算；未预订"
+    ],
+    [
+      "HT-SEA",
+      "住宿",
+      "https://www.google.com/travel/search?hl=en&gl=us&curr=USD",
+      "Hyatt House Seattle/Downtown; 2026-11-28至12-02；页面默认2旅客/1房（作为每房起价代理，非单人已确认报价）；页面卡片标Free breakfast。税费、房型、单人入住价格、团体房量待酒店书面确认。",
+      "2026-10-23 14:00 UTC",
+      "USD 170.00/房夜起",
+      "Seattle",
+      "动态估算；未预订"
+    ],
+    [
+      "GSA27",
+      "住宿/M&IE",
+      "FY2027_PerDiemRates_Validated090126.xlsx",
+      "FY2027，生效2026-10-01；按县和季节。Chicago 11/28-30 $232、12/1 $148；Denver $170；Phoenix $165；Boston $213；Seattle $188。M&IE：Phoenix $86，其余$92。",
+      "附件版本",
+      "住宿上限/房夜；M&IE/日",
+      "全部",
+      "适用"
+    ],
+    [
+      "MIE25",
+      "餐费分项",
+      "GSA_FY2025_MIE_Breakdown.docx",
+      "FY2025分项；仅因FY2027所用$86/$92档位与表中同档，预算映射：$86=22/23/36/5；$92=23/26/38/5。执行前向GSA核对FY2027分项。",
+      "附件版本",
+      "早餐/午餐/晚餐/杂费",
+      "全部",
+      "需复核版本关系"
+    ],
+    [
+      "FTR11.17",
+      "酒店早餐",
+      "eCFR_41_CFR_301-11.xml",
+      "§301-11.17：酒店免费餐不影响per diem。",
+      "冻结于2025-01-01",
+      "不扣免费酒店早餐",
+      "全部",
+      "适用"
+    ],
+    [
+      "FTR11.18",
+      "政府/注册餐",
+      "eCFR_41_CFR_301-11.xml",
+      "§301-11.18：政府提供或注册费包含餐食须按GSA分项扣减。",
+      "冻结于2025-01-01",
+      "扣3午餐、2晚餐、返程午餐；早餐参数控制",
+      "全部",
+      "适用"
+    ],
+    [
+      "FTR11.101",
+      "首末日",
+      "eCFR_41_CFR_301-11.xml",
+      "§301-11.101：首末日为适用M&IE的75%。",
+      "冻结于2025-01-01",
+      "75%",
+      "全部",
+      "适用"
+    ],
+    [
+      "FTR11.27",
+      "住宿税",
+      "eCFR_41_CFR_301-11.xml",
+      "§301-11.27：CONUS住宿税为杂项，限可报销住宿金额对应税。本题内部估算12%，非当地实际税率。",
+      "冻结于2025-01-01",
+      "12%内部预算",
+      "全部",
+      "适用"
+    ],
+    [
+      "FTR74",
+      "会议规划",
+      "eCFR_41_CFR_301-74.xml",
+      "§301-74.1/.3/.4/.5：降本、政府设施、地点/规模比较、书面理由；§301-74.7茶歇可提供；§301-74.21茶歇不扣M&IE。",
+      "冻结于2025-01-01",
+      "合规判断",
+      "全部",
+      "适用"
+    ],
+    [
+      "RD2036",
+      "RD内部规则",
+      "https://www.rd.usda.gov/resources/directives/instructions",
+      "RD Instruction 2036-A (2024-07-19)官网本环境返回Access Denied；未能核对具体条款，不编造。须由RD Travel/Policy取得正式副本并完成逐条审查。",
+      "2026-10-23 14:00 UTC",
+      "无金额",
+      "全部",
+      "阻断批准"
+    ],
+    [
+      "APT-DCA",
+      "出发机场比较",
+      "WMATA/机场公开交通页面；内部时间估计",
+      "总部至DCA约20–30分钟，预算Metro/接驳$12/人往返；IAD约55–75分钟、约$24；BWI约60–90分钟、约$40。时间受交通影响；执行前重查。DCA有本方案所列直飞。",
+      "2026-10-23 14:00 UTC",
+      "DCA $12/人RT",
+      "全部",
+      "内部估算"
+    ],
+    [
+      "LOCAL",
+      "当地交通",
+      "机场公共交通公开页面/内部估算",
+      "往返/人：ORD $10、DEN $20、PHX $4、BOS $5、SEA $6；仅机场—酒店公共交通占位，集体接驳/无障碍需求待询价。",
+      "2026-10-23 14:00 UTC",
+      "按人往返",
+      "全部",
+      "需补证"
+    ],
+    [
+      "TBD",
+      "未报价项目",
+      "待供应商询价",
+      "场地、AV、茶歇、机构餐正式报价、服务费/实际税、团体房量与房型/早餐、取消条款均未取得；Options中$0仅为明确占位，不代表免费。",
+      "2026-10-23",
+      "$0未计入",
+      "全部",
+      "阻断批准"
+    ],
+    [
+      "REG",
+      "注册费",
+      "题面",
+      "每人$180，含11/29、11/30、12/1午餐。",
+      "题面",
+      "$180/人",
+      "全部",
+      "给定"
+    ],
+    [
+      "APP",
+      "审批字段",
+      "Conference-Attendance-fillable-Approval-Template.pdf",
+      "需事件目的、任务关联、人数理由、替代方式、议程、地点成本估算、参会者明细、财务/POC等；模板不替代批准。",
+      "附件版本",
+      "无金额",
+      "全部",
+      "需补证"
+    ]
+  ],
+  "total_rows": 27,
+  "total_columns": 8,
+  "column_limit": 60,
+  "truncated": false
+}

@@ -1,0 +1,114 @@
+{
+  "type": "docx",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "集中培训审批建议"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "USDA Rural Development｜2026年11月29日—12月1日｜快照 2026-10-23"
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          "有条件推荐\nDenver｜24人",
+          "已知费用含5%储备\n$34,020.00"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "Heading 1",
+      "text": "请负责人决定"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "同意以Denver 24人为首选进入补证/询价，不视为订购授权。已知基础费用$32,400.00，5%储备后$34,020.00；尚余$18,980.00覆盖未报价场地、AV、茶歇及报价差异。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "常规备选：Chicago 24人，已知含储备$34,611.70。机票在当前调整后再上涨20%时，转用Chicago 24人（压力已知含储备$35,977.54），不得仅凭当前首选继续执行。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "若补充报价使含储备总额超过$53,000，先在24人方案间按完整可比总价重新排序；全部24人方案超限时再比较18人方案；不得拆分采购以规避审批。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Heading 1",
+      "text": "行程与机场依据"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "建议11月28日抵达、12月2日返程：完整覆盖三天培训，并避免跨大陆当日赶赴培训。统一选DCA：距1400 Independence Ave SW最近，五地均有可比直飞；相较IAD/BWI，内部估计总部接驳时间和费用最低。Denver采用DCA–DEN 11月28日7:00–9:16直飞、12月2日7:30–12:48直飞，往返$466/人；避免$437组合的分票/中转返程。航班为Google Flights动态估算，未预订。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Heading 1",
+      "text": "预算和差旅口径"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "住宿每人单间4晚，采用含免费早餐公开起价且不高于FY2027 GSA上限；税按可报销住宿金额12%内部估算。免费酒店早餐依FTR §301-11.17不扣M&IE。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "M&IE按FY2027费率，首末日75%（§301-11.101）；注册费内三次午餐以及机构提供的11月28日晚餐、12月1日晚餐、12月2日午餐按§301-11.18扣减。茶歇依§301-74.7可提供且§301-74.21不扣M&IE。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "机构供餐按对应GSA餐费分项作内部采购估算；不存在超标准实际费用授权。FY2025分项仅按相同$86/$92档位映射，执行前须确认FY2027分项。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Heading 1",
+      "text": "批准前提（全部阻断）"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "取得场地/AV/茶歇及机构餐书面报价，明确税费、服务费、取消条款；完整总额含5%储备不超过$53,000。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "确认24间单房四晚、实际房型与每日免费早餐、团体可订性；房价不超过适用GSA住宿上限，超限须事前实际费用授权或换房。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "核验酒店/场地资质、SAM/排除状态（如适用）、采购方式、竞争/政府设施比较、资金可用性及有权审批人。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "RD Travel/Policy取得并核对RD Instruction 2036-A（2024-07-19）。官网在查询环境返回Access Denied，本文不声称已完成条款核验。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "完成培训目的、任务关联、人数必要性、虚拟替代不可行性、议程/餐食、参会者明细、财务编码与POC；按适用层级完成会议/培训和差旅授权。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Heading 1",
+      "text": "可追溯来源"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "工作簿 Sources列出每一金额和条款；PPT保存实际用于比较的Google航班/酒店网页截图。法规依据：附件eCFR 41 CFR 301-11、301-74（冻结于2025-01-01）；费率：FY2027 GSA附件。工作簿参数变化后必须重新核对并导出本简报、CSV和PPT。"
+    }
+  ]
+}
