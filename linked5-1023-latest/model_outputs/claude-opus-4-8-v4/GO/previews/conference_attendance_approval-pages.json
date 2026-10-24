@@ -1,0 +1,14 @@
+{
+  "type": "pages",
+  "pages": [
+    {
+      "href": "model_outputs/claude-opus-4-8-v4/GO/previews/conference_attendance_approval-1.jpg"
+    },
+    {
+      "href": "model_outputs/claude-opus-4-8-v4/GO/previews/conference_attendance_approval-2.jpg"
+    },
+    {
+      "href": "model_outputs/claude-opus-4-8-v4/GO/previews/conference_attendance_approval-3.jpg"
+    }
+  ]
+}

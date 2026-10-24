@@ -1,0 +1,144 @@
+{
+  "rows": [
+    [
+      "ITINERARY & HOTEL LINKAGE — recommended Boston option (connectivity check)",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "All times from ITA Matrix (DCA↔BOS, queried 2026-10-24). Arrival Nov 28 (day before); depart Dec 2 (day after). Hotel check-in Nov 28 / checkout Dec 2 = 4 nights, covering full training Nov 29–Dec 1.",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Item",
+      "Detail",
+      "Date",
+      "Connects to",
+      null,
+      null
+    ],
+    [
+      "Outbound flight",
+      "DCA → BOS, American nonstop (~1h30)",
+      "2026-11-28",
+      "Arrive BOS afternoon → hotel check-in same day",
+      null,
+      null
+    ],
+    [
+      "Hotel check-in",
+      "DoubleTree by Hilton Boston Bayside",
+      "2026-11-28",
+      "Free airport shuttle (noted on Trip.com)",
+      null,
+      null
+    ],
+    [
+      "Training Day 1",
+      "Full day (lunch via registration)",
+      "2026-11-29",
+      "On-site; breakfast at hotel",
+      null,
+      null
+    ],
+    [
+      "Training Day 2",
+      "Full day (lunch via registration)",
+      "2026-11-30",
+      "On-site",
+      null,
+      null
+    ],
+    [
+      "Training Day 3",
+      "Full day (lunch via registration)",
+      "2026-12-01",
+      "Agency dinner Dec 1 evening",
+      null,
+      null
+    ],
+    [
+      "Return flight",
+      "BOS → DCA, American nonstop",
+      "2026-12-02",
+      "Checkout Dec 2 → BOS airport → DCA",
+      null,
+      null
+    ],
+    [
+      "Agency catered",
+      "Dinner Nov 28, Dinner Dec 1, Lunch Dec 2",
+      "various",
+      "Budgeted in Daily/Options",
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Execution conditions (venue/date/capacity not yet verified):",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "• Meeting venue address & 24-seat capacity for Nov 29–Dec 1 NOT yet confirmed — list as execution condition (see Register).",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "• Hotel room block of 24 single rooms at quoted rate NOT confirmed; single-occupancy quote used as whole-group estimate only.",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "• Flight fares are per-person public quotes (single seat); group inventory at same fare not guaranteed.",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "• Cheapest fares may be Basic Economy (restrictive changes); brief recommends a changeable fare — may raise airfare (stress band covers +20%).",
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  ],
+  "total_rows": 17,
+  "total_columns": 6,
+  "column_limit": 60,
+  "truncated": false
+}

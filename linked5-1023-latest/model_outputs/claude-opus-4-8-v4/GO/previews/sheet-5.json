@@ -1,0 +1,200 @@
+{
+  "rows": [
+    [
+      "THRESHOLDS, STRESS & SEGMENTED ACTIONS",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Decision metrics for airfare increases (0–20%) and unquoted-cost movements. Recomputes from Options/Daily.",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Metric",
+      "Value",
+      "Basis / condition",
+      null,
+      null,
+      null
+    ],
+    [
+      "Recommended option",
+      "Boston — 24 attendees",
+      "Lowest total-with-reserve that fits ceiling at max headcount",
+      null,
+      null,
+      null
+    ],
+    [
+      "Recommended grand total (base)",
+      "=Options!N5",
+      "Boston 24, airfare factor 1.0",
+      null,
+      null,
+      null
+    ],
+    [
+      "Recommended grand total (+20% airfare)",
+      "=Options!E19",
+      "Stress table Boston 24",
+      null,
+      null,
+      null
+    ],
+    [
+      "Budget ceiling",
+      "=CEILING",
+      "Parameter",
+      null,
+      null,
+      null
+    ],
+    [
+      "Headroom, base scenario (for unquoted costs, excl. reserve)",
+      "=CEILING/(1+RESRATE)-Options!L5",
+      "Max added base before ceiling (keeps reserve)",
+      null,
+      null,
+      null
+    ],
+    [
+      "Headroom, +20% airfare (excl. reserve)",
+      "=CEILING/(1+RESRATE)-(Options!L5+Options!C5*0.2*24)",
+      "After stress",
+      null,
+      null,
+      null
+    ],
+    [
+      "Nearest competitive alternative",
+      "Chicago — 24 attendees",
+      "2nd-lowest 24-person total",
+      null,
+      null,
+      null
+    ],
+    [
+      "Boston vs Chicago total gap (base)",
+      "=Options!N7-Options!N5",
+      "Chicago24 − Boston24",
+      null,
+      null,
+      null
+    ],
+    [
+      "Airfare factor that lifts Boston-24 to ceiling",
+      "=((CEILING/(1+RESRATE))-(Options!L5-Options!C5*24))/(Options!C5*24)",
+      "Solve total=ceiling for Boston airfare",
+      "=B13",
+      null,
+      null
+    ],
+    [
+      "→ equivalent airfare increase to reach ceiling",
+      "=B13-1",
+      "(factor−1); far beyond +20% band",
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "SEGMENTED ACTION TABLE",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Trigger / condition",
+      "Action",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Airfare 0% to +20% (base band)",
+      "KEEP recommendation: Boston 24. It stays lowest-cost and ~$16.9–17.9k under ceiling (ex-reserve). No switch.",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Airfare > +20% but total still ≤ ceiling",
+      "KEEP Boston 24; monitor. Boston reaches ceiling only near +200% airfare — not a realistic trigger.",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Unquoted base costs (venue/ground) rise, Boston 24 total ≤ ceiling",
+      "KEEP Boston 24. Absorb within $17.9k base headroom (ex-reserve).",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Unquoted base costs push Boston 24 over ceiling",
+      "First drop to Boston 18 (total ≈ $26.6k) — large headroom; only then reconsider city.",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Boston becomes infeasible/unavailable (venue or block)",
+      "SWITCH to Chicago 24 (next lowest, $39.5k base). Note Chicago hotel compliant only under FY27 cap.",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Both 24 and 18 exceed ceiling for all cities",
+      "Escalate: reduce scope/nights, seek actual-expense authorization, or request higher ceiling. Record in register.",
+      null,
+      null,
+      null,
+      null
+    ]
+  ],
+  "total_rows": 24,
+  "total_columns": 6,
+  "column_limit": 60,
+  "truncated": false
+}

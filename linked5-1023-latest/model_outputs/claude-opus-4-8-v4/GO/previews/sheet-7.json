@@ -1,0 +1,208 @@
+{
+  "rows": [
+    [
+      "SOURCES, QUERY TIMES & APPLICABILITY",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "#",
+      "Item",
+      "Source / platform",
+      "URL",
+      "Queried (UTC)",
+      "Applicable dates / notes"
+    ],
+    [
+      1,
+      "Flights DCA↔ORD (Chicago) $270 AA nonstop",
+      "ITA Matrix (Google)",
+      "https://matrix.itasoftware.com",
+      "2026-10-24",
+      "RT Nov 28–Dec 2 2026, 1 adult; public fare, basic econ possible"
+    ],
+    [
+      2,
+      "Flights DCA↔BOS (Boston) $358 AA nonstop",
+      "ITA Matrix (Google)",
+      "https://matrix.itasoftware.com",
+      "2026-10-24",
+      "RT Nov 28–Dec 2 2026, 1 adult"
+    ],
+    [
+      3,
+      "Flights DCA↔PHX (Phoenix) $581 AA nonstop",
+      "ITA Matrix (Google)",
+      "https://matrix.itasoftware.com",
+      "2026-10-24",
+      "RT Nov 28–Dec 2 2026, 1 adult"
+    ],
+    [
+      4,
+      "Flights DCA↔DEN (Denver) $741 Frontier / $940 United",
+      "ITA Matrix (Google)",
+      "https://matrix.itasoftware.com",
+      "2026-10-24",
+      "RT; Frontier basic; United more flexible"
+    ],
+    [
+      5,
+      "Flights DCA↔SEA (Seattle) $977 nonstop / $982 1-stop",
+      "ITA Matrix (Google)",
+      "https://matrix.itasoftware.com",
+      "2026-10-24",
+      "RT Nov 28–Dec 2 2026, 1 adult"
+    ],
+    [
+      6,
+      "Boston hotel — DoubleTree Hilton Boston Bayside $108/n, 8.6/10 (449 rev), breakfast",
+      "Trip.com (US)",
+      "https://us.trip.com/hotels/list?cityId=26848",
+      "2026-10-24",
+      "4 nights, 1 room/1 adult; total $501 incl taxes&fees"
+    ],
+    [
+      7,
+      "Boston alt — Hilton Boston Park Plaza $205/n, 8.8 (170), breakfast",
+      "Trip.com (US)",
+      "https://us.trip.com/hotels/list?cityId=26848",
+      "2026-10-24",
+      "Central; ≤$213 FY27 cap"
+    ],
+    [
+      8,
+      "Chicago hotel — Warwick Allerton $145/n, 8.6 (399)",
+      "Trip.com (US)",
+      "https://us.trip.com/hotels/list?cityId=549",
+      "2026-10-24",
+      "≤ $148 Dec-1 FY27 cap; total $668 incl tax"
+    ],
+    [
+      9,
+      "Denver hotel — Home2 Suites Hilton Downtown $109/n, 9.0 (94), breakfast",
+      "Trip.com (US)",
+      "https://us.trip.com/hotels/list?cityId=20099",
+      "2026-10-24",
+      "≤$170 cap"
+    ],
+    [
+      10,
+      "Phoenix hotel — Hampton Inn & Suites $150/n, 9.4 (116), breakfast",
+      "Trip.com (US)",
+      "https://us.trip.com/hotels/list?cityId=25938",
+      "2026-10-24",
+      "≤$165 cap (thin margin)"
+    ],
+    [
+      11,
+      "Seattle hotel — Belltown BF-incl $103/n, 8.6 (114), breakfast",
+      "Trip.com (US)",
+      "https://us.trip.com/hotels/list?cityId=511",
+      "2026-10-24",
+      "≤$188 cap"
+    ],
+    [
+      12,
+      "FY2027 per-diem (lodging & M&IE)",
+      "GSA / input file",
+      "FY2027_PerDiemRates_Validated090126.xlsx",
+      "file (read)",
+      "Eff. Oct 1 2026 — APPLICABLE year"
+    ],
+    [
+      13,
+      "FY2025 / FY2026 per-diem (historical contrast)",
+      "GSA / input files",
+      "FY2025/FY2026_PerDiemMasterRatesFile.xlsx",
+      "file (read)",
+      "Historical only — not for reimbursement"
+    ],
+    [
+      14,
+      "M&IE meal breakdown (deduction components)",
+      "GSA FY2025 M&IE Breakdown",
+      "GSA_FY2025_MIE_Breakdown.docx",
+      "file (read)",
+      "$92 MIE: B23/L26/D38; $86: B22/L23/D36"
+    ],
+    [
+      15,
+      "Conference planning rules",
+      "41 CFR 301-74 (eCFR, frozen 2025-01-01)",
+      "eCFR_41_CFR_301-74.xml",
+      "file (read)",
+      "301-74.1/.3/.4/.5/.6/.7/.21"
+    ],
+    [
+      16,
+      "Travel reimbursement rules",
+      "41 CFR 301-11 (eCFR, frozen 2025-01-01)",
+      "eCFR_41_CFR_301-11.xml",
+      "file (read)",
+      "301-11.100/.300 actual-expense"
+    ],
+    [
+      17,
+      "RD Instruction 2036-A (Travel Regs & Policies)",
+      "USDA Rural Development",
+      "https://www.rd.usda.gov/resources/directives/instructions (RD Instr 2036-A, eff. 2024-07-19)",
+      "2026-10-24",
+      "Confirm current clause text before approval"
+    ],
+    [
+      18,
+      "FX note",
+      "N/A — all prices captured in USD",
+      "ITA Matrix & us.trip.com default USD",
+      "2026-10-24",
+      "No currency conversion applied"
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Pricing/tax口径: ITA Matrix fares are total incl. taxes/carrier fees per ticket. Trip.com hotel 'Total price' is incl. taxes & fees; nightly figure excl. taxes & fees. Internal 12% lodging-tax line is a planning estimate, NOT the local statutory rate.",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  ],
+  "total_rows": 25,
+  "total_columns": 6,
+  "column_limit": 60,
+  "truncated": false
+}

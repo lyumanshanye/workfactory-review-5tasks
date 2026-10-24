@@ -1,0 +1,37 @@
+{
+  "type": "xlsx",
+  "sheets": [
+    {
+      "name": "Parameters",
+      "href": "model_outputs/claude-opus-4-8-v4/GO/previews/sheet-0.json"
+    },
+    {
+      "name": "CityData",
+      "href": "model_outputs/claude-opus-4-8-v4/GO/previews/sheet-1.json"
+    },
+    {
+      "name": "Daily",
+      "href": "model_outputs/claude-opus-4-8-v4/GO/previews/sheet-2.json"
+    },
+    {
+      "name": "Options",
+      "href": "model_outputs/claude-opus-4-8-v4/GO/previews/sheet-3.json"
+    },
+    {
+      "name": "Historical",
+      "href": "model_outputs/claude-opus-4-8-v4/GO/previews/sheet-4.json"
+    },
+    {
+      "name": "Thresholds",
+      "href": "model_outputs/claude-opus-4-8-v4/GO/previews/sheet-5.json"
+    },
+    {
+      "name": "Itinerary",
+      "href": "model_outputs/claude-opus-4-8-v4/GO/previews/sheet-6.json"
+    },
+    {
+      "name": "Sources",
+      "href": "model_outputs/claude-opus-4-8-v4/GO/previews/sheet-7.json"
+    }
+  ]
+}

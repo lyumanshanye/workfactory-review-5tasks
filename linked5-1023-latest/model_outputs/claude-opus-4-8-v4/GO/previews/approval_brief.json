@@ -1,0 +1,271 @@
+{
+  "type": "docx",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "USDA Rural Development — Centralized Training\nConference Site & Budget Approval Brief"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "Prepared by: Conference Coordinator, USDA Rural Development  |  Date of analysis: 2026-10-24  |  Training dates: Nov 29 – Dec 1, 2026"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "1. Recommendation"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "Recommended option: BOSTON, MA — 24 attendees."
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Estimated grand total: $34,242.77 (base $32,612.16 + 5% contingency reserve $1,630.61) — $18,757 under the $53,000 ceiling."
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Flights: DCA ⇄ BOS, American nonstop, ~$358 round trip (ITA Matrix, 2026-10-24)."
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Lodging: DoubleTree by Hilton Boston Bayside — $108/night, guest rating 8.6/10 (449 reviews, Trip.com 2026-10-24), breakfast included, free airport shuttle; 4 nights (Nov 28–Dec 2) at/below the FY2027 $213 Boston lodging cap on every night."
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Why 24 (not 18): the ceiling is met with large margin, so the decision rule prioritizes the larger group; 24-person total is lowest among all cities that fit."
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "2. How the recommendation was chosen"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "Candidates: Chicago (ORD), Denver (DEN), Phoenix (PHX), Boston (BOS), Seattle (SEA). All five were priced with real flight quotes (ITA Matrix) and ≥2 real hotel quotes per city (Trip.com), screened for a quality standard (guest rating ≥8.0/10, ≥50 reviews, breakfast included/budgeted) and per-diem lodging-cap compliance (41 CFR 301-11.100 / 301-74.6)."
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "Decision rule (applied in order): fit the $53,000 ceiling → maximize attendees → lowest total-with-reserve → alphabetical."
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "24-person totals (incl. 5% reserve):"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Boston $34,242.77  ← recommended (lowest)"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Chicago $39,528.72  ← nearest competitive alternative"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Denver $45,519.26   |   Phoenix $45,687.60   |   Seattle $50,789.09"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "All five cities fit the ceiling at 24 attendees in the base case. Boston wins because its compliant breakfast-included hotel ($108) plus free airport shuttle more than offset its higher airfare vs. Chicago."
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "3. Key amounts (recommended Boston · 24)"
+    },
+    {
+      "type": "table",
+      "rows": [
+        [
+          "Line",
+          "Amount (USD)"
+        ],
+        [
+          "Airfare (24 × $358)",
+          "8,592.00"
+        ],
+        [
+          "Lodging room (24 × $108 × 4 nights)",
+          "10,368.00"
+        ],
+        [
+          "Lodging tax (internal 12% est.)",
+          "1,244.16"
+        ],
+        [
+          "Registration (24 × $180)",
+          "4,320.00"
+        ],
+        [
+          "Agency meals (2 dinners + Dec-2 lunch, 24)",
+          "2,400.00"
+        ],
+        [
+          "Light refreshments (24 × $15 × 3 days)",
+          "1,080.00"
+        ],
+        [
+          "Ground transport (home↔DCA; airport shuttle free)",
+          "960.00"
+        ],
+        [
+          "Meeting venue (3 days × $1,200, to be quoted)",
+          "3,600.00"
+        ],
+        [
+          "Base subtotal",
+          "32,612.16"
+        ],
+        [
+          "Contingency reserve (5%)",
+          "1,630.61"
+        ],
+        [
+          "GRAND TOTAL",
+          "34,242.77"
+        ],
+        [
+          "Budget ceiling",
+          "53,000.00"
+        ],
+        [
+          "Headroom for unquoted/TBD base costs (ex-reserve)",
+          "17,864.03"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "4. Itinerary basis"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Arrive Nov 28 (day before); depart Dec 2 (day after) — fully covers training Nov 29–Dec 1."
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Hotel check-in Nov 28 / checkout Dec 2 = 4 nights. Flights, check-in/out, airport↔hotel transfer and venue dates all connect (see workbook 'Itinerary')."
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Cheapest fares may be Basic Economy; a changeable fare is advised. The +20% airfare stress band absorbs this."
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "5. Flight-increase & switching conditions"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Airfare 0% → +20%: KEEP Boston 24. At +20% the total is $36,047.09 — still ~$16,953 under ceiling. No switch within the required band."
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Breakeven: Boston 24 would reach the ceiling only near +208% airfare — not a realistic trigger. So the recommendation does not switch to 18 people or another city on airfare alone in the 0–20% range."
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Only Seattle fails at +20% (24-person $55,713 > ceiling); the other four still fit."
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "If Boston becomes unavailable, switch to Chicago 24 ($39,528.72 base case); note Chicago’s $145 hotel is compliant only under FY2027 caps (would breach FY25/26 Dec-1 $142 cap)."
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "6. Unquoted-cost sensitivity"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "The venue ($3,600) and ground transport are estimates to be quoted. Boston 24 can absorb up to $17,864 of additional base cost before touching the ceiling (reserve preserved); $16,146 after a +20% airfare shock. Recommendation holds as long as unquoted base costs stay within that headroom. It would be overturned only if combined unquoted overruns exceed ~$17.9k (base) — at which point step to Boston 18 (total ≈ $26,627) before changing city."
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "7. Historical per-diem contrast (FY2025/26/27)"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Applicable year is FY2027 (travel in FY2027, eff. Oct 1 2026). FY25/26 shown for contrast only — not for this reimbursement."
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Boston’s $108 room is compliant under all three FY lodging caps — robust to rate-year."
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Lodging caps rose slightly FY25→FY27; M&IE unchanged. Event dollar totals are unchanged by FY (quotes held constant); only compliance/benchmarks move. Chicago’s $145 room is non-compliant under FY25/26 Dec-1 caps."
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "8. Conditions before approval (see approval_register.csv)"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Venue address & 24-seat capacity not yet confirmed (Location Cost Estimate) — execution condition."
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Hotel 24-room block at quoted rate not confirmed; single-occupancy quote used as whole-group estimate only."
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Flight group inventory at quoted fare not guaranteed; FEMA fire-safe accommodation status to be verified."
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Funds availability, attendee roster/justification, and exact RD Instruction 2036-A clauses to be confirmed. Hotel/venue vendor eligibility, procurement and funding not yet verified."
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "9. Status of estimates"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "Known/quoted: flights, hotel nightly rates, registration, per-diem caps. Estimated: agency meals (GSA M&IE components), light refreshments, ground transport, internal 12% lodging tax. To be quoted: meeting venue, group room block, final catering. No quotes, inventory, bookings, credentials or approvals are fabricated; page-absent details are listed as to-verify."
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "Snapshot notice: This brief reflects the itinerary and parameters in conference_budget.xlsx as of 2026-10-24. If parameters or dates change, re-check quote applicability in the workbook and re-export this brief."
+    }
+  ]
+}

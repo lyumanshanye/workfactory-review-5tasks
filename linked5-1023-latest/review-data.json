@@ -725,6 +725,55 @@
       "reference_status": "removed_pending_new_reference",
       "model_runs": [
         {
+          "model": "claude-opus-4-8",
+          "label": "Claude Opus 4.8 · v4 完成产出（含收尾提醒）",
+          "status": "五份交付已完成",
+          "run_id": "go-v4-three-models-001",
+          "files": [
+            {
+              "name": "conference_budget.xlsx",
+              "href": "model_outputs/claude-opus-4-8-v4/GO/conference_budget.xlsx",
+              "bytes": 22835,
+              "description": "Claude 作答 · 预算工作簿",
+              "sha256": "64a7c401b9dc2652c52490c4ef631a4862e3125c65f8fa9295760548e10ea1e1"
+            },
+            {
+              "name": "approval_brief.docx",
+              "href": "model_outputs/claude-opus-4-8-v4/GO/approval_brief.docx",
+              "bytes": 39958,
+              "description": "Claude 作答 · 审批建议",
+              "sha256": "7d1b403ba821874af84dc4d00e58ae7baf285c3769dee650643bc17b1c35eae4"
+            },
+            {
+              "name": "approval_register.csv",
+              "href": "model_outputs/claude-opus-4-8-v4/GO/approval_register.csv",
+              "bytes": 2762,
+              "description": "Claude 作答 · 审批与补证登记",
+              "sha256": "b5ef1a2811c4c07526f562662a59f22acb5866e638ed5c97475de91af22c7f29"
+            },
+            {
+              "name": "travel_evidence.pptx",
+              "href": "model_outputs/claude-opus-4-8-v4/GO/travel_evidence.pptx",
+              "bytes": 5954083,
+              "description": "Claude v4 · 航班及住宿截图证据",
+              "sha256": "eb2879a0d191bd07b059c97fe090b4a26b1ecf3eefdb081f5e0de7d3abb86071"
+            },
+            {
+              "name": "conference_attendance_approval.pdf",
+              "href": "model_outputs/claude-opus-4-8-v4/GO/conference_attendance_approval.pdf",
+              "bytes": 1059108,
+              "description": "Claude v4 · 原模板审批申请草稿",
+              "sha256": "7ba6f9c6af300933b4d7acc9ec1f01a9c5465db7950b0bf27d4ab81d3bbb754a"
+            }
+          ],
+          "prompt_file": {
+            "name": "instruction.md",
+            "href": "model_outputs/claude-opus-4-8-v4/GO/instruction.md",
+            "bytes": 9742
+          },
+          "note": "本轮包含人工收尾提醒：停止继续扩展检索，使用已有真实证据补齐交付并披露缺口。五份文件原样公开预览，未修订成专家参考解。请以本组链接的实际作答题面为准，不能与后续明确M&IE口径的题面混为同一版本。"
+        },
+        {
           "model": "qwen3.8-max",
           "label": "Qwen 3.8 Max · v4 完成产出（含收尾提醒）",
           "status": "五份交付已完成",

@@ -1,0 +1,298 @@
+{
+  "rows": [
+    [
+      "DAILY PER-PERSON COST DETAIL — driven by recommended city & parameters",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Recommended city:",
+      "Boston",
+      "(change to Boston/Chicago/Denver/Phoenix/Seattle — pulls that city's anchor data)",
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Per-person building blocks",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Round-trip airfare (× airfare factor)",
+      "=INDEX(CityData!$C:$C,MATCH(Daily!$B$2,CityData!$A:$A,0))*FFAC",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Lodging — room only (nightly × nights)",
+      "=INDEX(CityData!$F:$F,MATCH(Daily!$B$2,CityData!$A:$A,0))*NIGHTS",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Lodging tax (internal est.)",
+      "=B6*TAXRATE",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Registration fee (incl. 3 lunches)",
+      "=REGFEE",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Agency dinners (Nov 28 & Dec 1)",
+      "=2*INDEX(CityData!$D$11:$D$15,MATCH(Daily!$B$2,CityData!$A$11:$A$15,0))",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Agency lunch (Dec 2 travel-home day)",
+      "=INDEX(CityData!$C$11:$C$15,MATCH(Daily!$B$2,CityData!$A$11:$A$15,0))",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Breakfast (4 nights) — $0 if hotel-included",
+      "=IF(INDEX(CityData!$I:$I,MATCH(Daily!$B$2,CityData!$A:$A,0))=\"Yes\",0,INDEX(CityData!$B$11:$B$15,MATCH(Daily!$B$2,CityData!$A$11:$A$15,0))*NIGHTS)",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Nov 29 breakfast adj. (param; no new purchase)",
+      "=0",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Light refreshments (coffee/fruit/water)",
+      "=REFRPP*REFRDAYS",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Ground transport (airport↔hotel + home↔DCA)",
+      "=INDEX(CityData!$B$19:$B$23,MATCH(Daily!$B$2,CityData!$A$19:$A$23,0))+INDEX(CityData!$C$19:$C$23,MATCH(Daily!$B$2,CityData!$A$19:$A$23,0))",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "PER-PERSON SUBTOTAL",
+      "=SUM(B5:B14)",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Shared / fixed costs (per event)",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Meeting venue (days × daily rate) — TBQ",
+      "=VENUEDAY*VENUEDAYS",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "FIXED SUBTOTAL",
+      "=B18",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "EVENT TOTALS (at chosen headcount)",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Headcount (param)",
+      "=HEADCOUNT",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Variable total (per-person × headcount)",
+      "=B15*HEADCOUNT",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Base subtotal (variable + fixed)",
+      "=B23+B19",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Contingency reserve",
+      "=B24*RESRATE",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "GRAND TOTAL (base + reserve)",
+      "=B24+B25",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Budget ceiling",
+      "=CEILING",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Within budget?",
+      "=IF(B26<=CEILING,\"YES — within ceiling\",\"NO — exceeds ceiling\")",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "Headroom for unquoted/TBD base costs",
+      "=CEILING/(1+RESRATE)-B24",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  ],
+  "total_rows": 29,
+  "total_columns": 8,
+  "column_limit": 60,
+  "truncated": false
+}
