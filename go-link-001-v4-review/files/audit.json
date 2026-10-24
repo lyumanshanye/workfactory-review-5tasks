@@ -4,16 +4,16 @@
   "positive_total": 238,
   "negative_absolute_total": 7,
   "negative_positive_ratio": 0.029411764705882353,
-  "content_quality_positive": 222,
-  "content_quality_ratio": 0.9327731092436975,
+  "content_quality_positive": 209,
+  "content_quality_ratio": 0.8781512605042017,
   "critical_positive_count": 15,
   "dimension_positive_totals": {
-    "内容质量-事实忠实性": 24,
-    "内容质量-数值与计算准确性": 67,
-    "内容质量-专业规范": 44,
+    "内容质量-事实忠实性": 21,
+    "内容质量-数值与计算准确性": 74,
+    "内容质量-专业规范": 27,
     "内容质量-结论正确性": 30,
     "内容质量-分析与论证质量": 57,
-    "指令遵循": 10,
+    "指令遵循": 23,
     "结构与组织": 3,
     "视觉美感": 3
   },
@@ -53,6 +53,6 @@
   "pdf_weight_share": 0.09663865546218488,
   "task_version": "4.0.0-draft",
   "instruction_sha256": "9995249cd59eaa716227306c8f1fe82c13899e2a542b0fa15b1813adb47857a2",
-  "rubric_sha256": "083f3e1e17a81683e4148416fc454919a0cbd821827a2a0917e0e1b579264738",
+  "rubric_sha256": "b840d7dbd35f82449fa5c72fe93f32dc09ff38f96f92685068fdd5214904f7eb",
   "model_runs_launched": false
 }

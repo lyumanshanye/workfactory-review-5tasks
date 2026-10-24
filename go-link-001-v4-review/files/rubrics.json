@@ -67,7 +67,7 @@
       "weight": 7,
       "type": "binary",
       "description": "对比较方案以当前调整后的整团机票额再上涨20%重算，纳入储备，说明预算影响及可执行应对。只评压力情景数值与应对，连续涨幅切换点由GO038评价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
-      "dimension": "内容质量-分析与论证质量",
+      "dimension": "内容质量-数值与计算准确性",
       "criterion_type": "Objective",
       "criterion_necessity": "Explicit"
     },
@@ -87,7 +87,7 @@
       "weight": 7,
       "type": "binary",
       "description": "UTF-8 approval_register.csv可读取，针对差旅授权、住宿/场地资质、采购、资金及申请表缺项列出具体事项、拟负责角色、所需证据、建议期限和是否阻断批准。只评可执行的补证登记，不重复评分其他交付中的待核实标记。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
-      "dimension": "内容质量-专业规范",
+      "dimension": "内容质量-分析与论证质量",
       "criterion_type": "Objective",
       "criterion_necessity": "Explicit"
     },
@@ -157,7 +157,7 @@
       "type": "binary",
       "description": "交付物无依据编造已核实航班、供应商报价、预订或已完成审批、资质、资金落实，且将其用于预算或批准结论。仅有明确虚构事实才扣分；清楚标注的估算、待询价、条件性建议或待核实不触发。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
       "weight": -7,
-      "dimension": "安全合规",
+      "dimension": "内容质量-事实忠实性",
       "criterion_type": "Objective",
       "criterion_necessity": "Explicit"
     },
@@ -166,7 +166,7 @@
       "name": "GO019",
       "weight": 10,
       "type": "binary",
-      "dimension": "内容质量-事实忠实性",
+      "dimension": "指令遵循",
       "criterion_type": "Objective",
       "criterion_necessity": "Explicit",
       "description": "PPT用真实网页截图完整覆盖五城实际采用的往返航班及住宿报价；须可辨认航班/酒店名称、往返航线和时刻或入住离店日期、房型及入住人数、币种、价格对应的人数/夜数和税费口径。价格适用条件及已明示必要费用、早餐包含情况、实际用于取舍的退改条件，以及酒店评分/评价数量和影响筛选的评论须有对应截图。单页无法容纳可分多张连续截图并清楚关联，不要求无关网页内容或未采用条款；不得只截低价数字、裁掉条件、过度缩小或以自制表格/摘抄/重绘代替。网页未显示的信息如实待核实，不伪造；截图可读性由GO020、换算由GO022评价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
@@ -267,7 +267,7 @@
       "weight": 7,
       "type": "binary",
       "description": "申请表费用字段或明确关联说明区分已知基础费用、待询价和储备，资料未齐时标为部分估算而非完整申请总额。只评申请字段是否准确表达费用范围；已在预算项扣分且一致传递的算术错误不重复扣分。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
-      "dimension": "内容质量-专业规范",
+      "dimension": "内容质量-事实忠实性",
       "criterion_type": "Objective",
       "criterion_necessity": "Explicit"
     },
@@ -277,7 +277,7 @@
       "weight": 3,
       "type": "binary",
       "description": "未知联系人、财务编码、历史支出、计划/CPE/捐助/展位及合规确认标待核实或明确关联补充说明，不无据勾选。逐项交代议程、Location Cost Estimate和Attendee Cost Detail的现有对应或待补状态，不把团体汇总冒充个人明细。本项只评申请表状态披露。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.",
-      "dimension": "内容质量-专业规范",
+      "dimension": "指令遵循",
       "criterion_type": "Objective",
       "criterion_necessity": "Explicit"
     },
