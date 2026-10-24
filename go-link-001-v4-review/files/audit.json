@@ -52,7 +52,7 @@
   "pdf_positive_weight": 23,
   "pdf_weight_share": 0.09663865546218488,
   "task_version": "4.0.0-draft",
-  "instruction_sha256": "8c9555cfee575982f33ade6e91704460b5c669507c22b14d505060bd6b1efb19",
-  "rubric_sha256": "c49ab7360e45506ef869dd1e2e07116d5c772d7f77dace6cec1770081c16d415",
+  "instruction_sha256": "9995249cd59eaa716227306c8f1fe82c13899e2a542b0fa15b1813adb47857a2",
+  "rubric_sha256": "083f3e1e17a81683e4148416fc454919a0cbd821827a2a0917e0e1b579264738",
   "model_runs_launched": false
 }

@@ -24,7 +24,7 @@ weight = 10
 id = "GO003"
 name = "GO003"
 type = "binary"
-description = "住宿夜数按所荐行程计算，区分住宿报价、适用报销上限和未获超标准授权的限制；住宿税按题设可报销金额的12%计算。不暗定四晚，不因合理的不同抵返安排扣分。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+description = "按实际行程核算住宿夜数，区分真实房价、报销上限及题设12%住宿税估算。未获超标准授权时，超上限酒店不得作为合规推荐；不能把实际报价截减至上限后参与合规方案成本比较。不暗定四晚，不因有依据的不同抵返日期扣分。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
 weight = 10
 
 [[criterion]]
@@ -123,7 +123,7 @@ negate = true
 id = "GO019"
 name = "GO019"
 type = "binary"
-description = "PPT包含五城实际用于预算的具体往返航班及住宿报价真实网页截图，能识别航线、日期、房型/人数、币种及金额，不以自制表格、摘抄或重绘替代。只评截图证据，来源字段及换算分别由GO001、GO022评价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+description = "PPT用真实网页截图完整覆盖五城实际采用的往返航班及住宿报价；须可辨认航班/酒店名称、往返航线和时刻或入住离店日期、房型及入住人数、币种、价格对应的人数/夜数和税费口径。价格适用条件及已明示必要费用、早餐包含情况、实际用于取舍的退改条件，以及酒店评分/评价数量和影响筛选的评论须有对应截图。单页无法容纳可分多张连续截图并清楚关联，不要求无关网页内容或未采用条款；不得只截低价数字、裁掉条件、过度缩小或以自制表格/摘抄/重绘代替。网页未显示的信息如实待核实，不伪造；截图可读性由GO020、换算由GO022评价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
 weight = 10
 
 [[criterion]]
@@ -144,7 +144,7 @@ weight = 7
 id = "GO022"
 name = "GO022"
 type = "binary"
-description = "PPT截图报价与Excel对应金额一致；单程与往返、每人或每间、每晚与全程、币种及含税口径换算正确，人数和夜数可复算。计入报价已明示的必要税费、服务费，正确处理早餐等包含条件，未核实费用列待确认；不强制购买未要求的附加服务。不把单人或单间报价冒充整团已确认库存。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+description = "实际采用的报价须对应所需日期、房型、单人入住及含早餐条件；早餐另收费时计入可核实费用并核对需求。单程/往返、每人/每间、每晚/全程、币种及税费换算正确，不漏已明示必要费用。可按单人或单间报价作明确标注的整团暂估，但不得声称已确认多人同价或库存；团体价格及可用数量未核实须列执行条件。只评报价适配与换算，截图覆盖由GO019评价。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
 weight = 10
 
 [[criterion]]
@@ -207,7 +207,7 @@ weight = 3
 id = "GO037"
 name = "GO037"
 type = "binary"
-description = "记录城市、出发机场、航班、酒店及日期组成的实际候选和搜索/排除依据，说明替代组合如何影响费用或可行性，不能仅列五城各一总价声称联合最优。行程覆盖完整培训，日期时区及衔接合理；不要求穷举市场或指定求解器。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+description = "记录城市、出发机场、航班、酒店及日期组成的实际候选和搜索/排除依据，说明替代组合的影响，不仅列五城各一总价声称联合最优。组合须共同覆盖完整培训：核对航班时区及抵返时刻、酒店入住离店、机场至酒店交通、培训场地可用日期及18/24人容量；未核实的场地或房量作为执行条件，不虚构地址或库存。区分可执行组合与待补证组合，不要求穷举市场或指定求解器。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
 weight = 10
 
 [[criterion]]
@@ -228,7 +228,7 @@ weight = 10
 id = "GO040"
 name = "GO040"
 type = "binary"
-description = "将有效阈值转成推荐与主要备选的分段行动条件，并以候选比较或支配关系检查其他记录方案不会推翻结论；说明相关条件下保留24人、转18人或均不可行。只需覆盖推荐成立的条件及会推翻它的关键边界，不要求穷举所有未知费用组合或出现每种切换。只评行动逻辑及条件完整性，不重复扣GO038/039算术错误。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+description = "将有效阈值转成推荐与主要备选的分段行动条件，以候选比较或支配关系核验其他记录方案；说明保留24人、转18人或均不可行的关键边界。人数变化按人均、固定和有证据的阶梯/容量套餐分别处理，不能直接把整团总额乘18/24；未知团体或场地价格保留条件，不编造折扣。只需覆盖推荐成立及被推翻的关键条件，不穷举全部未知费用组合。只评决策和规模变化逻辑，不重复扣GO038/039阈值算术错误。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
 weight = 10
 
 [scoring]
