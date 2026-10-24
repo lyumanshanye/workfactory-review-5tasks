@@ -1,0 +1,33 @@
+{
+  "type": "xlsx",
+  "sheets": [
+    {
+      "name": "Parameters",
+      "href": "model_outputs/gpt-5.6-sol-v4/GO/previews/sheet-0.json"
+    },
+    {
+      "name": "Options",
+      "href": "model_outputs/gpt-5.6-sol-v4/GO/previews/sheet-1.json"
+    },
+    {
+      "name": "Daily",
+      "href": "model_outputs/gpt-5.6-sol-v4/GO/previews/sheet-2.json"
+    },
+    {
+      "name": "Itineraries_Hotels",
+      "href": "model_outputs/gpt-5.6-sol-v4/GO/previews/sheet-3.json"
+    },
+    {
+      "name": "Historical_Rates",
+      "href": "model_outputs/gpt-5.6-sol-v4/GO/previews/sheet-4.json"
+    },
+    {
+      "name": "Thresholds_Actions",
+      "href": "model_outputs/gpt-5.6-sol-v4/GO/previews/sheet-5.json"
+    },
+    {
+      "name": "Sources",
+      "href": "model_outputs/gpt-5.6-sol-v4/GO/previews/sheet-6.json"
+    }
+  ]
+}

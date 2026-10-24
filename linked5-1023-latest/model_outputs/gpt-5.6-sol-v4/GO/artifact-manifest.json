@@ -1,0 +1,42 @@
+{
+  "run_id": "go-v4-three-models-001",
+  "model": "gpt-5.6-sol",
+  "files": [
+    {
+      "name": "conference_budget.xlsx",
+      "href": "model_outputs/gpt-5.6-sol-v4/GO/conference_budget.xlsx",
+      "bytes": 25525,
+      "description": "GPT 独立作答 · 预算工作簿",
+      "sha256": "db661c638eea1844b444fb8b1cfcb616c6d3e74f96d555220ee0cc2efec8a2c8"
+    },
+    {
+      "name": "approval_brief.docx",
+      "href": "model_outputs/gpt-5.6-sol-v4/GO/approval_brief.docx",
+      "bytes": 39389,
+      "description": "GPT 独立作答 · 审批建议",
+      "sha256": "98962761bf6921651170706f70206de7f8d75e3dec338f87218f53c319b058b7"
+    },
+    {
+      "name": "approval_register.csv",
+      "href": "model_outputs/gpt-5.6-sol-v4/GO/approval_register.csv",
+      "bytes": 2041,
+      "description": "GPT 独立作答 · 审批与补证登记",
+      "sha256": "caa634cc4b4ff0ef0625257eb380fc956432c24827110cf7df0c49924616d60d"
+    },
+    {
+      "name": "travel_evidence.pptx",
+      "href": "model_outputs/gpt-5.6-sol-v4/GO/travel_evidence.pptx",
+      "bytes": 2278131,
+      "description": "GPT v4 · 航班及住宿截图证据",
+      "sha256": "5c63fe94543aaa5e780c75d3f3dbd37488b28e66aabdac9777aefe55f28274fa"
+    },
+    {
+      "name": "conference_attendance_approval.pdf",
+      "href": "model_outputs/gpt-5.6-sol-v4/GO/conference_attendance_approval.pdf",
+      "bytes": 1095256,
+      "description": "GPT v4 · 原模板审批申请草稿",
+      "sha256": "88b07f64d2acc642d9365c04571c6627928a85eccb84ea03dbe31ce5a20dc96b"
+    }
+  ],
+  "original_bytes_unchanged": true
+}

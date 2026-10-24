@@ -1,0 +1,29 @@
+{
+  "type": "pptx",
+  "pages": [
+    {
+      "href": "model_outputs/gpt-5.6-sol-v4/GO/previews/travel_evidence-1.jpg"
+    },
+    {
+      "href": "model_outputs/gpt-5.6-sol-v4/GO/previews/travel_evidence-2.jpg"
+    },
+    {
+      "href": "model_outputs/gpt-5.6-sol-v4/GO/previews/travel_evidence-3.jpg"
+    },
+    {
+      "href": "model_outputs/gpt-5.6-sol-v4/GO/previews/travel_evidence-4.jpg"
+    },
+    {
+      "href": "model_outputs/gpt-5.6-sol-v4/GO/previews/travel_evidence-5.jpg"
+    },
+    {
+      "href": "model_outputs/gpt-5.6-sol-v4/GO/previews/travel_evidence-6.jpg"
+    },
+    {
+      "href": "model_outputs/gpt-5.6-sol-v4/GO/previews/travel_evidence-7.jpg"
+    },
+    {
+      "href": "model_outputs/gpt-5.6-sol-v4/GO/previews/travel_evidence-8.jpg"
+    }
+  ]
+}

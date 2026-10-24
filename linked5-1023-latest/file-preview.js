@@ -21,7 +21,7 @@
     document.title=(labels[domain]?labels[domain]+' · ':'')+name+' · 在线预览';document.getElementById('preview-title').textContent=name;document.getElementById('preview-path').textContent=(labels[domain]?labels[domain]+' · '+domain+' / ':'')+path;
     if(labels[domain])document.querySelector('.preview-brand').href='./?domain='+domain+'#inputs';
     const download=document.getElementById('preview-download');download.href=url.href;download.download=name;
-    async function json(href){const target=new URL(href,base);target.searchParams.set('v','claude-output-20261023');const r=await fetch(target);if(!r.ok)throw Error('文件加载失败（HTTP '+r.status+'）');return r.json();}
+    async function json(href){const target=new URL(href,base);target.searchParams.set('v','gpt-v4-output');const r=await fetch(target);if(!r.ok)throw Error('文件加载失败（HTTP '+r.status+'）');return r.json();}
     function table(rows,header=false,total){
       const controls=el('div','preview-controls'),search=el('input','preview-search');search.type='search';search.placeholder='筛选当前预览中的内容';search.setAttribute('aria-label','筛选表格');controls.append(search);
       const wrap=el('div','preview-table-wrap'),pagination=el('div','preview-pagination');let page=0,filtered=rows;
@@ -90,7 +90,7 @@
       }
       status.textContent='文档内容预览 · 原文件可下载';ready();
     }else if(ext==='pdf'){
-      const response=await fetch(new URL('pdf-preview-index.json?v=usda-20261023',base));
+      const response=await fetch(new URL('pdf-preview-index.json?v=gpt-v4-output',base));
       const index=response.ok?await response.json():{};
       const document=index[path];
       if(document?.pages?.length){

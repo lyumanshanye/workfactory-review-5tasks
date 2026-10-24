@@ -1,0 +1,58 @@
+{
+  "rows": [
+    [
+      "CONTROL PANEL",
+      "Value",
+      "Allowed / effect"
+    ],
+    [
+      "Budget cap",
+      53000,
+      "$0–$100,000; includes reserve"
+    ],
+    [
+      "Airfare factor",
+      1,
+      "0.5–2.0; stress adds 20% to adjusted fare"
+    ],
+    [
+      "Reserve rate",
+      0.05,
+      "0%–20% of base subtotal"
+    ],
+    [
+      "Gov breakfast 11/29",
+      "No",
+      "Yes/No; Yes does not add procurement cost"
+    ],
+    [
+      "Arrival date",
+      "2026-11-28 00:00:00",
+      "Must be 2026-11-28 for quoted snapshots"
+    ],
+    [
+      "Return date",
+      "2026-12-02 00:00:00",
+      "Must be 2026-12-02 for quoted snapshots"
+    ],
+    [
+      "Selected city",
+      "Chicago",
+      "Decision output; options calculate independently"
+    ],
+    [
+      "Selected attendance",
+      24,
+      "18 or 24"
+    ],
+    [
+      "NOTICE",
+      "Changing dates invalidates market quotes and requires new DOCX/PPT/PDF/CSV exports.",
+      "Snapshot files do not auto-refresh."
+    ]
+  ],
+  "total_rows": 10,
+  "total_columns": 3,
+  "column_limit": 60,
+  "truncated": false
+}
