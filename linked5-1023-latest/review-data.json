@@ -725,6 +725,55 @@
       "reference_status": "removed_pending_new_reference",
       "model_runs": [
         {
+          "model": "qwen3.8-max",
+          "label": "Qwen 3.8 Max · v4 完成产出（含收尾提醒）",
+          "status": "五份交付已完成",
+          "run_id": "go-v4-three-models-001",
+          "files": [
+            {
+              "name": "conference_budget.xlsx",
+              "href": "model_outputs/qwen3.8-max-v4/GO/conference_budget.xlsx",
+              "bytes": 20293,
+              "description": "Qwen 作答 · 预算工作簿",
+              "sha256": "ca153746802a37644056d163f9e70ebc71f217625fd12873cfb905b137b8ec1b"
+            },
+            {
+              "name": "approval_brief.docx",
+              "href": "model_outputs/qwen3.8-max-v4/GO/approval_brief.docx",
+              "bytes": 40182,
+              "description": "Qwen 作答 · 审批建议",
+              "sha256": "36220236bb3cb0954de32cb76adecca7dbb44c491754a9d88681574874f085e1"
+            },
+            {
+              "name": "approval_register.csv",
+              "href": "model_outputs/qwen3.8-max-v4/GO/approval_register.csv",
+              "bytes": 2910,
+              "description": "Qwen 作答 · 审批与补证登记",
+              "sha256": "a2c1b70932c20d0b68714f2a2eeed47035388baa6e67ef704ed60610a87574eb"
+            },
+            {
+              "name": "travel_evidence.pptx",
+              "href": "model_outputs/qwen3.8-max-v4/GO/travel_evidence.pptx",
+              "bytes": 13439675,
+              "description": "Qwen v4 · 航班及住宿截图证据",
+              "sha256": "587f997d871629b034841ddc08a7a7a861b817fefacd93d1bc1413fc49fc4323"
+            },
+            {
+              "name": "conference_attendance_approval.pdf",
+              "href": "model_outputs/qwen3.8-max-v4/GO/conference_attendance_approval.pdf",
+              "bytes": 1096227,
+              "description": "Qwen v4 · 原模板审批申请草稿",
+              "sha256": "0696146b815f0ef82dc7e93bb670204327f5925e75566e274e911ce00ecd96b2"
+            }
+          ],
+          "prompt_file": {
+            "name": "instruction.md",
+            "href": "model_outputs/qwen3.8-max-v4/GO/instruction.md",
+            "bytes": 9742
+          },
+          "note": "本轮包含人工收尾提醒：停止继续扩展检索，使用已有真实证据补齐交付并披露缺口。五份文件原样公开预览，未修订成专家参考解。请以本组链接的实际作答题面为准，不能与后续明确M&IE口径的题面混为同一版本。"
+        },
+        {
           "model": "gpt-5.6-sol",
           "label": "GPT 5.6 Sol · v4 新题面",
           "status": "五份交付已完成",

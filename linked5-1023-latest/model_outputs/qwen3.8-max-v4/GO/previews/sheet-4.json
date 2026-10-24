@@ -1,0 +1,128 @@
+{
+  "rows": [
+    [
+      "行程与酒店组合（衔接核对）",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "城市",
+      "去程航班(11/28)",
+      "到达",
+      "返程航班(12/2)",
+      "离开",
+      "酒店",
+      "入住",
+      "退房",
+      "机场-酒店交通",
+      "场地日期/容量"
+    ],
+    [
+      "Chicago",
+      "AA DCA-ORD 非经停",
+      "07:32",
+      "AA ORD-DCA 非经停",
+      "16:59",
+      "Embassy Suites Rosemont",
+      "11/28",
+      "12/2",
+      "酒店穿梭(待核实)",
+      "11/29-12/1, ≥24人(待核实)"
+    ],
+    [
+      "Denver",
+      "UA IAD-DEN 非经停",
+      "08:19",
+      "UA DEN-IAD 非经停",
+      "14:10",
+      "HIE Denver Airport",
+      "11/28",
+      "12/2",
+      "酒店穿梭(待核实)",
+      "同上"
+    ],
+    [
+      "Phoenix",
+      "UA IAD-PHX 非经停",
+      "11:33",
+      "UA PHX-IAD 非经停",
+      "14:54",
+      "HI & Suites Airport North",
+      "11/28",
+      "12/2",
+      "酒店穿梭(待核实)",
+      "同上"
+    ],
+    [
+      "Boston",
+      "DL DCA-BOS 非经停",
+      "07:38",
+      "DL BOS-DCA 非经停",
+      "14:29",
+      "Residence Inn Chelsea",
+      "11/28",
+      "12/2",
+      "酒店穿梭(待核实)",
+      "同上"
+    ],
+    [
+      "Seattle",
+      "UA IAD-SEA 非经停",
+      "20:56",
+      "UA SEA-IAD 非经停",
+      "08:09",
+      "Country Inn & Suites Sea-Tac",
+      "11/28",
+      "12/2",
+      "酒店穿梭(待核实)",
+      "同上"
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "衔接说明：去程11/28抵达均早于酒店入住时间或可寄存；返程12/2起飞均晚于退房+培训结束次日；Seattle去程20:56抵达当晚入住、次日培训开始前无冲突。场地容量与团体库存未核实，列为执行条件。",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  ],
+  "total_rows": 10,
+  "total_columns": 10,
+  "column_limit": 60,
+  "truncated": false
+}

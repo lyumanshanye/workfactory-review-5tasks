@@ -599,5 +599,18 @@
         "href": "model_outputs/gpt-5.6-sol-v4/GO/previews/conference_attendance_approval-3.jpg"
       }
     ]
+  },
+  "model_outputs/qwen3.8-max-v4/GO/conference_attendance_approval.pdf": {
+    "pages": [
+      {
+        "href": "model_outputs/qwen3.8-max-v4/GO/previews/conference_attendance_approval-1.jpg"
+      },
+      {
+        "href": "model_outputs/qwen3.8-max-v4/GO/previews/conference_attendance_approval-2.jpg"
+      },
+      {
+        "href": "model_outputs/qwen3.8-max-v4/GO/previews/conference_attendance_approval-3.jpg"
+      }
+    ]
   }
 }

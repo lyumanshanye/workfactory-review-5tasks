@@ -1,0 +1,29 @@
+{
+  "type": "xlsx",
+  "sheets": [
+    {
+      "name": "Params",
+      "href": "model_outputs/qwen3.8-max-v4/GO/previews/sheet-0.json"
+    },
+    {
+      "name": "Daily",
+      "href": "model_outputs/qwen3.8-max-v4/GO/previews/sheet-1.json"
+    },
+    {
+      "name": "Options",
+      "href": "model_outputs/qwen3.8-max-v4/GO/previews/sheet-2.json"
+    },
+    {
+      "name": "History",
+      "href": "model_outputs/qwen3.8-max-v4/GO/previews/sheet-3.json"
+    },
+    {
+      "name": "Itinerary",
+      "href": "model_outputs/qwen3.8-max-v4/GO/previews/sheet-4.json"
+    },
+    {
+      "name": "Sources",
+      "href": "model_outputs/qwen3.8-max-v4/GO/previews/sheet-5.json"
+    }
+  ]
+}

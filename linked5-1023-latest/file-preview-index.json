@@ -44,5 +44,8 @@
   "model_outputs/gpt-5.6-sol/GO/travel_evidence.pptx": "model_outputs/gpt-5.6-sol/GO/previews/travel_evidence-pages.json",
   "model_outputs/gpt-5.6-sol-v4/GO/conference_budget.xlsx": "model_outputs/gpt-5.6-sol-v4/GO/previews/conference_budget.json",
   "model_outputs/gpt-5.6-sol-v4/GO/approval_brief.docx": "model_outputs/gpt-5.6-sol-v4/GO/previews/approval_brief.json",
-  "model_outputs/gpt-5.6-sol-v4/GO/travel_evidence.pptx": "model_outputs/gpt-5.6-sol-v4/GO/previews/travel_evidence-pages.json"
+  "model_outputs/gpt-5.6-sol-v4/GO/travel_evidence.pptx": "model_outputs/gpt-5.6-sol-v4/GO/previews/travel_evidence-pages.json",
+  "model_outputs/qwen3.8-max-v4/GO/conference_budget.xlsx": "model_outputs/qwen3.8-max-v4/GO/previews/conference_budget.json",
+  "model_outputs/qwen3.8-max-v4/GO/approval_brief.docx": "model_outputs/qwen3.8-max-v4/GO/previews/approval_brief.json",
+  "model_outputs/qwen3.8-max-v4/GO/travel_evidence.pptx": "model_outputs/qwen3.8-max-v4/GO/previews/travel_evidence-pages.json"
 }

@@ -1,0 +1,195 @@
+{
+  "type": "docx",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "style": "Title",
+      "text": "培训参会预算与审批建议简报（Approval Brief）"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "USDA Rural Development 会务协调 | 提交日期 2026-10-24 | 状态：供负责人审批的内部建议草案，非获批文件"
+    },
+    {
+      "type": "paragraph",
+      "style": "Heading 1",
+      "text": "一、推荐与备选"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "推荐：Chicago, IL（Cook 县），24 人，含储备总额 $25,438.90（上限 $53,000.00 内，余量 $27,561.10）。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "备选：Boston, MA（Suffolk），24 人，含储备总额 $32,455.58；Chicago 未询价费用超限或 Chicago-Boston 差额条件翻转时启用。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "第三至五顺位（24 人档）：Seattle, WA $33,628.90、Denver, CO $34,681.25、Phoenix, AZ $35,775.94。顺位以工作簿 Options!P/Q 辅助列与第 27-30 行公式为准。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "18 人档（仅当 24 人档全部不可行）：Chicago 18 $19,079.17 为最低；Boston 18 $24,341.69。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Heading 1",
+      "text": "二、行程与报价依据"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "培训 2026-11-29 至 12-01；抵达 11-28、返程 12-02（培训结束次日）。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "航班（Google Flights，2026-10-24 查询，USD，含税费，1 人往返）：Chicago DCA-ORD 美国航空非经停 $270（去 11/28 06:00-07:32，返 12/2 16:59-19:59）；Denver IAD-DEN 联合航空 $578；Phoenix IAD-PHX 联合航空 $499；Boston DCA-BOS 达美 $311；Seattle IAD-SEA 联合航空 $590。出发机场按 USDA 总部基点比较 DCA/IAD/BWI 后取最低价可行非经停。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "酒店（Google Hotels，同日查询，11/28 入住-12/2 退房 4 夜，单间单人，列表价/夜）：Chicago Embassy Suites by Hilton O’Hare Rosemont $101 含早 4.1 分(3.4K 评)；备选 DoubleTree O’Hare-Rosemont $133 4.2(3.1K)。Denver Holiday Inn Express & Suites Denver Airport $113 含早 4.0(1.4K)；备选 Tru by Hilton Denver Airport Tower Road $112 含早 4.0(881)。Phoenix Holiday Inn & Suites Airport North $126 早餐另收约 $15/夜已计入 4.0(1.8K)；备选 Crowne Plaza PHX $127-128 4.0(2.5K)。Boston Residence Inn Logan/Chelsea $154 含早 4.3(855)；备选 Courtyard Logan $165 4.0(2.1K)。Seattle Country Inn & Suites Sea-Tac $101 含早 4.3(2.0K)；备选 HIE Sea-Tac $100 含早 4.1(1.5K)。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "质量准入：Google 评分≥4.0 且评价数≥500，近期评论无系统性卫生、夜间噪声、设施维护缺陷；Seattle Aloft（4.3/1.0K）因近期评论存在持续飞机/单轨噪声被排除出推荐位；Denver The Westin（$426/夜）超 FY2027 住宿上限 $170，不得作为合规推荐且不截价比较；La Quinta DIA（3.7）与 ESA Allstate Arena（3.9）未达评分准入线，不纳入推荐/备选。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Heading 1",
+      "text": "三、关键金额（Chicago 24，基准）"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "机票 $270×24 = $6,480.00"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "住宿 $101×4 夜×24 = $9,696.00；住宿税 12% = $1,163.52"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "注册费 $180×24 = $4,320.00（含 11/29-12/1 午餐）"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "机构供餐（11/28 晚餐、12/1 晚餐、12/2 午餐，按 FY27 芝加哥餐值 38/38/26 估）$102×24 = $2,448.00"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "地面交通（DCA 往返 $5/人估）$120.00"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "基础小计 $24,227.52；应急储备 5% = $1,211.38；含储备 $25,438.90"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "未询价：场地与茶歇（参数默认 $0；因储备同比例覆盖未询价费用，Chicago 24 可承受上限 $26,248.67）"
+    },
+    {
+      "type": "paragraph",
+      "style": "Heading 1",
+      "text": "四、压力情景与切换条件"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "票价 +20%（在票价调整系数之上）：Chicago 24 含储备 $26,799.70，仍可行；Boston 24 $34,023.02；全部 24 人方案仍在上限内。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "临界涨幅：Chicago 24 与备选 Boston 24 的切换临界为 -679.1%（负值，=(J22-J16)/(C16-C22)），故 0-20% 区间内推荐不切换；+20% 票价下 Chicago 含储备总额增 $1,360.80、Boston 增 $1,567.44，Chicago 基数低，结论稳健。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "未询价费用上限（V_max=上限/(1+5%储备率)-基础小计，储备同比例覆盖未询价费用）：基准 Chicago 24 $26,248.67、Boston 24 $19,566.11；+20% 票价下 $24,952.67 / $18,073.31；18 人档 Chicago $32,305.55、Boston $27,293.63。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "分段行动：V_chi≤$26,248.67 且 V_chi-V_bos≤$6,682.56 → 保留 Chicago 24；V_chi 超限而 V_bos≤$19,566.11，或两者均可行但 V_chi-V_bos>$6,682.56 → 转备选 Boston 24；24 人档全超限 → 18 人档取含储备总额最低且可行者（基准报价下为 Chicago 18，仅当 V_chi18-V_bos18>$5,262.52 时改 Boston 18）；各城 18 人档亦全超限 → 两档不可行，报负责人重新选址或取消。+20% 票价情景改用 $24,952.67/$18,073.31 判定，逻辑不变。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Heading 1",
+      "text": "五、合规与费率对照"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "FY2027（本次适用）：Chicago 11 月 $232/12 月 $148，Denver $170，Phoenix $165，Boston $213，Seattle $188；M&IE 92（Phoenix 86）。五城推荐酒店房价均低于适用月上限；FY2025/FY2026 对照数值见工作簿 History 表，三版下推荐酒店均合规、Westin 均超限，选址判断不随年度版本改变。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "餐食：注册费含 3 个午餐、机构供 3 餐，按 41 CFR 301-11.18 扣减 M&IE 参考额；酒店免费早餐依 301-11.17 不扣减。M&IE 为参考额，不计入预算。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Normal",
+      "text": "会议规划依 41 CFR 301-74.1-74.9：已做五城成本比较、优先政府设施不可得说明待补、茶歇属 301-74.7 允许范围。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Heading 1",
+      "text": "六、批准前提（阻断项见 approval_register.csv）"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "场地地址、容量与团体库存未核实：签约前取得书面报价与容量确认（24 人教室式 11/29-12/1）。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "酒店团体价与足量单间库存未确认：列表价为单人单间口径的整团暂估。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "酒店防火/安全资质（41 CFR 301-74.9 批准住宿）未核验。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "RD Instruction 2036-A（2024-07-19 版）官网访问被拒，条款引用待补证。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "资金可用性与会计数据、项目代码待财务确认。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "机票为检索时点价，出票前复核；票价调整系数与上限变动时以工作簿重算为准。"
+    },
+    {
+      "type": "paragraph",
+      "style": "List Bullet",
+      "text": "Boston 推荐酒店（Residence Inn Logan/Chelsea）价格面板截图缺口：$154/4.3(855) 取自列表页文本，面板截取失败未补，签约前复核（见 approval_register.csv）。"
+    },
+    {
+      "type": "paragraph",
+      "style": "Intense Quote",
+      "text": "参数变动提示：工作簿 Params 表任一参数调整后，Daily/Options 自动重算；docx、csv、pptx、pdf 为交付时点快照，须重新导出。"
+    }
+  ]
+}
