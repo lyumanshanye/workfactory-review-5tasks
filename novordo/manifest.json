@@ -1,0 +1,13 @@
+{
+  "total": 40,
+  "excludedIds": [
+    "N1",
+    "N2",
+    "N3",
+    "N4",
+    "N5"
+  ],
+  "assetCount": 110,
+  "htmlBytes": 44149,
+  "offlineBytes": 12582508
+}
