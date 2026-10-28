@@ -1,11 +1,267 @@
-<!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>1023 五题 · 业务关联审阅</title><link rel="stylesheet" href="review.css?v=origins-20261023"><script src="review.js?v=origins-20261023" defer></script></head>
-<body><aside class="sidebar"><a class="brand" href="./"><span class="brand-icon">W</span><span>WORKFACTORY<small>加难版 · v1.1.1 校准</small></span></a><div class="nav-label">本批次 · 五个业务领域</div><nav id="task-nav" aria-label="选择题目"></nav><div class="sidebar-bottom"><span class="dot"></span>原始附件 · 只读审阅<br><small>业务关联、文件、规则可追溯</small></div></aside>
-<div class="shell"><header class="topbar"><span>研究工作台 <span class="slash">/</span> 五题合成 <span class="slash">/</span> 1023</span><a class="download" href="work_linked5_1023forcodex.zip" download>下载完整题包 ↓</a></header>
-<main><div class="page-intro"><span class="eyebrow">LINKED BUSINESS TASKS</span><h1>从证据到决策，逐题审阅。</h1><p>加难版 v1.1.1：目标为 GPT 约85分、Qwen 约70分，是否达到以独立盲解实分为准。</p></div>
-<section class="contract" aria-label="模型可见材料"><div class="contract-icon">i</div><div><h2>根据规范，模型实际拿到哪些文件？</h2><p><strong>该题 instruction.md + environment/input_files/ 下的全部文件。</strong>输入映射到只读 <code>/app/input_files/</code>，最终交付写入 <code>/app/output/</code>。</p><p id="input-origin-summary">输入逐项标注真实文件／合成文件，并直接给出真实文件的原始 URL。</p><p class="contract-muted">真实文件包括种子原件和公开来源快照；合成文件是作者新增的业务设定。参考答案、rubric、tests、provenance 不给盲测模型。</p></div></section>
-<div class="metrics"><div><span id="count-tasks">5</span><small>业务任务</small></div><div><span id="count-inputs">30</span><small>模型输入文件</small></div><div><span id="count-checks">192 / 192</span><small>数据与运行检查</small></div><div><span id="count-judges">—</span><small>独立作答实测</small></div></div>
-<section class="task-heading"><div><div id="task-id" class="eyebrow"></div><h2 id="task-title"></h2><p id="task-subtitle"></p></div><span id="task-domain" class="domain-badge"></span></section>
-<section class="chain-card"><div class="section-label">这道题为什么能连在一起</div><div id="business-chain" class="business-chain"></div></section>
-<div class="content-card"><nav class="tabs" id="tabs" aria-label="审阅模块"></nav><div id="content" class="content"></div></div>
-<footer><span>候选参考交付尚待独立专家确认；judge 对象与盲测成绩分开记录。</span><span id="snapshot-time"></span></footer></main></div></body></html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GO-LINK-001 · 交付版</title><link rel="stylesheet" href="review.css"><style>.delivery-panel[hidden]{display:none}.file-card{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px}.file-meta{min-width:0;overflow-wrap:anywhere}.file-actions{flex-shrink:0}.tabs{flex-wrap:wrap}.markdown{max-width:none}.markdown .rubric-table{font-size:13px}.file-meta p{margin:4px 0 0}.page-intro{margin-bottom:24px}@media(max-width:650px){.file-card{align-items:flex-start;flex-direction:column}.topbar{flex-wrap:wrap;height:auto;min-height:64px;gap:12px;padding:16px}}</style></head><body><aside class="sidebar"><a class="brand" href="./"><span class="brand-icon">W</span><span>WORKFACTORY<small>work_delivery · v1.0.2</small></span></a><div class="nav-label">交付任务</div><nav><button class="task-nav" aria-current="true"><span class="nav-code">GO</span><span><span class="nav-name">通用办公</span><span class="nav-topic">培训会务预算与审批建议</span></span></button></nav><div class="sidebar-bottom">GO-LINK-001<br><small>交付包 · 待验收</small></div></aside><div class="shell"><header class="topbar"><span>研究工作台 / work_delivery</span><span>版本 1.0.2 · 待验收</span></header><main><div class="page-intro"><span class="eyebrow">GO-LINK-001</span><h1>培训会务预算与审批建议</h1><p>交付版 v1.0.2</p></div><div class="metrics"><div><span>1</span><small>业务任务</small></div><div><span>7</span><small>输入材料</small></div><div><span>5</span><small>参考交付</small></div><div><span>36</span><small>评分标准</small></div></div><div class="content-card"><nav class="tabs" aria-label="交付内容"><button type="button" data-panel="prompt" aria-selected="true">题面</button><button type="button" data-panel="inputs" aria-selected="false">输入材料 · 7</button><button type="button" data-panel="reference" aria-selected="false">参考交付 · 5</button><button type="button" data-panel="rubric" aria-selected="false">评分标准 · 36</button><button type="button" data-panel="models" aria-selected="false">三模型产物</button><button type="button" data-panel="delivery" aria-selected="false">交付说明</button></nav><div class="content"><section id="prompt" class="delivery-panel"><article class="markdown"><h1>培训会务预算与审批建议</h1>
+<p>你是美国农业部农村发展局（USDA Rural Development）的会务协调员，负责筹备一次集中培训。请依据差旅规定和公开可核实的信息，提交地点、人数、行程及费用方案，供负责人审批。</p>
+<h2>本次安排</h2>
+<p>培训时间为2026年11月29日至12月1日。考虑到行程劳累，建议提前一天抵达、培训结束次日返回；具体抵返日期、航班及是否中转由你规划。</p>
+<p>参训者的官方驻地为华盛顿，各自前往机场。请以USDA华盛顿总部（1400 Independence Avenue SW, Washington, DC 20250）为统一比较基点，比较合理的出发机场，将个人往返机场的交通费用和时间纳入考虑。机构未安排集体接送，参训者的实际住所及个人交通报销资料未提供。</p>
+<p>参训人数有18人、24人两种选择，候选地点如下。</p>
+<table>
+<thead>
+<tr>
+<th>候选地点</th>
+<th>县/区域</th>
+<th>目的地机场</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chicago, IL</td>
+<td>Cook</td>
+<td>芝加哥奥黑尔国际机场（ORD）</td>
+</tr>
+<tr>
+<td>Denver, CO</td>
+<td>Denver</td>
+<td>丹佛国际机场（DEN）</td>
+</tr>
+<tr>
+<td>Phoenix, AZ</td>
+<td>Maricopa</td>
+<td>凤凰城天港国际机场（PHX）</td>
+</tr>
+<tr>
+<td>Boston, MA</td>
+<td>Suffolk</td>
+<td>波士顿洛根国际机场（BOS）</td>
+</tr>
+<tr>
+<td>Seattle, WA</td>
+<td>King</td>
+<td>西雅图塔科马国际机场（SEA）</td>
+</tr>
+</tbody>
+</table>
+<p>请查询往返机票、住宿、当地交通和培训场地费用。住宿按每人单间、含早餐安排；住宿税按可报销住宿金额的12%作内部预算估算，该比例不代表当地实际税率。</p>
+<p>报价须对应所需日期、房型、单人入住及早餐条件；另收早餐费用时说明并计入。未获超标准授权时，超上限酒店不能作为合规推荐，不得截价至报销上限后参与比较。单人或单间价格可用于明确标注的整团暂估，但不代表已确认多人同价或足量库存。</p>
+<p>每城至少检索并比较两家具体酒店。采用统一、有依据的质量准入标准，结合住客评分及满分、评价数量、近期卫生、夜间噪声和设施维护反馈，解释价格、口碑与交通条件的取舍。记录评价平台、查询日期及证据；不足两家合格时说明候选及排除理由。会场地址尚未确定。</p>
+<p>注册费每人180美元，包含11月29日、11月30日和12月1日午餐。机构另行提供11月28日晚餐、12月1日晚餐及12月2日午餐，费用纳入预算；培训间歇提供咖啡、水果等茶歇。无人提出饮食例外申请，未取得超标准实际费用报销授权。酒店和场地资质、采购安排及资金可用性尚未核验。</p>
+<h2>决策要求</h2>
+<p>总预算上限为53,000美元，包含按基础费用小计5%计算的应急储备。本题预算包含机票、住宿及题设住宿税估算、机场接驳与当地交通、注册费、旅客按差旅规则扣除政府供餐后可报销的M&amp;IE，以及机构供餐、茶歇和培训场地费用。旅客M&amp;IE计入上述53,000美元，不另设预算外备忘口径。机构实际供餐支出与扣减后的旅客M&amp;IE分别核算；注册费已经包含的三顿午餐不重复计采购费用。在符合预算、差旅规定和酒店质量准入标准的前提下，优先安排更多人员；人数相同时选含储备总额较低的方案，完全并列时按城市英文名顺序确定。</p>
+<p>请比较有来源支持的城市、机场、往返航班、酒店和抵返日期组合，提出推荐、备选及批准前提，交代候选范围和排除理由。结论须覆盖已记录的候选方案，不要求穷举市场或采用特定求解器。</p>
+<p>组合须在航班抵返时刻、酒店入住离店、机场至酒店交通及培训场地日期和容量上相互衔接，能够完整参加培训。场地或团体库存未核实的须列执行条件。18人与24人的成本须区分人均、固定及有报价依据的阶梯或容量套餐，不直接按人数比例缩放整团总额。</p>
+<p>负责人还需要以下决策信息，须提供可复算的结果和适用条件：</p>
+<ul>
+<li>往返机票在当前估算基础上上涨20%后的预算及应对安排。</li>
+<li>机票涨幅在0至20%之间时，推荐发生切换的临界值；区间内不切换也须说明依据。</li>
+<li>基准及20%机票上涨情景下，主要方案可承受的待询价费用上限（不含应急储备）。</li>
+<li>机票涨幅和未报价费用变化时，何时保留推荐、转向备选、从24人调整为18人，以及何时两档均不可行。未报价费用不确定时，说明推荐成立的费用条件及会推翻结论的关键边界。</li>
+</ul>
+<p>未报价费用保留为参数，不默认不同方案缺失费用相同；围绕推荐与有效竞争备选分析关键边界，无需穷举全部未知费用组合。</p>
+<p>另请利用FY2025、FY2026和FY2027三版资料，对照各城行程涉及月份的住宿上限和M&amp;IE费率。保持人数、出行月日、市场报价及其他假设一致，量化不同年度费率对预算、住宿合规性及选址判断的影响。历史对照不代表过去真实报价，也不适用于本次实际报销。</p>
+<p>报价、费率及合规判断须记录来源、查询时间、适用日期和条件。区分已知费用、估算和待询价，说明信息缺口对比较及执行的影响；不得虚构报价、库存、预订、资质或审批状态。</p>
+<h2>交付物</h2>
+<p>请在<code>/app/output/</code>提交以下五个文件。</p>
+<p><strong>conference_budget.xlsx</strong>：可调整的预算工作簿，含Daily、Options、Sources工作表，呈现逐日明细、候选比较、压力情景及来源；另以明确区域或工作表呈现历史费率对照、行程与酒店组合、临界值和分段行动条件。计算依据清楚，金额显示到美分，汇总与明细可核对。</p>
+<p>集中列出下列参数，修改后相关逐日费用、汇总、预算判断及推荐须自动更新。日期变化后须识别报价是否仍适用，并区分可执行方案与待重新询价的暂估方案；无需工作簿联网取价。</p>
+<table>
+<thead>
+<tr>
+<th>可调整事项</th>
+<th>交付时采用值</th>
+<th>允许调整范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>批准预算上限</td>
+<td>53,000美元</td>
+<td>0至100,000美元，包含储备</td>
+</tr>
+<tr>
+<td>票价调整系数</td>
+<td>1</td>
+<td>0.5至2；压力情景基于调整后的票价再上涨20%</td>
+</tr>
+<tr>
+<td>应急储备比例</td>
+<td>5%</td>
+<td>0至20%，适用于基础费用小计</td>
+</tr>
+<tr>
+<td>11月29日政府提供早餐</td>
+<td>否</td>
+<td>是或否；改为“是”时不新增采购费用</td>
+</tr>
+<tr>
+<td>抵达及返程日期</td>
+<td>由推荐行程确定</td>
+<td>须完整参加培训；培训及统一供餐日期不变</td>
+</tr>
+</tbody>
+</table>
+<p><strong>approval_brief.docx</strong>：简明说明推荐、备选、关键金额、行程依据、方案切换条件及批准前提，便于负责人作出决定。</p>
+<p><strong>approval_register.csv</strong>：UTF-8审批与补证登记表，含事项、拟负责角色、所需证据、建议完成期限及是否阻断批准，与其余交付一致。</p>
+<p><strong>travel_evidence.pptx</strong>：行程与费用证据简报，使用真实网页截图展示各城实际用于预算的具体往返航班和住宿报价。航线、日期、房型或人数、币种、金额须清晰可辨，附来源URL和查询时间，并能核对到工作簿。计价及含税口径不同须说明；不得以自制表格、摘抄或重绘替代截图。版式整洁，便于比较方案和理解推荐。</p>
+<p>截图须全面覆盖实际采用报价的关键信息：航班及酒店名称、往返航线和时刻或入住离店日期、房型及入住人数、价格对应的人数和夜数、币种、税费及必要费用、早餐是否包含，以及实际用于取舍的退改条件。酒店评分、评价数量和影响筛选的评论也须有对应截图。信息分布于不同位置时，可用多张连续截图并清楚关联；不得只截低价数字或裁掉适用条件，也不为放入整页而缩小到无法阅读。无需截取无关页面内容，页面未显示的信息如实列待核实。</p>
+<p><strong>conference_attendance_approval.pdf</strong>：在所给Conference-Attendance-fillable-Approval-Template.pdf原页面及字段标签基础上填写审批申请草稿，供人工复核。完成有依据的机构、培训名称及类别、日期、地点、人数和费用等信息；分别回应培训目的及预期成果、与RD使命的关系、人数必要性和远程替代问题。必要性缺少业务证据时应明确待论证，不能编造课程或业务事实。</p>
+<p>模板中的未知信息、勾选项及合规确认须标明待核实或待填写，并关联补证登记；已知信息不能全部留空。费用字段须交代已知费用、缺失费用和储备的范围。申请内容须符合本次适用的规定，未核实事项应明确标注。</p>
+<p>逐项交代模板所需议程、Location Cost Estimate和Attendee Cost Detail的附件状态；已有内容可指向明确的工作簿表名或范围，尚缺材料登记待补。保留原模板，不得另制报告替代；内容在正常查看及打印时须完整可见，遵守模板的可见行数和排版限制。</p>
+<p>Word、CSV、PPT和审批PDF为交付时行程与参数的快照。工作簿须提示参数变化后重新核对并导出相应文件。</p>
+<h2>材料与工作边界</h2>
+<p>附件位于只读目录<code>/app/input_files/</code>。可联网核实行程、报价及政策，须辨明资料版本和适用范围。</p>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2025_PerDiemMasterRatesFile.xlsx</td>
+<td>FY2025历史费率对照资料</td>
+</tr>
+<tr>
+<td>FY2026_PerDiemMasterRatesFile.xlsx</td>
+<td>FY2026历史费率对照资料</td>
+</tr>
+<tr>
+<td>FY2027_PerDiemRates_Validated090126.xlsx</td>
+<td>FY2027住宿及M&amp;IE费率</td>
+</tr>
+<tr>
+<td>GSA_FY2025_MIE_Breakdown.docx</td>
+<td>餐杂费分项资料，须核对适用性</td>
+</tr>
+<tr>
+<td>eCFR_41_CFR_301-11.xml</td>
+<td>2025年1月1日冻结的差旅报销规则</td>
+</tr>
+<tr>
+<td>eCFR_41_CFR_301-74.xml</td>
+<td>同日冻结的会议相关规则</td>
+</tr>
+<tr>
+<td>Conference-Attendance-fillable-Approval-Template.pdf</td>
+<td>须填写交付的USDA参会审批模板</td>
+</tr>
+</tbody>
+</table>
+<p>另须通过官网核对《RD Instruction 2036-A：Travel Regulations and Policies》（2024年7月19日生效版），记录所用条款。</p>
+<p>预算范围限于题面列明的费用；审批另需而未提供的信息或成本列入补证登记，不自行补数。申请草稿不代表获批，也不替代主办方审批。保持参考文件不变，区分内部建议与法规义务。仅提交上述五份交付物，无需代码、过程日志或压缩包。</p>
+<div class="file-card"><div class="file-meta"><strong>instruction.md</strong><p>9.9 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2FGO-LINK-001%2Finstruction.md&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/GO-LINK-001/instruction.md" download>下载 ↓</a></div></div></article></section><section id="inputs" class="delivery-panel" hidden><article class="markdown"><div class="file-card"><div class="file-meta"><strong>Conference-Attendance-fillable-Approval-Template.pdf</strong><p>1029.8 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2FGO-LINK-001%2Fenvironment%2Finput_files%2FConference-Attendance-fillable-Approval-Template.pdf&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/GO-LINK-001/environment/input_files/Conference-Attendance-fillable-Approval-Template.pdf" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>FY2025_PerDiemMasterRatesFile.xlsx</strong><p>41.3 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2FGO-LINK-001%2Fenvironment%2Finput_files%2FFY2025_PerDiemMasterRatesFile.xlsx&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/GO-LINK-001/environment/input_files/FY2025_PerDiemMasterRatesFile.xlsx" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>FY2026_PerDiemMasterRatesFile.xlsx</strong><p>41.3 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2FGO-LINK-001%2Fenvironment%2Finput_files%2FFY2026_PerDiemMasterRatesFile.xlsx&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/GO-LINK-001/environment/input_files/FY2026_PerDiemMasterRatesFile.xlsx" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>FY2027_PerDiemRates_Validated090126.xlsx</strong><p>36.5 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2FGO-LINK-001%2Fenvironment%2Finput_files%2FFY2027_PerDiemRates_Validated090126.xlsx&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/GO-LINK-001/environment/input_files/FY2027_PerDiemRates_Validated090126.xlsx" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>GSA_FY2025_MIE_Breakdown.docx</strong><p>18.2 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2FGO-LINK-001%2Fenvironment%2Finput_files%2FGSA_FY2025_MIE_Breakdown.docx&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/GO-LINK-001/environment/input_files/GSA_FY2025_MIE_Breakdown.docx" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>eCFR_41_CFR_301-11.xml</strong><p>53.5 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2FGO-LINK-001%2Fenvironment%2Finput_files%2FeCFR_41_CFR_301-11.xml&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/GO-LINK-001/environment/input_files/eCFR_41_CFR_301-11.xml" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>eCFR_41_CFR_301-74.xml</strong><p>18.5 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2FGO-LINK-001%2Fenvironment%2Finput_files%2FeCFR_41_CFR_301-74.xml&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/GO-LINK-001/environment/input_files/eCFR_41_CFR_301-74.xml" download>下载 ↓</a></div></div></article></section><section id="reference" class="delivery-panel" hidden><article class="markdown"><p class="note">参考交付尚待独立专家确认。本版本未完成 Oracle 正式评分及同版本三模型验收。</p><div class="file-card"><div class="file-meta"><strong>approval_brief.docx</strong><p>41.0 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2FGO-LINK-001%2Fsolution%2Fgolden_output%2Fapproval_brief.docx&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/GO-LINK-001/solution/golden_output/approval_brief.docx" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>approval_register.csv</strong><p>7.1 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2FGO-LINK-001%2Fsolution%2Fgolden_output%2Fapproval_register.csv&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/GO-LINK-001/solution/golden_output/approval_register.csv" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>conference_attendance_approval.pdf</strong><p>1016.7 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2FGO-LINK-001%2Fsolution%2Fgolden_output%2Fconference_attendance_approval.pdf&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/GO-LINK-001/solution/golden_output/conference_attendance_approval.pdf" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>conference_budget.xlsx</strong><p>259.4 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2FGO-LINK-001%2Fsolution%2Fgolden_output%2Fconference_budget.xlsx&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/GO-LINK-001/solution/golden_output/conference_budget.xlsx" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>travel_evidence.pptx</strong><p>11797.2 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2FGO-LINK-001%2Fsolution%2Fgolden_output%2Ftravel_evidence.pptx&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/GO-LINK-001/solution/golden_output/travel_evidence.pptx" download>下载 ↓</a></div></div></article></section><section id="rubric" class="delivery-panel" hidden><article class="markdown"><table class="rubric-table"><thead><tr><th>编号</th><th>权重</th><th>要求</th></tr></thead><tbody><tr><td>GO001</td><td>7</td><td>实际采用的报价和政策可追溯至原始URL、查询时间、适用出行日期及关键条件；明确区分已核实价格、估算和待询价。本项只评来源记录与证据状态，不判断报价换算或缺口对决策的后果。满分须能从所列来源追溯实际采用的关键事实及其状态，而不只是URL、日期或文件名列表。引用内容须与来源主体、版本和适用范围相符；无法复核的已采用关键事实应明确为未核实，不能标为已验证。不要求固定行号或新增截图；网站当前不可访问不等于来源虚假，须结合交付证据和可核实的来源内容判断。</td></tr><tr><td>GO002</td><td>10</td><td>五城按县域、行程所涉月份分别正确匹配FY2025/FY2026/FY2027住宿上限及M&amp;IE，实际2026年11至12月预算使用FY2027；辨明餐杂费分项资料适用性，不把自然年等同财政年度。不要求原表行号。本项只评费率取数与适用性。</td></tr><tr><td>GO003</td><td>10</td><td>按实际行程核算住宿夜数，区分真实房价、报销上限及题设12%住宿税估算。未获超标准授权时，超上限酒店不得作为合规推荐；不能把实际报价截减至上限后参与合规方案成本比较。不暗定四晚，不因有依据的不同抵返日期扣分。</td></tr><tr><td>GO004</td><td>10</td><td>逐日M&amp;IE正确处理首末日75%、扣除整份政府供餐及杂费下限，使用题设全部供餐日期和餐别；酒店免费早餐及茶歇不误作政府供餐扣除。本项评价初始核算。</td></tr><tr><td>GO006</td><td>10</td><td>固定比较五城各18人和24人，共十个城市×人数分析组；同组可以含多个行程候选，不要求十组都可行或获批。每个完成组应有可定位的费用明细、计费单位和人数/夜数依据，区分人均、固定及有证据的阶梯费用；机票、住宿、题设住宿税、注册、相关交通、扣除政府供餐后的旅客M&amp;IE、机构供餐、茶歇和场地等适用费用有金额或具体缺口。未排除组须有实际候选机票、住宿及注册费的数值核算；其中任一主要成本仅以空白、TBD或无依据的零占位代替，不计为完成组。已知基础小计、储备及含储备部分估算可从明细复算；未报价费用另列参数、适用范围及计费口径，不能当作零或混入声称完整的总额。允许以可复算的条件总额表达尚缺报价的组，不要求编造报价。有证据证明无法满足硬约束、明确说明排除原因及其对本组适用范围的，可作为完成的排除分析，无需为已排除组合继续采购报价；只遇到访问受限、只写TBD/暂无数据、空行或照抄人数不算完成。缺失或未完成组保留在十组分母中；只评费用覆盖、规模口径及汇总，不重复评价上游政策算法、报价换算或推荐排序。旅客净M&amp;IE纳入53,000美元预算，不得仅列预算外备忘；机构实际供餐费用另计，注册费所含三顿午餐不重复采购。本项只检查费用是否纳入及汇总，不重复评价上游逐日扣餐算法。</td></tr><tr><td>GO007</td><td>10</td><td>以基准行程的预算、差旅合规和酒店质量准入条件确定推荐，按人数优先、同人数含储备总额最低、完全并列时城市英文名排序。酒店质量筛选须已有证据完成，不能只因房价低于上限或列出待核实清单就认定通过。库存、采购、资金和正式审批可列为执行前提，不要求真实预订或获批。若没有满足准入的组合，须明确目前不能形成合格推荐；允许列补证优先对象，但不得将其称为已满足准入或已证明最优的方案。仅给条件性首选而未证明准入、也未明确无合格推荐，不满足本项。“暂无合格推荐”的判断也须有针对已检索候选及具体准入缺口的分析依据；仅把全城标待核实或没有开展必要比较，不等于完成了推荐判断。无需证明整个市场不存在合格方案。</td></tr><tr><td>GO008</td><td>7</td><td>固定覆盖五城×18/24人，共十个比较组；对当前调整后的整团机票额再上涨20%，重算基础费用、储备及含储备总额，与基准对照并判断预算余量或缺口，说明对应的重询、保留、换方案、降人数或无法执行的应对依据。每组须有可复算的压力结果及预算影响；正确标注的参数化结果可以接受，未知票价不能填零当作完整压力测算。经证据确认因硬约束排除且压力情景仍不可能恢复可行性的组，可用明确排除依据完成该组；访问受限或报价缺失不是此类排除。只算初始推荐组或只写“涨价后重询/降人数”不构成全量完成；应对说明可共用，但须能对应各组结果和条件。只评压力情景及其预算影响，不额外要求计算切换阈值或重复评价同一上游报价错误。</td></tr><tr><td>GO009</td><td>7</td><td>保持人数、行程月日结构、市场报价及其他假设相同，量化FY2025/FY2026相对FY2027的预算差异，区分住宿上限和M&amp;IE变化，判断合规限制与推荐是否改变。历史情景不得冒充历史实际报价或本次报销标准；报价超过旧上限应标不合规/待授权，不得截价宣称可订。零变化结论须有测算支持。本项不重复评价费率表的原始取数。核心前提是有实际候选、固定其他假设且可复算的历史费率成本对照；没有任何一个历史年度的正确量化对照，最高0.25；仅完成一个历史年度，最高0.5。正确的零差异计算可以满足量化要求，费率数值列表或未计算的“无影响”声明不可以。覆盖集合固定为五城×18/24人×FY2025/FY2026相对FY2027，共二十个城市—人数—历史年度对照单元；可用按人均影响及人数换算的共用公式表达，无需机械重复二十行。每单元须有可复算的受控预算差异、相应合规状态及对选址的影响解释。报价未知时允许有依据的参数化差异和合规区间，不能把缺失报价当零而称已完成对照；有支持的零差异仍可计完成。缺失单元保留在分母，满足数值覆盖仍须满足本项原有分析及核心前提。</td></tr><tr><td>GO010</td><td>7</td><td>UTF-8 approval_register.csv可读取，针对差旅授权、住宿/场地资质、采购、资金及申请表缺项列出具体事项、拟负责角色、所需证据、建议期限和是否阻断批准。只评可执行的补证登记，不重复评分其他交付中的待核实标记。每类完成须能据具体事项、拟负责角色、应取得的证据、可执行期限和阻断状态采取行动；五栏全部填“待核实”、复用无对象的模板句不计完成。尚未知具体责任人可写拟负责职能，尚无采购报价可列明确询价请求，相对期限可以接受，不要求编造联系人或完成日期。</td></tr><tr><td>GO011</td><td>3</td><td>按题面要求在output目录提供五份精确命名、格式正确且可读取的交付文件。本项只评价文件交付，不评价其内容质量；内容、工作表与安全另由各自条目评价。按每份文件是否满足命名、位置、格式及可读性计，共五份。</td></tr><tr><td>GO012</td><td>7</td><td>Word、PPT、审批PDF、CSV及工作簿中的推荐、人数、日期、关键金额和批准条件相互一致。本项只评不同文件之间的冲突，统一传递的同一上游计算错误不在此重复扣分。应对五份交付中按题面应出现的相同事实逐项建立对应并检查；未要求在某文件出现的字段无需强加。缺少所需文件、关键事实在应出现的交付中留空，或只有空模板/无信息可比较，不能以“没有发现矛盾”判为满足。同义表述及合理显示精度差异可接受，需识别条件性建议与正式批准状态的语义是否一致。</td></tr><tr><td>GO013</td><td>10</td><td>本项只评改值后的计算和报价状态联动。至少以两组有效参数实际检查：①预算及储备变化后相关金额和预算判断更新；②票价系数变化后费用及20%压力金额更新；③日期变化后夜数、逐日明细及汇总更新；④超出原报价日期时出现失效/需重询状态，或清楚标识按旧价暂估。允许离线暂估，不要求自动抓新价。本项不评价推荐对象或原始候选组合的搜索范围。高分须体现真实费用重算：预算/储备、票价和日期三类核心联动中任一类缺失或实质失效，最高0.5；仅显示参数、警告或手工填写新总额，不能证明自动联动。没有可验证的费用重算而只有状态提示，最高0.25。可通过实际回算或独立执行相关公式验证，不把裁判所用软件不支持函数直接认定为模型失效。</td></tr><tr><td>GO014</td><td>7</td><td>将11月29日政府早餐由否改是后，当日M&amp;IE及各候选费用按适用首末日规则正确联动，不新增采购费用；恢复参数后恢复原结果。只评联动实现，不重复评价初始供餐政策判断。</td></tr><tr><td>GO015</td><td>10</td><td>本项只评候选选择逻辑。实际改值后，以工作簿已计算的费用及已给出的报价适用状态为输入，按人数优先、同人数成本和并列规则更新推荐；在既定状态下均不可行时明确提示无可行方案。不得选中已明确标为不可执行的方案。若上游计算或失效识别有误，本项按候选已有数值和状态检查选择逻辑，不因该上游错误单独判失败；若已有状态正确但选择错误，则本项不满足。初始组合完整性不在此评分。满分验证须覆盖选择规则的有效分支，包括人数优先、同人数排序、并列处理及无可行方案；至少检查一项会改变可选集合或最优对象的允许参数情景，或证明所声明范围确无此类变化。仅改变不影响最优对象的一个参数、只显示固定推荐文本或只见“参数可改”的说明，不足以证明选择联动。未实际出现的并列等分支可通过独立检查实现逻辑验证，不要求编造真实报价或修改原始证据；若全部候选均未准入，可正确输出无合格推荐，并核查其规则而不强迫产生一个推荐。</td></tr><tr><td>GO017</td><td>3</td><td>Word及PPT便于负责人定位推荐、备选、关键预算、切换条件及批准前提，信息层级和关联清楚。不要求固定章节或页数，只评价组织，不重复评价金额与结论。</td></tr><tr><td>GO018</td><td>-7</td><td>交付物将无依据编造的航班、供应商报价、预订、审批、资质或资金落实情况陈述为已核实事实，并用于预算或批准结论。</td></tr><tr><td>GO019</td><td>10</td><td>PPT用真实网页截图完整覆盖五城实际采用的往返航班及住宿报价；须可辨认航班/酒店名称、往返航线和时刻或入住离店日期、房型及入住人数、币种、价格对应的人数/夜数和税费口径。价格适用条件及已明示必要费用、早餐包含情况、实际用于取舍的退改条件，以及酒店评分/评价数量和影响筛选的评论须有对应截图。单页无法容纳可分多张连续截图并清楚关联，不要求无关网页内容或未采用条款；不得只截低价数字、裁掉条件、过度缩小或以自制表格/摘抄/重绘代替。网页未显示的信息如实待核实，不伪造；本项只评价截图证据组完整性，不评价排版美感或报价换算。</td></tr><tr><td>GO020</td><td>3</td><td>PPT版式整洁、信息层级与截图说明的对应关系清楚，航班和住宿金额可在正常查看尺寸下辨认；没有遮挡关键信息的裁切、重叠、文字溢出或影响比较的过度缩放。只评价视觉呈现，不重复评价价格计算或来源真实性，不强制特定模板、配色或页数。</td></tr><tr><td>GO021</td><td>7</td><td>比较华盛顿地区合理的出发机场，结合个人往返机场交通成本、时间和航班安排说明取舍，相关可计费用进入预算。以总部作统一比较基点，不默认机构包车；住所、实际报销和通勤扣减未知时待核实，不编造个人记录。不强制穷举机场或选DCA。本项评价机场交通取舍，不重复评价联合候选搜索的完整性。高分须有实质机场替代比较，并有基于统一基点的个人接驳成本和用时依据；缺成本或缺用时，最高0.5；只有机场名称或一般优缺点而无具体可核对比较，最高0.25。交通费用可以是注明来源与假设的合理估算，不要求掌握未提供的个人住所资料。</td></tr><tr><td>GO022</td><td>10</td><td>实际采用的报价须对应所需日期、房型、单人入住及含早餐条件；早餐另收费时计入可核实费用并核对需求。单程/往返、每人/每间、每晚/全程、币种及税费换算正确，不漏已明示必要费用。可按单人或单间报价作明确标注的整团暂估，但不得声称已确认多人同价或库存；团体价格及可用数量未核实须列执行条件。只评报价适配与换算，不评价截图证据组的数量与覆盖。完成组必须有可识别的具体报价、适用日期、计价单位及核算结果；无报价金额或日期、只写待询价的组不计完成，不因未取到报价而移出十组分母。缺少截图不直接等于报价换算错误，应以可追溯的实际报价内容核查；原网页未披露早餐或必要税费时，不得声称已满足条件，条件性暂估不冒充完整适配结果。</td></tr><tr><td>GO023</td><td>10</td><td>每城比较至少两家具体酒店的住客评分、满分、评价数量和近期重要反馈，来源可核实；用统一且有理由的质量口径解释价格与住宿质量取舍。不以星级、跨平台原始分数或少量好评替代口碑判断，不为低价酒店临时放宽标准。检索后不足两家合格须提供具体排除依据。只评质量筛选，不重复评报价转换。每城至少两家具体候选仍是检索比较范围；“不足两家合格”是完成检索后依据质量证据筛除的结果，不能以仅找到一家、网站访问失败或评分资料待补代替两候选比较。合格候选可以少于两家，但被排除候选及不满足统一标准的依据须可核查；不要求虚构酒店或证明全市场无房。</td></tr><tr><td>GO025</td><td>7</td><td>按RD Instruction 2036-A识别适用审批要求，区分内部建议和法规义务；不得把预算未超限等同获批。审批模板旧OCFO/OIG/HR933标签须核实适用性才作为当前义务，未核实可明确标待核对，不要求无依据作确定结论。</td></tr><tr><td>GO026</td><td>7</td><td>说明哪些缺失报价、库存或合规证据会改变排名或阻断执行，为推荐明确列出成立条件；不将未知费用默认为零或把部分估算称完整可批准总额。不能只罗列待核实而不解释决策影响。本项评缺口的决策后果，不重复评价登记表手续。</td></tr><tr><td>GO029</td><td>7</td><td>在原审批PDF页面及字段标签上填写有依据的机构、培训类别、日期、地点和人数等已知信息，不以另制报告代替。所有已填写内容在正常查看及打印时完整可见，遵守模板的可见行数限制；字段值可被程序提取但显示或打印时截断、遮挡、隐藏滚动，均不满足完整可见要求。允许明确标注工作名称。本项只评价模板、基础字段及可见性。</td></tr><tr><td>GO031</td><td>7</td><td>申请表说明有材料支持的培训目的、预期成果及RD使命关联；具体课程或业务成果未知时，指出需补充的内容与核实问题。不得编造课程、战略指标或用泛泛口号冒充具体业务依据。培训目的、可检验的预期成果及RD使命关联三方面均须有支持说明，或在资料缺失时分别提出具体补证需求并对应申请字段。仅写“目的/使命待核实”“符合机构使命”或套用无对象的通用句，不满足本项。补证请求应说明需要何种培训主题、业务目标或成果依据及其用于支持何种审批判断；不要求虚构答案。</td></tr><tr><td>GO032</td><td>7</td><td>申请表分别回应人数必要性和远程替代问题，区分可负担人数与业务必需人数。无业务证据时明确待论证，并指出需要哪些参训需求或远程替代依据；不以预算富余证明必须出行。须分别分析18人与24人的业务必要性，以及为何需要现场培训而非远程替代；无业务材料时，分别明确需取得的岗位/参训需求依据和培训方式适配依据，并说明它们如何影响人数或方式的批准。仅写“人数必要性与远程替代待论证”、只列人数选项或以预算尚有余额代替业务依据，不满足本项。不要求未提供的名单、课程或远程实验结果已经存在。</td></tr><tr><td>GO034</td><td>7</td><td>审批PDF费用字段或其明确关联的补充页/工作簿表名及范围，能分别识别已知基础费用、应急储备金额或比例及适用基数、待询价费用和目前部分估算的范围。含储备总额不能标作基础费用，不能仅用预算上限含储备的说明替代当前费用构成。未报价费用明确按计提储备前还是含储备口径表述，并与总额衔接。仅评价费用范围和标签；统一传递的上游算术错误、单纯显示裁切不在本项重复归因。</td></tr><tr><td>GO035</td><td>3</td><td>未知联系人、财务编码、历史支出、计划/CPE/捐助/展位及合规确认标待核实或明确关联补充说明，不无据勾选。逐项交代议程、Location Cost Estimate和Attendee Cost Detail的现有对应或待补状态，不把团体汇总冒充个人明细。本项只评申请表状态披露。</td></tr><tr><td>GO037</td><td>10</td><td>比较有来源的城市、出发机场、往返航班、酒店和抵返日期联合候选，说明搜索范围、替代组合及排除依据。只列五城各一个总价或罗列组合字段，不等于完成联合选择；应呈现会改变成本或可行性的合理替代比较，未采用的合理替代有检索或排除依据。检查原始组合能否完整参训，以及航班时区、入住离店、机场接驳、场地日期和人数容量的衔接。未核实库存/场地可列条件，不要求预订、穷举市场、特定求解器或所有维度都发生变化。本项只评原始候选模型和组合衔接。缺少实质联合比较，或推荐行程已确定无法完整参训，本项最高0.25；尚待核实不等于已证实不可行。</td></tr><tr><td>GO038</td><td>10</td><td>从实际记录的联合候选及其整团已知费用、机票费用和未知费用条件，计算0至20%票价涨幅内有效的推荐切换边界，或给出可复算的无切换证明。结果可为数值阈值或含明确费用差条件的表达式；正确处理平行、区间外或不可行交点。边界须符合预算及可行性，并经其他已记录候选核验，不能把任意两方案费用相等当作整体最优切换。未知费用不默认相同；限制适用条件须明确。无正确、可复算的具体候选阈值或无切换证明，最高0.25；只有正确的两两比较而未证明有效最优边界，最高0.5。不强求发生切换，不要求整数规划符号或特定求解器。不能通过不记录题面指定的城市或人数档，自行缩小已证明最优的范围。对必需比较但研究未完成的竞争对象，须保留为未决对象并给出结论成立的费用/可行性条件，或有依据证明其不会推翻当前边界或行动；单纯称其“不在本次分析范围”不构成完整证明。仍允许有明确条件的关键区域分析，不要求穷举市场或无条件证明全局稳健最优。</td></tr><tr><td>GO039</td><td>10</td><td>计算基准和票价上涨20%时可承受的待询价基础费用上限，正确处理整团机票额与储备。核心核查对象固定为推荐组合及最有竞争力的有效备选各两种情景，通常共四个结果；暂无合格推荐时，可分析明确标注的优先补证组合。备选由已记录候选的费用与可行性核对确定，不能通过少列或挑弱备选缩小分母；确无有效备选须提供可核查排除依据，经确认后可只评推荐组合的两个结果。未提供的应评结果计未完成。至少检查默认预算与一个允许范围内导致已知费用超预算的预算值；负上限须保留并明确表示已超预算，不能截成零冒充可采购金额。只给默认正值而未正确处理负值情景，不能满分。</td></tr><tr><td>GO040</td><td>10</td><td>给出在明确票价涨幅、未知费用条件和可行性条件下的分段行动规则，说明何时保留推荐、换有效竞争备选、从24人降为18人或两档均不可行。每个声称成立的推荐区域须覆盖已记录候选，不能因某个两两条件成立就直接宣布整体最优。允许只给推荐成立及会推翻它的关键区域，须明确未覆盖范围，不要求穷举所有未知费用组合或每种切换都发生。人数优先于同人数成本；规模变化区分人均、固定及有证据的阶梯/容量费用，未知费用保留条件，不编造折扣或把整团总额直接按人数比例缩放。本项只评区域、行动和规模变化逻辑，不重复评价同一上游阈值算术错误。仅有口号式降档规则而无具体数值或参数条件，最高0.25；仅局部两方案规则却声称整体最优，最高0.5。不能通过不记录题面指定的城市或人数档，自行缩小已证明最优的范围。对必需比较但研究未完成的竞争对象，须保留为未决对象并给出结论成立的费用/可行性条件，或有依据证明其不会推翻当前边界或行动；单纯称其“不在本次分析范围”不构成完整证明。仍允许有明确条件的关键区域分析，不要求穷举市场或无条件证明全局稳健最优。</td></tr><tr><td>GO041</td><td>3</td><td>工作簿包含题面要求的Daily、Options、Sources工作表，所要求的历史费率对照、候选组合及决策分析区域有清楚标识、可定位。本项只评结构约束是否落实，不评价专业分析正确性。</td></tr><tr><td>GO042</td><td>3</td><td>工作簿清楚提示Word、CSV、PPT和审批PDF是交付时行程与参数的快照，参数变更后须重新核对并导出；不得声称静态文件会随Excel自动更新。本项只评交接提示，不评价初始文件之间的金额或结论冲突。</td></tr><tr><td>GO016</td><td>10</td><td>处理前后，所给原始输入和参考文件保持完整，没有意外删除、覆盖或篡改。</td></tr><tr><td>GO044</td><td>3</td><td>预算工作簿中用于预算计算和审批比较的美元金额显示至小数点后两位（美分），包括已填写的金额参数、逐日费用、方案金额、储备和汇总。仅检查货币显示精度；允许内部数值及公式保留更多小数，不要求每一步计算都舍入。尚无报价而明确标为待询价或参数的空值不冒充零金额，也不要求空值显示两位小数。</td></tr></tbody></table><div class="file-card"><div class="file-meta"><strong>rubrics.json</strong><p>61.1 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2FGO-LINK-001%2Frubrics.json&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/GO-LINK-001/rubrics.json" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>rubrics.toml</strong><p>61.4 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2FGO-LINK-001%2Ftests%2Frubrics.toml&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/GO-LINK-001/tests/rubrics.toml" download>下载 ↓</a></div></div></article></section><section id="models" class="delivery-panel" hidden><article class="markdown"><p class="note">以下为原始模型产物；实际作答题面与当前交付题面存在版本差异，分别保留供核对。此页面不展示判分结果。</p><h3>GPT</h3><div class="file-card"><div class="file-meta"><strong>instruction.md</strong><p>9.5 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2F%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%2Fgpt%2Finstruction.md&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/模型验证/gpt/instruction.md" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>approval_brief.docx</strong><p>38.5 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2F%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%2Fgpt%2Foutput%2Fapproval_brief.docx&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/模型验证/gpt/output/approval_brief.docx" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>approval_register.csv</strong><p>2.0 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2F%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%2Fgpt%2Foutput%2Fapproval_register.csv&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/模型验证/gpt/output/approval_register.csv" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>conference_attendance_approval.pdf</strong><p>1069.6 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2F%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%2Fgpt%2Foutput%2Fconference_attendance_approval.pdf&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/模型验证/gpt/output/conference_attendance_approval.pdf" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>conference_budget.xlsx</strong><p>24.9 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2F%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%2Fgpt%2Foutput%2Fconference_budget.xlsx&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/模型验证/gpt/output/conference_budget.xlsx" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>travel_evidence.pptx</strong><p>2224.7 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2F%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%2Fgpt%2Foutput%2Ftravel_evidence.pptx&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/模型验证/gpt/output/travel_evidence.pptx" download>下载 ↓</a></div></div><h3>CLAUDE</h3><div class="file-card"><div class="file-meta"><strong>instruction.md</strong><p>9.5 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2F%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%2Fclaude%2Finstruction.md&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/模型验证/claude/instruction.md" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>approval_brief.docx</strong><p>39.0 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2F%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%2Fclaude%2Foutput%2Fapproval_brief.docx&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/模型验证/claude/output/approval_brief.docx" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>approval_register.csv</strong><p>2.7 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2F%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%2Fclaude%2Foutput%2Fapproval_register.csv&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/模型验证/claude/output/approval_register.csv" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>conference_attendance_approval.pdf</strong><p>1034.3 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2F%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%2Fclaude%2Foutput%2Fconference_attendance_approval.pdf&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/模型验证/claude/output/conference_attendance_approval.pdf" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>conference_budget.xlsx</strong><p>22.3 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2F%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%2Fclaude%2Foutput%2Fconference_budget.xlsx&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/模型验证/claude/output/conference_budget.xlsx" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>travel_evidence.pptx</strong><p>5814.5 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2F%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%2Fclaude%2Foutput%2Ftravel_evidence.pptx&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/模型验证/claude/output/travel_evidence.pptx" download>下载 ↓</a></div></div><h3>QWEN</h3><div class="file-card"><div class="file-meta"><strong>instruction.md</strong><p>9.5 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2F%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%2Fqwen%2Finstruction.md&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/模型验证/qwen/instruction.md" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>approval_brief.docx</strong><p>39.2 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2F%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%2Fqwen%2Foutput%2Fapproval_brief.docx&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/模型验证/qwen/output/approval_brief.docx" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>approval_register.csv</strong><p>2.8 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2F%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%2Fqwen%2Foutput%2Fapproval_register.csv&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/模型验证/qwen/output/approval_register.csv" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>conference_attendance_approval.pdf</strong><p>1070.5 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2F%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%2Fqwen%2Foutput%2Fconference_attendance_approval.pdf&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/模型验证/qwen/output/conference_attendance_approval.pdf" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>conference_budget.xlsx</strong><p>19.8 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2F%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%2Fqwen%2Foutput%2Fconference_budget.xlsx&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/模型验证/qwen/output/conference_budget.xlsx" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>travel_evidence.pptx</strong><p>13124.7 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2F%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%2Fqwen%2Foutput%2Ftravel_evidence.pptx&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/模型验证/qwen/output/travel_evidence.pptx" download>下载 ↓</a></div></div></article></section><section id="delivery" class="delivery-panel" hidden><article class="markdown"><h1>GO-LINK-001 交付整理包（待验收）</h1>
+<p>GO-LINK-001/ 是可移交的标准题包目录，版本 1.0.2，包含题面、7份真实附件、36条评分项、环境构建文件、固定评分入口及参考答案入口。</p>
+<p>模型验证/ 保存 GPT、Claude、Qwen 的五份原始交付物、实际作答题面、Claude Code 原生会话、API调用及生成轨迹、人工收尾干预记录。密钥已脱敏；临时工作目录、缓存、重复输入和失败重试历史未纳入。作答使用的7份输入与题包附件相同。原始轨迹与完整失败历史仍保留在研究目录，未被修改。</p>
+<p>solver/instruction.md 是每个模型作答实际收到的题面。模型作答题面与当前交付题面存在版本差异，原始作答题面随轨迹保留以便审计。按用户要求，本包不提交判分结果或 judge 运行轨迹；题包 tests/ 内保留交付规范要求的评分器与 rubric。</p>
+<p>五份参考答案已基于Claude原产物修订，并复用其他模型可核实素材，位于GO-LINK-001/solution/golden_output；tests/__golden_output为逐字节副本。已进行实际参数重算和文档渲染检查。尚未进行本版专家答案的Oracle正式评分及同版本三模型验收，不能标作已验收或声称已达85分。未核实的质量、报价适用条件及审批事项均有具体披露。</p>
+<p>MANIFEST.sha256可核对包内文件完整性。ZIP不包含密钥、Docker镜像、私人网关配置。运行时凭据由接收方通过交付文档列出的环境变量注入。</p>
+<h1>培训会务评测题包交付说明</h1>
+<p>本批次包含GO-LINK-001，依据《外发版评测题包交付规范》2026年10月9日修订版整理。已完成格式整理及基于现有模型文件修订的五份专家参考产物；正式Oracle及同版本模型验收尚未完成，不能作为已验收题包提交。</p>
+<h2>目录和评分配置</h2>
+<p>题目目录直接位于批次目录下。任务版本为1.0.2；研究目录和已有冻结实验保留原记录。题面已明确53,000美元包含扣除政府供餐后的旅客M&amp;IE，费用覆盖评分同步该口径；权重和五档水平未改变。作者侧Gradient由执行侧Likert五档实现：原始5、4、3、2、1分别归一化为1、0.75、0.5、0.25、0。</p>
+<p>固定test.sh和finalize.py与规范附录A一致。评分模型默认qwen3.7-plus，每条评分项使用独立Claude Code会话。联网核验公开来源已获任务授权；不通过断网代替来源核查。</p>
+<h2>环境变量</h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>必选</th>
+<th>默认值</th>
+<th>类型或取值</th>
+<th>说明和联动</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JUDGE_API_KEY</td>
+<td>是</td>
+<td>运行环境注入</td>
+<td>string</td>
+<td>由固定test.sh派生Anthropic和OpenAI兼容凭据；题包不含真实密钥</td>
+</tr>
+<tr>
+<td>JUDGE_BASE_URL</td>
+<td>是</td>
+<td>运行环境注入</td>
+<td>URL</td>
+<td>Anthropic地址由模板剥除末尾/v1；OpenAI兼容地址保留输入值</td>
+</tr>
+<tr>
+<td>JUDGE_MODEL</td>
+<td>否</td>
+<td>qwen3.7-plus</td>
+<td>模型名称字符串</td>
+<td>通过REWARDKIT_MODEL覆盖rubrics.toml的兜底模型</td>
+</tr>
+<tr>
+<td>JUDGE_PROVIDER</td>
+<td>否</td>
+<td>anthropic</td>
+<td>anthropic或openai</td>
+<td>信息性声明，不改变路由</td>
+</tr>
+<tr>
+<td>JUDGE_API_PROTOCOL</td>
+<td>否</td>
+<td>anthropic</td>
+<td>anthropic或openai</td>
+<td>anthropic使用Claude Code agent judge；openai由固定模板降级为LLM judge，不能据此宣称完成agent judge验收</td>
+</tr>
+<tr>
+<td>EVAL_API_KEY</td>
+<td>否</td>
+<td>空</td>
+<td>string</td>
+<td>仅在JUDGE_API_KEY未注入时兜底</td>
+</tr>
+<tr>
+<td>EVAL_API_BASE</td>
+<td>否</td>
+<td>空</td>
+<td>URL</td>
+<td>仅在JUDGE_BASE_URL未注入时兜底</td>
+</tr>
+<tr>
+<td>LITELLM_DROP_PARAMS</td>
+<td>否</td>
+<td>true</td>
+<td>bool字符串</td>
+<td>网关参数兼容开关</td>
+</tr>
+<tr>
+<td>CHROMIUM_EXECUTABLE</td>
+<td>否</td>
+<td>/usr/bin/chromium</td>
+<td>容器内路径</td>
+<td>镜像设定的Chromium入口，可由Python Playwright显式使用</td>
+</tr>
+</tbody>
+</table>
+<p>test.sh派生的ANTHROPIC_<em>、OPENAI_</em>、REWARDKIT_MODEL和条件性的REWARDKIT_JUDGE不需写入任务环境。CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1、IS_SANDBOX=1由固定模板设置；IS_SANDBOX用于允许容器内root运行非交互判官。镜像预装Claude Code 2.1.114和RewardKit 0.1.7；Python文档依赖在requirements.txt中固定版本。</p>
+<p>单个judge会话超时7200秒，verifier总超时18000秒，agent超时72000秒。这些值写入TOML，没有环境变量覆盖接口。CPU 2核、内存8192MiB、存储30720MiB均采用规范默认值。</p>
+<h2>评分材料</h2>
+<p>评分侧tests/__assets/instruction.md是题面逐字副本，input_manifest.json记录七个原始输入文件的SHA256基准。判官比较当前输入字节与基准，不依赖本地运行器额外注入的题面或前后哈希文件。上述评分材料及tests/__golden_output仅供评分阶段使用，不得放入Agent输入目录或镜像。</p>
+<p>solution/solve.sh是Oracle复制入口，参考产物不齐时明确失败。solution/golden_output和tests/__golden_output现各含五份修订参考产物，逐字节一致；Oracle正式评分尚未运行。</p>
+<h2>尚待完成</h2>
+<ul>
+<li>五份参考交付已制作并同步两份golden目录；仍需正式评分验证是否覆盖全部正分项且不命中负项。</li>
+<li>跑Oracle预检，主分须大于0.85且verifier_error=0。</li>
+<li>完成同题面三模型作答及最新版rubric正式评分；均分须小于0.7，A2须处于0.5至0.6，且至少一个模型得分。现有人工估分不能代替验收。</li>
+<li>规范模型名称qwen3.8-max0902与当前用户授权网关名称qwen3.8-max的对应关系须在正式验收前确认。</li>
+</ul>
+<p>补齐上述内容后重新同步题包并制作正式zip；当前目录为交付草稿。</p>
+<h2>预算与Weakness映射</h2>
+<p>53,000美元为含储备总额，包含旅客按规则扣除政府供餐后的净M&amp;IE；机构供餐费用另列，注册费已含的三顿午餐不再重复计采购支出。未知费用仍需参数化，不当作免费。此项为1.0.1的明确业务口径，旧版作答和旧估分不能直接作为本版验收结果。</p>
+<p>Weakness采用构造方案PDF正文第8、11、12页B列的正式名称，编号单独记录：W4多要求及多交付物覆盖、W11无据自造数据与口径、W12跨源交叉核对缺失。评分三级使用正文名称，四级为本题可观察失败点；33条定向评分项完成映射，3条基础质量项保留原维度，不虚增Weakness覆盖。完整来源、触发点和评分项对应见GO-LINK-001/tests/__assets/weakness_mapping.json。</p>
+<p>通用办公二级标签采用生产规范PDF第2页的T3-建模与决策支持；三级和四级按该文档要求由出题方补充。复杂度按构造方案第3–4页综合画像标C4：固定输入7份、输出5种、约束多于15项、多工具能力和长依赖链。7份输入低于C4表的25项参考规模，分类依据已明确记录，不以模型慢或API调用次数作为复杂度依据。A2难度标签仍须正式三模型结果验证。</p>
+<h2>已完成的环境自检</h2>
+<p>当前Dockerfile已全新构建成功。规范4.2自检通过并输出OK：Python 3.12、Claude Code 2.1.114、RewardKit 0.1.7、文档库导入、pip check、agent用户输入只读与输出可写、Chromium启动均通过。当前36项评分配置经RewardKit原生解析：18项Likert及18项Binary，五档归一化和负分极性通过。专家参考产物已补齐；Oracle及三模型正式验收仍未完成。</p>
+<p>1.0.2新增独立+3的预算金额显示精度项GO044，检查美元金额显示至美分；内部计算可保留更多小数。按用户要求，GO032仍合并评价人数必要性和远程替代，内容与权重保持原样。</p>
+<h2>参考答案修订说明</h2>
+<p>以Claude原有五文件直接修补，复用原始真实截图，不改原始模型产物或输入附件。旅客净M&amp;IE现纳入预算，日期/早餐/预算/票价参数联动；保留独立未知费用和候选边界。当前Boston24已知/估算基础35,420.16美元、5%储备1,771.01美元、部分总额37,191.17美元；下一组合A19为Boston同酒店配358美元航班，部分总额38,375.57美元。未知费用另加，并非已确认零元。酒店近期评论、单人入住及早餐等证据有未决事项，因此未声称存在已通过全部准入的推荐；Boston只是当前优先补证对象。三模型轨迹与这份人工修订参考答案分开保存。</p>
+<h2>统一候选选择器修订</h2>
+<p>全部40个联合候选（10个主候选及30个替代组合）接入Candidate_Model统一排序。替代组合费用与机票额、日期、夜数、旅客M&amp;IE、储备及压力情景共用参数；资格和附加未知费用可按组合单独处理。实际副本测试验证替代组合被正式选择器/条件排序选中，30个替代组合的票价与日期联动全部正确，默认金额不变，0公式错误。人工资格变化仅用于测试副本，不写入真实答案。Word与PPT已修正Boston完全同价优先对应的严格不等号。</p>
+<h2>报价条件修正</h2>
+<p>Chicago101Billabook两人价未绑定早餐，仅归档且退出所有排序。Agoda158/Booking159显示早餐，但超过12月1日148美元住宿上限，无超标授权，排除。Seattle101Booking行确显示早餐，单人适用性仍待核实。统一候选表现44组合，当前P01Boston24补证优先，A19Boston358航班是下一组合；没有合格获批推荐。</p>
+<h2>审批PDF表单兼容性修复</h2>
+<p>保留原三页及原字段标签，恢复50个原名可编辑表单控件，生成正常查看和打印所需外观。五段叙述字段使用10号Times字体；业务内容、金额、预算逻辑和rubric未改变。两份参考PDF逐字节相同。正式判分和复评记录保留在研究目录，未加入交付ZIP。</p>
+<div class="file-card"><div class="file-meta"><strong>交付文档.md</strong><p>7.7 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2F%E4%BA%A4%E4%BB%98%E6%96%87%E6%A1%A3.md&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/交付文档.md" download>下载 ↓</a></div></div><div class="file-card"><div class="file-meta"><strong>task.toml</strong><p>3.1 KB</p></div><div class="file-actions"><a href="file-preview.html?file=deliver_files%2FGO-LINK-001%2Ftask.toml&amp;domain=GO" target="_blank" rel="noopener">预览 ↗</a><a href="deliver_files/GO-LINK-001/task.toml" download>下载 ↓</a></div></div></article></section></div></div><footer>当前交付版尚未完成专家参考解验收与同版本三模型正式验证。</footer></main></div><script>const buttons=[...document.querySelectorAll('[data-panel]')];function show(key){if(!buttons.some(b=>b.dataset.panel===key))key='prompt';for(const b of buttons)b.setAttribute('aria-selected',String(b.dataset.panel===key));for(const s of document.querySelectorAll('.delivery-panel'))s.hidden=s.id!==key;}for(const b of buttons)b.onclick=()=>{location.hash=b.dataset.panel;show(b.dataset.panel)};addEventListener('hashchange',()=>show(location.hash.slice(1)));show(location.hash.slice(1));document.body.dataset.ready='true';</script></body></html>

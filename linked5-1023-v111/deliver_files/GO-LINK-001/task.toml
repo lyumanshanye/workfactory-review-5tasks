@@ -1,0 +1,85 @@
+schema_version = "1.4"
+artifacts = ["/app/output/conference_budget.xlsx", "/app/output/approval_brief.docx", "/app/output/approval_register.csv", "/app/output/travel_evidence.pptx", "/app/output/conference_attendance_approval.pdf"]
+
+[task]
+name = "work/go-link-001"
+version = "1.0.2"
+description = "培训会务预算与审批建议：含旅客M&IE的联合行程与条件决策"
+keywords = ["general-office", "office", "A2"]
+
+[metadata]
+task_id = "GO-LINK-001"
+author_organization = "yelv"
+category = "weakness"
+domain = "通用办公"
+domain_code = "GO"
+domain_l2 = "T3-建模与决策支持"
+domain_l3 = "差旅预算建模与多方案决策"
+domain_l4 = "跨财政年度培训会联合行程与参数化预算边界"
+capabilities = "三年度费率对照与逐日FTR核算 → 城市/机场/航班/酒店/日期联合选择 → 票价及未报价费用参数化分段决策 → 填写审批PDF及有条件批准清单"
+difficulty = "A2"
+difficulty_status = "pending_recalibration_after_explicit_mie_scope"
+vl_dependency = "是"
+source_note = "Supplied original seed bytes and frozen primary-source pages; hypothetical business parameters explicitly stated in instruction."
+source_policy = "original_bytes_no_fabricated_source_records"
+acceptance_status = "pending_expert_golden_and_native_three_model_validation"
+tools = "Python/Excel/Word/PowerPoint/PDF/Chromium"
+task_complexity = "C4"
+weakness_tag = ["多要求 / 多交付物下缺少 Requirement Coverage Accounting", "无据自造数据与口径", "跨源交叉核对缺失"]
+tool_set = ["filesystem", "shell", "python"]
+skill_set = []
+expected_tool_dependencies = ["filesystem", "python"]
+expected_skill_dependencies = []
+business_domain = "通用办公"
+weakness_ids = ["W4", "W11", "W12"]
+weakness_mapping = "tests/__assets/weakness_mapping.json"
+
+[[metadata.deliverables]]
+path = "conference_budget.xlsx"
+required = true
+desc = "跨财政年度培训会：把报销规则落到可批准的会务预算的业务交付"
+
+[[metadata.deliverables]]
+path = "approval_brief.docx"
+required = true
+desc = "跨财政年度培训会：把报销规则落到可批准的会务预算的业务交付"
+
+[[metadata.deliverables]]
+path = "approval_register.csv"
+required = true
+desc = "跨财政年度培训会：把报销规则落到可批准的会务预算的业务交付"
+
+[[metadata.deliverables]]
+path = "travel_evidence.pptx"
+required = true
+desc = "带真实航班与住宿报价截图的行程费用证据PPT"
+
+[[metadata.deliverables]]
+path = "conference_attendance_approval.pdf"
+required = true
+desc = "使用原模板填写的参会审批申请草稿，包含费用口径、必要性论证和待补证事项"
+
+[agent]
+timeout_sec = 72000.0
+
+[verifier]
+timeout_sec = 18000.0
+user = "root"
+
+[verifier.env]
+JUDGE_API_KEY = "${JUDGE_API_KEY:-}"
+JUDGE_BASE_URL = "${JUDGE_BASE_URL:-}"
+JUDGE_MODEL = "${JUDGE_MODEL:-qwen3.7-plus}"
+JUDGE_PROVIDER = "${JUDGE_PROVIDER:-anthropic}"
+JUDGE_API_PROTOCOL = "${JUDGE_API_PROTOCOL:-anthropic}"
+EVAL_API_KEY = "${EVAL_API_KEY:-}"
+EVAL_API_BASE = "${EVAL_API_BASE:-}"
+LITELLM_DROP_PARAMS = "true"
+
+[environment]
+os = "linux"
+build_timeout_sec = 18000.0
+network_mode = "public"
+cpus = 2
+memory_mb = 8192
+storage_mb = 30720

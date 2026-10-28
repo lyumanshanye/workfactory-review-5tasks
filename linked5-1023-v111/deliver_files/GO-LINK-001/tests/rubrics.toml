@@ -1,0 +1,317 @@
+[judge]
+judge = "claude-code"
+prompt_template = "prompt.md"
+model = "qwen3.7-plus"
+timeout = 7200
+mode = "individual"
+weight = 1.0
+
+[[criterion]]
+id = "GO001"
+name = "GO001"
+description = "实际采用的报价和政策可追溯至原始URL、查询时间、适用出行日期及关键条件；明确区分已核实价格、估算和待询价。本项只评来源记录与证据状态，不判断报价换算或缺口对决策的后果。满分须能从所列来源追溯实际采用的关键事实及其状态，而不只是URL、日期或文件名列表。引用内容须与来源主体、版本和适用范围相符；无法复核的已采用关键事实应明确为未核实，不能标为已验证。不要求固定行号或新增截图；网站当前不可访问不等于来源虚假，须结合交付证据和可核实的来源内容判断。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+type = "binary"
+weight = 7
+annotations = { "dimension" = "内容质量-事实忠实性-跨源交叉核对缺失-实际采用事实与原始来源对应", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "binary", "dimension_l1" = "内容质量", "dimension_l2" = "事实忠实性", "dimension_l3" = "跨源交叉核对缺失", "dimension_l4" = "实际采用事实与原始来源对应", "weakness_ids" = ["W12"] }
+
+[[criterion]]
+id = "GO002"
+name = "GO002"
+description = "五城按县域、行程所涉月份分别正确匹配FY2025/FY2026/FY2027住宿上限及M&IE，实际2026年11至12月预算使用FY2027；辨明餐杂费分项资料适用性，不把自然年等同财政年度。不要求原表行号。本项只评费率取数与适用性。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.\n评分为1–5整数。先应用正文中的核心前提和分档上限；正文0/0.25/0.5/0.75/1表示归一化档位，分别对应原始1/2/3/4/5，不得输出小数。五档锚点：5=全部应评城市×财政年度记录（五城×三年度共十五组，每组含实际行程所涉月份的住宿上限和M&IE及适用性）满足本项要求。；4=满足要求的城市×财政年度记录（五城×三年度共十五组，每组含实际行程所涉月份的住宿上限和M&IE及适用性）占比至少75%但不足100%。；3=满足要求的城市×财政年度记录（五城×三年度共十五组，每组含实际行程所涉月份的住宿上限和M&IE及适用性）占比至少50%但不足75%。；2=至少一个城市×财政年度记录（五城×三年度共十五组，每组含实际行程所涉月份的住宿上限和M&IE及适用性）满足，但占比不足50%。；1=没有满足要求的城市×财政年度记录（五城×三年度共十五组，每组含实际行程所涉月份的住宿上限和M&IE及适用性），或没有可核查的相关产出。"
+type = "likert"
+weight = 10
+points = 5
+annotations = { "dimension" = "内容质量-数值与计算准确性-跨源交叉核对缺失-县域月份财政年度与费率适用性核对", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "gradient", "dimension_l1" = "内容质量", "dimension_l2" = "数值与计算准确性", "dimension_l3" = "跨源交叉核对缺失", "dimension_l4" = "县域月份财政年度与费率适用性核对", "weakness_ids" = ["W12"] }
+
+[[criterion]]
+id = "GO003"
+name = "GO003"
+description = "按实际行程核算住宿夜数，区分真实房价、报销上限及题设12%住宿税估算。未获超标准授权时，超上限酒店不得作为合规推荐；不能把实际报价截减至上限后参与合规方案成本比较。不暗定四晚，不因有依据的不同抵返日期扣分。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+type = "binary"
+weight = 10
+annotations = { "dimension" = "内容质量-专业规范-无据自造数据与口径-真实房价与报销上限税基区分", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "binary", "dimension_l1" = "内容质量", "dimension_l2" = "专业规范", "dimension_l3" = "无据自造数据与口径", "dimension_l4" = "真实房价与报销上限税基区分", "weakness_ids" = ["W11"] }
+
+[[criterion]]
+id = "GO004"
+name = "GO004"
+description = "逐日M&IE正确处理首末日75%、扣除整份政府供餐及杂费下限，使用题设全部供餐日期和餐别；酒店免费早餐及茶歇不误作政府供餐扣除。本项评价初始核算。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+type = "binary"
+weight = 10
+annotations = { "dimension" = "内容质量-专业规范-跨源交叉核对缺失-供餐日期与逐日报销规则核对", "criterion_type" = "Objective", "criterion_necessity" = "Implicit", "source_type" = "binary", "dimension_l1" = "内容质量", "dimension_l2" = "专业规范", "dimension_l3" = "跨源交叉核对缺失", "dimension_l4" = "供餐日期与逐日报销规则核对", "weakness_ids" = ["W12"] }
+
+[[criterion]]
+id = "GO006"
+name = "GO006"
+description = "固定比较五城各18人和24人，共十个城市×人数分析组；同组可以含多个行程候选，不要求十组都可行或获批。每个完成组应有可定位的费用明细、计费单位和人数/夜数依据，区分人均、固定及有证据的阶梯费用；机票、住宿、题设住宿税、注册、相关交通、扣除政府供餐后的旅客M&IE、机构供餐、茶歇和场地等适用费用有金额或具体缺口。未排除组须有实际候选机票、住宿及注册费的数值核算；其中任一主要成本仅以空白、TBD或无依据的零占位代替，不计为完成组。已知基础小计、储备及含储备部分估算可从明细复算；未报价费用另列参数、适用范围及计费口径，不能当作零或混入声称完整的总额。允许以可复算的条件总额表达尚缺报价的组，不要求编造报价。有证据证明无法满足硬约束、明确说明排除原因及其对本组适用范围的，可作为完成的排除分析，无需为已排除组合继续采购报价；只遇到访问受限、只写TBD/暂无数据、空行或照抄人数不算完成。缺失或未完成组保留在十组分母中；只评费用覆盖、规模口径及汇总，不重复评价上游政策算法、报价换算或推荐排序。旅客净M&IE纳入53,000美元预算，不得仅列预算外备忘；机构实际供餐费用另计，注册费所含三顿午餐不重复采购。本项只检查费用是否纳入及汇总，不重复评价上游逐日扣餐算法。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.\n评分为1–5整数。先应用正文中的核心前提和分档上限；正文0/0.25/0.5/0.75/1表示归一化档位，分别对应原始1/2/3/4/5，不得输出小数。五档锚点：5=十组全部达到完整成本分析或有依据的排除分析标准；未知费用的条件口径明确，不以占位行充数。；4=八至九组达到完整分析标准，其余组仍计入分母。；3=五至七组达到完整分析标准。；2=一至四组达到完整分析标准。；1=没有达到完整分析标准的组；仅列十行名称、TBD、零占位或总额而无可复算成本依据不算完成。"
+type = "likert"
+weight = 10
+points = 5
+annotations = { "dimension" = "内容质量-数值与计算准确性-多要求 / 多交付物下缺少 Requirement Coverage Accounting-五城两档人数的预算费用覆盖", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "gradient", "dimension_l1" = "内容质量", "dimension_l2" = "数值与计算准确性", "dimension_l3" = "多要求 / 多交付物下缺少 Requirement Coverage Accounting", "dimension_l4" = "五城两档人数的预算费用覆盖", "weakness_ids" = ["W4"] }
+
+[[criterion]]
+id = "GO007"
+name = "GO007"
+description = "以基准行程的预算、差旅合规和酒店质量准入条件确定推荐，按人数优先、同人数含储备总额最低、完全并列时城市英文名排序。酒店质量筛选须已有证据完成，不能只因房价低于上限或列出待核实清单就认定通过。库存、采购、资金和正式审批可列为执行前提，不要求真实预订或获批。若没有满足准入的组合，须明确目前不能形成合格推荐；允许列补证优先对象，但不得将其称为已满足准入或已证明最优的方案。仅给条件性首选而未证明准入、也未明确无合格推荐，不满足本项。“暂无合格推荐”的判断也须有针对已检索候选及具体准入缺口的分析依据；仅把全城标待核实或没有开展必要比较，不等于完成了推荐判断。无需证明整个市场不存在合格方案。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+type = "binary"
+weight = 10
+annotations = { "dimension" = "内容质量-结论正确性-跨源交叉核对缺失-预算质量准入与基准推荐互证", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "binary", "dimension_l1" = "内容质量", "dimension_l2" = "结论正确性", "dimension_l3" = "跨源交叉核对缺失", "dimension_l4" = "预算质量准入与基准推荐互证", "weakness_ids" = ["W12"] }
+
+[[criterion]]
+id = "GO008"
+name = "GO008"
+description = "固定覆盖五城×18/24人，共十个比较组；对当前调整后的整团机票额再上涨20%，重算基础费用、储备及含储备总额，与基准对照并判断预算余量或缺口，说明对应的重询、保留、换方案、降人数或无法执行的应对依据。每组须有可复算的压力结果及预算影响；正确标注的参数化结果可以接受，未知票价不能填零当作完整压力测算。经证据确认因硬约束排除且压力情景仍不可能恢复可行性的组，可用明确排除依据完成该组；访问受限或报价缺失不是此类排除。只算初始推荐组或只写“涨价后重询/降人数”不构成全量完成；应对说明可共用，但须能对应各组结果和条件。只评压力情景及其预算影响，不额外要求计算切换阈值或重复评价同一上游报价错误。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.\n评分为1–5整数。先应用正文中的核心前提和分档上限；正文0/0.25/0.5/0.75/1表示归一化档位，分别对应原始1/2/3/4/5，不得输出小数。五档锚点：5=十组均有正确可复算的压力结果、预算影响及对应应对依据，或有证据完成硬约束排除分析；不把缺报价组移出分母。；4=八至九组完成压力测算及影响分析，其余组有实质缺口。；3=五至七组完成压力测算及影响分析。；2=一至四组完成压力测算及影响分析。；1=没有组完成可复算的压力测算及影响分析；只有无计算依据的原则性应对不计完成。"
+type = "likert"
+weight = 7
+points = 5
+annotations = { "dimension" = "内容质量-数值与计算准确性-多要求 / 多交付物下缺少 Requirement Coverage Accounting-十个比较组的压力情景覆盖", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "gradient", "dimension_l1" = "内容质量", "dimension_l2" = "数值与计算准确性", "dimension_l3" = "多要求 / 多交付物下缺少 Requirement Coverage Accounting", "dimension_l4" = "十个比较组的压力情景覆盖", "weakness_ids" = ["W4"] }
+
+[[criterion]]
+id = "GO009"
+name = "GO009"
+description = "保持人数、行程月日结构、市场报价及其他假设相同，量化FY2025/FY2026相对FY2027的预算差异，区分住宿上限和M&IE变化，判断合规限制与推荐是否改变。历史情景不得冒充历史实际报价或本次报销标准；报价超过旧上限应标不合规/待授权，不得截价宣称可订。零变化结论须有测算支持。本项不重复评价费率表的原始取数。核心前提是有实际候选、固定其他假设且可复算的历史费率成本对照；没有任何一个历史年度的正确量化对照，最高0.25；仅完成一个历史年度，最高0.5。正确的零差异计算可以满足量化要求，费率数值列表或未计算的“无影响”声明不可以。覆盖集合固定为五城×18/24人×FY2025/FY2026相对FY2027，共二十个城市—人数—历史年度对照单元；可用按人均影响及人数换算的共用公式表达，无需机械重复二十行。每单元须有可复算的受控预算差异、相应合规状态及对选址的影响解释。报价未知时允许有依据的参数化差异和合规区间，不能把缺失报价当零而称已完成对照；有支持的零差异仍可计完成。缺失单元保留在分母，满足数值覆盖仍须满足本项原有分析及核心前提。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.\n评分为1–5整数。先应用正文中的核心前提和分档上限；正文0/0.25/0.5/0.75/1表示归一化档位，分别对应原始1/2/3/4/5，不得输出小数。五档锚点：5=二十个对照单元全部完成受控量化、相应合规及决策影响分析；住宿上限与M&IE的影响区分成立。共用公式明确覆盖相关人数可计完成。；4=至少十五个对照单元完成但不足二十个，且两个历史年度均有正确受控量化；或二十单元量化齐全，仅一项影响解释有实质缺口。；3=十至十四个对照单元完成；或二十单元量化覆盖较高但影响分解、合规及推荐解释有多项实质缺口。仅完成一个历史年度最高本档。；2=一至九个对照单元完成；或只有局部影响、合规分析及未完成的计算依据，没有任何一个正确可复算的受控对照。；1=没有可核查的历史影响分析或计算依据。"
+type = "likert"
+weight = 7
+points = 5
+annotations = { "dimension" = "内容质量-分析与论证质量-跨源交叉核对缺失-受控历史费率情景与决策影响核对", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "gradient", "dimension_l1" = "内容质量", "dimension_l2" = "分析与论证质量", "dimension_l3" = "跨源交叉核对缺失", "dimension_l4" = "受控历史费率情景与决策影响核对", "weakness_ids" = ["W12"] }
+
+[[criterion]]
+id = "GO010"
+name = "GO010"
+description = "UTF-8 approval_register.csv可读取，针对差旅授权、住宿/场地资质、采购、资金及申请表缺项列出具体事项、拟负责角色、所需证据、建议期限和是否阻断批准。只评可执行的补证登记，不重复评分其他交付中的待核实标记。每类完成须能据具体事项、拟负责角色、应取得的证据、可执行期限和阻断状态采取行动；五栏全部填“待核实”、复用无对象的模板句不计完成。尚未知具体责任人可写拟负责职能，尚无采购报价可列明确询价请求，相对期限可以接受，不要求编造联系人或完成日期。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.\n评分为1–5整数。先应用正文中的核心前提和分档上限；正文0/0.25/0.5/0.75/1表示归一化档位，分别对应原始1/2/3/4/5，不得输出小数。五档锚点：5=全部应评补证类别（差旅授权、住宿/场地资质、采购、资金、申请表缺项五类；每类须有适用事项、角色、证据、期限及阻断状态）满足本项要求。；4=满足要求的补证类别（差旅授权、住宿/场地资质、采购、资金、申请表缺项五类；每类须有适用事项、角色、证据、期限及阻断状态）占比至少75%但不足100%。；3=满足要求的补证类别（差旅授权、住宿/场地资质、采购、资金、申请表缺项五类；每类须有适用事项、角色、证据、期限及阻断状态）占比至少50%但不足75%。；2=至少一个补证类别（差旅授权、住宿/场地资质、采购、资金、申请表缺项五类；每类须有适用事项、角色、证据、期限及阻断状态）满足，但占比不足50%。；1=没有满足要求的补证类别（差旅授权、住宿/场地资质、采购、资金、申请表缺项五类；每类须有适用事项、角色、证据、期限及阻断状态），或没有可核查的相关产出。"
+type = "likert"
+weight = 7
+points = 5
+annotations = { "dimension" = "内容质量-分析与论证质量-多要求 / 多交付物下缺少 Requirement Coverage Accounting-审批补证类别与可执行字段覆盖", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "gradient", "dimension_l1" = "内容质量", "dimension_l2" = "分析与论证质量", "dimension_l3" = "多要求 / 多交付物下缺少 Requirement Coverage Accounting", "dimension_l4" = "审批补证类别与可执行字段覆盖", "weakness_ids" = ["W4"] }
+
+[[criterion]]
+id = "GO011"
+name = "GO011"
+description = "按题面要求在output目录提供五份精确命名、格式正确且可读取的交付文件。本项只评价文件交付，不评价其内容质量；内容、工作表与安全另由各自条目评价。按每份文件是否满足命名、位置、格式及可读性计，共五份。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.\n评分为1–5整数。先应用正文中的核心前提和分档上限；正文0/0.25/0.5/0.75/1表示归一化档位，分别对应原始1/2/3/4/5，不得输出小数。五档锚点：5=全部应评交付文件（共五份）满足本项要求。；4=满足要求的交付文件（共五份）占比至少75%但不足100%。；3=满足要求的交付文件（共五份）占比至少50%但不足75%。；2=至少一个交付文件（共五份）满足，但占比不足50%。；1=没有满足要求的交付文件（共五份），或没有可核查的相关产出。"
+type = "likert"
+weight = 3
+points = 5
+annotations = { "dimension" = "指令遵循-多要求 / 多交付物下缺少 Requirement Coverage Accounting-五种指定原生交付文件覆盖", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "gradient", "dimension_l1" = "指令遵循", "dimension_l2" = "", "dimension_l3" = "多要求 / 多交付物下缺少 Requirement Coverage Accounting", "dimension_l4" = "五种指定原生交付文件覆盖", "weakness_ids" = ["W4"] }
+
+[[criterion]]
+id = "GO012"
+name = "GO012"
+description = "Word、PPT、审批PDF、CSV及工作簿中的推荐、人数、日期、关键金额和批准条件相互一致。本项只评不同文件之间的冲突，统一传递的同一上游计算错误不在此重复扣分。应对五份交付中按题面应出现的相同事实逐项建立对应并检查；未要求在某文件出现的字段无需强加。缺少所需文件、关键事实在应出现的交付中留空，或只有空模板/无信息可比较，不能以“没有发现矛盾”判为满足。同义表述及合理显示精度差异可接受，需识别条件性建议与正式批准状态的语义是否一致。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+type = "binary"
+weight = 7
+annotations = { "dimension" = "内容质量-事实忠实性-跨源交叉核对缺失-跨交付物人数日期金额和状态一致", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "binary", "dimension_l1" = "内容质量", "dimension_l2" = "事实忠实性", "dimension_l3" = "跨源交叉核对缺失", "dimension_l4" = "跨交付物人数日期金额和状态一致", "weakness_ids" = ["W12"] }
+
+[[criterion]]
+id = "GO013"
+name = "GO013"
+description = "本项只评改值后的计算和报价状态联动。至少以两组有效参数实际检查：①预算及储备变化后相关金额和预算判断更新；②票价系数变化后费用及20%压力金额更新；③日期变化后夜数、逐日明细及汇总更新；④超出原报价日期时出现失效/需重询状态，或清楚标识按旧价暂估。允许离线暂估，不要求自动抓新价。本项不评价推荐对象或原始候选组合的搜索范围。高分须体现真实费用重算：预算/储备、票价和日期三类核心联动中任一类缺失或实质失效，最高0.5；仅显示参数、警告或手工填写新总额，不能证明自动联动。没有可验证的费用重算而只有状态提示，最高0.25。可通过实际回算或独立执行相关公式验证，不把裁判所用软件不支持函数直接认定为模型失效。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.\n评分为1–5整数。先应用正文中的核心前提和分档上限；正文0/0.25/0.5/0.75/1表示归一化档位，分别对应原始1/2/3/4/5，不得输出小数。五档锚点：5=预算/储备、票价及20%压力、日期与夜数/逐日费用/汇总均正确联动，报价适用状态正确；至少两组有效参数有验证依据。；4=三类核心费用联动均验证成立，仅报价适用状态联动存在实质缺口；不存在用静态旧总额替代回算。；3=至少两类核心费用联动可验证成立，但另一类缺失或实质失效；其他状态提示不能抵消该缺口。；2=仅一类核心费用联动成立，或仅有可核查的报价状态提示/部分实现；没有完整费用回算证据。；1=没有可验证的相关联动实现或检查依据。"
+type = "likert"
+weight = 10
+points = 5
+annotations = { "dimension" = "内容质量-数值与计算准确性-多要求 / 多交付物下缺少 Requirement Coverage Accounting-参数变化后的费用与报价状态联动", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "gradient", "dimension_l1" = "内容质量", "dimension_l2" = "数值与计算准确性", "dimension_l3" = "多要求 / 多交付物下缺少 Requirement Coverage Accounting", "dimension_l4" = "参数变化后的费用与报价状态联动", "weakness_ids" = ["W4"] }
+
+[[criterion]]
+id = "GO014"
+name = "GO014"
+description = "将11月29日政府早餐由否改是后，当日M&IE及各候选费用按适用首末日规则正确联动，不新增采购费用；恢复参数后恢复原结果。只评联动实现，不重复评价初始供餐政策判断。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+type = "binary"
+weight = 7
+annotations = { "dimension" = "内容质量-数值与计算准确性-多要求 / 多交付物下缺少 Requirement Coverage Accounting-政府早餐开关的依赖费用更新", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "binary", "dimension_l1" = "内容质量", "dimension_l2" = "数值与计算准确性", "dimension_l3" = "多要求 / 多交付物下缺少 Requirement Coverage Accounting", "dimension_l4" = "政府早餐开关的依赖费用更新", "weakness_ids" = ["W4"] }
+
+[[criterion]]
+id = "GO015"
+name = "GO015"
+description = "本项只评候选选择逻辑。实际改值后，以工作簿已计算的费用及已给出的报价适用状态为输入，按人数优先、同人数成本和并列规则更新推荐；在既定状态下均不可行时明确提示无可行方案。不得选中已明确标为不可执行的方案。若上游计算或失效识别有误，本项按候选已有数值和状态检查选择逻辑，不因该上游错误单独判失败；若已有状态正确但选择错误，则本项不满足。初始组合完整性不在此评分。满分验证须覆盖选择规则的有效分支，包括人数优先、同人数排序、并列处理及无可行方案；至少检查一项会改变可选集合或最优对象的允许参数情景，或证明所声明范围确无此类变化。仅改变不影响最优对象的一个参数、只显示固定推荐文本或只见“参数可改”的说明，不足以证明选择联动。未实际出现的并列等分支可通过独立检查实现逻辑验证，不要求编造真实报价或修改原始证据；若全部候选均未准入，可正确输出无合格推荐，并核查其规则而不强迫产生一个推荐。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+type = "binary"
+weight = 10
+annotations = { "dimension" = "内容质量-结论正确性-多要求 / 多交付物下缺少 Requirement Coverage Accounting-排序并列人数优先和无解分支覆盖", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "binary", "dimension_l1" = "内容质量", "dimension_l2" = "结论正确性", "dimension_l3" = "多要求 / 多交付物下缺少 Requirement Coverage Accounting", "dimension_l4" = "排序并列人数优先和无解分支覆盖", "weakness_ids" = ["W4"] }
+
+[[criterion]]
+id = "GO017"
+name = "GO017"
+description = "Word及PPT便于负责人定位推荐、备选、关键预算、切换条件及批准前提，信息层级和关联清楚。不要求固定章节或页数，只评价组织，不重复评价金额与结论。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.\n评分为1–5整数。先应用正文中的核心前提和分档上限；正文0/0.25/0.5/0.75/1表示归一化档位，分别对应原始1/2/3/4/5，不得输出小数。五档锚点：5=推荐/备选、预算依据、切换条件和批准前提均易定位，Word与PPT层级清楚、顺序合理。；4=上述核心模块均可定位，存在局部层级或分组问题，不影响负责人理解。；3=至少两个核心模块有组织地呈现，其余内容缺少清楚的位置或联系。；2=仅一个核心模块可清楚定位，其余内容零散。；1=没有可用的信息组织，或相关交付缺失。"
+type = "likert"
+weight = 3
+points = 5
+annotations = { "dimension" = "结构与组织", "criterion_type" = "Subjective", "criterion_necessity" = "Implicit", "source_type" = "gradient" }
+
+[[criterion]]
+id = "GO018"
+name = "GO018"
+description = "交付物将无依据编造的航班、供应商报价、预订、审批、资质或资金落实情况陈述为已核实事实，并用于预算或批准结论。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+type = "binary"
+weight = 7
+negate = true
+annotations = { "dimension" = "内容质量-事实忠实性-无据自造数据与口径-无依据事实被冒充已核实证据", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "binary", "dimension_l1" = "内容质量", "dimension_l2" = "事实忠实性", "dimension_l3" = "无据自造数据与口径", "dimension_l4" = "无依据事实被冒充已核实证据", "weakness_ids" = ["W11"] }
+
+[[criterion]]
+id = "GO019"
+name = "GO019"
+description = "PPT用真实网页截图完整覆盖五城实际采用的往返航班及住宿报价；须可辨认航班/酒店名称、往返航线和时刻或入住离店日期、房型及入住人数、币种、价格对应的人数/夜数和税费口径。价格适用条件及已明示必要费用、早餐包含情况、实际用于取舍的退改条件，以及酒店评分/评价数量和影响筛选的评论须有对应截图。单页无法容纳可分多张连续截图并清楚关联，不要求无关网页内容或未采用条款；不得只截低价数字、裁掉条件、过度缩小或以自制表格/摘抄/重绘代替。网页未显示的信息如实待核实，不伪造；本项只评价截图证据组完整性，不评价排版美感或报价换算。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.\n评分为1–5整数。先应用正文中的核心前提和分档上限；正文0/0.25/0.5/0.75/1表示归一化档位，分别对应原始1/2/3/4/5，不得输出小数。五档锚点：5=全部应评城市×证据组（五城各一组实际采用的往返航班和一组住宿，共十组；按本项原有证据范围判断完整性，可多图关联，不因同一截图的排版问题重复扣分）满足本项要求。；4=满足要求的城市×证据组（五城各一组实际采用的往返航班和一组住宿，共十组；按本项原有证据范围判断完整性，可多图关联，不因同一截图的排版问题重复扣分）占比至少75%但不足100%。；3=满足要求的城市×证据组（五城各一组实际采用的往返航班和一组住宿，共十组；按本项原有证据范围判断完整性，可多图关联，不因同一截图的排版问题重复扣分）占比至少50%但不足75%。；2=至少一个城市×证据组（五城各一组实际采用的往返航班和一组住宿，共十组；按本项原有证据范围判断完整性，可多图关联，不因同一截图的排版问题重复扣分）满足，但占比不足50%。；1=没有满足要求的城市×证据组（五城各一组实际采用的往返航班和一组住宿，共十组；按本项原有证据范围判断完整性，可多图关联，不因同一截图的排版问题重复扣分），或没有可核查的相关产出。"
+type = "likert"
+weight = 10
+points = 5
+annotations = { "dimension" = "指令遵循-多要求 / 多交付物下缺少 Requirement Coverage Accounting-五城机票与住宿证据组完整覆盖", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "gradient", "dimension_l1" = "指令遵循", "dimension_l2" = "", "dimension_l3" = "多要求 / 多交付物下缺少 Requirement Coverage Accounting", "dimension_l4" = "五城机票与住宿证据组完整覆盖", "weakness_ids" = ["W4"] }
+
+[[criterion]]
+id = "GO020"
+name = "GO020"
+description = "PPT版式整洁、信息层级与截图说明的对应关系清楚，航班和住宿金额可在正常查看尺寸下辨认；没有遮挡关键信息的裁切、重叠、文字溢出或影响比较的过度缩放。只评价视觉呈现，不重复评价价格计算或来源真实性，不强制特定模板、配色或页数。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.\n评分为1–5整数。先应用正文中的核心前提和分档上限；正文0/0.25/0.5/0.75/1表示归一化档位，分别对应原始1/2/3/4/5，不得输出小数。五档锚点：5=所提供PPT的截图与说明清楚对应，层级、排版整洁，正常查看时关键文字和金额可读，无遮挡或溢出。；4=整体清楚可读，仅有少量不影响关键内容的排版或一致性问题。；3=多处布局或层级问题，但大部分关键内容仍可正常读取。；2=多处遮挡、溢出、裁切或过度缩放影响关键内容，仅少部分页面可用。；1=PPT缺失、无法查看，或主要内容整体不可读。仅评价已有页面的视觉呈现，证据是否缺失不在本项评价。"
+type = "likert"
+weight = 3
+points = 5
+annotations = { "dimension" = "视觉美感", "criterion_type" = "Subjective", "criterion_necessity" = "Explicit", "source_type" = "gradient" }
+
+[[criterion]]
+id = "GO021"
+name = "GO021"
+description = "比较华盛顿地区合理的出发机场，结合个人往返机场交通成本、时间和航班安排说明取舍，相关可计费用进入预算。以总部作统一比较基点，不默认机构包车；住所、实际报销和通勤扣减未知时待核实，不编造个人记录。不强制穷举机场或选DCA。本项评价机场交通取舍，不重复评价联合候选搜索的完整性。高分须有实质机场替代比较，并有基于统一基点的个人接驳成本和用时依据；缺成本或缺用时，最高0.5；只有机场名称或一般优缺点而无具体可核对比较，最高0.25。交通费用可以是注明来源与假设的合理估算，不要求掌握未提供的个人住所资料。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.\n评分为1–5整数。先应用正文中的核心前提和分档上限；正文0/0.25/0.5/0.75/1表示归一化档位，分别对应原始1/2/3/4/5，不得输出小数。五档锚点：5=合理机场替代、个人接驳成本及用时、航班衔接和综合取舍均有可核对依据，适用费用进入预算。；4=机场替代及接驳成本、用时的实质比较成立，仅预算归集或非关键衔接/取舍解释有局部缺口。；3=有实质机场替代比较，并有成本或用时中至少一类可核对依据，但另一核心维度缺失或有实质错误。；2=只有单一机场、一般优缺点或零散接驳资料，未形成可核对的替代比较。；1=没有可核查的机场接驳比较内容。"
+type = "likert"
+weight = 7
+points = 5
+annotations = { "dimension" = "内容质量-分析与论证质量-跨源交叉核对缺失-机场航班与接驳成本时间互证", "criterion_type" = "Subjective", "criterion_necessity" = "Explicit", "source_type" = "gradient", "dimension_l1" = "内容质量", "dimension_l2" = "分析与论证质量", "dimension_l3" = "跨源交叉核对缺失", "dimension_l4" = "机场航班与接驳成本时间互证", "weakness_ids" = ["W12"] }
+
+[[criterion]]
+id = "GO022"
+name = "GO022"
+description = "实际采用的报价须对应所需日期、房型、单人入住及含早餐条件；早餐另收费时计入可核实费用并核对需求。单程/往返、每人/每间、每晚/全程、币种及税费换算正确，不漏已明示必要费用。可按单人或单间报价作明确标注的整团暂估，但不得声称已确认多人同价或库存；团体价格及可用数量未核实须列执行条件。只评报价适配与换算，不评价截图证据组的数量与覆盖。完成组必须有可识别的具体报价、适用日期、计价单位及核算结果；无报价金额或日期、只写待询价的组不计完成，不因未取到报价而移出十组分母。缺少截图不直接等于报价换算错误，应以可追溯的实际报价内容核查；原网页未披露早餐或必要税费时，不得声称已满足条件，条件性暂估不冒充完整适配结果。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.\n评分为1–5整数。先应用正文中的核心前提和分档上限；正文0/0.25/0.5/0.75/1表示归一化档位，分别对应原始1/2/3/4/5，不得输出小数。五档锚点：5=全部应评城市×报价核算组（五城各一组往返机票和一组住宿，共十组；仅评该组适配与换算，不评价截图是否齐全）满足本项要求。；4=满足要求的城市×报价核算组（五城各一组往返机票和一组住宿，共十组；仅评该组适配与换算，不评价截图是否齐全）占比至少75%但不足100%。；3=满足要求的城市×报价核算组（五城各一组往返机票和一组住宿，共十组；仅评该组适配与换算，不评价截图是否齐全）占比至少50%但不足75%。；2=至少一个城市×报价核算组（五城各一组往返机票和一组住宿，共十组；仅评该组适配与换算，不评价截图是否齐全）满足，但占比不足50%。；1=没有满足要求的城市×报价核算组（五城各一组往返机票和一组住宿，共十组；仅评该组适配与换算，不评价截图是否齐全），或没有可核查的相关产出。"
+type = "likert"
+weight = 10
+points = 5
+annotations = { "dimension" = "内容质量-数值与计算准确性-跨源交叉核对缺失-报价日期入住计价单位和税费适配", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "gradient", "dimension_l1" = "内容质量", "dimension_l2" = "数值与计算准确性", "dimension_l3" = "跨源交叉核对缺失", "dimension_l4" = "报价日期入住计价单位和税费适配", "weakness_ids" = ["W12"] }
+
+[[criterion]]
+id = "GO023"
+name = "GO023"
+description = "每城比较至少两家具体酒店的住客评分、满分、评价数量和近期重要反馈，来源可核实；用统一且有理由的质量口径解释价格与住宿质量取舍。不以星级、跨平台原始分数或少量好评替代口碑判断，不为低价酒店临时放宽标准。检索后不足两家合格须提供具体排除依据。只评质量筛选，不重复评报价转换。每城至少两家具体候选仍是检索比较范围；“不足两家合格”是完成检索后依据质量证据筛除的结果，不能以仅找到一家、网站访问失败或评分资料待补代替两候选比较。合格候选可以少于两家，但被排除候选及不满足统一标准的依据须可核查；不要求虚构酒店或证明全市场无房。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.\n评分为1–5整数。先应用正文中的核心前提和分档上限；正文0/0.25/0.5/0.75/1表示归一化档位，分别对应原始1/2/3/4/5，不得输出小数。五档锚点：5=五城均完成至少两家酒店的有依据比较（或检索后不足两家合格的明确排除记录），统一标准及质量取舍成立。；4=四城达到上述完整比较标准，其余城市存在实质缺口。；3=两至三城达到完整比较标准。；2=仅一城达到完整比较标准；或至少两城有可核实的酒店质量资料及初步筛选，但尚未完成两候选比较。；1=没有可核查的酒店质量比较，或只有不含住客证据的价格/星级列表。"
+type = "likert"
+weight = 10
+points = 5
+annotations = { "dimension" = "内容质量-分析与论证质量-跨源交叉核对缺失-住客评分评论与统一质量筛选互证", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "gradient", "dimension_l1" = "内容质量", "dimension_l2" = "分析与论证质量", "dimension_l3" = "跨源交叉核对缺失", "dimension_l4" = "住客评分评论与统一质量筛选互证", "weakness_ids" = ["W12"] }
+
+[[criterion]]
+id = "GO025"
+name = "GO025"
+description = "按RD Instruction 2036-A识别适用审批要求，区分内部建议和法规义务；不得把预算未超限等同获批。审批模板旧OCFO/OIG/HR933标签须核实适用性才作为当前义务，未核实可明确标待核对，不要求无依据作确定结论。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+type = "binary"
+weight = 7
+annotations = { "dimension" = "内容质量-专业规范-跨源交叉核对缺失-机构政策与模板历史门槛适用性核对", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "binary", "dimension_l1" = "内容质量", "dimension_l2" = "专业规范", "dimension_l3" = "跨源交叉核对缺失", "dimension_l4" = "机构政策与模板历史门槛适用性核对", "weakness_ids" = ["W12"] }
+
+[[criterion]]
+id = "GO026"
+name = "GO026"
+description = "说明哪些缺失报价、库存或合规证据会改变排名或阻断执行，为推荐明确列出成立条件；不将未知费用默认为零或把部分估算称完整可批准总额。不能只罗列待核实而不解释决策影响。本项评缺口的决策后果，不重复评价登记表手续。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+type = "binary"
+weight = 7
+annotations = { "dimension" = "内容质量-分析与论证质量-无据自造数据与口径-未知费用库存和执行条件的证据边界", "criterion_type" = "Subjective", "criterion_necessity" = "Explicit", "source_type" = "binary", "dimension_l1" = "内容质量", "dimension_l2" = "分析与论证质量", "dimension_l3" = "无据自造数据与口径", "dimension_l4" = "未知费用库存和执行条件的证据边界", "weakness_ids" = ["W11"] }
+
+[[criterion]]
+id = "GO029"
+name = "GO029"
+description = "在原审批PDF页面及字段标签上填写有依据的机构、培训类别、日期、地点和人数等已知信息，不以另制报告代替。所有已填写内容在正常查看及打印时完整可见，遵守模板的可见行数限制；字段值可被程序提取但显示或打印时截断、遮挡、隐藏滚动，均不满足完整可见要求。允许明确标注工作名称。本项只评价模板、基础字段及可见性。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+type = "binary"
+weight = 7
+annotations = { "dimension" = "指令遵循-多要求 / 多交付物下缺少 Requirement Coverage Accounting-原审批模板已知字段和显示完整性", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "binary", "dimension_l1" = "指令遵循", "dimension_l2" = "", "dimension_l3" = "多要求 / 多交付物下缺少 Requirement Coverage Accounting", "dimension_l4" = "原审批模板已知字段和显示完整性", "weakness_ids" = ["W4"] }
+
+[[criterion]]
+id = "GO031"
+name = "GO031"
+description = "申请表说明有材料支持的培训目的、预期成果及RD使命关联；具体课程或业务成果未知时，指出需补充的内容与核实问题。不得编造课程、战略指标或用泛泛口号冒充具体业务依据。培训目的、可检验的预期成果及RD使命关联三方面均须有支持说明，或在资料缺失时分别提出具体补证需求并对应申请字段。仅写“目的/使命待核实”“符合机构使命”或套用无对象的通用句，不满足本项。补证请求应说明需要何种培训主题、业务目标或成果依据及其用于支持何种审批判断；不要求虚构答案。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+type = "binary"
+weight = 7
+annotations = { "dimension" = "内容质量-分析与论证质量-无据自造数据与口径-目的成果使命关联缺证时不编造", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "binary", "dimension_l1" = "内容质量", "dimension_l2" = "分析与论证质量", "dimension_l3" = "无据自造数据与口径", "dimension_l4" = "目的成果使命关联缺证时不编造", "weakness_ids" = ["W11"] }
+
+[[criterion]]
+id = "GO032"
+name = "GO032"
+description = "申请表分别回应人数必要性和远程替代问题，区分可负担人数与业务必需人数。无业务证据时明确待论证，并指出需要哪些参训需求或远程替代依据；不以预算富余证明必须出行。须分别分析18人与24人的业务必要性，以及为何需要现场培训而非远程替代；无业务材料时，分别明确需取得的岗位/参训需求依据和培训方式适配依据，并说明它们如何影响人数或方式的批准。仅写“人数必要性与远程替代待论证”、只列人数选项或以预算尚有余额代替业务依据，不满足本项。不要求未提供的名单、课程或远程实验结果已经存在。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+type = "binary"
+weight = 7
+annotations = { "dimension" = "内容质量-分析与论证质量-无据自造数据与口径-人数必要性与远程替代缺证时不编造", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "binary", "dimension_l1" = "内容质量", "dimension_l2" = "分析与论证质量", "dimension_l3" = "无据自造数据与口径", "dimension_l4" = "人数必要性与远程替代缺证时不编造", "weakness_ids" = ["W11"] }
+
+[[criterion]]
+id = "GO034"
+name = "GO034"
+description = "审批PDF费用字段或其明确关联的补充页/工作簿表名及范围，能分别识别已知基础费用、应急储备金额或比例及适用基数、待询价费用和目前部分估算的范围。含储备总额不能标作基础费用，不能仅用预算上限含储备的说明替代当前费用构成。未报价费用明确按计提储备前还是含储备口径表述，并与总额衔接。仅评价费用范围和标签；统一传递的上游算术错误、单纯显示裁切不在本项重复归因。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+type = "binary"
+weight = 7
+annotations = { "dimension" = "内容质量-事实忠实性-跨源交叉核对缺失-申请费用基础储备与未知口径衔接", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "binary", "dimension_l1" = "内容质量", "dimension_l2" = "事实忠实性", "dimension_l3" = "跨源交叉核对缺失", "dimension_l4" = "申请费用基础储备与未知口径衔接", "weakness_ids" = ["W12"] }
+
+[[criterion]]
+id = "GO035"
+name = "GO035"
+description = "未知联系人、财务编码、历史支出、计划/CPE/捐助/展位及合规确认标待核实或明确关联补充说明，不无据勾选。逐项交代议程、Location Cost Estimate和Attendee Cost Detail的现有对应或待补状态，不把团体汇总冒充个人明细。本项只评申请表状态披露。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.\n评分为1–5整数。先应用正文中的核心前提和分档上限；正文0/0.25/0.5/0.75/1表示归一化档位，分别对应原始1/2/3/4/5，不得输出小数。五档锚点：5=未知字段和勾选项处理完整，议程、Location Cost Estimate和Attendee Cost Detail三类附件均有明确对应或待补状态。；4=三类附件状态明确，未知字段仅有少量遗漏，未把未知事项断言为已确认。；3=至少两类附件状态清楚，且未知字段有具体、可关联的待补说明。；2=仅一类附件状态清楚，或只有部分未知字段的具体待补说明。；1=没有相关状态说明，或缺少审批PDF且无可关联补充说明。"
+type = "likert"
+weight = 3
+points = 5
+annotations = { "dimension" = "指令遵循-多要求 / 多交付物下缺少 Requirement Coverage Accounting-未知表单字段与三类附件状态覆盖", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "gradient", "dimension_l1" = "指令遵循", "dimension_l2" = "", "dimension_l3" = "多要求 / 多交付物下缺少 Requirement Coverage Accounting", "dimension_l4" = "未知表单字段与三类附件状态覆盖", "weakness_ids" = ["W4"] }
+
+[[criterion]]
+id = "GO037"
+name = "GO037"
+description = "比较有来源的城市、出发机场、往返航班、酒店和抵返日期联合候选，说明搜索范围、替代组合及排除依据。只列五城各一个总价或罗列组合字段，不等于完成联合选择；应呈现会改变成本或可行性的合理替代比较，未采用的合理替代有检索或排除依据。检查原始组合能否完整参训，以及航班时区、入住离店、机场接驳、场地日期和人数容量的衔接。未核实库存/场地可列条件，不要求预订、穷举市场、特定求解器或所有维度都发生变化。本项只评原始候选模型和组合衔接。缺少实质联合比较，或推荐行程已确定无法完整参训，本项最高0.25；尚待核实不等于已证实不可行。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.\n评分为1–5整数。先应用正文中的核心前提和分档上限；正文0/0.25/0.5/0.75/1表示归一化档位，分别对应原始1/2/3/4/5，不得输出小数。五档锚点：5=有实质联合候选和替代比较，搜索范围有依据；推荐组合能够完整参训，各环节相容，未核实的执行条件明确，无影响选择的组合遗漏。；4=已完成实质联合比较及完整参训核验；仅有局部替代记录或非关键衔接证据缺口，不存在已知无法参训的推荐。；3=存在真实替代组合比较，但搜索范围或若干衔接证据不足；能区分待补证组合与已知不可行组合。；2=仅列组合字段、五城各一总价或少量零散比较；或推荐行程已确定无法完整参训。即使其他记录齐全也不超过本档。；1=没有可核查的联合候选或行程比较。"
+type = "likert"
+weight = 10
+points = 5
+annotations = { "dimension" = "内容质量-分析与论证质量-跨源交叉核对缺失-联合候选与行程环节相容性核对", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "gradient", "dimension_l1" = "内容质量", "dimension_l2" = "分析与论证质量", "dimension_l3" = "跨源交叉核对缺失", "dimension_l4" = "联合候选与行程环节相容性核对", "weakness_ids" = ["W12"] }
+
+[[criterion]]
+id = "GO038"
+name = "GO038"
+description = "从实际记录的联合候选及其整团已知费用、机票费用和未知费用条件，计算0至20%票价涨幅内有效的推荐切换边界，或给出可复算的无切换证明。结果可为数值阈值或含明确费用差条件的表达式；正确处理平行、区间外或不可行交点。边界须符合预算及可行性，并经其他已记录候选核验，不能把任意两方案费用相等当作整体最优切换。未知费用不默认相同；限制适用条件须明确。无正确、可复算的具体候选阈值或无切换证明，最高0.25；只有正确的两两比较而未证明有效最优边界，最高0.5。不强求发生切换，不要求整数规划符号或特定求解器。不能通过不记录题面指定的城市或人数档，自行缩小已证明最优的范围。对必需比较但研究未完成的竞争对象，须保留为未决对象并给出结论成立的费用/可行性条件，或有依据证明其不会推翻当前边界或行动；单纯称其“不在本次分析范围”不构成完整证明。仍允许有明确条件的关键区域分析，不要求穷举市场或无条件证明全局稳健最优。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.\n评分为1–5整数。先应用正文中的核心前提和分档上限；正文0/0.25/0.5/0.75/1表示归一化档位，分别对应原始1/2/3/4/5，不得输出小数。五档锚点：5=关键切换边界或无切换结论正确可复算，未知费用条件明确，已核验边界两侧预算、可行性和其他已记录候选；可作为声明范围内的最优切换依据。；4=主要有效边界及竞争候选核验成立，仅有不影响主要结论的特殊情况说明或次要边界缺口。；3=至少一个具体候选对的阈值或条件性无切换结论正确可复算，但缺少预算/可行性或其他候选的充分核验，尚不能证明其为有效最优边界。；2=只有变量、通用公式、定性比较或错误阈值，没有正确可复算的具体候选阈值或有依据的无切换证明。；1=没有阈值或无切换分析，或无法识别其比较对象与费用依据。"
+type = "likert"
+weight = 10
+points = 5
+annotations = { "dimension" = "内容质量-数值与计算准确性-无据自造数据与口径-未知费用条件与有效切换边界口径", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "gradient", "dimension_l1" = "内容质量", "dimension_l2" = "数值与计算准确性", "dimension_l3" = "无据自造数据与口径", "dimension_l4" = "未知费用条件与有效切换边界口径", "weakness_ids" = ["W11"] }
+
+[[criterion]]
+id = "GO039"
+name = "GO039"
+description = "计算基准和票价上涨20%时可承受的待询价基础费用上限，正确处理整团机票额与储备。核心核查对象固定为推荐组合及最有竞争力的有效备选各两种情景，通常共四个结果；暂无合格推荐时，可分析明确标注的优先补证组合。备选由已记录候选的费用与可行性核对确定，不能通过少列或挑弱备选缩小分母；确无有效备选须提供可核查排除依据，经确认后可只评推荐组合的两个结果。未提供的应评结果计未完成。至少检查默认预算与一个允许范围内导致已知费用超预算的预算值；负上限须保留并明确表示已超预算，不能截成零冒充可采购金额。只给默认正值而未正确处理负值情景，不能满分。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.\n评分为1–5整数。先应用正文中的核心前提和分档上限；正文0/0.25/0.5/0.75/1表示归一化档位，分别对应原始1/2/3/4/5，不得输出小数。五档锚点：5=固定应评集合全部结果正确可复算，且改预算后的负上限含义和显示正确；无通过缩小集合回避有效备选的情况。；4=固定应评结果至少75%但不足100%正确；或默认应评结果全部正确，但负上限处理错误或尚无验证依据。该档仍须至少75%的默认应评结果正确。；3=固定应评结果至少50%但不足75%正确可复算。；2=至少一个固定应评结果正确但占比不足50%；仅列公式而无任何候选计算结果不计完成。；1=固定应评结果均缺失或错误，没有可复算的候选费用上限。"
+type = "likert"
+weight = 10
+points = 5
+annotations = { "dimension" = "内容质量-数值与计算准确性-无据自造数据与口径-待询价基础费用上限与含储备余额区分", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "gradient", "dimension_l1" = "内容质量", "dimension_l2" = "数值与计算准确性", "dimension_l3" = "无据自造数据与口径", "dimension_l4" = "待询价基础费用上限与含储备余额区分", "weakness_ids" = ["W11"] }
+
+[[criterion]]
+id = "GO040"
+name = "GO040"
+description = "给出在明确票价涨幅、未知费用条件和可行性条件下的分段行动规则，说明何时保留推荐、换有效竞争备选、从24人降为18人或两档均不可行。每个声称成立的推荐区域须覆盖已记录候选，不能因某个两两条件成立就直接宣布整体最优。允许只给推荐成立及会推翻它的关键区域，须明确未覆盖范围，不要求穷举所有未知费用组合或每种切换都发生。人数优先于同人数成本；规模变化区分人均、固定及有证据的阶梯/容量费用，未知费用保留条件，不编造折扣或把整团总额直接按人数比例缩放。本项只评区域、行动和规模变化逻辑，不重复评价同一上游阈值算术错误。仅有口号式降档规则而无具体数值或参数条件，最高0.25；仅局部两方案规则却声称整体最优，最高0.5。不能通过不记录题面指定的城市或人数档，自行缩小已证明最优的范围。对必需比较但研究未完成的竞争对象，须保留为未决对象并给出结论成立的费用/可行性条件，或有依据证明其不会推翻当前边界或行动；单纯称其“不在本次分析范围”不构成完整证明。仍允许有明确条件的关键区域分析，不要求穷举市场或无条件证明全局稳健最优。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf.\n评分为1–5整数。先应用正文中的核心前提和分档上限；正文0/0.25/0.5/0.75/1表示归一化档位，分别对应原始1/2/3/4/5，不得输出小数。五档锚点：5=声明的主要区域有可核对的数值或参数条件，各区域的最优选择、备选、人数优先、预算可行性及规模费用逻辑正确，并核对所有已记录候选；未覆盖范围明确。；4=主要推荐区域和行动成立，其他候选与人数优先核验充分，仅有次要边界或非核心费用分层说明缺口。；3=有可复算的局部区域和行动，但全局适用范围、竞争候选、人数降档或规模费用处理存在实质缺口；局部结论不得冒充已完成全局证明。；2=只有先24人后18人、超预算换方案等一般原则，没有可执行的具体数值或参数条件；或行动与其给定条件基本脱节。；1=没有可用的分段行动条件，或无法判断任何条件下应采取何种行动。"
+type = "likert"
+weight = 10
+points = 5
+annotations = { "dimension" = "内容质量-结论正确性-跨源交叉核对缺失-分段行动与竞争候选及人数约束互证", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "gradient", "dimension_l1" = "内容质量", "dimension_l2" = "结论正确性", "dimension_l3" = "跨源交叉核对缺失", "dimension_l4" = "分段行动与竞争候选及人数约束互证", "weakness_ids" = ["W12"] }
+
+[[criterion]]
+id = "GO041"
+name = "GO041"
+description = "工作簿包含题面要求的Daily、Options、Sources工作表，所要求的历史费率对照、候选组合及决策分析区域有清楚标识、可定位。本项只评结构约束是否落实，不评价专业分析正确性。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+type = "binary"
+weight = 3
+annotations = { "dimension" = "指令遵循-多要求 / 多交付物下缺少 Requirement Coverage Accounting-必需工作表与分析区域覆盖", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "binary", "dimension_l1" = "指令遵循", "dimension_l2" = "", "dimension_l3" = "多要求 / 多交付物下缺少 Requirement Coverage Accounting", "dimension_l4" = "必需工作表与分析区域覆盖", "weakness_ids" = ["W4"] }
+
+[[criterion]]
+id = "GO042"
+name = "GO042"
+description = "工作簿清楚提示Word、CSV、PPT和审批PDF是交付时行程与参数的快照，参数变更后须重新核对并导出；不得声称静态文件会随Excel自动更新。本项只评交接提示，不评价初始文件之间的金额或结论冲突。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+type = "binary"
+weight = 3
+annotations = { "dimension" = "指令遵循-多要求 / 多交付物下缺少 Requirement Coverage Accounting-四类静态交付物的快照交接提示", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "binary", "dimension_l1" = "指令遵循", "dimension_l2" = "", "dimension_l3" = "多要求 / 多交付物下缺少 Requirement Coverage Accounting", "dimension_l4" = "四类静态交付物的快照交接提示", "weakness_ids" = ["W4"] }
+
+[[criterion]]
+id = "GO016"
+name = "GO016"
+description = "处理前后，所给原始输入和参考文件保持完整，没有意外删除、覆盖或篡改。\nInspect output/conference_budget.xlsx, output/approval_brief.docx, output/approval_register.csv, output/travel_evidence.pptx, output/conference_attendance_approval.pdf."
+type = "binary"
+weight = 10
+annotations = { "dimension" = "操作与交付安全", "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "binary" }
+
+[[criterion]]
+id = "GO044"
+name = "GO044"
+type = "binary"
+description = "预算工作簿中用于预算计算和审批比较的美元金额显示至小数点后两位（美分），包括已填写的金额参数、逐日费用、方案金额、储备和汇总。仅检查货币显示精度；允许内部数值及公式保留更多小数，不要求每一步计算都舍入。尚无报价而明确标为待询价或参数的空值不冒充零金额，也不要求空值显示两位小数。\nInspect output/conference_budget.xlsx."
+weight = 3
+annotations = { "dimension" = "指令遵循-多要求 / 多交付物下缺少 Requirement Coverage Accounting-预算货币金额显示到美分", "dimension_l1" = "指令遵循", "dimension_l2" = "", "dimension_l3" = "多要求 / 多交付物下缺少 Requirement Coverage Accounting", "dimension_l4" = "预算货币金额显示到美分", "weakness_ids" = ["W4"], "criterion_type" = "Objective", "criterion_necessity" = "Explicit", "source_type" = "binary" }
+
+[scoring]
+aggregation = "weighted_mean"
